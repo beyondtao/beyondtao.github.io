@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "ssh exchange identification",
+  "headline": "管理多个SSH Key",
   
-  "datePublished": "2016-07-11T11:43:06Z",
-  "dateModified": "2016-07-11T11:43:06Z",
+  "datePublished": "2016-07-18T15:43:04Z",
+  "dateModified": "2016-07-18T15:43:04Z",
   "author": {
     "@type": "Person",
     "name": "Scott Tao",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "执行 git pull 的时候，提示(When I do the \u0026ldquo;git pull\u0026rdquo;)\nssh_exchange_identification: read: Connection reset by peer fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. ",
+  "description": "如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。 例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。\n",
   "keywords": []
 }
 
@@ -43,49 +43,29 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
-ssh_exchange_identification: read: Connection reset by peer
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-">
+<meta name="description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
 
 
-<meta property="og:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
-ssh_exchange_identification: read: Connection reset by peer
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-">
+<meta property="og:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh exchange identification">
-<meta name="twitter:title" content="ssh exchange identification">
+<meta property="og:title" content="管理多个SSH Key">
+<meta name="twitter:title" content="管理多个SSH Key">
 <meta property="og:url" content="https://blog.qoabc.com/2016/07/git/">
 <meta property="twitter:url" content="https://blog.qoabc.com/2016/07/git/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
-ssh_exchange_identification: read: Connection reset by peer
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-">
-<meta name="twitter:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
-ssh_exchange_identification: read: Connection reset by peer
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-">
+<meta property="og:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
+<meta name="twitter:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2016-07-11T11:43:06">
+    <meta property="article:published_time" content="2016-07-18T15:43:04">
   
   
-    <meta property="article:modified_time" content="2016-07-11T11:43:06">
+    <meta property="article:modified_time" content="2016-07-18T15:43:04">
   
   
   
@@ -116,7 +96,7 @@ and the repository exists.
 
 
 
-    <title>ssh exchange identification</title>
+    <title>管理多个SSH Key</title>
 
     <link rel="icon" href="https://blog.qoabc.com/favicon.png">
     
@@ -273,15 +253,15 @@ and the repository exists.
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      ssh exchange identification
+      管理多个SSH Key
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2016-07-11T11:43:06Z">
+      <time datetime="2016-07-18T15:43:04Z">
         
-  July 11, 2016
+  July 18, 2016
 
       </time>
     
@@ -300,42 +280,57 @@ and the repository exists.
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)</p>
-<pre><code>ssh_exchange_identification: read: Connection reset by peer
-fatal: Could not read from remote repository.
+              <p>如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。</p>
+<p>$ ls ~/.ssh/
+config     <br>
+github_rsa  <br>
+github_rsa.pub<br>
+personalid  <br>
+personalid.pub</p>
+<p>以上是我的密钥列表，那么我的github如何使用多个密钥呢。</p>
+<ul>
+<li>需要编辑一下配置文件~/.ssh/config：</li>
+</ul>
+<p>如果没有这个文件，可以创建一个(切换到 ~/.ssh	目录下)</p>
+<pre><code>$ touch config
+</code></pre>
+<p>编辑 config文件</p>
+<pre tabindex="0"><code>	Host github.com
+   		Hostname github.com
+	    User            username
+    	IdentityFile    ~/.ssh/github_rsa
+     
+	Host bitbucket.org
+	    Hostname bitbucket.org
+	    User username
+	    IdentityFile ~/.ssh/personalid
+</code></pre><h4 id="只是用一个公钥">只是用一个公钥</h4>
+<p>也可以几个账号都上传同一个公钥，配置的时候，使用同一个公钥文件就可以了。为了安全性考虑，不建议这么做</p>
+<pre tabindex="0"><code>Host github.com
+   	 Hostname github.com
+	 User            username
+    	IdentityFile    ~/.ssh/github_rsa
+     
+Host bitbucket.org
+	 Hostname bitbucket.org
+	 User username
+	 IdentityFile ~/.ssh/github_rsa
+</code></pre><p>解释此配置文件：</p>
+<pre><code>Host: &quot;github.com&quot;是一个『别名』，可以随意命名，也可以直接写github
 
-Please make sure you have the correct access rights
-and the repository exists.
-</code></pre>
-<p>经过各种研究，发现了一个比较坑的问题（至少目前我遇到的就是），问题就是服务端有问题，具体是什么，不清楚，因为我不负责这块内容。只说一下，临时解决吧，因为需要，所以不能够等待服务端解决之后再去提交。
-(I found this is because the)</p>
-<p>这种问题是因为使用SSH提交导致的，但是发现使用HTTPS这种提交没有问题。git clone代码的时候，大家肯定会看到，给了两个选项，一个是SSH的地址， 一个是HTTPS的地址。</p>
-<p>//输入命令</p>
-<pre><code>$ git remote -v
-//输出 SSH的origin配置
-origin	git@git.******.com:ict/project.git (fetch)
-origin	git@git.******.com:ict/project.git (push)
+Hostname:	仓储地址：例如git@github.com，这里要的就是 github.com
 
-//添加一个HTTPs origin 
-//这里使用的是 HTTPS地址
-git remote add origin2 https://git.******.com/ict/project.git
+IdentityFile: 所使用的公钥文件
 </code></pre>
-<p>//输入命令</p>
-<pre><code>$ git remote -v
-//输出 origin配置
-origin	git@git.******.com:ict/project.git (fetch)
-origin	git@git.******.com:ict/project.git (push)
-origin2	https://git.******.com/ict/project.git (fetch)
-origin2	https://git.******.com/ict/project.git (push)
+<p>配置完毕，用下面的命令测试一下：</p>
+<pre><code>$ ssh -T git@bitbucket.com
+logged in as beyond521t.
+
+You can use git or hg to connect to Bitbucket. Shell access is disabled.
 </code></pre>
-<p>//然后进行一下操作实时
-//这里使用HTTPS 的话，使用 配置的 origin2 进行配置</p>
-<pre><code>$ git pull origin2 develop
-//发现执行成功
-remote: Counting objects: 22, done.
-remote: Compressing objects: 100% (22/22), done.
-remote: Total 22 (delta 12), reused 0 (delta 0)
-Unpacking objects: 100% (22/22), done.
+<p>可以使用如下命令，进行debug查看：</p>
+<pre><code>$ ssh -vv git@bitbucket.com
 </code></pre>
               
 
@@ -363,7 +358,7 @@ Unpacking objects: 100% (22/22), done.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="swift 使用 delegate 内存泄露问题" aria-label="NEXT: swift 使用 delegate 内存泄露问题">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/08/mac/" data-tooltip="rvm升级Ruby" aria-label="NEXT: rvm升级Ruby">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -371,7 +366,7 @@ Unpacking objects: 100% (22/22), done.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="LTPickerView.swift" aria-label="PREVIOUS: LTPickerView.swift">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/git/" data-tooltip="生成SSH Key" aria-label="PREVIOUS: 生成SSH Key">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -470,7 +465,7 @@ Unpacking objects: 100% (22/22), done.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="swift 使用 delegate 内存泄露问题" aria-label="NEXT: swift 使用 delegate 内存泄露问题">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/08/mac/" data-tooltip="rvm升级Ruby" aria-label="NEXT: rvm升级Ruby">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -478,7 +473,7 @@ Unpacking objects: 100% (22/22), done.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="LTPickerView.swift" aria-label="PREVIOUS: LTPickerView.swift">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/git/" data-tooltip="生成SSH Key" aria-label="PREVIOUS: 生成SSH Key">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
