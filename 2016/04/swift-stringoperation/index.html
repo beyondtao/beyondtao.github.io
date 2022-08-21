@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Swift字符串常用操作总结",
+  
+  "datePublished": "2016-04-07T13:19:17Z",
+  "dateModified": "2016-04-07T13:19:17Z",
+  "author": {
+    "@type": "Person",
+    "name": "Scott Tao",
+    
+    "image": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/blog.qoabc.com\/2016\/04\/swift-stringoperation\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott's Blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
+    }
+    
+  },
+  "description": "版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Scott Tao">
+<meta name="keywords" content="">
+<meta name="description" content="版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。">
+
+
+<meta property="og:description" content="版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift字符串常用操作总结">
+<meta name="twitter:title" content="Swift字符串常用操作总结">
+<meta property="og:url" content="https://blog.qoabc.com/2016/04/swift-stringoperation/">
+<meta property="twitter:url" content="https://blog.qoabc.com/2016/04/swift-stringoperation/">
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。">
+<meta name="twitter:description" content="版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2016-04-07T13:19:17">
+  
+  
+    <meta property="article:modified_time" content="2016-04-07T13:19:17">
+  
+  
+  
+    
+      <meta property="article:section" content="swift">
+    
+  
+  
+    
+      <meta property="article:tag" content="swift">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+
+
+
+
+
+
+    <title>Swift字符串常用操作总结</title>
+
+    <link rel="icon" href="https://blog.qoabc.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.qoabc.com/2016/04/swift-stringoperation/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.qoabc.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
+        
+          <h5 class="sidebar-profile-bio">This is a iOS Developer</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Swift字符串常用操作总结
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2016-04-07T13:19:17Z">
+        
+  April 7, 2016
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.qoabc.com/categories/swift">swift</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。</p>
+<p>字符串的定义</p>
+<pre><code>var str1=&quot;hello, mandarava.&quot; //字符串变量
+let str2=&quot;hello, mandarava.&quot; //字符串常量
+let str3=&quot;&quot; //空字符串
+let str4=String() //空字符串
+</code></pre>
+<p>字符的定义</p>
+<pre><code>var char1:Character=&quot;m&quot; //字符变量
+let char2:Character=&quot;m&quot; //字符常量
+</code></pre>
+<p>字符串的连接</p>
+<pre><code>let str1=&quot;hello, &quot;
+let str2=&quot;mandarava.&quot;
+let str3=str1+str2 //=连接str1、str2
+//str3=&quot;hello, mandarava.&quot;
+//----------------------------------------
+let str4=&quot;\(str1)\(str2)&quot; //=连接str1、str2
+//str4=&quot;hello, mandarava.&quot;
+//----------------------------------------
+let strArray=[&quot;apple&quot;, &quot;orange&quot;, &quot;cherry&quot;]
+let joinStr=&quot;,&quot;.join(strArray)
+//joinStr=&quot;apple,orange,cherry&quot;
+</code></pre>
+<p>字符串与字符的连接</p>
+<pre><code>let char1:Character=&quot;o&quot;
+var str1=&quot;hell&quot;
+let str2=str1+String(char1)
+//str2=&quot;hello&quot;
+//----------------------------------------
+let str3=&quot;\(str1)\(char1)&quot;
+//str3=&quot;hello&quot;
+//----------------------------------------
+str1.append(char1)
+//str1=&quot;hello&quot;
+</code></pre>
+<p>字符串与其它类型值的连接</p>
+<pre><code>let xx=10
+let yy=10.8
+let str1=&quot;\(xx)+\(yy)=?&quot;
+//str1=&quot;10+10.8=?&quot;
+//----------------------------------------
+let str2=String(format: &quot;%i+%.1f=?&quot;, xx, yy)
+//str2=&quot;10+10.8=?&quot;
+</code></pre>
+<p>字符串枚举字符</p>
+<pre><code>//Swift 1.2
+let str=&quot;mandarava&quot;
+for ch in str{
+ println(ch)
+}
+//-----------------------
+//Swift 2.0
+let str=&quot;mandarava&quot;
+for ch in str.characters{
+ print(ch)
+}
+</code></pre>
+<p>获取字符串中指定索引处的字符</p>
+<pre><code>let str=&quot;Mandarava&quot;
+let chr=str[advance(str.startIndex,2)] //Swift 1.2 //chr:Character=&quot;n&quot;
+let chr=str[str.startIndex.advancedBy(2)] //Swift 2.0 //chr:Character=&quot;n&quot;
+</code></pre>
+<p>计算字符串长度length</p>
+<pre><code>let str=&quot;@Tao&quot;
+let len1=count(str) //swift 1.2 //=4 
+let len2=str.characters.count //swift 2.0 //=4 
+let blen=str.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) //=10
+</code></pre>
+<p>字符串比较</p>
+<pre><code>let str1=&quot;hello,&quot;
+let str2=&quot;mandarava.&quot;
+let str3=&quot;hello,mandarava.&quot;
+let comp1 = str1==str2 //false
+let comp2 = str1+str2 == str3 //true
+let comp3 = str1 &lt; str2 //true
+let comp4 = str1 != str2 //true
+</code></pre>
+<p>是否包含子串contains</p>
+<pre><code>let str1=&quot;hello,mandarava.&quot;
+let str2=&quot;mandarava&quot;
+let range=str1.rangeOfString(str2)
+if range != nil{
+ //包含
+}
+</code></pre>
+<p>查找子串indexof</p>
+<pre><code>var str=&quot;hi,Mandarava.&quot;
+let range=str.rangeOfString(&quot;Mandarava&quot;, options: NSStringCompareOptions.allZeros) //Swift 1.2
+let range=str.rangeOfString(&quot;Mandarava&quot;, options: NSStringCompareOptions()) //Swift 2.0
+let startIndex=range?.startIndex //=3
+</code></pre>
+<p>首字母大写capitalized</p>
+<pre><code>var str1=&quot;mandarava is a flower.&quot;
+str1.capitalizedString
+//str1=&quot;Mandarava Is A Flower.
+</code></pre>
+<p>转换为大写字母uppercase</p>
+<pre><code>var str1=&quot;hello, mandarava.&quot;
+str1=str1.uppercaseString
+//str1=&quot;HELLO, MANDARAVA.&quot;
+</code></pre>
+<p>转换为小写字母lowercase</p>
+<pre><code>var str1=&quot;HELLO, MANDARAVA.&quot;
+str1=str1.lowercaseString
+//str1=&quot;hello, mandarava.&quot;
+</code></pre>
+<p>截取字符串substring</p>
+<pre><code>let str1=&quot;hello,mandarava.&quot;
+let str2=str1.substringFromIndex(advance(str1.startIndex, 6)) //Swift 1.2
+let str2=str1.substringFromIndex(str1.startIndex.advancedBy(6)) //Swift 2.0
+//str2=&quot;mandarava.&quot;
+//----------------------------------------
+let str3=str1.substringToIndex(advance(str1.startIndex, 5)) //Swift 1.2
+let str3=str1.substringToIndex(str1.startIndex.advancedBy(5)) //Swift 2.0
+//str3=&quot;hello&quot;
+//----------------------------------------
+let range=Range&lt;String.Index&gt;(start: advance(str1.startIndex, 6), end: advance(str1.endIndex, -1)) //Swift 1.2
+let range=Range&lt;String.Index&gt;(start: str1.startIndex.advancedBy(6), end: str1.endIndex.advancedBy(-1)) //Swift 2.0
+let str4=str1.substringWithRange(range)
+//str4=&quot;mandarava&quot;
+</code></pre>
+<p>字符串修剪trim</p>
+<pre><code>let str1=&quot; mandarava.\n &quot;
+let str2=str1.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+//str2=&quot;mandarava.&quot;
+//----------------------------------------
+let str3=str1.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+//str3=&quot;mandarava.\n&quot;
+//----------------------------------------
+let charset=NSCharacterSet(charactersInString:&quot; \n&quot;)
+let str4=str1.stringByTrimmingCharactersInSet(charset)
+//str4=&quot;mandarava.&quot;
+</code></pre>
+<p>字符串的分解子串split</p>
+<pre><code>var str1=&quot;boy, girl, man, woman&quot;
+let str1Array=str1.componentsSeparatedByString(&quot;,&quot;)
+//str1Array=[&quot;boy&quot;, &quot; girl&quot;, &quot; man&quot;, &quot; woman&quot;]
+var str2=&quot;boy,girl,man 10 20 30&quot;
+let charset=NSCharacterSet(charactersInString:&quot;, &quot;)
+let str2Array=str2.componentsSeparatedByCharactersInSet(charset)
+//str2Array=[&quot;boy&quot;, &quot;girl&quot;, &quot;man&quot;, &quot;10&quot;, &quot;20&quot;, &quot;30&quot;]
+</code></pre>
+<p>字符串替换replace</p>
+<pre><code>var str1=&quot;My name is Mandarava.&quot;
+let subRange=Range(start: str1.startIndex, end: advance(str1.startIndex, 2)) //Swift 1.2
+let subRange=Range(start: str1.startIndex, end: str1.startIndex.advancedBy(2)) //Swift 2.0
+str1.replaceRange(subRange, with: &quot;Your&quot;)
+//str1=&quot;Your name is Mandarava.&quot;
+var str2=&quot;hello, Mandarava.&quot;
+str2=str2.stringByReplacingOccurrencesOfString(&quot;Mandarava&quot;, withString: &quot;Tao&quot;)
+//str2=&quot;hello, Tao.&quot;
+str2=str2.stringByReplacingOccurrencesOfString(&quot;Tao&quot;, withString: &quot;Mandarava&quot;, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
+//str2=&quot;hello, Mandarava.&quot;
+string转换为Int/Long/Float/Double/Bool等
+var str1=&quot;100&quot;
+var i=str1.toInt()! //Swift 1.2 //=100 
+var i=(str1 as NSString).integerValue //Swift 2.0 //=100
+var i=(str1 as NSString).intValue //=100
+var l=(str1 as NSString).longLongValue //=100
+var str2=&quot;10.8&quot;
+var f=(str2 as NSString).floatValue //=10.8
+var d=(str2 as NSString).doubleValue //=10.8
+var str3=&quot;true&quot;
+var b=(str3 as NSString).boolValue //=true
+</code></pre>
+<p>原文链接：http://www.jianshu.com/p/52e7580166ff</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.qoabc.com/tags/swift/">swift</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/" data-tooltip="IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget" aria-label="NEXT: IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/swift-stringornsstring/" data-tooltip="String还是NSString" aria-label="PREVIOUS: String还是NSString">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/blog.qoabc.com\/2016\/04\/swift-stringoperation\/';
+        
+          this.page.identifier = '\/2016\/04\/swift-stringoperation\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Scott Tao. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/" data-tooltip="IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget" aria-label="NEXT: IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/swift-stringornsstring/" data-tooltip="String还是NSString" aria-label="PREVIOUS: String还是NSString">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2016/04/swift-stringoperation/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fswift-stringoperation%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fswift-stringoperation%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fswift-stringoperation%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Scott Tao</h4>
+    
+      <div id="about-card-bio">This is a iOS Developer</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        iOS Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bochum, Deutschland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.qoabc.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

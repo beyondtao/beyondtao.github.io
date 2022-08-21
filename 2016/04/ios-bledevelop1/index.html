@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iOS-BLE蓝牙开发",
+  
+  "datePublished": "2016-04-28T16:41:43Z",
+  "dateModified": "2016-04-28T16:41:43Z",
+  "author": {
+    "@type": "Person",
+    "name": "Scott Tao",
+    
+    "image": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/blog.qoabc.com\/2016\/04\/ios-bledevelop1\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott's Blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
+    }
+    
+  },
+  "description": "iOS开发蓝牙入门  简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager） 就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager) ",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Scott Tao">
+<meta name="keywords" content="">
+<meta name="description" content="iOS开发蓝牙入门
+
+简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）
+就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)
+">
+
+
+<meta property="og:description" content="iOS开发蓝牙入门
+
+简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）
+就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS-BLE蓝牙开发">
+<meta name="twitter:title" content="iOS-BLE蓝牙开发">
+<meta property="og:url" content="https://blog.qoabc.com/2016/04/ios-bledevelop1/">
+<meta property="twitter:url" content="https://blog.qoabc.com/2016/04/ios-bledevelop1/">
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="iOS开发蓝牙入门
+
+简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）
+就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)
+">
+<meta name="twitter:description" content="iOS开发蓝牙入门
+
+简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）
+就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2016-04-28T16:41:43">
+  
+  
+    <meta property="article:modified_time" content="2016-04-28T16:41:43">
+  
+  
+  
+    
+      <meta property="article:section" content="ios">
+    
+  
+  
+    
+      <meta property="article:tag" content="ios">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+
+
+
+
+
+
+    <title>iOS-BLE蓝牙开发</title>
+
+    <link rel="icon" href="https://blog.qoabc.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.qoabc.com/2016/04/ios-bledevelop1/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.qoabc.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
+        
+          <h5 class="sidebar-profile-bio">This is a iOS Developer</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      iOS-BLE蓝牙开发
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2016-04-28T16:41:43Z">
+        
+  April 28, 2016
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.qoabc.com/categories/ios">ios</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h4 id="ios开发蓝牙入门">iOS开发蓝牙入门</h4>
+<ul>
+<li>简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）</li>
+<li>就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)</li>
+</ul>
+<ul>
+<li>
+<p>既然存在了蓝牙管理对象，那么想要连接蓝牙，一般都是先去搜索设备。所以下一步，搜索设备（暂时不要看代码，先把思路理清楚。下面是代码，会按照这个思路再走一遍）</p>
+</li>
+<li>
+<p>搜索到一个设备 - didDiscoverPeripheral</p>
+<p>你就会在delegate方法中，得到这个设备。然后判断，如果这个设置是你需要的，那么就进行连接。如果没有特别情况，这里最好是停止设备搜索，因为你已经找到它了。</p>
+</li>
+<li>
+<p>连接自然会有两个结果，所以对应两个代理方法</p>
+<ul>
+<li>连接成功	didConnectPeripheral</li>
+<li>连接失败	didFailToConnectPeripheral</li>
+</ul>
+</li>
+<li>
+<p>连接成功
+在这里去搜索服务，服务里会有特征值。特征值，是用来和蓝牙设备，做读写命令交互用的。</p>
+</li>
+<li>
+<p>发现服务 - didDiscoverServices
+发现到服务，然后去查找这个服务中的特征值</p>
+</li>
+<li>
+<p>发现特征值 - didDiscoverCharacteristicsForService
+这里去设置读写数据。或者是把特征值，做一个成员变量接收，这样就可以，选择什么时刻发送命令了。</p>
+</li>
+<li>
+<p>获取到蓝牙设备发送过来的数据 - didUpdateValueForCharacteristic
+蓝牙数据一般为一堆16进制数据，然后自己根据协议去解析就好了。</p>
+</li>
+</ul>
+<h4 id="总结中心模式的用法">总结中心模式的用法</h4>
+<!-- raw HTML omitted -->
+<h6 id="引入corebluetoothframework">引入CoreBluetooth.framework</h6>
+<h6 id="引入蓝牙协议如">引入蓝牙协议，如</h6>
+<pre><code>@protocol CBCentralManagerDelegate;
+@protocol CBPeripheralDelegate;
+</code></pre>
+<h6 id="创建-cbcentralmanager">创建 CBCentralManager</h6>
+<pre><code>//定义一个中心角色对象
+@property (strong, nonatomic) CBCentralManager *centralManager;
+
+//建立中心角色
+_centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+
+//搜索蓝牙设备
+[_centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+
+//发现蓝牙设备 - 代理方法
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary&lt;NSString *,id&gt; *)advertisementData RSSI:(NSNumber *)RSSI {
+	//这里peripheral 就是搜索到的蓝牙设备对象了。
+	//advertisementData 是广播消息。
+	//RSSI 信号强度
+	//这里名字 我随便写的。可以根据需求，来作判断。比如利用广播判断
+	if ([peripheral.name isEqualToString:@&quot;小米手环&quot;]) {
+		//连接设备 ， 这里会有 连接成功， 和 连接失败两个代理方法
+		[_manager connectPeripheral:peripheral options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+
+	}
+}
+
+#pragma mark - &gt;&gt; 连接成功
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+	[_centralManager stopScan]; //停止扫描
+	//因为在后面我们要从外设蓝牙那边再获取一些信息，并与之通讯，这些过程会有一些事件可能要处理，所以要给这个外设设置代理
+peripheral.delegate = self;
+//找到该设备上的指定服务 调用完该方法后会调用代理CBPeripheralDelegate（现在开始调用另一个代理的方法了）
+//    [peripheral discoverServices:@[[CBUUID UUIDWithString:@&quot;7480&quot;]]];
+	//这个是发现所有服务， 上面的是发现指定服务
+    [peripheral discoverServices:nil];
+}
+
+#pragma mark - &gt;&gt; CBPeripheralDelegate
+#pragma mark - &gt;&gt; 发现服务
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+	if (error == nil) {
+    NSLog(@&quot;发现服务&quot;);
+    for (CBService *service in peripheral.services) {
+        NSLog(@&quot;服务:%@&quot;, service);
+        //设备 发现所有特征
+        [peripheral discoverCharacteristics:nil forService:service];
+        //下面代码，是用来查找特定服务的 特征，如果能确定只用哪个服务的，就可以用下面的方法
+//if ([service.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_0]]) {
+//查询服务所带的特征值
+//[peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@&quot;FFE0&quot;]] forService:service];
+//[peripheral discoverCharacteristics:nil forService:service];
+//            }
+        }
+}
+
+#pragma mark - &gt;&gt; 发现特征值
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+	if (error == nil) {
+        for (CBCharacteristic *characteristic in service.characteristics) {
+            
+            NSLog(@&quot;发现特征值:%@&quot;, characteristic);
+                //这个FFE1是我随便写的。需要根据你们自己的硬件给的来填写.
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@&quot;FFE1&quot;]]) {
+                //我的这个特征是用来读取数据的。这里设置通知
+                    [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+                    
+                }else if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_2]]) {
+	                //给蓝牙设备发送数据， 写数据
+					[peripheral writeValue:(NSData *) forCharacteristic:characteristic type:CBCharacteristicWriteWithoutResponse];
+                }
+            
+        }
+	}
+
+}</code></pre>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.qoabc.com/tags/ios/">ios</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/ios-bledevelopmultidevice/" data-tooltip="iOS-BLE蓝牙开发(二) -- 多设备" aria-label="NEXT: iOS-BLE蓝牙开发(二) -- 多设备">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/swift3-0newinfofoundin2-2/" data-tooltip="swift3.0变化（swift2.2工程中发现）" aria-label="PREVIOUS: swift3.0变化（swift2.2工程中发现）">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/blog.qoabc.com\/2016\/04\/ios-bledevelop1\/';
+        
+          this.page.identifier = '\/2016\/04\/ios-bledevelop1\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Scott Tao. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/ios-bledevelopmultidevice/" data-tooltip="iOS-BLE蓝牙开发(二) -- 多设备" aria-label="NEXT: iOS-BLE蓝牙开发(二) -- 多设备">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/04/swift3-0newinfofoundin2-2/" data-tooltip="swift3.0变化（swift2.2工程中发现）" aria-label="PREVIOUS: swift3.0变化（swift2.2工程中发现）">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2016/04/ios-bledevelop1/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fios-bledevelop1%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fios-bledevelop1%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.qoabc.com%2F2016%2F04%2Fios-bledevelop1%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Scott Tao</h4>
+    
+      <div id="about-card-bio">This is a iOS Developer</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        iOS Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bochum, Deutschland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.qoabc.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

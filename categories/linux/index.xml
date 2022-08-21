@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 05 Mar 2020 09:54:25 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CentOS 使用 Docker 服务搭建 Nginx 文件服务器</title>
-      <link>https://blog.qoabc.com/2020/03/linux/</link>
+      <link>https://blog.qoabc.com/2020/03/linux-start-03/</link>
       <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2020/03/linux/</guid>
+      <guid>https://blog.qoabc.com/2020/03/linux-start-03/</guid>
       <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 &lt;p&gt;在CentOS 的某个目录下，创建下面的目录形式（也可以本地创建，用ftp上传）
 &lt;code&gt;/data/fileserver/&lt;/code&gt;&lt;/p&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>CentOS 服务器 &#43; mysql &#43; vsftpd服务</title>
-      <link>https://blog.qoabc.com/2020/02/linux/</link>
+      <link>https://blog.qoabc.com/2020/02/linux-start-02/</link>
       <pubDate>Tue, 25 Feb 2020 13:12:10 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2020/02/linux/</guid>
+      <guid>https://blog.qoabc.com/2020/02/linux-start-02/</guid>
       <description>&lt;h1 id=&#34;搭建mysql--ftp服务&#34;&gt;搭建mysql + FTP服务&lt;/h1&gt;
 &lt;h2 id=&#34;一安装-mysql&#34;&gt;一、安装 mysql&lt;/h2&gt;
 &lt;h3 id=&#34;从官方下载mysql-57镜像&#34;&gt;从官方下载&lt;code&gt;mysql 5.7&lt;/code&gt;镜像&lt;/h3&gt;
@@ -46,19 +46,19 @@
     
     <item>
       <title>Linux brclt 命令</title>
-      <link>https://blog.qoabc.com/2019/06/linux/</link>
+      <link>https://blog.qoabc.com/2019/06/linux-brctl-shell/</link>
       <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2019/06/linux/</guid>
+      <guid>https://blog.qoabc.com/2019/06/linux-brctl-shell/</guid>
       <description>参数说明和示例    参数 说明 示例     addbr &amp;lt;bridge&amp;gt; 创建网桥 brctl addbr br10   delbr &amp;lt;bridge&amp;gt; 删除网桥 brctl delbr br10   addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt; 将网卡接口接入网桥 brctl addif br10 eth0   show &amp;lt;bridge&amp;gt; 查询网桥信息 brctl show br10   stp &amp;lt;bridge&amp;gt; {on | off} 启用禁用STP brctl stp br10 off/on   showstp &amp;lt;bridge&amp;gt; 查看网桥STP信息 brctl showstp br10   setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt; 设置网桥延迟 brctl setfd br10 10   showmacs &amp;lt;bridge&amp;gt; 查看mac信息 brctl showmacs br10    </description>
     </item>
     
     <item>
       <title>Linux Shell ssh登录脚本</title>
-      <link>https://blog.qoabc.com/2019/04/linux/</link>
+      <link>https://blog.qoabc.com/2019/04/linux-shell-ssh/</link>
       <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2019/04/linux/</guid>
+      <guid>https://blog.qoabc.com/2019/04/linux-shell-ssh/</guid>
       <description>转载自Ca0Gu0
 Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多
 脚本下载 so.zip
@@ -71,10 +71,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>CentOS 第一步</title>
-      <link>https://blog.qoabc.com/2019/02/linux/</link>
+      <link>https://blog.qoabc.com/2019/02/linux-start-01/</link>
       <pubDate>Wed, 20 Feb 2019 12:22:27 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2019/02/linux/</guid>
+      <guid>https://blog.qoabc.com/2019/02/linux-start-01/</guid>
       <description>&lt;h2 id=&#34;centos-服务器--docker&#34;&gt;CentOS 服务器 + Docker&lt;/h2&gt;
 &lt;p&gt;1、可以通过阿里云、腾讯云购买一个服务器&lt;/p&gt;
 &lt;p&gt;2、自己搭建一个本地服务器&lt;/p&gt;

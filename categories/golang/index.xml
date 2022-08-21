@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 18 May 2020 11:51:10 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
-      <link>https://blog.qoabc.com/2020/05/golang/</link>
+      <link>https://blog.qoabc.com/2020/05/go-mysql-recursion/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2020/05/golang/</guid>
+      <guid>https://blog.qoabc.com/2020/05/go-mysql-recursion/</guid>
       <description>&lt;p&gt;我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;人事管理
@@ -38,10 +38,10 @@
     
     <item>
       <title>Golang 文件操作</title>
-      <link>https://blog.qoabc.com/2020/03/golang/</link>
+      <link>https://blog.qoabc.com/2020/03/go-os-operation/</link>
       <pubDate>Sun, 22 Mar 2020 19:23:51 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2020/03/golang/</guid>
+      <guid>https://blog.qoabc.com/2020/03/go-os-operation/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/c21decb4bea5&#34;&gt;转载自 超级大柱子（简书）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ad164c76ce15&#34;&gt;go极简教程 阅读目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;go-文件操作&#34;&gt;Go 文件操作&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>golang 中string和int类型相互转换</title>
-      <link>https://blog.qoabc.com/2020/03/golang/</link>
+      <link>https://blog.qoabc.com/2020/03/go-type-format/</link>
       <pubDate>Mon, 16 Mar 2020 09:51:36 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/2020/03/golang/</guid>
+      <guid>https://blog.qoabc.com/2020/03/go-type-format/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;string转成int：
 &lt;ul&gt;
