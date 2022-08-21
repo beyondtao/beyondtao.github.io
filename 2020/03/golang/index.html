@@ -7,15 +7,15 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Golang 文件操作",
+  "headline": "golang 中string和int类型相互转换",
   
-  "datePublished": "2020-03-22T19:23:51Z",
-  "dateModified": "2020-03-22T19:23:51Z",
+  "datePublished": "2020-03-16T09:51:36Z",
+  "dateModified": "2020-03-16T09:51:36Z",
   "author": {
     "@type": "Person",
-    "name": "Firstname Lastname",
+    "name": "Scott Tao",
     
-    "image": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    "image": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
     
   },
   "mainEntityOfPage": { 
@@ -24,15 +24,15 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Hugo tranquilpeak theme",
+    "name": "Scott's Blog",
     
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+      "url": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
     }
     
   },
-  "description": "转载自 超级大柱子（简书）\ngo极简教程 阅读目录\nGo 文件操作  os库：文件\\文件夹创建,读取,移动,复制 io库 : 文件内容的写入,修改,拼接  基本文件操作 文件内容的读取",
+  "description": " string转成int：  int, err := strconv.Atoi(string)   ",
   "keywords": []
 }
 
@@ -41,59 +41,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
-<meta name="author" content="Firstname Lastname">
+<meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="转载自 超级大柱子（简书）
-go极简教程 阅读目录
-Go 文件操作
+<meta name="description" content="
+string转成int：
 
-os库：文件\文件夹创建,读取,移动,复制
-io库 : 文件内容的写入,修改,拼接
-
-基本文件操作
-文件内容的读取">
+int, err := strconv.Atoi(string)
 
 
-<meta property="og:description" content="转载自 超级大柱子（简书）
-go极简教程 阅读目录
-Go 文件操作
+">
 
-os库：文件\文件夹创建,读取,移动,复制
-io库 : 文件内容的写入,修改,拼接
 
-基本文件操作
-文件内容的读取">
+<meta property="og:description" content="
+string转成int：
+
+int, err := strconv.Atoi(string)
+
+
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Golang 文件操作">
-<meta name="twitter:title" content="Golang 文件操作">
+<meta property="og:title" content="golang 中string和int类型相互转换">
+<meta name="twitter:title" content="golang 中string和int类型相互转换">
 <meta property="og:url" content="https://blog.qoabc.com/2020/03/golang/">
 <meta property="twitter:url" content="https://blog.qoabc.com/2020/03/golang/">
-<meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="转载自 超级大柱子（简书）
-go极简教程 阅读目录
-Go 文件操作
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="
+string转成int：
 
-os库：文件\文件夹创建,读取,移动,复制
-io库 : 文件内容的写入,修改,拼接
+int, err := strconv.Atoi(string)
 
-基本文件操作
-文件内容的读取">
-<meta name="twitter:description" content="转载自 超级大柱子（简书）
-go极简教程 阅读目录
-Go 文件操作
 
-os库：文件\文件夹创建,读取,移动,复制
-io库 : 文件内容的写入,修改,拼接
+">
+<meta name="twitter:description" content="
+string转成int：
 
-基本文件操作
-文件内容的读取">
+int, err := strconv.Atoi(string)
+
+
+">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-03-22T19:23:51">
+    <meta property="article:published_time" content="2020-03-16T09:51:36">
   
   
-    <meta property="article:modified_time" content="2020-03-22T19:23:51">
+    <meta property="article:modified_time" content="2020-03-16T09:51:36">
   
   
   
@@ -116,15 +108,15 @@ io库 : 文件内容的写入,修改,拼接
 
 
 
-  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
-  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
 
 
 
 
 
 
-    <title>Golang 文件操作</title>
+    <title>golang 中string和int类型相互转换</title>
 
     <link rel="icon" href="https://blog.qoabc.com/favicon.png">
     
@@ -154,7 +146,7 @@ io库 : 文件内容的写入,修改,拼接
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
   </div>
   
     
@@ -164,7 +156,7 @@ io库 : 文件内容的写入,修改,拼接
     
     
       
-        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -176,11 +168,11 @@ io库 : 文件内容的写入,修改,拼接
     
       <div class="sidebar-profile">
         <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
-          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
         </a>
-        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
         
-          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+          <h5 class="sidebar-profile-bio">This is a iOS Developer</h5>
         
       </div>
     
@@ -242,21 +234,11 @@ io库 : 文件内容的写入,修改,拼接
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener" title="GitHub">
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
       
       <span class="sidebar-button-desc">GitHub</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener" title="Stack Overflow">
-    
-      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
-      
-      <span class="sidebar-button-desc">Stack Overflow</span>
     </a>
   </li>
 
@@ -291,15 +273,15 @@ io库 : 文件内容的写入,修改,拼接
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Golang 文件操作
+      golang 中string和int类型相互转换
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2020-03-22T19:23:51Z">
+      <time datetime="2020-03-16T09:51:36Z">
         
-  March 22, 2020
+  March 16, 2020
 
       </time>
     
@@ -318,135 +300,30 @@ io库 : 文件内容的写入,修改,拼接
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><a href="https://www.jianshu.com/p/c21decb4bea5">转载自 超级大柱子（简书）</a></p>
-<p><a href="https://www.jianshu.com/p/ad164c76ce15">go极简教程 阅读目录</a></p>
-<h2 id="go-文件操作">Go 文件操作</h2>
+              <ul>
+<li>string转成int：
 <ul>
-<li>os库：文件\文件夹创建,读取,移动,复制</li>
-<li>io库 : 文件内容的写入,修改,拼接</li>
+<li>int, err := strconv.Atoi(string)</li>
 </ul>
-<h2 id="基本文件操作">基本文件操作</h2>
-<h3 id="文件内容的读取">文件内容的读取</h3>
-<pre tabindex="0"><code>package main
-
-import (
-    &quot;io/ioutil&quot;
-    &quot;log&quot;
-)
-
-func main() {
-    // 读取文件内容
-    file, _ := os.OpenFile(&quot;./demo_unicode.html&quot;, 2, 0666)
-    fileByte1, _ = ioutil.ReadAll(file);
-
-    // 读取文件内容，更简易的方法
-    fileByte2, _ := ioutil.ReadFile(&quot;./demo_unicode.html&quot;)
-
-    // byte转string
-    fileString := string(fileByte2)
-    log.Println(fileString)
-}
-</code></pre><h3 id="文件的常规操作复制以下代码进maingo-执行后看看效果-再逐行阅读代码">文件的常规操作，复制以下代码进main.go, 执行后看看效果, 再逐行阅读代码</h3>
-<pre tabindex="0"><code>package main
-
-import (
-    &quot;io&quot;
-    &quot;os&quot;
-)
-
-func main() {
-    // 设定工作路径, 一般在项目刚开始设定一次即可, 不要在异步过程中修改工作路径
-    // 默认是程序执行的路径
-    os.Chdir(&quot;./&quot;)
-
-    // 创建文件夹
-    os.MkdirAll(&quot;./aa/bb/c1&quot;, 0777)	//os.ModePerm 就是0777
-    os.MkdirAll(&quot;./aa/bb/c2&quot;, 0777)
-
-    // 创建文件
-    os.Create(&quot;./aa/bb/c1/file.go&quot;)
-
-    // 移动文件
-    os.Rename(&quot;./aa/bb/c1/file.go&quot;, &quot;./aa/bb/c2/file.go&quot;)
-
-    // 打开文件,得到一个 *File 对象, 用于后续的写入
-    file, _ := os.OpenFile(&quot;./aa/bb/c2/file.go&quot;, 2, 0666)
-
-    // 写入文件内容
-    io.WriteString(file, `
-        package main
-        func main(){
-            log.Println(&quot;我是由程序写入的代码&quot;)
-        }
-    `)
-
-    // 也可以直接调用file里的函数写入内容
-    file.WriteString(&quot;add string&quot;)
-
-    // 拷贝文件, 拷贝其实就是创建一个文件, 然后写入文件内容
-    src1, _ := os.Create(&quot;./aa/bb/c1/file-copy1.go&quot;)
-    io.Copy(file, src1) // 把文件file, 写入src1文件
-
-    // 删除文件或文件夹
-    os.Create(&quot;./aa/bb/c1/file-delete.go&quot;) // 创建一个文件用于删除
-    os.RemoveAll(&quot;./aa/bb/c1/file-delete.go&quot;)
-
-}
-</code></pre><h3 id="文件覆盖判断-osisnotexist">文件覆盖判断 os.IsNotExist</h3>
-<p>当文件已存在时, 不管是<code>os.Rename()</code>, <code>os.Create()</code>, 还是<code>io.WriteString()</code> 都会对已存在的文件进行覆盖\修改,</p>
-<p>如果需要安全的执行, 可以使用 <code>os.Stat()</code> 配合 <code>os.IsNotExist()</code> 做判断</p>
-<pre tabindex="0"><code>package main
-
-import (
-    &quot;io&quot;
-    &quot;os&quot;
-)
-
-func main() {
-    os.MkdirAll(&quot;aa&quot;, 0777)
-
-    // 创建了文件 testA, 并且写入了内容
-    testA, _ := os.Create(&quot;aa/testA&quot;)
-    io.WriteString(testA, &quot;the teatA&quot;)
-    // 如果需要安全判断, 可以使用 os.Stat 配合 os.IsNotExist
-    if _, err := os.Stat(&quot;aa/testA&quot;); os.IsNotExist(err) {
-        // 当文件不存在, 才执行创建
-        os.Create(&quot;aa/testA&quot;)
-    }
-    os.Chmod(&quot;aa/testA&quot;, 0777)
-}
-</code></pre><h3 id="遍历文件夹">遍历文件夹</h3>
-<p>遍历文件夹可以使用 ioutil库 的ioutil.ReadDir, 会得到一个数组, 数组元素有文件的属性,</p>
-<pre tabindex="0"><code>package main
-
-import (
-    &quot;io/ioutil&quot;
-    &quot;log&quot;
-)
-
-func main() {
-    fs, _ := ioutil.ReadDir(&quot;aa&quot;)
-    for _, v := range fs {
-        // 遍历得到文件名
-        log.Println(v.Name())
-        log.Println(v.IsDir())
-    }
-}
-</code></pre><h3 id="权限">权限</h3>
-<p>可以使用 <code>os.Chmod()</code> 修改文件权限</p>
-<pre tabindex="0"><code>// 所有人可读写权限
-os.Chmod(&quot;aa/testA&quot;, 0666)
-</code></pre><pre tabindex="0"><code>// 只读权限
-os.Chmod(&quot;aa/testA&quot;, 0400)
-</code></pre><h3 id="linux权限参考">Linux权限参考</h3>
-<pre tabindex="0"><code>-rw------- (600)      只有拥有者有读写权限。
--rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。
--rwx------ (700)     只有拥有者有读、写、执行权限。
--rwxr-xr-x (755)    拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
--rwx--x--x (711)    拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
--rw-rw-rw- (666)   所有用户都有文件读、写权限。
--rwxrwxrwx (777)  所有用户都有读、写、执行权限。
-</code></pre>
+</li>
+</ul>
+<ul>
+<li>string转成int64：
+<ul>
+<li>int64, err := strconv.ParseInt(string, 10, 64)</li>
+</ul>
+</li>
+<li>int转成string：
+<ul>
+<li>string := strconv.Itoa(int)</li>
+</ul>
+</li>
+<li>int64转成string：
+<ul>
+<li>string := strconv.FormatInt(int64,10)</li>
+</ul>
+</li>
+</ul>
               
 
 
@@ -473,7 +350,7 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue-cli@4 入门（一）" aria-label="NEXT: vue-cli@4 入门（一）">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/golang/" data-tooltip="Golang 文件操作" aria-label="NEXT: Golang 文件操作">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -481,7 +358,7 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/golang/" data-tooltip="golang 中string和int类型相互转换" aria-label="PREVIOUS: golang 中string和int类型相互转换">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/linux/" data-tooltip="CentOS 使用 Docker 服务搭建 Nginx 文件服务器" aria-label="PREVIOUS: CentOS 使用 Docker 服务搭建 Nginx 文件服务器">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -567,7 +444,7 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 Firstname Lastname. All Rights Reserved
+    &copy; 2022 Scott Tao. All Rights Reserved
   </span>
 </footer>
 
@@ -580,7 +457,7 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue-cli@4 入门（一）" aria-label="NEXT: vue-cli@4 入门（一）">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/golang/" data-tooltip="Golang 文件操作" aria-label="NEXT: Golang 文件操作">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -588,7 +465,7 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/golang/" data-tooltip="golang 中string和int类型相互转换" aria-label="PREVIOUS: golang 中string和int类型相互转换">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/03/linux/" data-tooltip="CentOS 使用 Docker 服务搭建 Nginx 文件服务器" aria-label="PREVIOUS: CentOS 使用 Docker 服务搭建 Nginx 文件服务器">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -679,24 +556,24 @@ os.Chmod(&quot;aa/testA&quot;, 0400)
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
     
-    <h4 id="about-card-name">Firstname Lastname</h4>
+    <h4 id="about-card-name">Scott Tao</h4>
     
-      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+      <div id="about-card-bio">This is a iOS Developer</div>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Your job title
+        iOS Developer
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker-alt"></i>
         <br/>
-        France
+        Bochum, Deutschland
       </div>
     
   </div>

@@ -7,15 +7,15 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "管理多个SSH Key",
+  "headline": "ssh exchange identification",
   
-  "datePublished": "2016-07-18T15:43:04Z",
-  "dateModified": "2016-07-18T15:43:04Z",
+  "datePublished": "2016-07-11T11:43:06Z",
+  "dateModified": "2016-07-11T11:43:06Z",
   "author": {
     "@type": "Person",
-    "name": "Firstname Lastname",
+    "name": "Scott Tao",
     
-    "image": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    "image": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
     
   },
   "mainEntityOfPage": { 
@@ -24,15 +24,15 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Hugo tranquilpeak theme",
+    "name": "Scott's Blog",
     
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+      "url": "https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460"
     }
     
   },
-  "description": "如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。 例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。\n",
+  "description": "执行 git pull 的时候，提示(When I do the \u0026ldquo;git pull\u0026rdquo;)\nssh_exchange_identification: read: Connection reset by peer fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. ",
   "keywords": []
 }
 
@@ -41,31 +41,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
-<meta name="author" content="Firstname Lastname">
+<meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
+<meta name="description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
+ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+">
 
 
-<meta property="og:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
+<meta property="og:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
+ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="管理多个SSH Key">
-<meta name="twitter:title" content="管理多个SSH Key">
+<meta property="og:title" content="ssh exchange identification">
+<meta name="twitter:title" content="ssh exchange identification">
 <meta property="og:url" content="https://blog.qoabc.com/2016/07/git/">
 <meta property="twitter:url" content="https://blog.qoabc.com/2016/07/git/">
-<meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
-<meta name="twitter:description" content="如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。">
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
+ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+">
+<meta name="twitter:description" content="执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)
+ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2016-07-18T15:43:04">
+    <meta property="article:published_time" content="2016-07-11T11:43:06">
   
   
-    <meta property="article:modified_time" content="2016-07-18T15:43:04">
+    <meta property="article:modified_time" content="2016-07-11T11:43:06">
   
   
   
@@ -88,15 +108,15 @@
 
 
 
-  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
-  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=640">
 
 
 
 
 
 
-    <title>管理多个SSH Key</title>
+    <title>ssh exchange identification</title>
 
     <link rel="icon" href="https://blog.qoabc.com/favicon.png">
     
@@ -126,7 +146,7 @@
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
   </div>
   
     
@@ -136,7 +156,7 @@
     
     
       
-        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -148,11 +168,11 @@
     
       <div class="sidebar-profile">
         <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
-          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
         </a>
-        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
         
-          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+          <h5 class="sidebar-profile-bio">This is a iOS Developer</h5>
         
       </div>
     
@@ -214,21 +234,11 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener" title="GitHub">
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
       
       <span class="sidebar-button-desc">GitHub</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener" title="Stack Overflow">
-    
-      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
-      
-      <span class="sidebar-button-desc">Stack Overflow</span>
     </a>
   </li>
 
@@ -263,15 +273,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      管理多个SSH Key
+      ssh exchange identification
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2016-07-18T15:43:04Z">
+      <time datetime="2016-07-11T11:43:06Z">
         
-  July 18, 2016
+  July 11, 2016
 
       </time>
     
@@ -290,57 +300,42 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。</p>
-<p>$ ls ~/.ssh/
-config     <br>
-github_rsa  <br>
-github_rsa.pub<br>
-personalid  <br>
-personalid.pub</p>
-<p>以上是我的密钥列表，那么我的github如何使用多个密钥呢。</p>
-<ul>
-<li>需要编辑一下配置文件~/.ssh/config：</li>
-</ul>
-<p>如果没有这个文件，可以创建一个(切换到 ~/.ssh	目录下)</p>
-<pre><code>$ touch config
-</code></pre>
-<p>编辑 config文件</p>
-<pre tabindex="0"><code>	Host github.com
-   		Hostname github.com
-	    User            username
-    	IdentityFile    ~/.ssh/github_rsa
-     
-	Host bitbucket.org
-	    Hostname bitbucket.org
-	    User username
-	    IdentityFile ~/.ssh/personalid
-</code></pre><h4 id="只是用一个公钥">只是用一个公钥</h4>
-<p>也可以几个账号都上传同一个公钥，配置的时候，使用同一个公钥文件就可以了。为了安全性考虑，不建议这么做</p>
-<pre tabindex="0"><code>Host github.com
-   	 Hostname github.com
-	 User            username
-    	IdentityFile    ~/.ssh/github_rsa
-     
-Host bitbucket.org
-	 Hostname bitbucket.org
-	 User username
-	 IdentityFile ~/.ssh/github_rsa
-</code></pre><p>解释此配置文件：</p>
-<pre><code>Host: &quot;github.com&quot;是一个『别名』，可以随意命名，也可以直接写github
+              <p>执行 git pull 的时候，提示(When I do the &ldquo;git pull&rdquo;)</p>
+<pre><code>ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
 
-Hostname:	仓储地址：例如git@github.com，这里要的就是 github.com
-
-IdentityFile: 所使用的公钥文件
+Please make sure you have the correct access rights
+and the repository exists.
 </code></pre>
-<p>配置完毕，用下面的命令测试一下：</p>
-<pre><code>$ ssh -T git@bitbucket.com
-logged in as beyond521t.
+<p>经过各种研究，发现了一个比较坑的问题（至少目前我遇到的就是），问题就是服务端有问题，具体是什么，不清楚，因为我不负责这块内容。只说一下，临时解决吧，因为需要，所以不能够等待服务端解决之后再去提交。
+(I found this is because the)</p>
+<p>这种问题是因为使用SSH提交导致的，但是发现使用HTTPS这种提交没有问题。git clone代码的时候，大家肯定会看到，给了两个选项，一个是SSH的地址， 一个是HTTPS的地址。</p>
+<p>//输入命令</p>
+<pre><code>$ git remote -v
+//输出 SSH的origin配置
+origin	git@git.******.com:ict/project.git (fetch)
+origin	git@git.******.com:ict/project.git (push)
 
-You can use git or hg to connect to Bitbucket. Shell access is disabled.
+//添加一个HTTPs origin 
+//这里使用的是 HTTPS地址
+git remote add origin2 https://git.******.com/ict/project.git
 </code></pre>
-<p>可以使用如下命令，进行debug查看：</p>
-<pre><code>$ ssh -vv git@bitbucket.com
+<p>//输入命令</p>
+<pre><code>$ git remote -v
+//输出 origin配置
+origin	git@git.******.com:ict/project.git (fetch)
+origin	git@git.******.com:ict/project.git (push)
+origin2	https://git.******.com/ict/project.git (fetch)
+origin2	https://git.******.com/ict/project.git (push)
+</code></pre>
+<p>//然后进行一下操作实时
+//这里使用HTTPS 的话，使用 配置的 origin2 进行配置</p>
+<pre><code>$ git pull origin2 develop
+//发现执行成功
+remote: Counting objects: 22, done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 22 (delta 12), reused 0 (delta 0)
+Unpacking objects: 100% (22/22), done.
 </code></pre>
               
 
@@ -368,7 +363,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/08/mac/" data-tooltip="rvm升级Ruby" aria-label="NEXT: rvm升级Ruby">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="swift 使用 delegate 内存泄露问题" aria-label="NEXT: swift 使用 delegate 内存泄露问题">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -376,7 +371,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/git/" data-tooltip="生成SSH Key" aria-label="PREVIOUS: 生成SSH Key">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="LTPickerView.swift" aria-label="PREVIOUS: LTPickerView.swift">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -462,7 +457,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 Firstname Lastname. All Rights Reserved
+    &copy; 2022 Scott Tao. All Rights Reserved
   </span>
 </footer>
 
@@ -475,7 +470,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/08/mac/" data-tooltip="rvm升级Ruby" aria-label="NEXT: rvm升级Ruby">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="swift 使用 delegate 内存泄露问题" aria-label="NEXT: swift 使用 delegate 内存泄露问题">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -483,7 +478,7 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/git/" data-tooltip="生成SSH Key" aria-label="PREVIOUS: 生成SSH Key">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2016/07/swift/" data-tooltip="LTPickerView.swift" aria-label="PREVIOUS: LTPickerView.swift">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -574,24 +569,24 @@ You can use git or hg to connect to Bitbucket. Shell access is disabled.
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b9d7c735e729adde30ff87960fd67460?s=110" alt="Author&#39;s picture" />
     
-    <h4 id="about-card-name">Firstname Lastname</h4>
+    <h4 id="about-card-name">Scott Tao</h4>
     
-      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+      <div id="about-card-bio">This is a iOS Developer</div>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Your job title
+        iOS Developer
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker-alt"></i>
         <br/>
-        France
+        Bochum, Deutschland
       </div>
     
   </div>
