@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/git/</link>
+    <description>Recent content in git on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Jan 2021 18:49:03 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Commitizen 规范化commit工具</title>
+      <link>https://blog.qoabc.com/2021/01/git/</link>
+      <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2021/01/git/</guid>
+      <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;需要提前安装node。&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-安装-commitizen-node-模块&#34;&gt;1. 安装 commitizen node 模块&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g commitizen
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git提交的正确姿势：Commit message 和 Change log 编写指南</title>
+      <link>https://blog.qoabc.com/2020/12/git/</link>
+      <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/12/git/</guid>
+      <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;
+&lt;p&gt;本文前三部分都是介绍。从第四部分开始是如何安装和使用。&lt;/p&gt;
+&lt;h2 id=&#34;一介绍&#34;&gt;一、介绍&lt;/h2&gt;
+&lt;p&gt;Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git Warning push.default is unset</title>
+      <link>https://blog.qoabc.com/2016/08/git/</link>
+      <pubDate>Thu, 04 Aug 2016 22:01:33 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/08/git/</guid>
+      <description>&lt;p&gt;git push代码的时候，可能会遇到下面的提示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push
+
+warning: push.default is unset; its implicit value is changing in Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. 
+To squelch this message and maintain the current behavior after the default changes, use:  
+
+git config --global push.default matching
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>管理多个SSH Key</title>
+      <link>https://blog.qoabc.com/2016/07/git/</link>
+      <pubDate>Mon, 18 Jul 2016 15:43:04 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/07/git/</guid>
+      <description>&lt;p&gt;如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生成SSH Key</title>
+      <link>https://blog.qoabc.com/2016/07/git/</link>
+      <pubDate>Sun, 17 Jul 2016 13:42:55 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/07/git/</guid>
+      <description>&lt;p&gt;本文主要介绍如何使用终端，生成ssh key。
+SSH只是一种协议，用于计算机之间的加密登录，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ssh exchange identification</title>
+      <link>https://blog.qoabc.com/2016/07/git/</link>
+      <pubDate>Mon, 11 Jul 2016 11:43:06 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/07/git/</guid>
+      <description>&lt;p&gt;执行 git pull 的时候，提示(When I do the &amp;ldquo;git pull&amp;rdquo;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh_exchange_identification: read: Connection reset by peer
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何配置Bitbucket的ssh</title>
+      <link>https://blog.qoabc.com/2016/02/git/</link>
+      <pubDate>Sun, 21 Feb 2016 12:43:34 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/02/git/</guid>
+      <description>&lt;p&gt;在bitbucket上使用https协议，经常会在提交代码的时候出错，让人很着急上火，但是用ssh就要方便很多。&lt;/p&gt;
+&lt;p&gt;下面介绍一下设置ssh的方法：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git命令</title>
+      <link>https://blog.qoabc.com/2016/02/git/</link>
+      <pubDate>Tue, 16 Feb 2016 11:49:03 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/02/git/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; Profile&lt;/p&gt;
+&lt;h4 id=&#34;1远程仓库相关命令&#34;&gt;1)远程仓库相关命令&lt;/h4&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

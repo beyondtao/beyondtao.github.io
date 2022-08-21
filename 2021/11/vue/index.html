@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "vue3/vue-cli@4.5 + ts + andt 创建项目",
+  
+  "datePublished": "2021-11-28T16:42:36Z",
+  "dateModified": "2021-11-28T16:42:36Z",
+  "author": {
+    "@type": "Person",
+    "name": "Firstname Lastname",
+    
+    "image": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/blog.qoabc.com\/2021\/11\/vue\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo tranquilpeak theme",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    }
+    
+  },
+  "description": "介绍  vue3 vue-cli@4.5 ts antd  一、安装 1.1 vue-cli@4 我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样 1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）\n$ npm uninstall vue-cli -g  2、安装Vue-cli\n$ npm install -g @vue/cli # 查看版本 $ vue --version @vue/cli 4.5.15  1.2 项目中的命令 这块为了方便以后查找，所以放到了上面。\n1.2.1 安装 antd 可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。\n$ npm install ant-design-vue@next --save  1.2.2 引入 ts $ npm install --save-dev typescript $ npm install --save-dev @vue/cli-plugin-typescript  1.2.3 安装axios $ npm install --save axios $ npm install --save es6-promise  官方文档：axios 依赖原生的 ES6 Promise 实现而被支持. 如果你的环境不支持 ES6 Promise，你可以使用 polyfill.  虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。\n二、创建配置 2.1 执行创建命令 # vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中 $ vue create 项目名  2.1 pick a preset 选择 Manually select features手动配置\n2.2 check the features 按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择\n2.3 选择vue版本 注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）\n2.4 细节配置 后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。\n如果不明白可以跟着下面一步一步来。\n2.5 Use class-style component syntax? Yes 是否使用Class风格装饰器？\n选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}\n2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes 使用Babel与TypeScript一起用于自动检测的填充?\n2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes 路由使用历史模式?\n选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。\n2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass) 使用什么css预编译器？\nSass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。\nStylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名\n node-sass是自动编译实时的 dart-sass需要保存后才会生效  2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置） 2.10 Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查） ❯◉ Lint on save // 保存时检测\n2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ） 2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中) ❯◉ In dedicated config files //在专用的配置文件中\n◯In package.json //在package.json\nSave this as a preset for future projects?(y/N) （是否保存配置 ） 可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目\n2.13 创建完成 2.14 运行项目 $ cd 项目目录 $ npm run serve  三、 把Axios 配置成 Vue插件",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Firstname Lastname">
+<meta name="keywords" content="">
+<meta name="description" content="介绍
+
+vue3
+vue-cli@4.5
+ts
+antd
+
+一、安装
+1.1 vue-cli@4
+我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
+$ npm uninstall vue-cli -g
+
+2、安装Vue-cli
+$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+
+1.2 项目中的命令
+这块为了方便以后查找，所以放到了上面。
+1.2.1 安装 antd
+可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
+$ npm install ant-design-vue@next --save
+
+1.2.2 引入 ts
+$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+
+1.2.3 安装axios
+$ npm install --save axios
+$ npm install --save es6-promise
+
+官方文档：
+axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+
+虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
+二、创建配置
+2.1 执行创建命令
+# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+
+2.1 pick a preset
+选择 Manually select features 手动配置
+
+2.2 check the features
+按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
+
+2.3 选择vue版本
+注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
+
+
+2.4 细节配置
+后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
+如果不明白可以跟着下面一步一步来。
+2.5 Use class-style component syntax? Yes
+是否使用Class风格装饰器？
+选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
+2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+使用Babel与TypeScript一起用于自动检测的填充?
+2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+路由使用历史模式?
+选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+使用什么css预编译器？
+Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
+Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
+
+node-sass是自动编译实时的
+dart-sass需要保存后才会生效
+
+2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
+2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
+❯◉ Lint on save // 保存时检测
+2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
+2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
+❯◉ In dedicated config files //在专用的配置文件中
+◯In package.json //在package.json
+Save this as a preset for future projects?(y/N) （是否保存配置 ）
+可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
+2.13 创建完成
+
+2.14 运行项目
+$ cd 项目目录
+$ npm run serve
+
+
+三、
+把Axios 配置成 Vue插件">
+
+
+<meta property="og:description" content="介绍
+
+vue3
+vue-cli@4.5
+ts
+antd
+
+一、安装
+1.1 vue-cli@4
+我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
+$ npm uninstall vue-cli -g
+
+2、安装Vue-cli
+$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+
+1.2 项目中的命令
+这块为了方便以后查找，所以放到了上面。
+1.2.1 安装 antd
+可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
+$ npm install ant-design-vue@next --save
+
+1.2.2 引入 ts
+$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+
+1.2.3 安装axios
+$ npm install --save axios
+$ npm install --save es6-promise
+
+官方文档：
+axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+
+虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
+二、创建配置
+2.1 执行创建命令
+# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+
+2.1 pick a preset
+选择 Manually select features 手动配置
+
+2.2 check the features
+按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
+
+2.3 选择vue版本
+注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
+
+
+2.4 细节配置
+后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
+如果不明白可以跟着下面一步一步来。
+2.5 Use class-style component syntax? Yes
+是否使用Class风格装饰器？
+选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
+2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+使用Babel与TypeScript一起用于自动检测的填充?
+2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+路由使用历史模式?
+选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+使用什么css预编译器？
+Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
+Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
+
+node-sass是自动编译实时的
+dart-sass需要保存后才会生效
+
+2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
+2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
+❯◉ Lint on save // 保存时检测
+2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
+2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
+❯◉ In dedicated config files //在专用的配置文件中
+◯In package.json //在package.json
+Save this as a preset for future projects?(y/N) （是否保存配置 ）
+可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
+2.13 创建完成
+
+2.14 运行项目
+$ cd 项目目录
+$ npm run serve
+
+
+三、
+把Axios 配置成 Vue插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">
+<meta name="twitter:title" content="vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">
+<meta property="og:url" content="https://blog.qoabc.com/2021/11/vue/">
+<meta property="twitter:url" content="https://blog.qoabc.com/2021/11/vue/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="介绍
+
+vue3
+vue-cli@4.5
+ts
+antd
+
+一、安装
+1.1 vue-cli@4
+我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
+$ npm uninstall vue-cli -g
+
+2、安装Vue-cli
+$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+
+1.2 项目中的命令
+这块为了方便以后查找，所以放到了上面。
+1.2.1 安装 antd
+可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
+$ npm install ant-design-vue@next --save
+
+1.2.2 引入 ts
+$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+
+1.2.3 安装axios
+$ npm install --save axios
+$ npm install --save es6-promise
+
+官方文档：
+axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+
+虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
+二、创建配置
+2.1 执行创建命令
+# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+
+2.1 pick a preset
+选择 Manually select features 手动配置
+
+2.2 check the features
+按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
+
+2.3 选择vue版本
+注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
+
+
+2.4 细节配置
+后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
+如果不明白可以跟着下面一步一步来。
+2.5 Use class-style component syntax? Yes
+是否使用Class风格装饰器？
+选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
+2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+使用Babel与TypeScript一起用于自动检测的填充?
+2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+路由使用历史模式?
+选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+使用什么css预编译器？
+Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
+Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
+
+node-sass是自动编译实时的
+dart-sass需要保存后才会生效
+
+2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
+2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
+❯◉ Lint on save // 保存时检测
+2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
+2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
+❯◉ In dedicated config files //在专用的配置文件中
+◯In package.json //在package.json
+Save this as a preset for future projects?(y/N) （是否保存配置 ）
+可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
+2.13 创建完成
+
+2.14 运行项目
+$ cd 项目目录
+$ npm run serve
+
+
+三、
+把Axios 配置成 Vue插件">
+<meta name="twitter:description" content="介绍
+
+vue3
+vue-cli@4.5
+ts
+antd
+
+一、安装
+1.1 vue-cli@4
+我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
+$ npm uninstall vue-cli -g
+
+2、安装Vue-cli
+$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+
+1.2 项目中的命令
+这块为了方便以后查找，所以放到了上面。
+1.2.1 安装 antd
+可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
+$ npm install ant-design-vue@next --save
+
+1.2.2 引入 ts
+$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+
+1.2.3 安装axios
+$ npm install --save axios
+$ npm install --save es6-promise
+
+官方文档：
+axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+
+虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
+二、创建配置
+2.1 执行创建命令
+# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+
+2.1 pick a preset
+选择 Manually select features 手动配置
+
+2.2 check the features
+按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
+
+2.3 选择vue版本
+注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
+
+
+2.4 细节配置
+后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
+如果不明白可以跟着下面一步一步来。
+2.5 Use class-style component syntax? Yes
+是否使用Class风格装饰器？
+选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
+2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+使用Babel与TypeScript一起用于自动检测的填充?
+2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+路由使用历史模式?
+选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+使用什么css预编译器？
+Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
+Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
+
+node-sass是自动编译实时的
+dart-sass需要保存后才会生效
+
+2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
+2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
+❯◉ Lint on save // 保存时检测
+2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
+2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
+❯◉ In dedicated config files //在专用的配置文件中
+◯In package.json //在package.json
+Save this as a preset for future projects?(y/N) （是否保存配置 ）
+可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
+2.13 创建完成
+
+2.14 运行项目
+$ cd 项目目录
+$ npm run serve
+
+
+三、
+把Axios 配置成 Vue插件">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-11-28T16:42:36">
+  
+  
+    <meta property="article:modified_time" content="2021-11-28T16:42:36">
+  
+  
+  
+    
+      <meta property="article:section" content="vue">
+    
+  
+  
+    
+      <meta property="article:tag" content="vue">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+
+
+
+
+
+
+    <title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
+
+    <link rel="icon" href="https://blog.qoabc.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.qoabc.com/2021/11/vue/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.qoabc.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        
+          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-11-28T16:42:36Z">
+        
+  November 28, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.qoabc.com/categories/vue">vue</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h2 id="介绍">介绍</h2>
+<ul>
+<li>vue3</li>
+<li><a href="mailto:vue-cli@4.5">vue-cli@4.5</a></li>
+<li>ts</li>
+<li>antd</li>
+</ul>
+<h2 id="一安装">一、安装</h2>
+<h3 id="11-vue-cli4">1.1 vue-cli@4</h3>
+<p>我这里使用的是vue-cli@4.5版本。 创建项目 <code>main.js</code>中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）</p>
+<pre><code>$ npm uninstall vue-cli -g
+</code></pre>
+<p>2、安装Vue-cli</p>
+<pre><code>$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+</code></pre>
+<h3 id="12-项目中的命令">1.2 项目中的命令</h3>
+<p>这块为了方便以后查找，所以放到了上面。</p>
+<h4 id="121-安装-antd">1.2.1 安装 antd</h4>
+<p>可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的<code>3.0</code>， 如果你选择的是<code>1.7</code>版本，可能会没有后面的 @next。</p>
+<pre><code>$ npm install ant-design-vue@next --save
+</code></pre>
+<h4 id="122-引入-ts">1.2.2 引入 ts</h4>
+<pre><code>$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+</code></pre>
+<h4 id="123-安装axios">1.2.3 安装axios</h4>
+<pre><code>$ npm install --save axios
+$ npm install --save es6-promise
+</code></pre>
+<p><!-- raw HTML omitted -->官方文档：<!-- raw HTML omitted --></p>
+<pre><code>axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+</code></pre>
+<p>虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。</p>
+<h2 id="二创建配置">二、创建配置</h2>
+<h3 id="21-执行创建命令">2.1 执行创建命令</h3>
+<pre><code># vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+</code></pre>
+<h3 id="21-pick-a-preset">2.1 pick a preset</h3>
+<p>选择 <!-- raw HTML omitted -->Manually select features<!-- raw HTML omitted --> 手动配置</p>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/001.png" alt="图片"></p>
+<h3 id="22-check-the-features">2.2 check the features</h3>
+<p>按照图中选项配置，点击<code>空格</code>选择选项。 Unit Testing 测试单元可以不选择</p>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/002.png" alt="图片"></p>
+<h3 id="23-选择vue版本">2.3 选择vue版本</h3>
+<p>注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）</p>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/003.png" alt="图片"></p>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/004.png" alt="图片"></p>
+<h3 id="24-细节配置">2.4 细节配置</h3>
+<p>后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。</p>
+<p>如果不明白可以跟着下面一步一步来。</p>
+<h3 id="25-use-class-style-component-syntax-yes">2.5 Use class-style component syntax? Yes</h3>
+<p>是否使用Class风格装饰器？</p>
+<p>选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}</p>
+<h3 id="26-use-babel-alongside-typescript-required-for-modern-mode-auto-detected-polyfills-transpiling-jsx-yes">2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes</h3>
+<p>使用Babel与TypeScript一起用于自动检测的填充?</p>
+<h3 id="27-use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production-yes">2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes</h3>
+<p>路由使用历史模式?</p>
+<p>选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。</p>
+<h3 id="28-pick-a-css-pre-processor-postcss-autoprefixer-and-css-modules-are-supported-by-default-sassscss-with-dart-sass">2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)</h3>
+<p>使用什么css预编译器？</p>
+<p>Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。</p>
+<p>Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名</p>
+<ul>
+<li>node-sass是自动编译实时的</li>
+<li>dart-sass需要保存后才会生效</li>
+</ul>
+<h3 id="29-pick-a-linter--formatter-config-选择eslint代码验证规则我们选择eslint--standard-config-标准配置">2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置）</h3>
+<h3 id="210--pick-additional-lint-features-选择什么时候进行代码规则检测我们选择保存时进行检查">2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）</h3>
+<p>❯◉ Lint on save // 保存时检测</p>
+<h3 id="211-pick-a-unit-testing-solution-unit-testing-单元测试我们选择jest-">2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）</h3>
+<h3 id="212-where-do-you-prefer-placing-config-for-babel-eslint-etc-in-dedicated-config-files-您希望babel-eslint-配置的存放位置我们选择在专用的配置文件中">2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)</h3>
+<p>❯◉ In dedicated config files //在专用的配置文件中</p>
+<p>◯In package.json //在package.json</p>
+<h3 id="save-this-as-a-preset-for-future-projectsyn-是否保存配置-">Save this as a preset for future projects?(y/N) （是否保存配置 ）</h3>
+<p>可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目</p>
+<h3 id="213-创建完成">2.13 创建完成</h3>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/010.png" alt="图片"></p>
+<h3 id="214-运行项目">2.14 运行项目</h3>
+<pre><code>$ cd 项目目录
+$ npm run serve
+</code></pre>
+<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/011.png" alt="图片"></p>
+<h2 id="三">三、</h2>
+<h2 id="把axios-配置成-vue插件">把Axios 配置成 Vue插件</h2>
+<p>把 <code>Axios</code> 封装成 <code>Vue</code> 插件，可以直接在 <code>Vue</code> 组件里使用 <code>this.xxx</code> 的方式来调用。Axios本身并没有封装，所以这里我们自己来把它封装成 <code>Vue</code> 组件。</p>
+<h2 id="第一次封装">第一次封装</h2>
+<p>这里是将 Axios 封装成组件，后面会上全部代码，包含拦截器功能，验证token失效，跳转页面。</p>
+<h3 id="axiospluginjs">AxiosPlugin.js</h3>
+<pre><code>require('es6-promise').polyfill()   //引入一次就行
+import axios from 'axios'
+
+// 创建 axios 实例
+// 这里 export 的原因是方便组件外使用 axios
+export const Axios = axios.create({
+    	//baseURL: process.env.BASE_API, // node环境的不同，对应不同的baseURL
+		// baseURL: 'http://localhost:8181',	
+		withCredentials: true, //允许携带cookie
+		timeout: 1000 * 30,
+})
+</code></pre>
+<p>如果使用跨域功能，这里不需要写 baseURL，我这里使用了跨域，所以这里注释掉了。</p>
+<p>比如我跨域的时候使用的是 <code>/proxy</code>。 那么我<code>url</code> 只需要写 <code>/proxy/login</code>这种方式即可。</p>
+<p>运行时，会自动替换 <code>/proxy</code> 为设置的接口域名。</p>
+<pre><code>proxy: {/*处理跨域，本地代理转发*/
+        '/proxy': {
+            target: 'http://localhost:8080',  // 接口域名
+            secure: false,  // 如果是https接口，需要配置这个参数
+            changeOrigin: true,  //是否跨域
+            pathRewrite: {
+                '^/proxy': ''
+            }
+  },
+</code></pre>
+<h3 id="mainjs">main.js</h3>
+<p>在 <code>main.js</code>中引入并 <code>use</code>，from 这里有个 <code>.</code> ，本地，不加好像会去仓库查找。</p>
+<pre><code>import Vue from 'vue'
+import AxiosPlugin from './plugins/AxiosPlugin'
+Vue.use(AxiosPlugin)
+</code></pre>
+<p>使用:</p>
+<pre><code>//参数
+let params = {
+	'account' : 'admin',
+	'password' : 'admin'
+ 	}
+ 	//网络请求
+ 	that.$http.post('/proxy/login', params).then(res =&gt; {
+ 		console.log(res)
+ 	}).catch(error =&gt; {
+ 	})
+</code></pre>
+<p>当然也可以通过 <code>import</code> 引用。不过封装成了组件，直接使用上面的方式就可以了</p>
+<pre><code>// POST
+import { Axios } from 'xxx/xxx/AxiosPlugin'
+Axios.post(url, params)
+</code></pre>
+<h2 id="完整封装">完整封装</h2>
+<p>关于里面的 url 配置，请看上面的第一次封装介绍。</p>
+<h3 id="axiospluginjs-1">AxiosPlugin.js</h3>
+<pre><code>require('es6-promise').polyfill()   //引入一次就行
+import axios from 'axios'
+
+// 创建 axios 实例
+// 这里 export 的原因是方便组件外使用 axios
+export const Axios = axios.create({
+		// baseURL: 'http://localhost:8181',
+		withCredentials: true, //允许携带cookie
+		timeout: 1000 * 30,	//超时时间， 毫秒级， 1000 * 多少秒就可以了
+})
+
+// 将 Axios 实例添加到 Vue 的原型对象上
+export default {
+		install(Vue) {
+    		Object.defineProperty(Vue.prototype, '$http', { value: Axios})
+		}
+}
+
+//POST 传参序列化，根据需求来。不一定用的到序列化 --&gt; 在发送前做的操作
+Axios.interceptors.request.use(config =&gt; {
+		console.log('发送请求前的操作')
+		// 设置以 form 表单的形式提交参数，如果以 JSON 的形式提交表单，可忽略
+		//我这里使用的json数据，所以注释掉了
+		// if(config.method  === 'post'){
+	// JSON 转换为 FormData
+		//     const formData = new FormData()
+		//     Object.keys(config.data).forEach(key =&gt; formData.append(key, config.data[key]))
+		//     config.data = formData
+		// }
+
+		//这里用来做验证的。
+		//我这里是 uid 和 token放在了header里面请求验证。
+		if (localStorage.getItem('token')) {
+    		config.headers['uid'] = localStorage.getItem('uid')
+	      	config.headers['token'] = localStorage.getItem('token')
+		}
+	return config
+}, error =&gt; {
+		alert(&quot;错误的传参&quot;, 'fail')
+		return Promise.reject(error)
+})
+
+// 返回状态判断 （添加响应拦截器）
+Axios.interceptors.response.use(res =&gt; {
+		//对响应数据做些判断，如果返回的状态码代表token失效
+		//跳转到 `/` 登录页。 其他的异常状态码，也可以在这里添加提示
+		if (res.data.code == 4001) {
+    	location.href = '/'
+	}else if (res.data.code != 0) {
+    	alert(res.error_msg)
+    	return Promise.reject(res)
+	}
+		//这里直接返回的是 res.data，就是服务端返回来的数据内容。
+		//可以根据自己的需求，决定返回的是 res.data，还是 res
+		return res.data
+}, error =&gt; {
+		console.log('封装的异常: ', error)
+		if(error.response.status === 401) {
+    		// 401 说明 token 验证失败
+    		// 可以直接跳转到登录页面，重新登录获取 token
+    		location.href = '/login'
+		} else if (error.response.status === 500) {
+    		// 服务器错误
+   	 	// do something
+    	return Promise.reject(error.response.data)
+		}
+		// 返回 response 里的错误信息
+		return Promise.reject(error.response.data)
+})
+</code></pre>
+<h3 id="调用">调用</h3>
+<p>XX.vue</p>
+<pre tabindex="0"><code>export default {
+  name: 'defaultName',
+  data() {
+  	return {
+  	}
+  },
+  methods: {
+  	handleRequest() {
+  		//参数
+		let params = {
+			'account' : 'admin',
+			'password' : 'admin'
+     		}
+     		//网络请求
+     		that.$http.post('/proxy/login', params).then(res =&gt; {
+     			//我上面封装的返回的是 res.data
+     			//所以这里获取到的res其实是 res.data。使用的时候，直接获取数据就可以了
+     			//比如 获取 code， res.code 即可
+     			console.log(res)
+     		}).catch(error =&gt; {
+     		})
+  	},
+  }
+</code></pre>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.qoabc.com/tags/vue/">vue</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2021/01/mac/" data-tooltip="brew 安装 node 及 npm用法" aria-label="PREVIOUS: brew 安装 node 及 npm用法">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2021/11/vue/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2021/11/vue/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2021/11/vue/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/blog.qoabc.com\/2021\/11\/vue\/';
+        
+          this.page.identifier = '\/2021\/11\/vue\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Firstname Lastname. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2021/01/mac/" data-tooltip="brew 安装 node 及 npm用法" aria-label="PREVIOUS: brew 安装 node 及 npm用法">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2021/11/vue/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2021/11/vue/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2021/11/vue/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.qoabc.com%2F2021%2F11%2Fvue%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.qoabc.com%2F2021%2F11%2Fvue%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.qoabc.com%2F2021%2F11%2Fvue%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Firstname Lastname</h4>
+    
+      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Your job title
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        France
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.qoabc.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

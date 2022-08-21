@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/</link>
+    <description>Recent content in Categories on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Nov 2021 16:42:36 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue</title>
+      <link>https://blog.qoabc.com/categories/vue/</link>
+      <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://blog.qoabc.com/categories/mac/</link>
+      <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://blog.qoabc.com/categories/git/</link>
+      <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://blog.qoabc.com/categories/ios/</link>
+      <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://blog.qoabc.com/categories/golang/</link>
+      <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://blog.qoabc.com/categories/linux/</link>
+      <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://blog.qoabc.com/categories/docker/</link>
+      <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://blog.qoabc.com/categories/html/</link>
+      <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>https://blog.qoabc.com/categories/swift/</link>
+      <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deutsch</title>
+      <link>https://blog.qoabc.com/categories/deutsch/</link>
+      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/deutsch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aps-prepare</title>
+      <link>https://blog.qoabc.com/categories/aps-prepare/</link>
+      <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/aps-prepare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>https://blog.qoabc.com/categories/hexo/</link>
+      <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/categories/hexo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

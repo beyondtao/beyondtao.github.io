@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/golang/</link>
+    <description>Recent content in golang on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 May 2020 11:51:10 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
+      <link>https://blog.qoabc.com/2020/05/golang/</link>
+      <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/golang/</guid>
+      <description>&lt;p&gt;我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人事管理
+&lt;ul&gt;
+&lt;li&gt;员工资历&lt;/li&gt;
+&lt;li&gt;员工奖惩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;统计管理
+&lt;ul&gt;
+&lt;li&gt;统计列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;系统管理
+&lt;ul&gt;
+&lt;li&gt;我的设置&lt;/li&gt;
+&lt;li&gt;权限管理&lt;/li&gt;
+&lt;li&gt;角色列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Golang 文件操作</title>
+      <link>https://blog.qoabc.com/2020/03/golang/</link>
+      <pubDate>Sun, 22 Mar 2020 19:23:51 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/03/golang/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/c21decb4bea5&#34;&gt;转载自 超级大柱子（简书）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ad164c76ce15&#34;&gt;go极简教程 阅读目录&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-文件操作&#34;&gt;Go 文件操作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;os库：文件\文件夹创建,读取,移动,复制&lt;/li&gt;
+&lt;li&gt;io库 : 文件内容的写入,修改,拼接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本文件操作&#34;&gt;基本文件操作&lt;/h2&gt;
+&lt;h3 id=&#34;文件内容的读取&#34;&gt;文件内容的读取&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang 中string和int类型相互转换</title>
+      <link>https://blog.qoabc.com/2020/03/golang/</link>
+      <pubDate>Mon, 16 Mar 2020 09:51:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/03/golang/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;string转成int：
+&lt;ul&gt;
+&lt;li&gt;int, err := strconv.Atoi(string)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

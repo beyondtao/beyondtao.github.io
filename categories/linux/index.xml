@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/linux/</link>
+    <description>Recent content in linux on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2020 09:54:25 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS 使用 Docker 服务搭建 Nginx 文件服务器</title>
+      <link>https://blog.qoabc.com/2020/03/linux/</link>
+      <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/03/linux/</guid>
+      <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
+&lt;p&gt;在CentOS 的某个目录下，创建下面的目录形式（也可以本地创建，用ftp上传）
+&lt;code&gt;/data/fileserver/&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;data
+&lt;ul&gt;
+&lt;li&gt;fileserver
+&lt;ul&gt;
+&lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;li&gt;nginx.conf&lt;/li&gt;
+&lt;li&gt;data/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS 服务器 &#43; mysql &#43; vsftpd服务</title>
+      <link>https://blog.qoabc.com/2020/02/linux/</link>
+      <pubDate>Tue, 25 Feb 2020 13:12:10 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/02/linux/</guid>
+      <description>&lt;h1 id=&#34;搭建mysql--ftp服务&#34;&gt;搭建mysql + FTP服务&lt;/h1&gt;
+&lt;h2 id=&#34;一安装-mysql&#34;&gt;一、安装 mysql&lt;/h2&gt;
+&lt;h3 id=&#34;从官方下载mysql-57镜像&#34;&gt;从官方下载&lt;code&gt;mysql 5.7&lt;/code&gt;镜像&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker pull mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux brclt 命令</title>
+      <link>https://blog.qoabc.com/2019/06/linux/</link>
+      <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2019/06/linux/</guid>
+      <description>参数说明和示例    参数 说明 示例     addbr &amp;lt;bridge&amp;gt; 创建网桥 brctl addbr br10   delbr &amp;lt;bridge&amp;gt; 删除网桥 brctl delbr br10   addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt; 将网卡接口接入网桥 brctl addif br10 eth0   show &amp;lt;bridge&amp;gt; 查询网桥信息 brctl show br10   stp &amp;lt;bridge&amp;gt; {on | off} 启用禁用STP brctl stp br10 off/on   showstp &amp;lt;bridge&amp;gt; 查看网桥STP信息 brctl showstp br10   setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt; 设置网桥延迟 brctl setfd br10 10   showmacs &amp;lt;bridge&amp;gt; 查看mac信息 brctl showmacs br10    </description>
+    </item>
+    
+    <item>
+      <title>Linux Shell ssh登录脚本</title>
+      <link>https://blog.qoabc.com/2019/04/linux/</link>
+      <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2019/04/linux/</guid>
+      <description>转载自Ca0Gu0
+Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多
+脚本下载 so.zip
+一、说明  支持密码和密钥两种格式 用户名和密码都是写文件的  二、配置   密码文件配置:
+序号:IP:端口:用户:密码:说明 1:192.168.88.128:22:root:toor:虚拟机web服务器
+  密钥文件放在keys文件夹下,密码位置写成密钥文件名,文件名必须以.pem结尾
+  如下所示：
+1:104.194.71.144:26999:root:WaFHwZm1AM3L5:搬瓦工 2:47.94.208.55:8080:root:aliyun.pem:阿里云 3:104.194.71.144:3306:ca0gu0:toor:虚拟机mysql数据库服务器 4:103:192.168.88.4:22:root:sellercube:本地开发服务器  </description>
+    </item>
+    
+    <item>
+      <title>CentOS 第一步</title>
+      <link>https://blog.qoabc.com/2019/02/linux/</link>
+      <pubDate>Wed, 20 Feb 2019 12:22:27 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2019/02/linux/</guid>
+      <description>&lt;h2 id=&#34;centos-服务器--docker&#34;&gt;CentOS 服务器 + Docker&lt;/h2&gt;
+&lt;p&gt;1、可以通过阿里云、腾讯云购买一个服务器&lt;/p&gt;
+&lt;p&gt;2、自己搭建一个本地服务器&lt;/p&gt;
+&lt;p&gt;（我们这里以云服务器为例）&lt;/p&gt;
+&lt;h2 id=&#34;一登录服务器&#34;&gt;一、登录服务器&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;ssh root@服务器ip -p 22
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

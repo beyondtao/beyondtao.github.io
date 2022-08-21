@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/mac/</link>
+    <description>Recent content in mac on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jan 2021 14:43:16 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>brew 安装 node 及 npm用法</title>
+      <link>https://blog.qoabc.com/2021/01/mac/</link>
+      <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2021/01/mac/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/syosinnsya/article/details/80395121&#34;&gt;转载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用brew-安装node&#34;&gt;使用brew 安装node&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用国内源安装 Homebrew</title>
+      <link>https://blog.qoabc.com/2021/01/mac/</link>
+      <pubDate>Sat, 23 Jan 2021 17:22:24 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2021/01/mac/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/cd7c7fabce9f&#34;&gt;转载来源&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1删除旧的安装&#34;&gt;1、删除旧的安装&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rm -rf /usr/local/Homebrew
+sudo rm -f /usr/local/bin/brew
+sudo rm -rf /usr/local/var/homebrew
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;2创建新的安装目录&#34;&gt;2、创建新的安装目录&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>rvm升级Ruby</title>
+      <link>https://blog.qoabc.com/2016/08/mac/</link>
+      <pubDate>Mon, 01 Aug 2016 13:55:12 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/08/mac/</guid>
+      <description>&lt;p&gt;第一步：安装rvm
+RVM:Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ curl -L get.rvm.io | bash -s stable
+$ source ~/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等待终端加载完毕,后输入：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>charles 抓包</title>
+      <link>https://blog.qoabc.com/2016/06/mac/</link>
+      <pubDate>Mon, 13 Jun 2016 17:49:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/06/mac/</guid>
+      <description>&lt;h4 id=&#34;一下载&#34;&gt;一、下载&lt;/h4&gt;
+&lt;p&gt;可以到&lt;a href=&#34;http://www.charlesproxy.com/&#34;&gt;charles官网&lt;/a&gt;下载到最新版本。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

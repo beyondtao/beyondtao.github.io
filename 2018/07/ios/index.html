@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iOS-AVAudio",
+  
+  "datePublished": "2018-07-27T11:10:43Z",
+  "dateModified": "2018-07-27T11:10:43Z",
+  "author": {
+    "@type": "Person",
+    "name": "Firstname Lastname",
+    
+    "image": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/blog.qoabc.com\/2018\/07\/ios\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo tranquilpeak theme",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    }
+    
+  },
+  "description": "转载自简书\n1、AUAudioSession 概述 苹果官方图 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Firstname Lastname">
+<meta name="keywords" content="">
+<meta name="description" content="转载自简书
+1、AUAudioSession 概述
+苹果官方图
+
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。">
+
+
+<meta property="og:description" content="转载自简书
+1、AUAudioSession 概述
+苹果官方图
+
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS-AVAudio">
+<meta name="twitter:title" content="iOS-AVAudio">
+<meta property="og:url" content="https://blog.qoabc.com/2018/07/ios/">
+<meta property="twitter:url" content="https://blog.qoabc.com/2018/07/ios/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="转载自简书
+1、AUAudioSession 概述
+苹果官方图
+
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。">
+<meta name="twitter:description" content="转载自简书
+1、AUAudioSession 概述
+苹果官方图
+
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-07-27T11:10:43">
+  
+  
+    <meta property="article:modified_time" content="2018-07-27T11:10:43">
+  
+  
+  
+    
+      <meta property="article:section" content="ios">
+    
+  
+  
+    
+      <meta property="article:tag" content="ios">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+
+
+
+
+
+
+    <title>iOS-AVAudio</title>
+
+    <link rel="icon" href="https://blog.qoabc.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.qoabc.com/2018/07/ios/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.qoabc.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        
+          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      iOS-AVAudio
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2018-07-27T11:10:43Z">
+        
+  July 27, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.qoabc.com/categories/ios">ios</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p><a href="https://www.jianshu.com/p/fb0e5fb71b3c">转载自简书</a></p>
+<h3 id="1auaudiosession-概述">1、AUAudioSession 概述</h3>
+<p>苹果官方图
+<img src="https://blog.qoabc.com/img/iOS-AVAudioSession/001.png" alt="iOS-AVAudioSession-1">
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。</p>
+<p>举例一下AVAudioSession可以做这些事情</p>
+<ul>
+<li>设置自己的APP是否和其他APP音频同时存在，还是中断其他APP声音</li>
+<li>在手机调到静音模式下，自己的APP音频是否可以播放出声音</li>
+<li>电话或者其他APP终端自己APP的音频的事件处理</li>
+<li>指定音频输入和输出的设备（比如是听筒输出声音，还是扬声器输出声音）</li>
+<li>是否支持录音，录音同时是否支持音频播放</li>
+</ul>
+<h3 id="2avaudiosession-category">2、AVAudioSession Category</h3>
+<p>AVAudioSession的接口比较简单。APP启动的时候会自动帮激活AVAudioSession，当然我们可以手动激活，代码如下：</p>
+<pre><code>//导入头文件
+#import &lt;AVFoundation/AVFoundation.h&gt;
+
+//AVAudioSession是一个单例类
+AVAudioSession *session = [AVAudioSession sharedInstance];
+//AVAudioSessionCategorySoloAmbient是系统默认的category
+[session setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+//激活AVAudioSession
+[session setActive:YES error:nil];
+</code></pre>
+<p>可以看到设置session这里有两个参数，category和options</p>
+<p>Catogory iOS下目前有七种，每种Category都对应是否支持下面四种能力</p>
+<ul>
+<li>Interrupts non-mixable apps audio: 是否打断不支持混音播放的APP</li>
+<li>Silenced by the Silent switch: 是否会响应手机静音键开关</li>
+<li>Supports audio input: 是否支持音频录入</li>
+<li>Supports audio output: 是否支持音频播放</li>
+</ul>
+<p>下面用图表来直观的看下每种category具体的能力集</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>是否允许音频播放/录音</th>
+<th>是否打断其他不支持混音APP</th>
+<th>是否会被静音键或锁屏键静音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAudioSessionCategoryAmbient</td>
+<td>只支持播放</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryAudioProcessing</td>
+<td>不支持播放，不支持录制</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryMultiRoute</td>
+<td>支持播放，支持录制</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryPlayAndRecord</td>
+<td>支持播放，支持录制</td>
+<td>默认YES，可以重写为NO</td>
+<td>否</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryPlayback</td>
+<td>只支持播放</td>
+<td>默认YES,可以重写为NO</td>
+<td>否</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryRecord</td>
+<td>只支持录制</td>
+<td>是</td>
+<td>否（锁屏下仍可录制）</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategorySoloAmbient</td>
+<td>只支持播放</td>
+<td>是</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>AVAudioSessionCategoryAmbient，只支持音频播放。这个 Category，音频会被静音键和锁屏键静音。并且不会打断其他应用的音频播放。</p>
+</li>
+<li>
+<p>AVAudioSessionCategorySoloAmbient，这个是系统默认使用的 Category，只支持音频播放。音频会被静音键和锁屏键静音。和AVAudioSessionCategoryAmbient不同的是，这个会打断其他应用的音频播放</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryPlayback，只支持音频播放。你的音频不会被静音键和锁屏键静音。适用于音频是主要功能的APP，像网易云这些音乐app，锁屏后依然可以播放。</p>
+<p>需要注意一下，选择支持在静音键切到静音状态以及锁屏键切到锁屏状态下仍然可以播放音频 Category 时，必须在应用中开启支持后台音频功能，详见 <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW22">UIBackgroundModes</a>。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryRecord，只支持音频录制。不支持播放。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryPlayAndRecord，支持音频播放和录制。音频的输入和输出不需要同步进行，也可以同步进行。需要音频通话类应用，可以使用这个 Category。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryAudioProcessing，只支持本地音频编解码处理。不支持播放和录制。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryMultiRoute，支持音频播放和录制。允许多条音频流的同步输入和输出。（比如USB连接外部扬声器输出音频，蓝牙耳机同时播放另一路音频这种特殊需求）</p>
+</li>
+</ul>
+<p>我们也可以通过AVAudioSession的属性来读取当前设备支持的Category
+```
+@property(readonly) NSArray&lt;NSString *&gt; *availableCategories;</p>
+<pre><code>```
+</code></pre>
+<p>这样可以保证设备兼容性</p>
+<p>设置Category的代码实例如下：</p>
+<pre><code>```
+NSError *setCategoryError = nil;
+BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient 	error:&amp;setCategoryError];
+if (!success) { 
+	//这里可以读取setCategoryError.localizedDescription查看错误原因
+}
+
+```
+</code></pre>
+<h3 id="3avaudiosession-modeoptions">3、AVAudioSession Mode&amp;&amp;Options</h3>
+<p>刚刚介绍的Category定义了七种主场景，实际开发需求中有时候需要对Category进行微调整，我们发现这个接口还有两个参数Mode和Options。</p>
+<pre><code>```
+/* set session category and mode with options */
+- (BOOL)setCategory:(NSString *)category 
+  mode:(NSString *)mode 
+  options:(AVAudioSessionCategoryOptions)options 
+  error:(NSError **)outError 
+  API_AVAILABLE(ios(10.0), watchos(3.0), tvos(10.0));
+   
+```
+</code></pre>
+<h4 id="avaudiosession-mode">AVAudioSession Mode</h4>
+<p>我们通过读取下面这条属性获取当前设备支持的Mode</p>
+<pre tabindex="0"><code>@property(readonly) NSArray&lt;NSString *&gt; *availableModes;
+</code></pre><p>iOS下有其中mode 来定制我们的Category行为：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>兼容的Category</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAudioSessionModeDefault</td>
+<td>All</td>
+<td>默认模式</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeVoiceChat</td>
+<td>AVAudioSessionCategoryPlayAndRecord</td>
+<td>VoIP</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeGameChat</td>
+<td>AVAudioSessionCategoryPlayAndRecord</td>
+<td>游戏录制，GKVoiceChat自动设置</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeVideoRecording</td>
+<td>AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord</td>
+<td>录制视频</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeMoviePlayback</td>
+<td>AVAudioSessionCategoryPlayback</td>
+<td>视频播放</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeMeasurement</td>
+<td>AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayback</td>
+<td>最小系统</td>
+</tr>
+<tr>
+<td>AVAudioSessionModeVideoChat</td>
+<td>AVAudioSessionCategoryPlayAndRecord</td>
+<td>视频通话</td>
+</tr>
+</tbody>
+</table>
+<p>下面逐一介绍下每个Mode</p>
+<ul>
+<li>
+<p>AVAudioSessionModeDefault，默认模式,与所有的 Category 兼容</p>
+</li>
+<li>
+<p>AVAudioSessionModeVoiceChat，适用于VoIP 类型的应用。只能是 AVAudioSessionCategoryPlayAndRecord Category下。在这个模式系统会自动配置AVAudioSessionCategoryOptionAllowBluetooth 这个选项。系统会自动选择最佳的内置麦克风组合支持语音聊天。</p>
+</li>
+<li>
+<p>AVAudioSessionModeVideoChat，用于视频聊天类型应用，只能是 AVAudioSessionCategoryPlayAndRecord Category下。适在这个模式系统会自动配置 AVAudioSessionCategoryOptionAllowBluetooth 和 AVAudioSessionCategoryOptionDefaultToSpeaker 选项。系统会自动选择最佳的内置麦克风组合支持视频聊天。</p>
+</li>
+<li>
+<p>AVAudioSessionModeGameChat，适用于游戏类应用。使用 GKVoiceChat 对象的应用会自动设置这个模式和 AVAudioSessionCategoryPlayAndRecord Category。实际参数和AVAudioSessionModeVideoChat一致</p>
+</li>
+<li>
+<p>AVAudioSessionModeVideoRecording，适用于使用摄像头采集视频的应用。只能是 AVAudioSessionCategoryPlayAndRecord 和 AVAudioSessionCategoryRecord 这两个 Category下。这个模式搭配 AVCaptureSession API 结合来用可以更好地控制音视频的输入输出路径。(例如，设置 automaticallyConfiguresApplicationAudioSession 属性，系统会自动选择最佳输出路径。</p>
+</li>
+<li>
+<p>AVAudioSessionModeMeasurement，最小化系统。只用于 AVAudioSessionCategoryPlayAndRecord、AVAudioSessionCategoryRecord、AVAudioSessionCategoryPlayback 这几种 Category。</p>
+</li>
+<li>
+<p>AVAudioSessionModeMoviePlayback，适用于播放视频的应用。只用于 AVAudioSessionCategoryPlayback 这个Category。</p>
+</li>
+</ul>
+<h4 id="avaudiosession-options">AVAudioSession Options</h4>
+<p>我们还可以使用options去微调Category行为，如下表</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Option功能说明</th>
+<th>兼容的 Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAudioSessionCategoryOptionMixWithOthers</td>
+<td>支持和其他APP音频 mix</td>
+<td>AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryOptionDuckOthers</td>
+<td>系统智能调低其他APP音频音量</td>
+<td>AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryOptionAllowBluetooth</td>
+<td>支持蓝牙音频输入</td>
+<td>AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayAndRecord</td>
+</tr>
+<tr>
+<td>AVAudioSessionCategoryOptionDefaultToSpeaker</td>
+<td>设置默认输出音频到扬声器</td>
+<td>AVAudioSessionCategoryPlayAndRecord</td>
+</tr>
+</tbody>
+</table>
+<h4 id="调优我们的category">调优我们的Category</h4>
+<p>通过Category和合适的Mode和Options的搭配我们可以调优出我们的效果，下面举两个应用场景:</p>
+<p>用过高德地图的都知道，在后台播放QQ音乐的时候，如果导航语音出来，QQ音乐不会停止，而是被智能压低和混音，等导航语音播报完后，QQ音乐正常播放，这里我们需要后台播放音乐，所以Category使用AVAudioSessionCategoryPlayback，需要混音和智能压低其他APP音量，所以Options选用 AVAudioSessionCategoryOptionMixWithOthers和AVAudioSessionCategoryOptionDuckOthers</p>
+<p>代码示例如下：</p>
+<pre tabindex="0"><code> BOOL isSuccess = [[AVAudioSession sharedInstance] setCategory:
+ AVAudioSessionCategoryPlayback withOptions:
+ AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionDuckOthers
+  error:&amp;setCategoryError];
+  
+</code></pre><p>又或者我希望AVAudioSessionCategoryPlayAndRecord这个Category默认的音频由扬声器播放，那么可以调用这个接口去调整Category</p>
+<pre tabindex="0"><code>- (BOOL)setCategory:(NSString *)category 
+ 	withOptions:(AVAudioSessionCategoryOptions)options 
+ 	error:(NSError **)outError
+ 	
+</code></pre><p>通过选择合适和Category，mode和options，就可以调优音频的输入输出，来满足日常开发需求（需要注意的是Category，mode，option是搭配使用的，而不是简单组合，也就是说某种Category支持某些mode和option，从上面的表中也可以看出这一点）</p>
+<h3 id="4-音频中断处理">4. 音频中断处理</h3>
+<p>其他APP或者电话会中断我们的APP音频，所以相应的我们要做出处理。
+我们可以通过监听AVAudioSessionInterruptionNotification这个key获取音频中断事件</p>
+<p>回调回来Userinfo有键值：</p>
+<ul>
+<li>AVAudioSessionInterruptionTypeKey：
+AVAudioSessionInterruptionTypeBegan:  表示中断开始
+AVAudioSessionInterruptionTypeEnded:  表示中断结束</li>
+</ul>
+<p>中断开始：我们需要做的是保存好播放状态，上下文，更新用户界面等
+中断结束：我们要做的是恢复好状态和上下文，更新用户界面，根据需求准备好之后选择是否激活我们session。</p>
+<p>选择不同的音频播放技术，处理中断方式也有差别，具体如下:</p>
+<ul>
+<li>
+<p>System Sound Services：使用 System Sound Services 播发音频，系统会自动处理，不受APP控制，当中断发生时，音频播放会静音，当中断结束后，音频播放会恢复。</p>
+</li>
+<li>
+<p>AV Foundation framework：AVAudioPlayer 类和 AVAudioRecorder 类提供了中断开始和结束的 Delegate 回调方法来处理中断。中断发生，系统会自动停止播放，需要做的是记录播放时间等状态，更新用户界面，等中断结束后，再次调用播放方法，系统会自动激活session。</p>
+</li>
+<li>
+<p>Audio Queue Services, I/O audio unit：使用aduio unit这些技术需要处理中断，需要做的是记录播放或者录制的位置，中断结束后自己恢复audio session。</p>
+</li>
+<li>
+<p>OpenAL：使用 OpenAL 播放时，同样需要自己监听中断。管理 OpenAL上下文，用户中断结束后恢复audio session。</p>
+</li>
+</ul>
+<p>需要注意的是：1. 有中断开始事件，不一定对应有中断结束事件，所以需要在用户进入前台，点击UI操作的时候，需要保存好播放状态和对Audio Session管理，以便不影响APP的音频功能。2.音频资源竞争上，一定是电话优先。3. AVAudioSession同样可以监听外设音频状态，比如耳机拔入拔出。这里不做累述</p>
+<h3 id="5-avaudiosession总结">5. AVAudioSession总结</h3>
+<p>AVAudioSession的作用就是管理音频这一唯一硬件资源的分配，通过调优合适的AVAudioSession来适配我们的APP对于音频的功能需求。切换音频场景时候，需要相应的切换AVAudioSession。</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.qoabc.com/tags/ios/">ios</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2019/02/linux/" data-tooltip="CentOS 第一步" aria-label="NEXT: CentOS 第一步">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2018/05/ios/" data-tooltip="iPhone不同设备屏幕尺寸和分辨率" aria-label="PREVIOUS: iPhone不同设备屏幕尺寸和分辨率">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2018/07/ios/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2018/07/ios/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2018/07/ios/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/blog.qoabc.com\/2018\/07\/ios\/';
+        
+          this.page.identifier = '\/2018\/07\/ios\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Firstname Lastname. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2019/02/linux/" data-tooltip="CentOS 第一步" aria-label="NEXT: CentOS 第一步">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2018/05/ios/" data-tooltip="iPhone不同设备屏幕尺寸和分辨率" aria-label="PREVIOUS: iPhone不同设备屏幕尺寸和分辨率">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2018/07/ios/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2018/07/ios/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2018/07/ios/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.qoabc.com%2F2018%2F07%2Fios%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.qoabc.com%2F2018%2F07%2Fios%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.qoabc.com%2F2018%2F07%2Fios%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Firstname Lastname</h4>
+    
+      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Your job title
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        France
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.qoabc.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

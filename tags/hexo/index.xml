@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/tags/hexo/</link>
+    <description>Recent content in hexo on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2016 12:01:11 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在线生成站点地图SiteMap</title>
+      <link>https://blog.qoabc.com/2016/05/hexo/</link>
+      <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/05/hexo/</guid>
+      <description>&lt;h3 id=&#34;站点地图sitemap的好处是很大的对seo很有好处能够更方便迅速的让搜索引擎收录&#34;&gt;站点地图SiteMap的好处是很大的，对Seo很有好处，能够更方便、迅速的让搜索引擎收录。&lt;/h3&gt;
+&lt;p&gt;只需要四部你就可以完成站点地图的制作。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
