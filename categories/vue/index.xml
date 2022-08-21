@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/categories/vue/</link>
+    <description>Recent content in vue on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Nov 2021 16:42:36 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
+      <link>https://blog.qoabc.com/2021/11/vue/</link>
+      <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2021/11/vue/</guid>
+      <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vue3&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;mailto:vue-cli@4.5&#34;&gt;vue-cli@4.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ts&lt;/li&gt;
+&lt;li&gt;antd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一安装&#34;&gt;一、安装&lt;/h2&gt;
+&lt;h3 id=&#34;11-vue-cli4&#34;&gt;1.1 vue-cli@4&lt;/h3&gt;
+&lt;p&gt;我这里使用的是vue-cli@4.5版本。 创建项目 &lt;code&gt;main.js&lt;/code&gt;中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm uninstall vue-cli -g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、安装Vue-cli&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;12-项目中的命令&#34;&gt;1.2 项目中的命令&lt;/h3&gt;
+&lt;p&gt;这块为了方便以后查找，所以放到了上面。&lt;/p&gt;
+&lt;h4 id=&#34;121-安装-antd&#34;&gt;1.2.1 安装 antd&lt;/h4&gt;
+&lt;p&gt;可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的&lt;code&gt;3.0&lt;/code&gt;， 如果你选择的是&lt;code&gt;1.7&lt;/code&gt;版本，可能会没有后面的 @next。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install ant-design-vue@next --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;122-引入-ts&#34;&gt;1.2.2 引入 ts&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;123-安装axios&#34;&gt;1.2.3 安装axios&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install --save axios
+$ npm install --save es6-promise
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;官方文档：&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。&lt;/p&gt;
+&lt;h2 id=&#34;二创建配置&#34;&gt;二、创建配置&lt;/h2&gt;
+&lt;h3 id=&#34;21-执行创建命令&#34;&gt;2.1 执行创建命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;21-pick-a-preset&#34;&gt;2.1 pick a preset&lt;/h3&gt;
+&lt;p&gt;选择 &lt;!-- raw HTML omitted --&gt;Manually select features&lt;!-- raw HTML omitted --&gt; 手动配置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/001.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;22-check-the-features&#34;&gt;2.2 check the features&lt;/h3&gt;
+&lt;p&gt;按照图中选项配置，点击&lt;code&gt;空格&lt;/code&gt;选择选项。 Unit Testing 测试单元可以不选择&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/002.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;23-选择vue版本&#34;&gt;2.3 选择vue版本&lt;/h3&gt;
+&lt;p&gt;注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/003.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/004.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;24-细节配置&#34;&gt;2.4 细节配置&lt;/h3&gt;
+&lt;p&gt;后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。&lt;/p&gt;
+&lt;p&gt;如果不明白可以跟着下面一步一步来。&lt;/p&gt;
+&lt;h3 id=&#34;25-use-class-style-component-syntax-yes&#34;&gt;2.5 Use class-style component syntax? Yes&lt;/h3&gt;
+&lt;p&gt;是否使用Class风格装饰器？&lt;/p&gt;
+&lt;p&gt;选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}&lt;/p&gt;
+&lt;h3 id=&#34;26-use-babel-alongside-typescript-required-for-modern-mode-auto-detected-polyfills-transpiling-jsx-yes&#34;&gt;2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes&lt;/h3&gt;
+&lt;p&gt;使用Babel与TypeScript一起用于自动检测的填充?&lt;/p&gt;
+&lt;h3 id=&#34;27-use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production-yes&#34;&gt;2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes&lt;/h3&gt;
+&lt;p&gt;路由使用历史模式?&lt;/p&gt;
+&lt;p&gt;选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。&lt;/p&gt;
+&lt;h3 id=&#34;28-pick-a-css-pre-processor-postcss-autoprefixer-and-css-modules-are-supported-by-default-sassscss-with-dart-sass&#34;&gt;2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)&lt;/h3&gt;
+&lt;p&gt;使用什么css预编译器？&lt;/p&gt;
+&lt;p&gt;Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。&lt;/p&gt;
+&lt;p&gt;Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;node-sass是自动编译实时的&lt;/li&gt;
+&lt;li&gt;dart-sass需要保存后才会生效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;29-pick-a-linter--formatter-config-选择eslint代码验证规则我们选择eslint--standard-config-标准配置&#34;&gt;2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置）&lt;/h3&gt;
+&lt;h3 id=&#34;210--pick-additional-lint-features-选择什么时候进行代码规则检测我们选择保存时进行检查&#34;&gt;2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）&lt;/h3&gt;
+&lt;p&gt;❯◉ Lint on save // 保存时检测&lt;/p&gt;
+&lt;h3 id=&#34;211-pick-a-unit-testing-solution-unit-testing-单元测试我们选择jest-&#34;&gt;2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）&lt;/h3&gt;
+&lt;h3 id=&#34;212-where-do-you-prefer-placing-config-for-babel-eslint-etc-in-dedicated-config-files-您希望babel-eslint-配置的存放位置我们选择在专用的配置文件中&#34;&gt;2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)&lt;/h3&gt;
+&lt;p&gt;❯◉ In dedicated config files //在专用的配置文件中&lt;/p&gt;
+&lt;p&gt;◯In package.json //在package.json&lt;/p&gt;
+&lt;h3 id=&#34;save-this-as-a-preset-for-future-projectsyn-是否保存配置-&#34;&gt;Save this as a preset for future projects?(y/N) （是否保存配置 ）&lt;/h3&gt;
+&lt;p&gt;可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目&lt;/p&gt;
+&lt;h3 id=&#34;213-创建完成&#34;&gt;2.13 创建完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/010.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;214-运行项目&#34;&gt;2.14 运行项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ cd 项目目录
+$ npm run serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/vue-cli4-antd-ts/011.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三&#34;&gt;三、&lt;/h2&gt;
+&lt;h2 id=&#34;把axios-配置成-vue插件&#34;&gt;把Axios 配置成 Vue插件&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue基于vue-quill-editor富文本编辑器的使用</title>
+      <link>https://blog.qoabc.com/2020/06/vue/</link>
+      <pubDate>Wed, 03 Jun 2020 20:04:45 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/06/vue/</guid>
+      <description>&lt;p&gt;一、安装依赖&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install vue-quill-editor
+npm install quill	(依赖项)
+npm install quill-image-drop-module 	(图片拖拽）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;二、使用&lt;/p&gt;
+&lt;h3 id=&#34;1在-mainjs-中引入&#34;&gt;1、在 main.js 中引入&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>使elementUI的dialog上下左右居中</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Sun, 31 May 2020 19:47:51 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>.el-dialog{ display: flex; flex-direction: column; margin:0 !important; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); } .el-dialog .el-dialog__body{ flex:1; overflow: auto; } </description>
+    </item>
+    
+    <item>
+      <title>vue/cli4 axios网路请求封装 以及 登录token失效跳转页面</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Fri, 22 May 2020 16:42:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;npm install axios 
+npm install es6-promise 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;官方文档：&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。&lt;/p&gt;
+&lt;h2 id=&#34;把axios-配置成-vue插件&#34;&gt;把Axios 配置成 Vue插件&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue-cli@4 入门（四）</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Thu, 14 May 2020 19:54:40 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>&lt;p&gt;操作前，我们先打开 &lt;code&gt;App.vue&lt;/code&gt;，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+  &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;
+  	&amp;lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&amp;gt;
+  	&amp;lt;router-view&amp;gt;&amp;lt;/router-view&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+
+export default {
+  name: &#39;app&#39;,
+  components: {
+  }
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue-cli@4 入门（三）</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Thu, 14 May 2020 18:25:48 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>&lt;h2 id=&#34;路由&#34;&gt;路由&lt;/h2&gt;
+&lt;p&gt;在项目下，创建 vue文件。我们需要类似 &lt;code&gt;localhost:8080/login&lt;/code&gt; 这种方式访问。这个时候就需要配置路由信息了。&lt;/p&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;project
+&lt;ul&gt;
+&lt;li&gt;router
+&lt;ul&gt;
+&lt;li&gt;index.js (这里配置路由信息)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;src
+&lt;ul&gt;
+&lt;li&gt;views	(这里是页面)
+&lt;ul&gt;
+&lt;li&gt;About.vue&lt;/li&gt;
+&lt;li&gt;Home.vue&lt;/li&gt;
+&lt;li&gt;Login.vue&lt;/li&gt;
+&lt;li&gt;Manage.vue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 &lt;code&gt;router&lt;/code&gt; 的 &lt;code&gt;index.js&lt;/code&gt;中配置路由信息：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue-cli@4 入门（二）</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Tue, 12 May 2020 08:14:30 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>&lt;p&gt;根据上一篇文章，我们的项目已经可以运行了。为了开发方便，我们这里使用 &lt;!-- raw HTML omitted --&gt;element-UI&lt;!-- raw HTML omitted --&gt;。&lt;/p&gt;
+&lt;p&gt;在操作之前，先简单介绍一下 &lt;code&gt;npm run serve&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue-cli@4 入门（一）</title>
+      <link>https://blog.qoabc.com/2020/05/vue/</link>
+      <pubDate>Mon, 11 May 2020 16:36:59 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2020/05/vue/</guid>
+      <description>&lt;p&gt;因为最近要做一个管理后台，这里做一下记录。从入门到项目上手。适合初学&lt;/p&gt;
+&lt;h2 id=&#34;安装-vue-cli4&#34;&gt;安装 vue-cli@4&lt;/h2&gt;
+&lt;p&gt;1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm uninstall vue-cli -g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、安装Vue-cli&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @vue/cli
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swift on Hugo tranquilpeak theme</title>
+    <link>https://blog.qoabc.com/tags/swift/</link>
+    <description>Recent content in swift on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Oct 2016 15:45:13 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift3中dispatch_once废弃的解决办法</title>
+      <link>https://blog.qoabc.com/2016/10/swift/</link>
+      <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/10/swift/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/swift3-GCD-dispatch-async/001.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>swift 使用 delegate 内存泄露问题</title>
+      <link>https://blog.qoabc.com/2016/07/swift/</link>
+      <pubDate>Mon, 11 Jul 2016 15:39:46 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/07/swift/</guid>
+      <description>&lt;p&gt;帐号退出登录，切换rootViewController的时候，发现内存没有释放，于是对代码进行了一遍检查。发现了在定义 protocol的时候，有两种方式。&lt;/p&gt;
+&lt;h4 id=&#34;区别&#34;&gt;区别&lt;/h4&gt;
+&lt;p&gt;一个是使用 @objc定义， 一个不使用@objc。&lt;/p&gt;
+&lt;p&gt;使用 @objc 方法可以定义 optional。否则，不可以。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LTPickerView.swift</title>
+      <link>https://blog.qoabc.com/2016/07/swift/</link>
+      <pubDate>Fri, 08 Jul 2016 23:08:08 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/07/swift/</guid>
+      <description>&lt;h1 id=&#34;ltpickerview---swift&#34;&gt;LTPickerView - Swift&lt;/h1&gt;
+&lt;h3 id=&#34;连接地址&#34;&gt;连接地址&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/beyond521t/LTPickerView-Swift&#34;&gt;GitHub LTPickerView-Swift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>判断中、英文、数字、符号</title>
+      <link>https://blog.qoabc.com/2016/06/swift/</link>
+      <pubDate>Wed, 22 Jun 2016 15:01:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/06/swift/</guid>
+      <description>&lt;p&gt;swift 判断String里面包含的中、英文、数字、符号。并附汉字Unicode字符编码表。
+&lt;a href=&#34;https://blog.qoabc.com/2016/06/22/iOS-UnicodeScalars/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>inout 关键字位置的变化</title>
+      <link>https://blog.qoabc.com/2016/05/swift/</link>
+      <pubDate>Sat, 14 May 2016 21:36:37 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
+      <description>&lt;p&gt;inout 关键字可以用于将参数修饰为可修改，并且将修改会回传。这次 Swift 3 中对这个关键字也做了一些修改，咱们一起来聊聊吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</title>
+      <link>https://blog.qoabc.com/2016/05/swift/</link>
+      <pubDate>Mon, 09 May 2016 21:24:10 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
+      <description>&lt;p&gt;转自:&lt;a href=&#34;http://swiftcafe.io/2016/05/07/swift3-objc/&#34;&gt;swiftcafe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Swift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>swift打包失败，swiftc failed with exit code 1</title>
+      <link>https://blog.qoabc.com/2016/05/swift/</link>
+      <pubDate>Mon, 09 May 2016 10:58:13 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
+      <description>&lt;p&gt;Xcode7.3我更新到了Xcode7.3.1版本，然后在编译运行的时候就经常提示错误：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Command /Applications/Xcode.app/Contents/Developer/Toolchains/
+XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>swift3.0变化（swift2.2工程中发现）</title>
+      <link>https://blog.qoabc.com/2016/04/swift/</link>
+      <pubDate>Thu, 28 Apr 2016 15:20:01 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
+      <description>&lt;h5 id=&#34;initstartend-is-deprecated-it-will-be-removed-in-swift-3-use-the--operator&#34;&gt;&amp;lsquo;init(start:end:)&amp;rsquo; is deprecated: it will be removed in Swift 3. Use the &amp;lsquo;..&amp;lt;&amp;rsquo; operator&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;var continousDigitsRange:Range&amp;lt;Int&amp;gt; = Range&amp;lt;Int&amp;gt;(start: 0, end: 0)
+
+Since update to Xcode 7.3 (Swift 2.2) I got the following hint:
+
+&#39;init(start:end:)&#39; is deprecated: it will be removed in Swift 3. Use the &#39;..&amp;lt;&#39; operator.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;新方法：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UIImage 拉伸图片 resizableImageWithCapInsets</title>
+      <link>https://blog.qoabc.com/2016/04/swift/</link>
+      <pubDate>Wed, 27 Apr 2016 10:53:54 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;let insets = UIEdgeInsetsMake(30, 0, 10, 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;//top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat
+其中Insets这个参数的格式是 (top, left, bottom, right)，从上、左、下、右分别在图片上画了一道线，这样就给一个图片加了一个框。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swift字符串常用操作总结</title>
+      <link>https://blog.qoabc.com/2016/04/swift/</link>
+      <pubDate>Thu, 07 Apr 2016 13:19:17 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
+      <description>&lt;p&gt;版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>String还是NSString</title>
+      <link>https://blog.qoabc.com/2016/04/swift/</link>
+      <pubDate>Thu, 07 Apr 2016 13:03:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
+      <description>&lt;p&gt;既然像 String 这样的 Swift 的类型和 Foundation 的对应的类是可以无缝转换的，那么我们在使用和选择的时候，有没有什么需要特别注意的呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swift2.2的新特性</title>
+      <link>https://blog.qoabc.com/2016/03/swift/</link>
+      <pubDate>Wed, 23 Mar 2016 22:25:21 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/03/swift/</guid>
+      <description>&lt;p&gt;Swift 2.2 随着 iOS 9.3 一同闪亮登场，相较于 Swift 2.1， 2.2 版本做出了许多调整，从其调整方向上我们也能一窥 Swift 3.0 的影子，以下内容主要来自于苹果 Swift 官方 Blog ，接下来就让我们进入正题，一睹 Swift 2.2 的庐山真面目：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UITesting中文错误问题</title>
+      <link>https://blog.qoabc.com/2016/02/swift/</link>
+      <pubDate>Fri, 19 Feb 2016 11:35:23 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/2016/02/swift/</guid>
+      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错&lt;/h2&gt;
+&lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)",
+  
+  "datePublished": "2020-05-18T11:51:10Z",
+  "dateModified": "2020-05-18T11:51:10Z",
+  "author": {
+    "@type": "Person",
+    "name": "Firstname Lastname",
+    
+    "image": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/blog.qoabc.com\/2020\/05\/golang\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo tranquilpeak theme",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c"
+    }
+    
+  },
+  "description": "我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：\n 人事管理  员工资历 员工奖惩   统计管理  统计列表   系统管理  我的设置 权限管理 角色列表   ",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Firstname Lastname">
+<meta name="keywords" content="">
+<meta name="description" content="我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：
+
+人事管理
+
+员工资历
+员工奖惩
+
+
+统计管理
+
+统计列表
+
+
+系统管理
+
+我的设置
+权限管理
+角色列表
+
+
+">
+
+
+<meta property="og:description" content="我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：
+
+人事管理
+
+员工资历
+员工奖惩
+
+
+统计管理
+
+统计列表
+
+
+系统管理
+
+我的设置
+权限管理
+角色列表
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)">
+<meta name="twitter:title" content="Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)">
+<meta property="og:url" content="https://blog.qoabc.com/2020/05/golang/">
+<meta property="twitter:url" content="https://blog.qoabc.com/2020/05/golang/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：
+
+人事管理
+
+员工资历
+员工奖惩
+
+
+统计管理
+
+统计列表
+
+
+系统管理
+
+我的设置
+权限管理
+角色列表
+
+
+">
+<meta name="twitter:description" content="我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：
+
+人事管理
+
+员工资历
+员工奖惩
+
+
+统计管理
+
+统计列表
+
+
+系统管理
+
+我的设置
+权限管理
+角色列表
+
+
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2020-05-18T11:51:10">
+  
+  
+    <meta property="article:modified_time" content="2020-05-18T11:51:10">
+  
+  
+  
+    
+      <meta property="article:section" content="golang">
+    
+  
+  
+    
+      <meta property="article:tag" content="golang">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+
+
+
+
+
+
+    <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
+
+    <link rel="icon" href="https://blog.qoabc.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.qoabc.com/2020/05/golang/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.qoabc.com/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.qoabc.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.qoabc.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        
+          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.qoabc.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-05-18T11:51:10Z">
+        
+  May 18, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.qoabc.com/categories/golang">golang</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：</p>
+<ul>
+<li>人事管理
+<ul>
+<li>员工资历</li>
+<li>员工奖惩</li>
+</ul>
+</li>
+<li>统计管理
+<ul>
+<li>统计列表</li>
+</ul>
+</li>
+<li>系统管理
+<ul>
+<li>我的设置</li>
+<li>权限管理</li>
+<li>角色列表</li>
+</ul>
+</li>
+</ul>
+<p>我这里用的是双层结构，我们搜索的时候用的是递归查询，所以理论上可以无限级添加（不考虑数据库的感受的话）。</p>
+<p>数据表如下：</p>
+<hr>
+<p><code>-- Table structure for tbl_auth_menu</code></p>
+<hr>
+<pre tabindex="0"><code>DROP TABLE IF EXISTS `tbl_auth_menu`;
+CREATE TABLE `tbl_auth_menu` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL COMMENT '父级菜单id',
+  `name` char(20) NOT NULL COMMENT '菜单名单',
+  `sort` tinyint(4) DEFAULT '0' COMMENT '排序值',
+  `route` varchar(60) DEFAULT '' COMMENT '跳转链接',
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COMMENT='权限管理_菜单表';
+</code></pre><hr>
+<p><code>-- Records of tbl_auth_menu</code></p>
+<hr>
+<pre tabindex="0"><code>BEGIN;
+INSERT INTO `tbl_auth_menu` VALUES (14, -1, '人事管理', 1, '');
+INSERT INTO `tbl_auth_menu` VALUES (15, -1, '统计管理', 2, '');
+INSERT INTO `tbl_auth_menu` VALUES (16, -1, '系统管理', 3, '');
+INSERT INTO `tbl_auth_menu` VALUES (17, 14, '员工资料', 1, '/user/info');
+INSERT INTO `tbl_auth_menu` VALUES (18, 14, '员工奖惩', 2, '/user/award');
+INSERT INTO `tbl_auth_menu` VALUES (19, 15, '统计列表', 1, '/statis/list');
+INSERT INTO `tbl_auth_menu` VALUES (20, 16, '我的设置', 1, '/sys/setting');
+INSERT INTO `tbl_auth_menu` VALUES (21, 16, '权限管理', 2, '/sys/auth');
+INSERT INTO `tbl_auth_menu` VALUES (22, 16, '角色列表', 3, '/sys/role');
+COMMIT;
+</code></pre><p>我这里第一级目录的 父菜单 id (pid)使用的是 -1, 因为 id 默认是从 0开始的，使用0的话，这个菜单有可能不是第一级目录，而是 pid = 0 的二级目录了</p>
+<ul>
+<li>父菜单 id = 0
+<ul>
+<li>子菜单 pid = 0 (pid=0，它就是二级目录了）</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码">代码</h2>
+<h3 id="文件-menugo-使用-beego-orm">文件 menu.go (使用 beego orm)</h3>
+<pre tabindex="0"><code>type Menu struct {
+	Id       int     `json:&quot;id&quot;`
+	Pid      int     `json:&quot;pid&quot;`
+	Name     string  `json:&quot;name&quot;`
+	Sort     int     `json:&quot;sort&quot;`
+	Route    string  `json:&quot;route&quot;`
+	//这里是子菜单，结构是 menu数组，因为是menu类型，所以数据库不做处理
+	//用 orm:&quot;-&quot;注解
+	Children []*Menu `json:&quot;children&quot; orm:&quot;-&quot;`	
+}
+
+func (m *Menu) TableName() string {
+	return &quot;auth_menu&quot;
+}
+</code></pre><h3 id="在数据库层注册模型">在数据库层，注册模型</h3>
+<pre tabindex="0"><code>//注册 数据库的时候
+//我这里数据库都使用了 tbl_ 前缀。 
+//所以上面的数据库, return auth_menu 表名, 但是实际上使用的时候是 tbl_auth_menu 表, 这里一定要注意，
+//写代码的时候，提示错误，数据库表 不存在这个的时候，记得来这里看看
+func init() {
+	orm.RegisterModelWithPrefix(&quot;tbl_&quot;,
+		new(models.Menu),
+	)
+}
+</code></pre><h3 id="递归查询">递归查询</h3>
+<pre tabindex="0"><code>
+/**
+递归获取树形菜单
+*/
+//func (m *Menu) GetMenu(pid int) []*TreeList {
+func GetMenu(pid int) []*Menu {
+	o := orm.NewOrm()
+	var menuList []*Menu
+	//根据 pid 查询数据库
+	_, _ = o.QueryTable(&quot;tbl_auth_menu&quot;).Filter(&quot;pid&quot;, pid).OrderBy(&quot;sort&quot;).All(&amp;menuList)
+	//查询到结果后，遍历该层菜单
+	//查询都有哪些菜单是使用自己的id作为pid的，
+	//也就是查询该菜单的子菜单，查询到后赋值就可以了
+	for _, v := range menuList {
+		child := GetMenu(v.Id)
+		v.Children = child
+	}
+	return menuList
+}
+</code></pre><h3 id="api方法">api方法</h3>
+<pre tabindex="0"><code>// 获取所有部门
+func (c *DepartmentController) GetAll() {
+	//我方法写在了 models 包里，根据具体情况，引入包，
+	//或者是同级包下，不写包名
+	// -1 为 第一级部门 的 parentId，
+	departments := models.DepartmentGetAll(-1)
+	c.Data[&quot;json&quot;] = util.NewRespMsg(0, &quot;获取部门成功&quot;, departments)
+	c.ServeJSON()
+}
+</code></pre>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.qoabc.com/tags/golang/">golang</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue/cli4 axios网路请求封装 以及 登录token失效跳转页面" aria-label="NEXT: vue/cli4 axios网路请求封装 以及 登录token失效跳转页面">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue-cli@4 入门（四）" aria-label="PREVIOUS: vue-cli@4 入门（四）">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2020/05/golang/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2020/05/golang/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2020/05/golang/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/blog.qoabc.com\/2020\/05\/golang\/';
+        
+          this.page.identifier = '\/2020\/05\/golang\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Firstname Lastname. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue/cli4 axios网路请求封装 以及 登录token失效跳转页面" aria-label="NEXT: vue/cli4 axios网路请求封装 以及 登录token失效跳转页面">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.qoabc.com/2020/05/vue/" data-tooltip="vue-cli@4 入门（四）" aria-label="PREVIOUS: vue-cli@4 入门（四）">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.qoabc.com/2020/05/golang/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.qoabc.com/2020/05/golang/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.qoabc.com/2020/05/golang/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.qoabc.com%2F2020%2F05%2Fgolang%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.qoabc.com%2F2020%2F05%2Fgolang%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.qoabc.com%2F2020%2F05%2Fgolang%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Firstname Lastname</h4>
+    
+      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Your job title
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        France
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.qoabc.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

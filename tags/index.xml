@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Scott Blog</title>
+    <title>Tags on Hugo tranquilpeak theme</title>
     <link>https://blog.qoabc.com/tags/</link>
-    <description>Recent content in Tags on Scott Blog</description>
+    <description>Recent content in Tags on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jan 2021 14:43:16 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Nov 2021 16:42:36 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue</title>
+      <link>https://blog.qoabc.com/tags/vue/</link>
+      <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/tags/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>mac</title>
       <link>https://blog.qoabc.com/tags/mac/</link>
@@ -25,11 +35,29 @@
     </item>
     
     <item>
+      <title>ios</title>
+      <link>https://blog.qoabc.com/tags/ios/</link>
+      <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>golang</title>
       <link>https://blog.qoabc.com/tags/golang/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
       <guid>https://blog.qoabc.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://blog.qoabc.com/tags/linux/</link>
+      <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -43,20 +71,20 @@
     </item>
     
     <item>
-      <title>ios</title>
-      <link>https://blog.qoabc.com/tags/ios/</link>
-      <pubDate>Fri, 27 Jul 2018 11:10:43 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>html</title>
       <link>https://blog.qoabc.com/tags/html/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
       <guid>https://blog.qoabc.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>https://blog.qoabc.com/tags/swift/</link>
+      <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/tags/swift/</guid>
       <description></description>
     </item>
     
@@ -79,92 +107,11 @@
     </item>
     
     <item>
-      <title>hugo</title>
-      <link>https://blog.qoabc.com/tags/hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>hexo</title>
+      <link>https://blog.qoabc.com/tags/hexo/</link>
+      <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
       
-      <guid>https://blog.qoabc.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://blog.qoabc.com/tags/themes/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/themes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>configuration</title>
-      <link>https://blog.qoabc.com/tags/configuration/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://blog.qoabc.com/tags/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docs</title>
-      <link>https://blog.qoabc.com/tags/docs/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/docs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://blog.qoabc.com/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://blog.qoabc.com/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://blog.qoabc.com/tags/tutorial/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jekyll</title>
-      <link>https://blog.qoabc.com/tags/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/jekyll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://blog.qoabc.com/tags/test/</link>
-      <pubDate>Thu, 09 Jan 1012 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/tags/test/</guid>
+      <guid>https://blog.qoabc.com/tags/hexo/</guid>
       <description></description>
     </item>
     
