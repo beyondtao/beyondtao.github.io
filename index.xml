@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott Blog</title>
+    <link>https://blog.qoabc.com/</link>
+    <description>Recent content on Scott Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 Jan 2021 14:43:16 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>brew 安装 node 及 npm用法</title>
+      <link>https://blog.qoabc.com/posts/mac/</link>
+      <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/mac/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/syosinnsya/article/details/80395121&#34;&gt;转载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用brew-安装node&#34;&gt;使用brew 安装node&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git Commitizen 规范化commit工具</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;需要提前安装node。&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-安装-commitizen-node-模块&#34;&gt;1. 安装 commitizen node 模块&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g commitizen
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用国内源安装 Homebrew</title>
+      <link>https://blog.qoabc.com/posts/mac/</link>
+      <pubDate>Sat, 23 Jan 2021 17:22:24 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/mac/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/cd7c7fabce9f&#34;&gt;转载来源&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1删除旧的安装&#34;&gt;1、删除旧的安装&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rm -rf /usr/local/Homebrew
+sudo rm -f /usr/local/bin/brew
+sudo rm -rf /usr/local/var/homebrew
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;2创建新的安装目录&#34;&gt;2、创建新的安装目录&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git提交的正确姿势：Commit message 和 Change log 编写指南</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;
+&lt;p&gt;本文前三部分都是介绍。从第四部分开始是如何安装和使用。&lt;/p&gt;
+&lt;h2 id=&#34;一介绍&#34;&gt;一、介绍&lt;/h2&gt;
+&lt;p&gt;Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
+      <link>https://blog.qoabc.com/posts/golang/</link>
+      <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/golang/</guid>
+      <description>&lt;p&gt;我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人事管理
+&lt;ul&gt;
+&lt;li&gt;员工资历&lt;/li&gt;
+&lt;li&gt;员工奖惩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;统计管理
+&lt;ul&gt;
+&lt;li&gt;统计列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;系统管理
+&lt;ul&gt;
+&lt;li&gt;我的设置&lt;/li&gt;
+&lt;li&gt;权限管理&lt;/li&gt;
+&lt;li&gt;角色列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Golang 文件操作</title>
+      <link>https://blog.qoabc.com/posts/golang/</link>
+      <pubDate>Sun, 22 Mar 2020 19:23:51 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/golang/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/c21decb4bea5&#34;&gt;转载自 超级大柱子（简书）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ad164c76ce15&#34;&gt;go极简教程 阅读目录&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-文件操作&#34;&gt;Go 文件操作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;os库：文件\文件夹创建,读取,移动,复制&lt;/li&gt;
+&lt;li&gt;io库 : 文件内容的写入,修改,拼接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本文件操作&#34;&gt;基本文件操作&lt;/h2&gt;
+&lt;h3 id=&#34;文件内容的读取&#34;&gt;文件内容的读取&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang 中string和int类型相互转换</title>
+      <link>https://blog.qoabc.com/posts/golang/</link>
+      <pubDate>Mon, 16 Mar 2020 09:51:36 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/golang/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;string转成int：
+&lt;ul&gt;
+&lt;li&gt;int, err := strconv.Atoi(string)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker网络命令与基本查看命令</title>
+      <link>https://blog.qoabc.com/posts/docker/</link>
+      <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/docker/</guid>
+      <description>&lt;h2 id=&#34;docker网络命令&#34;&gt;docker网络命令&lt;/h2&gt;
+&lt;h4 id=&#34;查看网络命令帮助&#34;&gt;查看网络命令帮助&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;docker network help
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS-AVAudio</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Fri, 27 Jul 2018 11:10:43 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;&gt;转载自简书&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述&lt;/h3&gt;
+&lt;p&gt;苹果官方图
+&lt;img src=&#34;https://blog.qoabc.com/img/iOS-AVAudioSession/001.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML样式、链接、表格</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;html样式链接表格&#34;&gt;HTML样式、链接、表格&lt;/h2&gt;
+&lt;h3 id=&#34;一样式&#34;&gt;一、样式&lt;/h3&gt;
+&lt;h4 id=&#34;1标签&#34;&gt;1、标签&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;: 样式定义
+&amp;lt;link&amp;gt;: 资源引用
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 基础教程</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Thu, 09 Mar 2017 15:07:25 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;41-javascript基础教程&#34;&gt;4.1 JavaScript基础教程&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;课程概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript介绍&lt;/li&gt;
+&lt;li&gt;JavaScript实现&lt;/li&gt;
+&lt;li&gt;JavaScript输出&lt;/li&gt;
+&lt;li&gt;JavaScript语法&lt;/li&gt;
+&lt;li&gt;JavaScript注释&lt;/li&gt;
+&lt;li&gt;JavaScript变量&lt;/li&gt;
+&lt;li&gt;JavaScript数据类型&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>3.7 CSS动画--页面特效</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Tue, 07 Mar 2017 15:06:23 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;37-css动画--页面特效&#34;&gt;3.7 CSS动画&amp;ndash;页面特效&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;课程概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;2D、3D转换&lt;/li&gt;
+&lt;li&gt;过渡&lt;/li&gt;
+&lt;li&gt;动画&lt;/li&gt;
+&lt;li&gt;多列&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>3.4 CSS定位 &#43; 3.5 &#43; 3.6</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Sun, 05 Mar 2017 15:13:57 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;34-css定位&#34;&gt;3.4 CSS定位&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS定位&lt;/li&gt;
+&lt;li&gt;CSS浮动&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>3.3 CSS盒子模型</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Sat, 04 Mar 2017 15:01:17 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;33-css盒子模型&#34;&gt;3.3 CSS盒子模型&lt;/h2&gt;
+&lt;h2 id=&#34;课程概要&#34;&gt;课程概要&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS盒子模型概述&lt;/li&gt;
+&lt;li&gt;CSS内边距&lt;/li&gt;
+&lt;li&gt;CSS边框&lt;/li&gt;
+&lt;li&gt;CSS外边距&lt;/li&gt;
+&lt;li&gt;CSS外边距合并&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>3.2 CSS基础样式讲解</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Fri, 03 Mar 2017 15:13:57 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;32-css基础样式讲解&#34;&gt;3.2 CSS基础样式讲解&lt;/h2&gt;
+&lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS介绍&lt;/li&gt;
+&lt;li&gt;CSS基础语法&lt;/li&gt;
+&lt;li&gt;CSS高级语法&lt;/li&gt;
+&lt;li&gt;CSS派生选择器&lt;/li&gt;
+&lt;li&gt;CSSid选择器&lt;/li&gt;
+&lt;li&gt;CSS类选择器&lt;/li&gt;
+&lt;li&gt;CSS属性选择器&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>3.1 CSS3基础</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Thu, 02 Mar 2017 14:08:54 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;31-css3基础&#34;&gt;3.1 CSS3基础&lt;/h2&gt;
+&lt;h3 id=&#34;一css入门基础&#34;&gt;一、CSS入门基础&lt;/h3&gt;
+&lt;h4 id=&#34;1背景&#34;&gt;1、背景&lt;/h4&gt;
+&lt;p&gt;CSS允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;属性 | 描述
+--------------------- | ----------------------------
+background-attachment | 背景图像是否固定或者随着页面的其余部分滚动
+background-color | 设置元素的背景颜色
+background-image | 设置图片的背景图片
+background-position | 设置背景图片的起始位置
+background-repeat | 设置背景图片是否及如何重复
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML5框架、背景和实体-框架</title>
+      <link>https://blog.qoabc.com/posts/html/</link>
+      <pubDate>Wed, 01 Mar 2017 09:13:57 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/html/</guid>
+      <description>&lt;h2 id=&#34;html5框架背景和实体-框架&#34;&gt;HTML5框架、背景和实体-框架&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML框架&lt;/li&gt;
+&lt;li&gt;背景、颜色&lt;/li&gt;
+&lt;li&gt;HTML实体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;html框架&#34;&gt;HTML框架&lt;/h3&gt;
+&lt;p&gt;1、 框架标签（frame）&lt;/p&gt;
+&lt;p&gt;框架对于页面的设计有着很大的作用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Deutsch 900 Sätze 2</title>
+      <link>https://blog.qoabc.com/posts/deutsch/</link>
+      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/deutsch/</guid>
+      <description>&lt;p&gt;#### Lektion 21 AufeinerParty 在派对中301.Ich fuehle mich wirklich wohl hier.我真的玩得很开心。302.Es ist zu voll,um zur Kueche zu kommen.人太多,很难挤到厨房那边去。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Deutsch 900 Sätze 1</title>
+      <link>https://blog.qoabc.com/posts/deutsch/</link>
+      <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/deutsch/</guid>
+      <description>&lt;h2 id=&#34;lektion-1-gruesse-und-vorstellung打招呼介绍&#34;&gt;Lektion 1 Gruesse und Vorstellung.打招呼,介绍&lt;/h2&gt;
+&lt;p&gt;1.Hallo. 您好。
+2.Guten Morgen.早上好。
+3.Wie geht&amp;quot;s Ihnen?您好吗?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git Warning push.default is unset</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Thu, 04 Aug 2016 22:01:33 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;p&gt;git push代码的时候，可能会遇到下面的提示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git push
+
+warning: push.default is unset; its implicit value is changing in Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. 
+To squelch this message and maintain the current behavior after the default changes, use:  
+
+git config --global push.default matching
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>管理多个SSH Key</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Mon, 18 Jul 2016 15:43:04 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;p&gt;如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生成SSH Key</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Sun, 17 Jul 2016 13:42:55 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;p&gt;本文主要介绍如何使用终端，生成ssh key。
+SSH只是一种协议，用于计算机之间的加密登录，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>charles 抓包</title>
+      <link>https://blog.qoabc.com/posts/mac/</link>
+      <pubDate>Mon, 13 Jun 2016 17:49:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/mac/</guid>
+      <description>&lt;h4 id=&#34;一下载&#34;&gt;一、下载&lt;/h4&gt;
+&lt;p&gt;可以到&lt;a href=&#34;http://www.charlesproxy.com/&#34;&gt;charles官网&lt;/a&gt;下载到最新版本。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>APS过审了，开心</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;p&gt;5月30号参加的APS审核，然后大概第三天查了一下成绩，很高兴通过了。周末趁着有时间，在这里简单写一下关于APS的一些心得吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FMDatabaseQueue lead to a deadlock</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Mon, 16 May 2016 16:26:01 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;h4 id=&#34;问题&#34;&gt;问题&lt;/h4&gt;
+&lt;p&gt;Assertion failed: (currentSyncQueue != self &amp;amp;&amp;amp; &amp;ldquo;inDatabase: was called reentrantly on the same queue,which would lead to a deadlock&amp;rdquo;),function -[FMDatabaseQueue inDatabase:],file /Users/LaoTao/Documents/CIM/cim-ios/HealthGuard/Class/Lib/Tools/LocalDB/FMDB/FMDatabaseQueue.m, line 153.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS-BLE蓝牙开发(二) -- 多设备</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Sat, 30 Apr 2016 16:51:37 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.qoabc.com/file/iOS-BLEDevelopMultiDevice/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;多设备其实和单设备并没有什么太大的变化。至少初级写的时候，只是代码量多了一些。但是后面各种状态还有代码的优化工作挺多。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS-BLE蓝牙开发</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Thu, 28 Apr 2016 16:41:43 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;h4 id=&#34;ios开发蓝牙入门&#34;&gt;iOS开发蓝牙入门&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）&lt;/li&gt;
+&lt;li&gt;就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Mon, 11 Apr 2016 14:34:31 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;@interface NSObject (NSDelayedPerforming)  
+  
+- (void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay inModes:(NSArray *)modes;  
+- (void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay;  
++ (void)cancelPreviousPerformRequestsWithTarget:(id)aTarget selector:(SEL)aSelector object:(id)anArgument;  
++ (void)cancelPreviousPerformRequestsWithTarget:(id)aTarget;  
+  
+@end  
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS通过dSYM文件分析crash</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Fri, 01 Apr 2016 17:20:34 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
+&lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>苹果手机发展史</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Thu, 24 Mar 2016 20:50:34 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;tags-iphone&#34;&gt;title: 苹果手机发展史
+date: 2016-03-24 20:50:34
+tags: iPhone&lt;/h2&gt;
+&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Computer English Vocabulary</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Tue, 22 Mar 2016 22:15:01 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;h2 id=&#34;计算机专业词汇&#34;&gt;计算机专业词汇&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;reuse 重用，复用
+recall	
+callback 回调
+override 重写
+recursion 递归
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Encapsulation, Inheritance, Polymorphism, Delegation</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Fri, 18 Mar 2016 22:15:01 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;h4 id=&#34;encapsulation-封装&#34;&gt;Encapsulation 封装&lt;/h4&gt;
+&lt;p&gt;Encapsulation is hide the internal implementation, and stabilize the external interface. It can hide the implementation details and make the code modular.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>APS-UML</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Tue, 15 Mar 2016 17:46:18 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>统一建模语言
+   模型种类 十种图形 建模机制     用例模型 用例图 静态建模   静态模型 类图、对象图、包图 静态建模   行为模型 状态图、活动图 动态建模   交互模型 顺序图、协作图 动态建模   实现模型 构件图、配置图 静态建模    </description>
+    </item>
+    
+    <item>
+      <title>APS-SQL2005</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Mon, 14 Mar 2016 21:36:38 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;h4 id=&#34;what-is-the-normal-form&#34;&gt;What is the Normal Form?&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Normal Form is a set that with a particular level. （范式是符合某一种级别的关系模式的集合。）
+Create database must follow certain rules. In the relational database, this rule is the Normal Form.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>APS-Network</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Sun, 13 Mar 2016 22:15:01 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;p&gt;(分层，各层作用，协议)&lt;/p&gt;
+&lt;h3 id=&#34;whats-the-purpose-of-this-course&#34;&gt;What&amp;rsquo;s the purpose of this course?&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;- basic knowledge of computer network
+- focus on the structure and behavior of network
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>APS-Start</title>
+      <link>https://blog.qoabc.com/posts/aps-prepare/</link>
+      <pubDate>Sat, 12 Mar 2016 06:37:24 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/aps-prepare/</guid>
+      <description>&lt;p&gt;毛爷爷说过，不能打无准备的仗。&lt;/p&gt;
+&lt;p&gt;复习时，可按照下面的方针进行知识点的整理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、必修类课程每门课提炼3-4个知识点，4个最优
+2、选修课课程每门课提炼2-3个知识点，3个最优
+3、其他课程一句话，讲清楚学了啥干了啥就行
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何配置Bitbucket的ssh</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Sun, 21 Feb 2016 12:43:34 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;p&gt;在bitbucket上使用https协议，经常会在提交代码的时候出错，让人很着急上火，但是用ssh就要方便很多。&lt;/p&gt;
+&lt;p&gt;下面介绍一下设置ssh的方法：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DB Error 1 unrecognized token</title>
+      <link>https://blog.qoabc.com/posts/ios/</link>
+      <pubDate>Wed, 17 Feb 2016 14:52:50 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/ios/</guid>
+      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git命令</title>
+      <link>https://blog.qoabc.com/posts/git/</link>
+      <pubDate>Tue, 16 Feb 2016 11:49:03 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/git/</guid>
+      <description>&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
+# Git
+&lt;!--![Mou icon](http://h.picphotos.baidu.com/album/s%3D550%3Bq%3D90%3Bc%3Dxiangce%2C100%2C100/sign=53df6017ecf81a4c2232eccce7111164/8644ebf81a4c510f861530796759252dd52aa584.jpg?referer=5318d6feccef7609651cadaf039a&amp;x=.jpg)--&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; Profile&lt;/p&gt;
+&lt;h4 id=&#34;1远程仓库相关命令&#34;&gt;1)远程仓库相关命令&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://blog.qoabc.com/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://blog.qoabc.com/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://blog.qoabc.com/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://blog.qoabc.com/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Test 9</title>
+      <link>https://blog.qoabc.com/posts/test-9/</link>
+      <pubDate>Thu, 09 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-9/</guid>
+      <description>Test 9</description>
+    </item>
+    
+    <item>
+      <title>Test 8</title>
+      <link>https://blog.qoabc.com/posts/test-8/</link>
+      <pubDate>Wed, 08 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-8/</guid>
+      <description>Test 8</description>
+    </item>
+    
+    <item>
+      <title>Test 7</title>
+      <link>https://blog.qoabc.com/posts/test-7/</link>
+      <pubDate>Tue, 07 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-7/</guid>
+      <description>Test 7</description>
+    </item>
+    
+    <item>
+      <title>Test 6</title>
+      <link>https://blog.qoabc.com/posts/test-6/</link>
+      <pubDate>Mon, 06 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-6/</guid>
+      <description>Test 6</description>
+    </item>
+    
+    <item>
+      <title>Test 5</title>
+      <link>https://blog.qoabc.com/posts/test-5/</link>
+      <pubDate>Sun, 05 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-5/</guid>
+      <description>Test 5</description>
+    </item>
+    
+    <item>
+      <title>Test 4</title>
+      <link>https://blog.qoabc.com/posts/test-4/</link>
+      <pubDate>Sat, 04 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-4/</guid>
+      <description>Test 4</description>
+    </item>
+    
+    <item>
+      <title>Test 3</title>
+      <link>https://blog.qoabc.com/posts/test-3/</link>
+      <pubDate>Fri, 03 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-3/</guid>
+      <description>Test 3</description>
+    </item>
+    
+    <item>
+      <title>Test 2</title>
+      <link>https://blog.qoabc.com/posts/test-2/</link>
+      <pubDate>Thu, 02 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-2/</guid>
+      <description>Test 2</description>
+    </item>
+    
+    <item>
+      <title>Test 1</title>
+      <link>https://blog.qoabc.com/posts/test-1/</link>
+      <pubDate>Wed, 01 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/posts/test-1/</guid>
+      <description>Test 1 I am referencing a footnote1
+1package main 2 3import &amp;#34;fmt&amp;#34; 4 5func main() { 6 fmt.Println(&amp;#34;{linenos=inline}&amp;#34;) 7} 1 2 3 4 5 6 7  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;{linenos=table}&amp;#34;) }   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dictum tortor. Morbi laoreet enim id sem euismod lobortis. Donec quam libero, bibendum non cursus vitae, dictum vel eros.   I am the footnote&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://blog.qoabc.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.qoabc.com/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia lorem quis sodales auctor. Donec bibendum odio leo, bibendum iaculis lectus dapibus sit amet. Etiam ut euismod lectus, vel finibus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer quis vestibulum justo. Duis scelerisque ullamcorper sem, eget congue lorem ultrices mattis. Nam ut mollis tellus, id facilisis turpis. Duis ac egestas mi, a mattis dolor. Curabitur vestibulum est nec tortor hendrerit, vehicula malesuada quam tempor.</description>
+    </item>
+    
+  </channel>
+</rss>
