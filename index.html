@@ -274,89 +274,6 @@
 <li>ts</li>
 <li>antd</li>
 </ul>
-<h2 id="一安装">一、安装</h2>
-<h3 id="11-vue-cli4">1.1 vue-cli@4</h3>
-<p>我这里使用的是vue-cli@4.5版本。 创建项目 <code>main.js</code>中会有部分不一样
-1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）</p>
-<pre><code>$ npm uninstall vue-cli -g
-</code></pre>
-<p>2、安装Vue-cli</p>
-<pre><code>$ npm install -g @vue/cli
-# 查看版本
-$ vue --version
-@vue/cli 4.5.15
-</code></pre>
-<h3 id="12-项目中的命令">1.2 项目中的命令</h3>
-<p>这块为了方便以后查找，所以放到了上面。</p>
-<h4 id="121-安装-antd">1.2.1 安装 antd</h4>
-<p>可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的<code>3.0</code>， 如果你选择的是<code>1.7</code>版本，可能会没有后面的 @next。</p>
-<pre><code>$ npm install ant-design-vue@next --save
-</code></pre>
-<h4 id="122-引入-ts">1.2.2 引入 ts</h4>
-<pre><code>$ npm install --save-dev typescript
-$ npm install --save-dev @vue/cli-plugin-typescript
-</code></pre>
-<h4 id="123-安装axios">1.2.3 安装axios</h4>
-<pre><code>$ npm install --save axios
-$ npm install --save es6-promise
-</code></pre>
-<p><!-- raw HTML omitted -->官方文档：<!-- raw HTML omitted --></p>
-<pre><code>axios 依赖原生的 ES6 Promise 实现而被支持.
-如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
-</code></pre>
-<p>虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。</p>
-<h2 id="二创建配置">二、创建配置</h2>
-<h3 id="21-执行创建命令">2.1 执行创建命令</h3>
-<pre><code># vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
-$ vue create 项目名 
-</code></pre>
-<h3 id="21-pick-a-preset">2.1 pick a preset</h3>
-<p>选择 <!-- raw HTML omitted -->Manually select features<!-- raw HTML omitted --> 手动配置</p>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/001.png" alt="图片"></p>
-<h3 id="22-check-the-features">2.2 check the features</h3>
-<p>按照图中选项配置，点击<code>空格</code>选择选项。 Unit Testing 测试单元可以不选择</p>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/002.png" alt="图片"></p>
-<h3 id="23-选择vue版本">2.3 选择vue版本</h3>
-<p>注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）</p>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/003.png" alt="图片"></p>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/004.png" alt="图片"></p>
-<h3 id="24-细节配置">2.4 细节配置</h3>
-<p>后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。</p>
-<p>如果不明白可以跟着下面一步一步来。</p>
-<h3 id="25-use-class-style-component-syntax-yes">2.5 Use class-style component syntax? Yes</h3>
-<p>是否使用Class风格装饰器？</p>
-<p>选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}</p>
-<h3 id="26-use-babel-alongside-typescript-required-for-modern-mode-auto-detected-polyfills-transpiling-jsx-yes">2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes</h3>
-<p>使用Babel与TypeScript一起用于自动检测的填充?</p>
-<h3 id="27-use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production-yes">2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes</h3>
-<p>路由使用历史模式?</p>
-<p>选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。</p>
-<h3 id="28-pick-a-css-pre-processor-postcss-autoprefixer-and-css-modules-are-supported-by-default-sassscss-with-dart-sass">2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)</h3>
-<p>使用什么css预编译器？</p>
-<p>Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。</p>
-<p>Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名</p>
-<ul>
-<li>node-sass是自动编译实时的</li>
-<li>dart-sass需要保存后才会生效</li>
-</ul>
-<h3 id="29-pick-a-linter--formatter-config-选择eslint代码验证规则我们选择eslint--standard-config-标准配置">2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置）</h3>
-<h3 id="210--pick-additional-lint-features-选择什么时候进行代码规则检测我们选择保存时进行检查">2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）</h3>
-<p>❯◉ Lint on save // 保存时检测</p>
-<h3 id="211-pick-a-unit-testing-solution-unit-testing-单元测试我们选择jest-">2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）</h3>
-<h3 id="212-where-do-you-prefer-placing-config-for-babel-eslint-etc-in-dedicated-config-files-您希望babel-eslint-配置的存放位置我们选择在专用的配置文件中">2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)</h3>
-<p>❯◉ In dedicated config files //在专用的配置文件中</p>
-<p>◯In package.json //在package.json</p>
-<h3 id="save-this-as-a-preset-for-future-projectsyn-是否保存配置-">Save this as a preset for future projects?(y/N) （是否保存配置 ）</h3>
-<p>可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目</p>
-<h3 id="213-创建完成">2.13 创建完成</h3>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/010.png" alt="图片"></p>
-<h3 id="214-运行项目">2.14 运行项目</h3>
-<pre><code>$ cd 项目目录
-$ npm run serve
-</code></pre>
-<p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/011.png" alt="图片"></p>
-<h2 id="三">三、</h2>
-<h2 id="把axios-配置成-vue插件">把Axios 配置成 Vue插件</h2>
       
       <p>
         
@@ -470,10 +387,6 @@ $ npm run serve
     <div class="postShorten-excerpt">
       
         <h2 id="一安装-commitizen-工具">一、安装 Commitizen 工具</h2>
-<p><code>需要提前安装node。</code></p>
-<h4 id="1-安装-commitizen-node-模块">1. 安装 commitizen node 模块</h4>
-<pre><code>npm install -g commitizen
-</code></pre>
       
       <p>
         
@@ -591,9 +504,6 @@ sudo rm -rf /usr/local/var/homebrew
     <div class="postShorten-excerpt">
       
         <p>这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。</p>
-<p>本文前三部分都是介绍。从第四部分开始是如何安装和使用。</p>
-<h2 id="一介绍">一、介绍</h2>
-<p>Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。</p>
       
       <p>
         
@@ -650,26 +560,6 @@ sudo rm -rf /usr/local/var/homebrew
     <div class="postShorten-excerpt">
       
         <h2 id="一校验数字的表达式">一、校验数字的表达式</h2>
-<pre tabindex="0"><code>数字：^[0-9]*$
-n位的数字：^\d{n}$
-至少n位的数字：^\d{n,}$
-m-n位的数字：^\d{m,n}$
-零和非零开头的数字：^(0|[1-9][0-9]*)$
-非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
-带1-2位小数的正数或负数：^(\-)?\d+(\.\d{1,2})?$
-正数、负数、和小数：^(\-|\+)?\d+(\.\d+)?$
-有两位小数的正实数：^[0-9]+(.[0-9]{2})?$
-有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$
-非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$
-非零的负整数：^\-[1-9][]0-9&quot;*$ 或 ^-[1-9]\d*$
-非负整数：^\d+$ 或 ^[1-9]\d*|0$
-非正整数：^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$
-非负浮点数：^\d+(\.\d+)?$ 或 ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$
-非正浮点数：^((-\d+(\.\d+)?)|(0+(\.0+)?))$ 或 ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$
-正浮点数：^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ 或 ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$
-负浮点数：^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ 或 ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$
-浮点数：^(-?\d+)(\.\d+)?$ 或 ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$
-</code></pre>
       
       <p>
         
@@ -730,8 +620,6 @@ m-n位的数字：^\d{m,n}$
 npm install quill	(依赖项)
 npm install quill-image-drop-module 	(图片拖拽）
 </code></pre>
-<p>二、使用</p>
-<h3 id="1在-mainjs-中引入">1、在 main.js 中引入</h3>
       
       <p>
         

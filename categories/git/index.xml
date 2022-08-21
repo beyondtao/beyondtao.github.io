@@ -13,11 +13,7 @@
       <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
       
       <guid>https://blog.qoabc.com/2021/01/git/</guid>
-      <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;需要提前安装node。&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1-安装-commitizen-node-模块&#34;&gt;1. 安装 commitizen node 模块&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g commitizen
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -26,10 +22,7 @@
       <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
       
       <guid>https://blog.qoabc.com/2020/12/git/</guid>
-      <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;
-&lt;p&gt;本文前三部分都是介绍。从第四部分开始是如何安装和使用。&lt;/p&gt;
-&lt;h2 id=&#34;一介绍&#34;&gt;一、介绍&lt;/h2&gt;
-&lt;p&gt;Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。&lt;/p&gt;</description>
+      <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "介绍  vue3 vue-cli@4.5 ts antd  一、安装 1.1 vue-cli@4 我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样 1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）\n$ npm uninstall vue-cli -g  2、安装Vue-cli\n$ npm install -g @vue/cli # 查看版本 $ vue --version @vue/cli 4.5.15  1.2 项目中的命令 这块为了方便以后查找，所以放到了上面。\n1.2.1 安装 antd 可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。\n$ npm install ant-design-vue@next --save  1.2.2 引入 ts $ npm install --save-dev typescript $ npm install --save-dev @vue/cli-plugin-typescript  1.2.3 安装axios $ npm install --save axios $ npm install --save es6-promise  官方文档：axios 依赖原生的 ES6 Promise 实现而被支持. 如果你的环境不支持 ES6 Promise，你可以使用 polyfill.  虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。\n二、创建配置 2.1 执行创建命令 # vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中 $ vue create 项目名  2.1 pick a preset 选择 Manually select features手动配置\n2.2 check the features 按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择\n2.3 选择vue版本 注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）\n2.4 细节配置 后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。\n如果不明白可以跟着下面一步一步来。\n2.5 Use class-style component syntax? Yes 是否使用Class风格装饰器？\n选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}\n2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes 使用Babel与TypeScript一起用于自动检测的填充?\n2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes 路由使用历史模式?\n选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。\n2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass) 使用什么css预编译器？\nSass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。\nStylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名\n node-sass是自动编译实时的 dart-sass需要保存后才会生效  2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置） 2.10 Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查） ❯◉ Lint on save // 保存时检测\n2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ） 2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中) ❯◉ In dedicated config files //在专用的配置文件中\n◯In package.json //在package.json\nSave this as a preset for future projects?(y/N) （是否保存配置 ） 可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目\n2.13 创建完成 2.14 运行项目 $ cd 项目目录 $ npm run serve  三、 把Axios 配置成 Vue插件",
+  "description": "介绍  vue3 vue-cli@4.5 ts antd ",
   "keywords": []
 }
 
@@ -49,90 +49,7 @@ vue3
 vue-cli@4.5
 ts
 antd
-
-一、安装
-1.1 vue-cli@4
-我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
-1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
-$ npm uninstall vue-cli -g
-
-2、安装Vue-cli
-$ npm install -g @vue/cli
-# 查看版本
-$ vue --version
-@vue/cli 4.5.15
-
-1.2 项目中的命令
-这块为了方便以后查找，所以放到了上面。
-1.2.1 安装 antd
-可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
-$ npm install ant-design-vue@next --save
-
-1.2.2 引入 ts
-$ npm install --save-dev typescript
-$ npm install --save-dev @vue/cli-plugin-typescript
-
-1.2.3 安装axios
-$ npm install --save axios
-$ npm install --save es6-promise
-
-官方文档：
-axios 依赖原生的 ES6 Promise 实现而被支持.
-如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
-
-虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
-二、创建配置
-2.1 执行创建命令
-# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
-$ vue create 项目名 
-
-2.1 pick a preset
-选择 Manually select features 手动配置
-
-2.2 check the features
-按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
-
-2.3 选择vue版本
-注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
-
-
-2.4 细节配置
-后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
-如果不明白可以跟着下面一步一步来。
-2.5 Use class-style component syntax? Yes
-是否使用Class风格装饰器？
-选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
-2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
-使用Babel与TypeScript一起用于自动检测的填充?
-2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-路由使用历史模式?
-选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
-2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
-使用什么css预编译器？
-Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
-Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
-
-node-sass是自动编译实时的
-dart-sass需要保存后才会生效
-
-2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
-2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
-❯◉ Lint on save // 保存时检测
-2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
-2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
-❯◉ In dedicated config files //在专用的配置文件中
-◯In package.json //在package.json
-Save this as a preset for future projects?(y/N) （是否保存配置 ）
-可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
-2.13 创建完成
-
-2.14 运行项目
-$ cd 项目目录
-$ npm run serve
-
-
-三、
-把Axios 配置成 Vue插件">
+">
 
 
 <meta property="og:description" content="介绍
@@ -141,90 +58,7 @@ vue3
 vue-cli@4.5
 ts
 antd
-
-一、安装
-1.1 vue-cli@4
-我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
-1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
-$ npm uninstall vue-cli -g
-
-2、安装Vue-cli
-$ npm install -g @vue/cli
-# 查看版本
-$ vue --version
-@vue/cli 4.5.15
-
-1.2 项目中的命令
-这块为了方便以后查找，所以放到了上面。
-1.2.1 安装 antd
-可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
-$ npm install ant-design-vue@next --save
-
-1.2.2 引入 ts
-$ npm install --save-dev typescript
-$ npm install --save-dev @vue/cli-plugin-typescript
-
-1.2.3 安装axios
-$ npm install --save axios
-$ npm install --save es6-promise
-
-官方文档：
-axios 依赖原生的 ES6 Promise 实现而被支持.
-如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
-
-虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
-二、创建配置
-2.1 执行创建命令
-# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
-$ vue create 项目名 
-
-2.1 pick a preset
-选择 Manually select features 手动配置
-
-2.2 check the features
-按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
-
-2.3 选择vue版本
-注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
-
-
-2.4 细节配置
-后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
-如果不明白可以跟着下面一步一步来。
-2.5 Use class-style component syntax? Yes
-是否使用Class风格装饰器？
-选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
-2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
-使用Babel与TypeScript一起用于自动检测的填充?
-2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-路由使用历史模式?
-选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
-2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
-使用什么css预编译器？
-Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
-Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
-
-node-sass是自动编译实时的
-dart-sass需要保存后才会生效
-
-2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
-2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
-❯◉ Lint on save // 保存时检测
-2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
-2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
-❯◉ In dedicated config files //在专用的配置文件中
-◯In package.json //在package.json
-Save this as a preset for future projects?(y/N) （是否保存配置 ）
-可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
-2.13 创建完成
-
-2.14 运行项目
-$ cd 项目目录
-$ npm run serve
-
-
-三、
-把Axios 配置成 Vue插件">
+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">
 <meta name="twitter:title" content="vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">
@@ -237,180 +71,14 @@ vue3
 vue-cli@4.5
 ts
 antd
-
-一、安装
-1.1 vue-cli@4
-我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
-1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
-$ npm uninstall vue-cli -g
-
-2、安装Vue-cli
-$ npm install -g @vue/cli
-# 查看版本
-$ vue --version
-@vue/cli 4.5.15
-
-1.2 项目中的命令
-这块为了方便以后查找，所以放到了上面。
-1.2.1 安装 antd
-可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
-$ npm install ant-design-vue@next --save
-
-1.2.2 引入 ts
-$ npm install --save-dev typescript
-$ npm install --save-dev @vue/cli-plugin-typescript
-
-1.2.3 安装axios
-$ npm install --save axios
-$ npm install --save es6-promise
-
-官方文档：
-axios 依赖原生的 ES6 Promise 实现而被支持.
-如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
-
-虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
-二、创建配置
-2.1 执行创建命令
-# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
-$ vue create 项目名 
-
-2.1 pick a preset
-选择 Manually select features 手动配置
-
-2.2 check the features
-按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
-
-2.3 选择vue版本
-注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
-
-
-2.4 细节配置
-后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
-如果不明白可以跟着下面一步一步来。
-2.5 Use class-style component syntax? Yes
-是否使用Class风格装饰器？
-选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
-2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
-使用Babel与TypeScript一起用于自动检测的填充?
-2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-路由使用历史模式?
-选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
-2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
-使用什么css预编译器？
-Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
-Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
-
-node-sass是自动编译实时的
-dart-sass需要保存后才会生效
-
-2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
-2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
-❯◉ Lint on save // 保存时检测
-2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
-2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
-❯◉ In dedicated config files //在专用的配置文件中
-◯In package.json //在package.json
-Save this as a preset for future projects?(y/N) （是否保存配置 ）
-可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
-2.13 创建完成
-
-2.14 运行项目
-$ cd 项目目录
-$ npm run serve
-
-
-三、
-把Axios 配置成 Vue插件">
+">
 <meta name="twitter:description" content="介绍
 
 vue3
 vue-cli@4.5
 ts
 antd
-
-一、安装
-1.1 vue-cli@4
-我这里使用的是vue-cli@4.5版本。 创建项目 main.js中会有部分不一样
-1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）
-$ npm uninstall vue-cli -g
-
-2、安装Vue-cli
-$ npm install -g @vue/cli
-# 查看版本
-$ vue --version
-@vue/cli 4.5.15
-
-1.2 项目中的命令
-这块为了方便以后查找，所以放到了上面。
-1.2.1 安装 antd
-可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的3.0， 如果你选择的是1.7版本，可能会没有后面的 @next。
-$ npm install ant-design-vue@next --save
-
-1.2.2 引入 ts
-$ npm install --save-dev typescript
-$ npm install --save-dev @vue/cli-plugin-typescript
-
-1.2.3 安装axios
-$ npm install --save axios
-$ npm install --save es6-promise
-
-官方文档：
-axios 依赖原生的 ES6 Promise 实现而被支持.
-如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
-
-虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。
-二、创建配置
-2.1 执行创建命令
-# vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
-$ vue create 项目名 
-
-2.1 pick a preset
-选择 Manually select features 手动配置
-
-2.2 check the features
-按照图中选项配置，点击空格选择选项。 Unit Testing 测试单元可以不选择
-
-2.3 选择vue版本
-注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）
-
-
-2.4 细节配置
-后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。
-如果不明白可以跟着下面一步一步来。
-2.5 Use class-style component syntax? Yes
-是否使用Class风格装饰器？
-选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}
-2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
-使用Babel与TypeScript一起用于自动检测的填充?
-2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-路由使用历史模式?
-选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
-2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
-使用什么css预编译器？
-Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。
-Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名
-
-node-sass是自动编译实时的
-dart-sass需要保存后才会生效
-
-2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint &#43; Standard config 标准配置）
-2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
-❯◉ Lint on save // 保存时检测
-2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
-2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
-❯◉ In dedicated config files //在专用的配置文件中
-◯In package.json //在package.json
-Save this as a preset for future projects?(y/N) （是否保存配置 ）
-可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目
-2.13 创建完成
-
-2.14 运行项目
-$ cd 项目目录
-$ npm run serve
-
-
-三、
-把Axios 配置成 Vue插件">
+">
 <meta property="og:locale" content="en-us">
 
   
@@ -732,6 +400,7 @@ $ npm run serve
 <p><img src="https://blog.qoabc.com/img/vue-cli4-antd-ts/011.png" alt="图片"></p>
 <h2 id="三">三、</h2>
 <h2 id="把axios-配置成-vue插件">把Axios 配置成 Vue插件</h2>
+<!-- raw HTML omitted -->
 <p>把 <code>Axios</code> 封装成 <code>Vue</code> 插件，可以直接在 <code>Vue</code> 组件里使用 <code>this.xxx</code> 的方式来调用。Axios本身并没有封装，所以这里我们自己来把它封装成 <code>Vue</code> 组件。</p>
 <h2 id="第一次封装">第一次封装</h2>
 <p>这里是将 Axios 封装成组件，后面会上全部代码，包含拦截器功能，验证token失效，跳转页面。</p>
