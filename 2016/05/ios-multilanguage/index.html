@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iOS多语言，支持app内部设置",
+  
+  "datePublished": "2016-05-25T17:26:36Z",
+  "dateModified": "2016-05-25T17:26:36Z",
+  "author": {
+    "@type": "Person",
+    "name": "Scott Tao",
+    
+    "image": "https://blog.qoabc.com/img/xiongmao.png"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "\/2016\/05\/ios-multilanguage\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott's Blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.qoabc.com/img/xiongmao.png"
+    }
+    
+  },
+  "description": "版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。\n所以今天闲来没事，写一写总结，供大家参考。\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Scott Tao">
+<meta name="keywords" content="">
+<meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。
+所以今天闲来没事，写一写总结，供大家参考。">
+
+
+<meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。
+所以今天闲来没事，写一写总结，供大家参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS多语言，支持app内部设置">
+<meta name="twitter:title" content="iOS多语言，支持app内部设置">
+<meta property="og:url" content="/2016/05/ios-multilanguage/">
+<meta property="twitter:url" content="/2016/05/ios-multilanguage/">
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。
+所以今天闲来没事，写一写总结，供大家参考。">
+<meta name="twitter:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。
+所以今天闲来没事，写一写总结，供大家参考。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2016-05-25T17:26:36">
+  
+  
+    <meta property="article:modified_time" content="2016-05-25T17:26:36">
+  
+  
+  
+    
+      <meta property="article:section" content="ios">
+    
+  
+  
+    
+      <meta property="article:tag" content="ios">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://blog.qoabc.com/img/xiongmao.png">
+  <meta property="twitter:image" content="https://blog.qoabc.com/img/xiongmao.png">
+
+
+
+
+
+
+    <title>iOS多语言，支持app内部设置</title>
+
+    <link rel="icon" href="/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="/2016/05/ios-multilanguage/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m a iOS Developer, working from 2014 in Beijing in China, and I want find a job in Germany. I did pass the DSH2 in 2018. You can contact me through email: <a href="mailto:Scott.Tao@88.com">Scott.Tao@88.com</a></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/about/me" title="About Me">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-address-book" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About Me</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      iOS多语言，支持app内部设置
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2016-05-25T17:26:36Z">
+        
+  May 25, 2016
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/ios">ios</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p><code>版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶</code>
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。</p>
+<p>所以今天闲来没事，写一写总结，供大家参考。</p>
+<p>当然做的时候，也会百度搜索，所以项目中可能会看到网上一些比较熟悉的东西。</p>
+<p>大家做这一步，相信项目工程是有的了吧（因为本人做独立开发，所以一般新功能几乎都是在项目中做的，很少有写demo，就不考虑demo的情况了）</p>
+<p>在项目文件的Supporting Files中的InfoPlist.strings中，右键(或command + N)&ndash;&gt;新建一个string文件。</p>
+<p>（如果没有这个文件，在xcode6中创建，好像没有看到，可以自己创建一个文件，名字可以随便取，后面会给一个方法，获取这个文件的。）
+如图1-1所以<img src="iOS-MultiLanguage/1-1.png" alt="图1-1"></p>
+<p>创建完文件之后，点击项目—&gt;选择Project—&gt;选择Info—&gt;点击“+”号。（画线隐藏）
+<img src="iOS-MultiLanguage/1-2.png" alt="图1-2"></p>
+<p>在右下方有个Language的选项，默认进来是只有English的，点击+号之后可以看到各种语言选项</p>
+<p><img src="iOS%E5%A4%9A%E8%AF%AD%E8%A8%80%EF%BC%8C%E6%94%AF%E6%8C%81app%E5%86%85%E9%83%A8%E8%AE%BE%E7%BD%AE/1-3.png" alt="图1-3"></p>
+<p>在这里选择Chinese(Simplified)。下面会出现一个选项，选择InfoPlist.string文件，那个是语言设置的。（如果是自定义的文件，就选择自定义的那个）</p>
+<p>//&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<p>到这里，基本配置就完成了。然后后面就是设置需要的字符，以及调用方法了</p>
+<p><img src="iOS-MultiLanguage/1-4.png" alt="图1-4">
+<img src="iOS-MultiLanguage/1-5.png" alt="图1-5"></p>
+<p>在相应的string文件中，写入需要的字符。前面相当于key。后面是value。</p>
+<p>CFBundleDisplayName是app的名字，技术不够，暂时不知道如何手动切换语言，改变桌面的名字，这一步，只是根据系统语言来的。</p>
+<p>如果默认根据系统语言更改语言，那么调用的时候只需要NSLocalizedString(&lt;#key#&gt;, &lt;#comment#&gt;)用这一句就可以了。其他的不需要做处理。</p>
+<p>如果是想自定义的话，那么需要写一个类：</p>
+<p>//.h头文件：
+#import &lt;Foundation/Foundation.h&gt;</p>
+<p>@interface InternationalController : NSObject</p>
+<ul>
+<li>(NSBundle *)bundle;   //获取当前资源文件</li>
+<li>(void)initUserLanguage;   //初始化语言文件</li>
+<li>(NSString *)userLanguage; //获取应用当前语言</li>
+<li>(void)setUserLanguage:(NSString *)language;   //设置当前语言</li>
+</ul>
+<p>@end</p>
+<p>//.m类体文件</p>
+<p>//
+//  InternationalController.m
+//  mworkingHaier
+//
+//  Created by LaoTao on 14-10-20.
+//  Copyright (c) 2014年 CaiGaoBaDou. All rights reserved.
+//</p>
+<p>#import &ldquo;InternationalController.h&rdquo;
+#import &lt;UIKit/UIKit.h&gt;</p>
+<p>@implementation InternationalController</p>
+<p>//创建静态变量bundle，以及获取方法bundle（此处不要使用getBundle).
+static NSBundle *bundle = nil;</p>
+<ul>
+<li>(NSBundle *)bundle {
+return bundle;
+}</li>
+</ul>
+<p>//初始化方法:</p>
+<ul>
+<li>
+<p>(void)initUserLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *string = [def valueForKey:kLanguage];</p>
+<p>if (string.length == 0) {
+//获取系统当前语言版本（中文zh-Hans,英文en)
+NSArray *languages = [def objectForKey:@&ldquo;AppleLanguages&rdquo;];
+NSString *current =[languages objectAtIndex:0];
+string = current;
+[def setValue:current forKey:kLanguage];
+[def synchronize];  //持久化，不加的话不会保存
+}</p>
+<p>//获取文件路径
+NSString *path = [[NSBundle mainBundle] pathForResource:string ofType:@&ldquo;lproj&rdquo;];
+//    NSLog(@&quot;%@&quot;,path);
+bundle = [NSBundle bundleWithPath:path];    //生成bundle
+}</p>
+</li>
+</ul>
+<p>//获得当前语言的方法</p>
+<ul>
+<li>(NSString *)userLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *language = [def valueForKey:kLanguage];
+return language;
+}</li>
+</ul>
+<p>//设置语言</p>
+<ul>
+<li>
+<p>(void)setUserLanguage:(NSString *)language {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];</p>
+<p>//1.第一步改变bundle的值
+NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@&ldquo;lproj&rdquo;];
+bundle = [NSBundle bundleWithPath:path];</p>
+<p>//2.持久化
+[def setValue:language forKey:kLanguage];
+[def synchronize];
+}</p>
+</li>
+</ul>
+<p>@end</p>
+<p>把&quot;InternationalController.h&quot;这个在.pch文件中引用，这样全局就都可以调用了</p>
+<p>在AppDelegate.m的didFinishLaunchingWithOptions方法中，加一句：</p>
+<p>[InternationalController initUserLanguage]; //初始化应用语言</p>
+<p>然后设置个全局的宏变量，系统的是NSLocalizedString.这里就设置了LTlocalizedString（LT是老陶的首字母，beyond521t这个t同理，嘿嘿）</p>
+<p><img src="iOS-MultiLanguage/1-6.png" alt="图1-6"></p>
+<p>self.title = LTLocalizedString(@&ldquo;TitleName&rdquo;, nil);</p>
+<p>如此就可以使用了。切换语言，请看头文件，直接方法名 + 方法，以及语言就OK了。</p>
+<p>注：英文在iOS中为&quot;en&quot;,简体中文&quot;zh-Hans&quot;.</p>
+<p>切换语言后：处理方法是，再次跳转到根视图即可。<a href="http://blog.csdn.net/beyond521t/article/details/40537679">（更多处理方式，请看本人另一篇日志，根视图处理）</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/ios/">ios</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/aps-pass/" data-tooltip="APS过审了，开心" aria-label="NEXT: APS过审了，开心">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/ios-requireipv6/" data-tooltip="6 月 1 日起所有提交的 app 都需要支持 IPv6 网络" aria-label="PREVIOUS: 6 月 1 日起所有提交的 app 都需要支持 IPv6 网络">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/05/ios-multilanguage/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/05/ios-multilanguage/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/05/ios-multilanguage/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = '\/2016\/05\/ios-multilanguage\/';
+        
+          this.page.identifier = '\/2016\/05\/ios-multilanguage\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Scott Tao. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/aps-pass/" data-tooltip="APS过审了，开心" aria-label="NEXT: APS过审了，开心">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/ios-requireipv6/" data-tooltip="6 月 1 日起所有提交的 app 都需要支持 IPv6 网络" aria-label="PREVIOUS: 6 月 1 日起所有提交的 app 都需要支持 IPv6 网络">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/05/ios-multilanguage/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/05/ios-multilanguage/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/05/ios-multilanguage/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2016%2F05%2Fios-multilanguage%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2016%2F05%2Fios-multilanguage%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2016%2F05%2Fios-multilanguage%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Scott Tao</h4>
+    
+      <div id="about-card-bio">I&rsquo;m a iOS Developer, working from 2014 in Beijing in China, and I want find a job in Germany. I did pass the DSH2 in 2018. You can contact me through email: <a href="mailto:Scott.Tao@88.com">Scott.Tao@88.com</a></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        iOS Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bochum, Deutschland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

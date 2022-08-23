@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "3.3 CSS盒子模型",
+  
+  "datePublished": "2017-03-04T15:01:17Z",
+  "dateModified": "2017-03-04T15:01:17Z",
+  "author": {
+    "@type": "Person",
+    "name": "Scott Tao",
+    
+    "image": "https://blog.qoabc.com/img/xiongmao.png"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "\/2017\/03\/html-css-box\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott's Blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.qoabc.com/img/xiongmao.png"
+    }
+    
+  },
+  "description": "3.3 CSS盒子模型 课程概要  CSS盒子模型概述 CSS内边距 CSS边框 CSS外边距 CSS外边距合并 ",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Scott Tao">
+<meta name="keywords" content="">
+<meta name="description" content="3.3 CSS盒子模型
+课程概要
+
+CSS盒子模型概述
+CSS内边距
+CSS边框
+CSS外边距
+CSS外边距合并
+">
+
+
+<meta property="og:description" content="3.3 CSS盒子模型
+课程概要
+
+CSS盒子模型概述
+CSS内边距
+CSS边框
+CSS外边距
+CSS外边距合并
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3.3 CSS盒子模型">
+<meta name="twitter:title" content="3.3 CSS盒子模型">
+<meta property="og:url" content="/2017/03/html-css-box/">
+<meta property="twitter:url" content="/2017/03/html-css-box/">
+<meta property="og:site_name" content="Scott&#39;s Blog">
+<meta property="og:description" content="3.3 CSS盒子模型
+课程概要
+
+CSS盒子模型概述
+CSS内边距
+CSS边框
+CSS外边距
+CSS外边距合并
+">
+<meta name="twitter:description" content="3.3 CSS盒子模型
+课程概要
+
+CSS盒子模型概述
+CSS内边距
+CSS边框
+CSS外边距
+CSS外边距合并
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-03-04T15:01:17">
+  
+  
+    <meta property="article:modified_time" content="2017-03-04T15:01:17">
+  
+  
+  
+    
+      <meta property="article:section" content="html">
+    
+  
+  
+    
+      <meta property="article:tag" content="html">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://blog.qoabc.com/img/xiongmao.png">
+  <meta property="twitter:image" content="https://blog.qoabc.com/img/xiongmao.png">
+
+
+
+
+
+
+    <title>3.3 CSS盒子模型</title>
+
+    <link rel="icon" href="/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="/2017/03/html-css-box/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Scott Tao</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m a iOS Developer, working from 2014 in Beijing in China, and I want find a job in Germany. I did pass the DSH2 in 2018. You can contact me through email: <a href="mailto:Scott.Tao@88.com">Scott.Tao@88.com</a></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/about/me" title="About Me">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-address-book" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About Me</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      3.3 CSS盒子模型
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2017-03-04T15:01:17Z">
+        
+  March 4, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/html">html</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h2 id="33-css盒子模型">3.3 CSS盒子模型</h2>
+<h2 id="课程概要">课程概要</h2>
+<ul>
+<li>CSS盒子模型概述</li>
+<li>CSS内边距</li>
+<li>CSS边框</li>
+<li>CSS外边距</li>
+<li>CSS外边距合并</li>
+</ul>
+<h3 id="331-css盒子模型-概述">3.3.1 CSS盒子模型-概述</h3>
+<p>1、盒子模型的内容范围包括</p>
+<pre><code>margin（外边距）、border（边框）、padding（内边距）、content部分组成
+
+height、width
+</code></pre>
+<h3 id="332-css盒子模型-内边距">3.3.2 CSS盒子模型-内边距</h3>
+<p>1、内边距</p>
+<pre><code>内边距在content外，边框外
+</code></pre>
+<p>2、内边距属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding</td>
+<td>设置所有边距</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>设置底边距</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>设置左边距</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>设置右边距</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>设置上边距</td>
+</tr>
+</tbody>
+</table>
+<h3 id="333-css盒子模型-边框">3.3.3 CSS盒子模型-边框</h3>
+<p>1、CSS边框：</p>
+<p>我们可以创建出效果出色的边框，并且可以应用于任何元素</p>
+<p>2、边框的样式：</p>
+<p>border-style: 定义了10个不同的非继承样式，包括none</p>
+<p>3、边框的单边样式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-top-style</td>
+</tr>
+<tr>
+<td style="text-align:left">border-left-style</td>
+</tr>
+<tr>
+<td style="text-align:left">border-right-style</td>
+</tr>
+<tr>
+<td style="text-align:left">border-bottom-style</td>
+</tr>
+</tbody>
+</table>
+<p>4、边框的宽度：</p>
+<pre><code>border-width
+</code></pre>
+<p>5、边框单边的宽度：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-top-width</td>
+</tr>
+<tr>
+<td style="text-align:left">border-left-width</td>
+</tr>
+<tr>
+<td style="text-align:left">border-right-width</td>
+</tr>
+<tr>
+<td style="text-align:left">border-bottom-width</td>
+</tr>
+</tbody>
+</table>
+<p>6、边框的颜色：</p>
+<pre><code>border-color
+</code></pre>
+<p>7、边框单边的颜色</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-top-color</td>
+</tr>
+<tr>
+<td style="text-align:left">border-left-color</td>
+</tr>
+<tr>
+<td style="text-align:left">border-right-color</td>
+</tr>
+<tr>
+<td style="text-align:left">border-bottom-color</td>
+</tr>
+</tbody>
+</table>
+<p>8、CSS3边框</p>
+<table>
+<thead>
+<tr>
+<th>CSS3边框</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-radius</td>
+<td>圆角边框</td>
+</tr>
+<tr>
+<td>box-shadow</td>
+<td>边框阴影</td>
+</tr>
+<tr>
+<td>border-image</td>
+<td>边框图片</td>
+</tr>
+</tbody>
+</table>
+<pre><code>box-shadow 背景阴影右移移动像素、下移移动像素、背景阴影透明度、颜色
+</code></pre>
+<h3 id="334-css盒子模型-外边距">3.3.4 CSS盒子模型-外边距</h3>
+<p>1、外边距：</p>
+<p>围绕在内容边框的区域就是外边距，外边距默认为透明区域</p>
+<p>外边距接受任何长度单位、百分数值</p>
+<p>2、外边距常用属性</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">margin</td>
+<td style="text-align:left">设置所有边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-bottom</td>
+<td style="text-align:left">设置底边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-left</td>
+<td style="text-align:left">设置左边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-right</td>
+<td style="text-align:left">设置右边距</td>
+</tr>
+<tr>
+<td style="text-align:left">margin-top</td>
+<td style="text-align:left">设置上边距</td>
+</tr>
+</tbody>
+</table>
+<h3 id="335-css盒子模型-外边距合并">3.3.5 CSS盒子模型-外边距合并</h3>
+<p>1、外边距合并：</p>
+<p>外边距合并就是一个叠加的概念</p>
+<h3 id="336-css盒子模型-盒子模型应用">3.3.6 CSS盒子模型-盒子模型应用</h3>
+<p><a href="http://www.jekexueyuan.com">极客学院官网效果</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/html/">html</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-css-position/" data-tooltip="3.4 CSS定位 &#43; 3.5 &#43; 3.6" aria-label="NEXT: 3.4 CSS定位 &#43; 3.5 &#43; 3.6">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-css-style/" data-tooltip="3.2 CSS基础样式讲解" aria-label="PREVIOUS: 3.2 CSS基础样式讲解">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2017/03/html-css-box/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2017/03/html-css-box/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2017/03/html-css-box/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = '\/2017\/03\/html-css-box\/';
+        
+          this.page.identifier = '\/2017\/03\/html-css-box\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Scott Tao. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-css-position/" data-tooltip="3.4 CSS定位 &#43; 3.5 &#43; 3.6" aria-label="NEXT: 3.4 CSS定位 &#43; 3.5 &#43; 3.6">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-css-style/" data-tooltip="3.2 CSS基础样式讲解" aria-label="PREVIOUS: 3.2 CSS基础样式讲解">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2017/03/html-css-box/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2017/03/html-css-box/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2017/03/html-css-box/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2017%2F03%2Fhtml-css-box%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2017%2F03%2Fhtml-css-box%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2017%2F03%2Fhtml-css-box%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Scott Tao</h4>
+    
+      <div id="about-card-bio">I&rsquo;m a iOS Developer, working from 2014 in Beijing in China, and I want find a job in Germany. I did pass the DSH2 in 2018. You can contact me through email: <a href="mailto:Scott.Tao@88.com">Scott.Tao@88.com</a></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        iOS Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bochum, Deutschland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
