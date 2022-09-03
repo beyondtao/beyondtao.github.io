@@ -2,20 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/about/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-11-28T16:42:36+00:00</lastmod>
+  </url><url>
+    <loc>/about/journey/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202208-jinan/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202208-mount-tai/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/about/me/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/about/contact/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2021-11-28T16:42:36+00:00</lastmod>
+    <loc>/journey/202208-tiantan/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202208-beijing/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202207-weishan/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202205-world-park/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
     <lastmod>2021-11-28T16:42:36+00:00</lastmod>
@@ -34,6 +58,9 @@
   </url><url>
     <loc>/2021/11/vue-cli4-antd-ts-01/</loc>
     <lastmod>2021-11-28T16:42:36+00:00</lastmod>
+  </url><url>
+    <loc>/journey/202111-beijing/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/2021/01/mac-brew-install-node_npm/</loc>
     <lastmod>2021-01-24T14:43:16+00:00</lastmod>

@@ -6,7 +6,41 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2022 12:47:32 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Travel</title>
+      <link>/about/journey/</link>
+      <pubDate>Sat, 03 Sep 2022 12:47:32 +0800</pubDate>
+      
+      <guid>/about/journey/</guid>
+      <description> 08.2022 Mount Tai
+  08.2022 Ji Nan
+  08.2022 Temple of Heaven
+  08.2022 Beijing
+  07.2022 Weishan
+  05.2022 Beijing World Park
+  11.2021 Beijing
+ </description>
+    </item>
+    
+    <item>
+      <title>Ji Nan, Shandong</title>
+      <link>/journey/202208-jinan/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202208-jinan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mount Tai</title>
+      <link>/journey/202208-mount-tai/</link>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202208-mount-tai/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>/about/me/</link>
@@ -14,7 +48,7 @@
       
       <guid>/about/me/</guid>
       <description>Persönliche Daten &amp;amp;&amp;amp; Kontact
-  Time Line
+  Journey
   08.2022  五岳归来不看山，黄山归来不看岳 No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.
 Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this month, it is more than 1500 miters high, at 23 o&amp;rsquo;clock I began to climb the mountain, it took me five hours to climb to the top.</description>
     </item>
@@ -42,6 +76,42 @@ Hugo makes use of a variety of open source projects including:</description>
     </item>
     
     <item>
+      <title>The Temple of Heaven</title>
+      <link>/journey/202208-tiantan/</link>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202208-tiantan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beijing</title>
+      <link>/journey/202208-beijing/</link>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202208-beijing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wei Shan</title>
+      <link>/journey/202207-weishan/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202207-weishan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beijing World Park</title>
+      <link>/journey/202205-world-park/</link>
+      <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202205-world-park/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
       <link>/2021/11/vue-cli4-antd-ts-01/</link>
       <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
@@ -54,6 +124,15 @@ Hugo makes use of a variety of open source projects including:</description>
 &lt;li&gt;ts&lt;/li&gt;
 &lt;li&gt;antd&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Beijing</title>
+      <link>/journey/202111-beijing/</link>
+      <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/journey/202111-beijing/</guid>
+      <description></description>
     </item>
     
     <item>
