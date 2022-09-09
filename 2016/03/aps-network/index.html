@@ -572,8 +572,8 @@ characteristics. The most common division is &ldquo;LAN&rdquo; and &ldquo;WAN&rd
   
   
     <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
-        <i class="far fa-comment"></i>
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
       </a>
     </li>
   
@@ -590,28 +590,26 @@ characteristics. The most common division is &ldquo;LAN&rdquo; and &ldquo;WAN&rd
 
             
   
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
-      var disqus_config = function() {
-        this.page.url = '\/2016\/03\/aps-network\/';
-        
-          this.page.identifier = '\/2016\/03\/aps-network\/'
-        
-      };
       (function() {
-        
-        
         if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
           return;
         }
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = 'hugo-tranquilpeak-theme';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
+        new Gitalk({
+          clientID: 'd92dfa5e1d05e58b218e',
+          clientSecret: 'daabf7c1d2e366c975acde24efd03e765538110a',
+          repo: 'blog.qoabc.com',
+          owner: '7114462',
+          admin: ['7114462'],
+          id: 'e061f236da052c6b0a1f1b2d7a9670b3',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"en","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
     </script>
   
 
@@ -679,8 +677,8 @@ characteristics. The most common division is &ldquo;LAN&rdquo; and &ldquo;WAN&rd
   
   
     <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
-        <i class="far fa-comment"></i>
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
       </a>
     </li>
   
