@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Nov 2021 16:42:36 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Sep 2022 23:03:17 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dynamically Change the AppIcon</title>
+      <link>/2022/09/ios-appicon-changes/</link>
+      <pubDate>Sat, 10 Sep 2022 23:03:17 +0800</pubDate>
+      
+      <guid>/2022/09/ios-appicon-changes/</guid>
+      <description>&lt;p&gt;I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interface: SwiftUI&lt;/li&gt;
+&lt;li&gt;Language: Swift&lt;/li&gt;
+&lt;li&gt;Xcode: 14&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
       <link>/2021/11/vue-cli4-antd-ts-01/</link>
