@@ -14,7 +14,8 @@
       
       <guid>/2022/09/swiftui-use-tabview/</guid>
       <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through  TabView in the SwiftUI.&lt;/p&gt;
-&lt;p&gt;In this Article&lt;/p&gt;</description>
+&lt;p&gt;In this Article we will also introduce how to hide TabBar when view pushed.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/file/swiftui-use-tabview/eWidget.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

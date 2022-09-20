@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "Setting multiple tabbars in UIKit requires UITabBarController. But it\u0026rsquo;s implemented through TabView in the SwiftUI.\nIn this Article\n",
+  "description": "Setting multiple tabbars in UIKit requires UITabBarController. But it\u0026rsquo;s implemented through TabView in the SwiftUI.\nIn this Article we will also introduce how to hide TabBar when view pushed.\nDemo Download\n",
   "keywords": []
 }
 
@@ -44,11 +44,13 @@
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.
-In this Article">
+In this Article we will also introduce how to hide TabBar when view pushed.
+Demo Download">
 
 
 <meta property="og:description" content="Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.
-In this Article">
+In this Article we will also introduce how to hide TabBar when view pushed.
+Demo Download">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Use of TabView SwiftUI">
 <meta name="twitter:title" content="How to Use of TabView SwiftUI">
@@ -56,9 +58,11 @@ In this Article">
 <meta property="twitter:url" content="/2022/09/swiftui-use-tabview/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
 <meta property="og:description" content="Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.
-In this Article">
+In this Article we will also introduce how to hide TabBar when view pushed.
+Demo Download">
 <meta name="twitter:description" content="Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.
-In this Article">
+In this Article we will also introduce how to hide TabBar when view pushed.
+Demo Download">
 <meta property="og:locale" content="en-us">
 
   
@@ -293,11 +297,32 @@ In this Article">
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <p>Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.</p>
-<p>In this Article</p>
-<!-- raw HTML omitted -->
-<pre tabindex="0"><code>// ![img](/img/swiftui-use-tabview/001.png)
-// ![img](/img/swiftui-use-tabview/001.gif)
-import SwiftUI
+<p>In this Article we will also introduce how to hide TabBar when view pushed.</p>
+<p><a href="/file/swiftui-use-tabview/eWidget.zip">Demo Download</a></p>
+<p>In this Demo with other Codes, I&rsquo;m also learning SwiftUI, in the ContentView, you can change code like this to see my Project Demo.</p>
+<pre tabindex="0"><code>struct ContentView: View {
+    var body: some View {
+        RootView()
+//        NavigationView {
+//            TabBarController()
+//        }
+	}
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>TabBar</th>
+<th>Animation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/img/swiftui-use-tabview/001.png" alt=""></td>
+<td><img src="/img/swiftui-use-tabview/001.gif" alt="img"></td>
+</tr>
+</tbody>
+</table>
+<pre tabindex="0"><code>import SwiftUI
 
 struct TabBarContentView: View {
     
@@ -410,6 +435,17 @@ enum TabEnum: String {
     case tool
     case timer
     case my
+}
+</code></pre><h2 id="hide-tabbar">Hide TabBar</h2>
+<p>TabBar needs to be hidden when navigation from one page to the next interface. But the esisting SwiftUI doesn&rsquo;t directly provide a method to hide TabBar. If the root view is a tabView, the tabBar will not be actively hidden when jumping to the next interface, So we need wrap TabView directly with NavigationView.</p>
+<pre tabindex="0"><code>import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            TabBarController()
+        }
+    }
 }
 </code></pre>
               
