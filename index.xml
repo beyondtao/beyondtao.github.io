@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scott&#39;s Blog</title>
-    <link>/</link>
+    <link>blog.qoabc.com/</link>
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="blog.qoabc.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why does string localization/internationalization not work in SwiftUI</title>
-      <link>/2022/09/swiftui-string-localization-notwork/</link>
+      <link>blog.qoabc.com/2022/09/swiftui-string-localization-notwork/</link>
       <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
       
-      <guid>/2022/09/swiftui-string-localization-notwork/</guid>
+      <guid>blog.qoabc.com/2022/09/swiftui-string-localization-notwork/</guid>
       <description>struct TabItem: Identifiable { var id = UUID() var name: String var icon: String var tab: TabEnum } var tabItems = [ TabItem(name: &amp;quot;home&amp;quot;, icon: &amp;quot;house&amp;quot;, tab: .home), ] ForEach(tabItems) { item in // string localizable not working in here // item.name is &amp;quot;home&amp;quot; Text(item.name) // but if write code like this, it&#39;s ok Text(&amp;quot;home&amp;quot;) } It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword.</description>
     </item>
     
     <item>
       <title>How to Use of TabView SwiftUI</title>
-      <link>/2022/09/swiftui-use-tabview/</link>
+      <link>blog.qoabc.com/2022/09/swiftui-use-tabview/</link>
       <pubDate>Sun, 18 Sep 2022 17:58:16 +0800</pubDate>
       
-      <guid>/2022/09/swiftui-use-tabview/</guid>
+      <guid>blog.qoabc.com/2022/09/swiftui-use-tabview/</guid>
       <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through  TabView in the SwiftUI.&lt;/p&gt;
 &lt;p&gt;In this Article we will also introduce how to hide TabBar when view pushed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui-use-tabview/eWidget.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;blog.qoabc.com/file/swiftui-use-tabview/eWidget.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dynamically Change the AppIcon</title>
-      <link>/2022/09/ios-appicon-changes/</link>
+      <link>blog.qoabc.com/2022/09/ios-appicon-changes/</link>
       <pubDate>Sat, 10 Sep 2022 23:03:17 +0800</pubDate>
       
-      <guid>/2022/09/ios-appicon-changes/</guid>
+      <guid>blog.qoabc.com/2022/09/ios-appicon-changes/</guid>
       <description>&lt;p&gt;I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Interface: SwiftUI&lt;/li&gt;
@@ -43,19 +43,19 @@
     
     <item>
       <title>Beijing Summer Palace</title>
-      <link>/journey/202209-beijing/</link>
+      <link>blog.qoabc.com/journey/202209-beijing/</link>
       <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202209-beijing/</guid>
+      <guid>blog.qoabc.com/journey/202209-beijing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Travel</title>
-      <link>/about/journey/</link>
+      <link>blog.qoabc.com/about/journey/</link>
       <pubDate>Sat, 03 Sep 2022 12:47:32 +0800</pubDate>
       
-      <guid>/about/journey/</guid>
+      <guid>blog.qoabc.com/about/journey/</guid>
       <description> 09.2022 Summer Palace
   08.2022 Mount Tai
   08.2022 Ji Nan
@@ -69,28 +69,28 @@
     
     <item>
       <title>Ji Nan, Shandong</title>
-      <link>/journey/202208-jinan/</link>
+      <link>blog.qoabc.com/journey/202208-jinan/</link>
       <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202208-jinan/</guid>
+      <guid>blog.qoabc.com/journey/202208-jinan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mount Tai</title>
-      <link>/journey/202208-mount-tai/</link>
+      <link>blog.qoabc.com/journey/202208-mount-tai/</link>
       <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202208-mount-tai/</guid>
+      <guid>blog.qoabc.com/journey/202208-mount-tai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>/about/me/</link>
+      <link>blog.qoabc.com/about/me/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/about/me/</guid>
+      <guid>blog.qoabc.com/about/me/</guid>
       <description>Persönliche Daten &amp;amp;&amp;amp; Kontact
   Journey
   08.2022  五岳归来不看山，黄山归来不看岳 No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.
@@ -99,10 +99,10 @@ Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this mont
     
     <item>
       <title>About Me</title>
-      <link>/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</link>
+      <link>blog.qoabc.com/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</guid>
+      <guid>blog.qoabc.com/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</guid>
       <description>Persönliche Daten &amp;amp;&amp;amp; Kontact
   Time Line
  Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
@@ -111,56 +111,56 @@ Hugo makes use of a variety of open source projects including:</description>
     
     <item>
       <title>Contact</title>
-      <link>/about/contact/</link>
+      <link>blog.qoabc.com/about/contact/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/about/contact/</guid>
+      <guid>blog.qoabc.com/about/contact/</guid>
       <description>Persönliche Daten  Name: Scott Tao (Baitong Tao) Beruf: iOS Developer Abschluss: Bacher (Informatik)  Wohnort: Beijing, China Heimat: Shandong, China  Kontact  Email
  ① Scott.Tao@88.com ② beyond521t@gmail.com   </description>
     </item>
     
     <item>
       <title>The Temple of Heaven</title>
-      <link>/journey/202208-tiantan/</link>
+      <link>blog.qoabc.com/journey/202208-tiantan/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202208-tiantan/</guid>
+      <guid>blog.qoabc.com/journey/202208-tiantan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beijing</title>
-      <link>/journey/202208-beijing/</link>
+      <link>blog.qoabc.com/journey/202208-beijing/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202208-beijing/</guid>
+      <guid>blog.qoabc.com/journey/202208-beijing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wei Shan</title>
-      <link>/journey/202207-weishan/</link>
+      <link>blog.qoabc.com/journey/202207-weishan/</link>
       <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202207-weishan/</guid>
+      <guid>blog.qoabc.com/journey/202207-weishan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beijing World Park</title>
-      <link>/journey/202205-world-park/</link>
+      <link>blog.qoabc.com/journey/202205-world-park/</link>
       <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202205-world-park/</guid>
+      <guid>blog.qoabc.com/journey/202205-world-park/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
-      <link>/2021/11/vue-cli4-antd-ts-01/</link>
+      <link>blog.qoabc.com/2021/11/vue-cli4-antd-ts-01/</link>
       <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
       
-      <guid>/2021/11/vue-cli4-antd-ts-01/</guid>
+      <guid>blog.qoabc.com/2021/11/vue-cli4-antd-ts-01/</guid>
       <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;vue3&lt;/li&gt;
@@ -172,38 +172,38 @@ Hugo makes use of a variety of open source projects including:</description>
     
     <item>
       <title>Beijing</title>
-      <link>/journey/202111-beijing/</link>
+      <link>blog.qoabc.com/journey/202111-beijing/</link>
       <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/journey/202111-beijing/</guid>
+      <guid>blog.qoabc.com/journey/202111-beijing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>brew 安装 node 及 npm用法</title>
-      <link>/2021/01/mac-brew-install-node_npm/</link>
+      <link>blog.qoabc.com/2021/01/mac-brew-install-node_npm/</link>
       <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
       
-      <guid>/2021/01/mac-brew-install-node_npm/</guid>
+      <guid>blog.qoabc.com/2021/01/mac-brew-install-node_npm/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/syosinnsya/article/details/80395121&#34;&gt;转载&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;使用brew-安装node&#34;&gt;使用brew 安装node&lt;/h4&gt;</description>
     </item>
     
     <item>
       <title>Git Commitizen 规范化commit工具</title>
-      <link>/2021/01/git-commitizen/</link>
+      <link>blog.qoabc.com/2021/01/git-commitizen/</link>
       <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
       
-      <guid>/2021/01/git-commitizen/</guid>
+      <guid>blog.qoabc.com/2021/01/git-commitizen/</guid>
       <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;</description>
     </item>
     
     <item>
       <title>使用国内源安装 Homebrew</title>
-      <link>/2021/01/mac-brew-install-national/</link>
+      <link>blog.qoabc.com/2021/01/mac-brew-install-national/</link>
       <pubDate>Sat, 23 Jan 2021 17:22:24 +0000</pubDate>
       
-      <guid>/2021/01/mac-brew-install-national/</guid>
+      <guid>blog.qoabc.com/2021/01/mac-brew-install-national/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/cd7c7fabce9f&#34;&gt;转载来源&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;1删除旧的安装&#34;&gt;1、删除旧的安装&lt;/h4&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rm -rf /usr/local/Homebrew
@@ -214,28 +214,28 @@ sudo rm -rf /usr/local/var/homebrew
     
     <item>
       <title>Git提交的正确姿势：Commit message 和 Change log 编写指南</title>
-      <link>/2020/12/gitcommit-message-and-change-log/</link>
+      <link>blog.qoabc.com/2020/12/gitcommit-message-and-change-log/</link>
       <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
       
-      <guid>/2020/12/gitcommit-message-and-change-log/</guid>
+      <guid>blog.qoabc.com/2020/12/gitcommit-message-and-change-log/</guid>
       <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>常用正则表达式大全--如：数字，字符等</title>
-      <link>/2020/06/ios-js-regular/</link>
+      <link>blog.qoabc.com/2020/06/ios-js-regular/</link>
       <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
       
-      <guid>/2020/06/ios-js-regular/</guid>
+      <guid>blog.qoabc.com/2020/06/ios-js-regular/</guid>
       <description>&lt;h2 id=&#34;一校验数字的表达式&#34;&gt;一、校验数字的表达式&lt;/h2&gt;</description>
     </item>
     
     <item>
       <title>Vue基于vue-quill-editor富文本编辑器的使用</title>
-      <link>/2020/06/vue-quill-editor/</link>
+      <link>blog.qoabc.com/2020/06/vue-quill-editor/</link>
       <pubDate>Wed, 03 Jun 2020 20:04:45 +0000</pubDate>
       
-      <guid>/2020/06/vue-quill-editor/</guid>
+      <guid>blog.qoabc.com/2020/06/vue-quill-editor/</guid>
       <description>&lt;p&gt;一、安装依赖&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm install vue-quill-editor
 npm install quill	(依赖项)
@@ -245,19 +245,19 @@ npm install quill-image-drop-module 	(图片拖拽）
     
     <item>
       <title>使elementUI的dialog上下左右居中</title>
-      <link>/2020/05/vue-dialog-center/</link>
+      <link>blog.qoabc.com/2020/05/vue-dialog-center/</link>
       <pubDate>Sun, 31 May 2020 19:47:51 +0000</pubDate>
       
-      <guid>/2020/05/vue-dialog-center/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-dialog-center/</guid>
       <description>.el-dialog{ display: flex; flex-direction: column; margin:0 !important; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); } .el-dialog .el-dialog__body{ flex:1; overflow: auto; } </description>
     </item>
     
     <item>
       <title>iOS 深浅模式 颜色 和 图片</title>
-      <link>/2020/05/ios-dynamic-color/</link>
+      <link>blog.qoabc.com/2020/05/ios-dynamic-color/</link>
       <pubDate>Thu, 28 May 2020 20:26:58 +0000</pubDate>
       
-      <guid>/2020/05/ios-dynamic-color/</guid>
+      <guid>blog.qoabc.com/2020/05/ios-dynamic-color/</guid>
       <description>&lt;p&gt;从iOS 13系统开始，开启了App的深色模式的大门。因为AppStore审核指南提出：从2020年4月30日开始，所有提交至App Store的iPhone App都必须使用 iOS 13 SDK或更高版本来构建。以后的app都需要支持暗黑模式了。&lt;/p&gt;
 &lt;h2 id=&#34;一暗黑模式&#34;&gt;一、暗黑模式&lt;/h2&gt;
 &lt;h3 id=&#34;1-uiuserinterfacestyle页面模式的枚举&#34;&gt;1、 UIUserInterfaceStyle（页面模式的枚举）&lt;/h3&gt;</description>
@@ -265,10 +265,10 @@ npm install quill-image-drop-module 	(图片拖拽）
     
     <item>
       <title>vue/cli4 axios网路请求封装 以及 登录token失效跳转页面</title>
-      <link>/2020/05/vue-cli4-axios/</link>
+      <link>blog.qoabc.com/2020/05/vue-cli4-axios/</link>
       <pubDate>Fri, 22 May 2020 16:42:36 +0000</pubDate>
       
-      <guid>/2020/05/vue-cli4-axios/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-cli4-axios/</guid>
       <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;npm install axios 
 npm install es6-promise 
@@ -283,10 +283,10 @@ npm install es6-promise
     
     <item>
       <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
-      <link>/2020/05/go-mysql-recursion/</link>
+      <link>blog.qoabc.com/2020/05/go-mysql-recursion/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>/2020/05/go-mysql-recursion/</guid>
+      <guid>blog.qoabc.com/2020/05/go-mysql-recursion/</guid>
       <description>&lt;p&gt;我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;人事管理
@@ -312,10 +312,10 @@ npm install es6-promise
     
     <item>
       <title>vue-cli@4 入门（四）</title>
-      <link>/2020/05/vue-cli4-start-04/</link>
+      <link>blog.qoabc.com/2020/05/vue-cli4-start-04/</link>
       <pubDate>Thu, 14 May 2020 19:54:40 +0000</pubDate>
       
-      <guid>/2020/05/vue-cli4-start-04/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-cli4-start-04/</guid>
       <description>&lt;p&gt;操作前，我们先打开 &lt;code&gt;App.vue&lt;/code&gt;，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;template&amp;gt;
   &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;
@@ -338,10 +338,10 @@ export default {
     
     <item>
       <title>vue-cli@4 入门（三）</title>
-      <link>/2020/05/vue-cli4-start-03/</link>
+      <link>blog.qoabc.com/2020/05/vue-cli4-start-03/</link>
       <pubDate>Thu, 14 May 2020 18:25:48 +0000</pubDate>
       
-      <guid>/2020/05/vue-cli4-start-03/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-cli4-start-03/</guid>
       <description>&lt;h2 id=&#34;路由&#34;&gt;路由&lt;/h2&gt;
 &lt;p&gt;在项目下，创建 vue文件。我们需要类似 &lt;code&gt;localhost:8080/login&lt;/code&gt; 这种方式访问。这个时候就需要配置路由信息了。&lt;/p&gt;
 &lt;p&gt;如：&lt;/p&gt;
@@ -373,20 +373,20 @@ export default {
     
     <item>
       <title>vue-cli@4 入门（二）</title>
-      <link>/2020/05/vue-cli4-start-02/</link>
+      <link>blog.qoabc.com/2020/05/vue-cli4-start-02/</link>
       <pubDate>Tue, 12 May 2020 08:14:30 +0000</pubDate>
       
-      <guid>/2020/05/vue-cli4-start-02/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-cli4-start-02/</guid>
       <description>&lt;p&gt;根据上一篇文章，我们的项目已经可以运行了。为了开发方便，我们这里使用 &lt;!-- raw HTML omitted --&gt;element-UI&lt;!-- raw HTML omitted --&gt;。&lt;/p&gt;
 &lt;p&gt;在操作之前，先简单介绍一下 &lt;code&gt;npm run serve&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>vue-cli@4 入门（一）</title>
-      <link>/2020/05/vue-cli4-start-01/</link>
+      <link>blog.qoabc.com/2020/05/vue-cli4-start-01/</link>
       <pubDate>Mon, 11 May 2020 16:36:59 +0000</pubDate>
       
-      <guid>/2020/05/vue-cli4-start-01/</guid>
+      <guid>blog.qoabc.com/2020/05/vue-cli4-start-01/</guid>
       <description>&lt;p&gt;因为最近要做一个管理后台，这里做一下记录。从入门到项目上手。适合初学&lt;/p&gt;
 &lt;h2 id=&#34;安装-vue-cli4&#34;&gt;安装 vue-cli@4&lt;/h2&gt;
 &lt;p&gt;1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）&lt;/p&gt;
@@ -399,10 +399,10 @@ export default {
     
     <item>
       <title>Golang 文件操作</title>
-      <link>/2020/03/go-os-operation/</link>
+      <link>blog.qoabc.com/2020/03/go-os-operation/</link>
       <pubDate>Sun, 22 Mar 2020 19:23:51 +0000</pubDate>
       
-      <guid>/2020/03/go-os-operation/</guid>
+      <guid>blog.qoabc.com/2020/03/go-os-operation/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/c21decb4bea5&#34;&gt;转载自 超级大柱子（简书）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ad164c76ce15&#34;&gt;go极简教程 阅读目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;go-文件操作&#34;&gt;Go 文件操作&lt;/h2&gt;
@@ -416,10 +416,10 @@ export default {
     
     <item>
       <title>golang 中string和int类型相互转换</title>
-      <link>/2020/03/go-type-format/</link>
+      <link>blog.qoabc.com/2020/03/go-type-format/</link>
       <pubDate>Mon, 16 Mar 2020 09:51:36 +0000</pubDate>
       
-      <guid>/2020/03/go-type-format/</guid>
+      <guid>blog.qoabc.com/2020/03/go-type-format/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;string转成int：
 &lt;ul&gt;
@@ -431,10 +431,10 @@ export default {
     
     <item>
       <title>CentOS 使用 Docker 服务搭建 Nginx 文件服务器</title>
-      <link>/2020/03/linux-start-03/</link>
+      <link>blog.qoabc.com/2020/03/linux-start-03/</link>
       <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
       
-      <guid>/2020/03/linux-start-03/</guid>
+      <guid>blog.qoabc.com/2020/03/linux-start-03/</guid>
       <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 &lt;p&gt;在CentOS 的某个目录下，创建下面的目录形式（也可以本地创建，用ftp上传）
 &lt;code&gt;/data/fileserver/&lt;/code&gt;&lt;/p&gt;
@@ -455,10 +455,10 @@ export default {
     
     <item>
       <title>CentOS 服务器 &#43; mysql &#43; vsftpd服务</title>
-      <link>/2020/02/linux-start-02/</link>
+      <link>blog.qoabc.com/2020/02/linux-start-02/</link>
       <pubDate>Tue, 25 Feb 2020 13:12:10 +0000</pubDate>
       
-      <guid>/2020/02/linux-start-02/</guid>
+      <guid>blog.qoabc.com/2020/02/linux-start-02/</guid>
       <description>&lt;h1 id=&#34;搭建mysql--ftp服务&#34;&gt;搭建mysql + FTP服务&lt;/h1&gt;
 &lt;h2 id=&#34;一安装-mysql&#34;&gt;一、安装 mysql&lt;/h2&gt;
 &lt;h3 id=&#34;从官方下载mysql-57镜像&#34;&gt;从官方下载&lt;code&gt;mysql 5.7&lt;/code&gt;镜像&lt;/h3&gt;
@@ -468,10 +468,10 @@ export default {
     
     <item>
       <title>docker网络命令与基本查看命令</title>
-      <link>/2019/07/docker-net-shell/</link>
+      <link>blog.qoabc.com/2019/07/docker-net-shell/</link>
       <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
       
-      <guid>/2019/07/docker-net-shell/</guid>
+      <guid>blog.qoabc.com/2019/07/docker-net-shell/</guid>
       <description>&lt;h2 id=&#34;docker网络命令&#34;&gt;docker网络命令&lt;/h2&gt;
 &lt;h4 id=&#34;查看网络命令帮助&#34;&gt;查看网络命令帮助&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;docker network help
@@ -480,19 +480,19 @@ export default {
     
     <item>
       <title>Linux brclt 命令</title>
-      <link>/2019/06/linux-brctl-shell/</link>
+      <link>blog.qoabc.com/2019/06/linux-brctl-shell/</link>
       <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
       
-      <guid>/2019/06/linux-brctl-shell/</guid>
+      <guid>blog.qoabc.com/2019/06/linux-brctl-shell/</guid>
       <description>参数说明和示例    参数 说明 示例     addbr &amp;lt;bridge&amp;gt; 创建网桥 brctl addbr br10   delbr &amp;lt;bridge&amp;gt; 删除网桥 brctl delbr br10   addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt; 将网卡接口接入网桥 brctl addif br10 eth0   show &amp;lt;bridge&amp;gt; 查询网桥信息 brctl show br10   stp &amp;lt;bridge&amp;gt; {on | off} 启用禁用STP brctl stp br10 off/on   showstp &amp;lt;bridge&amp;gt; 查看网桥STP信息 brctl showstp br10   setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt; 设置网桥延迟 brctl setfd br10 10   showmacs &amp;lt;bridge&amp;gt; 查看mac信息 brctl showmacs br10    </description>
     </item>
     
     <item>
       <title>Linux Shell ssh登录脚本</title>
-      <link>/2019/04/linux-shell-ssh/</link>
+      <link>blog.qoabc.com/2019/04/linux-shell-ssh/</link>
       <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>
       
-      <guid>/2019/04/linux-shell-ssh/</guid>
+      <guid>blog.qoabc.com/2019/04/linux-shell-ssh/</guid>
       <description>转载自Ca0Gu0
 Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多
 脚本下载 so.zip
@@ -505,10 +505,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>CentOS 第一步</title>
-      <link>/2019/02/linux-start-01/</link>
+      <link>blog.qoabc.com/2019/02/linux-start-01/</link>
       <pubDate>Wed, 20 Feb 2019 12:22:27 +0000</pubDate>
       
-      <guid>/2019/02/linux-start-01/</guid>
+      <guid>blog.qoabc.com/2019/02/linux-start-01/</guid>
       <description>&lt;h2 id=&#34;centos-服务器--docker&#34;&gt;CentOS 服务器 + Docker&lt;/h2&gt;
 &lt;p&gt;1、可以通过阿里云、腾讯云购买一个服务器&lt;/p&gt;
 &lt;p&gt;2、自己搭建一个本地服务器&lt;/p&gt;
@@ -520,32 +520,32 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>iOS-AVAudio</title>
-      <link>/2018/07/ios-avaudiosession/</link>
+      <link>blog.qoabc.com/2018/07/ios-avaudiosession/</link>
       <pubDate>Fri, 27 Jul 2018 11:10:43 +0000</pubDate>
       
-      <guid>/2018/07/ios-avaudiosession/</guid>
+      <guid>blog.qoabc.com/2018/07/ios-avaudiosession/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;&gt;转载自简书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述&lt;/h3&gt;
 &lt;p&gt;苹果官方图
-&lt;img src=&#34;/img/iOS-AVAudioSession/001.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
+&lt;img src=&#34;blog.qoabc.com/img/iOS-AVAudioSession/001.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iPhone不同设备屏幕尺寸和分辨率</title>
-      <link>/2018/05/ios-iphone-device/</link>
+      <link>blog.qoabc.com/2018/05/ios-iphone-device/</link>
       <pubDate>Tue, 29 May 2018 15:17:30 +0000</pubDate>
       
-      <guid>/2018/05/ios-iphone-device/</guid>
+      <guid>blog.qoabc.com/2018/05/ios-iphone-device/</guid>
       <description>iPhone设备的屏幕尺寸有多种,屏幕的分辨率也有多种,如下表    设备 屏幕尺寸(英寸) 设计分辨率(点) 屏幕分辨率 说明     iPhone4/4s 3.5 320 * 480 640 * 960 Retain显示屏,326ppi   iPhone5/5s/5c/SE 4.0 320 * 568 640 * 1136 Retain显示屏,326.ppi   iPhone6/6s/7 4.7 375 * 667 750 * 1334 Retain HD显示屏,326.ppi   iPhone6P/6sP/7P/8P 5.5 414 * 736 1242 * 2208 Retain HD显示屏, 401ppi   iPhone X 5.8 375 * 812 1125 * 2436 Retain HD显示屏, 458ppi    </description>
     </item>
     
     <item>
       <title>HTML样式、链接、表格</title>
-      <link>/2017/03/html-style-link-table/</link>
+      <link>blog.qoabc.com/2017/03/html-style-link-table/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
-      <guid>/2017/03/html-style-link-table/</guid>
+      <guid>blog.qoabc.com/2017/03/html-style-link-table/</guid>
       <description>&lt;h2 id=&#34;html样式链接表格&#34;&gt;HTML样式、链接、表格&lt;/h2&gt;
 &lt;h3 id=&#34;一样式&#34;&gt;一、样式&lt;/h3&gt;
 &lt;h4 id=&#34;1标签&#34;&gt;1、标签&lt;/h4&gt;
@@ -556,10 +556,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>JavaScript 基础教程</title>
-      <link>/2017/03/html-javascript-elements/</link>
+      <link>blog.qoabc.com/2017/03/html-javascript-elements/</link>
       <pubDate>Thu, 09 Mar 2017 15:07:25 +0000</pubDate>
       
-      <guid>/2017/03/html-javascript-elements/</guid>
+      <guid>blog.qoabc.com/2017/03/html-javascript-elements/</guid>
       <description>&lt;h2 id=&#34;41-javascript基础教程&#34;&gt;4.1 JavaScript基础教程&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
@@ -577,10 +577,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>3.7 CSS动画--页面特效</title>
-      <link>/2017/03/html-css-animation/</link>
+      <link>blog.qoabc.com/2017/03/html-css-animation/</link>
       <pubDate>Tue, 07 Mar 2017 15:06:23 +0000</pubDate>
       
-      <guid>/2017/03/html-css-animation/</guid>
+      <guid>blog.qoabc.com/2017/03/html-css-animation/</guid>
       <description>&lt;h2 id=&#34;37-css动画--页面特效&#34;&gt;3.7 CSS动画&amp;ndash;页面特效&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
@@ -595,10 +595,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>3.4 CSS定位 &#43; 3.5 &#43; 3.6</title>
-      <link>/2017/03/html-css-position/</link>
+      <link>blog.qoabc.com/2017/03/html-css-position/</link>
       <pubDate>Sun, 05 Mar 2017 15:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-css-position/</guid>
+      <guid>blog.qoabc.com/2017/03/html-css-position/</guid>
       <description>&lt;h2 id=&#34;34-css定位&#34;&gt;3.4 CSS定位&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;概要&lt;/p&gt;
@@ -611,10 +611,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>3.3 CSS盒子模型</title>
-      <link>/2017/03/html-css-box/</link>
+      <link>blog.qoabc.com/2017/03/html-css-box/</link>
       <pubDate>Sat, 04 Mar 2017 15:01:17 +0000</pubDate>
       
-      <guid>/2017/03/html-css-box/</guid>
+      <guid>blog.qoabc.com/2017/03/html-css-box/</guid>
       <description>&lt;h2 id=&#34;33-css盒子模型&#34;&gt;3.3 CSS盒子模型&lt;/h2&gt;
 &lt;h2 id=&#34;课程概要&#34;&gt;课程概要&lt;/h2&gt;
 &lt;ul&gt;
@@ -628,10 +628,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>3.2 CSS基础样式讲解</title>
-      <link>/2017/03/html-css-style/</link>
+      <link>blog.qoabc.com/2017/03/html-css-style/</link>
       <pubDate>Fri, 03 Mar 2017 15:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-css-style/</guid>
+      <guid>blog.qoabc.com/2017/03/html-css-style/</guid>
       <description>&lt;h2 id=&#34;32-css基础样式讲解&#34;&gt;3.2 CSS基础样式讲解&lt;/h2&gt;
 &lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
 &lt;ul&gt;
@@ -647,10 +647,10 @@ Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用�
     
     <item>
       <title>3.1 CSS3基础</title>
-      <link>/2017/03/html-css-elements/</link>
+      <link>blog.qoabc.com/2017/03/html-css-elements/</link>
       <pubDate>Thu, 02 Mar 2017 14:08:54 +0000</pubDate>
       
-      <guid>/2017/03/html-css-elements/</guid>
+      <guid>blog.qoabc.com/2017/03/html-css-elements/</guid>
       <description>&lt;h2 id=&#34;31-css3基础&#34;&gt;3.1 CSS3基础&lt;/h2&gt;
 &lt;h3 id=&#34;一css入门基础&#34;&gt;一、CSS入门基础&lt;/h3&gt;
 &lt;h4 id=&#34;1背景&#34;&gt;1、背景&lt;/h4&gt;
@@ -667,10 +667,10 @@ background-repeat | 设置背景图片是否及如何重复
     
     <item>
       <title>HTML5框架、背景和实体-框架</title>
-      <link>/2017/03/html-framework-bg/</link>
+      <link>blog.qoabc.com/2017/03/html-framework-bg/</link>
       <pubDate>Wed, 01 Mar 2017 09:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-framework-bg/</guid>
+      <guid>blog.qoabc.com/2017/03/html-framework-bg/</guid>
       <description>&lt;h2 id=&#34;html5框架背景和实体-框架&#34;&gt;HTML5框架、背景和实体-框架&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HTML框架&lt;/li&gt;
@@ -684,38 +684,38 @@ background-repeat | 设置背景图片是否及如何重复
     
     <item>
       <title>iOS SpriteKit/SceneKit/Metal浅析</title>
-      <link>/2016/12/ios-spritekit-scenekit/</link>
+      <link>blog.qoabc.com/2016/12/ios-spritekit-scenekit/</link>
       <pubDate>Sun, 18 Dec 2016 22:08:49 +0000</pubDate>
       
-      <guid>/2016/12/ios-spritekit-scenekit/</guid>
+      <guid>blog.qoabc.com/2016/12/ios-spritekit-scenekit/</guid>
       <description>&lt;p&gt;【SpriteKit】
 在iOS7中内置了新的SpriteKit框架，该框架主要用来开发2D游戏。是开发iOS和OS X 下的2D游戏引擎，可以使用OC或者Swift来进行开发。目前已经支持的内容包括：精灵、很酷的特效（例如视频、滤镜和遮罩），并且还集成了物理库等许多东西。首先指出在iOS中开发2D游戏SpriteKit并不是唯一的选择，我们先来看看SpriteKit的特点和优缺点：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Swift3中dispatch_once废弃的解决办法</title>
-      <link>/2016/10/swift3-gcd-dispatch-async/</link>
+      <link>blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/</link>
       <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
       
-      <guid>/2016/10/swift3-gcd-dispatch-async/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/swift3-GCD-dispatch-async/001.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
+      <guid>blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;blog.qoabc.com/img/swift3-GCD-dispatch-async/001.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Deutsch 900 Sätze 2</title>
-      <link>/2016/10/deutsch-900-two/</link>
+      <link>blog.qoabc.com/2016/10/deutsch-900-two/</link>
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/10/deutsch-900-two/</guid>
+      <guid>blog.qoabc.com/2016/10/deutsch-900-two/</guid>
       <description>&lt;p&gt;#### Lektion 21 AufeinerParty 在派对中301.Ich fuehle mich wirklich wohl hier.我真的玩得很开心。302.Es ist zu voll,um zur Kueche zu kommen.人太多,很难挤到厨房那边去。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Deutsch 900 Sätze 1</title>
-      <link>/2016/10/deutsch-900-one/</link>
+      <link>blog.qoabc.com/2016/10/deutsch-900-one/</link>
       <pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/10/deutsch-900-one/</guid>
+      <guid>blog.qoabc.com/2016/10/deutsch-900-one/</guid>
       <description>&lt;h2 id=&#34;lektion-1-gruesse-und-vorstellung打招呼介绍&#34;&gt;Lektion 1 Gruesse und Vorstellung.打招呼,介绍&lt;/h2&gt;
 &lt;p&gt;1.Hallo. 您好。
 2.Guten Morgen.早上好。
@@ -724,10 +724,10 @@ background-repeat | 设置背景图片是否及如何重复
     
     <item>
       <title>Git Warning push.default is unset</title>
-      <link>/2016/08/git-warning-default/</link>
+      <link>blog.qoabc.com/2016/08/git-warning-default/</link>
       <pubDate>Thu, 04 Aug 2016 22:01:33 +0000</pubDate>
       
-      <guid>/2016/08/git-warning-default/</guid>
+      <guid>blog.qoabc.com/2016/08/git-warning-default/</guid>
       <description>&lt;p&gt;git push代码的时候，可能会遇到下面的提示：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git push
 
@@ -740,10 +740,10 @@ git config --global push.default matching
     
     <item>
       <title>rvm升级Ruby</title>
-      <link>/2016/08/mac-nvm-update-ruby/</link>
+      <link>blog.qoabc.com/2016/08/mac-nvm-update-ruby/</link>
       <pubDate>Mon, 01 Aug 2016 13:55:12 +0000</pubDate>
       
-      <guid>/2016/08/mac-nvm-update-ruby/</guid>
+      <guid>blog.qoabc.com/2016/08/mac-nvm-update-ruby/</guid>
       <description>&lt;p&gt;第一步：安装rvm
 RVM:Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ curl -L get.rvm.io | bash -s stable
@@ -754,30 +754,30 @@ $ source ~/.rvm/scripts/rvm
     
     <item>
       <title>管理多个SSH Key</title>
-      <link>/2016/07/git-sshkey-multi/</link>
+      <link>blog.qoabc.com/2016/07/git-sshkey-multi/</link>
       <pubDate>Mon, 18 Jul 2016 15:43:04 +0000</pubDate>
       
-      <guid>/2016/07/git-sshkey-multi/</guid>
+      <guid>blog.qoabc.com/2016/07/git-sshkey-multi/</guid>
       <description>&lt;p&gt;如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
 例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>生成SSH Key</title>
-      <link>/2016/07/git-sshkey/</link>
+      <link>blog.qoabc.com/2016/07/git-sshkey/</link>
       <pubDate>Sun, 17 Jul 2016 13:42:55 +0000</pubDate>
       
-      <guid>/2016/07/git-sshkey/</guid>
+      <guid>blog.qoabc.com/2016/07/git-sshkey/</guid>
       <description>&lt;p&gt;本文主要介绍如何使用终端，生成ssh key。
 SSH只是一种协议，用于计算机之间的加密登录，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>swift 使用 delegate 内存泄露问题</title>
-      <link>/2016/07/swift-delegate-memory-leak/</link>
+      <link>blog.qoabc.com/2016/07/swift-delegate-memory-leak/</link>
       <pubDate>Mon, 11 Jul 2016 15:39:46 +0000</pubDate>
       
-      <guid>/2016/07/swift-delegate-memory-leak/</guid>
+      <guid>blog.qoabc.com/2016/07/swift-delegate-memory-leak/</guid>
       <description>&lt;p&gt;帐号退出登录，切换rootViewController的时候，发现内存没有释放，于是对代码进行了一遍检查。发现了在定义 protocol的时候，有两种方式。&lt;/p&gt;
 &lt;h4 id=&#34;区别&#34;&gt;区别&lt;/h4&gt;
 &lt;p&gt;一个是使用 @objc定义， 一个不使用@objc。&lt;/p&gt;
@@ -786,10 +786,10 @@ SSH只是一种协议，用于计算机之间的加密登录，存在多种实�
     
     <item>
       <title>ssh exchange identification</title>
-      <link>/2016/07/git-ssh-exchange-identification/</link>
+      <link>blog.qoabc.com/2016/07/git-ssh-exchange-identification/</link>
       <pubDate>Mon, 11 Jul 2016 11:43:06 +0000</pubDate>
       
-      <guid>/2016/07/git-ssh-exchange-identification/</guid>
+      <guid>blog.qoabc.com/2016/07/git-ssh-exchange-identification/</guid>
       <description>&lt;p&gt;执行 git pull 的时候，提示(When I do the &amp;ldquo;git pull&amp;rdquo;)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ssh_exchange_identification: read: Connection reset by peer
 fatal: Could not read from remote repository.
@@ -801,10 +801,10 @@ and the repository exists.
     
     <item>
       <title>LTPickerView.swift</title>
-      <link>/2016/07/swift-ltpickerview/</link>
+      <link>blog.qoabc.com/2016/07/swift-ltpickerview/</link>
       <pubDate>Fri, 08 Jul 2016 23:08:08 +0000</pubDate>
       
-      <guid>/2016/07/swift-ltpickerview/</guid>
+      <guid>blog.qoabc.com/2016/07/swift-ltpickerview/</guid>
       <description>&lt;h1 id=&#34;ltpickerview---swift&#34;&gt;LTPickerView - Swift&lt;/h1&gt;
 &lt;h3 id=&#34;连接地址&#34;&gt;连接地址&lt;/h3&gt;
 &lt;ul&gt;
@@ -814,39 +814,39 @@ and the repository exists.
     
     <item>
       <title>判断中、英文、数字、符号</title>
-      <link>/2016/06/swift-unicodescalars/</link>
+      <link>blog.qoabc.com/2016/06/swift-unicodescalars/</link>
       <pubDate>Wed, 22 Jun 2016 15:01:36 +0000</pubDate>
       
-      <guid>/2016/06/swift-unicodescalars/</guid>
+      <guid>blog.qoabc.com/2016/06/swift-unicodescalars/</guid>
       <description>&lt;p&gt;swift 判断String里面包含的中、英文、数字、符号。并附汉字Unicode字符编码表。
-&lt;a href=&#34;/2016/06/22/iOS-UnicodeScalars/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&#34;blog.qoabc.com/2016/06/22/iOS-UnicodeScalars/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>charles 抓包</title>
-      <link>/2016/06/mac-charlesproxy/</link>
+      <link>blog.qoabc.com/2016/06/mac-charlesproxy/</link>
       <pubDate>Mon, 13 Jun 2016 17:49:18 +0000</pubDate>
       
-      <guid>/2016/06/mac-charlesproxy/</guid>
+      <guid>blog.qoabc.com/2016/06/mac-charlesproxy/</guid>
       <description>&lt;h4 id=&#34;一下载&#34;&gt;一、下载&lt;/h4&gt;
 &lt;p&gt;可以到&lt;a href=&#34;http://www.charlesproxy.com/&#34;&gt;charles官网&lt;/a&gt;下载到最新版本。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>APS过审了，开心</title>
-      <link>/2016/06/aps-pass/</link>
+      <link>blog.qoabc.com/2016/06/aps-pass/</link>
       <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
       
-      <guid>/2016/06/aps-pass/</guid>
+      <guid>blog.qoabc.com/2016/06/aps-pass/</guid>
       <description>&lt;p&gt;5月30号参加的APS审核，然后大概第三天查了一下成绩，很高兴通过了。周末趁着有时间，在这里简单写一下关于APS的一些心得吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS多语言，支持app内部设置</title>
-      <link>/2016/05/ios-multilanguage/</link>
+      <link>blog.qoabc.com/2016/05/ios-multilanguage/</link>
       <pubDate>Wed, 25 May 2016 17:26:36 +0000</pubDate>
       
-      <guid>/2016/05/ios-multilanguage/</guid>
+      <guid>blog.qoabc.com/2016/05/ios-multilanguage/</guid>
       <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶&lt;/code&gt;
 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。&lt;/p&gt;
 &lt;p&gt;所以今天闲来没事，写一写总结，供大家参考。&lt;/p&gt;</description>
@@ -854,10 +854,10 @@ and the repository exists.
     
     <item>
       <title>6 月 1 日起所有提交的 app 都需要支持 IPv6 网络</title>
-      <link>/2016/05/ios-requireipv6/</link>
+      <link>blog.qoabc.com/2016/05/ios-requireipv6/</link>
       <pubDate>Sun, 22 May 2016 11:58:16 +0000</pubDate>
       
-      <guid>/2016/05/ios-requireipv6/</guid>
+      <guid>blog.qoabc.com/2016/05/ios-requireipv6/</guid>
       <description>&lt;p&gt;根据苹果开发者网站的声明，大部分现有应用程序已经通过NSURLSession和CFNetwork APIs兼容该协议。依然使用IPv4 APIs的或者硬件编码IP地址的开发者将需要手工调整应用代码来适应苹果的最新策略。&lt;/p&gt;
 &lt;h4 id=&#34;ipv6比ipv4更有效&#34;&gt;IPv6比IPv4更有效：&lt;/h4&gt;
 &lt;ul&gt;
@@ -867,49 +867,49 @@ and the repository exists.
     
     <item>
       <title>FMDatabaseQueue lead to a deadlock</title>
-      <link>/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</link>
+      <link>blog.qoabc.com/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</link>
       <pubDate>Mon, 16 May 2016 16:26:01 +0000</pubDate>
       
-      <guid>/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</guid>
+      <guid>blog.qoabc.com/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</guid>
       <description>&lt;h4 id=&#34;问题&#34;&gt;问题&lt;/h4&gt;
 &lt;p&gt;Assertion failed: (currentSyncQueue != self &amp;amp;&amp;amp; &amp;ldquo;inDatabase: was called reentrantly on the same queue,which would lead to a deadlock&amp;rdquo;),function -[FMDatabaseQueue inDatabase:],file /Users/LaoTao/Documents/CIM/cim-ios/HealthGuard/Class/Lib/Tools/LocalDB/FMDB/FMDatabaseQueue.m, line 153.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在线生成站点地图SiteMap</title>
-      <link>/2016/05/web-onlinegenerationsitemap/</link>
+      <link>blog.qoabc.com/2016/05/web-onlinegenerationsitemap/</link>
       <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
       
-      <guid>/2016/05/web-onlinegenerationsitemap/</guid>
+      <guid>blog.qoabc.com/2016/05/web-onlinegenerationsitemap/</guid>
       <description>&lt;h3 id=&#34;站点地图sitemap的好处是很大的对seo很有好处能够更方便迅速的让搜索引擎收录&#34;&gt;站点地图SiteMap的好处是很大的，对Seo很有好处，能够更方便、迅速的让搜索引擎收录。&lt;/h3&gt;
 &lt;p&gt;只需要四部你就可以完成站点地图的制作。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>inout 关键字位置的变化</title>
-      <link>/2016/05/swift-inout-keyordschangeposition/</link>
+      <link>blog.qoabc.com/2016/05/swift-inout-keyordschangeposition/</link>
       <pubDate>Sat, 14 May 2016 21:36:37 +0000</pubDate>
       
-      <guid>/2016/05/swift-inout-keyordschangeposition/</guid>
+      <guid>blog.qoabc.com/2016/05/swift-inout-keyordschangeposition/</guid>
       <description>&lt;p&gt;inout 关键字可以用于将参数修饰为可修改，并且将修改会回传。这次 Swift 3 中对这个关键字也做了一些修改，咱们一起来聊聊吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</title>
-      <link>/2016/05/swift3-0advanceobjctransformtoswift/</link>
+      <link>blog.qoabc.com/2016/05/swift3-0advanceobjctransformtoswift/</link>
       <pubDate>Mon, 09 May 2016 21:24:10 +0000</pubDate>
       
-      <guid>/2016/05/swift3-0advanceobjctransformtoswift/</guid>
+      <guid>blog.qoabc.com/2016/05/swift3-0advanceobjctransformtoswift/</guid>
       <description>&lt;p&gt;转自:&lt;a href=&#34;http://swiftcafe.io/2016/05/07/swift3-objc/&#34;&gt;swiftcafe&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Swift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>swift打包失败，swiftc failed with exit code 1</title>
-      <link>/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</link>
+      <link>blog.qoabc.com/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</link>
       <pubDate>Mon, 09 May 2016 10:58:13 +0000</pubDate>
       
-      <guid>/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</guid>
+      <guid>blog.qoabc.com/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</guid>
       <description>&lt;p&gt;Xcode7.3我更新到了Xcode7.3.1版本，然后在编译运行的时候就经常提示错误：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Command /Applications/Xcode.app/Contents/Developer/Toolchains/
 XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
@@ -918,29 +918,29 @@ XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
     
     <item>
       <title>苹果:所有应用必须支持IPv6-only网络</title>
-      <link>/2016/05/ios-require-allappipv6-only/</link>
+      <link>blog.qoabc.com/2016/05/ios-require-allappipv6-only/</link>
       <pubDate>Thu, 05 May 2016 13:50:19 +0000</pubDate>
       
-      <guid>/2016/05/ios-require-allappipv6-only/</guid>
+      <guid>blog.qoabc.com/2016/05/ios-require-allappipv6-only/</guid>
       <description>&lt;p&gt;自今年6月1日开始，所有提交至苹果App Store的应用申请必须要兼容面向硬件识别和网络路由的最新互联网协议&amp;ndash;IPv6-only标准。在去年的全球开发者大会上苹果就率先宣布iOS9会向IPv6-only网络服务过渡。(Supporting IPv6 DNS64/NAT64 Networks)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS-BLE蓝牙开发(二) -- 多设备</title>
-      <link>/2016/04/ios-bledevelopmultidevice/</link>
+      <link>blog.qoabc.com/2016/04/ios-bledevelopmultidevice/</link>
       <pubDate>Sat, 30 Apr 2016 16:51:37 +0000</pubDate>
       
-      <guid>/2016/04/ios-bledevelopmultidevice/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;/file/iOS-BLEDevelopMultiDevice/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
+      <guid>blog.qoabc.com/2016/04/ios-bledevelopmultidevice/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;blog.qoabc.com/file/iOS-BLEDevelopMultiDevice/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;多设备其实和单设备并没有什么太大的变化。至少初级写的时候，只是代码量多了一些。但是后面各种状态还有代码的优化工作挺多。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS-BLE蓝牙开发</title>
-      <link>/2016/04/ios-bledevelop1/</link>
+      <link>blog.qoabc.com/2016/04/ios-bledevelop1/</link>
       <pubDate>Thu, 28 Apr 2016 16:41:43 +0000</pubDate>
       
-      <guid>/2016/04/ios-bledevelop1/</guid>
+      <guid>blog.qoabc.com/2016/04/ios-bledevelop1/</guid>
       <description>&lt;h4 id=&#34;ios开发蓝牙入门&#34;&gt;iOS开发蓝牙入门&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）&lt;/li&gt;
@@ -950,10 +950,10 @@ XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
     
     <item>
       <title>swift3.0变化（swift2.2工程中发现）</title>
-      <link>/2016/04/swift3-0newinfofoundin2-2/</link>
+      <link>blog.qoabc.com/2016/04/swift3-0newinfofoundin2-2/</link>
       <pubDate>Thu, 28 Apr 2016 15:20:01 +0000</pubDate>
       
-      <guid>/2016/04/swift3-0newinfofoundin2-2/</guid>
+      <guid>blog.qoabc.com/2016/04/swift3-0newinfofoundin2-2/</guid>
       <description>&lt;h5 id=&#34;initstartend-is-deprecated-it-will-be-removed-in-swift-3-use-the--operator&#34;&gt;&amp;lsquo;init(start:end:)&amp;rsquo; is deprecated: it will be removed in Swift 3. Use the &amp;lsquo;..&amp;lt;&amp;rsquo; operator&lt;/h5&gt;
 &lt;pre&gt;&lt;code&gt;var continousDigitsRange:Range&amp;lt;Int&amp;gt; = Range&amp;lt;Int&amp;gt;(start: 0, end: 0)
 
@@ -966,10 +966,10 @@ Since update to Xcode 7.3 (Swift 2.2) I got the following hint:
     
     <item>
       <title>UIImage 拉伸图片 resizableImageWithCapInsets</title>
-      <link>/2016/04/uiimage-resizableimagewithcapinsets/</link>
+      <link>blog.qoabc.com/2016/04/uiimage-resizableimagewithcapinsets/</link>
       <pubDate>Wed, 27 Apr 2016 10:53:54 +0000</pubDate>
       
-      <guid>/2016/04/uiimage-resizableimagewithcapinsets/</guid>
+      <guid>blog.qoabc.com/2016/04/uiimage-resizableimagewithcapinsets/</guid>
       <description>&lt;pre&gt;&lt;code&gt;let insets = UIEdgeInsetsMake(30, 0, 10, 0)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;//top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat
@@ -978,20 +978,20 @@ Since update to Xcode 7.3 (Swift 2.2) I got the following hint:
     
     <item>
       <title>VR时代之旅</title>
-      <link>/2016/04/ios-vr-journeyoftime/</link>
+      <link>blog.qoabc.com/2016/04/ios-vr-journeyoftime/</link>
       <pubDate>Mon, 18 Apr 2016 21:00:33 +0000</pubDate>
       
-      <guid>/2016/04/ios-vr-journeyoftime/</guid>
+      <guid>blog.qoabc.com/2016/04/ios-vr-journeyoftime/</guid>
       <description>&lt;p&gt;今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。
 然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget</title>
-      <link>/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</link>
+      <link>blog.qoabc.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</link>
       <pubDate>Mon, 11 Apr 2016 14:34:31 +0000</pubDate>
       
-      <guid>/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</guid>
+      <guid>blog.qoabc.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</guid>
       <description>&lt;pre&gt;&lt;code&gt;@interface NSObject (NSDelayedPerforming)  
   
 - (void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay inModes:(NSArray *)modes;  
@@ -1005,38 +1005,38 @@ Since update to Xcode 7.3 (Swift 2.2) I got the following hint:
     
     <item>
       <title>Swift字符串常用操作总结</title>
-      <link>/2016/04/swift-stringoperation/</link>
+      <link>blog.qoabc.com/2016/04/swift-stringoperation/</link>
       <pubDate>Thu, 07 Apr 2016 13:19:17 +0000</pubDate>
       
-      <guid>/2016/04/swift-stringoperation/</guid>
+      <guid>blog.qoabc.com/2016/04/swift-stringoperation/</guid>
       <description>&lt;p&gt;版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>String还是NSString</title>
-      <link>/2016/04/swift-stringornsstring/</link>
+      <link>blog.qoabc.com/2016/04/swift-stringornsstring/</link>
       <pubDate>Thu, 07 Apr 2016 13:03:18 +0000</pubDate>
       
-      <guid>/2016/04/swift-stringornsstring/</guid>
+      <guid>blog.qoabc.com/2016/04/swift-stringornsstring/</guid>
       <description>&lt;p&gt;既然像 String 这样的 Swift 的类型和 Foundation 的对应的类是可以无缝转换的，那么我们在使用和选择的时候，有没有什么需要特别注意的呢？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS通过dSYM文件分析crash</title>
-      <link>/2016/04/ios-dsymanalysecrash/</link>
+      <link>blog.qoabc.com/2016/04/ios-dsymanalysecrash/</link>
       <pubDate>Fri, 01 Apr 2016 17:20:34 +0000</pubDate>
       
-      <guid>/2016/04/ios-dsymanalysecrash/</guid>
+      <guid>blog.qoabc.com/2016/04/ios-dsymanalysecrash/</guid>
       <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
 &lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>苹果手机发展史</title>
-      <link>/2016/03/ios-developmenthistoryofapple/</link>
+      <link>blog.qoabc.com/2016/03/ios-developmenthistoryofapple/</link>
       <pubDate>Thu, 24 Mar 2016 20:50:34 +0000</pubDate>
       
-      <guid>/2016/03/ios-developmenthistoryofapple/</guid>
+      <guid>blog.qoabc.com/2016/03/ios-developmenthistoryofapple/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;tags-iphone&#34;&gt;title: 苹果手机发展史
 date: 2016-03-24 20:50:34
@@ -1046,19 +1046,19 @@ tags: iPhone&lt;/h2&gt;
     
     <item>
       <title>Swift2.2的新特性</title>
-      <link>/2016/03/swift2-2newinfo/</link>
+      <link>blog.qoabc.com/2016/03/swift2-2newinfo/</link>
       <pubDate>Wed, 23 Mar 2016 22:25:21 +0000</pubDate>
       
-      <guid>/2016/03/swift2-2newinfo/</guid>
+      <guid>blog.qoabc.com/2016/03/swift2-2newinfo/</guid>
       <description>&lt;p&gt;Swift 2.2 随着 iOS 9.3 一同闪亮登场，相较于 Swift 2.1， 2.2 版本做出了许多调整，从其调整方向上我们也能一窥 Swift 3.0 的影子，以下内容主要来自于苹果 Swift 官方 Blog ，接下来就让我们进入正题，一睹 Swift 2.2 的庐山真面目：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OSI、TCP/IP</title>
-      <link>/2016/03/aps-ositcp-ip/</link>
+      <link>blog.qoabc.com/2016/03/aps-ositcp-ip/</link>
       <pubDate>Wed, 23 Mar 2016 07:17:48 +0000</pubDate>
       
-      <guid>/2016/03/aps-ositcp-ip/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-ositcp-ip/</guid>
       <description>&lt;p&gt;OSI/RM (Open Systems Interconnection Reference Model) 开发系统互连基本参考模型&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;应用层 Application layer
 表示层 Presentation layer
@@ -1072,10 +1072,10 @@ tags: iPhone&lt;/h2&gt;
     
     <item>
       <title>Computer English Vocabulary</title>
-      <link>/2016/03/aps-computervocabulary/</link>
+      <link>blog.qoabc.com/2016/03/aps-computervocabulary/</link>
       <pubDate>Tue, 22 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>/2016/03/aps-computervocabulary/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-computervocabulary/</guid>
       <description>&lt;h2 id=&#34;计算机专业词汇&#34;&gt;计算机专业词汇&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;reuse 重用，复用
 recall	
@@ -1085,30 +1085,30 @@ callback 回调
     
     <item>
       <title>Encapsulation, Inheritance, Polymorphism, Delegation</title>
-      <link>/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</link>
+      <link>blog.qoabc.com/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</link>
       <pubDate>Fri, 18 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</guid>
       <description>&lt;h4 id=&#34;encapsulation-封装&#34;&gt;Encapsulation 封装&lt;/h4&gt;
 &lt;p&gt;Encapsulation is hide the internal implementation, and stabilize the external interface. It can hide the implementation details and make the code modular.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>APS-UML</title>
-      <link>/2016/03/aps-uml/</link>
+      <link>blog.qoabc.com/2016/03/aps-uml/</link>
       <pubDate>Tue, 15 Mar 2016 17:46:18 +0000</pubDate>
       
-      <guid>/2016/03/aps-uml/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-uml/</guid>
       <description>统一建模语言
    模型种类 十种图形 建模机制     用例模型 用例图 静态建模   静态模型 类图、对象图、包图 静态建模   行为模型 状态图、活动图 动态建模   交互模型 顺序图、协作图 动态建模   实现模型 构件图、配置图 静态建模    </description>
     </item>
     
     <item>
       <title>APS-SQL2005</title>
-      <link>/2016/03/aps-sql2005/</link>
+      <link>blog.qoabc.com/2016/03/aps-sql2005/</link>
       <pubDate>Mon, 14 Mar 2016 21:36:38 +0000</pubDate>
       
-      <guid>/2016/03/aps-sql2005/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-sql2005/</guid>
       <description>&lt;h4 id=&#34;what-is-the-normal-form&#34;&gt;What is the Normal Form?&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;Normal Form is a set that with a particular level. （范式是符合某一种级别的关系模式的集合。）
 Create database must follow certain rules. In the relational database, this rule is the Normal Form.
@@ -1117,10 +1117,10 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>APS-Network</title>
-      <link>/2016/03/aps-network/</link>
+      <link>blog.qoabc.com/2016/03/aps-network/</link>
       <pubDate>Sun, 13 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>/2016/03/aps-network/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-network/</guid>
       <description>&lt;p&gt;(分层，各层作用，协议)&lt;/p&gt;
 &lt;h3 id=&#34;whats-the-purpose-of-this-course&#34;&gt;What&amp;rsquo;s the purpose of this course?&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;- basic knowledge of computer network
@@ -1130,10 +1130,10 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>APS-Start</title>
-      <link>/2016/03/aps-start/</link>
+      <link>blog.qoabc.com/2016/03/aps-start/</link>
       <pubDate>Sat, 12 Mar 2016 06:37:24 +0000</pubDate>
       
-      <guid>/2016/03/aps-start/</guid>
+      <guid>blog.qoabc.com/2016/03/aps-start/</guid>
       <description>&lt;p&gt;毛爷爷说过，不能打无准备的仗。&lt;/p&gt;
 &lt;p&gt;复习时，可按照下面的方针进行知识点的整理：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1、必修类课程每门课提炼3-4个知识点，4个最优
@@ -1144,29 +1144,29 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>iOS上Sqlite多线程问题</title>
-      <link>/2016/03/ios-sqlitemultithreading/</link>
+      <link>blog.qoabc.com/2016/03/ios-sqlitemultithreading/</link>
       <pubDate>Fri, 11 Mar 2016 11:56:53 +0000</pubDate>
       
-      <guid>/2016/03/ios-sqlitemultithreading/</guid>
+      <guid>blog.qoabc.com/2016/03/ios-sqlitemultithreading/</guid>
       <description>&lt;p&gt;1.单线程：禁用所有的mutex锁，并发使用时会出错。当SQLite编译时加了SQLITE_THREADSAFE=0参数，或者在初始化SQLite前调用sqlite3_config(SQLITE_CONFIG_SINGLETHREAD)时启用。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何配置Bitbucket的ssh</title>
-      <link>/2016/02/git-deploy-ssh-of-bitbucket/</link>
+      <link>blog.qoabc.com/2016/02/git-deploy-ssh-of-bitbucket/</link>
       <pubDate>Sun, 21 Feb 2016 12:43:34 +0000</pubDate>
       
-      <guid>/2016/02/git-deploy-ssh-of-bitbucket/</guid>
+      <guid>blog.qoabc.com/2016/02/git-deploy-ssh-of-bitbucket/</guid>
       <description>&lt;p&gt;在bitbucket上使用https协议，经常会在提交代码的时候出错，让人很着急上火，但是用ssh就要方便很多。&lt;/p&gt;
 &lt;p&gt;下面介绍一下设置ssh的方法：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>UITesting中文错误问题</title>
-      <link>/2016/02/swift-uitesting-chinesewordserror/</link>
+      <link>blog.qoabc.com/2016/02/swift-uitesting-chinesewordserror/</link>
       <pubDate>Fri, 19 Feb 2016 11:35:23 +0000</pubDate>
       
-      <guid>/2016/02/swift-uitesting-chinesewordserror/</guid>
+      <guid>blog.qoabc.com/2016/02/swift-uitesting-chinesewordserror/</guid>
       <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错&lt;/h2&gt;
 &lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;</description>
@@ -1174,30 +1174,30 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>字面量声明方式 Objective-C Literal Value</title>
-      <link>/2016/02/ios-objective-c-literal-value/</link>
+      <link>blog.qoabc.com/2016/02/ios-objective-c-literal-value/</link>
       <pubDate>Wed, 17 Feb 2016 15:59:01 +0000</pubDate>
       
-      <guid>/2016/02/ios-objective-c-literal-value/</guid>
+      <guid>blog.qoabc.com/2016/02/ios-objective-c-literal-value/</guid>
       <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;
 最近才注意到NSArray,NSDictionary,NSNumber有一种字面量方式声明。瞬间感觉写代码又省了好多事情。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>DB Error 1 unrecognized token</title>
-      <link>/2016/02/ios-db-error-1-unrecognized-token/</link>
+      <link>blog.qoabc.com/2016/02/ios-db-error-1-unrecognized-token/</link>
       <pubDate>Wed, 17 Feb 2016 14:52:50 +0000</pubDate>
       
-      <guid>/2016/02/ios-db-error-1-unrecognized-token/</guid>
+      <guid>blog.qoabc.com/2016/02/ios-db-error-1-unrecognized-token/</guid>
       <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git命令</title>
-      <link>/2016/02/git-command/</link>
+      <link>blog.qoabc.com/2016/02/git-command/</link>
       <pubDate>Tue, 16 Feb 2016 11:49:03 +0000</pubDate>
       
-      <guid>/2016/02/git-command/</guid>
+      <guid>blog.qoabc.com/2016/02/git-command/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; Profile&lt;/p&gt;

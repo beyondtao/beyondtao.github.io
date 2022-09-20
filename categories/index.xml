@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Scott&#39;s Blog</title>
-    <link>/categories/</link>
+    <link>blog.qoabc.com/categories/</link>
     <description>Recent content in Categories on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="blog.qoabc.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>aps-prepare</title>
-      <link>/categories/aps-prepare/</link>
+      <link>blog.qoabc.com/categories/aps-prepare/</link>
       <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
       
-      <guid>/categories/aps-prepare/</guid>
+      <guid>blog.qoabc.com/categories/aps-prepare/</guid>
       <description></description>
     </item>
     
     <item>
       <title>swiftui</title>
-      <link>/categories/swiftui/</link>
+      <link>blog.qoabc.com/categories/swiftui/</link>
       <pubDate>Sun, 18 Sep 2022 17:58:16 +0800</pubDate>
       
-      <guid>/categories/swiftui/</guid>
+      <guid>blog.qoabc.com/categories/swiftui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ios</title>
-      <link>/categories/ios/</link>
+      <link>blog.qoabc.com/categories/ios/</link>
       <pubDate>Sat, 10 Sep 2022 23:03:17 +0800</pubDate>
       
-      <guid>/categories/ios/</guid>
+      <guid>blog.qoabc.com/categories/ios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vue</title>
-      <link>/categories/vue/</link>
+      <link>blog.qoabc.com/categories/vue/</link>
       <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
       
-      <guid>/categories/vue/</guid>
+      <guid>blog.qoabc.com/categories/vue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac</title>
-      <link>/categories/mac/</link>
+      <link>blog.qoabc.com/categories/mac/</link>
       <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
       
-      <guid>/categories/mac/</guid>
+      <guid>blog.qoabc.com/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>/categories/git/</link>
+      <link>blog.qoabc.com/categories/git/</link>
       <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
       
-      <guid>/categories/git/</guid>
+      <guid>blog.qoabc.com/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/categories/golang/</link>
+      <link>blog.qoabc.com/categories/golang/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>/categories/golang/</guid>
+      <guid>blog.qoabc.com/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/categories/linux/</link>
+      <link>blog.qoabc.com/categories/linux/</link>
       <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>blog.qoabc.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/categories/docker/</link>
+      <link>blog.qoabc.com/categories/docker/</link>
       <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
       
-      <guid>/categories/docker/</guid>
+      <guid>blog.qoabc.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>/categories/html/</link>
+      <link>blog.qoabc.com/categories/html/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
-      <guid>/categories/html/</guid>
+      <guid>blog.qoabc.com/categories/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>swift</title>
-      <link>/categories/swift/</link>
+      <link>blog.qoabc.com/categories/swift/</link>
       <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
       
-      <guid>/categories/swift/</guid>
+      <guid>blog.qoabc.com/categories/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deutsch</title>
-      <link>/categories/deutsch/</link>
+      <link>blog.qoabc.com/categories/deutsch/</link>
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/deutsch/</guid>
+      <guid>blog.qoabc.com/categories/deutsch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo</title>
-      <link>/categories/hexo/</link>
+      <link>blog.qoabc.com/categories/hexo/</link>
       <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
       
-      <guid>/categories/hexo/</guid>
+      <guid>blog.qoabc.com/categories/hexo/</guid>
       <description></description>
     </item>
     

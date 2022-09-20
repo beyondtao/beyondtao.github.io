@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "\/2016\/10\/swift3-gcd-dispatch-async\/" 
+    "@id": "blog.qoabc.com\/2016\/10\/swift3-gcd-dispatch-async\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -50,8 +50,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift3中dispatch_once废弃的解决办法">
 <meta name="twitter:title" content="Swift3中dispatch_once废弃的解决办法">
-<meta property="og:url" content="/2016/10/swift3-gcd-dispatch-async/">
-<meta property="twitter:url" content="/2016/10/swift3-gcd-dispatch-async/">
+<meta property="og:url" content="blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/">
+<meta property="twitter:url" content="blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
@@ -94,12 +94,12 @@
 
     <title>Swift3中dispatch_once废弃的解决办法</title>
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="blog.qoabc.com/favicon.png">
     
 
     
 
-    <link rel="canonical" href="/2016/10/swift3-gcd-dispatch-async/">
+    <link rel="canonical" href="blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -107,7 +107,7 @@
     
     
     
-    <link rel="stylesheet" href="/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="blog.qoabc.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
@@ -122,12 +122,12 @@
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+    <a class="header-title-link" href="blog.qoabc.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="/#about" aria-label="Open the link: /#about">
+         href="blog.qoabc.com/#about" aria-label="Open the link: /#about">
     
     
     
@@ -143,7 +143,7 @@
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="/#about" aria-label="Read more about the author">
+        <a href="blog.qoabc.com/#about" aria-label="Read more about the author">
           <img class="sidebar-profile-picture" src="https://blog.qoabc.com/img/xiongmao.png" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Scott Tao</h4>
@@ -156,7 +156,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/" title="Home">
+      <a class="sidebar-button-link " href="blog.qoabc.com/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -166,7 +166,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/categories" title="Categories">
+      <a class="sidebar-button-link " href="blog.qoabc.com/categories" title="Categories">
     
       <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
       
@@ -176,7 +176,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/tags" title="Tags">
+      <a class="sidebar-button-link " href="blog.qoabc.com/tags" title="Tags">
     
       <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
       
@@ -186,7 +186,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/archives" title="Archives">
+      <a class="sidebar-button-link " href="blog.qoabc.com/archives" title="Archives">
     
       <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
       
@@ -196,7 +196,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/about/me" title="About Me">
+      <a class="sidebar-button-link " href="blog.qoabc.com/about/me" title="About Me">
     
       <i class="sidebar-button-icon fas fa-lg fa-address-book" aria-hidden="true"></i>
       
@@ -206,7 +206,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/#about" title="About">
+      <a class="sidebar-button-link " href="blog.qoabc.com/#about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -220,7 +220,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/beyondtao" title="GitHub">
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
       
@@ -234,7 +234,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/index.xml" title="RSS">
+      <a class="sidebar-button-link " href="blog.qoabc.com/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
       
@@ -276,7 +276,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="/categories/swift">swift</a>
+      <a class="category-link" href="blog.qoabc.com/categories/swift">swift</a>
     
   
 
@@ -286,7 +286,7 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><img src="/img/swift3-GCD-dispatch-async/001.png" alt="图示"></p>
+              <p><img src="blog.qoabc.com/img/swift3-GCD-dispatch-async/001.png" alt="图示"></p>
 <p>内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)</p>
 <p>swift 3中对C层级的GCD的API进行了彻头彻尾的改变。本文将从实际使用场景来了解一下新的api使用。</p>
 <p>dispatch_async
@@ -338,7 +338,7 @@ DISPATCH_QUEUE_PRIORITY_BACKGROUND
 }
 </code></pre>
 <p>这些命名比原先的更加友好，能更好表达这个操作的意图。</p>
-<p><img src="/img/swift3-GCD-dispatch-async/002.png" alt="图示"></p>
+<p><img src="blog.qoabc.com/img/swift3-GCD-dispatch-async/002.png" alt="图示"></p>
 <p>和原有的对应关系是：</p>
 <ul>
 <li>DISPATCH_QUEUE_PRIORITY_HIGH:         .userInitiated</li>
@@ -463,7 +463,7 @@ var variable: Object = {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="/tags/swift/">swift</a>
+  <a class="tag tag--primary tag--small" href="blog.qoabc.com/tags/swift/">swift</a>
 
                   </div>
                 
@@ -476,7 +476,7 @@ var variable: Object = {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/ios-spritekit-scenekit/" data-tooltip="iOS SpriteKit/SceneKit/Metal浅析" aria-label="NEXT: iOS SpriteKit/SceneKit/Metal浅析">
+            <a class="post-action-btn btn btn--default tooltip--top" href="blog.qoabc.com/2016/12/ios-spritekit-scenekit/" data-tooltip="iOS SpriteKit/SceneKit/Metal浅析" aria-label="NEXT: iOS SpriteKit/SceneKit/Metal浅析">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -484,7 +484,7 @@ var variable: Object = {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/deutsch-900-two/" data-tooltip="Deutsch 900 Sätze 2" aria-label="PREVIOUS: Deutsch 900 Sätze 2">
+            <a class="post-action-btn btn btn--default tooltip--top" href="blog.qoabc.com/2016/10/deutsch-900-two/" data-tooltip="Deutsch 900 Sätze 2" aria-label="PREVIOUS: Deutsch 900 Sätze 2">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -502,19 +502,19 @@ var variable: Object = {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/10/swift3-gcd-dispatch-async/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/10/swift3-gcd-dispatch-async/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/10/swift3-gcd-dispatch-async/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -545,7 +545,7 @@ var variable: Object = {
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = '\/2016\/10\/swift3-gcd-dispatch-async\/';
+        this.page.url = 'blog.qoabc.com\/2016\/10\/swift3-gcd-dispatch-async\/';
         
           this.page.identifier = '\/2016\/10\/swift3-gcd-dispatch-async\/'
         
@@ -583,7 +583,7 @@ var variable: Object = {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/ios-spritekit-scenekit/" data-tooltip="iOS SpriteKit/SceneKit/Metal浅析" aria-label="NEXT: iOS SpriteKit/SceneKit/Metal浅析">
+            <a class="post-action-btn btn btn--default tooltip--top" href="blog.qoabc.com/2016/12/ios-spritekit-scenekit/" data-tooltip="iOS SpriteKit/SceneKit/Metal浅析" aria-label="NEXT: iOS SpriteKit/SceneKit/Metal浅析">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -591,7 +591,7 @@ var variable: Object = {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/deutsch-900-two/" data-tooltip="Deutsch 900 Sätze 2" aria-label="PREVIOUS: Deutsch 900 Sätze 2">
+            <a class="post-action-btn btn btn--default tooltip--top" href="blog.qoabc.com/2016/10/deutsch-900-two/" data-tooltip="Deutsch 900 Sätze 2" aria-label="PREVIOUS: Deutsch 900 Sätze 2">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -609,19 +609,19 @@ var variable: Object = {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/10/swift3-gcd-dispatch-async/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/10/swift3-gcd-dispatch-async/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/10/swift3-gcd-dispatch-async/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=blog.qoabc.com/2016/10/swift3-gcd-dispatch-async/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -652,19 +652,19 @@ var variable: Object = {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=blog.qoabc.com%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=blog.qoabc.com%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=blog.qoabc.com%2F2016%2F10%2Fswift3-gcd-dispatch-async%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
@@ -710,7 +710,7 @@ var variable: Object = {
     
   
     
-      <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+      <div id="cover" style="background-image:url('blog.qoabc.com/images/cover.jpg');"></div>
     
   
 
@@ -723,7 +723,7 @@ var variable: Object = {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="blog.qoabc.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
   
