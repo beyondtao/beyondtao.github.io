@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aps on Scott&#39;s Blog</title>
-    <link>blog.qoabc.com/tags/aps/</link>
+    <link>/tags/aps/</link>
     <description>Recent content in aps on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="blog.qoabc.com/tags/aps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="/tags/aps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why does string localization/internationalization not work in SwiftUI</title>
-      <link>blog.qoabc.com/2022/09/swiftui-string-localization-notwork/</link>
+      <link>/2022/09/swiftui-string-localization-notwork/</link>
       <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
       
-      <guid>blog.qoabc.com/2022/09/swiftui-string-localization-notwork/</guid>
+      <guid>/2022/09/swiftui-string-localization-notwork/</guid>
       <description>struct TabItem: Identifiable { var id = UUID() var name: String var icon: String var tab: TabEnum } var tabItems = [ TabItem(name: &amp;quot;home&amp;quot;, icon: &amp;quot;house&amp;quot;, tab: .home), ] ForEach(tabItems) { item in // string localizable not working in here // item.name is &amp;quot;home&amp;quot; Text(item.name) // but if write code like this, it&#39;s ok Text(&amp;quot;home&amp;quot;) } It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword.</description>
     </item>
     
     <item>
       <title>APS过审了，开心</title>
-      <link>blog.qoabc.com/2016/06/aps-pass/</link>
+      <link>/2016/06/aps-pass/</link>
       <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/06/aps-pass/</guid>
+      <guid>/2016/06/aps-pass/</guid>
       <description>&lt;p&gt;5月30号参加的APS审核，然后大概第三天查了一下成绩，很高兴通过了。周末趁着有时间，在这里简单写一下关于APS的一些心得吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OSI、TCP/IP</title>
-      <link>blog.qoabc.com/2016/03/aps-ositcp-ip/</link>
+      <link>/2016/03/aps-ositcp-ip/</link>
       <pubDate>Wed, 23 Mar 2016 07:17:48 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-ositcp-ip/</guid>
+      <guid>/2016/03/aps-ositcp-ip/</guid>
       <description>&lt;p&gt;OSI/RM (Open Systems Interconnection Reference Model) 开发系统互连基本参考模型&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;应用层 Application layer
 表示层 Presentation layer
@@ -44,10 +44,10 @@
     
     <item>
       <title>Computer English Vocabulary</title>
-      <link>blog.qoabc.com/2016/03/aps-computervocabulary/</link>
+      <link>/2016/03/aps-computervocabulary/</link>
       <pubDate>Tue, 22 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-computervocabulary/</guid>
+      <guid>/2016/03/aps-computervocabulary/</guid>
       <description>&lt;h2 id=&#34;计算机专业词汇&#34;&gt;计算机专业词汇&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;reuse 重用，复用
 recall	
@@ -57,30 +57,30 @@ callback 回调
     
     <item>
       <title>Encapsulation, Inheritance, Polymorphism, Delegation</title>
-      <link>blog.qoabc.com/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</link>
+      <link>/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</link>
       <pubDate>Fri, 18 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</guid>
+      <guid>/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/</guid>
       <description>&lt;h4 id=&#34;encapsulation-封装&#34;&gt;Encapsulation 封装&lt;/h4&gt;
 &lt;p&gt;Encapsulation is hide the internal implementation, and stabilize the external interface. It can hide the implementation details and make the code modular.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>APS-UML</title>
-      <link>blog.qoabc.com/2016/03/aps-uml/</link>
+      <link>/2016/03/aps-uml/</link>
       <pubDate>Tue, 15 Mar 2016 17:46:18 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-uml/</guid>
+      <guid>/2016/03/aps-uml/</guid>
       <description>统一建模语言
    模型种类 十种图形 建模机制     用例模型 用例图 静态建模   静态模型 类图、对象图、包图 静态建模   行为模型 状态图、活动图 动态建模   交互模型 顺序图、协作图 动态建模   实现模型 构件图、配置图 静态建模    </description>
     </item>
     
     <item>
       <title>APS-SQL2005</title>
-      <link>blog.qoabc.com/2016/03/aps-sql2005/</link>
+      <link>/2016/03/aps-sql2005/</link>
       <pubDate>Mon, 14 Mar 2016 21:36:38 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-sql2005/</guid>
+      <guid>/2016/03/aps-sql2005/</guid>
       <description>&lt;h4 id=&#34;what-is-the-normal-form&#34;&gt;What is the Normal Form?&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;Normal Form is a set that with a particular level. （范式是符合某一种级别的关系模式的集合。）
 Create database must follow certain rules. In the relational database, this rule is the Normal Form.
@@ -89,10 +89,10 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>APS-Network</title>
-      <link>blog.qoabc.com/2016/03/aps-network/</link>
+      <link>/2016/03/aps-network/</link>
       <pubDate>Sun, 13 Mar 2016 22:15:01 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-network/</guid>
+      <guid>/2016/03/aps-network/</guid>
       <description>&lt;p&gt;(分层，各层作用，协议)&lt;/p&gt;
 &lt;h3 id=&#34;whats-the-purpose-of-this-course&#34;&gt;What&amp;rsquo;s the purpose of this course?&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;- basic knowledge of computer network
@@ -102,10 +102,10 @@ Create database must follow certain rules. In the relational database, this rule
     
     <item>
       <title>APS-Start</title>
-      <link>blog.qoabc.com/2016/03/aps-start/</link>
+      <link>/2016/03/aps-start/</link>
       <pubDate>Sat, 12 Mar 2016 06:37:24 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2016/03/aps-start/</guid>
+      <guid>/2016/03/aps-start/</guid>
       <description>&lt;p&gt;毛爷爷说过，不能打无准备的仗。&lt;/p&gt;
 &lt;p&gt;复习时，可按照下面的方针进行知识点的整理：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1、必修类课程每门课提炼3-4个知识点，4个最优

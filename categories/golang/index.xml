@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Scott&#39;s Blog</title>
-    <link>blog.qoabc.com/categories/golang/</link>
+    <link>/categories/golang/</link>
     <description>Recent content in golang on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2020 11:51:10 +0000</lastBuildDate><atom:link href="blog.qoabc.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 May 2020 11:51:10 +0000</lastBuildDate><atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang实战系列：mysql数据库查询 -- 实现无限级菜单（beego orm)</title>
-      <link>blog.qoabc.com/2020/05/go-mysql-recursion/</link>
+      <link>/2020/05/go-mysql-recursion/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2020/05/go-mysql-recursion/</guid>
+      <guid>/2020/05/go-mysql-recursion/</guid>
       <description>&lt;p&gt;我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;人事管理
@@ -38,10 +38,10 @@
     
     <item>
       <title>Golang 文件操作</title>
-      <link>blog.qoabc.com/2020/03/go-os-operation/</link>
+      <link>/2020/03/go-os-operation/</link>
       <pubDate>Sun, 22 Mar 2020 19:23:51 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2020/03/go-os-operation/</guid>
+      <guid>/2020/03/go-os-operation/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/c21decb4bea5&#34;&gt;转载自 超级大柱子（简书）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/ad164c76ce15&#34;&gt;go极简教程 阅读目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;go-文件操作&#34;&gt;Go 文件操作&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>golang 中string和int类型相互转换</title>
-      <link>blog.qoabc.com/2020/03/go-type-format/</link>
+      <link>/2020/03/go-type-format/</link>
       <pubDate>Mon, 16 Mar 2020 09:51:36 +0000</pubDate>
       
-      <guid>blog.qoabc.com/2020/03/go-type-format/</guid>
+      <guid>/2020/03/go-type-format/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;string转成int：
 &lt;ul&gt;

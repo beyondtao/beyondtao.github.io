@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Scott&#39;s Blog</title>
-    <link>blog.qoabc.com/about/</link>
+    <link>/about/</link>
     <description>Recent content in Abouts on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Sep 2022 12:47:32 +0800</lastBuildDate><atom:link href="blog.qoabc.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2022 12:47:32 +0800</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Travel</title>
-      <link>blog.qoabc.com/about/journey/</link>
+      <link>/about/journey/</link>
       <pubDate>Sat, 03 Sep 2022 12:47:32 +0800</pubDate>
       
-      <guid>blog.qoabc.com/about/journey/</guid>
+      <guid>/about/journey/</guid>
       <description> 09.2022 Summer Palace
   08.2022 Mount Tai
   08.2022 Ji Nan
@@ -26,10 +26,10 @@
     
     <item>
       <title>About Me</title>
-      <link>blog.qoabc.com/about/me/</link>
+      <link>/about/me/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>blog.qoabc.com/about/me/</guid>
+      <guid>/about/me/</guid>
       <description>Persönliche Daten &amp;amp;&amp;amp; Kontact
   Journey
   08.2022  五岳归来不看山，黄山归来不看岳 No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.
@@ -38,10 +38,10 @@ Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this mont
     
     <item>
       <title>About Me</title>
-      <link>blog.qoabc.com/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</link>
+      <link>/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>blog.qoabc.com/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</guid>
+      <guid>/about/me%E7%9A%84%E5%89%AF%E6%9C%AC/</guid>
       <description>Persönliche Daten &amp;amp;&amp;amp; Kontact
   Time Line
  Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
@@ -50,10 +50,10 @@ Hugo makes use of a variety of open source projects including:</description>
     
     <item>
       <title>Contact</title>
-      <link>blog.qoabc.com/about/contact/</link>
+      <link>/about/contact/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>blog.qoabc.com/about/contact/</guid>
+      <guid>/about/contact/</guid>
       <description>Persönliche Daten  Name: Scott Tao (Baitong Tao) Beruf: iOS Developer Abschluss: Bacher (Informatik)  Wohnort: Beijing, China Heimat: Shandong, China  Kontact  Email
  ① Scott.Tao@88.com ② beyond521t@gmail.com   </description>
     </item>
