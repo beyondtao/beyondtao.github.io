@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Sep 2022 17:58:16 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why does string localization/internationalization not work in SwiftUI</title>
+      <link>/2022/09/swiftui-string-localization-notwork/</link>
+      <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
+      
+      <guid>/2022/09/swiftui-string-localization-notwork/</guid>
+      <description>struct TabItem: Identifiable { var id = UUID() var name: String var icon: String var tab: TabEnum } var tabItems = [ TabItem(name: &amp;quot;home&amp;quot;, icon: &amp;quot;house&amp;quot;, tab: .home), ] ForEach(tabItems) { item in // string localizable not working in here // item.name is &amp;quot;home&amp;quot; Text(item.name) // but if write code like this, it&#39;s ok Text(&amp;quot;home&amp;quot;) } It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword.</description>
+    </item>
+    
     <item>
       <title>How to Use of TabView SwiftUI</title>
       <link>/2022/09/swiftui-use-tabview/</link>
