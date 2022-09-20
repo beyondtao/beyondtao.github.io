@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swiftui on Scott&#39;s Blog</title>
+    <link>/categories/swiftui/</link>
+    <description>Recent content in swiftui on Scott&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Sep 2022 17:58:16 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use of TabView SwiftUI</title>
+      <link>/2022/09/swiftui-use-tabview/</link>
+      <pubDate>Sun, 18 Sep 2022 17:58:16 +0800</pubDate>
+      
+      <guid>/2022/09/swiftui-use-tabview/</guid>
+      <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through  TabView in the SwiftUI.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
