@@ -13,7 +13,7 @@
       <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
       
       <guid>/2016/10/swift3-gcd-dispatch-async/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/swift3-GCD-dispatch-async/001.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/swift/swift3-GCD-dispatch-async-01.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
       
       <guid>/2016/06/swift-unicodescalars/</guid>
       <description>&lt;p&gt;swift 判断String里面包含的中、英文、数字、符号。并附汉字Unicode字符编码表。
-&lt;a href=&#34;/2016/06/22/iOS-UnicodeScalars/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&#34;/file/ios/unicode.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

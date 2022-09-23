@@ -36,7 +36,7 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;&gt;转载自简书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述&lt;/h3&gt;
 &lt;p&gt;苹果官方图
-&lt;img src=&#34;/img/iOS-AVAudioSession/001.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
+&lt;img src=&#34;/img/ios/iOS-AVAudioSession.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;</description>
     </item>
     
@@ -108,16 +108,16 @@
       <pubDate>Sat, 30 Apr 2016 16:51:37 +0000</pubDate>
       
       <guid>/2016/04/ios-bledevelopmultidevice/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;/file/iOS-BLEDevelopMultiDevice/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;/file/ios/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;多设备其实和单设备并没有什么太大的变化。至少初级写的时候，只是代码量多了一些。但是后面各种状态还有代码的优化工作挺多。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS-BLE蓝牙开发</title>
-      <link>/2016/04/ios-bledevelop1/</link>
+      <link>/2016/04/ios-bledevelop/</link>
       <pubDate>Thu, 28 Apr 2016 16:41:43 +0000</pubDate>
       
-      <guid>/2016/04/ios-bledevelop1/</guid>
+      <guid>/2016/04/ios-bledevelop/</guid>
       <description>&lt;h4 id=&#34;ios开发蓝牙入门&#34;&gt;iOS开发蓝牙入门&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）&lt;/li&gt;
@@ -168,11 +168,7 @@
       <pubDate>Thu, 24 Mar 2016 20:50:34 +0000</pubDate>
       
       <guid>/2016/03/ios-developmenthistoryofapple/</guid>
-      <description>&lt;hr&gt;
-&lt;h2 id=&#34;tags-iphone&#34;&gt;title: 苹果手机发展史
-date: 2016-03-24 20:50:34
-tags: iPhone&lt;/h2&gt;
-&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;</description>
+      <description>&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -294,21 +294,18 @@
             <div class="main-content-wrap">
               <h4 id="一下载">一、下载</h4>
 <p>可以到<a href="http://www.charlesproxy.com/">charles官网</a>下载到最新版本。</p>
-<p>也可以点击以下的链接，从本站下载（速度更快哦）。</p>
-<p><a href="/2016/06/13/charlesproxy/charles-proxy-ssl-proxying-certificate.crt">charles抓包 https证书</a></p>
-<p><!-- raw HTML omitted --><a href="/2016/06/13/charlesproxy/%E6%8A%93%E5%8C%85.zip">charles抓包 charles工具.zip</a><!-- raw HTML omitted --></p>
 <h4 id="二破解">二、破解</h4>
 <p>顶部下载文件中，含有破解包。</p>
 <p>打开应用程序，选择Charles,选择显示包内容：
-<img src="/img/charlesproxy/1-1.png" alt="Charles破解-1"></p>
+<img src="/img/mac/charlesproxy-1-1.png" alt="Charles破解-1"></p>
 <p>然后点击Contents-&gt;Resources-&gt;Java:</p>
-<p><img src="/img/charlesproxy/1-2.png" alt="Charles破解-2"></p>
+<p><img src="/img/mac/charlesproxy-1-2.png" alt="Charles破解-2"></p>
 <p>然后将我们下载下来的charles.jar替换这里的charles.jar就可以了。然后打开Charles就可以了。</p>
 <h4 id="三抓包">三、抓包</h4>
 <p>第一、HTTP抓包
 1、打开Charles程序</p>
 <p>2、查看Mac电脑的IP地址，系统偏好设置-&gt;网络就可以查看到了，比如我的ip地址是：192.168.2.248
-<img src="/img/charlesproxy/2-1.png" alt="Charles抓包"></p>
+<img src="/img/mac/charlesproxy-2-1.png" alt="Charles抓包"></p>
 <p>3、打开iOS设置，进入当前wifi连接(必须和Mac在一个局域网内)，设置HTTP代理『手动』，将服务器填为上一步中获得的IP，即192.168.2.248，端口填8888。</p>
 <p>4、iOS设备打开你要抓包的app进行网络操作</p>
 <p>5、Charles弹出确认框，点击Allow按钮即可</p>
@@ -317,11 +314,10 @@
 <p><a href="https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/">证书下载地址</a></p>
 <p><a href="https://www.charlesproxy.com/assets/legacy-ssl/charles.crt">具体链接</a></p>
 <ul>
-<li><a href="http://www.charlesproxy.com/ssl.zip">Charles证书</a>(官网，不一定成功)，解压后导入到iOS设备中,这里我也是下载好了：</li>
-<li><a href="2016/06/13/charlesproxy/charles-proxy-ssl-proxying-certificate.crt">Charles证书</a>(本人上传的，手机浏览器打开，就可以直接安装，简单)</li>
+<li><a href="http://www.charlesproxy.com/ssl.zip">Charles证书</a>，解压后导入到iOS设备中</li>
 </ul>
 <p>在HTTPS的接口上，右键，选择<strong>Enable SSL Proxying</strong>就可以抓该HTTPS接口的数据了。
-<img src="/img/charlesproxy/3-1.png" alt="HTTPS抓包"></p>
+<img src="/img/mac/charlesproxy-3-1.png" alt="HTTPS抓包"></p>
 <p>注意：当我们不抓包的时候，会将Charles关闭，这时候iOS如果还开着代理，是访问不到网络的，因为设置了代理(就是Charles)，这时候需要将iOS中的代理关闭，这个是抓包时经常犯的错。千万不要因为这种二逼问题，耽误了工作。</p>
               
 

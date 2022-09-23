@@ -303,7 +303,7 @@
 <p><a href="http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/">http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/</a></p>
 <p><a href="http://whatthecommit.com">http://whatthecommit.com</a></p>
 <p>但是，一般来说，commit message 应该清晰明了，说明本次提交的目的。</p>
-<p><img src="/img/gitcommit-message-and-change-log/1-1.png" alt="Angular规范">
+<p><img src="/img/git/gitchange-log-1-1.png" alt="Angular规范">
 目前，社区有多种 Commit message 的写法规范(<a href="http://whatthecommit.com">http://whatthecommit.com</a>)。本文介绍Angular 规范（见上图），这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。</p>
 <h2 id="二commit-message-的作用">二、Commit message 的作用</h2>
 <p>格式化的Commit message，有几个好处。</p>
@@ -311,12 +311,12 @@
 <p>比如，下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。</p>
 <pre><code>$ git log &lt;last tag&gt; HEAD --pretty=format:%s
 </code></pre>
-<p><img src="/img/gitcommit-message-and-change-log/1-2.png" alt="历史信息"></p>
+<p><img src="/img/git/gitchange-log-1-2.png" alt="历史信息"></p>
 <h4 id="22-可以过滤某些commit比如文档改动便于快速查找信息">2.2 可以过滤某些commit（比如文档改动），便于快速查找信息。</h4>
 <p>比如，下面的命令仅仅显示本次发布新增加的功能。</p>
 <pre><code>$ git log &lt;last release&gt; HEAD --grep feature
 </code></pre>
-<p><img src="/img/gitcommit-message-and-change-log/1-3.png" alt="新增加的功能"></p>
+<p><img src="/img/git/gitchange-log-1-3.png" alt="新增加的功能"></p>
 <h4 id="23-可以直接从commit生成change-log">2.3 可以直接从commit生成Change log。</h4>
 <p>Change Log 是发布新版本时，用来说明与上一个版本差异的文档，详见后文。</p>
 <h2 id="三commit-message-的格式">三、Commit message 的格式</h2>
@@ -414,7 +414,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 <pre><code>$ commitizen init cz-conventional-changelog-cli —save —save-exact
 </code></pre>
 <p>以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message。</p>
-<p><img src="/img/gitcommit-message-and-change-log/4-1.png" alt="Commit message"></p>
+<p><img src="/img/git/gitchange-log-4-1.png" alt="Commit message"></p>
 <pre><code>LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git add .
 LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git cz
 cz-cli@2.5.0, cz-conventional-changelog@1.1.5

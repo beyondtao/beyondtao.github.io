@@ -288,7 +288,7 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><img src="/img/swift3-GCD-dispatch-async/001.png" alt="图示"></p>
+              <p><img src="/img/swift/swift3-GCD-dispatch-async-01.png" alt="图示"></p>
 <p>内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)</p>
 <p>swift 3中对C层级的GCD的API进行了彻头彻尾的改变。本文将从实际使用场景来了解一下新的api使用。</p>
 <p>dispatch_async
@@ -340,7 +340,7 @@ DISPATCH_QUEUE_PRIORITY_BACKGROUND
 }
 </code></pre>
 <p>这些命名比原先的更加友好，能更好表达这个操作的意图。</p>
-<p><img src="/img/swift3-GCD-dispatch-async/002.png" alt="图示"></p>
+<p><img src="/img/swift/swift3-GCD-dispatch-async-02.png" alt="图示"></p>
 <p>和原有的对应关系是：</p>
 <ul>
 <li>DISPATCH_QUEUE_PRIORITY_HIGH:         .userInitiated</li>

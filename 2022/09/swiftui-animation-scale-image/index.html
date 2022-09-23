@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "",
+  "description": "How to realize flexible animation of pictures? It\u0026rsquo;s very simple to use SwiftUI now.\n",
   "keywords": []
 }
 
@@ -43,18 +43,18 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.">
 
 
-<meta property="og:description" content="">
+<meta property="og:description" content="How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI Animation Scale Image">
 <meta name="twitter:title" content="SwiftUI Animation Scale Image">
 <meta property="og:url" content="/2022/09/swiftui-animation-scale-image/">
 <meta property="twitter:url" content="/2022/09/swiftui-animation-scale-image/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.">
+<meta name="twitter:description" content="How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.">
 <meta property="og:locale" content="en-us">
 
   
@@ -288,8 +288,32 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><img src="/img/swiftui/animation-scale.gif" alt="gif"></p>
-
+              <p>How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.</p>
+<p><img src="/img/swiftui/animation-scale.gif" alt="gif"></p>
+<pre tabindex="0"><code>var body: some View {
+    ScrollView(showsIndicators: false) {
+        VStack {
+            GeometryReader { proxy in
+                let global = proxy.frame(in: .global)
+                Image(&quot;wazi&quot;)
+                    .resizable()
+                    .offset(y: global.minY &gt; 0 ? -global.minY : 0)
+                    .frame(height: global.minY &gt; 0 ? UIScreen.main.bounds.height / 3 + global.minY : UIScreen.main.bounds.height / 3)
+                
+            }
+            .frame(height: UIScreen.main.bounds.height / 3)
+            
+            VStack(spacing: 10) {
+                ForEach(0...10, id:\.self) { num in
+                    Rectangle()
+                        .fill(.red.opacity(0.5))
+                        .frame(height: 60)
+                }
+            }
+        }
+    }
+}
+</code></pre>
               
 
 
