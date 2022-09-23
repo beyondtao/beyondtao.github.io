@@ -3,24 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
-  </url><url>
-    <loc>/2022/09/swiftui-widget-launcher/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
   </url><url>
     <loc>/tags/swiftui/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
   </url><url>
     <loc>/categories/swiftui/</loc>
-    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
+  </url><url>
+    <loc>/2022/09/swiftui-animation-scale-image/</loc>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
+  </url><url>
+    <loc>/2022/09/swiftui-widget-launcher/</loc>
     <lastmod>2022-09-22T11:32:25+08:00</lastmod>
   </url><url>
     <loc>/tags/aps/</loc>
@@ -35,13 +38,7 @@
     <loc>/2022/09/swiftui-use-tabview/</loc>
     <lastmod>2022-09-18T17:58:16+08:00</lastmod>
   </url><url>
-    <loc>/2022/09/ios-appicon-changes/</loc>
-    <lastmod>2022-09-10T23:03:17+08:00</lastmod>
-  </url><url>
-    <loc>/tags/ios/</loc>
-    <lastmod>2022-09-10T23:03:17+08:00</lastmod>
-  </url><url>
-    <loc>/categories/ios/</loc>
+    <loc>/2022/09/swiftui-appicon-changes/</loc>
     <lastmod>2022-09-10T23:03:17+08:00</lastmod>
   </url><url>
     <loc>/journey/202209-beijing/</loc>
@@ -118,6 +115,12 @@
   </url><url>
     <loc>/2020/12/gitcommit-message-and-change-log/</loc>
     <lastmod>2020-12-31T11:46:29+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ios/</loc>
+    <lastmod>2020-06-21T08:06:44+00:00</lastmod>
+  </url><url>
+    <loc>/categories/ios/</loc>
+    <lastmod>2020-06-21T08:06:44+00:00</lastmod>
   </url><url>
     <loc>/2020/06/ios-js-regular/</loc>
     <lastmod>2020-06-21T08:06:44+00:00</lastmod>
