@@ -7,9 +7,9 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Posts",
+  "headline": "iOS Dynamic Launcher Widgets",
   
-  "datePublished": "0001-01-01T00:00:00Z",
+  "datePublished": "2022-09-22T11:32:25+08:00",
   "dateModified": "2022-09-22T11:32:25+08:00",
   "author": {
     "@type": "Person",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "\/posts\/" 
+    "@id": "\/2022\/09\/swiftui-widget-launcher\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "",
+  "description": "If you want to select a widget bundle based on some logic, you can do the following:\n",
   "keywords": []
 }
 
@@ -43,19 +43,37 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="Hugo tranquilpeak theme demo">
+<meta name="description" content="If you want to select a widget bundle based on some logic, you can do the following:">
 
 
-<meta property="og:description" content="Hugo tranquilpeak theme demo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Posts">
-<meta name="twitter:title" content="Posts">
-<meta property="og:url" content="/posts/">
-<meta property="twitter:url" content="/posts/">
+<meta property="og:description" content="If you want to select a widget bundle based on some logic, you can do the following:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Dynamic Launcher Widgets">
+<meta name="twitter:title" content="iOS Dynamic Launcher Widgets">
+<meta property="og:url" content="/2022/09/swiftui-widget-launcher/">
+<meta property="twitter:url" content="/2022/09/swiftui-widget-launcher/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="Hugo tranquilpeak theme demo">
-<meta name="twitter:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:description" content="If you want to select a widget bundle based on some logic, you can do the following:">
+<meta name="twitter:description" content="If you want to select a widget bundle based on some logic, you can do the following:">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-09-22T11:32:25">
+  
+  
+    <meta property="article:modified_time" content="2022-09-22T11:32:25">
+  
+  
+  
+    
+      <meta property="article:section" content="swiftui">
+    
+  
+  
+    
+      <meta property="article:tag" content="swiftui">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -74,16 +92,14 @@
 
 
 
-    <title>Posts</title>
+    <title>iOS Dynamic Launcher Widgets</title>
 
     <link rel="icon" href="/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="/posts/index.xml">
-    
 
     
 
-    <link rel="canonical" href="/posts/">
+    <link rel="canonical" href="/2022/09/swiftui-widget-launcher/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -105,7 +121,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="/" aria-label="Go to homepage">Scott&#39;s Blog</a>
@@ -125,7 +141,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -235,34 +251,20 @@
 
       
 
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <section class="postShorten-group main-content-wrap">
+        <article class="post" id="top">
           
           
-          
-            
+            <div class="post-header main-content-wrap text-left">
   
-    
+    <h1 class="post-title">
+      iOS Dynamic Launcher Widgets
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2022/09/swiftui-widget-launcher/" aria-label="Open the post: iOS Dynamic Launcher Widgets">
-      
-          iOS Dynamic Launcher Widgets
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
       <time datetime="2022-09-22T11:32:25&#43;08:00">
@@ -282,393 +284,162 @@
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p>If you want to select a widget bundle based on some logic, you can do the following:</p>
-      
-      <p>
-        
-          <a href="/2022/09/swiftui-widget-launcher/" class="postShorten-excerpt_link link" aria-label="Open the post: iOS Dynamic Launcher Widgets">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+</div>
           
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>If you want to select a widget bundle based on some logic, you can do the following:</p>
+<pre tabindex="0"><code>@main // Use the customized WidgetBundle as the initialization entry of the widget
+struct WidgetLauncher {
+    
+    static func main() {
+        var isShowAll: Bool {
+            // Put logic here
+            false
+        }
+        
+        // or can with other logic
+        if isShowAll {
+            CustomWidgetBundle.main()
+        } else {
+            CustomWidgetBundle1.main()
+        }
+    }
+}
+
+struct CustomWidgetBundle: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+		Widget1()
+		Widget2()
+		Widget3()
+    }
+}
+
+struct CustomWidgetBundle1: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+		Widget4()
+		Widget5()
+    }
+}
+</code></pre>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
-  
-    
-  
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/swiftui/">swiftui</a>
 
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2022/09/swiftui-string-localization-notwork/" aria-label="Open the post: Why does string localization/internationalization not work in SwiftUI">
-      
-          Why does string localization/internationalization not work in SwiftUI
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-20T19:56:35&#43;08:00">
-        
-  September 20, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/aps-prepare">aps-prepare</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p>It has been proved that if a string in Text(&ldquo;home) is passed as a text, it can only be interpreted as a localized keyword. If the variable is String type, it doesn&rsquo;t occur. So the answer is to declare a variable of <code>LocalizedStringKey</code> type.</p>
-      
-      <p>
-        
-          <a href="/2022/09/swiftui-string-localization-notwork/" class="postShorten-excerpt_link link" aria-label="Open the post: Why does string localization/internationalization not work in SwiftUI">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
+                  </div>
+                
+              
             
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2022/09/swiftui-use-tabview/" aria-label="Open the post: How to Use of TabView SwiftUI">
-      
-          How to Use of TabView SwiftUI
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-18T17:58:16&#43;08:00">
-        
-  September 18, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/swiftui">swiftui</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p>Setting multiple tabbars in UIKit requires UITabBarController. But it&rsquo;s implemented through  TabView in the SwiftUI.</p>
-<p>In this Article we will also introduce how to hide TabBar when view pushed.</p>
-<p><a href="/file/swiftui-use-tabview/eWidget.zip">Demo Download</a></p>
-      
-      <p>
-        
-          <a href="/2022/09/swiftui-use-tabview/" class="postShorten-excerpt_link link" aria-label="Open the post: How to Use of TabView SwiftUI">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
             
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
-        <a class="link-unstyled" href="/2022/09/ios-appicon-changes/" aria-label="Open the post: Dynamically Change the AppIcon">
-      
-          Dynamically Change the AppIcon
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-10T23:03:17&#43;08:00">
-        
-  September 10, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/ios">ios</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p>I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.</p>
-<ul>
-<li>Interface: SwiftUI</li>
-<li>Language: Swift</li>
-<li>Xcode: 14</li>
-</ul>
-      
-      <p>
-        
-          <a href="/2022/09/ios-appicon-changes/" class="postShorten-excerpt_link link" aria-label="Open the post: Dynamically Change the AppIcon">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+        <li class="post-action">
           
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2021/11/vue-cli4-antd-ts-01/" aria-label="Open the post: vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">
-      
-          vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-11-28T16:42:36Z">
-        
-  November 28, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/vue">vue</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <h2 id="介绍">介绍</h2>
-<ul>
-<li>vue3</li>
-<li><a href="mailto:vue-cli@4.5">vue-cli@4.5</a></li>
-<li>ts</li>
-<li>antd</li>
-</ul>
-      
-      <p>
-        
-          <a href="/2021/11/vue-cli4-antd-ts-01/" class="postShorten-excerpt_link link" aria-label="Open the post: vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+            <a class="post-action-btn btn btn--disabled">
           
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2021/01/mac-brew-install-node_npm/" aria-label="Open the post: brew 安装 node 及 npm用法">
-      
-          brew 安装 node 及 npm用法
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-01-24T14:43:16Z">
-        
-  January 24, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/mac">mac</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <p><a href="https://blog.csdn.net/syosinnsya/article/details/80395121">转载</a></p>
-<h4 id="使用brew-安装node">使用brew 安装node</h4>
-      
-      <p>
-        
-          <a href="/2021/01/mac-brew-install-node_npm/" class="postShorten-excerpt_link link" aria-label="Open the post: brew 安装 node 及 npm用法">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-top">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="/2021/01/git-commitizen/" aria-label="Open the post: Git Commitizen 规范化commit工具">
-      
-          Git Commitizen 规范化commit工具
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-01-23T18:49:03Z">
-        
-  January 23, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="/categories/git">git</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        <h2 id="一安装-commitizen-工具">一、安装 Commitizen 工具</h2>
-      
-      <p>
-        
-          <a href="/2021/01/git-commitizen/" class="postShorten-excerpt_link link" aria-label="Open the post: Git Commitizen 规范化commit工具">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-        
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="/posts/page/2/" aria-label="OLDER POSTS">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
             </a>
-          </li>
-        
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/09/swiftui-string-localization-notwork/" data-tooltip="Why does string localization/internationalization not work in SwiftUI" aria-label="PREVIOUS: Why does string localization/internationalization not work in SwiftUI">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
       
-      <li class="pagination-number">page 1 of 12</li>
     </ul>
-  </div>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/09/swiftui-widget-launcher/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/09/swiftui-widget-launcher/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/09/swiftui-widget-launcher/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
 
 
-        </section>
+            
+  
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+          return;
+        }
+        new Gitalk({
+          clientID: 'd92dfa5e1d05e58b218e',
+          clientSecret: 'daabf7c1d2e366c975acde24efd03e765538110a',
+          repo: 'gitalk',
+          owner: 'beyondtao',
+          admin: ['beyondtao'],
+          id: 'b9b5fa0901cb66f32f6ef05e82cb0404',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"en","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
+    </script>
+  
+
+
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2022 Scott Tao. All Rights Reserved
@@ -676,6 +447,105 @@
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/09/swiftui-string-localization-notwork/" data-tooltip="Why does string localization/internationalization not work in SwiftUI" aria-label="PREVIOUS: Why does string localization/internationalization not work in SwiftUI">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/09/swiftui-widget-launcher/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/09/swiftui-widget-launcher/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/09/swiftui-widget-launcher/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2022%2F09%2Fswiftui-widget-launcher%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2022%2F09%2Fswiftui-widget-launcher%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2022%2F09%2Fswiftui-widget-launcher%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
     </div>
     
     <div id="about">

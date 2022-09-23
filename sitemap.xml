@@ -2,34 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/2022/09/swiftui-widget-launcher/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/tags/swiftui/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/categories/swiftui/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-09-22T11:32:25+08:00</lastmod>
+  </url><url>
     <loc>/tags/aps/</loc>
     <lastmod>2022-09-20T19:56:35+08:00</lastmod>
   </url><url>
     <loc>/categories/aps-prepare/</loc>
     <lastmod>2022-09-20T19:56:35+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2022-09-20T19:56:35+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-09-20T19:56:35+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2022-09-20T19:56:35+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-09-20T19:56:35+08:00</lastmod>
-  </url><url>
     <loc>/2022/09/swiftui-string-localization-notwork/</loc>
     <lastmod>2022-09-20T19:56:35+08:00</lastmod>
   </url><url>
     <loc>/2022/09/swiftui-use-tabview/</loc>
-    <lastmod>2022-09-18T17:58:16+08:00</lastmod>
-  </url><url>
-    <loc>/tags/swiftui/</loc>
-    <lastmod>2022-09-18T17:58:16+08:00</lastmod>
-  </url><url>
-    <loc>/categories/swiftui/</loc>
     <lastmod>2022-09-18T17:58:16+08:00</lastmod>
   </url><url>
     <loc>/2022/09/ios-appicon-changes/</loc>

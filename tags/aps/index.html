@@ -272,7 +272,7 @@
     </div>
     <div class="postShorten-excerpt">
       
-        struct TabItem: Identifiable { var id = UUID() var name: String var icon: String var tab: TabEnum } var tabItems = [ TabItem(name: &quot;home&quot;, icon: &quot;house&quot;, tab: .home), ] ForEach(tabItems) { item in // string localizable not working in here // item.name is &quot;home&quot; Text(item.name) // but if write code like this, it's ok Text(&quot;home&quot;) } It has been proved that if a string in Text(&ldquo;home) is passed as a text, it can only be interpreted as a localized keyword.
+        <p>It has been proved that if a string in Text(&ldquo;home) is passed as a text, it can only be interpreted as a localized keyword. If the variable is String type, it doesn&rsquo;t occur. So the answer is to declare a variable of <code>LocalizedStringKey</code> type.</p>
       
       <p>
         

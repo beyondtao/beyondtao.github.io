@@ -6,14 +6,23 @@
     <description>Recent content in Posts on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 19:56:35 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 11:32:25 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Dynamic Launcher Widgets</title>
+      <link>/2022/09/swiftui-widget-launcher/</link>
+      <pubDate>Thu, 22 Sep 2022 11:32:25 +0800</pubDate>
+      
+      <guid>/2022/09/swiftui-widget-launcher/</guid>
+      <description>&lt;p&gt;If you want to select a widget bundle based on some logic, you can do the following:&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Why does string localization/internationalization not work in SwiftUI</title>
       <link>/2022/09/swiftui-string-localization-notwork/</link>
       <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
       
       <guid>/2022/09/swiftui-string-localization-notwork/</guid>
-      <description>struct TabItem: Identifiable { var id = UUID() var name: String var icon: String var tab: TabEnum } var tabItems = [ TabItem(name: &amp;quot;home&amp;quot;, icon: &amp;quot;house&amp;quot;, tab: .home), ] ForEach(tabItems) { item in // string localizable not working in here // item.name is &amp;quot;home&amp;quot; Text(item.name) // but if write code like this, it&#39;s ok Text(&amp;quot;home&amp;quot;) } It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword.</description>
+      <description>&lt;p&gt;It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword. If the variable is String type, it doesn&amp;rsquo;t occur. So the answer is to declare a variable of &lt;code&gt;LocalizedStringKey&lt;/code&gt; type.&lt;/p&gt;</description>
     </item>
     
     <item>
