@@ -6,7 +6,16 @@
     <description>Recent content in swiftui on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Sep 2022 18:54:07 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 17:58:21 +2100</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Widget Edit Change To Others</title>
+      <link>/2022/09/swiftui-widget-edit/</link>
+      <pubDate>Mon, 26 Sep 2022 17:58:21 +2100</pubDate>
+      
+      <guid>/2022/09/swiftui-widget-edit/</guid>
+      <description>&lt;p&gt;Develop a Widgets App, in the Desktop add a Widget, but now user want replace it to others, how to do it. In this &lt;a href=&#34;/file/swiftui/IntentWidgetDemo.zip&#34;&gt;Demo&lt;/a&gt; you can found it.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>SwiftUI Animation Scale Image</title>
       <link>/2022/09/swiftui-animation-scale-image/</link>
@@ -26,14 +35,14 @@
     </item>
     
     <item>
-      <title>How to Use of TabView SwiftUI</title>
+      <title>How to Use TabView of SwiftUI</title>
       <link>/2022/09/swiftui-use-tabview/</link>
       <pubDate>Sun, 18 Sep 2022 17:58:16 +0800</pubDate>
       
       <guid>/2022/09/swiftui-use-tabview/</guid>
-      <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through  TabView in the SwiftUI.&lt;/p&gt;
+      <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through TabView in the SwiftUI.&lt;/p&gt;
 &lt;p&gt;In this Article we will also introduce how to hide TabBar when view pushed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui-use-tabview/eWidget.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/eWidget.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
