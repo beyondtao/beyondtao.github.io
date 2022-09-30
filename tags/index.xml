@@ -6,61 +6,7 @@
     <description>Recent content in Tags on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>cover image</title>
-      <link>/tags/cover-image/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/cover-image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>disqus</title>
-      <link>/tags/disqus/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/disqus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google analytics</title>
-      <link>/tags/google-analytics/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/google-analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gravatar</title>
-      <link>/tags/gravatar/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gravatar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hexo theme</title>
-      <link>/tags/hexo-theme/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hexo-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>responsive</title>
-      <link>/tags/responsive/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/responsive/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 30 Sep 2022 20:55:19 +2100</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swiftui</title>
       <link>/tags/swiftui/</link>

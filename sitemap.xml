@@ -3,49 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/cover-image/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/2022/09/aa-cover-image-showcase/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/disqus/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/features/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/google-analytics/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/gravatar/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/hexo-theme/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T20:55:19+21:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/releases/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/responsive/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T20:55:19+21:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/tranquilpeak/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/2022/09/aa-welcome-to-the-new-tranquilpeak/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T20:55:19+21:00</lastmod>
   </url><url>
     <loc>/tags/swiftui/</loc>
     <lastmod>2022-09-30T20:55:19+21:00</lastmod>
@@ -54,6 +18,9 @@
     <lastmod>2022-09-30T20:55:19+21:00</lastmod>
   </url><url>
     <loc>/2022/09/swiftui-progress-circle/</loc>
+    <lastmod>2022-09-30T20:55:19+21:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
     <lastmod>2022-09-30T20:55:19+21:00</lastmod>
   </url><url>
     <loc>/2022/09/swiftui-widget-edit/</loc>
