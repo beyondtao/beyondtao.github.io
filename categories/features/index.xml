@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>features on Scott&#39;s Blog</title>
+    <link>/categories/features/</link>
+    <description>Recent content in features on Scott&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cover image showcase</title>
+      <link>/2022/09/aa-cover-image-showcase/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/09/aa-cover-image-showcase/</guid>
+      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
