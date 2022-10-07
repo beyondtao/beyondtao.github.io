@@ -6,7 +6,47 @@
     <description>Recent content in Posts on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Sep 2022 20:55:19 +2100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Oct 2022 18:00:18 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Widget 04 - Widget Clock Refresh</title>
+      <link>/2022/10/swiftui-widget-04/</link>
+      <pubDate>Fri, 07 Oct 2022 18:00:18 +0800</pubDate>
+      
+      <guid>/2022/10/swiftui-widget-04/</guid>
+      <description>&lt;p&gt;I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-04.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS Widget - Dynamic Launcher Widgets</title>
+      <link>/2022/10/swiftui-widget-03/</link>
+      <pubDate>Fri, 07 Oct 2022 17:16:25 +0800</pubDate>
+      
+      <guid>/2022/10/swiftui-widget-03/</guid>
+      <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-03.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS Widget - Edit Change To Others View</title>
+      <link>/2022/10/swiftui-widget-02/</link>
+      <pubDate>Fri, 07 Oct 2022 16:35:19 +2100</pubDate>
+      
+      <guid>/2022/10/swiftui-widget-02/</guid>
+      <description>&lt;p&gt;How to implement &lt;code&gt;Editing Widget&lt;/code&gt; in the home? Please take a look at the effect.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-02.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS Widget - Build Your First iOS Widget</title>
+      <link>/2022/10/swiftui-widget-01/</link>
+      <pubDate>Fri, 07 Oct 2022 16:30:19 +2100</pubDate>
+      
+      <guid>/2022/10/swiftui-widget-01/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-01.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start by building our simple App. Open up Xcode and create a new iOS App Project; make sure SwiftUI is selected in the Interface options and SwiftUI App is selected in the Life Cycle options.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>SwiftUI Circlar Progress Bar </title>
       <link>/2022/09/swiftui-progress-circle/</link>
@@ -17,30 +57,12 @@
     </item>
     
     <item>
-      <title>iOS Widget Edit Change To Others</title>
-      <link>/2022/09/swiftui-widget-edit/</link>
-      <pubDate>Mon, 26 Sep 2022 17:58:21 +2100</pubDate>
-      
-      <guid>/2022/09/swiftui-widget-edit/</guid>
-      <description>&lt;p&gt;Develop a Widgets App, in the Desktop add a Widget, but now user want replace it to others, how to do it. In this &lt;a href=&#34;/file/swiftui/IntentWidgetDemo.zip&#34;&gt;Demo&lt;/a&gt; you can found it.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>SwiftUI Animation Scale Image</title>
       <link>/2022/09/swiftui-animation-scale-image/</link>
       <pubDate>Fri, 23 Sep 2022 18:54:07 +0800</pubDate>
       
       <guid>/2022/09/swiftui-animation-scale-image/</guid>
       <description>&lt;p&gt;How to realize flexible animation of pictures? It&amp;rsquo;s very simple to use SwiftUI now.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS Dynamic Launcher Widgets</title>
-      <link>/2022/09/swiftui-widget-launcher/</link>
-      <pubDate>Thu, 22 Sep 2022 11:32:25 +0800</pubDate>
-      
-      <guid>/2022/09/swiftui-widget-launcher/</guid>
-      <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;</description>
     </item>
     
     <item>
