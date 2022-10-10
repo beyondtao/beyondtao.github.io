@@ -6,7 +6,18 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Oct 2022 18:00:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Oct 2022 20:37:16 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Collection &#43; NavigationStack</title>
+      <link>/2022/10/swiftui-use-collection-navigationstack/</link>
+      <pubDate>Mon, 10 Oct 2022 20:37:16 +0800</pubDate>
+      
+      <guid>/2022/10/swiftui-use-collection-navigationstack/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types&#34;&gt;Document&lt;/a&gt;If your app has a minimum deployment target of iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9, or later, transition away from using NavigationView. In its place, use NavigationStack and NavigationSplitView instances.&lt;/p&gt;
+&lt;p&gt;I need a list of Collections, and the custom Cell, then with &lt;code&gt;NavigationStack&lt;/code&gt; link to the next View.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-Collection.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>iOS Widget 04 - Widget Clock Refresh</title>
       <link>/2022/10/swiftui-widget-04/</link>
@@ -14,7 +25,7 @@
       
       <guid>/2022/10/swiftui-widget-04/</guid>
       <description>&lt;p&gt;I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-04.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-04.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,7 +35,7 @@
       
       <guid>/2022/10/swiftui-widget-03/</guid>
       <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-03.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-03.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -34,7 +45,7 @@
       
       <guid>/2022/10/swiftui-widget-02/</guid>
       <description>&lt;p&gt;How to implement &lt;code&gt;Editing Widget&lt;/code&gt; in the home? Please take a look at the effect.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-02.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-02.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -43,7 +54,7 @@
       <pubDate>Fri, 07 Oct 2022 16:30:19 +2100</pubDate>
       
       <guid>/2022/10/swiftui-widget-01/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-01.zip&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-01.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start by building our simple App. Open up Xcode and create a new iOS App Project; make sure SwiftUI is selected in the Interface options and SwiftUI App is selected in the Life Cycle options.&lt;/p&gt;</description>
     </item>
     
