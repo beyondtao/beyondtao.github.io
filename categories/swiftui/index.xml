@@ -6,7 +6,20 @@
     <description>Recent content in swiftui on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Oct 2022 11:09:01 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Oct 2022 16:11:39 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Layout - VStack / HStack / ZStack</title>
+      <link>/2022/10/swiftui-layout-stack/</link>
+      <pubDate>Tue, 11 Oct 2022 16:11:39 +0800</pubDate>
+      
+      <guid>/2022/10/swiftui-layout-stack/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/vstack&#34;&gt;VStack&lt;/a&gt;: A view that arranges its subviews in a vertical line.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/hstack&#34;&gt;HStack&lt;/a&gt;: A view that arranges its subviews in a horizontal line.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/zstack&#34;&gt;ZStack&lt;/a&gt;: A view that overlays its subviews, aligning them in both axes.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>SwiftUI Layout - LazyVGrid &amp; LazyHGrid</title>
       <link>/2022/10/swiftui-layout-lazygrid/</link>

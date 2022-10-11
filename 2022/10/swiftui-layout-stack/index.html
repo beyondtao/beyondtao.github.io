@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "SwiftUI Layout - LazyVGrid \u0026 LazyHGrid",
+  "headline": "SwiftUI Layout - VStack / HStack / ZStack",
   
-  "datePublished": "2022-10-11T11:09:01+08:00",
-  "dateModified": "2022-10-11T11:09:01+08:00",
+  "datePublished": "2022-10-11T16:11:39+08:00",
+  "dateModified": "2022-10-11T16:11:39+08:00",
   "author": {
     "@type": "Person",
     "name": "Scott Tao",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "\/2022\/10\/swiftui-layout-lazygrid\/" 
+    "@id": "\/2022\/10\/swiftui-layout-stack\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": " LazyHGrid Documents LazyVGrid Documents  LazyVGridand LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.\n",
+  "description": " VStack: A view that arranges its subviews in a vertical line. HStack: A view that arranges its subviews in a horizontal line. ZStack: A view that overlays its subviews, aligning them in both axes. ",
   "keywords": []
 }
 
@@ -44,40 +44,40 @@
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="
-LazyHGrid Documents
-LazyVGrid Documents
-
-LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.">
+VStack: A view that arranges its subviews in a vertical line.
+HStack: A view that arranges its subviews in a horizontal line.
+ZStack: A view that overlays its subviews, aligning them in both axes.
+">
 
 
 <meta property="og:description" content="
-LazyHGrid Documents
-LazyVGrid Documents
-
-LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.">
+VStack: A view that arranges its subviews in a vertical line.
+HStack: A view that arranges its subviews in a horizontal line.
+ZStack: A view that overlays its subviews, aligning them in both axes.
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
-<meta name="twitter:title" content="SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
-<meta property="og:url" content="/2022/10/swiftui-layout-lazygrid/">
-<meta property="twitter:url" content="/2022/10/swiftui-layout-lazygrid/">
+<meta property="og:title" content="SwiftUI Layout - VStack / HStack / ZStack">
+<meta name="twitter:title" content="SwiftUI Layout - VStack / HStack / ZStack">
+<meta property="og:url" content="/2022/10/swiftui-layout-stack/">
+<meta property="twitter:url" content="/2022/10/swiftui-layout-stack/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
 <meta property="og:description" content="
-LazyHGrid Documents
-LazyVGrid Documents
-
-LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.">
+VStack: A view that arranges its subviews in a vertical line.
+HStack: A view that arranges its subviews in a horizontal line.
+ZStack: A view that overlays its subviews, aligning them in both axes.
+">
 <meta name="twitter:description" content="
-LazyHGrid Documents
-LazyVGrid Documents
-
-LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.">
+VStack: A view that arranges its subviews in a vertical line.
+HStack: A view that arranges its subviews in a horizontal line.
+ZStack: A view that overlays its subviews, aligning them in both axes.
+">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-10-11T11:09:01">
+    <meta property="article:published_time" content="2022-10-11T16:11:39">
   
   
-    <meta property="article:modified_time" content="2022-10-11T11:09:01">
+    <meta property="article:modified_time" content="2022-10-11T16:11:39">
   
   
   
@@ -108,14 +108,14 @@ LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizo
 
 
 
-    <title>SwiftUI Layout - LazyVGrid &amp; LazyHGrid</title>
+    <title>SwiftUI Layout - VStack / HStack / ZStack</title>
 
     <link rel="icon" href="/favicon.png">
     
 
     
 
-    <link rel="canonical" href="/2022/10/swiftui-layout-lazygrid/">
+    <link rel="canonical" href="/2022/10/swiftui-layout-stack/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -277,13 +277,13 @@ LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizo
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      SwiftUI Layout - LazyVGrid &amp; LazyHGrid
+      SwiftUI Layout - VStack / HStack / ZStack
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-10-11T11:09:01&#43;08:00">
+      <time datetime="2022-10-11T16:11:39&#43;08:00">
         
   October 11, 2022
 
@@ -305,149 +305,28 @@ LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizo
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <ul>
-<li><a href="https://developer.apple.com/documentation/swiftui/lazyhgrid">LazyHGrid Documents</a></li>
-<li><a href="https://developer.apple.com/documentation/swiftui/lazyvgrid">LazyVGrid Documents</a></li>
+<li><a href="https://developer.apple.com/documentation/swiftui/vstack">VStack</a>: A view that arranges its subviews in a vertical line.</li>
+<li><a href="https://developer.apple.com/documentation/swiftui/hstack">HStack</a>: A view that arranges its subviews in a horizontal line.</li>
+<li><a href="https://developer.apple.com/documentation/swiftui/zstack">ZStack</a>: A view that overlays its subviews, aligning them in both axes.</li>
 </ul>
-<p><!-- raw HTML omitted -->LazyVGrid<!-- raw HTML omitted --> and <!-- raw HTML omitted -->LazyHGrid<!-- raw HTML omitted -->, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with <code>Lazy</code>, indicating that Layout managers will only drawing the child elements when need to be displayed.</p>
-<h2 id="lazyvgrid">LazyVGrid</h2>
-<p>LazyVGrid fills the layout by specifying the number of columns.</p>
-<table>
-<thead>
-<tr>
-<th>01</th>
-<th>02</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/img/swiftui/layout-lazygrid-01.png" alt="img"></td>
-<td><img src="/img/swiftui/layout-lazygrid-02.png" alt="img"></td>
-</tr>
-</tbody>
-</table>
-<p>The filling order of LazyVGrid is from the top row by row, and when one row is filled, will fill the next row. It&rsquo;s easy to understand from the alphabetical displayed in the above figure.</p>
-<p><strong>The Code of Left Picture</strong></p>
-<pre tabindex="0"><code>var columns: [GridItem] = [
-    GridItem(.fixed(100)),
-    GridItem(.fixed(100)),
-    GridItem(.fixed(100))
-]
-    
-var body: some View {
-	// you can use colums array or directory write code in the lines.
-	// LazyVGrid(columns: columns) {
-    LazyVGrid(columns: [GridItem(.fixed(100)), GridItem(.fixed(100)), GridItem(.fixed(100))]){
-         ForEach(0 ..&lt; 30){ index in
-             RoundedRectangle(cornerRadius: 5)
-                 .foregroundColor(Color(hue: 0.03 * Double(index) , saturation: 1, brightness: 1))
-                 .frame(height: 50)
-                 .overlay(Text(&quot;\(String(Unicode.Scalar(65 + index)!))&quot;))
-         }
-     }
-     .padding()
-}
-</code></pre><p><strong>The Code of Left Picture</strong></p>
-<pre tabindex="0"><code>// The row spacing can be adjusted by setting the spacing of LazyVGrid
-
-var body: some View {
-    LazyVGrid(columns: [GridItem(.fixed(100)), GridItem(.fixed(100)), GridItem(.fixed(100))], spacing: 30){
-      ForEach(0 ..&lt; 30){ index in
-          RoundedRectangle(cornerRadius: 5)
-              .foregroundColor(Color(hue: 0.03 * Double(index) , saturation: 1, brightness: 1))
-              .frame(height: 50)
-              .overlay(Text(&quot;\(String(Unicode.Scalar(127881 + index)!))&quot;))
-      }
-    }
-    .padding()
-}
-</code></pre><h3 id="header-and-footer">Header and Footer</h3>
-<p>LazyVGrid can make the Header and Footer hover at the top and bottom when scrolling by setting the PinnedViews type. Set the header and footer of Section through Section.</p>
-<pre tabindex="0"><code>VStack {
-  ScrollView {
-      LazyVGrid(columns: [GridItem(.fixed(100)), GridItem(.fixed(100)), GridItem(.fixed(100))], pinnedViews: [.sectionHeaders, .sectionFooters]){
-          ForEach(0 ..&lt; 5){ index in
-              Section(header: Text(&quot;Header \(index)&quot;)
-                          .bold()
-                          .font(.title)
-                          .frame(maxWidth: .infinity, alignment: .leading)
-                          .background(Color.white),
-                      footer: Text(&quot;Footer \(index)&quot;)
-                              .bold()
-                              .font(.title)
-                              .frame(maxWidth: .infinity, alignment: .leading)
-                              .background(Color.white)
-              ) {
-                  ForEach(0 ..&lt; 10){ idx in
-                      RoundedRectangle(cornerRadius: 5)
-                          .foregroundColor(Color(hue: 0.03 * Double(index * 10 + idx) , saturation: 1, brightness: 1))
-                          .frame(height: 50)
-                          .overlay(Text(&quot;\(index * 10 + idx)&quot;))
-                  }
-              }
-          }
-      }
-      .padding()
-  }
-}
-.clipped()
-</code></pre><table>
-<thead>
-<tr>
-<th>01</th>
-<th>02</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/img/swiftui/layout-lazygrid-01.gif" alt="img"></td>
-<td><img src="/img/swiftui/layout-lazygrid-03.png" alt="img"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="griditem">GridItem</h3>
-<p><a href="https://developer.apple.com/documentation/swiftui/griditem">GridItem</a> controls the width by the <a href="https://developer.apple.com/documentation/swiftui/griditem/size-swift.enum">GridSize</a></p>
-<p><strong><a href="%5D(https://developer.apple.com/documentation/swiftui/griditem/size-swift.enum)">Enumeration Cases</a></strong></p>
-<ul>
-<li>
-<p><a href="https://developer.apple.com/documentation/swiftui/griditem/size-swift.enum/adaptive(minimum:maximum:)">case adaptive(minimum: CGFloat, maximum: CGFloat)</a></p>
-<p>Multiple items in the space of a single flexible item.</p>
-</li>
-<li>
-<p><a href="https://developer.apple.com/documentation/swiftui/griditem/size-swift.enum/fixed(_:)">case fixed(CGFloat)</a></p>
-<p>A single item with the specified fixed size.</p>
-</li>
-<li>
-<p><a href="https://developer.apple.com/documentation/swiftui/griditem/size-swift.enum/flexible(minimum:maximum:)">case flexible(minimum: CGFloat, maximum: CGFloat)</a></p>
-<p>A single flexible item.</p>
-</li>
-</ul>
-<p>GeometryReader is a special View that can get coordinate size information.</p>
+<h2 id="vstack">VStack</h2>
 <pre tabindex="0"><code>var body: some View {
-    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.adaptive(minimum: 50), spacing: 0)]){
-        ForEach(0 ..&lt; 30){ index in
-            GeometryReader{ proxy in
-                RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(Color(hue: 0.1 * Double(index) , saturation: 1, brightness: 1))
-                    .overlay(Text(&quot;\(proxy.size.width)&quot;))
-            }
-            .frame(height: 50)
+    VStack {
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.orange)
+            .frame(width: 100, height: 100)
 
-        }
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.green)
+            .frame(width: 100, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.cyan)
+            .frame(width: 100, height: 100)
     }
-    .padding()
 }
-</code></pre><pre tabindex="0"><code>var body: some View {
-    LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 100), GridItem(.flexible(), spacing: 50)]){
-        ForEach(0 ..&lt; 30){ idx in
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundColor(Color(hue: 0.0333 * Double(idx) , saturation: 1, brightness: 1))
-            .frame(height: 50)
-        }
-    }
-    .padding()
-}
-</code></pre><p>We can see from the running effect that only the set space will be added to the right side of the grid.</p>
-<table>
+// Please see the Effect: Img 01
+</code></pre><table>
 <thead>
 <tr>
 <th>Effect</th>
@@ -455,21 +334,44 @@ var body: some View {
 </thead>
 <tbody>
 <tr>
-<td><img src="/img/swiftui/layout-lazygrid-04.png" alt="img"></td>
+<td><img src="/img/swiftui/layout-stack-01.png" alt="img"></td>
 </tr>
 </tbody>
 </table>
-<h3 id="alignment">Alignment</h3>
-<p><a href="https://developer.apple.com/documentation/swiftui/griditem/alignment">Alignment</a>: use this property to anchor the view’s relative position to the same relative position in the view’s assigned grid space. Similar to the usage of <code>frame's Alignment.</code></p>
-<pre tabindex="0"><code>var body: some View {
-    LazyVGrid(columns: [GridItem(.flexible(), alignment: .topLeading), GridItem(.flexible(), alignment: .bottomLeading), GridItem(.flexible(),  alignment: .trailing)]) {
-        ForEach(0 ..&lt; 30, id: \.self){ index in
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundColor(Color(hue: 0.01 * Double(index * 10), saturation: 1, brightness: 1))
-                .frame(width: CGFloat((index % 3) + 1) * 20, height: CGFloat((index % 3) + 1) * 20)
-        }
+<pre tabindex="0"><code>// Please see the Effect: Img 02
+var body: some View {
+    VStack(alignment:.trailing, spacing: 50) {
+        RoundedRectangle(cornerRadius: 35)
+          .foregroundColor(.orange)
+          .frame(width: 150, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.green)
+            .frame(width: 200, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.cyan)
+            .frame(width: 100, height: 100)
     }
-    .padding()
+}
+</code></pre><p>If the frame of the VStack is not set, the VStack will calculate its own size according to the size of the element.</p>
+<p>We can see that the width of the VStack is equal to the width of the widest rectangle, and the height is equal to the height of 3 rectangles plus the size of spacing. (Effect: Img 03)</p>
+<pre tabindex="0"><code>// (Effect: Img 03)
+var body: some View {
+    VStack(alignment:.trailing, spacing: 50) {
+        RoundedRectangle(cornerRadius: 35)
+          .foregroundColor(.orange)
+          .frame(width: 150, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.green)
+            .frame(width: 200, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.cyan)
+            .frame(width: 100, height: 100)
+    }
+    .background(Color.indigo)
 }
 </code></pre><table>
 <thead>
@@ -479,14 +381,48 @@ var body: some View {
 </thead>
 <tbody>
 <tr>
-<td><img src="/img/swiftui/layout-lazygrid-05.png" alt="img"></td>
+<td><img src="/img/swiftui/layout-stack-02.png" alt="img"></td>
 </tr>
 </tbody>
 </table>
-<h2 id="lazyhgrid">LazyHGrid</h2>
-<p><code>LazyHGrid</code> and <code>LazyVGrid</code> are simliar in uasge. LazyHGrid specified the number of rows, fill the specified number of rows from top to bottom, and then fills the second column.</p>
-<h2 id="how-to-achieve-an-irregular">How to achieve an irregular</h2>
-<table>
+<p>We can make the VStack size equal to the size of the parent node by setting the frame&rsquo;s maxWidth and maxHeight to <code>infinity</code>. (Effect: Img 04)</p>
+<pre tabindex="0"><code>// (Effect: Img 04)
+var body: some View {
+    VStack(alignment:.trailing, spacing: 50) {
+        RoundedRectangle(cornerRadius: 35)
+          .foregroundColor(.orange)
+          .frame(width: 150, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.green)
+            .frame(width: 200, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.cyan)
+            .frame(width: 100, height: 100)
+    }
+    .frame(maxWidth:.infinity, maxHeight: .infinity)
+    .background(Color.indigo)
+}
+</code></pre><p>Set the frame and also set the alignment to control the position of the child elements in the VStack. And if you found the view withe the boundary, you can by setting edgesIgnoringSafeArea, the layout can be extended to the safe area area.</p>
+<pre tabindex="0"><code>var body: some View {
+    VStack(alignment:.trailing, spacing: 50) {
+        RoundedRectangle(cornerRadius: 35)
+          .foregroundColor(.orange)
+          .frame(width: 150, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.green)
+            .frame(width: 200, height: 100)
+
+        RoundedRectangle(cornerRadius: 35)
+            .foregroundColor(.cyan)
+            .frame(width: 100, height: 100)
+    }
+    .frame(maxWidth:.infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+    .background(Color.indigo)
+}
+</code></pre><table>
 <thead>
 <tr>
 <th>Effect</th>
@@ -494,27 +430,14 @@ var body: some View {
 </thead>
 <tbody>
 <tr>
-<td><img src="/img/swiftui/layout-lazygrid-06.png" alt="img"></td>
+<td><img src="/img/swiftui/layout-stack-03.png" alt="img"></td>
 </tr>
 </tbody>
 </table>
-<pre tabindex="0"><code>var body: some View {
-    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]){
-          ForEach(0 ..&lt; 11){ idx in
-              GeometryReader { r in
-                  RoundedRectangle(cornerRadius: 5)
-                      .foregroundColor(Color(hue: 0.1 * Double(idx) , saturation: 1, brightness: 1))
-                      .frame(width: idx == 6 ? 2 * r.size.width  + 10 : r.size.width )
-              }
-              .frame(height: 100)
-              if idx == 6 {
-                  Color.clear
-              }
-          }
-      }
-      .padding()
-}
-</code></pre>
+<h2 id="hstack--zstack">HStack &amp; ZStack</h2>
+<p>HStack and ZStack and VStack are only in different directions. The other usages are basically the same as VStack.</p>
+<p>HStack is arranged <code>horizontally</code>.</p>
+<p>ZStack is stacked on the <code>Z axis</code>.</p>
               
 
 
@@ -541,7 +464,7 @@ var body: some View {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-stack/" data-tooltip="SwiftUI Layout - VStack / HStack / ZStack" aria-label="NEXT: SwiftUI Layout - VStack / HStack / ZStack">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -549,7 +472,7 @@ var body: some View {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-navigationstack/" data-tooltip="SwiftUI Collection &#43; NavigationStack" aria-label="PREVIOUS: SwiftUI Collection &#43; NavigationStack">
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-lazygrid/" data-tooltip="SwiftUI Layout - LazyVGrid &amp; LazyHGrid" aria-label="PREVIOUS: SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -567,19 +490,19 @@ var body: some View {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-lazygrid/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-stack/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-lazygrid/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-stack/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-lazygrid/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-stack/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -621,7 +544,7 @@ var body: some View {
           repo: 'gitalk',
           owner: 'beyondtao',
           admin: ['beyondtao'],
-          id: '95cd0d8fba8b2f553d810e6e0889790f',
+          id: 'fbe57012a9c2e9ed309a68ae2547ad19',
           ...{"distractionfreemode":false,"enablehotkey":true,"language":"en","pagerdirection":"first","perpage":10}
         }).render('gitalk')
       })()
@@ -646,7 +569,7 @@ var body: some View {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-stack/" data-tooltip="SwiftUI Layout - VStack / HStack / ZStack" aria-label="NEXT: SwiftUI Layout - VStack / HStack / ZStack">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -654,7 +577,7 @@ var body: some View {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-navigationstack/" data-tooltip="SwiftUI Collection &#43; NavigationStack" aria-label="PREVIOUS: SwiftUI Collection &#43; NavigationStack">
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-lazygrid/" data-tooltip="SwiftUI Layout - LazyVGrid &amp; LazyHGrid" aria-label="PREVIOUS: SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -672,19 +595,19 @@ var body: some View {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-lazygrid/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-stack/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-lazygrid/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-stack/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-lazygrid/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-stack/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -715,19 +638,19 @@ var body: some View {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2022%2F10%2Fswiftui-layout-lazygrid%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2022%2F10%2Fswiftui-layout-lazygrid%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2022%2F10%2Fswiftui-layout-lazygrid%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
