@@ -6,14 +6,27 @@
     <description>Recent content in swiftui on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2022 20:37:16 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Oct 2022 11:09:01 +0800</lastBuildDate><atom:link href="/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Layout - LazyVGrid &amp; LazyHGrid</title>
+      <link>/2022/10/swiftui-layout-lazygrid/</link>
+      <pubDate>Tue, 11 Oct 2022 11:09:01 +0800</pubDate>
+      
+      <guid>/2022/10/swiftui-layout-lazygrid/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyhgrid&#34;&gt;LazyHGrid Documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyvgrid&#34;&gt;LazyVGrid Documents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;LazyVGrid&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;LazyHGrid&lt;!-- raw HTML omitted --&gt;, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with &lt;code&gt;Lazy&lt;/code&gt;, indicating that Layout managers will only drawing the child elements when need to be displayed.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>SwiftUI Collection &#43; NavigationStack</title>
-      <link>/2022/10/swiftui-use-collection-navigationstack/</link>
+      <link>/2022/10/swiftui-navigationstack/</link>
       <pubDate>Mon, 10 Oct 2022 20:37:16 +0800</pubDate>
       
-      <guid>/2022/10/swiftui-use-collection-navigationstack/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types&#34;&gt;Document&lt;/a&gt;If your app has a minimum deployment target of iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9, or later, transition away from using NavigationView. In its place, use NavigationStack and NavigationSplitView instances.&lt;/p&gt;
+      <guid>/2022/10/swiftui-navigationstack/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types&#34;&gt;From Apple Document&lt;/a&gt; If your app has a minimum deployment target of iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9, or later, transition away from using NavigationView. In its place, use NavigationStack and NavigationSplitView instances.&lt;/p&gt;
 &lt;p&gt;I need a list of Collections, and the custom Cell, then with &lt;code&gt;NavigationStack&lt;/code&gt; link to the next View.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-Collection.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
