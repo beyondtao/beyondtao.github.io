@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "SwiftUI Layout - VStack / HStack / ZStack",
+  "headline": "SwiftUI NavigationBar Hidden, Slipe Back Problem",
   
-  "datePublished": "2022-10-11T16:11:39+08:00",
-  "dateModified": "2022-10-11T16:11:39+08:00",
+  "datePublished": "2022-10-12T20:56:39+08:00",
+  "dateModified": "2022-10-12T20:56:39+08:00",
   "author": {
     "@type": "Person",
     "name": "Scott Tao",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "\/2022\/10\/swiftui-layout-stack\/" 
+    "@id": "\/2022\/10\/swiftui-navigation-slipback\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": " VStack: A view that arranges its subviews in a vertical line. HStack: A view that arranges its subviews in a horizontal line. ZStack: A view that overlays its subviews, aligning them in both axes. ",
+  "description": "1. Navigation Bar Hidden .navigationBarHidden(true)  In SwiftUI Project when we write this code, the NavigationBar will be hidden, but the slip back will also be invalid. At this time, we can add Navigation Extension.\n",
   "keywords": []
 }
 
@@ -43,41 +43,37 @@
 <meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="
-VStack: A view that arranges its subviews in a vertical line.
-HStack: A view that arranges its subviews in a horizontal line.
-ZStack: A view that overlays its subviews, aligning them in both axes.
-">
+<meta name="description" content="1. Navigation Bar Hidden
+.navigationBarHidden(true)
+
+In SwiftUI Project when we write this code, the NavigationBar will be hidden, but the slip back will also be invalid. At this time, we can add Navigation Extension.">
 
 
-<meta property="og:description" content="
-VStack: A view that arranges its subviews in a vertical line.
-HStack: A view that arranges its subviews in a horizontal line.
-ZStack: A view that overlays its subviews, aligning them in both axes.
-">
+<meta property="og:description" content="1. Navigation Bar Hidden
+.navigationBarHidden(true)
+
+In SwiftUI Project when we write this code, the NavigationBar will be hidden, but the slip back will also be invalid. At this time, we can add Navigation Extension.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SwiftUI Layout - VStack / HStack / ZStack">
-<meta name="twitter:title" content="SwiftUI Layout - VStack / HStack / ZStack">
-<meta property="og:url" content="/2022/10/swiftui-layout-stack/">
-<meta property="twitter:url" content="/2022/10/swiftui-layout-stack/">
+<meta property="og:title" content="SwiftUI NavigationBar Hidden, Slipe Back Problem">
+<meta name="twitter:title" content="SwiftUI NavigationBar Hidden, Slipe Back Problem">
+<meta property="og:url" content="/2022/10/swiftui-navigation-slipback/">
+<meta property="twitter:url" content="/2022/10/swiftui-navigation-slipback/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="
-VStack: A view that arranges its subviews in a vertical line.
-HStack: A view that arranges its subviews in a horizontal line.
-ZStack: A view that overlays its subviews, aligning them in both axes.
-">
-<meta name="twitter:description" content="
-VStack: A view that arranges its subviews in a vertical line.
-HStack: A view that arranges its subviews in a horizontal line.
-ZStack: A view that overlays its subviews, aligning them in both axes.
-">
+<meta property="og:description" content="1. Navigation Bar Hidden
+.navigationBarHidden(true)
+
+In SwiftUI Project when we write this code, the NavigationBar will be hidden, but the slip back will also be invalid. At this time, we can add Navigation Extension.">
+<meta name="twitter:description" content="1. Navigation Bar Hidden
+.navigationBarHidden(true)
+
+In SwiftUI Project when we write this code, the NavigationBar will be hidden, but the slip back will also be invalid. At this time, we can add Navigation Extension.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-10-11T16:11:39">
+    <meta property="article:published_time" content="2022-10-12T20:56:39">
   
   
-    <meta property="article:modified_time" content="2022-10-11T16:11:39">
+    <meta property="article:modified_time" content="2022-10-12T20:56:39">
   
   
   
@@ -108,14 +104,14 @@ ZStack: A view that overlays its subviews, aligning them in both axes.
 
 
 
-    <title>SwiftUI Layout - VStack / HStack / ZStack</title>
+    <title>SwiftUI NavigationBar Hidden, Slipe Back Problem</title>
 
     <link rel="icon" href="/favicon.png">
     
 
     
 
-    <link rel="canonical" href="/2022/10/swiftui-layout-stack/">
+    <link rel="canonical" href="/2022/10/swiftui-navigation-slipback/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -277,15 +273,15 @@ ZStack: A view that overlays its subviews, aligning them in both axes.
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      SwiftUI Layout - VStack / HStack / ZStack
+      SwiftUI NavigationBar Hidden, Slipe Back Problem
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-10-11T16:11:39&#43;08:00">
+      <time datetime="2022-10-12T20:56:39&#43;08:00">
         
-  October 11, 2022
+  October 12, 2022
 
       </time>
     
@@ -304,140 +300,21 @@ ZStack: A view that overlays its subviews, aligning them in both axes.
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <ul>
-<li><a href="https://developer.apple.com/documentation/swiftui/vstack">VStack</a>: A view that arranges its subviews in a vertical line.</li>
-<li><a href="https://developer.apple.com/documentation/swiftui/hstack">HStack</a>: A view that arranges its subviews in a horizontal line.</li>
-<li><a href="https://developer.apple.com/documentation/swiftui/zstack">ZStack</a>: A view that overlays its subviews, aligning them in both axes.</li>
-</ul>
-<h2 id="vstack">VStack</h2>
-<pre tabindex="0"><code>var body: some View {
-    VStack {
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.orange)
-            .frame(width: 100, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.green)
-            .frame(width: 100, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.cyan)
-            .frame(width: 100, height: 100)
+              <h2 id="1-navigation-bar-hidden">1. Navigation Bar Hidden</h2>
+<pre><code>.navigationBarHidden(true)
+</code></pre>
+<p>In SwiftUI Project when we write this code, the <code>NavigationBar</code> will be hidden, but the slip back will also be invalid. At this time, we can add <code>Navigation Extension</code>.</p>
+<h2 id="2-extension">2. Extension</h2>
+<pre tabindex="0"><code>extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -&gt; Bool {
+        return viewControllers.count &gt; 1
     }
 }
-// Please see the Effect: Img 01
-</code></pre><table>
-<thead>
-<tr>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/img/swiftui/layout-stack-01.png" alt="img"></td>
-</tr>
-</tbody>
-</table>
-<pre tabindex="0"><code>// Please see the Effect: Img 02
-var body: some View {
-    VStack(alignment:.trailing, spacing: 50) {
-        RoundedRectangle(cornerRadius: 35)
-          .foregroundColor(.orange)
-          .frame(width: 150, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.green)
-            .frame(width: 200, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.cyan)
-            .frame(width: 100, height: 100)
-    }
-}
-</code></pre><p>If the frame of the VStack is not set, the VStack will calculate its own size according to the size of the element.</p>
-<p>We can see that the width of the VStack is equal to the width of the widest rectangle, and the height is equal to the height of 3 rectangles plus the size of spacing. (Effect: Img 03)</p>
-<pre tabindex="0"><code>// (Effect: Img 03)
-var body: some View {
-    VStack(alignment:.trailing, spacing: 50) {
-        RoundedRectangle(cornerRadius: 35)
-          .foregroundColor(.orange)
-          .frame(width: 150, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.green)
-            .frame(width: 200, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.cyan)
-            .frame(width: 100, height: 100)
-    }
-    .background(Color.indigo)
-}
-</code></pre><table>
-<thead>
-<tr>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/img/swiftui/layout-stack-02.png" alt="img"></td>
-</tr>
-</tbody>
-</table>
-<p>We can make the VStack size equal to the size of the parent node by setting the frame&rsquo;s maxWidth and maxHeight to <code>infinity</code>. (Effect: Img 04)</p>
-<pre tabindex="0"><code>// (Effect: Img 04)
-var body: some View {
-    VStack(alignment:.trailing, spacing: 50) {
-        RoundedRectangle(cornerRadius: 35)
-          .foregroundColor(.orange)
-          .frame(width: 150, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.green)
-            .frame(width: 200, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.cyan)
-            .frame(width: 100, height: 100)
-    }
-    .frame(maxWidth:.infinity, maxHeight: .infinity)
-    .background(Color.indigo)
-}
-</code></pre><p>Set the frame and also set the alignment to control the position of the child elements in the VStack. And if you found the view withe the boundary, you can by setting edgesIgnoringSafeArea, the layout can be extended to the safe area area.</p>
-<pre tabindex="0"><code>var body: some View {
-    VStack(alignment:.trailing, spacing: 50) {
-        RoundedRectangle(cornerRadius: 35)
-          .foregroundColor(.orange)
-          .frame(width: 150, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.green)
-            .frame(width: 200, height: 100)
-
-        RoundedRectangle(cornerRadius: 35)
-            .foregroundColor(.cyan)
-            .frame(width: 100, height: 100)
-    }
-    .frame(maxWidth:.infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-    .background(Color.indigo)
-}
-</code></pre><table>
-<thead>
-<tr>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/img/swiftui/layout-stack-03.png" alt="img"></td>
-</tr>
-</tbody>
-</table>
-<h2 id="hstack--zstack">HStack &amp; ZStack</h2>
-<p>HStack and ZStack and VStack are only in different directions. The other usages are basically the same as VStack.</p>
-<p>HStack is arranged <code>horizontally</code>.</p>
-<p>ZStack is stacked on the <code>Z axis</code>.</p>
+</code></pre><p>When we add the extension, then run the project, we will found we did resolve the problem. So easy.</p>
               
 
 
@@ -464,7 +341,7 @@ var body: some View {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-navigation-slipback/" data-tooltip="SwiftUI NavigationBar Hidden, Slipe Back Problem" aria-label="NEXT: SwiftUI NavigationBar Hidden, Slipe Back Problem">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -472,7 +349,7 @@ var body: some View {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-lazygrid/" data-tooltip="SwiftUI Layout - LazyVGrid &amp; LazyHGrid" aria-label="PREVIOUS: SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-stack/" data-tooltip="SwiftUI Layout - VStack / HStack / ZStack" aria-label="PREVIOUS: SwiftUI Layout - VStack / HStack / ZStack">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -490,19 +367,19 @@ var body: some View {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-stack/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-navigation-slipback/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-stack/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-navigation-slipback/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-stack/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-navigation-slipback/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -544,7 +421,7 @@ var body: some View {
           repo: 'gitalk',
           owner: 'beyondtao',
           admin: ['beyondtao'],
-          id: 'fbe57012a9c2e9ed309a68ae2547ad19',
+          id: '38f2544c34376a7ead759aec74bdb8b0',
           ...{"distractionfreemode":false,"enablehotkey":true,"language":"en","pagerdirection":"first","perpage":10}
         }).render('gitalk')
       })()
@@ -569,7 +446,7 @@ var body: some View {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-navigation-slipback/" data-tooltip="SwiftUI NavigationBar Hidden, Slipe Back Problem" aria-label="NEXT: SwiftUI NavigationBar Hidden, Slipe Back Problem">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -577,7 +454,7 @@ var body: some View {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-lazygrid/" data-tooltip="SwiftUI Layout - LazyVGrid &amp; LazyHGrid" aria-label="PREVIOUS: SwiftUI Layout - LazyVGrid &amp; LazyHGrid">
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2022/10/swiftui-layout-stack/" data-tooltip="SwiftUI Layout - VStack / HStack / ZStack" aria-label="PREVIOUS: SwiftUI Layout - VStack / HStack / ZStack">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -595,19 +472,19 @@ var body: some View {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-layout-stack/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2022/10/swiftui-navigation-slipback/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-layout-stack/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2022/10/swiftui-navigation-slipback/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-layout-stack/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2022/10/swiftui-navigation-slipback/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -638,19 +515,19 @@ var body: some View {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2022%2F10%2Fswiftui-navigation-slipback%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2022%2F10%2Fswiftui-navigation-slipback%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2022%2F10%2Fswiftui-layout-stack%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2022%2F10%2Fswiftui-navigation-slipback%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

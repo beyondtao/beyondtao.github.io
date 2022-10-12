@@ -344,6 +344,7 @@ struct TabBarContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .tag(TabEnum.my)
             }
+                TabBarView(selectedTab: $currTab, safeEdgeInsets: proxy.safeAreaInsets)
         }
 //            .safeAreaInset(edge: .bottom) {
 //                Color.green.frame(height: 80)
@@ -351,7 +352,7 @@ struct TabBarContentView: View {
 //            .safeAreaInset(edge: .top) {
 //                Color.green.frame(height: 104)
 //            }
-        TabBarView(selectedTab: $currTab, safeEdgeInsets: proxy.safeAreaInsets)
+
     }
 }
 </code></pre><p>TabBarView</p>
@@ -442,8 +443,16 @@ enum TabEnum: String {
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            TabBarController()
+    	  // ⭐️⭐️⭐️: if you use NavigationStack in the Project, please note here.
+		  // iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9
+        if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+            NavigationStack {
+                TabBarController()
+            }
+        } else {
+            NavigationView {
+                TabBarController()
+            }
         }
     }
 }
