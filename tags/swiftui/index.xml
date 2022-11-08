@@ -6,7 +6,25 @@
     <description>Recent content in swiftui on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2022 20:56:39 +0800</lastBuildDate><atom:link href="/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Nov 2022 14:35:21 +0800</lastBuildDate><atom:link href="/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Widget 06 - Making a Dynamic Configurable Widget for tow Intent</title>
+      <link>/2022/11/swiftui-widget-06/</link>
+      <pubDate>Tue, 08 Nov 2022 14:35:21 +0800</pubDate>
+      
+      <guid>/2022/11/swiftui-widget-06/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-06.zip&#34;&gt;Demo-06 Download&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project. (&lt;a href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;&gt;Developer Documentation&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOS Widget 05 - Making a Dynamic Configurable Widget</title>
+      <link>/2022/11/swiftui-widget-05/</link>
+      <pubDate>Tue, 08 Nov 2022 11:57:53 +0800</pubDate>
+      
+      <guid>/2022/11/swiftui-widget-05/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-05.zip&#34;&gt;Demo-05 Download&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project. (&lt;a href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;&gt;Developer Documentation&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>SwiftUI NavigationBar Hidden, Slipe Back Problem</title>
       <link>/2022/10/swiftui-navigation-slipback/</link>
@@ -63,7 +81,7 @@
       
       <guid>/2022/10/swiftui-widget-04/</guid>
       <description>&lt;p&gt;I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-04.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-04.zip&#34;&gt;Demo-04 Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,17 +91,16 @@
       
       <guid>/2022/10/swiftui-widget-03/</guid>
       <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-03.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-03.zip&#34;&gt;Demo-03 Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>iOS Widget 02 - Edit Change To Others View</title>
+      <title>iOS Widget 02 - Making a Configurable Widget - 1</title>
       <link>/2022/10/swiftui-widget-02/</link>
       <pubDate>Fri, 07 Oct 2022 16:35:19 +2100</pubDate>
       
       <guid>/2022/10/swiftui-widget-02/</guid>
-      <description>&lt;p&gt;How to implement &lt;code&gt;Editing Widget&lt;/code&gt; in the home? Please take a look at the effect.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-02.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-02.zip&#34;&gt;Demo-02 Download&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -92,7 +109,7 @@
       <pubDate>Fri, 07 Oct 2022 16:30:19 +2100</pubDate>
       
       <guid>/2022/10/swiftui-widget-01/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-01.zip&#34;&gt;Demo Download&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;/file/swiftui/WidgetApp-01.zip&#34;&gt;Demo-01 Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start by building our simple App. Open up Xcode and create a new iOS App Project; make sure SwiftUI is selected in the Interface options and SwiftUI App is selected in the Life Cycle options.&lt;/p&gt;</description>
     </item>
     
