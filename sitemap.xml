@@ -3,24 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
-  </url><url>
-    <loc>/2022/11/swiftui-widget-06/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+  </url><url>
+    <loc>/tags/swift/</loc>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+  </url><url>
+    <loc>/categories/swift/</loc>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+  </url><url>
+    <loc>/2023/12/swift_static_funclhs_rhs/</loc>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+  </url><url>
+    <loc>/2022/11/swiftui-widget-06/</loc>
     <lastmod>2022-11-08T14:35:21+08:00</lastmod>
   </url><url>
     <loc>/tags/swiftui/</loc>
     <lastmod>2022-11-08T14:35:21+08:00</lastmod>
   </url><url>
     <loc>/categories/swiftui/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-11-08T14:35:21+08:00</lastmod>
   </url><url>
     <loc>/2022/11/swiftui-widget-05/</loc>
@@ -72,10 +81,19 @@
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
   </url><url>
     <loc>/about/journey/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/about/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
+  </url><url>
+    <loc>/tags/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
+  </url><url>
+    <loc>/categories/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
   </url><url>
     <loc>/journey/202208-jinan/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
@@ -253,12 +271,6 @@
   </url><url>
     <loc>/2016/12/ios-spritekit-scenekit/</loc>
     <lastmod>2016-12-18T22:08:49+00:00</lastmod>
-  </url><url>
-    <loc>/tags/swift/</loc>
-    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
-  </url><url>
-    <loc>/categories/swift/</loc>
-    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
   </url><url>
     <loc>/2016/10/swift3-gcd-dispatch-async/</loc>
     <lastmod>2016-10-30T15:45:13+00:00</lastmod>

@@ -6,7 +6,19 @@
     <description>Recent content in swift on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Oct 2016 15:45:13 +0000</lastBuildDate><atom:link href="/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:46 +0100</lastBuildDate><atom:link href="/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
+      <link>/2023/12/swift_static_funclhs_rhs/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:46 +0100</pubDate>
+      
+      <guid>/2023/12/swift_static_funclhs_rhs/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;It&amp;rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&amp;rsquo;t understand. Why is the symbol &amp;lsquo;==&amp;rsquo; used in function names?&amp;quot;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;static func == (lhs: Person, rhs: Person) -&amp;gt; Bool { 
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
     <item>
       <title>Swift3中dispatch_once废弃的解决办法</title>
       <link>/2016/10/swift3-gcd-dispatch-async/</link>

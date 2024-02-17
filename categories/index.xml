@@ -6,13 +6,31 @@
     <description>Recent content in Categories on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Nov 2022 14:35:21 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:46 +0100</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>swift</title>
+      <link>/categories/swift/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:46 +0100</pubDate>
+      
+      <guid>/categories/swift/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>swiftui</title>
       <link>/categories/swiftui/</link>
       <pubDate>Tue, 08 Nov 2022 14:35:21 +0800</pubDate>
       
       <guid>/categories/swiftui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aboutme</title>
+      <link>/categories/aboutme/</link>
+      <pubDate>Sat, 03 Sep 2022 11:47:32 +0800</pubDate>
+      
+      <guid>/categories/aboutme/</guid>
       <description></description>
     </item>
     
@@ -85,15 +103,6 @@
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
       <guid>/categories/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>swift</title>
-      <link>/categories/swift/</link>
-      <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
-      
-      <guid>/categories/swift/</guid>
       <description></description>
     </item>
     

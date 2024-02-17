@@ -6,7 +6,19 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Nov 2022 14:35:21 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:46 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
+      <link>/2023/12/swift_static_funclhs_rhs/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:46 +0100</pubDate>
+      
+      <guid>/2023/12/swift_static_funclhs_rhs/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;It&amp;rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&amp;rsquo;t understand. Why is the symbol &amp;lsquo;==&amp;rsquo; used in function names?&amp;quot;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;static func == (lhs: Person, rhs: Person) -&amp;gt; Bool { 
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
     <item>
       <title>iOS Widget 06 - Making a Dynamic Configurable Widget for tow Intent</title>
       <link>/2022/11/swiftui-widget-06/</link>
@@ -189,6 +201,19 @@
   05.2022 Beijing World Park
   11.2021 Beijing
  </description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/about/aboutme/</link>
+      <pubDate>Sat, 03 Sep 2022 11:47:32 +0800</pubDate>
+      
+      <guid>/about/aboutme/</guid>
+      <description>04.2022 这个月的最后一个工作日，也是我在这家公司的最后一天。
+12.2020 Faceing the reality, I have to start my new job again.
+01.2020 Because of the COVID-19, the company is closed. Because everyone is not allowed to go out, I can&amp;rsquo;t find a new job. Then I decided to do a project with my friends.
+In this year, I learned Javaand VUE, we did a project. Then use docker to deploy in the Linux server.
+Although I didn&amp;rsquo;t get a dood income, but I learned a lot in this year.</description>
     </item>
     
     <item>
