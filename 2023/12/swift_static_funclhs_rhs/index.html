@@ -333,6 +333,31 @@ let p2 = Person(name: &quot;David&quot;, age: 18)
 if p1 == p2 {
     print(&quot;It's the same person&quot;)
 }
+</code></pre><h4 id="comparable-same-as-">Comparable same as ==</h4>
+<pre tabindex="0"><code>public protocol Comparable: Equatable {
+  static func &lt; (lhs: Self, rhs: Self) -&gt; Bool
+  static func &lt;= (lhs: Self, rhs: Self) -&gt; Bool
+  static func &gt;= (lhs: Self, rhs: Self) -&gt; Bool
+  static func &gt; (lhs: Self, rhs: Self) -&gt; Bool
+}
+
+extension Comparable {
+
+  @inlinable
+  public static func &gt; (lhs: Self, rhs: Self) -&gt; Bool {
+    return rhs &lt; lhs
+  }
+
+  @inlinable
+  public static func &lt;= (lhs: Self, rhs: Self) -&gt; Bool {
+    return !(rhs &lt; lhs)
+  }
+
+  @inlinable
+  public static func &gt;= (lhs: Self, rhs: Self) -&gt; Bool {
+    return !(lhs &lt; rhs)
+  }
+}
 </code></pre>
               
 
