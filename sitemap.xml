@@ -3,13 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
+  </url><url>
+    <loc>/2023/12/swiftui_change_theme/</loc>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
+  </url><url>
+    <loc>/tags/swiftui/</loc>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
+  </url><url>
+    <loc>/categories/swiftui/</loc>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
   </url><url>
     <loc>/tags/swift/</loc>
     <lastmod>2023-12-17T00:00:46+01:00</lastmod>
@@ -20,16 +32,7 @@
     <loc>/2023/12/swift_static_funclhs_rhs/</loc>
     <lastmod>2023-12-17T00:00:46+01:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
-  </url><url>
     <loc>/2022/11/swiftui-widget-06/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
-  </url><url>
-    <loc>/tags/swiftui/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
-  </url><url>
-    <loc>/categories/swiftui/</loc>
     <lastmod>2022-11-08T14:35:21+08:00</lastmod>
   </url><url>
     <loc>/2022/11/swiftui-widget-05/</loc>

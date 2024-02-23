@@ -6,7 +6,16 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 00:00:46 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Dec 2023 13:55:16 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to change the App Theme</title>
+      <link>/2023/12/swiftui_change_theme/</link>
+      <pubDate>Thu, 21 Dec 2023 13:55:16 +0100</pubDate>
+      
+      <guid>/2023/12/swiftui_change_theme/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m currently developing an App, and I aim to realize multiple theme colors. Users will have the option to switch between themes such as red, orange, blue and others. Therefore, I&amp;rsquo;m documenting how this functionality is implemented here.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
       <link>/2023/12/swift_static_funclhs_rhs/</link>
