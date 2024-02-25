@@ -298,12 +298,12 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
               <p><code>版权声明：本文为博主原创文章，未经博主允许不得转载。</code></p>
 <p>做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）</p>
 <p>错误日志截图
-<img src="/img/DB-Error-1-unrecognized-token/0001.jpeg" alt="screen">
+<img src="/img/before/db-error-0001.jpeg" alt="screen">
 NSString *sql_select = [NSString stringWithFormat:@&ldquo;select * from %@ where uid = %@ and dev_id = %@&quot;,TBNAME_User_Dev, uid, device.nameOrAddress];</p>
-<p><img src="/img/DB-Error-1-unrecognized-token/0002.jpeg" alt="screen">
+<p><img src="/img/before/db-error-0002.jpeg" alt="screen">
 原代码是这样写的。解决方法是在 uid , dev_id 的两个参数 上 加上 单引号(这两个是字符类型变量)。</p>
 <p>NSString *sql_select = [NSString stringWithFormat:@&ldquo;select * from %@ where uid = &lsquo;%@&rsquo; and dev_id = &lsquo;%@&rsquo; &ldquo;,TBNAME_User_Dev, uid, device.nameOrAddress];</p>
-<p><img src="/img/DB-Error-1-unrecognized-token/0003.jpeg" alt="screen">
+<p><img src="/img/before/db-error-0003.jpeg" alt="screen">
 倘若使用这种方法写，就不需要加 引号了。这种使用 ? 问号的，就没有碰到这种问题。</p>
 <p>NSString  *str = [NSString  stringWithFormat:@&ldquo;insert into %@(uid, dev_id, created_at, status) values (?, ?, ?, ?)&quot;,TBNAME_User_Dev];</p>
               

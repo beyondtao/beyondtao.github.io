@@ -318,17 +318,17 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <li>Xcode: 14</li>
 </ul>
 <p>We can found that when we click the button, the icon changes.</p>
-<p><img src="/img/swiftui/appicon-changes-001.png" alt="image"></p>
-<p><img src="/img/swiftui/appicon-changes-002.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-001.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-002.png" alt="image"></p>
 <p>In the picture we can see that there is only <code>1024*1024px</code> in AppIcon of Xcode14. Wow, that&rsquo;s so easily in the Xcode14. So now we only need to prepare a few <code>1024*1024px</code> pictures. Just like this:</p>
-<p><img src="/img/swiftui/appicon-changes-003.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-003.png" alt="image"></p>
 <p>But if we want to use multiple AppIcons, we need modify the setting in the <code>Build Setting</code>. In the Search Bar filled the text: <code>include all</code>. Then we can see Key: Include All App Icon Assets, make it as Yes.</p>
-<p><img src="/img/swiftui/appicon-changes-004.png" alt="image"></p>
-<p><img src="/img/swiftui/appicon-changes-005.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-004.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-005.png" alt="image"></p>
 <p>Then we begin to write the code. All my code is in the picture. And you can also copy the code directory in the bottom.</p>
 <p>Why did I add an alert in the last Text? When an error window pop up, you can customize the message content.</p>
 <p>If your system is not in English, you will find that the pop-up message is always in English. So we need to set internationalization. In the TARGETS, then go to Info, add a Key: Localized resources can be mixed, Value: YES.</p>
-<p><img src="/img/swiftui/appicon-changes-006.png" alt="image"></p>
+<p><img src="/img/2022/appicon-changes-006.png" alt="image"></p>
 <pre tabindex="0"><code>@State var isPresented = false
     var body: some View {
         VStack {

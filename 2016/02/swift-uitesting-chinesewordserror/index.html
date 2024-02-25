@@ -302,11 +302,11 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
               <p><code>版权声明：本文为博主原创文章，未经博主允许不得转载。</code></p>
 <h2 id="uitesting中文出错">UITesting中文出错</h2>
 <p>今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。</p>
-<p><img src="/img/swift/UITesting-ChineseWordsError-1.png" alt="错误"></p>
+<p><img src="/img/before/UITesting-ChineseWordsError-1.png" alt="错误"></p>
 <p>如图，所有中文的内容，在脚本内都显示为 unicode编码形式。无奈，采取了转义字符，如下图所示</p>
-<p><img src="/img/swift/UITesting-ChineseWordsError-2.png" alt="错误"></p>
+<p><img src="/img/before/UITesting-ChineseWordsError-2.png" alt="错误"></p>
 <p>至少双引号内的已经是字符串类型了。然后运行一下脚本，发现不通过。所以尝试一下手动进行文字输入，如下图：</p>
-<p><img src="/img/swift/UITesting-ChineseWordsError-3.png" alt="错误"></p>
+<p><img src="/img/before/UITesting-ChineseWordsError-3.png" alt="错误"></p>
 <p>执行脚本，发现成功。</p>
 <p>唯一遗憾的是，并没有找到更好的解决办法，也没有大牛那种专研的技术和坚韧去继续寻找完美的解决方案。</p>
               

@@ -323,17 +323,17 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <h4 id="dns64nat64-过渡工作流程">DNS64/NAT64 过渡工作流程</h4>
 <p>为了帮助减缓IPv4地址耗尽，NAT在许多IPv4网络实现。虽然这个解决方案暂时工作，它证明了昂贵和脆弱。今天，随着越来越多的客户使用IPv6，供应商现在必须同时支持IPv4和IPv6。这是一个代价高昂的努力。
 图<code>1-1</code>蜂窝网络提供独立的IPv4和IPv6连接
-<img src="/img/ios/require-ipv6-1.png" alt="IPv4和IPv6连接"></p>
+<img src="/img/before/require-ipv6-1.png" alt="IPv4和IPv6连接"></p>
 <p>理想的情况下，供应商要降为IPv4网络支持。然而，这样做可以防止客户端访问IPv4的服务器，这是互联网的一个重要部分。为了解决这个问题，最主要的网络供应商实施 DNS64/NAT64 过渡工作。这是一个纯IPv6网络，继续提供访问IPv4内容通过翻译。
 图<code>1-2</code>蜂窝网络的部署与 DNS64 和 NAT64 的IPv6网络
-<img src="/img/ios/require-ipv6-2.png" alt="DNS64 和 NAT64 的IPv6网络"></p>
+<img src="/img/before/require-ipv6-2.png" alt="DNS64 和 NAT64 的IPv6网络"></p>
 <p>在这种类型的工作流中，客户端发送DNS查询到DNS64服务器，它要求从DNS服务器获取 IPv6 地址。当一个IPv6地址被发现，它会立即传回到客户端。然而，当没有找到IPv6地址时，DNS64服务器请求一个IPv4地址代替。然后DNS64服务器通过为IPv4添加地址前缀合成一个IPv6地址，并传递回客户端。在这方面，客户端总是收到一个IPv6-ready地址（In this regard, the client always receives an IPv6-ready address.最后一句原文 By 老陶2016-05-22 12:29:56）。</p>
 <p>图<code>1-3</code>处理IPv4向IPv6的转换过程
-<img src="/img/ios/require-ipv6-3.png" alt="IPv4向IPv6的转换过程"></p>
+<img src="/img/before/require-ipv6-3.png" alt="IPv4向IPv6的转换过程"></p>
 <p>当客户端像服务器发送一个请求，任何IPv6数据包</p>
 <p>When the client sends a request to a server, any IPv6 packets destined for synthesized addresses are automatically routed by the network through a NAT64 gateway. The gateway performs the IPv6-to-IPv4 address and protocol translation for the request. It also performs the IPv4 to IPv6 translation for the response from the server. See Figure 1-4.</p>
 <p>图<code>1-4</code> DNS64/NAT64过渡方案工作流程
-<img src="/img/ios/require-ipv6-4.png" alt="DNS64/NAT64过渡方案工作流程"></p>
+<img src="/img/before/require-ipv6-4.png" alt="DNS64/NAT64过渡方案工作流程"></p>
 <h4 id="ipv6-和-app-store-的要求">IPv6 和 App Store 的要求</h4>
 <p>IPv6 DNS64/NAT64的网络兼容性处理将成为 App Store 的一个提交要求，所以应用程序兼容性不可少的。好消息是大部分软件都兼容IPv6.对于这些应用，定期回归测试你的应用程序仍然是有必要的。不兼容IPv6的应用在操作DNS64/NAT64网络时可能会遇到问题。幸运的是，解决这些问题通常很简单，就像是本章节所讨论的。</p>
 <h4 id="支持ipv6的常见问题">支持IPv6的常见问题</h4>
@@ -360,7 +360,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <pre><code>应用需要可以建立在`高级网络框架` 或 `低级POSIX socket API网络框架`。在大多数情况下，高层次框架是足够的。它们有能力，易于使用，相比低级API拥有更少的缺陷。
 </code></pre>
 <p>图 <code>1-5</code> 网络框架和API图
-<img src="/img/ios/require-ipv6-5.png" alt="网络框架和API图"></p>
+<img src="/img/before/require-ipv6-5.png" alt="网络框架和API图"></p>
 <ul>
 <li>
 <p><!-- raw HTML omitted -->WebKit.<!-- raw HTML omitted --> This framework provides a set of classes for displaying web content in windows, and implements browser features such as following links, managing a back-forward list, and managing a history of pages recently visited. WebKit simplifies the complicated process of loading webpages—that is, asynchronously requesting web content from an HTTP server where the response may arrive incrementally, in random order, or partially due to network errors. For more information, see <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/WebKit/ObjC_classic/index.html#//apple_ref/doc/uid/TP30000745">WebKit Framework Reference</a>.</p>

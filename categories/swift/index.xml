@@ -6,7 +6,17 @@
     <description>Recent content in swift on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 00:00:46 +0100</lastBuildDate><atom:link href="/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 20:36:12 +0100</lastBuildDate><atom:link href="/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift Dates and Times</title>
+      <link>/2023/12/swift_datetime/</link>
+      <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
+      
+      <guid>/2023/12/swift_datetime/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;&gt;From Jpmtech&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I need to develop a calendar module, so I have collected some information online for reference.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
       <link>/2023/12/swift_static_funclhs_rhs/</link>
@@ -25,7 +35,7 @@
       <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
       
       <guid>/2016/10/swift3-gcd-dispatch-async/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/swift/swift3-GCD-dispatch-async-01.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/before/swift3-GCD-dispatch-async-01.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

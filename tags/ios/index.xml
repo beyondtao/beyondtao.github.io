@@ -36,7 +36,7 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;&gt;转载自简书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述&lt;/h3&gt;
 &lt;p&gt;苹果官方图
-&lt;img src=&#34;/img/ios/iOS-AVAudioSession.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
+&lt;img src=&#34;/img/before/iOS-AVAudioSession.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;</description>
     </item>
     
