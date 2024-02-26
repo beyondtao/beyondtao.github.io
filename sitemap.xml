@@ -3,17 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/tags/swiftui/</loc>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/categories/swiftui/</loc>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/2024/02/swiftui5.9_localizable/</loc>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -32,22 +52,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>/2023/12/swiftui_change_theme/</loc>
-    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/tags/swiftui/</loc>
-    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/categories/swiftui/</loc>
     <lastmod>2023-12-21T13:55:16+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

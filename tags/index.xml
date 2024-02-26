@@ -6,22 +6,22 @@
     <description>Recent content in Tags on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 20:36:12 +0100</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>swiftui</title>
+      <link>/tags/swiftui/</link>
+      <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
+      
+      <guid>/tags/swiftui/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>swift</title>
       <link>/tags/swift/</link>
       <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
       
       <guid>/tags/swift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>swiftui</title>
-      <link>/tags/swiftui/</link>
-      <pubDate>Thu, 21 Dec 2023 13:55:16 +0100</pubDate>
-      
-      <guid>/tags/swiftui/</guid>
       <description></description>
     </item>
     

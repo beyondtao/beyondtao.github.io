@@ -6,7 +6,16 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 20:36:12 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI Localization with Xcode 15</title>
+      <link>/2024/02/swiftui5.9_localizable/</link>
+      <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
+      
+      <guid>/2024/02/swiftui5.9_localizable/</guid>
+      <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Swift Dates and Times</title>
       <link>/2023/12/swift_datetime/</link>
