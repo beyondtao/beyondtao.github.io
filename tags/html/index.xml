@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>html on Scott&#39;s Blog</title>
-    <link>/tags/html/</link>
+    <link>https://blog.iostao.com/tags/html/</link>
     <description>Recent content in html on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Mar 2017 10:35:56 +0000</lastBuildDate><atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2017 10:35:56 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML样式、链接、表格</title>
-      <link>/2017/03/html-style-link-table/</link>
+      <link>https://blog.iostao.com/2017/03/html-style-link-table/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
-      <guid>/2017/03/html-style-link-table/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-style-link-table/</guid>
       <description>&lt;h2 id=&#34;html样式链接表格&#34;&gt;HTML样式、链接、表格&lt;/h2&gt;
 &lt;h3 id=&#34;一样式&#34;&gt;一、样式&lt;/h3&gt;
 &lt;h4 id=&#34;1标签&#34;&gt;1、标签&lt;/h4&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>JavaScript 基础教程</title>
-      <link>/2017/03/html-javascript-elements/</link>
+      <link>https://blog.iostao.com/2017/03/html-javascript-elements/</link>
       <pubDate>Thu, 09 Mar 2017 15:07:25 +0000</pubDate>
       
-      <guid>/2017/03/html-javascript-elements/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-javascript-elements/</guid>
       <description>&lt;h2 id=&#34;41-javascript基础教程&#34;&gt;4.1 JavaScript基础教程&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
@@ -44,10 +44,10 @@
     
     <item>
       <title>3.7 CSS动画--页面特效</title>
-      <link>/2017/03/html-css-animation/</link>
+      <link>https://blog.iostao.com/2017/03/html-css-animation/</link>
       <pubDate>Tue, 07 Mar 2017 15:06:23 +0000</pubDate>
       
-      <guid>/2017/03/html-css-animation/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-css-animation/</guid>
       <description>&lt;h2 id=&#34;37-css动画--页面特效&#34;&gt;3.7 CSS动画&amp;ndash;页面特效&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>3.4 CSS定位 &#43; 3.5 &#43; 3.6</title>
-      <link>/2017/03/html-css-position/</link>
+      <link>https://blog.iostao.com/2017/03/html-css-position/</link>
       <pubDate>Sun, 05 Mar 2017 15:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-css-position/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-css-position/</guid>
       <description>&lt;h2 id=&#34;34-css定位&#34;&gt;3.4 CSS定位&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;概要&lt;/p&gt;
@@ -78,10 +78,10 @@
     
     <item>
       <title>3.3 CSS盒子模型</title>
-      <link>/2017/03/html-css-box/</link>
+      <link>https://blog.iostao.com/2017/03/html-css-box/</link>
       <pubDate>Sat, 04 Mar 2017 15:01:17 +0000</pubDate>
       
-      <guid>/2017/03/html-css-box/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-css-box/</guid>
       <description>&lt;h2 id=&#34;33-css盒子模型&#34;&gt;3.3 CSS盒子模型&lt;/h2&gt;
 &lt;h2 id=&#34;课程概要&#34;&gt;课程概要&lt;/h2&gt;
 &lt;ul&gt;
@@ -95,10 +95,10 @@
     
     <item>
       <title>3.2 CSS基础样式讲解</title>
-      <link>/2017/03/html-css-style/</link>
+      <link>https://blog.iostao.com/2017/03/html-css-style/</link>
       <pubDate>Fri, 03 Mar 2017 15:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-css-style/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-css-style/</guid>
       <description>&lt;h2 id=&#34;32-css基础样式讲解&#34;&gt;3.2 CSS基础样式讲解&lt;/h2&gt;
 &lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
 &lt;ul&gt;
@@ -114,10 +114,10 @@
     
     <item>
       <title>3.1 CSS3基础</title>
-      <link>/2017/03/html-css-elements/</link>
+      <link>https://blog.iostao.com/2017/03/html-css-elements/</link>
       <pubDate>Thu, 02 Mar 2017 14:08:54 +0000</pubDate>
       
-      <guid>/2017/03/html-css-elements/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-css-elements/</guid>
       <description>&lt;h2 id=&#34;31-css3基础&#34;&gt;3.1 CSS3基础&lt;/h2&gt;
 &lt;h3 id=&#34;一css入门基础&#34;&gt;一、CSS入门基础&lt;/h3&gt;
 &lt;h4 id=&#34;1背景&#34;&gt;1、背景&lt;/h4&gt;
@@ -134,10 +134,10 @@ background-repeat | 设置背景图片是否及如何重复
     
     <item>
       <title>HTML5框架、背景和实体-框架</title>
-      <link>/2017/03/html-framework-bg/</link>
+      <link>https://blog.iostao.com/2017/03/html-framework-bg/</link>
       <pubDate>Wed, 01 Mar 2017 09:13:57 +0000</pubDate>
       
-      <guid>/2017/03/html-framework-bg/</guid>
+      <guid>https://blog.iostao.com/2017/03/html-framework-bg/</guid>
       <description>&lt;h2 id=&#34;html5框架背景和实体-框架&#34;&gt;HTML5框架、背景和实体-框架&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HTML框架&lt;/li&gt;

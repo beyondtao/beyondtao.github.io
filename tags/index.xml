@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Scott&#39;s Blog</title>
-    <link>/tags/</link>
+    <link>https://blog.iostao.com/tags/</link>
     <description>Recent content in Tags on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swiftui</title>
-      <link>/tags/swiftui/</link>
+      <link>https://blog.iostao.com/tags/swiftui/</link>
       <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
       
-      <guid>/tags/swiftui/</guid>
+      <guid>https://blog.iostao.com/tags/swiftui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>swift</title>
-      <link>/tags/swift/</link>
+      <link>https://blog.iostao.com/tags/swift/</link>
       <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
       
-      <guid>/tags/swift/</guid>
+      <guid>https://blog.iostao.com/tags/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vue</title>
-      <link>/tags/vue/</link>
+      <link>https://blog.iostao.com/tags/vue/</link>
       <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
       
-      <guid>/tags/vue/</guid>
+      <guid>https://blog.iostao.com/tags/vue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac</title>
-      <link>/tags/mac/</link>
+      <link>https://blog.iostao.com/tags/mac/</link>
       <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
       
-      <guid>/tags/mac/</guid>
+      <guid>https://blog.iostao.com/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>/tags/git/</link>
+      <link>https://blog.iostao.com/tags/git/</link>
       <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
       
-      <guid>/tags/git/</guid>
+      <guid>https://blog.iostao.com/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ios</title>
-      <link>/tags/ios/</link>
+      <link>https://blog.iostao.com/tags/ios/</link>
       <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
       
-      <guid>/tags/ios/</guid>
+      <guid>https://blog.iostao.com/tags/ios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/tags/golang/</link>
+      <link>https://blog.iostao.com/tags/golang/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://blog.iostao.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/tags/linux/</link>
+      <link>https://blog.iostao.com/tags/linux/</link>
       <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://blog.iostao.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/tags/docker/</link>
+      <link>https://blog.iostao.com/tags/docker/</link>
       <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>https://blog.iostao.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>/tags/html/</link>
+      <link>https://blog.iostao.com/tags/html/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
-      <guid>/tags/html/</guid>
+      <guid>https://blog.iostao.com/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deutsch</title>
-      <link>/tags/deutsch/</link>
+      <link>https://blog.iostao.com/tags/deutsch/</link>
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/deutsch/</guid>
+      <guid>https://blog.iostao.com/tags/deutsch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>aps</title>
-      <link>/tags/aps/</link>
+      <link>https://blog.iostao.com/tags/aps/</link>
       <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
       
-      <guid>/tags/aps/</guid>
+      <guid>https://blog.iostao.com/tags/aps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo</title>
-      <link>/tags/hexo/</link>
+      <link>https://blog.iostao.com/tags/hexo/</link>
       <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
       
-      <guid>/tags/hexo/</guid>
+      <guid>https://blog.iostao.com/tags/hexo/</guid>
       <description></description>
     </item>
     

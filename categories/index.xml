@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Scott&#39;s Blog</title>
-    <link>/categories/</link>
+    <link>https://blog.iostao.com/categories/</link>
     <description>Recent content in Categories on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swiftui</title>
-      <link>/categories/swiftui/</link>
+      <link>https://blog.iostao.com/categories/swiftui/</link>
       <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
       
-      <guid>/categories/swiftui/</guid>
+      <guid>https://blog.iostao.com/categories/swiftui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>swift</title>
-      <link>/categories/swift/</link>
+      <link>https://blog.iostao.com/categories/swift/</link>
       <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
       
-      <guid>/categories/swift/</guid>
+      <guid>https://blog.iostao.com/categories/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vue</title>
-      <link>/categories/vue/</link>
+      <link>https://blog.iostao.com/categories/vue/</link>
       <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
       
-      <guid>/categories/vue/</guid>
+      <guid>https://blog.iostao.com/categories/vue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac</title>
-      <link>/categories/mac/</link>
+      <link>https://blog.iostao.com/categories/mac/</link>
       <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
       
-      <guid>/categories/mac/</guid>
+      <guid>https://blog.iostao.com/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>/categories/git/</link>
+      <link>https://blog.iostao.com/categories/git/</link>
       <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
       
-      <guid>/categories/git/</guid>
+      <guid>https://blog.iostao.com/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ios</title>
-      <link>/categories/ios/</link>
+      <link>https://blog.iostao.com/categories/ios/</link>
       <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
       
-      <guid>/categories/ios/</guid>
+      <guid>https://blog.iostao.com/categories/ios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/categories/golang/</link>
+      <link>https://blog.iostao.com/categories/golang/</link>
       <pubDate>Mon, 18 May 2020 11:51:10 +0000</pubDate>
       
-      <guid>/categories/golang/</guid>
+      <guid>https://blog.iostao.com/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/categories/linux/</link>
+      <link>https://blog.iostao.com/categories/linux/</link>
       <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>https://blog.iostao.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/categories/docker/</link>
+      <link>https://blog.iostao.com/categories/docker/</link>
       <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
       
-      <guid>/categories/docker/</guid>
+      <guid>https://blog.iostao.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>/categories/html/</link>
+      <link>https://blog.iostao.com/categories/html/</link>
       <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
       
-      <guid>/categories/html/</guid>
+      <guid>https://blog.iostao.com/categories/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deutsch</title>
-      <link>/categories/deutsch/</link>
+      <link>https://blog.iostao.com/categories/deutsch/</link>
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/deutsch/</guid>
+      <guid>https://blog.iostao.com/categories/deutsch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>aps-prepare</title>
-      <link>/categories/aps-prepare/</link>
+      <link>https://blog.iostao.com/categories/aps-prepare/</link>
       <pubDate>Sat, 11 Jun 2016 10:46:18 +0000</pubDate>
       
-      <guid>/categories/aps-prepare/</guid>
+      <guid>https://blog.iostao.com/categories/aps-prepare/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo</title>
-      <link>/categories/hexo/</link>
+      <link>https://blog.iostao.com/categories/hexo/</link>
       <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
       
-      <guid>/categories/hexo/</guid>
+      <guid>https://blog.iostao.com/categories/hexo/</guid>
       <description></description>
     </item>
     

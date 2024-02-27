@@ -15,12 +15,12 @@
     "@type": "Person",
     "name": "Scott Tao",
     
-    "image": "/img/xiongmao.png"
+    "image": "https://blog.iostao.com/img/xiongmao.png"
     
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "\/2016\/12\/ios-spritekit-scenekit\/" 
+    "@id": "https:\/\/blog.iostao.com\/2016\/12\/ios-spritekit-scenekit\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -28,7 +28,7 @@
     
     "logo": {
       "@type": "ImageObject",
-      "url": "/img/xiongmao.png"
+      "url": "https://blog.iostao.com/img/xiongmao.png"
     }
     
   },
@@ -52,8 +52,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS SpriteKit/SceneKit/Metal浅析">
 <meta name="twitter:title" content="iOS SpriteKit/SceneKit/Metal浅析">
-<meta property="og:url" content="/2016/12/ios-spritekit-scenekit/">
-<meta property="twitter:url" content="/2016/12/ios-spritekit-scenekit/">
+<meta property="og:url" content="https://blog.iostao.com/2016/12/ios-spritekit-scenekit/">
+<meta property="twitter:url" content="https://blog.iostao.com/2016/12/ios-spritekit-scenekit/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
 <meta property="og:description" content="【SpriteKit】
 在iOS7中内置了新的SpriteKit框架，该框架主要用来开发2D游戏。是开发iOS和OS X 下的2D游戏引擎，可以使用OC或者Swift来进行开发。目前已经支持的内容包括：精灵、很酷的特效（例如视频、滤镜和遮罩），并且还集成了物理库等许多东西。首先指出在iOS中开发2D游戏SpriteKit并不是唯一的选择，我们先来看看SpriteKit的特点和优缺点：">
@@ -88,8 +88,8 @@
 
 
 
-  <meta property="og:image" content="/img/xiongmao.png">
-  <meta property="twitter:image" content="/img/xiongmao.png">
+  <meta property="og:image" content="https://blog.iostao.com/img/xiongmao.png">
+  <meta property="twitter:image" content="https://blog.iostao.com/img/xiongmao.png">
 
 
 
@@ -98,12 +98,12 @@
 
     <title>iOS SpriteKit/SceneKit/Metal浅析</title>
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="https://blog.iostao.com/favicon.png">
     
 
     
 
-    <link rel="canonical" href="/2016/12/ios-spritekit-scenekit/">
+    <link rel="canonical" href="https://blog.iostao.com/2016/12/ios-spritekit-scenekit/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -113,7 +113,7 @@
     
     
     
-    <link rel="stylesheet" href="/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="https://blog.iostao.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
@@ -128,17 +128,17 @@
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="/" aria-label="Go to homepage">Scott&#39;s Blog</a>
+    <a class="header-title-link" href="https://blog.iostao.com/" aria-label="Go to homepage">Scott&#39;s Blog</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="/#about" aria-label="Open the link: /#about">
+         href="https://blog.iostao.com/#about" aria-label="Open the link: /#about">
     
     
     
       
-        <img class="header-picture" src="/img/xiongmao.png" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://blog.iostao.com/img/xiongmao.png" alt="Author&#39;s picture" />
       
     
     </a>
@@ -149,8 +149,8 @@
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="/#about" aria-label="Read more about the author">
-          <img class="sidebar-profile-picture" src="/img/xiongmao.png" alt="Author&#39;s picture" />
+        <a href="https://blog.iostao.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://blog.iostao.com/img/xiongmao.png" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Scott Tao</h4>
         
@@ -165,7 +165,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/" title="Home">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -175,7 +175,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/categories" title="Categories">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/categories" title="Categories">
     
       <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
       
@@ -185,7 +185,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/tags" title="Tags">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/tags" title="Tags">
     
       <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
       
@@ -195,7 +195,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/archives" title="Archives">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/archives" title="Archives">
     
       <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
       
@@ -205,7 +205,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/about/me" title="About Me">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/about/me" title="About Me">
     
       <i class="sidebar-button-icon fas fa-lg fa-address-book" aria-hidden="true"></i>
       
@@ -215,7 +215,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/#about" title="About">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/#about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -229,7 +229,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/beyondtao" title="GitHub">
+      <a class="sidebar-button-link " href="https://github.com/beyondtao" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
       
@@ -243,7 +243,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/index.xml" title="RSS">
+      <a class="sidebar-button-link " href="https://blog.iostao.com/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
       
@@ -285,7 +285,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
   
     <span>in</span>
     
-      <a class="category-link" href="/categories/ios">ios</a>
+      <a class="category-link" href="https://blog.iostao.com/categories/ios">ios</a>
     
   
 
@@ -329,7 +329,7 @@ SceneKit是基于OpenGL构建的。</p>
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="/tags/ios/">ios</a>
+  <a class="tag tag--primary tag--small" href="https://blog.iostao.com/tags/ios/">ios</a>
 
                   </div>
                 
@@ -342,7 +342,7 @@ SceneKit是基于OpenGL构建的。</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-framework-bg/" data-tooltip="HTML5框架、背景和实体-框架" aria-label="NEXT: HTML5框架、背景和实体-框架">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.iostao.com/2017/03/html-framework-bg/" data-tooltip="HTML5框架、背景和实体-框架" aria-label="NEXT: HTML5框架、背景和实体-框架">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -350,7 +350,7 @@ SceneKit是基于OpenGL构建的。</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/swift3-gcd-dispatch-async/" data-tooltip="Swift3中dispatch_once废弃的解决办法" aria-label="PREVIOUS: Swift3中dispatch_once废弃的解决办法">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/" data-tooltip="Swift3中dispatch_once废弃的解决办法" aria-label="PREVIOUS: Swift3中dispatch_once废弃的解决办法">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -368,19 +368,19 @@ SceneKit是基于OpenGL构建的。</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/12/ios-spritekit-scenekit/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/12/ios-spritekit-scenekit/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/12/ios-spritekit-scenekit/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -447,7 +447,7 @@ SceneKit是基于OpenGL构建的。</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/html-framework-bg/" data-tooltip="HTML5框架、背景和实体-框架" aria-label="NEXT: HTML5框架、背景和实体-框架">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.iostao.com/2017/03/html-framework-bg/" data-tooltip="HTML5框架、背景和实体-框架" aria-label="NEXT: HTML5框架、背景和实体-框架">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -455,7 +455,7 @@ SceneKit是基于OpenGL构建的。</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/swift3-gcd-dispatch-async/" data-tooltip="Swift3中dispatch_once废弃的解决办法" aria-label="PREVIOUS: Swift3中dispatch_once废弃的解决办法">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/" data-tooltip="Swift3中dispatch_once废弃的解决办法" aria-label="PREVIOUS: Swift3中dispatch_once废弃的解决办法">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -473,19 +473,19 @@ SceneKit是基于OpenGL构建的。</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2016/12/ios-spritekit-scenekit/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2016/12/ios-spritekit-scenekit/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=/2016/12/ios-spritekit-scenekit/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.iostao.com/2016/12/ios-spritekit-scenekit/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -516,19 +516,19 @@ SceneKit是基于OpenGL构建的。</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.iostao.com%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.iostao.com%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.iostao.com%2F2016%2F12%2Fios-spritekit-scenekit%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
@@ -546,7 +546,7 @@ SceneKit是基于OpenGL构建的。</p>
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="/img/xiongmao.png" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://blog.iostao.com/img/xiongmao.png" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">Scott Tao</h4>
     
@@ -577,7 +577,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
     
   
     
-      <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+      <div id="cover" style="background-image:url('https://blog.iostao.com/images/cover.jpg');"></div>
     
   
 
@@ -590,7 +590,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="https://blog.iostao.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
   
