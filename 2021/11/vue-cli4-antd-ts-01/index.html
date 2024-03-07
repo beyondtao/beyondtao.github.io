@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "介绍  vue3 vue-cli@4.5 ts antd ",
+  "description": "介绍 vue3 vue-cli@4.5 ts antd ",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="介绍
@@ -534,7 +534,7 @@ Axios.interceptors.response.use(res =&gt; {
 <h3 id="调用">调用</h3>
 <p>XX.vue</p>
 <pre tabindex="0"><code>export default {
-  name: 'defaultName',
+  name: &#39;defaultName&#39;,
   data() {
   	return {
   	}
@@ -543,11 +543,11 @@ Axios.interceptors.response.use(res =&gt; {
   	handleRequest() {
   		//参数
 		let params = {
-			'account' : 'admin',
-			'password' : 'admin'
+			&#39;account&#39; : &#39;admin&#39;,
+			&#39;password&#39; : &#39;admin&#39;
      		}
      		//网络请求
-     		that.$http.post('/proxy/login', params).then(res =&gt; {
+     		that.$http.post(&#39;/proxy/login&#39;, params).then(res =&gt; {
      			//我上面封装的返回的是 res.data
      			//所以这里获取到的res其实是 res.data。使用的时候，直接获取数据就可以了
      			//比如 获取 code， res.code 即可

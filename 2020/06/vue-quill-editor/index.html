@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="一、安装依赖
@@ -314,60 +314,60 @@ npm install quill-image-drop-module 	(图片拖拽）
 </code></pre>
 <p>二、使用</p>
 <h3 id="1在-mainjs-中引入">1、在 main.js 中引入</h3>
-<pre tabindex="0"><code>import Vue from 'vue'
-import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+<pre tabindex="0"><code>import Vue from &#39;vue&#39;
+import VueQuillEditor from &#39;vue-quill-editor&#39;
+import &#39;quill/dist/quill.core.css&#39;
+import &#39;quill/dist/quill.snow.css&#39;
+import &#39;quill/dist/quill.bubble.css&#39;
   
 Vue.use(VueQuillEditor)
 </code></pre><h3 id="2封装组件">2、封装组件</h3>
 <p>在 <code>/src/components</code>目录下创建 <code>quill-editor.vue</code></p>
 <pre tabindex="0"><code>&lt;template&gt;
-    &lt;div class=&quot;edit_container&quot;&gt;
+    &lt;div class=&#34;edit_container&#34;&gt;
         &lt;quill-editor
-                v-model=&quot;content&quot;
-                ref=&quot;myQuillEditor&quot;
-                :options=&quot;editorOption&quot;
-                @blur=&quot;onEditorBlur($event)&quot; @focus=&quot;onEditorFocus($event)&quot;
-                @change=&quot;onEditorChange($event)&quot;&gt;
+                v-model=&#34;content&#34;
+                ref=&#34;myQuillEditor&#34;
+                :options=&#34;editorOption&#34;
+                @blur=&#34;onEditorBlur($event)&#34; @focus=&#34;onEditorFocus($event)&#34;
+                @change=&#34;onEditorChange($event)&#34;&gt;
         &lt;/quill-editor&gt;
-        &lt;button v-on:click=&quot;saveHtml&quot;&gt;保存&lt;/button&gt;
+        &lt;button v-on:click=&#34;saveHtml&#34;&gt;保存&lt;/button&gt;
     &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
     export default {
-        name: 'App',
+        name: &#39;App&#39;,
         data(){
             return {
                 content: `&lt;p&gt;hello world&lt;/p&gt;`,
                 editorOption: {
-                    // theme: 'snow',  //主题
+                    // theme: &#39;snow&#39;,  //主题
                     modules:{	//工具栏设置
                         toolbar:[
-                            ['bold', 'italic', 'underline', 'strike'],    //加粗，斜体，下划线，删除线
-                            ['blockquote', 'code-block'],     //引用，代码块
+                            [&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strike&#39;],    //加粗，斜体，下划线，删除线
+                            [&#39;blockquote&#39;, &#39;code-block&#39;],     //引用，代码块
                             // 标题，键值对的形式；1、2表示字体大小
-                            [{ 'header': 1 }, { 'header': 2 }],
-                            [{ 'list': 'ordered'}, { 'list': 'bullet' }],     //列表
-                            [{ 'script': 'sub'}, { 'script': 'super' }],   // 上下标
-                            [{ 'indent': '-1'}, { 'indent': '+1' }],     // 缩进
-                            [{ 'direction': 'rtl' }],             // 文本方向
+                            [{ &#39;header&#39;: 1 }, { &#39;header&#39;: 2 }],
+                            [{ &#39;list&#39;: &#39;ordered&#39;}, { &#39;list&#39;: &#39;bullet&#39; }],     //列表
+                            [{ &#39;script&#39;: &#39;sub&#39;}, { &#39;script&#39;: &#39;super&#39; }],   // 上下标
+                            [{ &#39;indent&#39;: &#39;-1&#39;}, { &#39;indent&#39;: &#39;+1&#39; }],     // 缩进
+                            [{ &#39;direction&#39;: &#39;rtl&#39; }],             // 文本方向
 
 
-                            [{ 'size': ['small', false, 'large', 'huge'] }], // 字体大小
-                            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],     //几级标题
+                            [{ &#39;size&#39;: [&#39;small&#39;, false, &#39;large&#39;, &#39;huge&#39;] }], // 字体大小
+                            [{ &#39;header&#39;: [1, 2, 3, 4, 5, 6, false] }],     //几级标题
 
 
-                            [{ 'color': [] }, { 'background': [] }],     // 字体颜色，字体背景颜色
-                            [{ 'font': [] }],     //字体
-                            [{ 'align': [] }],    //对齐方式
+                            [{ &#39;color&#39;: [] }, { &#39;background&#39;: [] }],     // 字体颜色，字体背景颜色
+                            [{ &#39;font&#39;: [] }],     //字体
+                            [{ &#39;align&#39;: [] }],    //对齐方式
 
 
-                            ['clean'],    //清除字体样式
-                            ['image']
-                            // ['image','video']    //上传图片、上传视频
+                            [&#39;clean&#39;],    //清除字体样式
+                            [&#39;image&#39;]
+                            // [&#39;image&#39;,&#39;video&#39;]    //上传图片、上传视频
                         ]
                     },
                 },
@@ -398,7 +398,7 @@ Vue.use(VueQuillEditor)
 
 &lt;style&gt;
     /*#app {*/
-        /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+        /*font-family: &#39;Avenir&#39;, Helvetica, Arial, sans-serif;*/
         /*-webkit-font-smoothing: antialiased;*/
         /*-moz-osx-font-smoothing: grayscale;*/
         /*text-align: center;*/
@@ -416,9 +416,9 @@ Vue.use(VueQuillEditor)
 
 &lt;script&gt;
 	//*****这里的路径记得修改成自己封装的组件路径*****
-    import quillEditorTemplate from '../../components/quill-editor'
+    import quillEditorTemplate from &#39;../../components/quill-editor&#39;
     export default {
-        name: 'glygl',
+        name: &#39;glygl&#39;,
         components: {
             quillEditorTemplate,
         },

@@ -1,187 +1,131 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>swiftui on Scott&#39;s Blog</title>
+    <title>Swiftui on Scott&#39;s Blog</title>
     <link>https://blog.iostao.com/categories/swiftui/</link>
-    <description>Recent content in swiftui on Scott&#39;s Blog</description>
+    <description>Recent content in Swiftui on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate>
+    <atom:link href="https://blog.iostao.com/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SwiftUI Localization with Xcode 15</title>
       <link>https://blog.iostao.com/2024/02/swiftui5.9_localizable/</link>
       <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
-      
       <guid>https://blog.iostao.com/2024/02/swiftui5.9_localizable/</guid>
       <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to change the App Theme</title>
       <link>https://blog.iostao.com/2023/12/swiftui_change_theme/</link>
       <pubDate>Thu, 21 Dec 2023 13:55:16 +0100</pubDate>
-      
       <guid>https://blog.iostao.com/2023/12/swiftui_change_theme/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m currently developing an App, and I aim to realize multiple theme colors. Users will have the option to switch between themes such as red, orange, blue and others. Therefore, I&amp;rsquo;m documenting how this functionality is implemented here.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 06 - Making a Dynamic Configurable Widget for tow Intent</title>
       <link>https://blog.iostao.com/2022/11/swiftui-widget-06/</link>
       <pubDate>Tue, 08 Nov 2022 14:35:21 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/11/swiftui-widget-06/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-06.zip&#34;&gt;Demo-06 Download.zip&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project. (&lt;a href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;&gt;Developer Documentation&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 05 - Making a Dynamic Configurable Widget</title>
       <link>https://blog.iostao.com/2022/11/swiftui-widget-05/</link>
       <pubDate>Tue, 08 Nov 2022 11:57:53 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/11/swiftui-widget-05/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-05.zip&#34;&gt;Demo-05 Download.zip&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project. (&lt;a href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;&gt;Developer Documentation&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SwiftUI NavigationBar Hidden, Slipe Back Problem</title>
       <link>https://blog.iostao.com/2022/10/swiftui-navigation-slipback/</link>
       <pubDate>Wed, 12 Oct 2022 20:56:39 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-navigation-slipback/</guid>
-      <description>&lt;h2 id=&#34;1-navigation-bar-hidden&#34;&gt;1. Navigation Bar Hidden&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;.navigationBarHidden(true)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In SwiftUI Project when we write this code, the &lt;code&gt;NavigationBar&lt;/code&gt; will be hidden, but the slip back will also be invalid. At this time, we can add &lt;code&gt;Navigation Extension&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;1-navigation-bar-hidden&#34;&gt;1. Navigation Bar Hidden&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;.navigationBarHidden(true)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;In SwiftUI Project when we write this code, the &lt;code&gt;NavigationBar&lt;/code&gt; will be hidden, but the slip back will also be invalid. At this time, we can add &lt;code&gt;Navigation Extension&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SwiftUI Layout - VStack / HStack / ZStack</title>
       <link>https://blog.iostao.com/2022/10/swiftui-layout-stack/</link>
       <pubDate>Tue, 11 Oct 2022 16:11:39 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-layout-stack/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/vstack&#34;&gt;VStack&lt;/a&gt;: A view that arranges its subviews in a vertical line.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/hstack&#34;&gt;HStack&lt;/a&gt;: A view that arranges its subviews in a horizontal line.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/zstack&#34;&gt;ZStack&lt;/a&gt;: A view that overlays its subviews, aligning them in both axes.&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/vstack&#34;&gt;VStack&lt;/a&gt;: A view that arranges its subviews in a vertical line.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/hstack&#34;&gt;HStack&lt;/a&gt;: A view that arranges its subviews in a horizontal line.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/zstack&#34;&gt;ZStack&lt;/a&gt;: A view that overlays its subviews, aligning them in both axes.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>SwiftUI Layout - LazyVGrid &amp; LazyHGrid</title>
       <link>https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/</link>
       <pubDate>Tue, 11 Oct 2022 11:09:01 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyhgrid&#34;&gt;LazyHGrid Documents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyvgrid&#34;&gt;LazyVGrid Documents&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;LazyVGrid&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;LazyHGrid&lt;!-- raw HTML omitted --&gt;, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with &lt;code&gt;Lazy&lt;/code&gt;, indicating that Layout managers will only drawing the child elements when need to be displayed.&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyhgrid&#34;&gt;LazyHGrid Documents&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/lazyvgrid&#34;&gt;LazyVGrid Documents&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;LazyVGrid&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;LazyHGrid&lt;!-- raw HTML omitted --&gt;, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with &lt;code&gt;Lazy&lt;/code&gt;, indicating that Layout managers will only drawing the child elements when need to be displayed.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SwiftUI Collection &#43; NavigationStack</title>
       <link>https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/</link>
       <pubDate>Mon, 10 Oct 2022 20:37:16 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types&#34;&gt;From Apple Document&lt;/a&gt; If your app has a minimum deployment target of iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9, or later, transition away from using NavigationView. In its place, use NavigationStack and NavigationSplitView instances.&lt;/p&gt;
-&lt;p&gt;I need a list of Collections, and the custom Cell, then with &lt;code&gt;NavigationStack&lt;/code&gt; link to the next View.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-Collection.zip&#34;&gt;Demo Download.zip&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types&#34;&gt;From Apple Document&lt;/a&gt; If your app has a minimum deployment target of iOS 16, iPadOS 16, macOS 13, tvOS 16, or watchOS 9, or later, transition away from using NavigationView. In its place, use NavigationStack and NavigationSplitView instances.&lt;/p&gt;&#xA;&lt;p&gt;I need a list of Collections, and the custom Cell, then with &lt;code&gt;NavigationStack&lt;/code&gt; link to the next View.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-Collection.zip&#34;&gt;Demo Download.zip&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 04 - Widget Clock Refresh</title>
       <link>https://blog.iostao.com/2022/10/swiftui-widget-04/</link>
       <pubDate>Fri, 07 Oct 2022 18:00:18 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-widget-04/</guid>
-      <description>&lt;p&gt;I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-04.zip&#34;&gt;Demo-04 Download.zip&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-04.zip&#34;&gt;Demo-04 Download.zip&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 03 - Dynamic Launcher Widgets</title>
       <link>https://blog.iostao.com/2022/10/swiftui-widget-03/</link>
       <pubDate>Fri, 07 Oct 2022 17:16:25 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-widget-03/</guid>
-      <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-03.zip&#34;&gt;Demo-03 Download.zip&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;If you want to select a widget bundle based on some logic, example in App has 10 Widgets, but I just want to display two Widgets when man add the Widgets in the Desktop. You can do the following:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-03.zip&#34;&gt;Demo-03 Download.zip&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 02 - Making a Configurable Widget - 1</title>
       <link>https://blog.iostao.com/2022/10/swiftui-widget-02/</link>
       <pubDate>Fri, 07 Oct 2022 16:35:19 +2100</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-widget-02/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-02.zip&#34;&gt;Demo-02 Download.zip&lt;/a&gt; Give users the option to customize their widgets by adding a custom Intent definition to your project.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>iOS Widget 01 - Build Your First iOS Widget</title>
       <link>https://blog.iostao.com/2022/10/swiftui-widget-01/</link>
       <pubDate>Fri, 07 Oct 2022 16:30:19 +2100</pubDate>
-      
       <guid>https://blog.iostao.com/2022/10/swiftui-widget-01/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-01.zip&#34;&gt;Demo-01 Download.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s start by building our simple App. Open up Xcode and create a new iOS App Project; make sure SwiftUI is selected in the Interface options and SwiftUI App is selected in the Life Cycle options.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/WidgetApp-01.zip&#34;&gt;Demo-01 Download.zip&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start by building our simple App. Open up Xcode and create a new iOS App Project; make sure SwiftUI is selected in the Interface options and SwiftUI App is selected in the Life Cycle options.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>SwiftUI Circlar Progress Bar </title>
       <link>https://blog.iostao.com/2022/09/swiftui-progress-circle/</link>
       <pubDate>Fri, 30 Sep 2022 20:55:19 +2100</pubDate>
-      
       <guid>https://blog.iostao.com/2022/09/swiftui-progress-circle/</guid>
-      <description></description>
+      <description>import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .</description>
     </item>
-    
     <item>
       <title>SwiftUI Animation Scale Image</title>
       <link>https://blog.iostao.com/2022/09/swiftui-animation-scale-image/</link>
       <pubDate>Fri, 23 Sep 2022 18:54:07 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/09/swiftui-animation-scale-image/</guid>
       <description>&lt;p&gt;How to realize flexible animation of pictures? It&amp;rsquo;s very simple to use SwiftUI now.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Why does string localization/internationalization not work in SwiftUI</title>
       <link>https://blog.iostao.com/2022/09/swiftui-string-localization-notwork/</link>
       <pubDate>Tue, 20 Sep 2022 19:56:35 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/09/swiftui-string-localization-notwork/</guid>
       <description>&lt;p&gt;It has been proved that if a string in Text(&amp;ldquo;home) is passed as a text, it can only be interpreted as a localized keyword. If the variable is String type, it doesn&amp;rsquo;t occur. So the answer is to declare a variable of &lt;code&gt;LocalizedStringKey&lt;/code&gt; type.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to Use TabView of SwiftUI</title>
       <link>https://blog.iostao.com/2022/09/swiftui-use-tabview/</link>
       <pubDate>Sun, 18 Sep 2022 17:58:16 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/09/swiftui-use-tabview/</guid>
-      <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through TabView in the SwiftUI.&lt;/p&gt;
-&lt;p&gt;In this Article we will also introduce how to hide TabBar when view pushed.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/eWidget.zip&#34;&gt;Demo Download.zip&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Setting multiple tabbars in UIKit requires UITabBarController. But it&amp;rsquo;s implemented through TabView in the SwiftUI.&lt;/p&gt;&#xA;&lt;p&gt;In this Article we will also introduce how to hide TabBar when view pushed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blog.iostao.com/file/2022/eWidget.zip&#34;&gt;Demo Download.zip&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Dynamically Change the AppIcon</title>
       <link>https://blog.iostao.com/2022/09/swiftui-appicon-changes/</link>
       <pubDate>Sat, 10 Sep 2022 23:03:17 +0800</pubDate>
-      
       <guid>https://blog.iostao.com/2022/09/swiftui-appicon-changes/</guid>
-      <description>&lt;p&gt;I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Interface: SwiftUI&lt;/li&gt;
-&lt;li&gt;Language: Swift&lt;/li&gt;
-&lt;li&gt;Xcode: 14&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Interface: SwiftUI&lt;/li&gt;&#xA;&lt;li&gt;Language: Swift&lt;/li&gt;&#xA;&lt;li&gt;Xcode: 14&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

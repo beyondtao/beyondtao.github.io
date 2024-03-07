@@ -32,7 +32,7 @@
     }
     
   },
-  "description": " LazyHGrid Documents LazyVGrid Documents  LazyVGridand LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.\n",
+  "description": " LazyHGrid Documents LazyVGrid Documents LazyVGrid and LazyHGrid, one is a vertical grid layout and the other is a horizontal grid layout. The new layout manager of iOS14, like LazyVGrid and LazyHStack with Lazy, indicating that Layout managers will only drawing the child elements when need to be displayed.\n",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="
@@ -344,7 +344,7 @@ var body: some View {
              RoundedRectangle(cornerRadius: 5)
                  .foregroundColor(Color(hue: 0.03 * Double(index) , saturation: 1, brightness: 1))
                  .frame(height: 50)
-                 .overlay(Text(&quot;\(String(Unicode.Scalar(65 + index)!))&quot;))
+                 .overlay(Text(&#34;\(String(Unicode.Scalar(65 + index)!))&#34;))
          }
      }
      .padding()
@@ -358,7 +358,7 @@ var body: some View {
           RoundedRectangle(cornerRadius: 5)
               .foregroundColor(Color(hue: 0.03 * Double(index) , saturation: 1, brightness: 1))
               .frame(height: 50)
-              .overlay(Text(&quot;\(String(Unicode.Scalar(127881 + index)!))&quot;))
+              .overlay(Text(&#34;\(String(Unicode.Scalar(127881 + index)!))&#34;))
       }
     }
     .padding()
@@ -369,12 +369,12 @@ var body: some View {
   ScrollView {
       LazyVGrid(columns: [GridItem(.fixed(100)), GridItem(.fixed(100)), GridItem(.fixed(100))], pinnedViews: [.sectionHeaders, .sectionFooters]){
           ForEach(0 ..&lt; 5){ index in
-              Section(header: Text(&quot;Header \(index)&quot;)
+              Section(header: Text(&#34;Header \(index)&#34;)
                           .bold()
                           .font(.title)
                           .frame(maxWidth: .infinity, alignment: .leading)
                           .background(Color.white),
-                      footer: Text(&quot;Footer \(index)&quot;)
+                      footer: Text(&#34;Footer \(index)&#34;)
                               .bold()
                               .font(.title)
                               .frame(maxWidth: .infinity, alignment: .leading)
@@ -384,7 +384,7 @@ var body: some View {
                       RoundedRectangle(cornerRadius: 5)
                           .foregroundColor(Color(hue: 0.03 * Double(index * 10 + idx) , saturation: 1, brightness: 1))
                           .frame(height: 50)
-                          .overlay(Text(&quot;\(index * 10 + idx)&quot;))
+                          .overlay(Text(&#34;\(index * 10 + idx)&#34;))
                   }
               }
           }
@@ -431,7 +431,7 @@ var body: some View {
             GeometryReader{ proxy in
                 RoundedRectangle(cornerRadius: 5)
                     .foregroundColor(Color(hue: 0.1 * Double(index) , saturation: 1, brightness: 1))
-                    .overlay(Text(&quot;\(proxy.size.width)&quot;))
+                    .overlay(Text(&#34;\(proxy.size.width)&#34;))
             }
             .frame(height: 50)
 

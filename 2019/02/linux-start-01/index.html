@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="CentOS 服务器 &#43; Docker
@@ -411,7 +411,7 @@ $ docker run -t -i ubuntu:16.04 /bin/bash
 #重命名容器名
 $ docker rename wonderful_kepler Ubuntu16.04 
 #构建镜像
-$ docker commit -m=&quot;has update&quot; -a=&quot;SpiffyEight77&quot; ff5d623e2d61 spiffyeight77/ubuntu:16.04
+$ docker commit -m=&#34;has update&#34; -a=&#34;SpiffyEight77&#34; ff5d623e2d61 spiffyeight77/ubuntu:16.04
 
 #提交镜像到docker hub 需要登录
 $ docker push spiffyeight77/ubuntu
@@ -439,7 +439,7 @@ ADD main / #把上文编译好的main文件添加到镜像里
 
 EXPOSE 3000 #暴露容器内部端口
 
-ENTRYPOINT [&quot;./main&quot;] #入口
+ENTRYPOINT [&#34;./main&#34;] #入口
 </code></pre>
               
 

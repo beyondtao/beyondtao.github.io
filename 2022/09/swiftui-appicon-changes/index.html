@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.\n Interface: SwiftUI Language: Swift Xcode: 14 ",
+  "description": "I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.\nInterface: SwiftUI Language: Swift Xcode: 14 ",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="I found that the AppIcon of Xcode14 is more convenient. So I want to use SwiftUI to test it in the Xcode14.
@@ -332,35 +332,35 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <pre tabindex="0"><code>@State var isPresented = false
     var body: some View {
         VStack {
-            Text(&quot;Default&quot;)
+            Text(&#34;Default&#34;)
                 .padding()
                 .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(&quot;hehua&quot;)
+                    UIApplication.shared.setAlternateIconName(&#34;hehua&#34;)
                 }
-            Text(&quot;egg&quot;)
+            Text(&#34;egg&#34;)
                 .padding()
                 .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(&quot;egg&quot;)
+                    UIApplication.shared.setAlternateIconName(&#34;egg&#34;)
                 }
-            Text(&quot;devil&quot;)
+            Text(&#34;devil&#34;)
                 .padding()
                 .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(&quot;devil&quot;)
+                    UIApplication.shared.setAlternateIconName(&#34;devil&#34;)
                 }
-            Text(&quot;arrow&quot;)
+            Text(&#34;arrow&#34;)
                 .padding()
                 .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(&quot;arrow&quot;)
+                    UIApplication.shared.setAlternateIconName(&#34;arrow&#34;)
                 }
-            Text(&quot;Error iCon&quot;)
+            Text(&#34;Error iCon&#34;)
                 .padding()
                 .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(&quot;errName&quot;) { error in
+                    UIApplication.shared.setAlternateIconName(&#34;errName&#34;) { error in
                         isPresented = true
                     }
                 }
                 .alert(isPresented: $isPresented) {
-                    let alert = Alert(title: Text(&quot;Error&quot;), message: Text(&quot;Because without this Resource, please check&quot;), dismissButton: .default(Text(&quot;OK&quot;)))
+                    let alert = Alert(title: Text(&#34;Error&#34;), message: Text(&#34;Because without this Resource, please check&#34;), dismissButton: .default(Text(&#34;OK&#34;)))
                     return alert
                 }
         }

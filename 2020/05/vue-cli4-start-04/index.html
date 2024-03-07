@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026quot;app\u0026quot;\u0026gt; \u0026lt;!-- 这一行一定要添加，不然其他页面展示不出来 --\u0026gt; \u0026lt;router-view\u0026gt;\u0026lt;/router-view\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: 'app', components: { } } \u0026lt;/script\u0026gt; ",
+  "description": "操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。\n\u0026lt;template\u0026gt; \u0026lt;div id=\u0026#34;app\u0026#34;\u0026gt; \u0026lt;!-- 这一行一定要添加，不然其他页面展示不出来 --\u0026gt; \u0026lt;router-view\u0026gt;\u0026lt;/router-view\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/template\u0026gt; \u0026lt;script\u0026gt; export default { name: \u0026#39;app\u0026#39;, components: { } } \u0026lt;/script\u0026gt; ",
   "keywords": []
 }
 
@@ -40,12 +40,12 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。
 &lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+  &lt;div id=&#34;app&#34;&gt;
   	&lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&gt;
   	&lt;router-view&gt;&lt;/router-view&gt;
   &lt;/div&gt;
@@ -65,7 +65,7 @@ export default {
 
 <meta property="og:description" content="操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。
 &lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+  &lt;div id=&#34;app&#34;&gt;
   	&lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&gt;
   	&lt;router-view&gt;&lt;/router-view&gt;
   &lt;/div&gt;
@@ -89,7 +89,7 @@ export default {
 <meta property="og:site_name" content="Scott&#39;s Blog">
 <meta property="og:description" content="操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。
 &lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+  &lt;div id=&#34;app&#34;&gt;
   	&lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&gt;
   	&lt;router-view&gt;&lt;/router-view&gt;
   &lt;/div&gt;
@@ -107,7 +107,7 @@ export default {
 ">
 <meta name="twitter:description" content="操作前，我们先打开 App.vue，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。
 &lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+  &lt;div id=&#34;app&#34;&gt;
   	&lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&gt;
   	&lt;router-view&gt;&lt;/router-view&gt;
   &lt;/div&gt;
@@ -361,7 +361,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
             <div class="main-content-wrap">
               <p>操作前，我们先打开 <code>App.vue</code>，因为这里项目默认写了一些东西，我们要去掉，和下面一样即可。</p>
 <pre tabindex="0"><code>&lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
+  &lt;div id=&#34;app&#34;&gt;
   	&lt;!-- 这一行一定要添加，不然其他页面展示不出来 --&gt;
   	&lt;router-view&gt;&lt;/router-view&gt;
   &lt;/div&gt;
@@ -371,7 +371,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 &lt;script&gt;
 
 export default {
-  name: 'app',
+  name: &#39;app&#39;,
   components: {
   }
 }
@@ -381,39 +381,39 @@ export default {
 （这里基本都是代码粘贴复制 + 部分手写，所以最好是手动敲，可以检查一下是否有错误）</p>
 <pre tabindex="0"><code>&lt;script&gt;
 	//这里引入的是 /src/api/api.js
-	import * as Api from '../api/api'	
+	import * as Api from &#39;../api/api&#39;	
 	export default {
-		name: '',
+		name: &#39;&#39;,
 		data() {
 			return {
-				username: '',
-				password: '',
+				username: &#39;&#39;,
+				password: &#39;&#39;,
 			}
 		},
 		//钩子方法 ，可以百度一下：vue的钩子方法
 		created: function() {
 			//控制台可以查看打印的数据，这里用来演示的，可以去掉
-			console.group('created 创建完毕状态===============》');
-            console.log(&quot;%c%s&quot;, &quot;color:red&quot;,&quot;el     : &quot; + this.$el); //undefined  %c 格式化占位符 - css格式化样式
-            console.log(&quot;%c%s&quot;, &quot;color:red&quot;,&quot;data   : &quot; + this.$data); //已被初始化
-            console.log(&quot;%c%s&quot;, &quot;color:red&quot;,&quot;message: &quot; + this.message); //已被初始化
+			console.group(&#39;created 创建完毕状态===============》&#39;);
+            console.log(&#34;%c%s&#34;, &#34;color:red&#34;,&#34;el     : &#34; + this.$el); //undefined  %c 格式化占位符 - css格式化样式
+            console.log(&#34;%c%s&#34;, &#34;color:red&#34;,&#34;data   : &#34; + this.$data); //已被初始化
+            console.log(&#34;%c%s&#34;, &#34;color:red&#34;,&#34;message: &#34; + this.message); //已被初始化
 		},
 		beforeMount: function () {
-			console.group('beforeMount挂载前状态 === === === === ===》')
+			console.group(&#39;beforeMount挂载前状态 === === === === ===》&#39;)
 		},
 		mounted:function() {
-            		console.log('mounted钩子方法============')
+            		console.log(&#39;mounted钩子方法============&#39;)
             	},
             	methods: {	//自定义一些方法，比如点击登录按钮，方法就写在这里
             		toLogin: function () {
             			let params = new URLSearchParams();
-                        params.append('username', username);
-                        params.append('password', password);
+                        params.append(&#39;username&#39;, username);
+                        params.append(&#39;password&#39;, password);
                         //Api 这个是上面 import * as Api 这里定义的。
                         //Api.login 在 api.js 里面定义了 login = params =&gt; {} 这个
                         //一般返回的都是json数据， res. + 属性名就可以获取值了
                         Api.login(params).then(res =&gt; {
-                        		if (res.code == '0') {
+                        		if (res.code == &#39;0&#39;) {
                         			console.log(res.data)
                         		}
                         }, error =&gt; {

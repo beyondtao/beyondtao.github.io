@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="I did write a clock widget, but I found that there is a problem every time the clock is refreshed. eg. now is 17:42:25, the widget still is 17:41, maybe after 10 seconds, it can be refreshed with 17:42. I want just 17:43:00, it can be refreshed.
@@ -379,14 +379,14 @@ struct DemoEntry: TimelineEntry {
         let hour = calendar.component(.hour, from: date)
         let min = calendar.component(.minute, from: date)
         let sec = calendar.component(.second, from: date)
-        print(&quot;\(hour) \(min) \(sec) || \(self.date)&quot;)
+        print(&#34;\(hour) \(min) \(sec) || \(self.date)&#34;)
         return CYClockTime(sec: sec, min: min, hour: hour)
     }
     
     func clockHHss() -&gt; String {
-        let hour = String(format: &quot;%.2d&quot;, clockTime().hour)
-        let min = String(format: &quot;%.2d&quot;, clockTime().min)
-        return hour + &quot; &quot; + min
+        let hour = String(format: &#34;%.2d&#34;, clockTime().hour)
+        let min = String(format: &#34;%.2d&#34;, clockTime().min)
+        return hour + &#34; &#34; + min
     }
 }
 </code></pre><pre tabindex="0"><code>// Widget View
@@ -396,7 +396,7 @@ struct DemoWidgetEntryView : View {
     let width = (UIScreen.main.bounds.width - 50) / 3
     
     var body: some View {
-            Text(&quot;\(entry.clockHHss())&quot;)
+            Text(&#34;\(entry.clockHHss())&#34;)
     }
 }
 </code></pre>

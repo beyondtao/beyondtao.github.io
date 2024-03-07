@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="From Jpmtech
@@ -324,30 +324,30 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
     Text(Date.now.formatted(.dateTime.quarter()))
     
     // print: Weekday: Sat
-    Text(&quot;Weekday: &quot; + Date.now.formatted(.dateTime.weekday()))
+    Text(&#34;Weekday: &#34; + Date.now.formatted(.dateTime.weekday()))
     
     // print: Two Digits year: 23 
-    Text(&quot;Two Digits year: &quot; + Date.now.formatted(.dateTime.year(.twoDigits)))
+    Text(&#34;Two Digits year: &#34; + Date.now.formatted(.dateTime.year(.twoDigits)))
     // print: Digits year: 2023
-    Text(&quot;Digits year: &quot; + Date.now.formatted(.dateTime.year()))
+    Text(&#34;Digits year: &#34; + Date.now.formatted(.dateTime.year()))
     
     // Demo Time: 2023/12/23 21:57:54
     // print: Month: 12 
-    Text(&quot;Month: &quot; + Date.now.formatted(.dateTime.month(.twoDigits)))
+    Text(&#34;Month: &#34; + Date.now.formatted(.dateTime.month(.twoDigits)))
     // print: Month: Dec
-    Text(&quot;Month: &quot; + Date.now.formatted(.dateTime.month(.abbreviated)))
+    Text(&#34;Month: &#34; + Date.now.formatted(.dateTime.month(.abbreviated)))
     
     // print: Two Digits day: 23
-    Text(&quot;Two Digits day: &quot; + Date.now.formatted(.dateTime.day(.twoDigits)))
+    Text(&#34;Two Digits day: &#34; + Date.now.formatted(.dateTime.day(.twoDigits)))
     
     // print: Oclock: 21
-    Text(&quot;Oclock: &quot; + Date.now.formatted(.dateTime.hour(.twoDigits(amPM: .wide))))
+    Text(&#34;Oclock: &#34; + Date.now.formatted(.dateTime.hour(.twoDigits(amPM: .wide))))
     
     // print: Minutes: 57
-    Text(&quot;Minutes: &quot; + Date.now.formatted(.dateTime.minute()))
+    Text(&#34;Minutes: &#34; + Date.now.formatted(.dateTime.minute()))
     
     // print: Seconds: 54
-    Text(&quot;Seconds: &quot; + Date.now.formatted(.dateTime.second()))
+    Text(&#34;Seconds: &#34; + Date.now.formatted(.dateTime.second()))
     
     // print: 21:57:54 GMT+1 (hour:min:sec GMT+1, Germany)
     Text(Date.now.formatted(date: .omitted, time: .complete))
@@ -360,16 +360,16 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
     
     // how many days from the first day of this year
     // print: The day from first: 357
-    Text(&quot;The day from first: &quot; + Date.now.formatted(.dateTime.dayOfYear()))
+    Text(&#34;The day from first: &#34; + Date.now.formatted(.dateTime.dayOfYear()))
     
     // how many weeks from the first day of this year
     // print: The week fromo first day: 51
-    Text(&quot;The week fromo first day: &quot; + Date.now.formatted(.dateTime.week()))
+    Text(&#34;The week fromo first day: &#34; + Date.now.formatted(.dateTime.week()))
     
     // the first letter of the month
     // J: January, February: F,..., December: D
     // print: First letter of the Month: D
-    Text(&quot;First letter of the Month: &quot; + Date.now.formatted(.dateTime.month(.narrow)))
+    Text(&#34;First letter of the Month: &#34; + Date.now.formatted(.dateTime.month(.narrow)))
 }
 </code></pre>
               

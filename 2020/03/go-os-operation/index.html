@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "转载自 超级大柱子（简书）\ngo极简教程 阅读目录\nGo 文件操作  os库：文件\\文件夹创建,读取,移动,复制 io库 : 文件内容的写入,修改,拼接  基本文件操作 文件内容的读取",
+  "description": "转载自 超级大柱子（简书）\ngo极简教程 阅读目录\nGo 文件操作 os库：文件\\文件夹创建,读取,移动,复制 io库 : 文件内容的写入,修改,拼接 基本文件操作 文件内容的读取",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="转载自 超级大柱子（简书）
@@ -335,17 +335,17 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <pre tabindex="0"><code>package main
 
 import (
-    &quot;io/ioutil&quot;
-    &quot;log&quot;
+    &#34;io/ioutil&#34;
+    &#34;log&#34;
 )
 
 func main() {
     // 读取文件内容
-    file, _ := os.OpenFile(&quot;./demo_unicode.html&quot;, 2, 0666)
+    file, _ := os.OpenFile(&#34;./demo_unicode.html&#34;, 2, 0666)
     fileByte1, _ = ioutil.ReadAll(file);
 
     // 读取文件内容，更简易的方法
-    fileByte2, _ := ioutil.ReadFile(&quot;./demo_unicode.html&quot;)
+    fileByte2, _ := ioutil.ReadFile(&#34;./demo_unicode.html&#34;)
 
     // byte转string
     fileString := string(fileByte2)
@@ -355,46 +355,46 @@ func main() {
 <pre tabindex="0"><code>package main
 
 import (
-    &quot;io&quot;
-    &quot;os&quot;
+    &#34;io&#34;
+    &#34;os&#34;
 )
 
 func main() {
     // 设定工作路径, 一般在项目刚开始设定一次即可, 不要在异步过程中修改工作路径
     // 默认是程序执行的路径
-    os.Chdir(&quot;./&quot;)
+    os.Chdir(&#34;./&#34;)
 
     // 创建文件夹
-    os.MkdirAll(&quot;./aa/bb/c1&quot;, 0777)	//os.ModePerm 就是0777
-    os.MkdirAll(&quot;./aa/bb/c2&quot;, 0777)
+    os.MkdirAll(&#34;./aa/bb/c1&#34;, 0777)	//os.ModePerm 就是0777
+    os.MkdirAll(&#34;./aa/bb/c2&#34;, 0777)
 
     // 创建文件
-    os.Create(&quot;./aa/bb/c1/file.go&quot;)
+    os.Create(&#34;./aa/bb/c1/file.go&#34;)
 
     // 移动文件
-    os.Rename(&quot;./aa/bb/c1/file.go&quot;, &quot;./aa/bb/c2/file.go&quot;)
+    os.Rename(&#34;./aa/bb/c1/file.go&#34;, &#34;./aa/bb/c2/file.go&#34;)
 
     // 打开文件,得到一个 *File 对象, 用于后续的写入
-    file, _ := os.OpenFile(&quot;./aa/bb/c2/file.go&quot;, 2, 0666)
+    file, _ := os.OpenFile(&#34;./aa/bb/c2/file.go&#34;, 2, 0666)
 
     // 写入文件内容
     io.WriteString(file, `
         package main
         func main(){
-            log.Println(&quot;我是由程序写入的代码&quot;)
+            log.Println(&#34;我是由程序写入的代码&#34;)
         }
     `)
 
     // 也可以直接调用file里的函数写入内容
-    file.WriteString(&quot;add string&quot;)
+    file.WriteString(&#34;add string&#34;)
 
     // 拷贝文件, 拷贝其实就是创建一个文件, 然后写入文件内容
-    src1, _ := os.Create(&quot;./aa/bb/c1/file-copy1.go&quot;)
+    src1, _ := os.Create(&#34;./aa/bb/c1/file-copy1.go&#34;)
     io.Copy(file, src1) // 把文件file, 写入src1文件
 
     // 删除文件或文件夹
-    os.Create(&quot;./aa/bb/c1/file-delete.go&quot;) // 创建一个文件用于删除
-    os.RemoveAll(&quot;./aa/bb/c1/file-delete.go&quot;)
+    os.Create(&#34;./aa/bb/c1/file-delete.go&#34;) // 创建一个文件用于删除
+    os.RemoveAll(&#34;./aa/bb/c1/file-delete.go&#34;)
 
 }
 </code></pre><h3 id="文件覆盖判断-osisnotexist">文件覆盖判断 os.IsNotExist</h3>
@@ -403,34 +403,34 @@ func main() {
 <pre tabindex="0"><code>package main
 
 import (
-    &quot;io&quot;
-    &quot;os&quot;
+    &#34;io&#34;
+    &#34;os&#34;
 )
 
 func main() {
-    os.MkdirAll(&quot;aa&quot;, 0777)
+    os.MkdirAll(&#34;aa&#34;, 0777)
 
     // 创建了文件 testA, 并且写入了内容
-    testA, _ := os.Create(&quot;aa/testA&quot;)
-    io.WriteString(testA, &quot;the teatA&quot;)
+    testA, _ := os.Create(&#34;aa/testA&#34;)
+    io.WriteString(testA, &#34;the teatA&#34;)
     // 如果需要安全判断, 可以使用 os.Stat 配合 os.IsNotExist
-    if _, err := os.Stat(&quot;aa/testA&quot;); os.IsNotExist(err) {
+    if _, err := os.Stat(&#34;aa/testA&#34;); os.IsNotExist(err) {
         // 当文件不存在, 才执行创建
-        os.Create(&quot;aa/testA&quot;)
+        os.Create(&#34;aa/testA&#34;)
     }
-    os.Chmod(&quot;aa/testA&quot;, 0777)
+    os.Chmod(&#34;aa/testA&#34;, 0777)
 }
 </code></pre><h3 id="遍历文件夹">遍历文件夹</h3>
 <p>遍历文件夹可以使用 ioutil库 的ioutil.ReadDir, 会得到一个数组, 数组元素有文件的属性,</p>
 <pre tabindex="0"><code>package main
 
 import (
-    &quot;io/ioutil&quot;
-    &quot;log&quot;
+    &#34;io/ioutil&#34;
+    &#34;log&#34;
 )
 
 func main() {
-    fs, _ := ioutil.ReadDir(&quot;aa&quot;)
+    fs, _ := ioutil.ReadDir(&#34;aa&#34;)
     for _, v := range fs {
         // 遍历得到文件名
         log.Println(v.Name())
@@ -440,9 +440,9 @@ func main() {
 </code></pre><h3 id="权限">权限</h3>
 <p>可以使用 <code>os.Chmod()</code> 修改文件权限</p>
 <pre tabindex="0"><code>// 所有人可读写权限
-os.Chmod(&quot;aa/testA&quot;, 0666)
+os.Chmod(&#34;aa/testA&#34;, 0666)
 </code></pre><pre tabindex="0"><code>// 只读权限
-os.Chmod(&quot;aa/testA&quot;, 0400)
+os.Chmod(&#34;aa/testA&#34;, 0400)
 </code></pre><h3 id="linux权限参考">Linux权限参考</h3>
 <pre tabindex="0"><code>-rw------- (600)      只有拥有者有读写权限。
 -rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。

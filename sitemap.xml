@@ -37,6 +37,11 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://blog.iostao.com/categories/xcode15/</loc>
+    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://blog.iostao.com/tags/swift/</loc>
     <lastmod>2023-12-23T20:36:12+01:00</lastmod>
     <changefreq>daily</changefreq>
@@ -148,7 +153,7 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://blog.iostao.com/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>

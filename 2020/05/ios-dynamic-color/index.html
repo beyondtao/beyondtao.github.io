@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="从iOS 13系统开始，开启了App的深色模式的大门。因为AppStore审核指南提出：从2020年4月30日开始，所有提交至App Store的iPhone App都必须使用 iOS 13 SDK或更高版本来构建。以后的app都需要支持暗黑模式了。
@@ -319,13 +319,13 @@ override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollect
 </code></pre><h3 id="3获取当前模式">3、获取当前模式</h3>
 <pre tabindex="0"><code>if self.traitCollection.userInterfaceStyle == .dark {
      // Dark
-      print(&quot;是dark模式、。。。&quot;)
+      print(&#34;是dark模式、。。。&#34;)
  } else  if self.traitCollection.userInterfaceStyle == .light {
     // Light
-    print(&quot;是light模式、。。。&quot;)
+    print(&#34;是light模式、。。。&#34;)
  } else {
    //unspecified
-   print(&quot;是unspecified模式、。。。&quot;)
+   print(&#34;是unspecified模式、。。。&#34;)
 }
 </code></pre><h2 id="二创建动态颜色">二、创建动态颜色</h2>
 <pre tabindex="0"><code>extension UIColor {
@@ -366,7 +366,7 @@ override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollect
 <pre tabindex="0"><code>//Color Set是ios &gt;= 11才能使用的，如果app仍然支持 iOS 11以下的，需要判断。
 //如果支持版本 &gt;= 11，不需要判断
 if #available(iOS 11.0, *) {	
-   self.view.backgroundColor = UIColor(named: &quot;lgl_test&quot;)
+   self.view.backgroundColor = UIColor(named: &#34;lgl_test&#34;)
 } else {
     ///设置低于iOS11系统下展示的颜色
     self.view.backgroundColor = UIColor.red

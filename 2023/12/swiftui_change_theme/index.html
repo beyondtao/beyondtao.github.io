@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="I&rsquo;m currently developing an App, and I aim to realize multiple theme colors. Users will have the option to switch between themes such as red, orange, blue and others. Therefore, I&rsquo;m documenting how this functionality is implemented here.">
@@ -306,20 +306,20 @@ enum TaoAppTheme: String, CaseIterable, Identifiable {
     
     var id: Self {self}
     
-    case App_Theme_orange   = &quot;yellow&quot;
-    case App_Theme_green    = &quot;green&quot;
-    case App_Theme_blue     = &quot;blue&quot;
-    case App_Theme_cyan     = &quot;cyan&quot;
-    case App_Theme_red      = &quot;red&quot;
+    case App_Theme_orange   = &#34;yellow&#34;
+    case App_Theme_green    = &#34;green&#34;
+    case App_Theme_blue     = &#34;blue&#34;
+    case App_Theme_cyan     = &#34;cyan&#34;
+    case App_Theme_red      = &#34;red&#34;
     
     /// Haupt-Hintergrundfarbe
     static func bgPrimaryWhite() -&gt; Color {
-        return Color(&quot;BgWhite&quot;)
+        return Color(&#34;BgWhite&#34;)
     }
     
     //
     static func bgPrimaryGray() -&gt; Color {
-        return Color(&quot;BgGray&quot;)
+        return Color(&#34;BgGray&#34;)
     }
     
     var color: Color {
@@ -329,21 +329,21 @@ enum TaoAppTheme: String, CaseIterable, Identifiable {
     func themeColor() -&gt; Color {
         switch self {
         case .App_Theme_orange:
-            return Color(&quot;AppOrange&quot;)
+            return Color(&#34;AppOrange&#34;)
         case .App_Theme_green:
-            return Color(&quot;AppGreen&quot;)
+            return Color(&#34;AppGreen&#34;)
         case .App_Theme_blue:
-            return Color(&quot;AppBlue&quot;)
+            return Color(&#34;AppBlue&#34;)
         case .App_Theme_cyan:
-            return Color(&quot;AppCyan&quot;)
+            return Color(&#34;AppCyan&#34;)
         case .App_Theme_red:
-            return Color(&quot;AppRed&quot;)
+            return Color(&#34;AppRed&#34;)
         }
     }
     
     
     static func nowTheme() -&gt; TaoAppTheme {
-        guard let theme:String = UserDefaults.standard.string(forKey: &quot;TaoAppThemeKey&quot;) else{
+        guard let theme:String = UserDefaults.standard.string(forKey: &#34;TaoAppThemeKey&#34;) else{
             return .App_Theme_blue
         }
         guard let nowThemeType = TaoAppTheme(rawValue: theme) else{
@@ -366,12 +366,11 @@ final class TaoAppState: ObservableObject {
     }
     
     func setTheme(theme: TaoAppTheme){
-        UserDefaults.standard.setValue(theme.rawValue, forKey: &quot;TaoAppThemeKey&quot;)
+        UserDefaults.standard.setValue(theme.rawValue, forKey: &#34;TaoAppThemeKey&#34;)
         self.appTheme = theme
-        print(&quot;theme: \(theme.rawValue)&quot;)
+        print(&#34;theme: \(theme.rawValue)&#34;)
     }
 }
-
 </code></pre><h4 id="xxxappswift">XXXApp.swift</h4>
 <p>Finally, inject it at the entry(@main) point of the app.</p>
 <pre tabindex="0"><code>@main
@@ -390,13 +389,12 @@ struct DoBillApp: App {
 </code></pre><p>View&rsquo;s Theme</p>
 <pre tabindex="0"><code>Rectangle()
 	.foregroundStyle(appState.appTheme.themeColor())
-
 </code></pre><p>Click Button to change Theme</p>
 <pre tabindex="0"><code>Button(action: {
 	//appState.setTheme(theme: theme)
 	appState.setTheme(theme: . App_Theme_orange)              
 }, label: {
-	Text(&quot;Change Theme&quot;)
+	Text(&#34;Change Theme&#34;)
 })
 </code></pre><h4 id="demo-view">Demo View</h4>
 <pre tabindex="0"><code>import SwiftUI
@@ -414,7 +412,7 @@ struct TaoHomeView: View {
                     appState.setTheme(theme: theme)
                     
                 }, label: {
-                    Text(&quot;Change Theme: \(theme.rawValue)&quot;)
+                    Text(&#34;Change Theme: \(theme.rawValue)&#34;)
                 })
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.capsule)

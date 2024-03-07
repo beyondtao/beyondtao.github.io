@@ -33,28 +33,28 @@
     
   },
   "description": "I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.\n",
-  "keywords": []
+  "keywords": ["SwiftUI Localization, Xcode15"]
 }
 
 </script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
-<meta name="keywords" content="">
-<meta name="description" content="I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.">
+<meta name="keywords" content="SwiftUI Localization, Xcode15">
+<meta name="description" content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
 
 
-<meta property="og:description" content="I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.">
+<meta property="og:description" content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI Localization with Xcode 15">
 <meta name="twitter:title" content="SwiftUI Localization with Xcode 15">
 <meta property="og:url" content="https://blog.iostao.com/2024/02/swiftui5.9_localizable/">
 <meta property="twitter:url" content="https://blog.iostao.com/2024/02/swiftui5.9_localizable/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.">
-<meta name="twitter:description" content="I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.">
+<meta property="og:description" content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
+<meta name="twitter:description" content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
 <meta property="og:locale" content="en-us">
 
   
@@ -67,6 +67,8 @@
   
     
       <meta property="article:section" content="swiftui">
+    
+      <meta property="article:section" content="Xcode15">
     
   
   
@@ -281,7 +283,9 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
   
     <span>in</span>
     
-      <a class="category-link" href="https://blog.iostao.com/categories/swiftui">swiftui</a>
+      <a class="category-link" href="https://blog.iostao.com/categories/swiftui">swiftui</a>, 
+    
+      <a class="category-link" href="https://blog.iostao.com/categories/xcode15">Xcode15</a>
     
   
 
@@ -317,24 +321,23 @@ import SwiftUI
 
 final class TaoAppState: ObservableObject {
     
-    @AppStorage(&quot;language&quot;) var language = &quot;en&quot;
+    @AppStorage(&#34;language&#34;) var language = &#34;en&#34;
 }
 
 extension String {
 
   var localized: String {
-    let res = UserDefaults.standard.string(forKey: &quot;language&quot;)
-    let path = Bundle.main.path(forResource: res, ofType: &quot;lproj&quot;)
+    let res = UserDefaults.standard.string(forKey: &#34;language&#34;)
+    let path = Bundle.main.path(forResource: res, ofType: &#34;lproj&#34;)
     let bundle: Bundle
     if let path = path {
       bundle = Bundle(path: path) ?? .main
     } else {
       bundle = .main
     }
-    return NSLocalizedString(self, bundle: bundle, value: &quot;&quot;, comment: &quot;&quot;)
+    return NSLocalizedString(self, bundle: bundle, value: &#34;&#34;, comment: &#34;&#34;)
   }
 }
-
 </code></pre><h2 id="chanagelanguageviewswift">ChanageLanguageView.swift</h2>
 <pre tabindex="0"><code>import SwiftUI
 
@@ -342,9 +345,9 @@ struct ChangeLanguageView: View {
   @EnvironmentObject private var appState: AppState
 
   private let languages = [
-    &quot;English&quot;: &quot;en&quot;,
-    &quot;German&quot;: &quot;de&quot;,
-    &quot;中文&quot;: &quot;zh-Hans&quot;
+    &#34;English&#34;: &#34;en&#34;,
+    &#34;German&#34;: &#34;de&#34;,
+    &#34;中文&#34;: &#34;zh-Hans&#34;
   ]
 
   var body: some View {
@@ -352,7 +355,7 @@ struct ChangeLanguageView: View {
           List {
               ForEach(Array(languages.keys), id: \.self) { v in
                   LabeledContent(v) {
-                      Image(systemName: &quot;checkmark.circle.fill&quot;)
+                      Image(systemName: &#34;checkmark.circle.fill&#34;)
                       .foregroundColor(.accentColor)
                       .opacity(isSelected(v) ? 1 : 0)
                   }
@@ -364,7 +367,7 @@ struct ChangeLanguageView: View {
               }
           }
           
-          Text(&quot;hello&quot;.localized)
+          Text(&#34;hello&#34;.localized)
 				.font(.title)
 				.fontWeight(.bold)
 				.foregroundStyle(.blue)
@@ -383,7 +386,6 @@ struct ChangeLanguageView: View {
     ChangeLanguageView()
         .environmentObject(AppState())
 }
-
 </code></pre>
               
 

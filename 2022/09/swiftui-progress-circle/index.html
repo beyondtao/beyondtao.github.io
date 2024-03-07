@@ -34,7 +34,7 @@
     }
     
   },
-  "description": "",
+  "description": "import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .",
   "keywords": []
 }
 
@@ -42,21 +42,21 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .">
 
 
-<meta property="og:description" content="">
+<meta property="og:description" content="import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SwiftUI Circlar Progress Bar ">
 <meta name="twitter:title" content="SwiftUI Circlar Progress Bar ">
 <meta property="og:url" content="https://blog.iostao.com/2022/09/swiftui-progress-circle/">
 <meta property="twitter:url" content="https://blog.iostao.com/2022/09/swiftui-progress-circle/">
 <meta property="og:site_name" content="Scott&#39;s Blog">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .">
+<meta name="twitter:description" content="import SwiftUI struct ChargeNormalView: View { private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() var width: CGFloat = 200 // you can comment on this line of code, so funny var color1 = #colorLiteral(red: 0.2078431487, green: 0.56745098062, blue: 0.5333333433, alpha: 1) var color2 = #colorLiteral(red: 0.6078431487, green: 0.06745098062, blue: 0.5333333433, alpha: 1) @State var percent: CGFloat = 0 var body: some View { let mutiplier = width / 44 let progress = 1 - percent / 100 return ZStack { Circle() .">
 <meta property="og:locale" content="en-us">
 
   
@@ -330,7 +330,7 @@ struct ChargeNormalView: View {
                 .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                 .frame(width: width, height: width)
                 .shadow(color: Color(color1).opacity(0.1), radius: 3, x: 0, y: 3)
-            Text(&quot;\(Int(percent))%&quot;)
+            Text(&#34;\(Int(percent))%&#34;)
                 .font(.system(size: 14 * mutiplier))
                 .fontWeight(.bold)
                 .onReceive(timer) { time in
@@ -342,7 +342,7 @@ struct ChargeNormalView: View {
                     } else {
                         percent += 10
                     }
-                    print(&quot;The time is now \(time)&quot;)
+                    print(&#34;The time is now \(time)&#34;)
                 }
         }
     }

@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：\n 人事管理  员工资历 员工奖惩   统计管理  统计列表   系统管理  我的设置 权限管理 角色列表   ",
+  "description": "我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：\n人事管理 员工资历 员工奖惩 统计管理 统计列表 系统管理 我的设置 权限管理 角色列表 ",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="我们开发会遇到类似于获取菜单这种情况，架构大体类似如下：
@@ -400,26 +400,26 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <pre tabindex="0"><code>DROP TABLE IF EXISTS `tbl_auth_menu`;
 CREATE TABLE `tbl_auth_menu` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL COMMENT '父级菜单id',
-  `name` char(20) NOT NULL COMMENT '菜单名单',
-  `sort` tinyint(4) DEFAULT '0' COMMENT '排序值',
-  `route` varchar(60) DEFAULT '' COMMENT '跳转链接',
+  `pid` int(11) NOT NULL COMMENT &#39;父级菜单id&#39;,
+  `name` char(20) NOT NULL COMMENT &#39;菜单名单&#39;,
+  `sort` tinyint(4) DEFAULT &#39;0&#39; COMMENT &#39;排序值&#39;,
+  `route` varchar(60) DEFAULT &#39;&#39; COMMENT &#39;跳转链接&#39;,
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COMMENT='权限管理_菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COMMENT=&#39;权限管理_菜单表&#39;;
 </code></pre><hr>
 <p><code>-- Records of tbl_auth_menu</code></p>
 <hr>
 <pre tabindex="0"><code>BEGIN;
-INSERT INTO `tbl_auth_menu` VALUES (14, -1, '人事管理', 1, '');
-INSERT INTO `tbl_auth_menu` VALUES (15, -1, '统计管理', 2, '');
-INSERT INTO `tbl_auth_menu` VALUES (16, -1, '系统管理', 3, '');
-INSERT INTO `tbl_auth_menu` VALUES (17, 14, '员工资料', 1, '/user/info');
-INSERT INTO `tbl_auth_menu` VALUES (18, 14, '员工奖惩', 2, '/user/award');
-INSERT INTO `tbl_auth_menu` VALUES (19, 15, '统计列表', 1, '/statis/list');
-INSERT INTO `tbl_auth_menu` VALUES (20, 16, '我的设置', 1, '/sys/setting');
-INSERT INTO `tbl_auth_menu` VALUES (21, 16, '权限管理', 2, '/sys/auth');
-INSERT INTO `tbl_auth_menu` VALUES (22, 16, '角色列表', 3, '/sys/role');
+INSERT INTO `tbl_auth_menu` VALUES (14, -1, &#39;人事管理&#39;, 1, &#39;&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (15, -1, &#39;统计管理&#39;, 2, &#39;&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (16, -1, &#39;系统管理&#39;, 3, &#39;&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (17, 14, &#39;员工资料&#39;, 1, &#39;/user/info&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (18, 14, &#39;员工奖惩&#39;, 2, &#39;/user/award&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (19, 15, &#39;统计列表&#39;, 1, &#39;/statis/list&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (20, 16, &#39;我的设置&#39;, 1, &#39;/sys/setting&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (21, 16, &#39;权限管理&#39;, 2, &#39;/sys/auth&#39;);
+INSERT INTO `tbl_auth_menu` VALUES (22, 16, &#39;角色列表&#39;, 3, &#39;/sys/role&#39;);
 COMMIT;
 </code></pre><p>我这里第一级目录的 父菜单 id (pid)使用的是 -1, 因为 id 默认是从 0开始的，使用0的话，这个菜单有可能不是第一级目录，而是 pid = 0 的二级目录了</p>
 <ul>
@@ -432,18 +432,18 @@ COMMIT;
 <h2 id="代码">代码</h2>
 <h3 id="文件-menugo-使用-beego-orm">文件 menu.go (使用 beego orm)</h3>
 <pre tabindex="0"><code>type Menu struct {
-	Id       int     `json:&quot;id&quot;`
-	Pid      int     `json:&quot;pid&quot;`
-	Name     string  `json:&quot;name&quot;`
-	Sort     int     `json:&quot;sort&quot;`
-	Route    string  `json:&quot;route&quot;`
+	Id       int     `json:&#34;id&#34;`
+	Pid      int     `json:&#34;pid&#34;`
+	Name     string  `json:&#34;name&#34;`
+	Sort     int     `json:&#34;sort&#34;`
+	Route    string  `json:&#34;route&#34;`
 	//这里是子菜单，结构是 menu数组，因为是menu类型，所以数据库不做处理
-	//用 orm:&quot;-&quot;注解
-	Children []*Menu `json:&quot;children&quot; orm:&quot;-&quot;`	
+	//用 orm:&#34;-&#34;注解
+	Children []*Menu `json:&#34;children&#34; orm:&#34;-&#34;`	
 }
 
 func (m *Menu) TableName() string {
-	return &quot;auth_menu&quot;
+	return &#34;auth_menu&#34;
 }
 </code></pre><h3 id="在数据库层注册模型">在数据库层，注册模型</h3>
 <pre tabindex="0"><code>//注册 数据库的时候
@@ -451,7 +451,7 @@ func (m *Menu) TableName() string {
 //所以上面的数据库, return auth_menu 表名, 但是实际上使用的时候是 tbl_auth_menu 表, 这里一定要注意，
 //写代码的时候，提示错误，数据库表 不存在这个的时候，记得来这里看看
 func init() {
-	orm.RegisterModelWithPrefix(&quot;tbl_&quot;,
+	orm.RegisterModelWithPrefix(&#34;tbl_&#34;,
 		new(models.Menu),
 	)
 }
@@ -465,7 +465,7 @@ func GetMenu(pid int) []*Menu {
 	o := orm.NewOrm()
 	var menuList []*Menu
 	//根据 pid 查询数据库
-	_, _ = o.QueryTable(&quot;tbl_auth_menu&quot;).Filter(&quot;pid&quot;, pid).OrderBy(&quot;sort&quot;).All(&amp;menuList)
+	_, _ = o.QueryTable(&#34;tbl_auth_menu&#34;).Filter(&#34;pid&#34;, pid).OrderBy(&#34;sort&#34;).All(&amp;menuList)
 	//查询到结果后，遍历该层菜单
 	//查询都有哪些菜单是使用自己的id作为pid的，
 	//也就是查询该菜单的子菜单，查询到后赋值就可以了
@@ -482,7 +482,7 @@ func (c *DepartmentController) GetAll() {
 	//或者是同级包下，不写包名
 	// -1 为 第一级部门 的 parentId，
 	departments := models.DepartmentGetAll(-1)
-	c.Data[&quot;json&quot;] = util.NewRespMsg(0, &quot;获取部门成功&quot;, departments)
+	c.Data[&#34;json&#34;] = util.NewRespMsg(0, &#34;获取部门成功&#34;, departments)
 	c.ServeJSON()
 }
 </code></pre>

@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="It has been proved that if a string in Text(&ldquo;home) is passed as a text, it can only be interpreted as a localized keyword. If the variable is String type, it doesn&rsquo;t occur. So the answer is to declare a variable of LocalizedStringKey type.">
@@ -301,15 +301,15 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 }
 
 var tabItems = [
-	TabItem(name: &quot;home&quot;, icon: &quot;house&quot;, tab: .home),
+	TabItem(name: &#34;home&#34;, icon: &#34;house&#34;, tab: .home),
 ]
 
 ForEach(tabItems) { item in
 	// string localizable not working in here
-	// item.name is &quot;home&quot;
+	// item.name is &#34;home&#34;
 	Text(item.name)
-	// but if write code like this, it's ok
-	Text(&quot;home&quot;)
+	// but if write code like this, it&#39;s ok
+	Text(&#34;home&#34;)
 }
 </code></pre><p>We just need to replace String to LocalizedStringKey. Then we will found the result is OK. Just like this code:</p>
 <pre tabindex="0"><code>struct TabItem: Identifiable {

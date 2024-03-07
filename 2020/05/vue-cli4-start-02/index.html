@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="根据上一篇文章，我们的项目已经可以运行了。为了开发方便，我们这里使用 element-UI。
@@ -300,11 +300,11 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 <p>打开项目，在项目根目录下，有一个 <code>package.json</code> 文件。</p>
 <p>可以发现 scripts 下面， 有 serve, build 等命令。这里和我们运行 的 <code>npm run serve</code>相对应</p>
 <p><code>npm run build</code> 就是打包了。这里也可以自己拓展功能</p>
-<pre tabindex="0"><code>&quot;scripts&quot;: {
-    &quot;serve&quot;: &quot;vue-cli-service serve&quot;,
-    &quot;build&quot;: &quot;vue-cli-service build&quot;,
-    &quot;test:unit&quot;: &quot;vue-cli-service test:unit&quot;,
-    &quot;lint&quot;: &quot;vue-cli-service lint&quot;
+<pre tabindex="0"><code>&#34;scripts&#34;: {
+    &#34;serve&#34;: &#34;vue-cli-service serve&#34;,
+    &#34;build&#34;: &#34;vue-cli-service build&#34;,
+    &#34;test:unit&#34;: &#34;vue-cli-service test:unit&#34;,
+    &#34;lint&#34;: &#34;vue-cli-service lint&#34;
   },
 </code></pre><h2 id="安装element-ui">安装element-UI</h2>
 <p>终端命令， cd 到项目的根目录</p>
@@ -342,14 +342,14 @@ cs-CZ
 Vue.use(ElementUI); //使用elementUI
 </code></pre>
 <!-- raw HTML omitted -->
-<pre tabindex="0"><code>import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import './plugins/element.js'
+<pre tabindex="0"><code>import Vue from &#39;vue&#39;
+import App from &#39;./App.vue&#39;
+import router from &#39;./router&#39;
+import store from &#39;./store&#39;
+import &#39;./plugins/element.js&#39;
 
 # 这里添加就可以了
-import ElementUI from &quot;element-ui&quot;; //element-ui的全部组建
+import ElementUI from &#34;element-ui&#34;; //element-ui的全部组建
 Vue.use(ElementUI); //使用elementUI
 
 Vue.config.productionTip = false
@@ -358,8 +358,7 @@ new Vue({
   router,
   store,
   render: h =&gt; h(App)
-}).$mount('#app')
-
+}).$mount(&#39;#app&#39;)
 </code></pre><!-- raw HTML omitted -->
 <h2 id="安装less依赖">安装less依赖</h2>
 <pre><code>npm install less less-loader --save-dev
@@ -377,7 +376,7 @@ npm install sass-loader -D
 <p>配置域名，跨域，新建项目的时候是没有这个文件的，需要自己创建一个。在项目根目录下创建 <code>vue.config.js</code></p>
 <pre tabindex="0"><code>module.exports = {
     //编译打包存放的目录默认dist
-    outputDir: 'dist',
+    outputDir: &#39;dist&#39;,
 
     // 如果你不需要使用eslint，把lintOnSave设为false即可
     lintOnSave: false,
@@ -385,19 +384,19 @@ npm install sass-loader -D
     // 设为false打包时不生成.map文件
     productionSourceMap: false,
 
-    assetsDir: 'static',
+    assetsDir: &#39;static&#39;,
     /*css: {
       loaderOptions: {
         css: {},
         postcss: {
           plugins: [
             // 补全css前缀(解决兼容性)
-            require(&quot;autoprefixer&quot;)(),
+            require(&#34;autoprefixer&#34;)(),
             // 把px单位换算成rem单位
-            require(&quot;postcss-pxtorem&quot;)({
+            require(&#34;postcss-pxtorem&#34;)({
               rootValue: 32, // 换算的基数(设计图750的根字体为32)
-              selectorBlackList: [&quot;.van&quot;, &quot;.my-van&quot;],// 要忽略的选择器并保留为px。
-              propList: [&quot;*&quot;], //可以从px更改为rem的属性。
+              selectorBlackList: [&#34;.van&#34;, &#34;.my-van&#34;],// 要忽略的选择器并保留为px。
+              propList: [&#34;*&#34;], //可以从px更改为rem的属性。
               minPixelValue: 2 // 设置要替换的最小像素值。
             })
           ]
@@ -408,20 +407,20 @@ npm install sass-loader -D
     devServer: {
         port: 8089,
         proxy: {/*处理跨域，本地代理转发*/
-            '/proxy': {
-                target: 'http://localhost:8080',  // 接口域名
+            &#39;/proxy&#39;: {
+                target: &#39;http://localhost:8080&#39;,  // 接口域名
                 secure: false,  // 如果是https接口，需要配置这个参数
                 changeOrigin: true,  //是否跨域
                 pathRewrite: {
-                    '^/proxy': ''
+                    &#39;^/proxy&#39;: &#39;&#39;
                 }
             },
-            '/video': {
-                target: 'http://192.168.2.132:8081',  // 接口域名
+            &#39;/video&#39;: {
+                target: &#39;http://192.168.2.132:8081&#39;,  // 接口域名
                 secure: false,  // 如果是https接口，需要配置这个参数
                 changeOrigin: true,  //是否跨域
                 pathRewrite: {
-                    '^/video': ''
+                    &#39;^/video&#39;: &#39;&#39;
                 }
             },
         },
@@ -447,11 +446,11 @@ npm audit fix --force
 </code></pre>
 <p><!-- raw HTML omitted -->二、进行封装使用<!-- raw HTML omitted --></p>
 <p>在 <code>src/api/</code> 目录下创建一个 <code>public.js</code>（自己起个名就好）</p>
-<pre tabindex="0"><code>require('es6-promise').polyfill()
-import axios from 'axios'
+<pre tabindex="0"><code>require(&#39;es6-promise&#39;).polyfill()
+import axios from &#39;axios&#39;
 axios.defaults.withCredentials = true //跨域
 axios.defaults.timeout = 60000
-axios.defaults.headers.post['Content-Type'] = 'application/x-www=form-urlencoded'
+axios.defaults.headers.post[&#39;Content-Type&#39;] = &#39;application/x-www=form-urlencoded&#39;
 export default {
   //get请求
   requestGet (url, params = {}) {
@@ -488,7 +487,7 @@ export default {
     return new Promise((resolve, reject) =&gt; {
       axios.post(url, params, {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;,
         },
       }).then(res =&gt; {
         resolve(res.data)//注意res是axios封装的对象，res.data才是服务端返回的信息
@@ -519,12 +518,12 @@ export default {
   },
   exportExcel: function(url,form) {
     return axios({ // 用axios发送post请求
-      method: 'get',
+      method: &#39;get&#39;,
       url: url, // 请求地址
       data: form, // 参数
-      responseType: 'blob', // 表明返回服务器返回的数据类型
+      responseType: &#39;blob&#39;, // 表明返回服务器返回的数据类型
       headers: {
-        'Content-Type': 'application/json'
+        &#39;Content-Type&#39;: &#39;application/json&#39;
       }
     })
   }

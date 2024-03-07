@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="转载
@@ -332,18 +332,18 @@ zsh: abort      node -v
 brew uninstall icu4c &amp;&amp; brew install icu4c
 brew unlink icu4c &amp;&amp; brew link icu4c --force
 # 这里可能会提示设置 ~/.zshrc。 看底部 icu4c ~/.zshrc 这个模块
-echo 'export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+echo &#39;export PATH=&#34;/usr/local/opt/icu4c/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
 # 如果执行了上面那条命令，需要更新资源文件
 source ~/.zshrc
 
 brew install node
 </code></pre><h4 id="icu4c-zshrc">icu4c ~/.zshrc</h4>
 <p>If you need to have icu4c first in your PATH run:</p>
-<pre tabindex="0"><code>  echo 'export PATH=&quot;/usr/local/opt/icu4c/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
-  echo 'export PATH=&quot;/usr/local/opt/icu4c/sbin:$PATH&quot;' &gt;&gt; ~/.zshrc
+<pre tabindex="0"><code>  echo &#39;export PATH=&#34;/usr/local/opt/icu4c/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
+  echo &#39;export PATH=&#34;/usr/local/opt/icu4c/sbin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
 </code></pre><p>For compilers to find icu4c you may need to set:</p>
-<pre tabindex="0"><code>  export LDFLAGS=&quot;-L/usr/local/opt/icu4c/lib&quot;
-  export CPPFLAGS=&quot;-I/usr/local/opt/icu4c/include&quot;
+<pre tabindex="0"><code>  export LDFLAGS=&#34;-L/usr/local/opt/icu4c/lib&#34;
+  export CPPFLAGS=&#34;-I/usr/local/opt/icu4c/include&#34;
 </code></pre><h4 id="常用命令">常用命令</h4>
 <pre><code>npm install &lt;module&gt; //安装
 npm uninstall &lt;module&gt; //卸载

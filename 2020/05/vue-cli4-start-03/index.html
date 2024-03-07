@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "路由 在项目下，创建 vue文件。我们需要类似 localhost:8080/login 这种方式访问。这个时候就需要配置路由信息了。\n如：\n project  router  index.js (这里配置路由信息)   src  views\t(这里是页面)  About.vue Home.vue Login.vue Manage.vue        在 router 的 index.js中配置路由信息：\n",
+  "description": "路由 在项目下，创建 vue文件。我们需要类似 localhost:8080/login 这种方式访问。这个时候就需要配置路由信息了。\n如：\nproject router index.js (这里配置路由信息) src views\t(这里是页面) About.vue Home.vue Login.vue Manage.vue 在 router 的 index.js中配置路由信息：\n",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="路由
@@ -434,38 +434,38 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
 </li>
 </ul>
 <p>这里的每一个router，都写在首页的 children里面就可以了。</p>
-<pre tabindex="0"><code>const Login = () =&gt; import(/* webpackChunkName: &quot;login&quot; */ '../views/Login.vue')
-const Manage = () =&gt; import(/* webpackChunkName: &quot;login&quot; */ '../views/Manage.vue')
-const Home = () =&gt; import(/* webpackChunkName: &quot;login&quot; */ '../views/Home.vue')
-const About = () =&gt; import(/* webpackChunkName: &quot;login&quot; */ '../views/About.vue')
+<pre tabindex="0"><code>const Login = () =&gt; import(/* webpackChunkName: &#34;login&#34; */ &#39;../views/Login.vue&#39;)
+const Manage = () =&gt; import(/* webpackChunkName: &#34;login&#34; */ &#39;../views/Manage.vue&#39;)
+const Home = () =&gt; import(/* webpackChunkName: &#34;login&#34; */ &#39;../views/Home.vue&#39;)
+const About = () =&gt; import(/* webpackChunkName: &#34;login&#34; */ &#39;../views/About.vue&#39;)
 
 const routes = [
   {
-    path: '/',
-    name: 'Login',
+    path: &#39;/&#39;,
+    name: &#39;Login&#39;,
     component: Login
   },
   {
-    path: '/',
-    name: 'Manage',
+    path: &#39;/&#39;,
+    name: &#39;Manage&#39;,
     component: Manage,
     children: [{
-      path: '/home' ,
-      name: '首页',
+      path: &#39;/home&#39; ,
+      name: &#39;首页&#39;,
       component: Home,
     },{
-      path: '/about' ,
-      name: '关于',
+      path: &#39;/about&#39; ,
+      name: &#39;关于&#39;,
       component: About,
     }]
   },
   {
-    path: '/about',
-    name: 'About',
+    path: &#39;/about&#39;,
+    name: &#39;About&#39;,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =&gt; import(/* webpackChunkName: &quot;about&quot; */ '../views/About.vue')
+    component: () =&gt; import(/* webpackChunkName: &#34;about&#34; */ &#39;../views/About.vue&#39;)
   }
 ]
 </code></pre>

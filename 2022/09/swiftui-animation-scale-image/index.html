@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="How to realize flexible animation of pictures? It&rsquo;s very simple to use SwiftUI now.">
@@ -298,7 +298,7 @@ I&rsquo;m living in the Nordrhein-Westfalen, Germany. You can contact me through
         VStack {
             GeometryReader { proxy in
                 let global = proxy.frame(in: .global)
-                Image(&quot;wazi&quot;)
+                Image(&#34;wazi&#34;)
                     .resizable()
                     .offset(y: global.minY &gt; 0 ? -global.minY : 0)
                     .frame(height: global.minY &gt; 0 ? UIScreen.main.bounds.height / 3 + global.minY : UIScreen.main.bounds.height / 3)

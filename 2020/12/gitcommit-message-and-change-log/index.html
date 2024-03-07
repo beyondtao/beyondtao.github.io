@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.123.7 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Scott Tao">
 <meta name="keywords" content="">
 <meta name="description" content="这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。">
@@ -474,11 +474,11 @@ $ conventional-changelog -p angular -i CHANGELOG.md -s 0
 <p>有的文章里面，命令没有 -s ，每次执行只是在终端打印所有的日志，并没有在本地生成文件。这里需要注意一下。</p>
 <h4 id="62-配置changelog生成命令">6.2 配置changelog生成命令</h4>
 <p>为了方便使用，可以将生成命令其写入<code>package.json</code>的<code>scripts</code>字段。</p>
-<pre tabindex="0"><code> 	$ &quot;changelog&quot;: &quot;conventional-changelog -p angular -i CHANGELOG.md -s 0&quot;
+<pre tabindex="0"><code> 	$ &#34;changelog&#34;: &#34;conventional-changelog -p angular -i CHANGELOG.md -s 0&#34;
 </code></pre><p>示例如下：</p>
-<pre tabindex="0"><code>&quot;scripts&quot;: {
-   &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
-   &quot;changelog&quot;: &quot;conventional-changelog -p angular -i CHANGELOG.md -s 0&quot;
+<pre tabindex="0"><code>&#34;scripts&#34;: {
+   &#34;test&#34;: &#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;,
+   &#34;changelog&#34;: &#34;conventional-changelog -p angular -i CHANGELOG.md -s 0&#34;
  },
 </code></pre><h2 id="七关于日志生成的问题">七、关于日志生成的问题</h2>
 <pre tabindex="0"><code>    我自己碰到的问题，增量生成日志文件，发现每一次都会把所有的日志打印出来了。
@@ -487,7 +487,6 @@ $ conventional-changelog -p angular -i CHANGELOG.md -s 0
 这个时候我需要 git tag v1.0.0 (这个tag名字不能和 分支 1.0.0 相同，不然生成日志的时候会提示错误，
 或者是tag名字相同，然后把1.0.0分支删除）。 等我2.0.0 合并的时候，生成log日志，就可以看到日志
 文件中，会显示出不同版本的不同提交信息日志了。
-
 </code></pre>
               
 
