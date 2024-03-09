@@ -6,8 +6,15 @@
     <description>Recent content on Scott&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.iostao.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://blog.iostao.com/about/me/</link>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://blog.iostao.com/about/me/</guid>
+      <description>My Journey (you can click me☺️) Personal Information Name: Scott Tao (Baitong Tao)&#xA;Occupation: iOS Developer (2013 &amp;ndash; today)&#xA;Bachlor (Computer Science and Technology)&#xA;Birthday: 12.1990&#xA;Address: Iserlohn, Deutschland&#xA;Email&#xA;① im.taobaitong@gmail.com ② Scott.Tao@88.com 08.2022 五岳归来不看山，黄山归来不看岳 No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&#xA;Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this month, it is more than 1500 miters high, at 23 o&amp;rsquo;clock I began to climb the mountain, it took me five hours to climb to the top.</description>
+    </item>
     <item>
       <title>SwiftUI Localization with Xcode 15</title>
       <link>https://blog.iostao.com/2024/02/swiftui5.9_localizable/</link>
@@ -168,13 +175,6 @@
       <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://blog.iostao.com/journey/202208-mount-tai/</guid>
       <description> </description>
-    </item>
-    <item>
-      <title>About Me</title>
-      <link>https://blog.iostao.com/about/me/</link>
-      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://blog.iostao.com/about/me/</guid>
-      <description>My Journey (you can click me☺️) Personal Information Name: Scott Tao (Baitong Tao)&#xA;Occupation: iOS Developer (2013 &amp;ndash; today)&#xA;Bachlor (Computer Science and Technology)&#xA;Birthday: 12.1990&#xA;Address: Iserlohn, Deutschland&#xA;Email&#xA;① im.taobaitong@gmail.com ② Scott.Tao@88.com 08.2022 五岳归来不看山，黄山归来不看岳 No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&#xA;Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this month, it is more than 1500 miters high, at 23 o&amp;rsquo;clock I began to climb the mountain, it took me five hours to climb to the top.</description>
     </item>
     <item>
       <title>Contact</title>

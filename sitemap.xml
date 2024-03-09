@@ -2,17 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.iostao.com/about/me/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://blog.iostao.com/about/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://blog.iostao.com/</loc>
+    <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://blog.iostao.com/categories/</loc>
     <lastmod>2024-02-18T14:05:02+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://blog.iostao.com/posts/</loc>
-    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://blog.iostao.com/</loc>
     <lastmod>2024-02-18T14:05:02+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -152,11 +162,6 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://blog.iostao.com/about/</loc>
-    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://blog.iostao.com/about/journey/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -168,11 +173,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://blog.iostao.com/journey/202208-mount-tai/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://blog.iostao.com/about/me/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
