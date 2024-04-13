@@ -77,6 +77,16 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://blog.iostao.com/journey/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://blog.iostao.com/journey/2022-wulanchabu/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://blog.iostao.com/2022/11/swiftui-widget-06/</loc>
     <lastmod>2022-11-08T14:35:21+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -157,13 +167,23 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://blog.iostao.com/journey/</loc>
+    <loc>https://blog.iostao.com/about/journey/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://blog.iostao.com/about/journey/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>https://blog.iostao.com/about/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/aboutme/</loc>
+    <lastmod>2022-09-03T11:47:32+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
