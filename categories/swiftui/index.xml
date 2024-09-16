@@ -241,86 +241,134 @@ The right view contains a sub-view (`S&lt;/p&gt;
         
         <guid>https://blog.iostao.com/2024/02/swiftui_localizable/</guid>
         <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;heading&#34;&gt;
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;Interface: SwiftUI&lt;/li&gt;
 &lt;li&gt;Language: Swift5.9&lt;/li&gt;
 &lt;li&gt;Xcode: 15&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
 &lt;p&gt;As you can see in the image, the text changes when the user selects a different language.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_01.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/1.jpg&#34;
 	
 	
 	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+&gt; &lt;img src=&#34;https://blog.iostao.com/2.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01.jpg&#34;
+	width=&#34;2080&#34;
+	height=&#34;1418&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu6953590727284174163.jpg 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu16722683197781310662.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Demo&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;operation&#34;&gt;Operation
 &lt;/h2&gt;&lt;h3 id=&#34;1-create-localizable-files&#34;&gt;1. Create Localizable files
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_02.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu9248630418729134372.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu14239473914317851058.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03.png&#34;
+	width=&#34;1456&#34;
+	height=&#34;1036&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu8844204726832916562.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu7788331046721820900.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;337px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-add-languages&#34;&gt;2. Add Languages
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_04.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04.png&#34;
+	width=&#34;2304&#34;
+	height=&#34;1456&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu18446339310280532176.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu11901082753877097281.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-localization&#34;&gt;3. Localization
 &lt;/h3&gt;&lt;p&gt;On the right side, click &lt;code&gt;Localize...&lt;/code&gt; A pop-up window will appear. And then click &lt;code&gt;Localize&lt;/code&gt; to continue.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_05.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05.png&#34;
+	width=&#34;2136&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu17266561268419090555.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu3433466553986354024.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_06.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06.png&#34;
+	width=&#34;2132&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu8823005154209568811.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu18048239586786569073.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_07.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07.png&#34;
+	width=&#34;2136&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu5451715774920632548.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu14992459476066263899.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;appstateswift&#34;&gt;AppState.swift
@@ -484,26 +532,34 @@ The right view contains a sub-view (`S&lt;/p&gt;
         
         <guid>https://blog.iostao.com/2023/12/swiftui_change_theme/</guid>
         <description>&lt;p&gt;I&amp;rsquo;m currently developing an App, and I aim to realize multiple theme colors. Users will have the option to switch between themes such as red, orange, blue and others. Therefore, I&amp;rsquo;m documenting how this functionality is implemented here.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/theme-change-01.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01.jpg&#34;
+	width=&#34;2848&#34;
+	height=&#34;2048&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01_hu16197444589024199930.jpg 480w, https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01_hu9034713703946761533.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;333px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;First, let&amp;rsquo;s take a look at the demo to see the visual effects. Here, I&amp;rsquo;ve created a demo where clicking on different themes will cause the app to change its theme color accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;theme-color&#34;&gt;Theme Color
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/theme-change-02.jpg&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02.jpg&#34;
+	width=&#34;2266&#34;
+	height=&#34;2070&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02_hu13357538775605905568.jpg 480w, https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02_hu12193757485368371990.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;109&#34;
+		data-flex-basis=&#34;262px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;theme-code&#34;&gt;Theme Code
@@ -831,47 +887,63 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03_hu5239034460054264431.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03_hu12602354312180688946.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04_hu3302747128754324502.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04_hu7553038644862203082.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;imgwidget-06-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-01.png&#34;
-	
-	
-	
+&lt;h2 id=&#34;imgwidget-06-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01.png&#34;
+	width=&#34;3078&#34;
+	height=&#34;1812&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01_hu4266496510344535052.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01_hu13511427450874329594.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-02.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02.png&#34;
+	width=&#34;3456&#34;
+	height=&#34;2160&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02_hu8196520214649155073.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02_hu8689284257289217628.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1003,133 +1075,181 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-11.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-12.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;add-new-type&#34;&gt;add New Type
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-01.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01.png&#34;
+	width=&#34;2670&#34;
+	height=&#34;1304&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01_hu12267219320917822253.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01_hu204195342998837619.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;491px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-1.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1.png&#34;
+	width=&#34;2548&#34;
+	height=&#34;1476&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-2png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-2.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-2png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2.png&#34;
+	width=&#34;3074&#34;
+	height=&#34;1390&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2_hu12253057896908739198.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2_hu6382320756736574014.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;221&#34;
+		data-flex-basis=&#34;530px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;p&gt;If you don&amp;rsquo;t need use the Siri, please don&amp;rsquo;t select the CheckBox.&lt;/p&gt;
 &lt;h2 id=&#34;add-target-intents-extension&#34;&gt;add Target: Intents Extension
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-03png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-03.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-03png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03.png&#34;
+	width=&#34;1336&#34;
+	height=&#34;1366&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03_hu4169659782916713668.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03_hu9294091087290234938.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;234px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-04png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-04.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-04png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04_hu17888000876360112070.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04_hu2970314915088420116.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-05png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-05.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-05png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05_hu1098025901170152389.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05_hu12875354299226957477.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-06png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-06.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-06png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06.png&#34;
+	width=&#34;2384&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06_hu8227435645123101094.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06_hu6040476996371024464.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;266&#34;
+		data-flex-basis=&#34;638px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;h2 id=&#34;target-membership&#34;&gt;Target Membership
 &lt;/h2&gt;&lt;p&gt;We need add the Target Membership for the files.&lt;/p&gt;
-&lt;h2 id=&#34;imgwidget-05-07png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-07.png&#34;
-	
-	
-	
+&lt;h2 id=&#34;imgwidget-05-07png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07.png&#34;
+	width=&#34;3080&#34;
+	height=&#34;1370&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07_hu14074864834509914588.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07_hu2611890169856190321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;539px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-08png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-08.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-08png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08.png&#34;
+	width=&#34;3078&#34;
+	height=&#34;1198&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08_hu14924608401056385618.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08_hu1802070759059768865.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;256&#34;
+		data-flex-basis=&#34;616px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;h2 id=&#34;implementation&#34;&gt;Implementation
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png-1&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-1.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png-1&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1.png&#34;
+	width=&#34;2548&#34;
+	height=&#34;1476&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;p&gt;Please remember the name of the Intents (the Number - &amp;ldquo;2&amp;rdquo;), in my Project the first Intent&amp;rsquo;s name is &amp;ldquo;Configuration&amp;rdquo;&lt;/p&gt;
@@ -1216,24 +1336,32 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-11.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-12.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1338,14 +1466,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01.png&#34;
+	width=&#34;800&#34;
+	height=&#34;800&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01_hu7215712940453298623.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01_hu13429699932820027796.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1439,14 +1571,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02.png&#34;
+	width=&#34;1000&#34;
+	height=&#34;900&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02_hu6975531055392142209.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02_hu16764766173722729142.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;266px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1544,14 +1680,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03.png&#34;
+	width=&#34;654&#34;
+	height=&#34;1338&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03_hu7001360210293050149.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03_hu16340019194795184309.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1586,24 +1726,32 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01.png&#34;
+	width=&#34;862&#34;
+	height=&#34;1780&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu4744215731105388183.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu11961139861029888868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02.png&#34;
+	width=&#34;858&#34;
+	height=&#34;1782&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02_hu12707206197739250559.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02_hu9605421793835209314.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;115px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1761,24 +1909,32 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-01.gif&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01.gif&#34;
+	width=&#34;514&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu7937819130851390458.gif 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu18004414083659632444.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;137px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03.png&#34;
+	width=&#34;480&#34;
+	height=&#34;985&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03_hu11934039173830269152.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03_hu9916125900279363240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1876,14 +2032,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04.png&#34;
+	width=&#34;480&#34;
+	height=&#34;996&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04_hu17613666084727743449.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04_hu10360789571271823833.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;115px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1950,14 +2110,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-06.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06.png&#34;
+	width=&#34;480&#34;
+	height=&#34;557&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06_hu10504429421660936840.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06_hu32532679852563450.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;206px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2149,24 +2313,32 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/collection-navigationstack-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01_hu5325019784092631783.png 480w, https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01_hu5164388604453504992.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/collection-navigationstack-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02_hu16749660166903572379.png 480w, https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02_hu10323934169859662783.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2278,24 +2450,32 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-04-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01_hu12118163079395566756.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01_hu6412327032368289270.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-04-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02_hu6413806172628759350.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02_hu12393519560396658989.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2594,37 +2774,49 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;p&gt;The Details Info you can read the &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Developer Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this article we just use the fixed values, if you want to obtain dynamic parameters, please see my article &amp;ldquo;iOS Widget 05&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-01.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01.gif&#34;
+	width=&#34;270&#34;
+	height=&#34;480&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu14353721303084471309.gif 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu14355767101479138596.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Go to Intentdefinition, and add a new Enum, you can follows the step in the images. Change the name like &lt;code&gt;ContentType&lt;/code&gt;, and add some cases like &lt;code&gt;image&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt; (also you can make name like &lt;code&gt;type1&lt;/code&gt;, &lt;code&gt;type2&lt;/code&gt;, &lt;code&gt;type3&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;(My blog is not good, so you can enlarge the page to view the picture.(灬ꈍ ꈍ灬))&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01.png&#34;
+	width=&#34;2280&#34;
+	height=&#34;1222&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu1227861313892506043.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu16434472388710042710.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Follow the steps.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02.png&#34;
+	width=&#34;2852&#34;
+	height=&#34;2154&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02_hu16208964517944625769.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02_hu14329778392037110458.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;317px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Then you can write code, please see the code of &lt;code&gt;case .type2:&lt;/code&gt;. In here you can add the other Widgets. Please download my demo and see the effect. Thanks.&lt;/p&gt;
@@ -2695,62 +2887,82 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-01.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-01_hu10640737834290113082.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-01_hu17222821660275892437.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-02.png&#34;
+	width=&#34;1246&#34;
+	height=&#34;814&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-02_hu10986210436778170023.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-02_hu11002147794532590002.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-03.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-03_hu14254881588765008558.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-03_hu15647027488612587678.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-04_hu16383278322018705421.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-04_hu7271530290401720673.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;In the Left Bar we can see the Widget Target Code, and we can see the widget&amp;rsquo;s preview. Just change the body code, can update the Widget View.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/first-05.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-05.png&#34;
+	width=&#34;2822&#34;
+	height=&#34;1782&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-05_hu10202392606140426232.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-05_hu1205175021051020735.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -2760,14 +2972,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
         <pubDate>Fri, 30 Sep 2022 20:55:19 +2100</pubDate>
         
         <guid>https://blog.iostao.com/2022/09/swiftui-progress-circle/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/circle-progress-bar-01.png&#34;
-	
-	
-	
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01.png&#34;
+	width=&#34;2622&#34;
+	height=&#34;1810&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu6029638241970471263.png 480w, https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu5874114624892683261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;circle&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2876,12 +3092,16 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/circle-progress-bar-01.gif&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01.gif&#34;
+	width=&#34;356&#34;
+	height=&#34;752&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu12559399012916172236.gif 480w, https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu6050614611849571663.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -2892,14 +3112,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
         
         <guid>https://blog.iostao.com/2022/09/swiftui-animation-scale-image/</guid>
         <description>&lt;p&gt;How to realize flexible animation of pictures? It&amp;rsquo;s very simple to use SwiftUI now.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/animation-scale.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale.gif&#34;
+	width=&#34;356&#34;
+	height=&#34;752&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale_hu1891872804689302987.gif 480w, https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale_hu15927109114061588120.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gif&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3070,22 +3294,30 @@ The right view contains a sub-view (`S&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui-use-tabview-001.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001.png&#34;
+	width=&#34;352&#34;
+	height=&#34;763&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu15467313995240875096.png 480w, https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu1213981512174880086.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui-use-tabview-001.gif&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001.gif&#34;
+	width=&#34;352&#34;
+	height=&#34;762&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu1371060560231846634.gif 480w, https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu7790377085339406290.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -3389,69 +3621,93 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;li&gt;Xcode: 14&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We can found that when we click the button, the icon changes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-001.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001.png&#34;
+	width=&#34;2484&#34;
+	height=&#34;1793&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001_hu7134591971203947460.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001_hu1720884399501165925.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;332px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-002.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002.png&#34;
+	width=&#34;1918&#34;
+	height=&#34;840&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002_hu17192600099750715004.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002_hu13252654696677530785.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In the picture we can see that there is only &lt;code&gt;1024*1024px&lt;/code&gt; in AppIcon of Xcode14. Wow, that&amp;rsquo;s so easily in the Xcode14. So now we only need to prepare a few &lt;code&gt;1024*1024px&lt;/code&gt; pictures. Just like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-003.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003.png&#34;
+	width=&#34;1814&#34;
+	height=&#34;804&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003_hu13464282103624422940.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003_hu11909994348282323683.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;541px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;But if we want to use multiple AppIcons, we need modify the setting in the &lt;code&gt;Build Setting&lt;/code&gt;. In the Search Bar filled the text: &lt;code&gt;include all&lt;/code&gt;. Then we can see Key: Include All App Icon Assets, make it as Yes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-004.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004.png&#34;
+	width=&#34;2732&#34;
+	height=&#34;606&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004_hu2417595698810012083.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004_hu2614493483271662002.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;450&#34;
+		data-flex-basis=&#34;1081px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-005.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005.png&#34;
+	width=&#34;2580&#34;
+	height=&#34;1804&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005_hu157323237216028192.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005_hu15943582716805891638.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;343px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Then we begin to write the code. All my code is in the picture. And you can also copy the code directory in the bottom.&lt;/p&gt;
 &lt;p&gt;Why did I add an alert in the last Text? When an error window pop up, you can customize the message content.&lt;/p&gt;
 &lt;p&gt;If your system is not in English, you will find that the pop-up message is always in English. So we need to set internationalization. In the TARGETS, then go to Info, add a Key: Localized resources can be mixed, Value: YES.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-006.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006.png&#34;
+	width=&#34;2512&#34;
+	height=&#34;1090&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006_hu14576583471149350688.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006_hu3576507215221482956.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

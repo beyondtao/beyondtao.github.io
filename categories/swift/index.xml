@@ -15,14 +15,18 @@
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;From Jpmtech&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I need to develop a calendar module, so I have collected some information online for reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift_datetim_01.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01.jpg&#34;
+	width=&#34;654&#34;
+	height=&#34;1328&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu13363103413544704647.jpg 480w, https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu8030627644824689900.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;49&#34;
+		data-flex-basis=&#34;118px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;code&#34;&gt;Code:
@@ -317,14 +321,18 @@
         <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
         
         <guid>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift3-GCD-dispatch-async-01.png&#34;
-	
-	
-	
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01.png&#34;
+	width=&#34;1526&#34;
+	height=&#34;240&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3501255111169184025.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3251674048650655950.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图示&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;635&#34;
+		data-flex-basis=&#34;1526px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)&lt;/p&gt;
@@ -378,14 +386,18 @@ DISPATCH_QUEUE_PRIORITY_BACKGROUND
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这些命名比原先的更加友好，能更好表达这个操作的意图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift3-GCD-dispatch-async-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu4140799552534284773.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu17590588213227408113.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图示&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;584px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;和原有的对应关系是：&lt;/p&gt;
@@ -570,34 +582,46 @@ class LTViewModel: NSObject {
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu5397645105074715145.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu10558250761869055425.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一维数组&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu11579386298292832752.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu3774851530981175382.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;多维数组&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu9258861284580425372.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu13579471794801822993.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;时间选择器&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -1132,71 +1156,6 @@ print(&amp;quot;\(str)&amp;quot;)
     nsRange, withString: &amp;quot;AAAA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         <item>
-        <title>Swift2.2的新特性</title>
-        <link>https://blog.iostao.com/2016/03/swift2-2newinfo/</link>
-        <pubDate>Wed, 23 Mar 2016 22:25:21 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/2016/03/swift2-2newinfo/</guid>
-        <description>&lt;p&gt;Swift 2.2 随着 iOS 9.3 一同闪亮登场，相较于 Swift 2.1， 2.2 版本做出了许多调整，从其调整方向上我们也能一窥 Swift 3.0 的影子，以下内容主要来自于苹果 Swift 官方 Blog ，接下来就让我们进入正题，一睹 Swift 2.2 的庐山真面目：&lt;/p&gt;
-&lt;h3 id=&#34;language-changes-语言变化&#34;&gt;Language Changes 语言变化
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0001-keywords-as-argument-labels.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0001: Allow (most) keywords as argument labels&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0015-tuple-comparison-operators.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0015: Tuple comparison operators&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0014-constrained-AnySequence.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0014: Constraining AnySequence.init&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0011-replace-typealias-associated.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0011: Replace typealias keyword with associatedtype for associated type declarations&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0021-generalized-naming.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0021: Naming Functions with Argument Labels&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0022-objc-selectors.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0022: Referencing the Objective-C selector of a method&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0020-if-swift-version.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0020: Swift Language Version Build Configuration&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;允许更多的关键字来做参数标签&#34;&gt;允许更多的关键字来做参数标签
-&lt;/h4&gt;&lt;p&gt;SE-0001: Allow (most) keywords as argument labels
-参数标签是 Swift 中非常 cool 的一个特性，我们可以这么写：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  for i in 1.stride(to: 9, by: 2) {
-      print(i)
-  }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个函数很简单，由 1 开始，每次加 2，返回一系列的值，最后的结果要小于 9：&lt;/p&gt;
-&lt;p&gt;上面的函数如果参数前没有 to 或 by 标签，即 stride(9, 2) 那么代码将失去自解释性，别人也很难猜到这些参数的实际用途。&lt;/p&gt;
-&lt;p&gt;又假设我们要获取集合中某个值对应的索引，可以声明如下方法：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  indexOf(value, in: collection)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;但是注意在 Swift 2.2 之前的版本，上面这种写法 Xcode 会报错，因为 in 是一个关键字，想要使用这些关键字必须加上单引号：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  indexOf(value, `in`: collection)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以前我们定义新的 API 的时候，通常也要避免与这些关键字撞车，比如用 within 代替 in 。在我们导入 Objective-C APIs 的时候通常会碰到这些问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  event.touchesMatching([.Began, .Moved], `in`: view)
-  NSXPCInterface(`protocol`: SomeProtocolType.Protocol)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;而在 Swift 2.2，我们开放了除 inout , var 和 let 以外所有的关键字，现在他们都可以作为参数 label 来使用了（而不用加单引号）关于语法的影响主要注意以下三方面：&lt;/p&gt;
-&lt;p&gt;函数调用中的关键字可以随意使用了，不会产生什么歧义，因为方法调用时 “:” 总是伴随着参数标签出现。
-函数/子类化/初始化 声明：除 inout , var 和 let 这三个关键字之外，使用其他关键字没有什么歧义，因为这些关键字后面总是跟随着 ‘:’ 或 ‘_’ 比如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  func touchesMatching(phase: NSTouchPhase, in view: NSView?) -&amp;gt; Set&amp;lt;NSTouch&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        <item>
         <title>UITesting中文错误问题</title>
         <link>https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/</link>
         <pubDate>Fri, 19 Feb 2016 11:35:23 +0000</pubDate>
@@ -1205,36 +1164,48 @@ print(&amp;quot;\(str)&amp;quot;)
         <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错
 &lt;/h2&gt;&lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1.png&#34;
+	width=&#34;800&#34;
+	height=&#34;251&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu17549318300410279224.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu18444501173245848156.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如图，所有中文的内容，在脚本内都显示为 unicode编码形式。无奈，采取了转义字符，如下图所示&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2.png&#34;
+	width=&#34;800&#34;
+	height=&#34;319&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu3402662950340839847.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu12235706775932267245.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;250&#34;
+		data-flex-basis=&#34;601px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;至少双引号内的已经是字符串类型了。然后运行一下脚本，发现不通过。所以尝试一下手动进行文字输入，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3.png&#34;
+	width=&#34;800&#34;
+	height=&#34;462&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu5044469407873601359.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu18227729975650634068.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;执行脚本，发现成功。&lt;/p&gt;

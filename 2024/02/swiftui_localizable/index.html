@@ -10,7 +10,7 @@
 <meta property='og:description' content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
 <meta property='og:url' content='https://blog.iostao.com/2024/02/swiftui_localizable/'>
 <meta property='og:site_name' content='Hugo Theme Stack Starter'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swiftui' /><meta property='article:published_time' content='2024-02-18T14:05:02&#43;01:00'/><meta property='article:modified_time' content='2024-02-18T14:05:02&#43;01:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swiftui' /><meta property='article:tag' content='Xcode15' /><meta property='article:published_time' content='2024-02-18T14:05:02&#43;01:00'/><meta property='article:modified_time' content='2024-02-18T14:05:02&#43;01:00'/>
 <meta name="twitter:title" content="SwiftUI Localization with Xcode 15">
 <meta name="twitter:description" content="Localize SwiftUI views so users experience your app in their own native language, region, and culture.">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -291,10 +291,6 @@
                 Swiftui
             </a>
         
-            <a href="/categories/xcode15/" >
-                Xcode15
-            </a>
-        
     </header>
     
 
@@ -357,86 +353,134 @@
     
     
     <p>I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.</p>
-<ul>
+<h1 id="heading">
+</h1><ul>
 <li>Interface: SwiftUI</li>
 <li>Language: Swift5.9</li>
 <li>Xcode: 15</li>
 </ul>
 <!-- ![用图说话](/img/aps/ost-tcp-ip.png) -->
 <p>As you can see in the image, the text changes when the user selects a different language.</p>
-<p><img src="/swiftui5.9_localizable_01.jpg"
+<p><img src="/1.jpg"
 	
 	
 	
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+> <img src="/2.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+></p>
+<p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_01.jpg"
+	width="2080"
+	height="1418"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu6953590727284174163.jpg 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu16722683197781310662.jpg 1024w"
 	loading="lazy"
 	
 		alt="Demo"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="352px"
+	
 ></p>
 <h2 id="operation">Operation
 </h2><h3 id="1-create-localizable-files">1. Create Localizable files
-</h3><p><img src="/swiftui5.9_localizable_02.png"
-	
-	
-	
+</h3><p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_02.png"
+	width="1460"
+	height="1040"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu9248630418729134372.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu14239473914317851058.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="336px"
 	
 ></p>
-<p><img src="/swiftui5.9_localizable_03.png"
-	
-	
-	
+<p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_03.png"
+	width="1456"
+	height="1036"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu8844204726832916562.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu7788331046721820900.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="337px"
 	
 ></p>
 <h3 id="2-add-languages">2. Add Languages
-</h3><p><img src="/swiftui5.9_localizable_04.png"
-	
-	
-	
+</h3><p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_04.png"
+	width="2304"
+	height="1456"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu18446339310280532176.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu11901082753877097281.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="379px"
 	
 ></p>
 <h3 id="3-localization">3. Localization
 </h3><p>On the right side, click <code>Localize...</code> A pop-up window will appear. And then click <code>Localize</code> to continue.</p>
-<p><img src="/swiftui5.9_localizable_05.png"
-	
-	
-	
+<p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_05.png"
+	width="2136"
+	height="1430"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu17266561268419090555.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu3433466553986354024.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
 	
 ></p>
-<p><img src="/swiftui5.9_localizable_06.png"
-	
-	
-	
+<p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_06.png"
+	width="2132"
+	height="1430"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu8823005154209568811.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu18048239586786569073.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
 	
 ></p>
-<p><img src="/swiftui5.9_localizable_07.png"
-	
-	
-	
+<p><img src="/2024/02/swiftui_localizable/swiftui5.9_localizable_07.png"
+	width="2136"
+	height="1430"
+	srcset="/2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu5451715774920632548.png 480w, /2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu14992459476066263899.png 1024w"
 	loading="lazy"
 	
 		alt="Image"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
 	
 ></p>
 <h2 id="appstateswift">AppState.swift
@@ -601,6 +645,8 @@
         
             <a href="/tags/swiftui/">Swiftui</a>
         
+            <a href="/tags/xcode15/">Xcode15</a>
+        
     </section>
 
 
@@ -625,80 +671,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/2024/09/swiftui_observableobject/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">ObservableObject and EnvironmentObject in View of SwiftUI</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/2022/11/swiftui-widget-06/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">iOS Widget 06 - Making a Dynamic Configurable Widget for tow Intent</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/2022/11/swiftui-widget-05/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">iOS Widget 05 - Making a Dynamic Configurable Widget</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/2022/10/swiftui-navigation-slipback/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SwiftUI NavigationBar Hidden, Slipe Back Problem</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/2022/10/swiftui-layout-stack/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SwiftUI Layout - VStack / HStack / ZStack</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

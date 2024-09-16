@@ -406,14 +406,18 @@
 <p><a class="link" href="http://whatthecommit.com"  target="_blank" rel="noopener"
     >http://whatthecommit.com</a></p>
 <p>但是，一般来说，commit message 应该清晰明了，说明本次提交的目的。</p>
-<p><img src="/gitchange-log-1-1.png"
-	
-	
-	
+<p><img src="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1.png"
+	width="640"
+	height="620"
+	srcset="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu16694157757376896755.png 480w, /2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu9373581400888139603.png 1024w"
 	loading="lazy"
 	
 		alt="Angular规范"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="247px"
 	
 >
 目前，社区有多种 Commit message 的写法规范(<a class="link" href="http://whatthecommit.com"  target="_blank" rel="noopener"
@@ -424,28 +428,36 @@
 </h4><p>比如，下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。</p>
 <pre><code>$ git log &lt;last tag&gt; HEAD --pretty=format:%s
 </code></pre>
-<p><img src="/gitchange-log-1-2.png"
-	
-	
-	
+<p><img src="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2.png"
+	width="980"
+	height="778"
+	srcset="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu41701463238653970.png 480w, /2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu12166196077594003694.png 1024w"
 	loading="lazy"
 	
 		alt="历史信息"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="302px"
 	
 ></p>
 <h4 id="22-可以过滤某些commit比如文档改动便于快速查找信息">2.2 可以过滤某些commit（比如文档改动），便于快速查找信息。
 </h4><p>比如，下面的命令仅仅显示本次发布新增加的功能。</p>
 <pre><code>$ git log &lt;last release&gt; HEAD --grep feature
 </code></pre>
-<p><img src="/gitchange-log-1-3.png"
-	
-	
-	
+<p><img src="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3.png"
+	width="980"
+	height="778"
+	srcset="/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu5940266995568098312.png 480w, /2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu910274283722590940.png 1024w"
 	loading="lazy"
 	
 		alt="新增加的功能"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="302px"
 	
 ></p>
 <h4 id="23-可以直接从commit生成change-log">2.3 可以直接从commit生成Change log。
@@ -545,14 +557,18 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 <pre><code>$ commitizen init cz-conventional-changelog-cli —save —save-exact
 </code></pre>
 <p>以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message。</p>
-<p><img src="/gitchange-log-4-1.png"
-	
-	
-	
+<p><img src="/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1.png"
+	width="980"
+	height="778"
+	srcset="/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu28241422013612041.png 480w, /2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu8558429244903999678.png 1024w"
 	loading="lazy"
 	
 		alt="Commit message"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="302px"
 	
 ></p>
 <pre><code>LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git add .

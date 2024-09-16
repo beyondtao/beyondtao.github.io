@@ -258,8 +258,7 @@ The right view contains a sub-view (`S&lt;/p&gt;
         <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://blog.iostao.com/about/</guid>
-        <description>&lt;h2 id=&#34;china-attractions-you-can-click-mejourney&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey&#34; &gt;China Attractions (you can click me☺️)&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;personal-information&#34;&gt;Personal Information
+        <description>&lt;h2 id=&#34;personal-information&#34;&gt;Personal Information
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Name: Scott Tao (Baitong Tao)&lt;/p&gt;
@@ -368,86 +367,134 @@ The right view contains a sub-view (`S&lt;/p&gt;
         
         <guid>https://blog.iostao.com/2024/02/swiftui_localizable/</guid>
         <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;heading&#34;&gt;
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;Interface: SwiftUI&lt;/li&gt;
 &lt;li&gt;Language: Swift5.9&lt;/li&gt;
 &lt;li&gt;Xcode: 15&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
 &lt;p&gt;As you can see in the image, the text changes when the user selects a different language.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_01.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/1.jpg&#34;
 	
 	
 	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+&gt; &lt;img src=&#34;https://blog.iostao.com/2.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01.jpg&#34;
+	width=&#34;2080&#34;
+	height=&#34;1418&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu6953590727284174163.jpg 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_01_hu16722683197781310662.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Demo&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;operation&#34;&gt;Operation
 &lt;/h2&gt;&lt;h3 id=&#34;1-create-localizable-files&#34;&gt;1. Create Localizable files
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_02.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu9248630418729134372.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_02_hu14239473914317851058.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03.png&#34;
+	width=&#34;1456&#34;
+	height=&#34;1036&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu8844204726832916562.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_03_hu7788331046721820900.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;337px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-add-languages&#34;&gt;2. Add Languages
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_04.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04.png&#34;
+	width=&#34;2304&#34;
+	height=&#34;1456&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu18446339310280532176.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_04_hu11901082753877097281.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-localization&#34;&gt;3. Localization
 &lt;/h3&gt;&lt;p&gt;On the right side, click &lt;code&gt;Localize...&lt;/code&gt; A pop-up window will appear. And then click &lt;code&gt;Localize&lt;/code&gt; to continue.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_05.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05.png&#34;
+	width=&#34;2136&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu17266561268419090555.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_05_hu3433466553986354024.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_06.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06.png&#34;
+	width=&#34;2132&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu8823005154209568811.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_06_hu18048239586786569073.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_07.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07.png&#34;
+	width=&#34;2136&#34;
+	height=&#34;1430&#34;
+	srcset=&#34;https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu5451715774920632548.png 480w, https://blog.iostao.com/2024/02/swiftui_localizable/swiftui5.9_localizable_07_hu14992459476066263899.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;appstateswift&#34;&gt;AppState.swift
@@ -613,14 +660,18 @@ The right view contains a sub-view (`S&lt;/p&gt;
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;From Jpmtech&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I need to develop a calendar module, so I have collected some information online for reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift_datetim_01.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01.jpg&#34;
+	width=&#34;654&#34;
+	height=&#34;1328&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu13363103413544704647.jpg 480w, https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu8030627644824689900.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;49&#34;
+		data-flex-basis=&#34;118px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;code&#34;&gt;Code:
@@ -780,26 +831,34 @@ The right view contains a sub-view (`S&lt;/p&gt;
         
         <guid>https://blog.iostao.com/2023/12/swiftui_change_theme/</guid>
         <description>&lt;p&gt;I&amp;rsquo;m currently developing an App, and I aim to realize multiple theme colors. Users will have the option to switch between themes such as red, orange, blue and others. Therefore, I&amp;rsquo;m documenting how this functionality is implemented here.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/theme-change-01.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01.jpg&#34;
+	width=&#34;2848&#34;
+	height=&#34;2048&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01_hu16197444589024199930.jpg 480w, https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-01_hu9034713703946761533.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;333px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;First, let&amp;rsquo;s take a look at the demo to see the visual effects. Here, I&amp;rsquo;ve created a demo where clicking on different themes will cause the app to change its theme color accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;theme-color&#34;&gt;Theme Color
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/theme-change-02.jpg&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02.jpg&#34;
+	width=&#34;2266&#34;
+	height=&#34;2070&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02_hu13357538775605905568.jpg 480w, https://blog.iostao.com/2023/12/swiftui_change_theme/theme-change-02_hu12193757485368371990.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;demo&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;109&#34;
+		data-flex-basis=&#34;262px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;theme-code&#34;&gt;Theme Code
@@ -1596,47 +1655,63 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03_hu5239034460054264431.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-03_hu12602354312180688946.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04_hu3302747128754324502.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-04_hu7553038644862203082.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;imgwidget-06-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-01.png&#34;
-	
-	
-	
+&lt;h2 id=&#34;imgwidget-06-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01.png&#34;
+	width=&#34;3078&#34;
+	height=&#34;1812&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01_hu4266496510344535052.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-01_hu13511427450874329594.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-06-02.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02.png&#34;
+	width=&#34;3456&#34;
+	height=&#34;2160&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02_hu8196520214649155073.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-06/widget-06-02_hu8689284257289217628.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1768,133 +1843,181 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-11.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-12.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;add-new-type&#34;&gt;add New Type
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-01.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-01png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01.png&#34;
+	width=&#34;2670&#34;
+	height=&#34;1304&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01_hu12267219320917822253.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-01_hu204195342998837619.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;491px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-1.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1.png&#34;
+	width=&#34;2548&#34;
+	height=&#34;1476&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-2png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-2.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-2png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2.png&#34;
+	width=&#34;3074&#34;
+	height=&#34;1390&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2_hu12253057896908739198.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-2_hu6382320756736574014.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;221&#34;
+		data-flex-basis=&#34;530px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;p&gt;If you don&amp;rsquo;t need use the Siri, please don&amp;rsquo;t select the CheckBox.&lt;/p&gt;
 &lt;h2 id=&#34;add-target-intents-extension&#34;&gt;add Target: Intents Extension
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-03png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-03.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-03png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03.png&#34;
+	width=&#34;1336&#34;
+	height=&#34;1366&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03_hu4169659782916713668.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-03_hu9294091087290234938.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;234px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-04png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-04.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-04png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04_hu17888000876360112070.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-04_hu2970314915088420116.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-05png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-05.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-05png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05_hu1098025901170152389.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-05_hu12875354299226957477.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-06png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-06.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-06png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06.png&#34;
+	width=&#34;2384&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06_hu8227435645123101094.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-06_hu6040476996371024464.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;266&#34;
+		data-flex-basis=&#34;638px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;h2 id=&#34;target-membership&#34;&gt;Target Membership
 &lt;/h2&gt;&lt;p&gt;We need add the Target Membership for the files.&lt;/p&gt;
-&lt;h2 id=&#34;imgwidget-05-07png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-07.png&#34;
-	
-	
-	
+&lt;h2 id=&#34;imgwidget-05-07png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07.png&#34;
+	width=&#34;3080&#34;
+	height=&#34;1370&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07_hu14074864834509914588.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-07_hu2611890169856190321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;539px&#34;
 	
 &gt;
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-08png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-08.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-08png&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08.png&#34;
+	width=&#34;3078&#34;
+	height=&#34;1198&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08_hu14924608401056385618.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-08_hu1802070759059768865.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;256&#34;
+		data-flex-basis=&#34;616px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;h2 id=&#34;implementation&#34;&gt;Implementation
-&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png-1&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-02-1.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;h2 id=&#34;imgwidget-05-02-1png-1&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1.png&#34;
+	width=&#34;2548&#34;
+	height=&#34;1476&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
 	
 &gt;
 &lt;/h2&gt;&lt;p&gt;Please remember the name of the Intents (the Number - &amp;ldquo;2&amp;rdquo;), in my Project the first Intent&amp;rsquo;s name is &amp;ldquo;Configuration&amp;rdquo;&lt;/p&gt;
@@ -1981,24 +2104,32 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-11.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-05-12.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12.png&#34;
+	width=&#34;453&#34;
+	height=&#34;956&#34;
+	srcset=&#34;https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, https://blog.iostao.com/2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2103,14 +2234,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01.png&#34;
+	width=&#34;800&#34;
+	height=&#34;800&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01_hu7215712940453298623.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-01_hu13429699932820027796.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2204,14 +2339,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02.png&#34;
+	width=&#34;1000&#34;
+	height=&#34;900&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02_hu6975531055392142209.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-02_hu16764766173722729142.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;266px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2309,14 +2448,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-stack-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03.png&#34;
+	width=&#34;654&#34;
+	height=&#34;1338&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03_hu7001360210293050149.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-stack/layout-stack-03_hu16340019194795184309.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2351,24 +2494,32 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01.png&#34;
+	width=&#34;862&#34;
+	height=&#34;1780&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu4744215731105388183.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu11961139861029888868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02.png&#34;
+	width=&#34;858&#34;
+	height=&#34;1782&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02_hu12707206197739250559.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-02_hu9605421793835209314.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;115px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2526,24 +2677,32 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-01.gif&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01.gif&#34;
+	width=&#34;514&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu7937819130851390458.gif 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-01_hu18004414083659632444.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;137px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03.png&#34;
+	width=&#34;480&#34;
+	height=&#34;985&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03_hu11934039173830269152.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-03_hu9916125900279363240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2641,14 +2800,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04.png&#34;
+	width=&#34;480&#34;
+	height=&#34;996&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04_hu17613666084727743449.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-04_hu10360789571271823833.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;115px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2715,14 +2878,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/layout-lazygrid-06.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06.png&#34;
+	width=&#34;480&#34;
+	height=&#34;557&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06_hu10504429421660936840.png 480w, https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/layout-lazygrid-06_hu32532679852563450.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;206px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -2914,24 +3081,32 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/collection-navigationstack-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01_hu5325019784092631783.png 480w, https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-01_hu5164388604453504992.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/collection-navigationstack-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02_hu16749660166903572379.png 480w, https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/collection-navigationstack-02_hu10323934169859662783.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -3043,24 +3218,32 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-04-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01_hu12118163079395566756.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-01_hu6412327032368289270.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/widget-04-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;2556&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02_hu6413806172628759350.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-04/widget-04-02_hu12393519560396658989.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -3359,37 +3542,49 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;p&gt;The Details Info you can read the &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Developer Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this article we just use the fixed values, if you want to obtain dynamic parameters, please see my article &amp;ldquo;iOS Widget 05&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-01.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01.gif&#34;
+	width=&#34;270&#34;
+	height=&#34;480&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu14353721303084471309.gif 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu14355767101479138596.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Go to Intentdefinition, and add a new Enum, you can follows the step in the images. Change the name like &lt;code&gt;ContentType&lt;/code&gt;, and add some cases like &lt;code&gt;image&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt; (also you can make name like &lt;code&gt;type1&lt;/code&gt;, &lt;code&gt;type2&lt;/code&gt;, &lt;code&gt;type3&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;(My blog is not good, so you can enlarge the page to view the picture.(灬ꈍ ꈍ灬))&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01.png&#34;
+	width=&#34;2280&#34;
+	height=&#34;1222&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu1227861313892506043.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-01_hu16434472388710042710.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Follow the steps.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/widget-02-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02.png&#34;
+	width=&#34;2852&#34;
+	height=&#34;2154&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02_hu16208964517944625769.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-02/widget-02-02_hu14329778392037110458.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;317px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Then you can write code, please see the code of &lt;code&gt;case .type2:&lt;/code&gt;. In here you can add the other Widgets. Please download my demo and see the effect. Thanks.&lt;/p&gt;
@@ -3460,62 +3655,82 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-01.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-01_hu10640737834290113082.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-01_hu17222821660275892437.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-02.png&#34;
+	width=&#34;1246&#34;
+	height=&#34;814&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-02_hu10986210436778170023.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-02_hu11002147794532590002.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-03.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-03_hu14254881588765008558.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-03_hu15647027488612587678.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;-&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/first-04.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-04_hu16383278322018705421.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-04_hu7271530290401720673.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;In the Left Bar we can see the Widget Target Code, and we can see the widget&amp;rsquo;s preview. Just change the body code, can update the Widget View.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/first-05.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-05.png&#34;
+	width=&#34;2822&#34;
+	height=&#34;1782&#34;
+	srcset=&#34;https://blog.iostao.com/2022/10/swiftui-widget-01/first-05_hu10202392606140426232.png 480w, https://blog.iostao.com/2022/10/swiftui-widget-01/first-05_hu1205175021051020735.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -3525,14 +3740,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
         <pubDate>Fri, 30 Sep 2022 20:55:19 +2100</pubDate>
         
         <guid>https://blog.iostao.com/2022/09/swiftui-progress-circle/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/circle-progress-bar-01.png&#34;
-	
-	
-	
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01.png&#34;
+	width=&#34;2622&#34;
+	height=&#34;1810&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu6029638241970471263.png 480w, https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu5874114624892683261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;circle&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3641,12 +3860,16 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/circle-progress-bar-01.gif&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01.gif&#34;
+	width=&#34;356&#34;
+	height=&#34;752&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu12559399012916172236.gif 480w, https://blog.iostao.com/2022/09/swiftui-progress-circle/circle-progress-bar-01_hu6050614611849571663.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -3657,14 +3880,18 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
         
         <guid>https://blog.iostao.com/2022/09/swiftui-animation-scale-image/</guid>
         <description>&lt;p&gt;How to realize flexible animation of pictures? It&amp;rsquo;s very simple to use SwiftUI now.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/animation-scale.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale.gif&#34;
+	width=&#34;356&#34;
+	height=&#34;752&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale_hu1891872804689302987.gif 480w, https://blog.iostao.com/2022/09/swiftui-animation-scale-image/animation-scale_hu15927109114061588120.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gif&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;47&#34;
+		data-flex-basis=&#34;113px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3835,22 +4062,30 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui-use-tabview-001.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001.png&#34;
+	width=&#34;352&#34;
+	height=&#34;763&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu15467313995240875096.png 480w, https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu1213981512174880086.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui-use-tabview-001.gif&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001.gif&#34;
+	width=&#34;352&#34;
+	height=&#34;762&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu1371060560231846634.gif 480w, https://blog.iostao.com/2022/09/swiftui-use-tabview/swiftui-use-tabview-001_hu7790377085339406290.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -4154,69 +4389,93 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;li&gt;Xcode: 14&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We can found that when we click the button, the icon changes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-001.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001.png&#34;
+	width=&#34;2484&#34;
+	height=&#34;1793&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001_hu7134591971203947460.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-001_hu1720884399501165925.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;332px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-002.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002.png&#34;
+	width=&#34;1918&#34;
+	height=&#34;840&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002_hu17192600099750715004.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-002_hu13252654696677530785.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In the picture we can see that there is only &lt;code&gt;1024*1024px&lt;/code&gt; in AppIcon of Xcode14. Wow, that&amp;rsquo;s so easily in the Xcode14. So now we only need to prepare a few &lt;code&gt;1024*1024px&lt;/code&gt; pictures. Just like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-003.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003.png&#34;
+	width=&#34;1814&#34;
+	height=&#34;804&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003_hu13464282103624422940.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-003_hu11909994348282323683.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;541px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;But if we want to use multiple AppIcons, we need modify the setting in the &lt;code&gt;Build Setting&lt;/code&gt;. In the Search Bar filled the text: &lt;code&gt;include all&lt;/code&gt;. Then we can see Key: Include All App Icon Assets, make it as Yes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-004.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004.png&#34;
+	width=&#34;2732&#34;
+	height=&#34;606&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004_hu2417595698810012083.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-004_hu2614493483271662002.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;450&#34;
+		data-flex-basis=&#34;1081px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-005.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005.png&#34;
+	width=&#34;2580&#34;
+	height=&#34;1804&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005_hu157323237216028192.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-005_hu15943582716805891638.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;343px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Then we begin to write the code. All my code is in the picture. And you can also copy the code directory in the bottom.&lt;/p&gt;
 &lt;p&gt;Why did I add an alert in the last Text? When an error window pop up, you can customize the message content.&lt;/p&gt;
 &lt;p&gt;If your system is not in English, you will find that the pop-up message is always in English. So we need to set internationalization. In the TARGETS, then go to Info, add a Key: Localized resources can be mixed, Value: YES.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/appicon-changes-006.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006.png&#34;
+	width=&#34;2512&#34;
+	height=&#34;1090&#34;
+	srcset=&#34;https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006_hu14576583471149350688.png 480w, https://blog.iostao.com/2022/09/swiftui-appicon-changes/appicon-changes-006_hu3576507215221482956.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4334,6 +4593,38 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 </description>
         </item>
         <item>
+        <title>Journey</title>
+        <link>https://blog.iostao.com/journeys/</link>
+        <pubDate>Sat, 03 Sep 2022 12:47:32 +0800</pubDate>
+        
+        <guid>https://blog.iostao.com/journeys/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202208-beijing&#34; &gt;08.2022 Beijing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202111-beijing&#34; &gt;11.2021 Beijing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202209-beijing&#34; &gt;09.2022 Summer Palace&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202208-mount-tai&#34; &gt;08.2022 Mount Tai&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202208-jinan&#34; &gt;08.2022 Ji Nan&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202208-tiantan&#34; &gt;08.2022 Temple of Heaven&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/2022-wulanchabu&#34; &gt;07.2022 wulanchabu&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journeys/202207-weishan&#34; &gt;07.2022 Weishan&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Archives</title>
         <link>https://blog.iostao.com/2022/03/archives/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
@@ -4392,48 +4683,64 @@ $ vue create 项目名
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;21-pick-a-preset&#34;&gt;2.1 pick a preset
 &lt;/h3&gt;&lt;p&gt;选择 &lt;a&gt;Manually select features&lt;/a&gt; 手动配置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01.png&#34;
+	width=&#34;1292&#34;
+	height=&#34;254&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu13092197562690266530.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu8503343499909818391.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;508&#34;
+		data-flex-basis=&#34;1220px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;22-check-the-features&#34;&gt;2.2 check the features
 &lt;/h3&gt;&lt;p&gt;按照图中选项配置，点击&lt;code&gt;空格&lt;/code&gt;选择选项。 Unit Testing 测试单元可以不选择&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;354&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu9488727460876838499.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu17456669236675357118.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;365&#34;
+		data-flex-basis=&#34;877px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;23-选择vue版本&#34;&gt;2.3 选择vue版本
 &lt;/h3&gt;&lt;p&gt;注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03.png&#34;
+	width=&#34;1292&#34;
+	height=&#34;270&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu15533065406649613524.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu3705380082832056808.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;478&#34;
+		data-flex-basis=&#34;1148px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-04.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;480&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu1481097904666668527.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu708166772119506285.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;269&#34;
+		data-flex-basis=&#34;647px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;24-细节配置&#34;&gt;2.4 细节配置
@@ -4465,28 +4772,36 @@ $ vue create 项目名
 &lt;h3 id=&#34;save-this-as-a-preset-for-future-projectsyn-是否保存配置-&#34;&gt;Save this as a preset for future projects?(y/N) （是否保存配置 ）
 &lt;/h3&gt;&lt;p&gt;可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目&lt;/p&gt;
 &lt;h3 id=&#34;213-创建完成&#34;&gt;2.13 创建完成
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-10.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10.png&#34;
+	width=&#34;1296&#34;
+	height=&#34;384&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu8547612030278357154.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu353394525764171207.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;337&#34;
+		data-flex-basis=&#34;810px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;214-运行项目&#34;&gt;2.14 运行项目
 &lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$ cd 项目目录
 $ npm run serve
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11.png&#34;
+	width=&#34;1778&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu15695576423891411833.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu2514028105230788139.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;519&#34;
+		data-flex-basis=&#34;1247px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;三&#34;&gt;三、
@@ -4923,27 +5238,35 @@ oli, npm)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;四jira&#34;&gt;四、Jira
 &lt;/h2&gt;&lt;p&gt;设置gitlab Network配置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/git-commitizen-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01.png&#34;
+	width=&#34;1912&#34;
+	height=&#34;1246&#34;
+	srcset=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01_hu16431760920881588827.png 480w, https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01_hu4628764144753241524.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入要配置的项目，点击设置。（这里和上面那个设置不同，这里是设置项目里的配置）&lt;/p&gt;
 &lt;p&gt;往下滑动一点儿，有个保存。保存。保存。不要忘记保存。&lt;/p&gt;
 &lt;p&gt;配置 Jira&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/git-commitizen-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02.png&#34;
+	width=&#34;2220&#34;
+	height=&#34;1342&#34;
+	srcset=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02_hu14453019383020938118.png 480w, https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02_hu13141317528663576988.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;397px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -5033,14 +5356,18 @@ sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://whatthecommit.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://whatthecommit.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;但是，一般来说，commit message 应该清晰明了，说明本次提交的目的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/gitchange-log-1-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1.png&#34;
+	width=&#34;640&#34;
+	height=&#34;620&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu16694157757376896755.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu9373581400888139603.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Angular规范&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;247px&#34;
 	
 &gt;
 目前，社区有多种 Commit message 的写法规范(&lt;a class=&#34;link&#34; href=&#34;http://whatthecommit.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -5051,28 +5378,36 @@ sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
 &lt;/h4&gt;&lt;p&gt;比如，下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git log &amp;lt;last tag&amp;gt; HEAD --pretty=format:%s
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/gitchange-log-1-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu41701463238653970.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu12166196077594003694.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;历史信息&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;22-可以过滤某些commit比如文档改动便于快速查找信息&#34;&gt;2.2 可以过滤某些commit（比如文档改动），便于快速查找信息。
 &lt;/h4&gt;&lt;p&gt;比如，下面的命令仅仅显示本次发布新增加的功能。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git log &amp;lt;last release&amp;gt; HEAD --grep feature
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/gitchange-log-1-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu5940266995568098312.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu910274283722590940.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;新增加的功能&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;23-可以直接从commit生成change-log&#34;&gt;2.3 可以直接从commit生成Change log。
@@ -5172,14 +5507,18 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 &lt;pre&gt;&lt;code&gt;$ commitizen init cz-conventional-changelog-cli —save —save-exact
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/gitchange-log-4-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu28241422013612041.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu8558429244903999678.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Commit message&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git add .
@@ -5695,14 +6034,18 @@ npm install quill-image-drop-module 	(图片拖拽）
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;4显示&#34;&gt;4、显示
 &lt;/h3&gt;&lt;p&gt;页面刷新一下，应该就可以如下图正常显示了，如果有问题，检查一下代码
-&lt;img src=&#34;https://blog.iostao.com/vue-quill-editor.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor.png&#34;
+	width=&#34;1330&#34;
+	height=&#34;375&#34;
+	srcset=&#34;https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor_hu273132862943210271.png 480w, https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor_hu6182099422656718210.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;851px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -5886,35 +6229,47 @@ npm install quill-image-drop-module 	(图片拖拽）
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;三assetsxcassets-color-set-image-set&#34;&gt;三、Assets.xcassets Color set/ Image set
 &lt;/h2&gt;&lt;p&gt;1、 设置动态图片。选择右侧第四个标签栏。在下面选择 &lt;code&gt;Appearance&lt;/code&gt;，弹出的弹框里，可以根据需求选择 &lt;code&gt;Any, Dark&lt;/code&gt; 或 &lt;code&gt;Any, Light, Dary&lt;/code&gt; 模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dynamic-color-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01.png&#34;
+	width=&#34;2000&#34;
+	height=&#34;1056&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu16010545799213016869.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu2581417512450803492.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2、设置动态颜色，点击下方的加号，然后选择 Color Set。然后按照设置动态图片的方式，设置动态颜色即可
-&lt;img src=&#34;https://blog.iostao.com/dynamic-color-02.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02.png&#34;
+	width=&#34;758&#34;
+	height=&#34;1306&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu5802391114606347681.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu10193047713212110832.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;58&#34;
+		data-flex-basis=&#34;139px&#34;
 	
 &gt;
-&lt;img src=&#34;https://blog.iostao.com/dynamic-color-03.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03.png&#34;
+	width=&#34;2012&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu12124789810018016725.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu7599304076603217828.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;643px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、代码的使用
@@ -7850,14 +8205,18 @@ docker network create --driver bridge --gateway 172.99.0.1 --subnet 172.99.0.0/1
     &gt;转载自Ca0Gu0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;so.zip&#34; &gt;脚本下载 so.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/linux-shell-ssh.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;脚本命令&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;一说明&#34;&gt;一、说明
@@ -7899,14 +8258,18 @@ docker network create --driver bridge --gateway 172.99.0.1 --subnet 172.99.0.0/1
 &lt;p&gt;因为每次登录都需要输入一行带有ip的命令，比较麻烦。所以这里我用的脚本登录，每次登录的时候很方便，也方便管理多个服务器。&lt;/p&gt;
 &lt;h4 id=&#34;linux-shell-ssh登录脚本httpsblogqoabccom20190405linux-shell-ssh&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.qoabc.com/2019/04/05/linux-Shell-ssh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux Shell ssh登录脚本&lt;/a&gt;
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/linux-shell-ssh.gif&#34;
-	
-	
-	
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;脚本命令&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;二cent-os操作&#34;&gt;二、Cent OS操作
@@ -8126,14 +8489,18 @@ sudo systemctl stop docker
     &gt;转载自简书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述
 &lt;/h3&gt;&lt;p&gt;苹果官方图
-&lt;img src=&#34;https://blog.iostao.com/iOS-AVAudioSession.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession.png&#34;
+	width=&#34;700&#34;
+	height=&#34;526&#34;
+	srcset=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu7515317354796110356.png 480w, https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu533427928384222519.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;iOS-AVAudioSession-1&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
 	
 &gt;
 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;
@@ -9900,14 +10267,18 @@ SceneKit是基于OpenGL构建的。&lt;/p&gt;
         <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
         
         <guid>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift3-GCD-dispatch-async-01.png&#34;
-	
-	
-	
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01.png&#34;
+	width=&#34;1526&#34;
+	height=&#34;240&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3501255111169184025.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3251674048650655950.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图示&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;635&#34;
+		data-flex-basis=&#34;1526px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)&lt;/p&gt;
@@ -9961,14 +10332,18 @@ DISPATCH_QUEUE_PRIORITY_BACKGROUND
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这些命名比原先的更加友好，能更好表达这个操作的意图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swift3-GCD-dispatch-async-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu4140799552534284773.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu17590588213227408113.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图示&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;584px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;和原有的对应关系是：&lt;/p&gt;
@@ -10435,14 +10810,18 @@ SSH只是一种协议，用于计算机之间的加密登录，存在多种实�
 &lt;pre&gt;&lt;code&gt;xclip -sel clip &amp;lt; ~/.ssh/id_rsa.pub
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后将复制的ssh_rsa.pub 公钥粘贴到git服务器的SSH配置中。例如github:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/git-sshkey-001.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001.png&#34;
+	width=&#34;2256&#34;
+	height=&#34;370&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001_hu16214005922475629005.png 480w, https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001_hu3546954095509113906.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;github-ssh配置&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;609&#34;
+		data-flex-basis=&#34;1463px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -10560,34 +10939,46 @@ Unpacking objects: 100% (22/22), done.
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-01.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu5397645105074715145.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu10558250761869055425.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一维数组&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-02.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu11579386298292832752.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu3774851530981175382.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;多维数组&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
 &gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/LTPickerView-03.png&#34;
-	
-	
-	
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu9258861284580425372.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu13579471794801822993.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;时间选择器&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
 	
 &gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -10694,25 +11085,33 @@ print(Int(commitChar.value))&lt;/p&gt;
 &lt;h4 id=&#34;二破解&#34;&gt;二、破解
 &lt;/h4&gt;&lt;p&gt;顶部下载文件中，含有破解包。&lt;/p&gt;
 &lt;p&gt;打开应用程序，选择Charles,选择显示包内容：
-&lt;img src=&#34;https://blog.iostao.com/charlesproxy-1-1.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1.png&#34;
+	width=&#34;1671&#34;
+	height=&#34;1077&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1_hu10121814230045296573.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1_hu884148347390407881.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Charles破解-1&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;372px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后点击Contents-&amp;gt;Resources-&amp;gt;Java:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/charlesproxy-1-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2.png&#34;
+	width=&#34;933&#34;
+	height=&#34;298&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2_hu7780401917192744894.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2_hu6248564300017957217.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Charles破解-2&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;313&#34;
+		data-flex-basis=&#34;751px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后将我们下载下来的charles.jar替换这里的charles.jar就可以了。然后打开Charles就可以了。&lt;/p&gt;
@@ -10720,14 +11119,18 @@ print(Int(commitChar.value))&lt;/p&gt;
 &lt;/h4&gt;&lt;p&gt;第一、HTTP抓包
 1、打开Charles程序&lt;/p&gt;
 &lt;p&gt;2、查看Mac电脑的IP地址，系统偏好设置-&amp;gt;网络就可以查看到了，比如我的ip地址是：192.168.2.248
-&lt;img src=&#34;https://blog.iostao.com/charlesproxy-2-1.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1.png&#34;
+	width=&#34;1335&#34;
+	height=&#34;1125&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1_hu12015209577261751224.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1_hu1397312013960218294.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Charles抓包&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、打开iOS设置，进入当前wifi连接(必须和Mac在一个局域网内)，设置HTTP代理『手动』，将服务器填为上一步中获得的IP，即192.168.2.248，端口填8888。&lt;/p&gt;
@@ -10744,14 +11147,18 @@ print(Int(commitChar.value))&lt;/p&gt;
     &gt;Charles证书&lt;/a&gt;，解压后导入到iOS设备中&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在HTTPS的接口上，右键，选择&lt;strong&gt;Enable SSL Proxying&lt;/strong&gt;就可以抓该HTTPS接口的数据了。
-&lt;img src=&#34;https://blog.iostao.com/charlesproxy-3-1.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1.png&#34;
+	width=&#34;860&#34;
+	height=&#34;1074&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1_hu9733946389404113957.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1_hu8935650243458835189.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;HTTPS抓包&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;192px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注意：当我们不抓包的时候，会将Charles关闭，这时候iOS如果还开着代理，是访问不到网络的，因为设置了代理(就是Charles)，这时候需要将iOS中的代理关闭，这个是抓包时经常犯的错。千万不要因为这种二逼问题，耽误了工作。&lt;/p&gt;</description>
@@ -10788,59 +11195,79 @@ print(Int(commitChar.value))&lt;/p&gt;
 &lt;p&gt;大家做这一步，相信项目工程是有的了吧（因为本人做独立开发，所以一般新功能几乎都是在项目中做的，很少有写demo，就不考虑demo的情况了）&lt;/p&gt;
 &lt;p&gt;在项目文件的Supporting Files中的InfoPlist.strings中，右键(或command + N)&amp;ndash;&amp;gt;新建一个string文件。&lt;/p&gt;
 &lt;p&gt;（如果没有这个文件，在xcode6中创建，好像没有看到，可以自己创建一个文件，名字可以随便取，后面会给一个方法，获取这个文件的。）
-如图1-1所以&lt;img src=&#34;https://blog.iostao.com/multi-language-01.png&#34;
-	
-	
-	
+如图1-1所以&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01.png&#34;
+	width=&#34;718&#34;
+	height=&#34;406&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu5726623220645206883.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu8476703576986133914.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-1&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;创建完文件之后，点击项目—&amp;gt;选择Project—&amp;gt;选择Info—&amp;gt;点击“+”号。（画线隐藏）
-&lt;img src=&#34;https://blog.iostao.com/multi-language-02.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02.png&#34;
+	width=&#34;1101&#34;
+	height=&#34;468&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu15250861096468529299.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu17081962382959230066.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-2&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在右下方有个Language的选项，默认进来是只有English的，点击+号之后可以看到各种语言选项&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03.png&#34;
+	width=&#34;212&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu12411656954130242734.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu5433977133202965385.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-3&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在这里选择Chinese(Simplified)。下面会出现一个选项，选择InfoPlist.string文件，那个是语言设置的。（如果是自定义的文件，就选择自定义的那个）&lt;/p&gt;
 &lt;p&gt;//&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;到这里，基本配置就完成了。然后后面就是设置需要的字符，以及调用方法了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-04.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04.png&#34;
+	width=&#34;319&#34;
+	height=&#34;116&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu16232824154485133015.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu12324246766778663375.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-4&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;660px&#34;
+	
 &gt;
-&lt;img src=&#34;https://blog.iostao.com/multi-language-05.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05.png&#34;
+	width=&#34;264&#34;
+	height=&#34;113&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu11086783311722949968.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu14099599538857110012.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-5&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在相应的string文件中，写入需要的字符。前面相当于key。后面是value。&lt;/p&gt;
@@ -10923,14 +11350,18 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;p&gt;在AppDelegate.m的didFinishLaunchingWithOptions方法中，加一句：&lt;/p&gt;
 &lt;p&gt;[InternationalController initUserLanguage]; //初始化应用语言&lt;/p&gt;
 &lt;p&gt;然后设置个全局的宏变量，系统的是NSLocalizedString.这里就设置了LTlocalizedString（LT是老陶的首字母，beyond521t这个t同理，嘿嘿）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-06.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06.png&#34;
+	width=&#34;831&#34;
+	height=&#34;75&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu15615061929216511312.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu464466193721725384.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-6&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1108&#34;
+		data-flex-basis=&#34;2659px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;self.title = LTLocalizedString(@&amp;ldquo;TitleName&amp;rdquo;, nil);&lt;/p&gt;
@@ -10961,51 +11392,67 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;h4 id=&#34;dns64nat64-过渡工作流程&#34;&gt;DNS64/NAT64 过渡工作流程
 &lt;/h4&gt;&lt;p&gt;为了帮助减缓IPv4地址耗尽，NAT在许多IPv4网络实现。虽然这个解决方案暂时工作，它证明了昂贵和脆弱。今天，随着越来越多的客户使用IPv6，供应商现在必须同时支持IPv4和IPv6。这是一个代价高昂的努力。
 图&lt;code&gt;1-1&lt;/code&gt;蜂窝网络提供独立的IPv4和IPv6连接
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-1.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu14165595446409490868.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu8178422079683520665.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IPv4和IPv6连接&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;理想的情况下，供应商要降为IPv4网络支持。然而，这样做可以防止客户端访问IPv4的服务器，这是互联网的一个重要部分。为了解决这个问题，最主要的网络供应商实施 DNS64/NAT64 过渡工作。这是一个纯IPv6网络，继续提供访问IPv4内容通过翻译。
 图&lt;code&gt;1-2&lt;/code&gt;蜂窝网络的部署与 DNS64 和 NAT64 的IPv6网络
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-2.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu17935680927815367998.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu14249982903671885913.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS64 和 NAT64 的IPv6网络&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在这种类型的工作流中，客户端发送DNS查询到DNS64服务器，它要求从DNS服务器获取 IPv6 地址。当一个IPv6地址被发现，它会立即传回到客户端。然而，当没有找到IPv6地址时，DNS64服务器请求一个IPv4地址代替。然后DNS64服务器通过为IPv4添加地址前缀合成一个IPv6地址，并传递回客户端。在这方面，客户端总是收到一个IPv6-ready地址（In this regard, the client always receives an IPv6-ready address.最后一句原文 By 老陶2016-05-22 12:29:56）。&lt;/p&gt;
 &lt;p&gt;图&lt;code&gt;1-3&lt;/code&gt;处理IPv4向IPv6的转换过程
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-3.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3.png&#34;
+	width=&#34;1308&#34;
+	height=&#34;882&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu7185881398787215200.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu5238098536541329760.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IPv4向IPv6的转换过程&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;当客户端像服务器发送一个请求，任何IPv6数据包&lt;/p&gt;
 &lt;p&gt;When the client sends a request to a server, any IPv6 packets destined for synthesized addresses are automatically routed by the network through a NAT64 gateway. The gateway performs the IPv6-to-IPv4 address and protocol translation for the request. It also performs the IPv4 to IPv6 translation for the response from the server. See Figure 1-4.&lt;/p&gt;
 &lt;p&gt;图&lt;code&gt;1-4&lt;/code&gt; DNS64/NAT64过渡方案工作流程
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-4.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4.png&#34;
+	width=&#34;1287&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu10015729948620258623.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu13837624366809164448.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS64/NAT64过渡方案工作流程&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;411px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;ipv6-和-app-store-的要求&#34;&gt;IPv6 和 App Store 的要求
@@ -11034,14 +11481,18 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;/h4&gt;&lt;pre&gt;&lt;code&gt;应用需要可以建立在`高级网络框架` 或 `低级POSIX socket API网络框架`。在大多数情况下，高层次框架是足够的。它们有能力，易于使用，相比低级API拥有更少的缺陷。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;图 &lt;code&gt;1-5&lt;/code&gt; 网络框架和API图
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-5.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5.png&#34;
+	width=&#34;1242&#34;
+	height=&#34;711&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu1780319019810074547.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu13227260278074769796.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;网络框架和API图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -11098,27 +11549,35 @@ If you do require the low-level socket APIs, follow the guidelines in RFC4038: A
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;1.输入你的网址和一些附加选项。如下图
-&lt;img src=&#34;https://blog.iostao.com/001.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;1082&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001_hu11021892214415266807.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001_hu9002763688688839787.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;在线生成站点地图SiteMap&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;2.点击提交开始生成。你可以休息会，可能要登几分钟。
-&lt;img src=&#34;https://blog.iostao.com/002.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002.png&#34;
+	width=&#34;1274&#34;
+	height=&#34;700&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002_hu18247592343267015957.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002_hu14223865439659673134.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;在线生成站点地图SiteMap&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;436px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -11136,14 +11595,18 @@ If you do require the low-level socket APIs, follow the guidelines in RFC4038: A
 &lt;/ul&gt;
 &lt;p&gt;通过上面四步就ok啦！&lt;/p&gt;
 &lt;p&gt;效果如下图，不过不会立即生效的。上传后，等一些时日就好了。
-&lt;img src=&#34;https://blog.iostao.com/003.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003.png&#34;
+	width=&#34;2008&#34;
+	height=&#34;866&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003_hu4451750200164516104.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003_hu10669210367390755545.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;必应SiteMap配置效果&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;556px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -11987,14 +12450,18 @@ print(&amp;quot;\(str)&amp;quot;)
         <guid>https://blog.iostao.com/2016/04/ios-dsymanalysecrash/</guid>
         <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
 &lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dsym-crashLog1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1.png&#34;
+	width=&#34;600&#34;
+	height=&#34;450&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu4863932601678223093.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu16769412829026272455.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;crash Log&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2.找到对应的app文件&lt;/p&gt;
@@ -12011,14 +12478,18 @@ print(&amp;quot;\(str)&amp;quot;)
 &lt;p&gt;而.crash的uuid位于，crash日志中的Binary Images:中的第一行尖括号内。如：&lt;/p&gt;
 &lt;p&gt;armv7 &amp;lt;8bdeaf1a0b233ac199728c2a0ebb4165&amp;gt;
 将对应的xxx.app.dSYM文件以及xxx.app文件以及xxx.crash文件拷贝到同一文件夹中，如：~/Desktop/DebugLog。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dsym-crashAnalyse.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse.png&#34;
+	width=&#34;600&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu6686758819002864646.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu12933551020329719899.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;crash Analyse&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;92&#34;
+		data-flex-basis=&#34;220px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;5.通过symbolicatecrash分析crash文件&lt;/p&gt;
@@ -12067,81 +12538,20 @@ export DEVELOPER_DIR=&amp;quot;/Applications/Xcode.app/Contents/Developer&amp;qu
         
         <guid>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</guid>
         <description>&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/developmentHistoryOfApple.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple.jpg&#34;
+	width=&#34;730&#34;
+	height=&#34;5269&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu8855533631825796789.jpg 480w, https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu9841588477085317717.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;苹果手机发展史&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;13&#34;
+		data-flex-basis=&#34;33px&#34;
+	
 &gt;&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>Swift2.2的新特性</title>
-        <link>https://blog.iostao.com/2016/03/swift2-2newinfo/</link>
-        <pubDate>Wed, 23 Mar 2016 22:25:21 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/2016/03/swift2-2newinfo/</guid>
-        <description>&lt;p&gt;Swift 2.2 随着 iOS 9.3 一同闪亮登场，相较于 Swift 2.1， 2.2 版本做出了许多调整，从其调整方向上我们也能一窥 Swift 3.0 的影子，以下内容主要来自于苹果 Swift 官方 Blog ，接下来就让我们进入正题，一睹 Swift 2.2 的庐山真面目：&lt;/p&gt;
-&lt;h3 id=&#34;language-changes-语言变化&#34;&gt;Language Changes 语言变化
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0001-keywords-as-argument-labels.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0001: Allow (most) keywords as argument labels&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0015-tuple-comparison-operators.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0015: Tuple comparison operators&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0014-constrained-AnySequence.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0014: Constraining AnySequence.init&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0011-replace-typealias-associated.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0011: Replace typealias keyword with associatedtype for associated type declarations&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0021-generalized-naming.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0021: Naming Functions with Argument Labels&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0022-objc-selectors.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0022: Referencing the Objective-C selector of a method&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0020-if-swift-version.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SE-0020: Swift Language Version Build Configuration&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;允许更多的关键字来做参数标签&#34;&gt;允许更多的关键字来做参数标签
-&lt;/h4&gt;&lt;p&gt;SE-0001: Allow (most) keywords as argument labels
-参数标签是 Swift 中非常 cool 的一个特性，我们可以这么写：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  for i in 1.stride(to: 9, by: 2) {
-      print(i)
-  }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个函数很简单，由 1 开始，每次加 2，返回一系列的值，最后的结果要小于 9：&lt;/p&gt;
-&lt;p&gt;上面的函数如果参数前没有 to 或 by 标签，即 stride(9, 2) 那么代码将失去自解释性，别人也很难猜到这些参数的实际用途。&lt;/p&gt;
-&lt;p&gt;又假设我们要获取集合中某个值对应的索引，可以声明如下方法：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  indexOf(value, in: collection)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;但是注意在 Swift 2.2 之前的版本，上面这种写法 Xcode 会报错，因为 in 是一个关键字，想要使用这些关键字必须加上单引号：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  indexOf(value, `in`: collection)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以前我们定义新的 API 的时候，通常也要避免与这些关键字撞车，比如用 within 代替 in 。在我们导入 Objective-C APIs 的时候通常会碰到这些问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  event.touchesMatching([.Began, .Moved], `in`: view)
-  NSXPCInterface(`protocol`: SomeProtocolType.Protocol)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;而在 Swift 2.2，我们开放了除 inout , var 和 let 以外所有的关键字，现在他们都可以作为参数 label 来使用了（而不用加单引号）关于语法的影响主要注意以下三方面：&lt;/p&gt;
-&lt;p&gt;函数调用中的关键字可以随意使用了，不会产生什么歧义，因为方法调用时 “:” 总是伴随着参数标签出现。
-函数/子类化/初始化 声明：除 inout , var 和 let 这三个关键字之外，使用其他关键字没有什么歧义，因为这些关键字后面总是跟随着 ‘:’ 或 ‘_’ 比如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  func touchesMatching(phase: NSTouchPhase, in view: NSView?) -&amp;gt; Set&amp;lt;NSTouch&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
         </item>
         <item>
         <title>OSI、TCP/IP</title>
@@ -12159,14 +12569,18 @@ export DEVELOPER_DIR=&amp;quot;/Applications/Xcode.app/Contents/Developer&amp;qu
 物理层 Physical layer
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;用图说话&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/ost-tcp-ip.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip.png&#34;
+	width=&#34;500&#34;
+	height=&#34;270&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip_hu8463112965702887486.png 480w, https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip_hu18198486914454477485.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;用图说话&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -12769,14 +13183,18 @@ characteristics. The most common division is &amp;ldquo;LAN&amp;rdquo; and &amp;
 &lt;/ul&gt;
 &lt;h3 id=&#34;network-topologys&#34;&gt;Network-Topologys
 &lt;/h3&gt;&lt;p&gt;Network toplogy is the study of the arrangement(排列) or mapping(映射) of the elements of a network, especially the physical and logical interconnections between nodes(结点).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/network-topologys_total.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/aps-network/network-topologys_total.jpg&#34;
+	width=&#34;557&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/aps-network/network-topologys_total_hu2171168025915276459.jpg 480w, https://blog.iostao.com/2016/03/aps-network/network-topologys_total_hu5903678929949620075.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;拓扑图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;390px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -12873,14 +13291,18 @@ return YES;
 &lt;p&gt;1.在终端中运行ssh-keygen。&lt;/p&gt;
 &lt;p&gt;2.然后一路enter，直接到结束。不要理会中间的输入。&lt;/p&gt;
 &lt;p&gt;3 打开用户目录下.ssh/id_rsa.pub文件，复制其内容。(服务器操作，可以用vi打开，进行复制)
-&lt;img src=&#34;https://blog.iostao.com/deploy-ssh-Of-Bitbucket.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01.png&#34;
+	width=&#34;800&#34;
+	height=&#34;169&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01_hu3088135679581427821.png 480w, https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01_hu5529632840695879315.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;命令截图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;473&#34;
+		data-flex-basis=&#34;1136px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;4.Bitbucket上点右上角的小头像，然后选择Manage account.&lt;/p&gt;
@@ -12901,36 +13323,48 @@ return YES;
         <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错
 &lt;/h2&gt;&lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1.png&#34;
+	width=&#34;800&#34;
+	height=&#34;251&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu17549318300410279224.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu18444501173245848156.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如图，所有中文的内容，在脚本内都显示为 unicode编码形式。无奈，采取了转义字符，如下图所示&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2.png&#34;
+	width=&#34;800&#34;
+	height=&#34;319&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu3402662950340839847.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu12235706775932267245.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;250&#34;
+		data-flex-basis=&#34;601px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;至少双引号内的已经是字符串类型了。然后运行一下脚本，发现不通过。所以尝试一下手动进行文字输入，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/UITesting-ChineseWordsError-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3.png&#34;
+	width=&#34;800&#34;
+	height=&#34;462&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu5044469407873601359.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu18227729975650634068.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;错误&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;执行脚本，发现成功。&lt;/p&gt;
@@ -12988,37 +13422,49 @@ array = @[ a, b, c ];&lt;/p&gt;
         <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;
 &lt;p&gt;错误日志截图
-&lt;img src=&#34;https://blog.iostao.com/db-error-0001.jpeg&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001.jpeg&#34;
+	width=&#34;752&#34;
+	height=&#34;132&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu367212094257837473.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu17665080294630210476.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;569&#34;
+		data-flex-basis=&#34;1367px&#34;
 	
 &gt;
 NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = %@ and dev_id = %@&amp;quot;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/db-error-0002.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002.jpeg&#34;
+	width=&#34;1284&#34;
+	height=&#34;80&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu11537133010396254923.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu10310660902891431303.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1605&#34;
+		data-flex-basis=&#34;3852px&#34;
 	
 &gt;
 原代码是这样写的。解决方法是在 uid , dev_id 的两个参数 上 加上 单引号(这两个是字符类型变量)。&lt;/p&gt;
 &lt;p&gt;NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = &amp;lsquo;%@&amp;rsquo; and dev_id = &amp;lsquo;%@&amp;rsquo; &amp;ldquo;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/db-error-0003.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003.jpeg&#34;
+	width=&#34;1234&#34;
+	height=&#34;70&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16691831805174020123.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16184650911899788302.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1762&#34;
+		data-flex-basis=&#34;4230px&#34;
 	
 &gt;
 倘若使用这种方法写，就不需要加 引号了。这种使用 ? 问号的，就没有碰到这种问题。&lt;/p&gt;

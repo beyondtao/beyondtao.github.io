@@ -57,48 +57,64 @@ $ vue create 项目名
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;21-pick-a-preset&#34;&gt;2.1 pick a preset
 &lt;/h3&gt;&lt;p&gt;选择 &lt;a&gt;Manually select features&lt;/a&gt; 手动配置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01.png&#34;
+	width=&#34;1292&#34;
+	height=&#34;254&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu13092197562690266530.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu8503343499909818391.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;508&#34;
+		data-flex-basis=&#34;1220px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;22-check-the-features&#34;&gt;2.2 check the features
 &lt;/h3&gt;&lt;p&gt;按照图中选项配置，点击&lt;code&gt;空格&lt;/code&gt;选择选项。 Unit Testing 测试单元可以不选择&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-02.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;354&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu9488727460876838499.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu17456669236675357118.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;365&#34;
+		data-flex-basis=&#34;877px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;23-选择vue版本&#34;&gt;2.3 选择vue版本
 &lt;/h3&gt;&lt;p&gt;注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03.png&#34;
+	width=&#34;1292&#34;
+	height=&#34;270&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu15533065406649613524.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu3705380082832056808.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;478&#34;
+		data-flex-basis=&#34;1148px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-04.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;480&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu1481097904666668527.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu708166772119506285.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;269&#34;
+		data-flex-basis=&#34;647px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;24-细节配置&#34;&gt;2.4 细节配置
@@ -130,28 +146,36 @@ $ vue create 项目名
 &lt;h3 id=&#34;save-this-as-a-preset-for-future-projectsyn-是否保存配置-&#34;&gt;Save this as a preset for future projects?(y/N) （是否保存配置 ）
 &lt;/h3&gt;&lt;p&gt;可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目&lt;/p&gt;
 &lt;h3 id=&#34;213-创建完成&#34;&gt;2.13 创建完成
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-10.png&#34;
-	
-	
-	
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10.png&#34;
+	width=&#34;1296&#34;
+	height=&#34;384&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu8547612030278357154.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu353394525764171207.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;337&#34;
+		data-flex-basis=&#34;810px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;214-运行项目&#34;&gt;2.14 运行项目
 &lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$ cd 项目目录
 $ npm run serve
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/vue-cli4-antd-ts-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11.png&#34;
+	width=&#34;1778&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu15695576423891411833.png 480w, https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu2514028105230788139.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;519&#34;
+		data-flex-basis=&#34;1247px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;三&#34;&gt;三、
@@ -589,14 +613,18 @@ npm install quill-image-drop-module 	(图片拖拽）
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;4显示&#34;&gt;4、显示
 &lt;/h3&gt;&lt;p&gt;页面刷新一下，应该就可以如下图正常显示了，如果有问题，检查一下代码
-&lt;img src=&#34;https://blog.iostao.com/vue-quill-editor.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor.png&#34;
+	width=&#34;1330&#34;
+	height=&#34;375&#34;
+	srcset=&#34;https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor_hu273132862943210271.png 480w, https://blog.iostao.com/2020/06/vue-quill-editor/vue-quill-editor_hu6182099422656718210.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;851px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>

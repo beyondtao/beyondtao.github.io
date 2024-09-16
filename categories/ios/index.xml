@@ -303,35 +303,47 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;三assetsxcassets-color-set-image-set&#34;&gt;三、Assets.xcassets Color set/ Image set
 &lt;/h2&gt;&lt;p&gt;1、 设置动态图片。选择右侧第四个标签栏。在下面选择 &lt;code&gt;Appearance&lt;/code&gt;，弹出的弹框里，可以根据需求选择 &lt;code&gt;Any, Dark&lt;/code&gt; 或 &lt;code&gt;Any, Light, Dary&lt;/code&gt; 模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dynamic-color-01.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01.png&#34;
+	width=&#34;2000&#34;
+	height=&#34;1056&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu16010545799213016869.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu2581417512450803492.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2、设置动态颜色，点击下方的加号，然后选择 Color Set。然后按照设置动态图片的方式，设置动态颜色即可
-&lt;img src=&#34;https://blog.iostao.com/dynamic-color-02.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02.png&#34;
+	width=&#34;758&#34;
+	height=&#34;1306&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu5802391114606347681.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu10193047713212110832.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;58&#34;
+		data-flex-basis=&#34;139px&#34;
 	
 &gt;
-&lt;img src=&#34;https://blog.iostao.com/dynamic-color-03.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03.png&#34;
+	width=&#34;2012&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu12124789810018016725.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu7599304076603217828.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;643px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、代码的使用
@@ -370,14 +382,18 @@
     &gt;转载自简书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述
 &lt;/h3&gt;&lt;p&gt;苹果官方图
-&lt;img src=&#34;https://blog.iostao.com/iOS-AVAudioSession.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession.png&#34;
+	width=&#34;700&#34;
+	height=&#34;526&#34;
+	srcset=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu7515317354796110356.png 480w, https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu533427928384222519.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;iOS-AVAudioSession-1&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
 	
 &gt;
 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;
@@ -795,59 +811,79 @@ SceneKit是基于OpenGL构建的。&lt;/p&gt;
 &lt;p&gt;大家做这一步，相信项目工程是有的了吧（因为本人做独立开发，所以一般新功能几乎都是在项目中做的，很少有写demo，就不考虑demo的情况了）&lt;/p&gt;
 &lt;p&gt;在项目文件的Supporting Files中的InfoPlist.strings中，右键(或command + N)&amp;ndash;&amp;gt;新建一个string文件。&lt;/p&gt;
 &lt;p&gt;（如果没有这个文件，在xcode6中创建，好像没有看到，可以自己创建一个文件，名字可以随便取，后面会给一个方法，获取这个文件的。）
-如图1-1所以&lt;img src=&#34;https://blog.iostao.com/multi-language-01.png&#34;
-	
-	
-	
+如图1-1所以&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01.png&#34;
+	width=&#34;718&#34;
+	height=&#34;406&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu5726623220645206883.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu8476703576986133914.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-1&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;创建完文件之后，点击项目—&amp;gt;选择Project—&amp;gt;选择Info—&amp;gt;点击“+”号。（画线隐藏）
-&lt;img src=&#34;https://blog.iostao.com/multi-language-02.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02.png&#34;
+	width=&#34;1101&#34;
+	height=&#34;468&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu15250861096468529299.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu17081962382959230066.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-2&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在右下方有个Language的选项，默认进来是只有English的，点击+号之后可以看到各种语言选项&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-03.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03.png&#34;
+	width=&#34;212&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu12411656954130242734.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu5433977133202965385.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-3&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在这里选择Chinese(Simplified)。下面会出现一个选项，选择InfoPlist.string文件，那个是语言设置的。（如果是自定义的文件，就选择自定义的那个）&lt;/p&gt;
 &lt;p&gt;//&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;到这里，基本配置就完成了。然后后面就是设置需要的字符，以及调用方法了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-04.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04.png&#34;
+	width=&#34;319&#34;
+	height=&#34;116&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu16232824154485133015.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu12324246766778663375.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-4&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;660px&#34;
+	
 &gt;
-&lt;img src=&#34;https://blog.iostao.com/multi-language-05.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05.png&#34;
+	width=&#34;264&#34;
+	height=&#34;113&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu11086783311722949968.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu14099599538857110012.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-5&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在相应的string文件中，写入需要的字符。前面相当于key。后面是value。&lt;/p&gt;
@@ -930,14 +966,18 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;p&gt;在AppDelegate.m的didFinishLaunchingWithOptions方法中，加一句：&lt;/p&gt;
 &lt;p&gt;[InternationalController initUserLanguage]; //初始化应用语言&lt;/p&gt;
 &lt;p&gt;然后设置个全局的宏变量，系统的是NSLocalizedString.这里就设置了LTlocalizedString（LT是老陶的首字母，beyond521t这个t同理，嘿嘿）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/multi-language-06.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06.png&#34;
+	width=&#34;831&#34;
+	height=&#34;75&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu15615061929216511312.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu464466193721725384.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1-6&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1108&#34;
+		data-flex-basis=&#34;2659px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;self.title = LTLocalizedString(@&amp;ldquo;TitleName&amp;rdquo;, nil);&lt;/p&gt;
@@ -968,51 +1008,67 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;h4 id=&#34;dns64nat64-过渡工作流程&#34;&gt;DNS64/NAT64 过渡工作流程
 &lt;/h4&gt;&lt;p&gt;为了帮助减缓IPv4地址耗尽，NAT在许多IPv4网络实现。虽然这个解决方案暂时工作，它证明了昂贵和脆弱。今天，随着越来越多的客户使用IPv6，供应商现在必须同时支持IPv4和IPv6。这是一个代价高昂的努力。
 图&lt;code&gt;1-1&lt;/code&gt;蜂窝网络提供独立的IPv4和IPv6连接
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-1.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu14165595446409490868.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu8178422079683520665.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IPv4和IPv6连接&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;理想的情况下，供应商要降为IPv4网络支持。然而，这样做可以防止客户端访问IPv4的服务器，这是互联网的一个重要部分。为了解决这个问题，最主要的网络供应商实施 DNS64/NAT64 过渡工作。这是一个纯IPv6网络，继续提供访问IPv4内容通过翻译。
 图&lt;code&gt;1-2&lt;/code&gt;蜂窝网络的部署与 DNS64 和 NAT64 的IPv6网络
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-2.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu17935680927815367998.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu14249982903671885913.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS64 和 NAT64 的IPv6网络&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;在这种类型的工作流中，客户端发送DNS查询到DNS64服务器，它要求从DNS服务器获取 IPv6 地址。当一个IPv6地址被发现，它会立即传回到客户端。然而，当没有找到IPv6地址时，DNS64服务器请求一个IPv4地址代替。然后DNS64服务器通过为IPv4添加地址前缀合成一个IPv6地址，并传递回客户端。在这方面，客户端总是收到一个IPv6-ready地址（In this regard, the client always receives an IPv6-ready address.最后一句原文 By 老陶2016-05-22 12:29:56）。&lt;/p&gt;
 &lt;p&gt;图&lt;code&gt;1-3&lt;/code&gt;处理IPv4向IPv6的转换过程
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-3.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3.png&#34;
+	width=&#34;1308&#34;
+	height=&#34;882&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu7185881398787215200.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu5238098536541329760.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IPv4向IPv6的转换过程&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;当客户端像服务器发送一个请求，任何IPv6数据包&lt;/p&gt;
 &lt;p&gt;When the client sends a request to a server, any IPv6 packets destined for synthesized addresses are automatically routed by the network through a NAT64 gateway. The gateway performs the IPv6-to-IPv4 address and protocol translation for the request. It also performs the IPv4 to IPv6 translation for the response from the server. See Figure 1-4.&lt;/p&gt;
 &lt;p&gt;图&lt;code&gt;1-4&lt;/code&gt; DNS64/NAT64过渡方案工作流程
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-4.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4.png&#34;
+	width=&#34;1287&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu10015729948620258623.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu13837624366809164448.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;DNS64/NAT64过渡方案工作流程&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;411px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;ipv6-和-app-store-的要求&#34;&gt;IPv6 和 App Store 的要求
@@ -1041,14 +1097,18 @@ bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
 &lt;/h4&gt;&lt;pre&gt;&lt;code&gt;应用需要可以建立在`高级网络框架` 或 `低级POSIX socket API网络框架`。在大多数情况下，高层次框架是足够的。它们有能力，易于使用，相比低级API拥有更少的缺陷。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;图 &lt;code&gt;1-5&lt;/code&gt; 网络框架和API图
-&lt;img src=&#34;https://blog.iostao.com/require-ipv6-5.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5.png&#34;
+	width=&#34;1242&#34;
+	height=&#34;711&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu1780319019810074547.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu13227260278074769796.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;网络框架和API图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1493,14 +1553,18 @@ c++  ue为代表   难度大 人员很难组齐&lt;/p&gt;
         <guid>https://blog.iostao.com/2016/04/ios-dsymanalysecrash/</guid>
         <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
 &lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dsym-crashLog1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1.png&#34;
+	width=&#34;600&#34;
+	height=&#34;450&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu4863932601678223093.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu16769412829026272455.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;crash Log&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2.找到对应的app文件&lt;/p&gt;
@@ -1517,14 +1581,18 @@ c++  ue为代表   难度大 人员很难组齐&lt;/p&gt;
 &lt;p&gt;而.crash的uuid位于，crash日志中的Binary Images:中的第一行尖括号内。如：&lt;/p&gt;
 &lt;p&gt;armv7 &amp;lt;8bdeaf1a0b233ac199728c2a0ebb4165&amp;gt;
 将对应的xxx.app.dSYM文件以及xxx.app文件以及xxx.crash文件拷贝到同一文件夹中，如：~/Desktop/DebugLog。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/dsym-crashAnalyse.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse.png&#34;
+	width=&#34;600&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu6686758819002864646.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu12933551020329719899.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;crash Analyse&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;92&#34;
+		data-flex-basis=&#34;220px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;5.通过symbolicatecrash分析crash文件&lt;/p&gt;
@@ -1573,14 +1641,18 @@ export DEVELOPER_DIR=&amp;quot;/Applications/Xcode.app/Contents/Developer&amp;qu
         
         <guid>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</guid>
         <description>&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/developmentHistoryOfApple.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple.jpg&#34;
+	width=&#34;730&#34;
+	height=&#34;5269&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu8855533631825796789.jpg 480w, https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu9841588477085317717.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;苹果手机发展史&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;13&#34;
+		data-flex-basis=&#34;33px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -1666,37 +1738,49 @@ array = @[ a, b, c ];&lt;/p&gt;
         <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;
 &lt;p&gt;错误日志截图
-&lt;img src=&#34;https://blog.iostao.com/db-error-0001.jpeg&#34;
-	
-	
-	
+&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001.jpeg&#34;
+	width=&#34;752&#34;
+	height=&#34;132&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu367212094257837473.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu17665080294630210476.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;569&#34;
+		data-flex-basis=&#34;1367px&#34;
 	
 &gt;
 NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = %@ and dev_id = %@&amp;quot;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/db-error-0002.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002.jpeg&#34;
+	width=&#34;1284&#34;
+	height=&#34;80&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu11537133010396254923.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu10310660902891431303.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1605&#34;
+		data-flex-basis=&#34;3852px&#34;
 	
 &gt;
 原代码是这样写的。解决方法是在 uid , dev_id 的两个参数 上 加上 单引号(这两个是字符类型变量)。&lt;/p&gt;
 &lt;p&gt;NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = &amp;lsquo;%@&amp;rsquo; and dev_id = &amp;lsquo;%@&amp;rsquo; &amp;ldquo;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/db-error-0003.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003.jpeg&#34;
+	width=&#34;1234&#34;
+	height=&#34;70&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16691831805174020123.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16184650911899788302.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;screen&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1762&#34;
+		data-flex-basis=&#34;4230px&#34;
 	
 &gt;
 倘若使用这种方法写，就不需要加 引号了。这种使用 ? 问号的，就没有碰到这种问题。&lt;/p&gt;

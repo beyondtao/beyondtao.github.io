@@ -8,9 +8,6 @@
     <loc>https://blog.iostao.com/</loc>
     <lastmod>2024-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/post/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/test/</loc>
     <lastmod>2024-09-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -18,6 +15,9 @@
     <lastmod>2024-09-15T22:29:08+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2024/09/swiftui_observableobject/</loc>
+    <lastmod>2024-09-15T22:29:08+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/post/</loc>
     <lastmod>2024-09-15T22:29:08+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/swiftui/</loc>
@@ -38,7 +38,7 @@
     <loc>https://blog.iostao.com/2024/02/swiftui_localizable/</loc>
     <lastmod>2024-02-18T14:05:02+01:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/categories/xcode15/</loc>
+    <loc>https://blog.iostao.com/tags/xcode15/</loc>
     <lastmod>2024-02-18T14:05:02+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/swift/</loc>
@@ -129,6 +129,9 @@
     <lastmod>2022-09-10T23:03:17+08:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/journey/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/journeys/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2022/03/archives/</loc>
@@ -400,9 +403,6 @@
   </url><url>
     <loc>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</loc>
     <lastmod>2016-03-24T20:50:34+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/03/swift2-2newinfo/</loc>
-    <lastmod>2016-03-23T22:25:21+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/03/aps-osi_tcp-ip/</loc>
     <lastmod>2016-03-23T07:17:48+00:00</lastmod>

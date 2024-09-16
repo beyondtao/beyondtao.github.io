@@ -41,14 +41,18 @@
 物理层 Physical layer
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;用图说话&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/ost-tcp-ip.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip.png&#34;
+	width=&#34;500&#34;
+	height=&#34;270&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip_hu8463112965702887486.png 480w, https://blog.iostao.com/2016/03/aps-osi_tcp-ip/ost-tcp-ip_hu18198486914454477485.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;用图说话&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
 	
 &gt;&lt;/p&gt;</description>
         </item>
@@ -651,14 +655,18 @@ characteristics. The most common division is &amp;ldquo;LAN&amp;rdquo; and &amp;
 &lt;/ul&gt;
 &lt;h3 id=&#34;network-topologys&#34;&gt;Network-Topologys
 &lt;/h3&gt;&lt;p&gt;Network toplogy is the study of the arrangement(排列) or mapping(映射) of the elements of a network, especially the physical and logical interconnections between nodes(结点).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/network-topologys_total.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/aps-network/network-topologys_total.jpg&#34;
+	width=&#34;557&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/aps-network/network-topologys_total_hu2171168025915276459.jpg 480w, https://blog.iostao.com/2016/03/aps-network/network-topologys_total_hu5903678929949620075.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;拓扑图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;390px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;

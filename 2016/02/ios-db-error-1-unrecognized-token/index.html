@@ -312,37 +312,49 @@
     <p><code>版权声明：本文为博主原创文章，未经博主允许不得转载。</code></p>
 <p>做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）</p>
 <p>错误日志截图
-<img src="/db-error-0001.jpeg"
-	
-	
-	
+<img src="/2016/02/ios-db-error-1-unrecognized-token/db-error-0001.jpeg"
+	width="752"
+	height="132"
+	srcset="/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu367212094257837473.jpeg 480w, /2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu17665080294630210476.jpeg 1024w"
 	loading="lazy"
 	
 		alt="screen"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="569"
+		data-flex-basis="1367px"
 	
 >
 NSString *sql_select = [NSString stringWithFormat:@&ldquo;select * from %@ where uid = %@ and dev_id = %@&quot;,TBNAME_User_Dev, uid, device.nameOrAddress];</p>
-<p><img src="/db-error-0002.jpeg"
-	
-	
-	
+<p><img src="/2016/02/ios-db-error-1-unrecognized-token/db-error-0002.jpeg"
+	width="1284"
+	height="80"
+	srcset="/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu11537133010396254923.jpeg 480w, /2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu10310660902891431303.jpeg 1024w"
 	loading="lazy"
 	
 		alt="screen"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="1605"
+		data-flex-basis="3852px"
 	
 >
 原代码是这样写的。解决方法是在 uid , dev_id 的两个参数 上 加上 单引号(这两个是字符类型变量)。</p>
 <p>NSString *sql_select = [NSString stringWithFormat:@&ldquo;select * from %@ where uid = &lsquo;%@&rsquo; and dev_id = &lsquo;%@&rsquo; &ldquo;,TBNAME_User_Dev, uid, device.nameOrAddress];</p>
-<p><img src="/db-error-0003.jpeg"
-	
-	
-	
+<p><img src="/2016/02/ios-db-error-1-unrecognized-token/db-error-0003.jpeg"
+	width="1234"
+	height="70"
+	srcset="/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16691831805174020123.jpeg 480w, /2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16184650911899788302.jpeg 1024w"
 	loading="lazy"
 	
 		alt="screen"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="1762"
+		data-flex-basis="4230px"
 	
 >
 倘若使用这种方法写，就不需要加 引号了。这种使用 ? 问号的，就没有碰到这种问题。</p>

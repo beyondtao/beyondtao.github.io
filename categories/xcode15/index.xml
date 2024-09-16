@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Xcode15 on Hugo Theme Stack Starter</title>
-        <link>https://blog.iostao.com/categories/xcode15/</link>
+        <link>http://localhost:1313/categories/xcode15/</link>
         <description>Recent content in Xcode15 on Hugo Theme Stack Starter</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/categories/xcode15/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Feb 2024 14:05:02 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/xcode15/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SwiftUI Localization with Xcode 15</title>
-        <link>https://blog.iostao.com/2024/02/swiftui_localizable/</link>
+        <link>http://localhost:1313/2024/02/swiftui_localizable/</link>
         <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
         
-        <guid>https://blog.iostao.com/2024/02/swiftui_localizable/</guid>
+        <guid>http://localhost:1313/2024/02/swiftui_localizable/</guid>
         <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Interface: SwiftUI&lt;/li&gt;
@@ -20,7 +20,7 @@
 &lt;/ul&gt;
 &lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
 &lt;p&gt;As you can see in the image, the text changes when the user selects a different language.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_01.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_01.jpg&#34;
 	
 	
 	
@@ -32,7 +32,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;operation&#34;&gt;Operation
 &lt;/h2&gt;&lt;h3 id=&#34;1-create-localizable-files&#34;&gt;1. Create Localizable files
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_02.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_02.png&#34;
 	
 	
 	
@@ -42,7 +42,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_03.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_03.png&#34;
 	
 	
 	
@@ -53,7 +53,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-add-languages&#34;&gt;2. Add Languages
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_04.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_04.png&#34;
 	
 	
 	
@@ -65,7 +65,7 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-localization&#34;&gt;3. Localization
 &lt;/h3&gt;&lt;p&gt;On the right side, click &lt;code&gt;Localize...&lt;/code&gt; A pop-up window will appear. And then click &lt;code&gt;Localize&lt;/code&gt; to continue.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_05.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_05.png&#34;
 	
 	
 	
@@ -75,7 +75,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_06.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_06.png&#34;
 	
 	
 	
@@ -85,7 +85,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/swiftui5.9_localizable_07.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/swiftui5.9_localizable_07.png&#34;
 	
 	
 	

@@ -286,14 +286,18 @@ $ mysql -u root -p
     &gt;转载自Ca0Gu0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;so.zip&#34; &gt;脚本下载 so.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/linux-shell-ssh.gif&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;脚本命令&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;一说明&#34;&gt;一、说明
@@ -335,14 +339,18 @@ $ mysql -u root -p
 &lt;p&gt;因为每次登录都需要输入一行带有ip的命令，比较麻烦。所以这里我用的脚本登录，每次登录的时候很方便，也方便管理多个服务器。&lt;/p&gt;
 &lt;h4 id=&#34;linux-shell-ssh登录脚本httpsblogqoabccom20190405linux-shell-ssh&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.qoabc.com/2019/04/05/linux-Shell-ssh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux Shell ssh登录脚本&lt;/a&gt;
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/linux-shell-ssh.gif&#34;
-	
-	
-	
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;脚本命令&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;二cent-os操作&#34;&gt;二、Cent OS操作
