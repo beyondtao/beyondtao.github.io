@@ -8,18 +8,18 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>https://blog.iostao.com/page/archives/</link>
+        <link>https://blog.iostao.com/2022/03/archives/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.iostao.com/page/archives/</guid>
+        <guid>https://blog.iostao.com/2022/03/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://blog.iostao.com/page/links/</link>
+        <link>https://blog.iostao.com/1/01/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.iostao.com/page/links/</guid>
+        <guid>https://blog.iostao.com/1/01/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -51,10 +51,10 @@
         </item>
         <item>
         <title>Search</title>
-        <link>https://blog.iostao.com/page/search/</link>
+        <link>https://blog.iostao.com/1/01/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.iostao.com/page/search/</guid>
+        <guid>https://blog.iostao.com/1/01/search/</guid>
         <description></description>
         </item>
         
