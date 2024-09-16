@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Linux on Hugo Theme Stack Starter</title>
+        <title>Linux on Scott Tao</title>
         <link>https://blog.iostao.com/tags/linux/</link>
-        <description>Recent content in Linux on Hugo Theme Stack Starter</description>
+        <description>Recent content in Linux on Scott Tao</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 05 Mar 2020 09:54:25 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
