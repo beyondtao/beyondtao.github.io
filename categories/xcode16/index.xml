@@ -12,7 +12,8 @@
         <pubDate>Sun, 15 Sep 2024 22:29:08 +0100</pubDate>
         
         <guid>https://blog.iostao.com/2024/09/swiftui_observableobject/</guid>
-        <description>&lt;p&gt;When your view structure is complex and has multiple layers of nesting, using &lt;strong&gt;&lt;code&gt;@EnvironmentObject&lt;/code&gt;&lt;/strong&gt; allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&amp;rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.&lt;/p&gt;
+        <description>&lt;h2 id=&#34;environmentobject-and-observableobject&#34;&gt;EnvironmentObject And ObservableObject
+&lt;/h2&gt;&lt;p&gt;When your view structure is complex and has multiple layers of nesting, using &lt;strong&gt;&lt;code&gt;@EnvironmentObject&lt;/code&gt;&lt;/strong&gt; allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&amp;rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.&lt;/p&gt;
 &lt;p&gt;Suppose you have a multi-layer nested view structure as follows:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -210,8 +211,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;explanation-of-the-code&#34;&gt;Explanation of the Code
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;explanation-of-the-code&#34;&gt;Explanation of the Code
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code&gt;AppViewModel&lt;/code&gt;&lt;/strong&gt;:
 This is an &lt;code&gt;ObservableObject&lt;/code&gt; that holds the shared state (&lt;code&gt;selectedOption&lt;/code&gt;). It’s marked with &lt;code&gt;@Published&lt;/code&gt; to notify SwiftUI to update views when this value changes.&lt;/p&gt;

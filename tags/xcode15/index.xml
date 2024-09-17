@@ -12,9 +12,9 @@
         <pubDate>Sun, 18 Feb 2024 14:05:02 +0100</pubDate>
         
         <guid>https://blog.iostao.com/2024/02/swiftui_localizable/</guid>
-        <description>&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;
-&lt;h1 id=&#34;heading&#34;&gt;
-&lt;/h1&gt;&lt;ul&gt;
+        <description>&lt;h2 id=&#34;swiftui-localization&#34;&gt;SwiftUI Localization
+&lt;/h2&gt;&lt;p&gt;I need to implement manual language switching in the app settings, which requires additional coding for Swift Localizable.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Interface: SwiftUI&lt;/li&gt;
 &lt;li&gt;Language: Swift5.9&lt;/li&gt;
 &lt;li&gt;Xcode: 15&lt;/li&gt;

@@ -12,13 +12,15 @@
         <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
         
         <guid>https://blog.iostao.com/2023/12/swift_datetime/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;swift-datetime&#34;&gt;Swift Datetime
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;From Jpmtech&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I need to develop a calendar module, so I have collected some information online for reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01.jpg&#34;
+&lt;h2 id=&#34;preview&#34;&gt;Preview
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01.jpg&#34;
 	width=&#34;654&#34;
 	height=&#34;1328&#34;
-	srcset=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu13363103413544704647.jpg 480w, https://blog.iostao.com/2023/12/swift_datetime/swift_datetim_01_hu8030627644824689900.jpg 1024w&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01_hu13363103413544704647.jpg 480w, https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01_hu8030627644824689900.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Demo&#34;
@@ -29,8 +31,8 @@
 		data-flex-basis=&#34;118px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;code&#34;&gt;Code:
-&lt;/h4&gt;&lt;p&gt;&lt;B&gt;Demo Time: 2023/12/23 21:57:54&lt;/B&gt;&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code:
+&lt;/h2&gt;&lt;p&gt;&lt;B&gt;Demo Time: 2023/12/23 21:57:54&lt;/B&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -185,7 +187,8 @@
         <pubDate>Sun, 17 Dec 2023 00:00:46 +0100</pubDate>
         
         <guid>https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/</guid>
-        <description>&lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
+        <description>&lt;h2 id=&#34;swift-static-func--lhs-xxx-rhs-xxx---bool&#34;&gt;Swift static func == (lhs: XXX, rhs: XXX) -&amp;gt; Bool
+&lt;/h2&gt;&lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
 &lt;p&gt;It&amp;rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&amp;rsquo;t understand. Why is the symbol &amp;lsquo;==&amp;rsquo; used in function names?&amp;quot;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -196,8 +199,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;After studying, I realized that &amp;ldquo;==&amp;rdquo; is simply the equality operator in programming, used to compare two values to see if they are equal. LOL!&lt;/p&gt;
-&lt;h4 id=&#34;code&#34;&gt;Code:
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code:
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -239,8 +242,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;example&#34;&gt;Example:
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;example&#34;&gt;Example:
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -258,8 +261,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;comparable-same-as-&#34;&gt;Comparable same as ==
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;comparable-same-as-&#34;&gt;Comparable same as ==
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2

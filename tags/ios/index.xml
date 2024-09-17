@@ -1735,7 +1735,8 @@ array = @[ a, b, c ];&lt;/p&gt;
         <pubDate>Wed, 17 Feb 2016 14:52:50 +0000</pubDate>
         
         <guid>https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/</guid>
-        <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
+        <description>&lt;h3 id=&#34;sqlite-error&#34;&gt;Sqlite Error
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;
 &lt;p&gt;错误日志截图
 &lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001.jpeg&#34;

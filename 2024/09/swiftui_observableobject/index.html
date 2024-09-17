@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="EnvironmentObject And ObservableObject When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
 <meta name="keywords" content="SwiftUI, ObservableObject, EnvironmentObject, Xcode16"><title>ObservableObject and EnvironmentObject in View of SwiftUI</title>
 
 <link rel='canonical' href='https://blog.iostao.com/2024/09/swiftui_observableobject/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="ObservableObject and EnvironmentObject in View of SwiftUI">
-<meta property='og:description' content="When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
+<meta property='og:description' content="EnvironmentObject And ObservableObject When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
 <meta property='og:url' content='https://blog.iostao.com/2024/09/swiftui_observableobject/'>
 <meta property='og:site_name' content='Scott Tao'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swiftui' /><meta property='article:published_time' content='2024-09-15T22:29:08&#43;01:00'/><meta property='article:modified_time' content='2024-09-15T22:29:08&#43;01:00'/>
 <meta name="twitter:title" content="ObservableObject and EnvironmentObject in View of SwiftUI">
-<meta name="twitter:description" content="When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
+<meta name="twitter:description" content="EnvironmentObject And ObservableObject When your view structure is complex and has multiple layers of nesting, using @EnvironmentObject allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.\n">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -261,11 +261,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li><a href="#explanation-of-the-code">Explanation of the Code</a></li>
-      </ol>
-    </li>
+    <li><a href="#environmentobject-and-observableobject">EnvironmentObject And ObservableObject</a></li>
+    <li><a href="#explanation-of-the-code">Explanation of the Code</a></li>
   </ol>
 </nav>
         </div>
@@ -349,7 +346,8 @@
     <section class="article-content">
     
     
-    <p>When your view structure is complex and has multiple layers of nesting, using <strong><code>@EnvironmentObject</code></strong> allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.</p>
+    <h2 id="environmentobject-and-observableobject">EnvironmentObject And ObservableObject
+</h2><p>When your view structure is complex and has multiple layers of nesting, using <strong><code>@EnvironmentObject</code></strong> allows you to share state across the entire view hierarchy without having to manually pass ObservableObject at each layer. However, you don&rsquo;t need to write @EnvironmentObject var viewModel: AppViewModel at each layer. You only need to declare it in the view that really needs to access the ViewModel.</p>
 <p>Suppose you have a multi-layer nested view structure as follows:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -547,8 +545,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="explanation-of-the-code">Explanation of the Code
-</h3><ul>
+</div><h2 id="explanation-of-the-code">Explanation of the Code
+</h2><ul>
 <li>
 <p><strong><code>AppViewModel</code></strong>:
 This is an <code>ObservableObject</code> that holds the shared state (<code>selectedOption</code>). It’s marked with <code>@Published</code> to notify SwiftUI to update views when this value changes.</p>

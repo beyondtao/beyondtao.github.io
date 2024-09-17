@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
 <meta name="keywords" content="Swift5, SwiftUI"><title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
 
 <link rel='canonical' href='https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Swift static func == (lhs: XXX, rhs: XXX) -> Bool">
-<meta property='og:description' content=" It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
+<meta property='og:description' content="Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
 <meta property='og:url' content='https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/'>
 <meta property='og:site_name' content='Scott Tao'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swift' /><meta property='article:published_time' content='2023-12-17T00:00:46&#43;01:00'/><meta property='article:modified_time' content='2023-12-17T00:00:46&#43;01:00'/>
 <meta name="twitter:title" content="Swift static func == (lhs: XXX, rhs: XXX) -> Bool">
-<meta name="twitter:description" content=" It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
+<meta name="twitter:description" content="Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;\n1 static func == (lhs: Person, rhs: Person) -&gt; Bool { ">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -261,17 +261,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li>
-          <ol>
-            <li><a href="#code">Code:</a></li>
-            <li><a href="#example">Example:</a></li>
-            <li><a href="#comparable-same-as-">Comparable same as ==</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
+    <li><a href="#swift-static-func--lhs-xxx-rhs-xxx---bool">Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</a></li>
+    <li><a href="#code">Code:</a></li>
+    <li><a href="#example">Example:</a></li>
+    <li><a href="#comparable-same-as-">Comparable same as ==</a></li>
   </ol>
 </nav>
         </div>
@@ -351,7 +344,8 @@
     <section class="article-content">
     
     
-    <!-- ![用图说话](/img/aps/ost-tcp-ip.png) -->
+    <h2 id="swift-static-func--lhs-xxx-rhs-xxx---bool">Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool
+</h2><!-- ![用图说话](/img/aps/ost-tcp-ip.png) -->
 <p>It&rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&rsquo;t understand. Why is the symbol &lsquo;==&rsquo; used in function names?&quot;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -362,8 +356,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>After studying, I realized that &ldquo;==&rdquo; is simply the equality operator in programming, used to compare two values to see if they are equal. LOL!</p>
-<h4 id="code">Code:
-</h4><div class="highlight"><div class="chroma">
+<h2 id="code">Code:
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -405,8 +399,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="example">Example:
-</h4><div class="highlight"><div class="chroma">
+</div><h2 id="example">Example:
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -424,8 +418,8 @@
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="comparable-same-as-">Comparable same as ==
-</h4><div class="highlight"><div class="chroma">
+</div><h2 id="comparable-same-as-">Comparable same as ==
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
