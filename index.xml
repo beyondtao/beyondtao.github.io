@@ -6,7 +6,7 @@
         <description>Recent content on Scott Tao</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 15 Sep 2024 22:29:08 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hello World</title>
         <link>https://blog.iostao.com/test/hello-world/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
@@ -22,6 +22,137 @@
     &gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>About Me</title>
+        <link>https://blog.iostao.com/de/me/</link>
+        <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/de/me/</guid>
+        <description>&lt;h2 id=&#34;about-me-with-englishdeme&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/de/me&#34; &gt;About Me with English&lt;/a&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;sehenswürdigkeiten-in-china-klick-mich-anjourneyindex0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey/index0/&#34; &gt;Sehenswürdigkeiten in China (Klick mich an☺️)&lt;/a&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;persönliche-informationen&#34;&gt;Persönliche Informationen
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Name: Scott Tao&lt;/li&gt;
+&lt;li&gt;Beruf: iOS-Entwickler (2013 &amp;ndash; heute)&lt;/li&gt;
+&lt;li&gt;Abschluss: Bachelor in Informatik und Technologie&lt;/li&gt;
+&lt;li&gt;Geburtsjahr: 1990&lt;/li&gt;
+&lt;li&gt;Addresse: Essen, Deutschland&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sprache:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deutsch C1 (Ich lerne derzeit an IBZ Sprachschule)&lt;/li&gt;
+&lt;li&gt;Englisch: ★★★☆☆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fähigkeiten:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Objective-C: ★★★★★&lt;/li&gt;
+&lt;li&gt;Swift: ★★★★☆&lt;/li&gt;
+&lt;li&gt;SwiftUI: ★★★☆☆&lt;/li&gt;
+&lt;li&gt;Golang: ★★★☆☆&lt;/li&gt;
+&lt;li&gt;Java: ★★★☆☆&lt;/li&gt;
+&lt;li&gt;Vue.js: ★★★☆☆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;E-mail: &lt;a class=&#34;link&#34; href=&#34;mailto:baitong.tao@hotmail.com&#34; &gt;baitong.tao@hotmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;now&#34;&gt;Now
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;Jetzt lerne ich Deutsch C1 in IBZ Sprachschule in Essen.  Weil ich etwa 6 Jahren Deutsch nicht gesprochen, konnte ich fast gar nicht Deutschland. So wiederhole ich jetzt Deutsch B1 bis C1.&lt;/p&gt;
+&lt;p&gt;Jetzt lerne ich Niveau C1, der Kurs beendet fast , so jetzt würde ich eine Arbeitsstelle in Deutschland suchen.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;202012---042023&#34;&gt;2020.12 - 04.2023
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;五岳归来不看山，黄山归来不看岳&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Facing reality, I had to start looking for a new job again.&lt;/p&gt;
+&lt;p&gt;After I started working for a multinational company, I had to communicate in English since many of my colleagues are abroad.&lt;/p&gt;
+&lt;p&gt;This experience has helped me adapt to Englisch-based work practices and learn more rigorous workflow standards. We frequently use online meetings and send emails to confirm work-related matters.&lt;/p&gt;
+&lt;p&gt;After completing my code, I request &lt;strong&gt;Code Review&lt;/strong&gt; from my colleagues and submit &lt;strong&gt;Merge Request&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve also learned various &lt;strong&gt;Git Commands&lt;/strong&gt;, including &lt;code&gt;git reset, git revert, git rebase&lt;/code&gt; and `` git discard`.&lt;/p&gt;
+&lt;p&gt;Life in Beijing has a fast pace, and the city’s size means that spending a lot of time commuting is the norm. My daily routine typically involves leaving home at 8 AM and returning at 9 PM. By the time I finish my evening routine, the day is over.&lt;/p&gt;
+&lt;p&gt;Additionally, I often work overtime until 11 PM or even midnight, and sometimes I work on weekends. This busy lifestyle has left me with little time for walking, running, or vacationing, resulting in a weight gain of 15 Kg.&lt;/p&gt;
+&lt;p&gt;Later, my colleagues and I decided to climb Mount Tai, one of the Five Great Mountains. We started our ascent at 11 PM and took five hours to reach the summit. During the climb, we talked a lot about the future, which brought up many thoughts and reflections.&lt;/p&gt;
+&lt;p&gt;However, when I stood atop Mount Tai, over 1,500 meters high, I felt like my life was just beginning. This experience made me realize the importance of making time for life.&lt;/p&gt;
+&lt;p&gt;So, I decided to move to Germany to find a job and start a new life.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;012020&#34;&gt;01.2020
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;Because of the COVID-19, the company is closed. Because everyone is not allowed to go out, I can&amp;rsquo;t find a new job. Then I decided to do a project with my friends.&lt;/p&gt;
+&lt;p&gt;In this year, I learned &lt;strong&gt;Java&lt;/strong&gt;, &lt;strong&gt;Golang&lt;/strong&gt; and &lt;strong&gt;VUE&lt;/strong&gt;, we did a project. Then use &lt;strong&gt;Docker&lt;/strong&gt; to deploy in the Linux server.&lt;/p&gt;
+&lt;p&gt;Although I didn&amp;rsquo;t get a dood income, but I learned a lot in this year.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;092018&#34;&gt;09.2018
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;After finishing my time in Germany, I returned to Beijing, China, and began a new chapter in my work life.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;062018&#34;&gt;06.2018
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;From this year, I began to take the German certificate, TestDaf and DSH. My friend and I travel while taking exams. The Netherlands, France and Italy, also in Germany. Then I got the DSH2 certificate.&lt;/p&gt;
+&lt;p&gt;And at this time, I don&amp;rsquo;t want to continue to apply for the master. So in June, I returned to China, too.&lt;/p&gt;
+&lt;p&gt;I spent some time at home with my parents, and then went out to travel with friends.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;102014----102016&#34;&gt;10.2014 &amp;ndash; 10.2016
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;While I was working, I wanted to improve myself, so I signed up for a weekend German language course. After thress months of studying, my interest in German grew, and I wanted to learn more about the world. This inspired me to plan a trip to Germany to study the language and explore ist culture.&lt;/p&gt;
+&lt;p&gt;On the first day of 2016, I send my personal documents to the &lt;a class=&#34;link&#34; href=&#34;https://www.aps.org.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;APS (Academic Evaluation Centre)&lt;/a&gt; to prepare for the APS assessment. Over the next few months, I organiyed my university academic knowledge in English.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m glad that I passed APS test.&lt;/p&gt;
+&lt;p&gt;On October 5, 2016, I set foot on German soil for the first time, making the beginning of my journey in learning German.&lt;/p&gt;
+&lt;p&gt;On the morning of 5th October, I stepped on the land of Germany for the first time, started my   German study at Ruhr University Bochum.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;042014&#34;&gt;04.2014
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;After four months of training in iOS development, I began my professional career.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;122013&#34;&gt;12.2013
+&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;Already a senior. In this year, I found that mobile development will become mainstream. And took a four months of iOS development training course in Beijing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2 weeks: C Language&lt;/li&gt;
+&lt;li&gt;2 weeks: Objective-C Language&lt;/li&gt;
+&lt;li&gt;2 weeks: UI and Controller&lt;/li&gt;
+&lt;li&gt;1 weeks: Network Requests and Data Analysis (xml/json)&lt;/li&gt;
+&lt;li&gt;3 weeks: Project practice (follow the teacher to do the project)&lt;/li&gt;
+&lt;li&gt;4 weeks: Independent development&lt;/li&gt;
+&lt;li&gt;1 weeks: Job fair&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>About</title>
+        <link>https://blog.iostao.com/de/about/</link>
+        <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/de/about/</guid>
+        <description>&lt;h2 id=&#34;about&#34;&gt;About
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/de/about/willkommen.jpg&#34;
+	width=&#34;708&#34;
+	height=&#34;360&#34;
+	srcset=&#34;https://blog.iostao.com/de/about/willkommen_hu14451213938089186821.jpg 480w, https://blog.iostao.com/de/about/willkommen_hu223643610446467494.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Willkommen&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;472px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you want, you can click here go to the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/about&#34; &gt;About Page with English&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;**Willkommen auf meinem Blog👏🏻.  **&lt;/p&gt;
+&lt;p&gt;Weil ich das Thema meines Blogs verändert habe, gab es nocheinige Probleme.&lt;/p&gt;
+&lt;p&gt;Und auch wegen meines Deutschlernens habe ich im Moment keine Zeit, um Blogartikel zu schreiben.&lt;/p&gt;
+&lt;p&gt;Wenn meine Leben stabiler wird, werde ich meine Blogs fortführen. Vielleicht werde ich das Thema auch auf Deutsch als zweiter fortführen..&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -254,35 +385,40 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;/ul&gt;</description>
         </item>
         <item>
-        <title>About Me</title>
+        <title>About</title>
         <link>https://blog.iostao.com/about/</link>
         <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://blog.iostao.com/about/</guid>
-        <description>&lt;h2 id=&#34;china-attractions-you-can-click-mejourneyindex&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey/index&#34; &gt;China Attractions (you can click me☺️)&lt;/a&gt;
+        <description>&lt;h2 id=&#34;about&#34;&gt;About
+&lt;/h2&gt;&lt;p&gt;You can click hier go to the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/de/about&#34; &gt;About Page with German&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Welcom to my technical blog👏🏻. Because I just changed the theme recently, there are still some problems.&lt;/p&gt;
+&lt;p&gt;Because I am learning German recently and have no job yet, I don’t have time to maintain the blog for the time being.&lt;/p&gt;
+&lt;p&gt;When my life is stable later, I will continue to update my blog. And I may modify the theme and add a &lt;strong&gt;German module&lt;/strong&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>About Me</title>
+        <link>https://blog.iostao.com/me/</link>
+        <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/me/</guid>
+        <description>&lt;h2 id=&#34;about-me-with-germandeme&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/de/me&#34; &gt;About Me with German&lt;/a&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;china-attractions-you-can-click-mejourneyindex0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey/index0/&#34; &gt;China Attractions (you can click me☺️)&lt;/a&gt;
 &lt;/h2&gt;&lt;h2 id=&#34;personal-information&#34;&gt;Personal Information
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Name: Scott Tao (Baitong Tao)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Occupation: iOS Developer (2013 &amp;ndash; today)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Bachlor (Computer Science and Technology)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Birthday: 1990&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Address: Essen, Deutschland&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Name: Scott Tao&lt;/li&gt;
+&lt;li&gt;Occupation: iOS Developer (2013 &amp;ndash; today)&lt;/li&gt;
+&lt;li&gt;Bachlor (Computer Science and Technology)&lt;/li&gt;
+&lt;li&gt;Birthday: 1990&lt;/li&gt;
+&lt;li&gt;Address: Essen, Deutschland&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Languages:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Germany C1 (I&amp;rsquo;m lerning now in the Languages School)&lt;/li&gt;
+&lt;li&gt;German C1 (I&amp;rsquo;m lerning now in the Languages School)&lt;/li&gt;
+&lt;li&gt;English: ★★★☆☆&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -298,74 +434,58 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Email&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;① &lt;a class=&#34;link&#34; href=&#34;mailto:im.taobaitong@gmail.com&#34; &gt;im.taobaitong@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;② &lt;a class=&#34;link&#34; href=&#34;mailto:Scott.Tao@88.com&#34; &gt;Scott.Tao@88.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Email: &lt;a class=&#34;link&#34; href=&#34;mailto:baitong.tao@hotmail.com&#34; &gt;baitong.tao@hotmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;082022&#34;&gt;08.2022
+&lt;h2 id=&#34;now&#34;&gt;Now
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;五岳归来不看山，黄山归来不看岳&lt;/code&gt;
-&lt;code&gt;No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mount Tai is belong to Five Great Mountains. I went climbing Mount Tai this month, it is more than 1500 miters high, at 23 o&amp;rsquo;clock I began to climb the mountain, it took me five hours to climb to the top.&lt;/p&gt;
-&lt;p&gt;Standing on the top of MountTai, I feel that my life has just begun. But when I was looking for a job this year, many companies told me that you are too old. But I&amp;rsquo;m only 31 years old.&lt;/p&gt;
-&lt;p&gt;So I decided to go to Germany to find a job and start a new life.&lt;/p&gt;
+&lt;p&gt;Now I&amp;rsquo;m living in the &lt;strong&gt;Essen, Germany&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Since I haven&amp;rsquo;t studied German for about six years, I&amp;rsquo;ve almost completely forgotten what I learned before. Currently, I&amp;rsquo;m re-learning the language, from B1 to C1, now I&amp;rsquo;m learning &lt;strong&gt;German C1&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I also plan to look for an iOS development job in Germany soon.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;042022&#34;&gt;04.2022
+&lt;h2 id=&#34;202012---042023&#34;&gt;2020.12 - 04.2023
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;I communicate here in English, and master better workflow specifications. I send emails to colleagues to confirm work matters, and submit pull requests to colleagues, with colleagues review the code.&lt;/p&gt;
-&lt;p&gt;Better grash the use of Git. &lt;code&gt;git reset&lt;/code&gt; &lt;code&gt;git revert&lt;/code&gt; &lt;code&gt;git rebase&lt;/code&gt; &lt;code&gt;git discard&lt;/code&gt; and so on.&lt;/p&gt;
-&lt;p&gt;But why did I still leave. Because I think there is no life to work in Beijing. I leave home at 8:00 and return home at 21:00 every working day. When I get home and after washing, it&amp;rsquo;s time to go to bed. And sometimes I work overtime until 23 or 24 o&amp;rsquo;clock. And sometimes I need to work in the company on weekends.&lt;/p&gt;
-&lt;p&gt;In this year and a half, I gained 12 kilograms in weight. I have no time for walking, running, vacation and thinking.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;122020&#34;&gt;12.2020
-&lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Faceing the reality, I have to start my new job again.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;五岳归来不看山，黄山归来不看岳&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Facing reality, I had to start looking for a new job again.&lt;/p&gt;
+&lt;p&gt;After I started working for a multinational company, I had to communicate in English since many of my colleagues are abroad.&lt;/p&gt;
+&lt;p&gt;This experience has helped me adapt to Englisch-based work practices and learn more rigorous workflow standards. We frequently use online meetings and send emails to confirm work-related matters.&lt;/p&gt;
+&lt;p&gt;After completing my code, I request &lt;strong&gt;Code Review&lt;/strong&gt; from my colleagues and submit &lt;strong&gt;Merge Request&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve also learned various &lt;strong&gt;Git Commands&lt;/strong&gt;, including &lt;code&gt;git reset, git revert, git rebase&lt;/code&gt; and `` git discard`.&lt;/p&gt;
+&lt;p&gt;Life in Beijing has a fast pace, and the city’s size means that spending a lot of time commuting is the norm. My daily routine typically involves leaving home at 8 AM and returning at 9 PM. By the time I finish my evening routine, the day is over.&lt;/p&gt;
+&lt;p&gt;Additionally, I often work overtime until 11 PM or even midnight, and sometimes I work on weekends. This busy lifestyle has left me with little time for walking, running, or vacationing, resulting in a weight gain of 15 Kg.&lt;/p&gt;
+&lt;p&gt;Later, my colleagues and I decided to climb Mount Tai, one of the Five Great Mountains. We started our ascent at 11 PM and took five hours to reach the summit. During the climb, we talked a lot about the future, which brought up many thoughts and reflections.&lt;/p&gt;
+&lt;p&gt;However, when I stood atop Mount Tai, over 1,500 meters high, I felt like my life was just beginning. This experience made me realize the importance of making time for life.&lt;/p&gt;
+&lt;p&gt;So, I decided to move to Germany to find a job and start a new life.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;012020&#34;&gt;01.2020
 &lt;/h2&gt;&lt;/blockquote&gt;
 &lt;p&gt;Because of the COVID-19, the company is closed. Because everyone is not allowed to go out, I can&amp;rsquo;t find a new job. Then I decided to do a project with my friends.&lt;/p&gt;
-&lt;p&gt;In this year, I learned &lt;code&gt;Java&lt;/code&gt; and &lt;code&gt;VUE&lt;/code&gt;, we did a project. Then use docker to deploy in the Linux server.&lt;/p&gt;
+&lt;p&gt;In this year, I learned &lt;strong&gt;Java&lt;/strong&gt;, &lt;strong&gt;Golang&lt;/strong&gt; and &lt;strong&gt;VUE&lt;/strong&gt;, we did a project. Then use &lt;strong&gt;Docker&lt;/strong&gt; to deploy in the Linux server.&lt;/p&gt;
 &lt;p&gt;Although I didn&amp;rsquo;t get a dood income, but I learned a lot in this year.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;092018&#34;&gt;09.2018
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;I started a new job in Beijing.&lt;/p&gt;
+&lt;p&gt;After finishing my time in Germany, I returned to Beijing, China, and began a new chapter in my work life.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;062018&#34;&gt;06.2018
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;From this year, I began to take the German certificate, TestDaf and DSH. My friend and I travel while taking exams. The Netherlands and Italy, or in Germany. Then I got the DSH2 certificate.&lt;/p&gt;
-&lt;p&gt;My girlfriend broke up with me. She returned to China. And at this time, I don&amp;rsquo;t want to continue to apply for the master. So in June, I returned to China, too.&lt;/p&gt;
+&lt;p&gt;From this year, I began to take the German certificate, TestDaf and DSH. My friend and I travel while taking exams. The Netherlands, France and Italy, also in Germany. Then I got the DSH2 certificate.&lt;/p&gt;
+&lt;p&gt;And at this time, I don&amp;rsquo;t want to continue to apply for the master. So in June, I returned to China, too.&lt;/p&gt;
 &lt;p&gt;I spent some time at home with my parents, and then went out to travel with friends.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;102016&#34;&gt;10.2016
+&lt;h2 id=&#34;102014----102016&#34;&gt;10.2014 &amp;ndash; 10.2016
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;On the morning of 5th October, I stepped on the land of Germany. I started my German study at Ruhr University Bochum.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;062016&#34;&gt;06.2016
-&lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;In January, I send materials bu post to &lt;a class=&#34;link&#34; href=&#34;https://www.aps.org.cn/zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;APS&lt;/a&gt;. Then begin to review the professional knowledge of the University and prepare for APS review.&lt;/p&gt;
-&lt;p&gt;In mid May, I received a call from APS, and telling me to participate in the APS test at 30 May.&lt;/p&gt;
-&lt;p&gt;At 02 June, I&amp;rsquo;m glad that I passed the test.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;102014&#34;&gt;10.2014
-&lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;My girlfriend said it was too boring in Europe and wanted me to go with her. So I signed up for a German weekend class.&lt;/p&gt;
-&lt;p&gt;Three months, Monday to Friday, work during the day, do homework at night, and have classes on Saturday and Sunday.&lt;/p&gt;
-&lt;p&gt;Although I am tired, but I have gained a lot.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;102014-1&#34;&gt;10.2014
-&lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;I have to find a new job, because our boss has not received the investment, and the company has no money to pay our wages.&lt;/p&gt;
-&lt;p&gt;Here I translate waht I have learned into practice. I met many problems in my work, through online search and the help of the development community, I learned a lot during this perild.&lt;/p&gt;
-&lt;p&gt;Thanks to the company.&lt;/p&gt;
+&lt;p&gt;While I was working, I wanted to improve myself, so I signed up for a weekend German language course. After thress months of studying, my interest in German grew, and I wanted to learn more about the world. This inspired me to plan a trip to Germany to study the language and explore ist culture.&lt;/p&gt;
+&lt;p&gt;On the first day of 2016, I send my personal documents to the &lt;a class=&#34;link&#34; href=&#34;https://www.aps.org.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;APS (Academic Evaluation Centre)&lt;/a&gt; to prepare for the APS assessment. Over the next few months, I organiyed my university academic knowledge in English.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m glad that I passed APS test.&lt;/p&gt;
+&lt;p&gt;On October 5, 2016, I set foot on German soil for the first time, making the beginning of my journey in learning German.&lt;/p&gt;
+&lt;p&gt;On the morning of 5th October, I stepped on the land of Germany for the first time, started my   German study at Ruhr University Bochum.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;042014&#34;&gt;04.2014
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;I&amp;rsquo;m glad to find a job. I&amp;rsquo;m going to work after Labor Day.&lt;/p&gt;
+&lt;p&gt;After four months of training in iOS development, I began my professional career.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;122013&#34;&gt;12.2013
 &lt;/h2&gt;&lt;/blockquote&gt;
@@ -4889,10 +5009,10 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
         </item>
         <item>
         <title>Journey</title>
-        <link>https://blog.iostao.com/journey/index/</link>
+        <link>https://blog.iostao.com/journey/index0/</link>
         <pubDate>Sat, 03 Sep 2022 12:47:32 +0800</pubDate>
         
-        <guid>https://blog.iostao.com/journey/index/</guid>
+        <guid>https://blog.iostao.com/journey/index0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey/202208-beijing&#34; &gt;08.2022 Beijing&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
