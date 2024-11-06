@@ -6,7 +6,7 @@
         <description>Recent content on Scott Tao</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 23 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Sep 2024 18:00:33 +0200</lastBuildDate><atom:link href="https://blog.iostao.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hello World</title>
         <link>https://blog.iostao.com/test/hello-world/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
@@ -25,6 +25,326 @@
 </description>
         </item>
         <item>
+        <title>Dss</title>
+        <link>https://blog.iostao.com/2024/09/dss/</link>
+        <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
+        
+        <guid>https://blog.iostao.com/2024/09/dss/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>State Management in SwiftUI: @State, @Binding, and @ObservedObject</title>
+        <link>https://blog.iostao.com/2024/09/swiftui_statemanagement/</link>
+        <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
+        
+        <guid>https://blog.iostao.com/2024/09/swiftui_statemanagement/</guid>
+        <description>&lt;p&gt;Certainly! Below is a draft for your English blog post about managing state in SwiftUI, covering &lt;code&gt;@State&lt;/code&gt;, &lt;code&gt;@Binding&lt;/code&gt;, &lt;code&gt;@ObservedObject&lt;/code&gt;, and more.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;understanding-state-management-in-swiftui-state-binding-and-observedobject&#34;&gt;Understanding State Management in SwiftUI: @State, @Binding, and @ObservedObject
+&lt;/h2&gt;&lt;p&gt;State management is one of the most essential aspects of building reactive UIs in SwiftUI. SwiftUI provides several powerful property wrappers to manage and share state across your views, each suited for different scenarios.&lt;/p&gt;
+&lt;p&gt;In this blog post, we&amp;rsquo;ll explore key state management techniques using &lt;code&gt;@State&lt;/code&gt;, &lt;code&gt;@Binding&lt;/code&gt;, &lt;code&gt;@ObservedObject&lt;/code&gt;, and a few other property wrappers that can simplify how we manage basic types and objects in SwiftUI.&lt;/p&gt;
+&lt;h3 id=&#34;1-state-managing-local-state-in-a-view&#34;&gt;1. &lt;strong&gt;@State&lt;/strong&gt;: Managing Local State in a View
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;@State&lt;/code&gt; is the simplest way to manage state within a single SwiftUI view. It works well for basic data types like &lt;code&gt;Int&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Bool&lt;/code&gt;, and others. SwiftUI automatically observes any changes to these state variables and re-renders the UI when needed.&lt;/p&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example:
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ContentView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;State&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;VStack&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Count: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;\(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Increment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here, &lt;code&gt;@State&lt;/code&gt; tells SwiftUI that the &lt;code&gt;count&lt;/code&gt; variable is a source of truth for this view. Whenever &lt;code&gt;count&lt;/code&gt; is updated, the view is redrawn to reflect the new value.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt; Single view local state. However, &lt;code&gt;@State&lt;/code&gt; can&amp;rsquo;t be used to share state between multiple views.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-binding-sharing-state-between-views&#34;&gt;2. &lt;strong&gt;@Binding&lt;/strong&gt;: Sharing State Between Views
+&lt;/h3&gt;&lt;p&gt;When you need to share or modify state between parent and child views, &lt;code&gt;@Binding&lt;/code&gt; comes in handy. It allows a child view to read and modify a piece of state owned by its parent.&lt;/p&gt;
+&lt;h4 id=&#34;example-1&#34;&gt;Example:
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ParentView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;State&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;VStack&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Parent Count: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;\(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;ChildView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Pass binding using $&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ChildView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Binding&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Int&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Use @Binding to modify parent state&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Increment from Child&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In this example, the &lt;code&gt;count&lt;/code&gt; state is owned by the parent (&lt;code&gt;ParentView&lt;/code&gt;), but the child (&lt;code&gt;ChildView&lt;/code&gt;) can modify it through the &lt;code&gt;@Binding&lt;/code&gt; mechanism.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt; Passing state between parent and child views, allowing both to interact with the same data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-observedobject-and-published-managing-complex-data-objects&#34;&gt;3. &lt;strong&gt;@ObservedObject&lt;/strong&gt; and &lt;code&gt;@Published&lt;/code&gt;: Managing Complex Data Objects
+&lt;/h3&gt;&lt;p&gt;When you need to manage more complex data structures or share state across multiple views, &lt;code&gt;@ObservedObject&lt;/code&gt; and &lt;code&gt;@Published&lt;/code&gt; work together to notify views when object properties change.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@ObservedObject&lt;/code&gt;: Used by views to observe changes in a data object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@Published&lt;/code&gt;: Marks properties within the data object to be automatically observed for changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-2&#34;&gt;Example:
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CounterModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ObservableObject&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Published&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ContentView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;StateObject&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;counter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CounterModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Owns the model instance&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;VStack&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Count: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;\(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Increment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In this scenario, &lt;code&gt;CounterModel&lt;/code&gt; is an &lt;code&gt;ObservableObject&lt;/code&gt;, and the &lt;code&gt;count&lt;/code&gt; property is marked with &lt;code&gt;@Published&lt;/code&gt;. The &lt;code&gt;ContentView&lt;/code&gt; observes the &lt;code&gt;counter&lt;/code&gt; object, and SwiftUI will re-render the UI when the &lt;code&gt;count&lt;/code&gt; property changes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt; Managing and sharing complex, multi-property data models across different views.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-stateobject-vs-observedobject&#34;&gt;4. &lt;strong&gt;@StateObject&lt;/strong&gt; vs &lt;strong&gt;@ObservedObject&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;You might wonder when to use &lt;code&gt;@StateObject&lt;/code&gt; vs &lt;code&gt;@ObservedObject&lt;/code&gt;. The distinction is simple:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;@StateObject&lt;/strong&gt;: Used to create and own an &lt;code&gt;ObservableObject&lt;/code&gt; within a view. This ensures the object is only initialized once during the lifecycle of the view.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;@ObservedObject&lt;/strong&gt;: Used when the &lt;code&gt;ObservableObject&lt;/code&gt; is created outside of the view and passed into it, so the view doesn&amp;rsquo;t own the object but observes changes to it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;example-3&#34;&gt;Example:
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ContentView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;StateObject&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;viewModel&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyViewModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Owns the ViewModel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ChildView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;viewModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;viewModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Pass to child view&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ChildView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ObservedObject&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;viewModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyViewModel&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Observes without owning&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;viewModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In this case, &lt;code&gt;ContentView&lt;/code&gt; creates the &lt;code&gt;viewModel&lt;/code&gt; using &lt;code&gt;@StateObject&lt;/code&gt;, while &lt;code&gt;ChildView&lt;/code&gt; only observes it via &lt;code&gt;@ObservedObject&lt;/code&gt;. This allows multiple views to react to the same shared data changes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-appstorage-persisting-state-across-app-sessions&#34;&gt;5. &lt;strong&gt;@AppStorage&lt;/strong&gt;: Persisting State Across App Sessions
+&lt;/h3&gt;&lt;p&gt;If you need to persist a basic data type between app sessions, &lt;code&gt;@AppStorage&lt;/code&gt; allows you to store state directly in &lt;code&gt;UserDefaults&lt;/code&gt;. This is ideal for things like user settings or preferences that need to be retained even when the app is closed and reopened.&lt;/p&gt;
+&lt;h4 id=&#34;example-4&#34;&gt;Example:
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ContentView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AppStorage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;userScore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;userScore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Persists in UserDefaults&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;VStack&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;User Score: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;\(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;userScore&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;userScore&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Increment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;With &lt;code&gt;@AppStorage&lt;/code&gt;, the &lt;code&gt;userScore&lt;/code&gt; will be stored in &lt;code&gt;UserDefaults&lt;/code&gt; under the key &lt;code&gt;&amp;quot;userScore&amp;quot;&lt;/code&gt;, making it available even after the app is terminated and relaunched.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Best for:&lt;/strong&gt; Persistent storage of basic data types (e.g., &lt;code&gt;Int&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Bool&lt;/code&gt;) that need to be retained across app launches.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;State management is at the core of SwiftUI&amp;rsquo;s declarative approach to building UIs. By understanding the different tools available—&lt;code&gt;@State&lt;/code&gt;, &lt;code&gt;@Binding&lt;/code&gt;, &lt;code&gt;@ObservedObject&lt;/code&gt;, and &lt;code&gt;@AppStorage&lt;/code&gt;—you can choose the right technique based on your needs, whether you&amp;rsquo;re dealing with local state, sharing data between views, or persisting information across sessions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;@State&lt;/code&gt; for simple, view-local state.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;@Binding&lt;/code&gt; to share and modify parent state in child views.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;@ObservedObject&lt;/code&gt; and &lt;code&gt;@Published&lt;/code&gt; for complex models and data sharing.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;@AppStorage&lt;/code&gt; to persist basic values across app restarts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By leveraging these tools, you&amp;rsquo;ll be able to build more dynamic, reactive, and maintainable SwiftUI applications.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Feel free to tweak or expand on this content to suit your style and blog audience!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Image gallery</title>
+        <link>https://blog.iostao.com/test/image-gallery/</link>
+        <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/test/image-gallery/</guid>
+        <description>&lt;img src="https://blog.iostao.com/test/image-gallery/2.jpg" alt="Featured image of post Image gallery" /&gt;&lt;p&gt;Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a class=&#34;link&#34; href=&#34;https://photoswipe.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PhotoSwipe&lt;/a&gt; and its syntax was inspired by &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Typlog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong&gt;External images are not supported.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;syntax&#34;&gt;Syntax
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Image 1&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;1.jpg&lt;/span&gt;) ![&lt;span class=&#34;nt&#34;&gt;Image 2&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;2.jpg&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;result&#34;&gt;Result
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/test/image-gallery/1.jpg&#34;
+	width=&#34;2000&#34;
+	height=&#34;1400&#34;
+	srcset=&#34;https://blog.iostao.com/test/image-gallery/1_hu4574578169203714971.jpg 480w, https://blog.iostao.com/test/image-gallery/1_hu9042511268598201431.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;342px&#34;
+	
+&gt; &lt;img src=&#34;https://blog.iostao.com/test/image-gallery/2.jpg&#34;
+	width=&#34;1500&#34;
+	height=&#34;2250&#34;
+	srcset=&#34;https://blog.iostao.com/test/image-gallery/2_hu10699635480308914167.jpg 480w, https://blog.iostao.com/test/image-gallery/2_hu1741040415904021193.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@mymind&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mymind&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@lukechesser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Luke Chesser&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>About Me</title>
         <link>https://blog.iostao.com/de/me/</link>
         <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
@@ -34,8 +354,8 @@
 &lt;/h2&gt;&lt;h2 id=&#34;sehenswürdigkeiten-in-china-klick-mich-anjourneyindex0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.iostao.com/journey/index0/&#34; &gt;Sehenswürdigkeiten in China (Klick mich an☺️)&lt;/a&gt;
 &lt;/h2&gt;&lt;h2 id=&#34;persönliche-informationen&#34;&gt;Persönliche Informationen
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Name: Scott Tao&lt;/li&gt;
-&lt;li&gt;Beruf: iOS-Entwickler (2013 &amp;ndash; heute)&lt;/li&gt;
+&lt;li&gt;Name: Tao&lt;/li&gt;
+&lt;li&gt;Beruf: iOS-Entwickler (2013 &amp;ndash; 2023)&lt;/li&gt;
 &lt;li&gt;Abschluss: Bachelor in Informatik und Technologie&lt;/li&gt;
 &lt;li&gt;Geburtsjahr: 1990&lt;/li&gt;
 &lt;li&gt;Addresse: Essen, Deutschland&lt;/li&gt;
@@ -44,7 +364,7 @@
 &lt;li&gt;
 &lt;p&gt;Sprache:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Deutsch C1 (Ich lerne derzeit an IBZ Sprachschule)&lt;/li&gt;
+&lt;li&gt;Deutsch (Ich lerne C1 derzeit an IBZ Sprachschule, Essen)&lt;/li&gt;
 &lt;li&gt;Englisch: ★★★☆☆&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -64,66 +384,58 @@
 &lt;p&gt;E-mail: &lt;a class=&#34;link&#34; href=&#34;mailto:baitong.tao@hotmail.com&#34; &gt;baitong.tao@hotmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;now&#34;&gt;Now
+&lt;h2 id=&#34;jetzt&#34;&gt;Jetzt
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Jetzt lerne ich Deutsch C1 in IBZ Sprachschule in Essen.  Weil ich etwa 6 Jahren Deutsch nicht gesprochen, konnte ich fast gar nicht Deutschland. So wiederhole ich jetzt Deutsch B1 bis C1.&lt;/p&gt;
-&lt;p&gt;Jetzt lerne ich Niveau C1, der Kurs beendet fast , so jetzt würde ich eine Arbeitsstelle in Deutschland suchen.&lt;/p&gt;
+&lt;p&gt;Ich lerne derzeit Deutsch an der IBZ Sprachschule in Essen.&lt;/p&gt;
+&lt;p&gt;Aktuell besuche ich den &lt;strong&gt;C1-Kurs&lt;/strong&gt;, der bald endet. Daher möchte ich nun eine Arbeitsstelle in Deutschland suchen.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;202012---042023&#34;&gt;2020.12 - 04.2023
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;五岳归来不看山，黄山归来不看岳&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Facing reality, I had to start looking for a new job again.&lt;/p&gt;
-&lt;p&gt;After I started working for a multinational company, I had to communicate in English since many of my colleagues are abroad.&lt;/p&gt;
-&lt;p&gt;This experience has helped me adapt to Englisch-based work practices and learn more rigorous workflow standards. We frequently use online meetings and send emails to confirm work-related matters.&lt;/p&gt;
-&lt;p&gt;After completing my code, I request &lt;strong&gt;Code Review&lt;/strong&gt; from my colleagues and submit &lt;strong&gt;Merge Request&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve also learned various &lt;strong&gt;Git Commands&lt;/strong&gt;, including &lt;code&gt;git reset, git revert, git rebase&lt;/code&gt; and `` git discard`.&lt;/p&gt;
-&lt;p&gt;Life in Beijing has a fast pace, and the city’s size means that spending a lot of time commuting is the norm. My daily routine typically involves leaving home at 8 AM and returning at 9 PM. By the time I finish my evening routine, the day is over.&lt;/p&gt;
-&lt;p&gt;Additionally, I often work overtime until 11 PM or even midnight, and sometimes I work on weekends. This busy lifestyle has left me with little time for walking, running, or vacationing, resulting in a weight gain of 15 Kg.&lt;/p&gt;
-&lt;p&gt;Later, my colleagues and I decided to climb Mount Tai, one of the Five Great Mountains. We started our ascent at 11 PM and took five hours to reach the summit. During the climb, we talked a lot about the future, which brought up many thoughts and reflections.&lt;/p&gt;
-&lt;p&gt;However, when I stood atop Mount Tai, over 1,500 meters high, I felt like my life was just beginning. This experience made me realize the importance of making time for life.&lt;/p&gt;
-&lt;p&gt;So, I decided to move to Germany to find a job and start a new life.&lt;/p&gt;
+&lt;p&gt;Ich begann in einem internationalen Unternehmen zu arbeiten, und ich musste Englisch sprechen, da viele meiner Kollegen im Ausland sind.&lt;/p&gt;
+&lt;p&gt;Diese Erfahrung hat mir geholfen, mich an arbeitsbezogene Praktiken in Englisch zu gewöhnen und rigorosere Arbeitsabläufe zu lernen. Wir nutzen häufig Online-Meetings und senden E-Meils, um arbeitsbezogene Angelegenheiten zu bestätigen.&lt;/p&gt;
+&lt;p&gt;Nachdem ich meinen Code fertiggestellt habe, bitte ich meine Kollegen um &lt;strong&gt;Code Review&lt;/strong&gt; und reiche einen &lt;strong&gt;Merge Request&lt;/strong&gt; ein.&lt;/p&gt;
+&lt;p&gt;Ich habe auch verschiedene &lt;strong&gt;Git-Befehle&lt;/strong&gt; gelernt, einschließlich &lt;code&gt;git reset&lt;/code&gt;, &lt;code&gt;git revert&lt;/code&gt;, &lt;code&gt;git rebase&lt;/code&gt;, &lt;code&gt;git discard&lt;/code&gt; und so weiter.&lt;/p&gt;
+&lt;p&gt;Aber ich benutze &lt;strong&gt;Git Tower&lt;/strong&gt; gern. Es ist so wunderbar.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Das Leben in Beijing hat ein schnelles Tempo, und aufgrund der Größe der Stadt ist es normal, viel Zeit mit Pendeln zu verbringen. Meine tägliche Routine besteht normalerweise darin, um 8 Uhr morgens die Wohnung zu verlassen und erst um 9 Uhr abends zurückzukehren. Wenn ich mit meiner Abendroutine fertig bin, ist der Tag bereits vorbei.&lt;/p&gt;
+&lt;p&gt;Außerdem arbeite ich oft bis 23 Uhr oder sogar bis Mitternacht und manchmal auch an Wochenenden. Dieser stressige Lebensstil hat mir wenig Zeit für Spaziergänge, Laufen oder Urlaub gelassen, was zu einer Gewichtszunahme vor 15 Kg geführt hat.&lt;/p&gt;
+&lt;p&gt;Später entschieden meine Kollegen und ich, den Mount Tai, einen der fünf großen Berge, zu besteigen. Wir begannen unseren Aufstieg um 23 Uhr und brauchten fünf Stunden, um den Gipfel zu erreichen. Während des Aufstiegs haben wir viel über die Zukunft gesprochen, was viele Gedanken und Reflexionen aufwarf.&lt;/p&gt;
+&lt;p&gt;Als ich jedoch auf dem über 1.500 Meter hohen Gipfel des Mount Tai stand, fühlte es sich an, als würde mein Leben gerade erst beginnen. Diese Erfahrung ließ mich die Bedeutung erkennen, sich Zeit für das Leben zu nehmen.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;012020&#34;&gt;01.2020
+&lt;h2 id=&#34;201912---202012&#34;&gt;2019.12 - 2020.12
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Because of the COVID-19, the company is closed. Because everyone is not allowed to go out, I can&amp;rsquo;t find a new job. Then I decided to do a project with my friends.&lt;/p&gt;
-&lt;p&gt;In this year, I learned &lt;strong&gt;Java&lt;/strong&gt;, &lt;strong&gt;Golang&lt;/strong&gt; and &lt;strong&gt;VUE&lt;/strong&gt;, we did a project. Then use &lt;strong&gt;Docker&lt;/strong&gt; to deploy in the Linux server.&lt;/p&gt;
-&lt;p&gt;Although I didn&amp;rsquo;t get a dood income, but I learned a lot in this year.&lt;/p&gt;
+&lt;p&gt;Im Dezember 2019 bin ich von Beijing in meine Heimatstatd zurückgekehrt, um mich auf das Neujahrsfest vonzubereiten. Doch kurz vor dem chinesischen Neujahr durften aufgrund von Covid-19 alle Menschen das Haus nicht mehr verlassen, und die Firma, in der ich arbeitet, musste ebenfalls schließen. Deshalb habe ich meine Arbeit verloren.&lt;/p&gt;
+&lt;p&gt;Im Jahr 2020 verbrachte ich die ganze Zeit in meiner Heimatstadt, lernte dabei Java SpringBoot und VUE, und nahm ein Projekt an, das ich bearbeiten.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&#34;092018&#34;&gt;09.2018
+&lt;h2 id=&#34;072018&#34;&gt;07.2018
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;After finishing my time in Germany, I returned to Beijing, China, and began a new chapter in my work life.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2 id=&#34;062018&#34;&gt;06.2018
-&lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;From this year, I began to take the German certificate, TestDaf and DSH. My friend and I travel while taking exams. The Netherlands, France and Italy, also in Germany. Then I got the DSH2 certificate.&lt;/p&gt;
-&lt;p&gt;And at this time, I don&amp;rsquo;t want to continue to apply for the master. So in June, I returned to China, too.&lt;/p&gt;
-&lt;p&gt;I spent some time at home with my parents, and then went out to travel with friends.&lt;/p&gt;
+&lt;p&gt;Ich bin nach China zurückgekehrt und habe noch in Beijing einen Job gefunden. Dort arbeite ich weiterhin als iOS-App-Entwickler, und die App, an der ich arbeite, ist eine Nachrichten-App.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;102014----102016&#34;&gt;10.2014 &amp;ndash; 10.2016
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;While I was working, I wanted to improve myself, so I signed up for a weekend German language course. After thress months of studying, my interest in German grew, and I wanted to learn more about the world. This inspired me to plan a trip to Germany to study the language and explore ist culture.&lt;/p&gt;
-&lt;p&gt;On the first day of 2016, I send my personal documents to the &lt;a class=&#34;link&#34; href=&#34;https://www.aps.org.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;APS (Academic Evaluation Centre)&lt;/a&gt; to prepare for the APS assessment. Over the next few months, I organiyed my university academic knowledge in English.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m glad that I passed APS test.&lt;/p&gt;
-&lt;p&gt;On October 5, 2016, I set foot on German soil for the first time, making the beginning of my journey in learning German.&lt;/p&gt;
-&lt;p&gt;On the morning of 5th October, I stepped on the land of Germany for the first time, started my   German study at Ruhr University Bochum.&lt;/p&gt;
+&lt;p&gt;Während meiner Arbeit wollte ich mich weiterentwickeln, also meldete ich mich für einen Wochenendkurs in Deutsch an. Nach drei Monaten des Lernes wuchs mein Interesse an Deutschland, und ich wollte mehr über die Welt erfahren. Das inspirierte mich dazu, eine Reise nach Deutschland zu planen, um die Sprache zu lernen und die Kultur erkunden.&lt;/p&gt;
+&lt;p&gt;Am ersten Tag des Jahres 2016 schickte ich meine persönlichen Dokumente an das &lt;a class=&#34;link&#34; href=&#34;https://www.aps.org.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;APS (Academic Evaluation Centre)&lt;/a&gt;, um mich auf die APS-Prüfung vorzubereiten. In den folgenden Monaten organisierte ich mein universitär erlerntes Wissen auf Englisch.&lt;/p&gt;
+&lt;p&gt;Nach drei Tag was ich sehr froh, dass ich die APS-Prüfung bestanden habe.&lt;/p&gt;
+&lt;p&gt;Am 5. Oktober 2016 betrat ich zum ersten Mal deutschen Boden und begann meine Reise, Deutsch zu lernen.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;042014&#34;&gt;04.2014
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;After four months of training in iOS development, I began my professional career.&lt;/p&gt;
+&lt;p&gt;Nach vier Monaten Ausbildung in der iOS-Entwicklung begann ich meine berufliche Laufbahn.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;122013&#34;&gt;12.2013
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Already a senior. In this year, I found that mobile development will become mainstream. And took a four months of iOS development training course in Beijing.&lt;/p&gt;
+&lt;p&gt;Ich hatte nur noch ein Semester an der Universität übrig, und in diesem Jahr habe ich gefunden, dass Mobile-Entwicklung gehen wurde. Deshalb bin ich nach Beijing gefahren, um eine Ausbildung der iOS-Entwicklung zu lernen.&lt;/p&gt;
+&lt;p&gt;Ich hatte nur noch ein Semester an der Universität übrig, und in diesem Jahr habe festgestellt, dass ich in die Mobile-Entwicklung gehen wollte. Deshalb bin ich nach Beijing gefahren, um eine Ausbildung in der iOS-Entwicklung zu machen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lehrplan der Ausbildung:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;2 weeks: C Language&lt;/li&gt;
-&lt;li&gt;2 weeks: Objective-C Language&lt;/li&gt;
-&lt;li&gt;2 weeks: UI and Controller&lt;/li&gt;
-&lt;li&gt;1 weeks: Network Requests and Data Analysis (xml/json)&lt;/li&gt;
-&lt;li&gt;3 weeks: Project practice (follow the teacher to do the project)&lt;/li&gt;
-&lt;li&gt;4 weeks: Independent development&lt;/li&gt;
-&lt;li&gt;1 weeks: Job fair&lt;/li&gt;
+&lt;li&gt;2 Wochen: C Language&lt;/li&gt;
+&lt;li&gt;2 Wochen: Objective-C Language&lt;/li&gt;
+&lt;li&gt;2 Wochen: UI and Controller&lt;/li&gt;
+&lt;li&gt;1 Wochen: Network Requests and Data Analysis (xml/json)&lt;/li&gt;
+&lt;li&gt;3 Wochen: Projektpraxis (Unter Anleitung des Lehres an einem Projekt arbeiten)&lt;/li&gt;
+&lt;li&gt;4 Wochen: Selbstständige Entwicklung&lt;/li&gt;
+&lt;li&gt;1 Wochen: der Suche nach einer Stelle&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -439,16 +751,12 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;now&#34;&gt;Now
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Now I&amp;rsquo;m living in the &lt;strong&gt;Essen, Germany&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Since I haven&amp;rsquo;t studied German for about six years, I&amp;rsquo;ve almost completely forgotten what I learned before. Currently, I&amp;rsquo;m re-learning the language, from B1 to C1, now I&amp;rsquo;m learning &lt;strong&gt;German C1&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Currently, I&amp;rsquo;m re-learning the language, from B1 to C1, now I&amp;rsquo;m learning &lt;strong&gt;German C1&lt;/strong&gt; in the &lt;strong&gt;Essen, Germany&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I also plan to look for an iOS development job in Germany soon.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;202012---042023&#34;&gt;2020.12 - 04.2023
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;五岳归来不看山，黄山归来不看岳&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;No mountain is more gorgeous than the Five Great Mountains until you pay a visit to Mount Huang.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Facing reality, I had to start looking for a new job again.&lt;/p&gt;
-&lt;p&gt;After I started working for a multinational company, I had to communicate in English since many of my colleagues are abroad.&lt;/p&gt;
+&lt;p&gt;I started working for a multinational company, I had to communicate in English since many of my colleagues are abroad.&lt;/p&gt;
 &lt;p&gt;This experience has helped me adapt to Englisch-based work practices and learn more rigorous workflow standards. We frequently use online meetings and send emails to confirm work-related matters.&lt;/p&gt;
 &lt;p&gt;After completing my code, I request &lt;strong&gt;Code Review&lt;/strong&gt; from my colleagues and submit &lt;strong&gt;Merge Request&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve also learned various &lt;strong&gt;Git Commands&lt;/strong&gt;, including &lt;code&gt;git reset, git revert, git rebase&lt;/code&gt; and `` git discard`.&lt;/p&gt;
@@ -481,7 +789,6 @@ The right view contains a sub-view (`S&lt;/p&gt;
     &gt;APS (Academic Evaluation Centre)&lt;/a&gt; to prepare for the APS assessment. Over the next few months, I organiyed my university academic knowledge in English.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m glad that I passed APS test.&lt;/p&gt;
 &lt;p&gt;On October 5, 2016, I set foot on German soil for the first time, making the beginning of my journey in learning German.&lt;/p&gt;
-&lt;p&gt;On the morning of 5th October, I stepped on the land of Germany for the first time, started my   German study at Ruhr University Bochum.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;042014&#34;&gt;04.2014
 &lt;/h2&gt;&lt;/blockquote&gt;
@@ -489,7 +796,8 @@ The right view contains a sub-view (`S&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h2 id=&#34;122013&#34;&gt;12.2013
 &lt;/h2&gt;&lt;/blockquote&gt;
-&lt;p&gt;Already a senior. In this year, I found that mobile development will become mainstream. And took a four months of iOS development training course in Beijing.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m about to enter my final semester of college.
+In this year, I found that mobile development will become mainstream. And took a four months of iOS development training course in Beijing.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;2 weeks: C Language&lt;/li&gt;
 &lt;li&gt;2 weeks: Objective-C Language&lt;/li&gt;
