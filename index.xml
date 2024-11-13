@@ -25,14 +25,6 @@
 </description>
         </item>
         <item>
-        <title>Dss</title>
-        <link>https://blog.iostao.com/2024/09/dss/</link>
-        <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
-        
-        <guid>https://blog.iostao.com/2024/09/dss/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>State Management in SwiftUI: @State, @Binding, and @ObservedObject</title>
         <link>https://blog.iostao.com/2024/09/swiftui_statemanagement/</link>
         <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
