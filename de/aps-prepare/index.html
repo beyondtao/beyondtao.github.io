@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="(分层，各层作用，协议)\nWhat&rsquo;s the purpose of this course? - basic knowledge of computer network - focus on the structure and behavior of network ">
+<meta name="keywords" content="OSI/RM"><title>APS-Network</title>
+
+<link rel='canonical' href='http://localhost:1313/de/aps-prepare/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="APS-Network">
+<meta property='og:description' content="(分层，各层作用，协议)\nWhat&rsquo;s the purpose of this course? - basic knowledge of computer network - focus on the structure and behavior of network ">
+<meta property='og:url' content='http://localhost:1313/de/aps-prepare/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='De' /><meta property='article:tag' content='aps' /><meta property='article:published_time' content='2016-03-13T22:15:01&#43;00:00'/><meta property='article:modified_time' content='2016-03-13T22:15:01&#43;00:00'/>
+<meta name="twitter:title" content="APS-Network">
+<meta name="twitter:description" content="(分层，各层作用，协议)\nWhat&rsquo;s the purpose of this course? - basic knowledge of computer network - focus on the structure and behavior of network ">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">iOS Developer, specializing in iOS app development since 2013. Currently based in Essen, Germany.  
+</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#whats-the-purpose-of-this-course">What&rsquo;s the purpose of this course?</a></li>
+        <li><a href="#details">Details</a>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
+        <li><a href="#network">Network</a></li>
+        <li><a href="#network-topologys">Network-Topologys</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/aps-prepare/" >
+                Aps-Prepare
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/de/aps-prepare/">APS-Network</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 13, 2016</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>(分层，各层作用，协议)</p>
+<h3 id="whats-the-purpose-of-this-course">What&rsquo;s the purpose of this course?
+</h3><pre><code>- basic knowledge of computer network
+- focus on the structure and behavior of network
+</code></pre>
+<h3 id="details">Details
+</h3><h5 id="introduction-简介">Introduction 简介
+</h5><pre><code>- the architecture of newtork is based on different protocols.
+ 
+	 =&gt; Protocol: an agreement between the communicating parties on how communication is to proceed.
+	
+- Network Model of hierarchy =&gt; 5 Layers
+</code></pre>
+<h5 id="5-layers">5 Layers
+</h5><p>OSI/RM (Open Systems Interconnection Reference Model) 开发系统互连基本参考模型</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">5 Layers</th>
+          <th style="text-align: center">Function</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Application Layer</td>
+          <td style="text-align: center">message</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Transport Layer</td>
+          <td style="text-align: center">segment</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Network Layer</td>
+          <td style="text-align: center">datagram</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Data Link Layer</td>
+          <td style="text-align: center">frame</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Physical Layer</td>
+          <td style="text-align: center">bit</td>
+      </tr>
+  </tbody>
+</table></div>
+<ul>
+<li>each layer contains several protocals</li>
+<li>in s sense, each layer offers certain service to the layer above it.</li>
+<li>each layer communicates with the corresponding(相应的) layer, using specific message header to distinguish(区别).</li>
+</ul>
+<h5 id="application-layer-应用层-http-ftp-usmtpu-dns">Application Layer 应用层 (HTTP, FTP, <u><del>SMTP</del></u>, DNS)
+</h5><pre><code>* deal with the problems how network applications work and communicate with each other.
+* famour protocols:
+- HTTP, HyperText Transfer Protocol
+ =&gt; defines how the web clients ask for web pages and how the server transfer the web pages to clients.
+- kinds of connection
+  non-persistent connection 
+  persistent connection =&gt; won't shut down till specific time.
+
+Client 			Server
+ |	Start TCP      |
+ |----------------&gt;|
+ |                 |
+ |   Confirm       |
+ |&lt;----------------|
+ |                 |
+ |  ask for files  |
+ |----------------&gt;|
+ |                 |
+ |   get files     |
+ |-----------------|
+ |-----------------|
+</code></pre>
+<ul>
+<li>HTTP Request</li>
+</ul>
+<p>request line -&gt;</p>
+<pre><code> GET/HTTP/1.1
+ 	
+              | Host: www.devtao.com
+ header line -| connection: close
+              | user-agent: Mozilla / 4.0
+              |	Accept-language: cn
+</code></pre>
+<ul>
+<li>
+<p>HTTP Respond:</p>
+</li>
+<li>
+<p>status line -&gt;</p>
+<p>(status code: 200, 404)
+header line
+entity body</p>
+</li>
+<li>
+<p>Cookie</p>
+<p>=&gt; a special file to distinguish the clients</p>
+<p>Sam login to Amazon, PC send cookie 1000 to server, server will store this cookie in the backend database.
+next time Sam login to Amazon, the server will recognise him.</p>
+</li>
+<li>
+<p>FTP, File Transfer Protocol
+=&gt; Users can upload or download files from the FTP server =&gt; in LAN</p>
+</li>
+</ul>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">user &lt;&ndash;&gt;</th>
+          <th style="text-align: center">FTP Interface</th>
+          <th style="text-align: center">FTP Client &lt;&ndash;&gt;</th>
+          <th style="text-align: center">FTP Server</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">II</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">II</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">local file system</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">remote file system</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>对照下图</p>
+<pre><code> ------        ---------------    ------------        ------------
+| user |&lt;--&gt;  | FTP Interface |  | FTP Client |&lt;--&gt;  | FTP Server |
+ ------        ---------------    ------------        ------------         
+					      ||				                   ||
+            -------------------             --------------------
+           | local file system |           | remote file system |
+            -------------------             --------------------
+</code></pre>
+<ul>
+<li>
+<p>SMTP (Simple Main Transfer Protocol)</p>
+<p>=&gt; define how the E-mainl system works.</p>
+<pre><code>   -----------      -----------------  SMTP   ---------------
+  | A's agent | -&gt; | A's mail Server | ----&gt; |B's mail Server|
+   -----------      -----------------         ---------------
+  									               ||
+  									               ||
+  									          -----------
+  									         | B's agent | 												      -----------
+</code></pre>
+<ul>
+<li>define the message format</li>
+</ul>
+<p>=&gt; header</p>
+<p>=&gt; <u>Only ASCII code is legal in SMTP.</u></p>
+</li>
+<li>
+<p>DNS (Domain Name Server Protocol)</p>
+<p>=&gt; use DNS to get the internet IP address.</p>
+<ul>
+<li>people prefer to rememter the web address, or say URL rather than the IP address.</li>
+</ul>
+<p>-use DNS to find the corresponding IP address of a specific web URL(Uniform Resource Locator). <a class="link" href="https://www.google.com"  target="_blank" rel="noopener"
+    >www.google.com</a> &lt;=&gt; 8.8.8.8</p>
+<ul>
+<li>using a distributed database.</li>
+</ul>
+</li>
+</ul>
+<h3 id="network">Network
+</h3><p>A computer network is a group of interconnected computers.
+Networks may be classified(划分) according to a wide kind of
+characteristics. The most common division is &ldquo;LAN&rdquo; and &ldquo;WAN&rdquo;.</p>
+<ul>
+<li>&ldquo;WAN&rdquo;(Wide Area Network), is connect computer within a very wide Region.</li>
+<li>&ldquo;LAN&rdquo;(Local Area Network), is a Network in l limited region and computers belonging to it, will enter the net when they get switched on.</li>
+</ul>
+<h3 id="network-topologys">Network-Topologys
+</h3><p>Network toplogy is the study of the arrangement(排列) or mapping(映射) of the elements of a network, especially the physical and logical interconnections between nodes(结点).</p>
+<p><img src="/de/aps-prepare/network-topologys_total.jpg"
+	width="557"
+	height="342"
+	srcset="/de/aps-prepare/network-topologys_total_hu2171168025915276459.jpg 480w, /de/aps-prepare/network-topologys_total_hu5903678929949620075.jpg 1024w"
+	loading="lazy"
+	
+		alt="拓扑图"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="390px"
+	
+></p>
+<ul>
+<li>
+<p>Line-Topology</p>
+</li>
+<li>
+<p>Bus-Topology</p>
+<p>All computers are connected in a line. When a line is broken, the whole network doesn&rsquo;t work.</p>
+</li>
+<li>
+<p>Ring-Topology</p>
+<p>It&rsquo;s like a Bus or Line Topology and has the same advantages and disadvantages.</p>
+</li>
+<li>
+<p>Star-Topology</p>
+<p>In Star-Topology, all computers are connected to Central-Stations like Hub, Switch or Router. This topology is very quick and  safe and also easy to maintenance.</p>
+</li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/aps/">Aps</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2016/06/aps-pass/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">APS过审了，开心</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/03/aps-osi_tcp-ip/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OSI、TCP/IP</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/03/aps-computervocabulary/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Computer English Vocabulary</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/03/aps-encapsulation-inheritance-polymorphism-delegation/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Encapsulation, Inheritance, Polymorphism, Delegation</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/03/aps-uml/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">APS-UML</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
