@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>linux on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/categories/linux/</link>
-    <description>Recent content in linux on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 05 Mar 2020 09:54:25 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CentOS 使用 Docker 服务搭建 Nginx 文件服务器</title>
-      <link>https://blog.qoabc.com/2020/03/linux/</link>
-      <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2020/03/linux/</guid>
-      <description>&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
-&lt;p&gt;在CentOS 的某个目录下，创建下面的目录形式（也可以本地创建，用ftp上传）
+    <channel>
+        <title>Linux on Scott Tao</title>
+        <link>https://blog.iostao.com/categories/linux/</link>
+        <description>Recent content in Linux on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 05 Mar 2020 09:54:25 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CentOS 使用 Docker 服务搭建 Nginx 文件服务器</title>
+        <link>https://blog.iostao.com/2020/03/linux-start-03/</link>
+        <pubDate>Thu, 05 Mar 2020 09:54:25 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2020/03/linux-start-03/</guid>
+        <description>&lt;h2 id=&#34;准备&#34;&gt;准备
+&lt;/h2&gt;&lt;p&gt;在CentOS 的某个目录下，创建下面的目录形式（也可以本地创建，用ftp上传）
 &lt;code&gt;/data/fileserver/&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;data
@@ -28,61 +27,539 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>CentOS 服务器 &#43; mysql &#43; vsftpd服务</title>
-      <link>https://blog.qoabc.com/2020/02/linux/</link>
-      <pubDate>Tue, 25 Feb 2020 13:12:10 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2020/02/linux/</guid>
-      <description>&lt;h1 id=&#34;搭建mysql--ftp服务&#34;&gt;搭建mysql + FTP服务&lt;/h1&gt;
-&lt;h2 id=&#34;一安装-mysql&#34;&gt;一、安装 mysql&lt;/h2&gt;
-&lt;h3 id=&#34;从官方下载mysql-57镜像&#34;&gt;从官方下载&lt;code&gt;mysql 5.7&lt;/code&gt;镜像&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ docker pull mysql:5.7
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linux brclt 命令</title>
-      <link>https://blog.qoabc.com/2019/06/linux/</link>
-      <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2019/06/linux/</guid>
-      <description>参数说明和示例    参数 说明 示例     addbr &amp;lt;bridge&amp;gt; 创建网桥 brctl addbr br10   delbr &amp;lt;bridge&amp;gt; 删除网桥 brctl delbr br10   addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt; 将网卡接口接入网桥 brctl addif br10 eth0   show &amp;lt;bridge&amp;gt; 查询网桥信息 brctl show br10   stp &amp;lt;bridge&amp;gt; {on | off} 启用禁用STP brctl stp br10 off/on   showstp &amp;lt;bridge&amp;gt; 查看网桥STP信息 brctl showstp br10   setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt; 设置网桥延迟 brctl setfd br10 10   showmacs &amp;lt;bridge&amp;gt; 查看mac信息 brctl showmacs br10    </description>
-    </item>
-    
-    <item>
-      <title>Linux Shell ssh登录脚本</title>
-      <link>https://blog.qoabc.com/2019/04/linux/</link>
-      <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2019/04/linux/</guid>
-      <description>转载自Ca0Gu0
-Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多
-脚本下载 so.zip
-一、说明  支持密码和密钥两种格式 用户名和密码都是写文件的  二、配置   密码文件配置:
-序号:IP:端口:用户:密码:说明 1:192.168.88.128:22:root:toor:虚拟机web服务器
-  密钥文件放在keys文件夹下,密码位置写成密钥文件名,文件名必须以.pem结尾
-  如下所示：
-1:104.194.71.144:26999:root:WaFHwZm1AM3L5:搬瓦工 2:47.94.208.55:8080:root:aliyun.pem:阿里云 3:104.194.71.144:3306:ca0gu0:toor:虚拟机mysql数据库服务器 4:103:192.168.88.4:22:root:sellercube:本地开发服务器  </description>
-    </item>
-    
-    <item>
-      <title>CentOS 第一步</title>
-      <link>https://blog.qoabc.com/2019/02/linux/</link>
-      <pubDate>Wed, 20 Feb 2019 12:22:27 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2019/02/linux/</guid>
-      <description>&lt;h2 id=&#34;centos-服务器--docker&#34;&gt;CentOS 服务器 + Docker&lt;/h2&gt;
-&lt;p&gt;1、可以通过阿里云、腾讯云购买一个服务器&lt;/p&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dockerfile&#34;&gt;Dockerfile
+&lt;/h2&gt;&lt;p&gt;这里先写 &lt;code&gt;Dockerfile&lt;/code&gt; 文件，注意文件名保持一致&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM hub.c.163.com/public/nginx:1.2.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#从镜像中心下载镜像，如果本地已经存在，则使用本地的。这里使用的163镜像中心
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MAINTAINER tao
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 作者，可以不写
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#COPY nginx.conf /etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#这里是将 Dockerfile 同级目录的 nginx.conf 拷贝到 /etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 但是这里吧，后期 nginx.conf 可能会修改，所以我注释掉了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 我用的是 -v 映射，后期修改的时候，重启一下镜像就可以了
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;nginxconf&#34;&gt;nginx.conf
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;nginx.conf&#34; &gt;nginx.conf 完整文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里为了方便 ，配置文件中直接使用的是 &lt;code&gt;user root;&lt;/code&gt;
+最好是新创建一个用户。设置好权限。使用另一个用户，安全性更高一些。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        listen       8080;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        server_name  localhost;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        charset utf-8;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        #access_log  logs/host.access.log  main;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            #显示的根目录 测试文字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            root  /usr/share/nginx/html; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            autoindex on;             #开启索引功能  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            autoindex_exact_size off; # 关闭计算文件确切大小（单位bytes），只显示大概大小（单位kb、mb、gb）  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            autoindex_localtime on;   # 显示本机时间而非 GMT 时间  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;镜像容器&#34;&gt;镜像+容器
+&lt;/h2&gt;&lt;p&gt;cd 到 fileserver目录下，执行命令，生成一个新的镜像
+$ docker build -t fileserver .&lt;/p&gt;
+&lt;p&gt;生成并运行容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -itd --restart=always -p 8090:8080 --name fileserver -v /data/fileserver/data:/usr/share/nginx/html/ -v /data/fileserver/nginx.conf:/etc/nginx/nginx.conf fileserver 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里nginx配置的是8080端口，也就是 -p 8090:8080 后面的这个8080，这个是容器内服务的端口，对外没有影响。8090是我们外面映射的端口，远程访问就是用这个8090的端口&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>CentOS 服务器 &#43; mysql &#43; vsftpd服务</title>
+        <link>https://blog.iostao.com/2020/02/linux-start-02/</link>
+        <pubDate>Tue, 25 Feb 2020 13:12:10 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2020/02/linux-start-02/</guid>
+        <description>&lt;h1 id=&#34;搭建mysql--ftp服务&#34;&gt;搭建mysql + FTP服务
+&lt;/h1&gt;&lt;h2 id=&#34;一安装-mysql&#34;&gt;一、安装 mysql
+&lt;/h2&gt;&lt;h3 id=&#34;从官方下载mysql-57镜像&#34;&gt;从官方下载&lt;code&gt;mysql 5.7&lt;/code&gt;镜像
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$ docker pull mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看下载的镜像&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker image
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;docker安装-mysql并映射本地文件目录datamysqldata&#34;&gt;docker安装 Mysql，并映射本地文件目录/data/mysql/data
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$ docker run -itd --restart=always -p 3306:3306 --name mysql -v /data/mysql/data:/var/lib/mysql -v /data/mysql/etc:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;options&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Mean&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;-i&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;以交互模式运行容器，通常与 -t 同时使用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;-t&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;为容器重新分配一个伪输入终端，通常与 -i 同时使用&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;d     | 后台运行容器，并返回容器ID
+&amp;ndash;restart | always 重启docker后，会立即启动服务
+-p     |  端口映射 3306:3306 前面的端口，代表本机（也就是centOS的端口），后面的端口，是docker容器内部的端口，和外部端口不冲突。比如mysql -p 3306:3306, slave -p 3307:3306。centOS的端口，分别是3306, 3307。mysql容器内部是3306， slave容器内部也是3306
+-v  | 路径映射，将容器中的数据映射到硬盘磁盘上
+&amp;ndash;name | 别名，方便操作
+mysql:5.7 | 最后这个是镜像名+镜像版本，docker images查看对比一下就可以了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然也可以从&lt;a class=&#34;link&#34; href=&#34;http://c.163.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网易云镜像&lt;/a&gt; 或者其他镜像仓库下载镜像。需要登录，然后进入控制台，镜像仓库&lt;/p&gt;
+&lt;p&gt;查看运行的容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;进入容器，测试&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 进入mysql容器
+# 这个mysql是上面创建容器的时候，--name起的别名。也可以用容器id
+$ docker exec -it mysql bash
+$ mysql -u root -p
+# 输入密码，即可查看本地是否登录成功
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;远程连接，要注意mysql账号是否开启了远程登录，没有的话，需要设置一下&lt;/p&gt;
+&lt;h2 id=&#34;二ftp服务&#34;&gt;二、FTP服务
+&lt;/h2&gt;&lt;h3 id=&#34;docker下载-vsftpd镜像&#34;&gt;docker下载 vsftpd镜像
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;docker pull docker.io/fauria/vsftpd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;docker run -d -p 20:20 -p 21:21 -p 21100-21110:21100-21110 -v /data:/home/vsftpd/用户名 -e FTP_USER=用户名 -e FTP_PASS=密码 -e PASV_ADDRESS=服务器ip -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 --name vsftpd --restart=always docker.io/fauria/vsftpd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-p 映射端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;21100-21110 //被动模式随机端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-v 映射目录，我这里是需要把本地目录映射到这个用户下。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    所以需要把用户名加上
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    该用户在FTP中的目录是 /home/vsftpd/用户名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    所以 本地目录: /home/vsftpd/用户名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这里需要把服务器的端口打开，登录腾讯云/阿里云后台
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -&amp;gt; 控制台
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -&amp;gt; 安全组
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -&amp;gt; 修改规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -&amp;gt; 添加规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    来源          //协议端口  备注
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    0.0.0.0/0     tcp:20     20 端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    0.0.0.0/0     tcp:21     21 端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    0.0.0.0/0     tcp:22     22 ssh端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    0.0.0.0/0     tcp:21100-21110     21100-21110 这是一个端口范围
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;远程FTP连接测试就可以了，&lt;a class=&#34;link&#34; href=&#34;https://www.filezilla.cn/download/client&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FTP客户端工具  FileZilla下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有连接不上的，点&lt;a class=&#34;link&#34; href=&#34;https://tool.chinaz.com/port/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;端口扫描&lt;/a&gt;，进行一下端口扫描，看看服务端口是否关闭，如果关闭状态，去控制台添加一下规则，将端口打开。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Linux brclt 命令</title>
+        <link>https://blog.iostao.com/2019/06/linux-brctl-shell/</link>
+        <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2019/06/linux-brctl-shell/</guid>
+        <description>&lt;h2 id=&#34;参数说明和示例&#34;&gt;参数说明和示例
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;参数&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;示例&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;addbr &amp;lt;bridge&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;创建网桥&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl addbr br10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;delbr &amp;lt;bridge&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除网桥&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl delbr br10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;将网卡接口接入网桥&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl addif br10 eth0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;show &amp;lt;bridge&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;查询网桥信息&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl show br10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;stp &amp;lt;bridge&amp;gt; {on | off}&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;启用禁用STP&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl stp br10 off/on&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;showstp &amp;lt;bridge&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;查看网桥STP信息&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl showstp br10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置网桥延迟&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl setfd br10 10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;showmacs &amp;lt;bridge&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;查看mac信息&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;brctl showmacs br10&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux Shell ssh登录脚本</title>
+        <link>https://blog.iostao.com/2019/04/linux-shell-ssh/</link>
+        <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2019/04/linux-shell-ssh/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/caoguo/p/4865413.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;转载自Ca0Gu0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Linux 登陆服务器敲命令太多,某时候确实不便，但是如果使用脚本就会简便很多&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;so.zip&#34; &gt;脚本下载 so.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/04/linux-shell-ssh/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;脚本命令&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;一说明&#34;&gt;一、说明
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;支持密码和密钥两种格式&lt;/li&gt;
+&lt;li&gt;用户名和密码都是写文件的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;二配置&#34;&gt;二、配置
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;密码文件配置:&lt;/p&gt;
+&lt;p&gt;序号:IP:端口:用户:密码:说明 1:192.168.88.128:22:root:toor:虚拟机web服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;密钥文件放在keys文件夹下,密码位置写成密钥文件名,文件名必须以.pem结尾&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1:104.194.71.144:26999:root:WaFHwZm1AM3L5:搬瓦工
+2:47.94.208.55:8080:root:aliyun.pem:阿里云
+3:104.194.71.144:3306:ca0gu0:toor:虚拟机mysql数据库服务器
+4:103:192.168.88.4:22:root:sellercube:本地开发服务器
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
+        <title>CentOS 第一步</title>
+        <link>https://blog.iostao.com/2019/02/linux-start-01/</link>
+        <pubDate>Wed, 20 Feb 2019 12:22:27 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2019/02/linux-start-01/</guid>
+        <description>&lt;h2 id=&#34;centos-服务器--docker&#34;&gt;CentOS 服务器 + Docker
+&lt;/h2&gt;&lt;p&gt;1、可以通过阿里云、腾讯云购买一个服务器&lt;/p&gt;
 &lt;p&gt;2、自己搭建一个本地服务器&lt;/p&gt;
 &lt;p&gt;（我们这里以云服务器为例）&lt;/p&gt;
-&lt;h2 id=&#34;一登录服务器&#34;&gt;一、登录服务器&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;ssh root@服务器ip -p 22
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-  </channel>
+&lt;h2 id=&#34;一登录服务器&#34;&gt;一、登录服务器
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;ssh root@服务器ip -p 22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因为每次登录都需要输入一行带有ip的命令，比较麻烦。所以这里我用的脚本登录，每次登录的时候很方便，也方便管理多个服务器。&lt;/p&gt;
+&lt;h4 id=&#34;linux-shell-ssh登录脚本httpsblogqoabccom20190405linux-shell-ssh&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.qoabc.com/2019/04/05/linux-Shell-ssh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux Shell ssh登录脚本&lt;/a&gt;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh.gif&#34;
+	width=&#34;663&#34;
+	height=&#34;475&#34;
+	srcset=&#34;https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu11626802847170503937.gif 480w, https://blog.iostao.com/2019/02/linux-start-01/linux-shell-ssh_hu5626277035880356296.gif 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;脚本命令&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;二cent-os操作&#34;&gt;二、Cent OS操作
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;这里先记录一条命令 &amp;ndash; 开启，重启，停止命令 (这里以ftp服务命令为例）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl start vsftpd
+sudo systemctl restart vsftpd
+sudo systemctl stop vsftpd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;把yum包更新到最新&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$sudo yum update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;安装各种服务&#34;&gt;安装各种服务
+&lt;/h2&gt;&lt;p&gt;本人这里使用的是&lt;code&gt;docker&lt;/code&gt;容器服务，mysql，redis，vsftpd服务，以及项目部署都是使用的docker。所以这里先安装 docker&lt;/p&gt;
+&lt;p&gt;docker最低支持的内核好像是3.0&lt;/p&gt;
+&lt;p&gt;查看版本以及内核&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ uname -a
+# 下面是输入命令后，返回的信息
+Linux VM_0_7_centos 3.10.0-1062.9.1.el7.x86_64 #1 
+SMP Fri Dec 6 15:49:49 UTC 	2019 x86_64 x86_64 x86_64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装docker容器服务&#34;&gt;安装Docker容器服务
+&lt;/h3&gt;&lt;p&gt;安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum install -y yum-utils device-mapper-persistent-data lvm2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装 docker&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum install docker -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;启动Docker&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;启动Docker,设置开机启动,
+sudo systemctl start docker
+sudo systemctl enable docker
+#停止Docker
+sudo systemctl stop docker 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;验证是否安装成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo docker info
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配置 docker 加速器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;docker-常用命令&#34;&gt;Docker 常用命令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#查找Docker Hub上的镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker search imageName/ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#获取Docker Hub上的镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker pull ImageName/ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#显示本地主机上的镜像列表
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker images 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#运行本地主机上的镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker run ImageName/ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#列出正在运行的容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker ps 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#查看正在运行容器的网络端口映射情况
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker port ContainerID 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#查看正在运行容器的内部正在进程运行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker top ContainerID 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#查看正在运行容器的内部底层信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker inspect ContainerID 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#停止正在运行容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker stop ContainerID/ 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#重启已经停止的容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker start ContainerID 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#删除不需要的容器（必须在容器已经停止的情况下）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker rm ContainerimageID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#移除本地镜像，移除前需要把该镜像下所有的容器删除
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker rmi ImageName/ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#登录docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker login
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#运行ubuntu:16.04镜像并创建容器和启动bash终端
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker run -t -i ubuntu:16.04 /bin/bash 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#重命名容器名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker rename wonderful_kepler Ubuntu16.04 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#构建镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker commit -m=&amp;#34;has update&amp;#34; -a=&amp;#34;SpiffyEight77&amp;#34; ff5d623e2d61 spiffyeight77/ubuntu:16.04
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#提交镜像到docker hub 需要登录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ docker push spiffyeight77/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;部分参数说明&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-d: 守护模式 后台运行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-p: 是容器内部端口绑定到指定的主机端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-P: 是容器内部端口随机映射到主机的高端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-f : 让 docker logs 像使用 tail -f 一样来输出容器内部的标准输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-l : 查询最后一次创建的容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-t : 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-i : 则让容器的标准输入保持打开
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-m:提交的描述信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a: 指定镜像作者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--rm: 停止容器后移除容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ff5d623e2d61: 容器ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;spiffyeight77/ubuntu:16.04: 指定要创建的目标镜像名
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;编写 Dockerfile&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不会写Dockerfile的话请自行Google
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM alpine:latest #使用了镜像大小体积只有5MB的alpine镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WORKDIR / #设置工作路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ADD main / #把上文编译好的main文件添加到镜像里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EXPOSE 3000 #暴露容器内部端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ENTRYPOINT [&amp;#34;./main&amp;#34;] #入口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

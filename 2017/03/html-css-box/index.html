@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="3.3 CSS盒子模型 课程概要 CSS盒子模型概述 CSS内边距 CSS边框 CSS外边距 CSS外边距合并 ">
+<meta name="keywords" content="H5"><title>3.3 CSS盒子模型</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2017/03/html-css-box/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="3.3 CSS盒子模型">
+<meta property='og:description' content="3.3 CSS盒子模型 课程概要 CSS盒子模型概述 CSS内边距 CSS边框 CSS外边距 CSS外边距合并 ">
+<meta property='og:url' content='https://blog.iostao.com/2017/03/html-css-box/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='html' /><meta property='article:published_time' content='2017-03-04T15:01:17&#43;00:00'/><meta property='article:modified_time' content='2017-03-04T15:01:17&#43;00:00'/>
+<meta name="twitter:title" content="3.3 CSS盒子模型">
+<meta name="twitter:description" content="3.3 CSS盒子模型 课程概要 CSS盒子模型概述 CSS内边距 CSS边框 CSS外边距 CSS外边距合并 ">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#33-css盒子模型">3.3 CSS盒子模型</a></li>
+    <li><a href="#课程概要">课程概要</a>
+      <ol>
+        <li><a href="#331-css盒子模型-概述">3.3.1 CSS盒子模型-概述</a></li>
+        <li><a href="#332-css盒子模型-内边距">3.3.2 CSS盒子模型-内边距</a></li>
+        <li><a href="#333-css盒子模型-边框">3.3.3 CSS盒子模型-边框</a></li>
+        <li><a href="#334-css盒子模型-外边距">3.3.4 CSS盒子模型-外边距</a></li>
+        <li><a href="#335-css盒子模型-外边距合并">3.3.5 CSS盒子模型-外边距合并</a></li>
+        <li><a href="#336-css盒子模型-盒子模型应用">3.3.6 CSS盒子模型-盒子模型应用</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/html/" >
+                Html
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2017/03/html-css-box/">3.3 CSS盒子模型</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 04, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="33-css盒子模型">3.3 CSS盒子模型
+</h2><h2 id="课程概要">课程概要
+</h2><ul>
+<li>CSS盒子模型概述</li>
+<li>CSS内边距</li>
+<li>CSS边框</li>
+<li>CSS外边距</li>
+<li>CSS外边距合并</li>
+</ul>
+<h3 id="331-css盒子模型-概述">3.3.1 CSS盒子模型-概述
+</h3><p>1、盒子模型的内容范围包括</p>
+<pre><code>margin（外边距）、border（边框）、padding（内边距）、content部分组成
+
+height、width
+</code></pre>
+<h3 id="332-css盒子模型-内边距">3.3.2 CSS盒子模型-内边距
+</h3><p>1、内边距</p>
+<pre><code>内边距在content外，边框外
+</code></pre>
+<p>2、内边距属性</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">属性</th>
+          <th style="text-align: left">描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">padding</td>
+          <td style="text-align: left">设置所有边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">padding-bottom</td>
+          <td style="text-align: left">设置底边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">padding-left</td>
+          <td style="text-align: left">设置左边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">padding-right</td>
+          <td style="text-align: left">设置右边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">padding-top</td>
+          <td style="text-align: left">设置上边距</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="333-css盒子模型-边框">3.3.3 CSS盒子模型-边框
+</h3><p>1、CSS边框：</p>
+<p>我们可以创建出效果出色的边框，并且可以应用于任何元素</p>
+<p>2、边框的样式：</p>
+<p>border-style: 定义了10个不同的非继承样式，包括none</p>
+<p>3、边框的单边样式：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">style</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">border-top-style</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-left-style</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-right-style</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-bottom-style</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>4、边框的宽度：</p>
+<pre><code>border-width
+</code></pre>
+<p>5、边框单边的宽度：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">style</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">border-top-width</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-left-width</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-right-width</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-bottom-width</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>6、边框的颜色：</p>
+<pre><code>border-color
+</code></pre>
+<p>7、边框单边的颜色</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">style</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">border-top-color</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-left-color</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-right-color</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-bottom-color</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>8、CSS3边框</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">CSS3边框</th>
+          <th style="text-align: left">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">border-radius</td>
+          <td style="text-align: left">圆角边框</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">box-shadow</td>
+          <td style="text-align: left">边框阴影</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">border-image</td>
+          <td style="text-align: left">边框图片</td>
+      </tr>
+  </tbody>
+</table></div>
+<pre><code>box-shadow 背景阴影右移移动像素、下移移动像素、背景阴影透明度、颜色
+</code></pre>
+<h3 id="334-css盒子模型-外边距">3.3.4 CSS盒子模型-外边距
+</h3><p>1、外边距：</p>
+<p>围绕在内容边框的区域就是外边距，外边距默认为透明区域</p>
+<p>外边距接受任何长度单位、百分数值</p>
+<p>2、外边距常用属性</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">属性</th>
+          <th style="text-align: left">描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">margin</td>
+          <td style="text-align: left">设置所有边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">margin-bottom</td>
+          <td style="text-align: left">设置底边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">margin-left</td>
+          <td style="text-align: left">设置左边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">margin-right</td>
+          <td style="text-align: left">设置右边距</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">margin-top</td>
+          <td style="text-align: left">设置上边距</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="335-css盒子模型-外边距合并">3.3.5 CSS盒子模型-外边距合并
+</h3><p>1、外边距合并：</p>
+<p>外边距合并就是一个叠加的概念</p>
+<h3 id="336-css盒子模型-盒子模型应用">3.3.6 CSS盒子模型-盒子模型应用
+</h3><p><a class="link" href="http://www.jekexueyuan.com"  target="_blank" rel="noopener"
+    >极客学院官网效果</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/html/">Html</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2017/03/html-style-link-table/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML样式、链接、表格</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2017/03/html-javascript-elements/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JavaScript 基础教程</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2017/03/html-css-animation/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3.7 CSS动画--页面特效</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2017/03/html-css-position/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3.4 CSS定位 &#43; 3.5 &#43; 3.6</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2017/03/html-css-style/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3.2 CSS基础样式讲解</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

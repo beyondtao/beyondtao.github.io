@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="转自:swiftcafe\nSwift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。\n">
+<meta name="keywords" content="Swift3.0"><title>Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2016/05/swift3-0advanceobjctransformtoswift/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式">
+<meta property='og:description' content="转自:swiftcafe\nSwift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。\n">
+<meta property='og:url' content='https://blog.iostao.com/2016/05/swift3-0advanceobjctransformtoswift/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swift' /><meta property='article:published_time' content='2016-05-09T21:24:10&#43;00:00'/><meta property='article:modified_time' content='2016-05-09T21:24:10&#43;00:00'/>
+<meta name="twitter:title" content="Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式">
+<meta name="twitter:description" content="转自:swiftcafe\nSwift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/swift/" >
+                Swift
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2016/05/swift3-0advanceobjctransformtoswift/">Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 09, 2016</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>转自:<a class="link" href="http://swiftcafe.io/2016/05/07/swift3-objc/"  target="_blank" rel="noopener"
+    >swiftcafe</a></p>
+<p>Swift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。</p>
+<p>原因</p>
+<p>这个源于一个编号为 SE-0005 的提案，并且已经审核通过。这个方案的提出，源于这样一个痛点。 Swift 应用于 iOS App 开发，就免不了会依赖于原生的 Cocoa Touch 库。而由于历史原因，大家也都知道， iOS 原生库大多时基于 Objc 来实现的。所以他们的编码规范也都遵循着 Objc 的规范，诸如函数，方法的命名规则这些，都有自己的一套标准。</p>
+<p>而 Swift 3.0 也发布了自己的 API 设计规范，同时 Objc 也有自己的设计规范，这样一来我们使用 Swift 开发 iOS App 的时候，其实总是在游走于两套规范的 API 之间，对开发者的体验嘛，就不是很好了。</p>
+<p>例子</p>
+<p>咱们用一个实际的例子来说明这个问题。 比如 NSString 有这样一个方法：</p>
+<p>1
+2
+let content = listItemView.text.stringByTrimmingCharactersInSet(
+NSCharacterSet.whitespaceAndNewlineCharacterSet())
+stringByTrimmingCharactersInSet 会剪掉字符串头尾中的某些字符。从这个方法名中，明显的可以看出它是以 Objc 规范来命名的。</p>
+<p>如果以 Swift 的编码规范，这个方法其实应该这样命名：</p>
+<p>1
+let content = listItemView.text.trimming(.whitespaceAndNewlines)
+从这里可以看出，objc 的命名方式，很多会把函数的返回值类型，以及参数类型都包含在函数名里面。比如我们上面的 stringByTrimmingCharactersInSet 方法。但这和 Swift 命名规则就不同了。而且随着 Swift 规范的清晰，这个问题就越来越凸显出来了。</p>
+<p>所以 Swift 3.0 才会将这个问题提上日程，并在这个版本中准备解决这个问题。</p>
+<p>规则</p>
+<p>解决这个问题，肯定不能手动的替换。因为系统库的方法实在太多了，所以就需要总结出一系列替换规则。根据这些规则将相应的标识替换完成。</p>
+<p>那么 Swift 具体是怎么做的呢， 咱们来了解一下。</p>
+<p>扩大 swift_name 编译属性的应用范围 - 这个涉及到 Swift 底层的概念，当我们将 Objc 的 API 导入到 Swift 的时候，我们是可以指定一个编译属性 swift_name 的。而这个编译属性，可以将 Objc 中的标识名称在 Swift 中以不同的名字表现出来。但在之前的版本中，这个编译属性只能对枚举项和工厂方法有效，这次将会扩大它的范围。</p>
+<p>去除多余的类型名称 - Objc 的编码规范中，会建议在方法名称中将参数名和类型也表示出来，而这个在 Swift 中就是多余的，我们前面那个例子也演示了。这个也是着重处理的点。</p>
+<p>添加默认参数 - 对于 Objc 需要默认参数的地方，会在 Swift 中添加上默认参数，比如一些选项参数：</p>
+<p>1
+NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
+这个 option 参数就会提供默认参数。</p>
+<p>添加第一个参数的参数标签 - 为方法的第一个参数添加合适的参数标签。</p>
+<p>在布尔属性前面加上 is - 在最新的 Swift 规范中，需要在布尔属性前面加上 is, 而 Objc 规范恰巧不建议使用 is，所以在 Swift 3 中会将 Objc 迁移过来的布尔属性，按照 Swift 规范来进行修改。可以参考 Swift 规范中关于布尔属性的部分内容。</p>
+<p>值类型变成小写 - 会将 Objc 的属性值以小写开头， 比如 URLHandler 会变为 urlHandler。</p>
+<p>下面是一个官方文档中给出的转换的例子：</p>
+<pre><code>class UIBezierPath : NSObject, NSCopying, NSCoding {
+  convenience init(ovalInRect: CGRect)
+  func moveToPoint(_: CGPoint)
+  func addLineToPoint(_: CGPoint)
+  func addCurveToPoint(_: CGPoint, controlPoint1: CGPoint, controlPoint2: CGPoint)
+  func addQuadCurveToPoint(_: CGPoint, controlPoint: CGPoint)
+  func appendPath(_: UIBezierPath)
+  func bezierPathByReversingPath() -&gt; UIBezierPath
+  func applyTransform(_: CGAffineTransform)
+  var empty: Bool { get }
+  func containsPoint(_: CGPoint) -&gt; Bool
+  func fillWithBlendMode(_: CGBlendMode, alpha: CGFloat)
+  func strokeWithBlendMode(_: CGBlendMode, alpha: CGFloat)
+  func copyWithZone(_: NSZone) -&gt; AnyObject
+  func encodeWithCoder(_: NSCoder)
+}
+</code></pre>
+<p>转换后：</p>
+<pre><code>class UIBezierPath : NSObject, NSCopying, NSCoding {
+  convenience init(ovalIn rect: CGRect)
+  func move(to point: CGPoint)
+  func addLine(to point: CGPoint)
+  func addCurve(to endPoint: CGPoint, controlPoint1 controlPoint1: CGPoint, controlPoint2 controlPoint2: CGPoint)
+  func addQuadCurve(to endPoint: CGPoint, controlPoint controlPoint: CGPoint)
+  func append(_ bezierPath: UIBezierPath)
+  func reversing() -&gt; UIBezierPath
+  func apply(_ transform: CGAffineTransform)
+  var isEmpty: Bool { get }
+  func contains(_ point: CGPoint) -&gt; Bool
+  func fill(_ blendMode: CGBlendMode, alpha alpha: CGFloat)
+  func stroke(_ blendMode: CGBlendMode, alpha alpha: CGFloat)
+  func copy(with zone: NSZone = nil) -&gt; AnyObject
+  func encode(with aCoder: NSCoder)
+}
+</code></pre>
+<p>是不是感觉方法名清晰很多呢。</p>
+<p>总结</p>
+<p>以上就是 Swift 3 对 Objc 依赖库中的优化了，这次优化后，我们以后在用 Swift 来开发 iOS App 的时候，就不会再混合两种代码风格啦。</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/swift/">Swift</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2023/12/swift_datetime/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Swift Dates and Times</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2023/12/swift_static_funclhs_rhs/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/10/swift3-gcd-dispatch-async/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Swift3中dispatch_once废弃的解决办法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/07/swift-delegate-memory-leak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">swift 使用 delegate 内存泄露问题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/07/swift-ltpickerview/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LTPickerView.swift</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

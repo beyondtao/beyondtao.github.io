@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\n">
+<meta name="keywords" content="Swift3.0"><title>Swift3中dispatch_once废弃的解决办法</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Swift3中dispatch_once废弃的解决办法">
+<meta property='og:description' content="\n">
+<meta property='og:url' content='https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swift' /><meta property='article:published_time' content='2016-10-30T15:45:13&#43;00:00'/><meta property='article:modified_time' content='2016-10-30T15:45:13&#43;00:00'/>
+<meta name="twitter:title" content="Swift3中dispatch_once废弃的解决办法">
+<meta name="twitter:description" content="\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/swift/" >
+                Swift
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2016/10/swift3-gcd-dispatch-async/">Swift3中dispatch_once废弃的解决办法</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 30, 2016</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01.png"
+	width="1526"
+	height="240"
+	srcset="/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3501255111169184025.png 480w, /2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3251674048650655950.png 1024w"
+	loading="lazy"
+	
+		alt="图示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="635"
+		data-flex-basis="1526px"
+	
+></p>
+<p>内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)</p>
+<p>swift 3中对C层级的GCD的API进行了彻头彻尾的改变。本文将从实际使用场景来了解一下新的api使用。</p>
+<p>dispatch_async
+一个常见的场景就是在一个全局队列进行一些操作后切换到主线程配置UI。现在是这么写：</p>
+<pre><code>DispatchQueue.global().async {
+    // code
+    DispatchQueue.main.async {
+        // 主线程中
+    }
+}
+</code></pre>
+<p>global()是一个有着默认参数的静态函数：</p>
+<pre><code>class DispatchQueue : DispatchObject {
+    public  class var main: DispatchQueue 
+    public class func global(qos: DispatchQoS.QoSClass = default) -&gt; DispatchQueue
+}
+</code></pre>
+<p>sync</p>
+<p>如果想同步执行操作，和async类似，调用sync就可以了：</p>
+<pre><code>DispatchQueue.global().sync {    
+    // 同步执行
+}
+</code></pre>
+<p>优先级：DispatchQoS
+我们知道，GCD 的默认队列优先级有四个：</p>
+<pre><code>DISPATCH_QUEUE_PRIORITY_HIGH
+DISPATCH_QUEUE_PRIORITY_DEFAULT
+DISPATCH_QUEUE_PRIORITY_LOW
+DISPATCH_QUEUE_PRIORITY_BACKGROUND
+</code></pre>
+<p>现在则改为了QoSClass枚举</p>
+<pre><code>public enum QoSClass {
+
+    case background
+
+    case utility
+
+    case `default`
+
+    case userInitiated
+
+    case userInteractive
+
+    case unspecified
+
+    public init?(rawValue: qos_class_t)
+
+    public var rawValue: qos_class_t { get }
+}
+</code></pre>
+<p>这些命名比原先的更加友好，能更好表达这个操作的意图。</p>
+<p><img src="/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02.png"
+	width="1240"
+	height="509"
+	srcset="/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu4140799552534284773.png 480w, /2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu17590588213227408113.png 1024w"
+	loading="lazy"
+	
+		alt="图示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="584px"
+	
+></p>
+<p>和原有的对应关系是：</p>
+<ul>
+<li>DISPATCH_QUEUE_PRIORITY_HIGH:         .userInitiated</li>
+<li>DISPATCH_QUEUE_PRIORITY_DEFAULT:      .default</li>
+<li>DISPATCH_QUEUE_PRIORITY_LOW:          .utility</li>
+<li>DISPATCH_QUEUE_PRIORITY_BACKGROUND:   .background</li>
+</ul>
+<p>创建队列
+DispatchQueue的默认初始化方法创建的就是一个同步队列，如果要创建并发的队列，在attributes中声明concurrent。</p>
+<p>// 同步队列</p>
+<pre><code>let serialQueue = DispatchQueue(label: &quot;queuename&quot;)
+</code></pre>
+<p>// 并发队列</p>
+<pre><code>let concurrentQueue = DispatchQueue(label: &quot;queuename&quot;, attributes: .concurrent)
+</code></pre>
+<p>推迟时间后执行</p>
+<p>原先的dispatch_time_t现在由DispatchTime对象表示。可以用静态方法now获得当前时间，然后再通过加上一个DispatchTimeInterval枚举来获得一个需要延迟的时间。</p>
+<pre><code>let delay = DispatchTime.now() + DispatchTimeInterval.seconds(60)DispatchQueue.main.asyncAfter(deadline: delay) { 
+    // 延迟执行}
+</code></pre>
+<p>这里也可以直接加上一个秒数。</p>
+<pre><code>let three = DispatchTime.now() + 3.0
+</code></pre>
+<p>因为DispatchTime中自定义了+号。</p>
+<pre><code>public func +(time: DispatchTime, seconds: Double) -&gt; DispatchTime
+</code></pre>
+<p>DispatchGroup</p>
+<p>如果想在dispatch_queue中所有的任务执行完成后再做某种操作可以使用DispatchGroup。原先的dispatch_group_t由现在的DispatchGroup对象代替。</p>
+<pre><code>let group = DispatchGroup()
+
+let queueBook = DispatchQueue(label: &quot;book&quot;)
+queueBook.async(group: group) {
+	// 下载图书
+}
+
+let queueVideo = DispatchQueue(label: &quot;video&quot;)
+queueVideo.async(group: group) {
+    // 下载视频
+}
+
+group.notify(queue: DispatchQueue.main) { 
+    // 下载完成
+}
+</code></pre>
+<p>DispatchGroup会在组里的操作都完成后执行notify。</p>
+<p>如果有多个并发队列在一个组里，我们想在这些操作执行完了再继续，调用wait</p>
+<pre><code>group.wait()
+</code></pre>
+<p>DispatchWorkItem</p>
+<p>使用DispatchWorkItem代替原来的dispatch_block_t。
+在DispatchQueue执行操作除了直接传了一个() -&gt; Void类型的闭包外，还可以传入一个DispatchWorkItem。</p>
+<pre><code>public func sync(execute workItem: DispatchWorkItem)
+
+public func async(execute workItem: DispatchWorkItem)
+</code></pre>
+<p>DispatchWorkItem的初始化方法可以配置Qos和DispatchWorkItemFlags，但是这两个参数都有默认参数，所以也可以只传入一个闭包。</p>
+<pre><code>public init(qos: DispatchQoS = default, flags: DispatchWorkItemFlags = default, block: @escaping @convention(block) () -&gt; ())
+
+let workItem = DispatchWorkItem { 
+    // TODO:
+}
+</code></pre>
+<p>DispatchWorkItemFlags枚举中assignCurrentContext表示QoS根据创建时的context决定。</p>
+<p>值得一提的是DispatchWorkItem也有wait方法，使用方式和group一样。调用会等待这个workItem执行完。</p>
+<pre><code>let myQueue = DispatchQueue(label: &quot;my.queue&quot;, attributes: .concurrent)
+let workItem = DispatchWorkItem {
+    sleep(1)
+    print(&quot;done&quot;)
+}
+myQueue.async(execute: workItem)
+print(&quot;before waiting&quot;)
+workItem.wait()
+print(&quot;after waiting&quot;)
+</code></pre>
+<p>barrier</p>
+<p>假设我们有一个并发的队列用来读写一个数据对象。如果这个队列里的操作是读的，那么可以多个同时进行。如果有写的操作，则必须保证在执行写入操作时，不会有读取操作在执行，必须等待写入完成后才能读取，否则就可能会出现读到的数据不对。在之前我们用dipatch_barrier实现。
+现在属性放在了DispatchWorkItemFlags里。</p>
+<pre><code>let wirte = DispatchWorkItem(flags: .barrier) { 
+    // write data}let dataQueue = DispatchQueue(label: &quot;data&quot;, attributes: .concurrent)
+dataQueue.async(execute: wirte)
+</code></pre>
+<p>信号量</p>
+<p>为了线程安全的统计数量，我们会使用信号量作计数。原来的dispatch_semaphore_t现在用DispatchSemaphore对象表示。
+初始化方法只有一个，传入一个Int类型的数。</p>
+<pre><code>let semaphore = DispatchSemaphore(value: 5)
+
+// 信号量减一
+semaphore.wait()
+
+//信号量加一
+semaphore.signal()
+</code></pre>
+<p><code>dispatch_once</code>在swift 3中已经被废弃了。</p>
+<p>简单的建议就是一些初始化场景就用懒加载吧。</p>
+<pre><code>// Examples of dispatch_once replacements with global or static constants and variables. 
+// In all three, the initialiser is called only once. 
+
+// Static properties (useful for singletons).
+class Object {
+    static let sharedInstance = Object()
+}
+
+// Global constant.
+let constant = Object()
+
+// Global variable.
+var variable: Object = {
+    let variable = Object()
+    variable.doSomething()
+    return variable
+}()</code></pre>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/swift/">Swift</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2023/12/swift_datetime/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Swift Dates and Times</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2023/12/swift_static_funclhs_rhs/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/07/swift-delegate-memory-leak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">swift 使用 delegate 内存泄露问题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/07/swift-ltpickerview/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LTPickerView.swift</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/06/swift-unicodescalars/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">判断中、英文、数字、符号</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+# Xcode
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.lock
+*.xcuserdata
+*.xcworkspace
+package.json
+/Pods
+/build
+/node_modules
+
+# 忽略自动打包配置，如第一次拉取，请临时注释下行
+/Xcode_shell
+
+#OSX Files
+
+
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# VIM Files
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~

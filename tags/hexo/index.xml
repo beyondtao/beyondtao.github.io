@@ -1,21 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>hexo on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/tags/hexo/</link>
-    <description>Recent content in hexo on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2016 12:01:11 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>在线生成站点地图SiteMap</title>
-      <link>https://blog.qoabc.com/2016/05/hexo/</link>
-      <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/hexo/</guid>
-      <description>&lt;h3 id=&#34;站点地图sitemap的好处是很大的对seo很有好处能够更方便迅速的让搜索引擎收录&#34;&gt;站点地图SiteMap的好处是很大的，对Seo很有好处，能够更方便、迅速的让搜索引擎收录。&lt;/h3&gt;
-&lt;p&gt;只需要四部你就可以完成站点地图的制作。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Hexo on Scott Tao</title>
+        <link>https://blog.iostao.com/tags/hexo/</link>
+        <description>Recent content in Hexo on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 15 May 2016 12:01:11 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在线生成站点地图SiteMap</title>
+        <link>https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/</link>
+        <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/</guid>
+        <description>&lt;h3 id=&#34;站点地图sitemap的好处是很大的对seo很有好处能够更方便迅速的让搜索引擎收录&#34;&gt;站点地图SiteMap的好处是很大的，对Seo很有好处，能够更方便、迅速的让搜索引擎收录。
+&lt;/h3&gt;&lt;p&gt;只需要四部你就可以完成站点地图的制作。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.xml-sitemaps.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.输入你的网址和一些附加选项。如下图
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;1082&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001_hu11021892214415266807.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/001_hu9002763688688839787.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;在线生成站点地图SiteMap&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.点击提交开始生成。你可以休息会，可能要登几分钟。
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002.png&#34;
+	width=&#34;1274&#34;
+	height=&#34;700&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002_hu18247592343267015957.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/002_hu14223865439659673134.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;在线生成站点地图SiteMap&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.下载为你生成的sitemapXML文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4.上传到你的网站目录下。
+如果是使用的hexo博客模板。那么将文件放在 /source 目录下面。然后执行以下命令就可以了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;   $ hexo generate
+   $ hexo deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不过相应的搜索引擎需要设置好才可以。不然可不会生效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过上面四步就ok啦！&lt;/p&gt;
+&lt;p&gt;效果如下图，不过不会立即生效的。上传后，等一些时日就好了。
+&lt;img src=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003.png&#34;
+	width=&#34;2008&#34;
+	height=&#34;866&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003_hu4451750200164516104.png 480w, https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/003_hu10669210367390755545.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;必应SiteMap配置效果&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;556px&#34;
+	
+&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

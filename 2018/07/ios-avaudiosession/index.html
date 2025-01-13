@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="转载自简书\n1、AUAudioSession 概述 苹果官方图 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。\n">
+<meta name="keywords" content="AUAudioSession"><title>iOS-AVAudio</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2018/07/ios-avaudiosession/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="iOS-AVAudio">
+<meta property='og:description' content="转载自简书\n1、AUAudioSession 概述 苹果官方图 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。\n">
+<meta property='og:url' content='https://blog.iostao.com/2018/07/ios-avaudiosession/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ios' /><meta property='article:published_time' content='2018-07-27T11:10:43&#43;00:00'/><meta property='article:modified_time' content='2018-07-27T11:10:43&#43;00:00'/>
+<meta name="twitter:title" content="iOS-AVAudio">
+<meta name="twitter:description" content="转载自简书\n1、AUAudioSession 概述 苹果官方图 可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1auaudiosession-概述">1、AUAudioSession 概述</a></li>
+        <li><a href="#2avaudiosession-category">2、AVAudioSession Category</a></li>
+        <li><a href="#3avaudiosession-modeoptions">3、AVAudioSession Mode&amp;&amp;Options</a>
+          <ol>
+            <li><a href="#avaudiosession-mode">AVAudioSession Mode</a></li>
+            <li><a href="#avaudiosession-options">AVAudioSession Options</a></li>
+            <li><a href="#调优我们的category">调优我们的Category</a></li>
+          </ol>
+        </li>
+        <li><a href="#4-音频中断处理">4. 音频中断处理</a></li>
+        <li><a href="#5-avaudiosession总结">5. AVAudioSession总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ios/" >
+                Ios
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2018/07/ios-avaudiosession/">iOS-AVAudio</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 27, 2018</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><a class="link" href="https://www.jianshu.com/p/fb0e5fb71b3c"  target="_blank" rel="noopener"
+    >转载自简书</a></p>
+<h3 id="1auaudiosession-概述">1、AUAudioSession 概述
+</h3><p>苹果官方图
+<img src="/2018/07/ios-avaudiosession/iOS-AVAudioSession.png"
+	width="700"
+	height="526"
+	srcset="/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu7515317354796110356.png 480w, /2018/07/ios-avaudiosession/iOS-AVAudioSession_hu533427928384222519.png 1024w"
+	loading="lazy"
+	
+		alt="iOS-AVAudioSession-1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="319px"
+	
+>
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。</p>
+<p>举例一下AVAudioSession可以做这些事情</p>
+<ul>
+<li>设置自己的APP是否和其他APP音频同时存在，还是中断其他APP声音</li>
+<li>在手机调到静音模式下，自己的APP音频是否可以播放出声音</li>
+<li>电话或者其他APP终端自己APP的音频的事件处理</li>
+<li>指定音频输入和输出的设备（比如是听筒输出声音，还是扬声器输出声音）</li>
+<li>是否支持录音，录音同时是否支持音频播放</li>
+</ul>
+<h3 id="2avaudiosession-category">2、AVAudioSession Category
+</h3><p>AVAudioSession的接口比较简单。APP启动的时候会自动帮激活AVAudioSession，当然我们可以手动激活，代码如下：</p>
+<pre><code>//导入头文件
+#import &lt;AVFoundation/AVFoundation.h&gt;
+
+//AVAudioSession是一个单例类
+AVAudioSession *session = [AVAudioSession sharedInstance];
+//AVAudioSessionCategorySoloAmbient是系统默认的category
+[session setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+//激活AVAudioSession
+[session setActive:YES error:nil];
+</code></pre>
+<p>可以看到设置session这里有两个参数，category和options</p>
+<p>Catogory iOS下目前有七种，每种Category都对应是否支持下面四种能力</p>
+<ul>
+<li>Interrupts non-mixable apps audio: 是否打断不支持混音播放的APP</li>
+<li>Silenced by the Silent switch: 是否会响应手机静音键开关</li>
+<li>Supports audio input: 是否支持音频录入</li>
+<li>Supports audio output: 是否支持音频播放</li>
+</ul>
+<p>下面用图表来直观的看下每种category具体的能力集</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Category</th>
+          <th style="text-align: left">是否允许音频播放/录音</th>
+          <th style="text-align: left">是否打断其他不支持混音APP</th>
+          <th style="text-align: left">是否会被静音键或锁屏键静音</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryAmbient</td>
+          <td style="text-align: left">只支持播放</td>
+          <td style="text-align: left">否</td>
+          <td style="text-align: left">是</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryAudioProcessing</td>
+          <td style="text-align: left">不支持播放，不支持录制</td>
+          <td style="text-align: left">是</td>
+          <td style="text-align: left">否</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryMultiRoute</td>
+          <td style="text-align: left">支持播放，支持录制</td>
+          <td style="text-align: left">是</td>
+          <td style="text-align: left">否</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord</td>
+          <td style="text-align: left">支持播放，支持录制</td>
+          <td style="text-align: left">默认YES，可以重写为NO</td>
+          <td style="text-align: left">否</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryPlayback</td>
+          <td style="text-align: left">只支持播放</td>
+          <td style="text-align: left">默认YES,可以重写为NO</td>
+          <td style="text-align: left">否</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryRecord</td>
+          <td style="text-align: left">只支持录制</td>
+          <td style="text-align: left">是</td>
+          <td style="text-align: left">否（锁屏下仍可录制）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategorySoloAmbient</td>
+          <td style="text-align: left">只支持播放</td>
+          <td style="text-align: left">是</td>
+          <td style="text-align: left">是</td>
+      </tr>
+  </tbody>
+</table></div>
+<ul>
+<li>
+<p>AVAudioSessionCategoryAmbient，只支持音频播放。这个 Category，音频会被静音键和锁屏键静音。并且不会打断其他应用的音频播放。</p>
+</li>
+<li>
+<p>AVAudioSessionCategorySoloAmbient，这个是系统默认使用的 Category，只支持音频播放。音频会被静音键和锁屏键静音。和AVAudioSessionCategoryAmbient不同的是，这个会打断其他应用的音频播放</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryPlayback，只支持音频播放。你的音频不会被静音键和锁屏键静音。适用于音频是主要功能的APP，像网易云这些音乐app，锁屏后依然可以播放。</p>
+<p>需要注意一下，选择支持在静音键切到静音状态以及锁屏键切到锁屏状态下仍然可以播放音频 Category 时，必须在应用中开启支持后台音频功能，详见 <a class="link" href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW22"  target="_blank" rel="noopener"
+    >UIBackgroundModes</a>。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryRecord，只支持音频录制。不支持播放。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryPlayAndRecord，支持音频播放和录制。音频的输入和输出不需要同步进行，也可以同步进行。需要音频通话类应用，可以使用这个 Category。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryAudioProcessing，只支持本地音频编解码处理。不支持播放和录制。</p>
+</li>
+<li>
+<p>AVAudioSessionCategoryMultiRoute，支持音频播放和录制。允许多条音频流的同步输入和输出。（比如USB连接外部扬声器输出音频，蓝牙耳机同时播放另一路音频这种特殊需求）</p>
+</li>
+</ul>
+<p>我们也可以通过AVAudioSession的属性来读取当前设备支持的Category
+```
+@property(readonly) NSArray&lt;NSString *&gt; *availableCategories;</p>
+<pre><code>```
+</code></pre>
+<p>这样可以保证设备兼容性</p>
+<p>设置Category的代码实例如下：</p>
+<pre><code>```
+NSError *setCategoryError = nil;
+BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient 	error:&amp;setCategoryError];
+if (!success) { 
+	//这里可以读取setCategoryError.localizedDescription查看错误原因
+}
+
+```
+</code></pre>
+<h3 id="3avaudiosession-modeoptions">3、AVAudioSession Mode&amp;&amp;Options
+</h3><p>刚刚介绍的Category定义了七种主场景，实际开发需求中有时候需要对Category进行微调整，我们发现这个接口还有两个参数Mode和Options。</p>
+<pre><code>```
+/* set session category and mode with options */
+- (BOOL)setCategory:(NSString *)category 
+  mode:(NSString *)mode 
+  options:(AVAudioSessionCategoryOptions)options 
+  error:(NSError **)outError 
+  API_AVAILABLE(ios(10.0), watchos(3.0), tvos(10.0));
+   
+```
+</code></pre>
+<h4 id="avaudiosession-mode">AVAudioSession Mode
+</h4><p>我们通过读取下面这条属性获取当前设备支持的Mode</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@property(readonly) NSArray&lt;NSString *&gt; *availableModes;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>iOS下有其中mode 来定制我们的Category行为：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">模式</th>
+          <th style="text-align: left">兼容的Category</th>
+          <th style="text-align: left">场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeDefault</td>
+          <td style="text-align: left">All</td>
+          <td style="text-align: left">默认模式</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeVoiceChat</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord</td>
+          <td style="text-align: left">VoIP</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeGameChat</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord</td>
+          <td style="text-align: left">游戏录制，GKVoiceChat自动设置</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeVideoRecording</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord</td>
+          <td style="text-align: left">录制视频</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeMoviePlayback</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayback</td>
+          <td style="text-align: left">视频播放</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeMeasurement</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayback</td>
+          <td style="text-align: left">最小系统</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionModeVideoChat</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord</td>
+          <td style="text-align: left">视频通话</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>下面逐一介绍下每个Mode</p>
+<ul>
+<li>
+<p>AVAudioSessionModeDefault，默认模式,与所有的 Category 兼容</p>
+</li>
+<li>
+<p>AVAudioSessionModeVoiceChat，适用于VoIP 类型的应用。只能是 AVAudioSessionCategoryPlayAndRecord Category下。在这个模式系统会自动配置AVAudioSessionCategoryOptionAllowBluetooth 这个选项。系统会自动选择最佳的内置麦克风组合支持语音聊天。</p>
+</li>
+<li>
+<p>AVAudioSessionModeVideoChat，用于视频聊天类型应用，只能是 AVAudioSessionCategoryPlayAndRecord Category下。适在这个模式系统会自动配置 AVAudioSessionCategoryOptionAllowBluetooth 和 AVAudioSessionCategoryOptionDefaultToSpeaker 选项。系统会自动选择最佳的内置麦克风组合支持视频聊天。</p>
+</li>
+<li>
+<p>AVAudioSessionModeGameChat，适用于游戏类应用。使用 GKVoiceChat 对象的应用会自动设置这个模式和 AVAudioSessionCategoryPlayAndRecord Category。实际参数和AVAudioSessionModeVideoChat一致</p>
+</li>
+<li>
+<p>AVAudioSessionModeVideoRecording，适用于使用摄像头采集视频的应用。只能是 AVAudioSessionCategoryPlayAndRecord 和 AVAudioSessionCategoryRecord 这两个 Category下。这个模式搭配 AVCaptureSession API 结合来用可以更好地控制音视频的输入输出路径。(例如，设置 automaticallyConfiguresApplicationAudioSession 属性，系统会自动选择最佳输出路径。</p>
+</li>
+<li>
+<p>AVAudioSessionModeMeasurement，最小化系统。只用于 AVAudioSessionCategoryPlayAndRecord、AVAudioSessionCategoryRecord、AVAudioSessionCategoryPlayback 这几种 Category。</p>
+</li>
+<li>
+<p>AVAudioSessionModeMoviePlayback，适用于播放视频的应用。只用于 AVAudioSessionCategoryPlayback 这个Category。</p>
+</li>
+</ul>
+<h4 id="avaudiosession-options">AVAudioSession Options
+</h4><p>我们还可以使用options去微调Category行为，如下表</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Option</th>
+          <th style="text-align: left">Option功能说明</th>
+          <th style="text-align: left">兼容的 Category</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryOptionMixWithOthers</td>
+          <td style="text-align: left">支持和其他APP音频 mix</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryOptionDuckOthers</td>
+          <td style="text-align: left">系统智能调低其他APP音频音量</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryOptionAllowBluetooth</td>
+          <td style="text-align: left">支持蓝牙音频输入</td>
+          <td style="text-align: left">AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayAndRecord</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AVAudioSessionCategoryOptionDefaultToSpeaker</td>
+          <td style="text-align: left">设置默认输出音频到扬声器</td>
+          <td style="text-align: left">AVAudioSessionCategoryPlayAndRecord</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="调优我们的category">调优我们的Category
+</h4><p>通过Category和合适的Mode和Options的搭配我们可以调优出我们的效果，下面举两个应用场景:</p>
+<p>用过高德地图的都知道，在后台播放QQ音乐的时候，如果导航语音出来，QQ音乐不会停止，而是被智能压低和混音，等导航语音播报完后，QQ音乐正常播放，这里我们需要后台播放音乐，所以Category使用AVAudioSessionCategoryPlayback，需要混音和智能压低其他APP音量，所以Options选用 AVAudioSessionCategoryOptionMixWithOthers和AVAudioSessionCategoryOptionDuckOthers</p>
+<p>代码示例如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> BOOL isSuccess = [[AVAudioSession sharedInstance] setCategory:
+</span></span><span class="line"><span class="cl"> AVAudioSessionCategoryPlayback withOptions:
+</span></span><span class="line"><span class="cl"> AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionDuckOthers
+</span></span><span class="line"><span class="cl">  error:&amp;setCategoryError];
+</span></span><span class="line"><span class="cl">  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>又或者我希望AVAudioSessionCategoryPlayAndRecord这个Category默认的音频由扬声器播放，那么可以调用这个接口去调整Category</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- (BOOL)setCategory:(NSString *)category 
+</span></span><span class="line"><span class="cl"> 	withOptions:(AVAudioSessionCategoryOptions)options 
+</span></span><span class="line"><span class="cl"> 	error:(NSError **)outError
+</span></span><span class="line"><span class="cl"> 	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过选择合适和Category，mode和options，就可以调优音频的输入输出，来满足日常开发需求（需要注意的是Category，mode，option是搭配使用的，而不是简单组合，也就是说某种Category支持某些mode和option，从上面的表中也可以看出这一点）</p>
+<h3 id="4-音频中断处理">4. 音频中断处理
+</h3><p>其他APP或者电话会中断我们的APP音频，所以相应的我们要做出处理。
+我们可以通过监听AVAudioSessionInterruptionNotification这个key获取音频中断事件</p>
+<p>回调回来Userinfo有键值：</p>
+<ul>
+<li>AVAudioSessionInterruptionTypeKey：
+AVAudioSessionInterruptionTypeBegan:  表示中断开始
+AVAudioSessionInterruptionTypeEnded:  表示中断结束</li>
+</ul>
+<p>中断开始：我们需要做的是保存好播放状态，上下文，更新用户界面等
+中断结束：我们要做的是恢复好状态和上下文，更新用户界面，根据需求准备好之后选择是否激活我们session。</p>
+<p>选择不同的音频播放技术，处理中断方式也有差别，具体如下:</p>
+<ul>
+<li>
+<p>System Sound Services：使用 System Sound Services 播发音频，系统会自动处理，不受APP控制，当中断发生时，音频播放会静音，当中断结束后，音频播放会恢复。</p>
+</li>
+<li>
+<p>AV Foundation framework：AVAudioPlayer 类和 AVAudioRecorder 类提供了中断开始和结束的 Delegate 回调方法来处理中断。中断发生，系统会自动停止播放，需要做的是记录播放时间等状态，更新用户界面，等中断结束后，再次调用播放方法，系统会自动激活session。</p>
+</li>
+<li>
+<p>Audio Queue Services, I/O audio unit：使用aduio unit这些技术需要处理中断，需要做的是记录播放或者录制的位置，中断结束后自己恢复audio session。</p>
+</li>
+<li>
+<p>OpenAL：使用 OpenAL 播放时，同样需要自己监听中断。管理 OpenAL上下文，用户中断结束后恢复audio session。</p>
+</li>
+</ul>
+<p>需要注意的是：1. 有中断开始事件，不一定对应有中断结束事件，所以需要在用户进入前台，点击UI操作的时候，需要保存好播放状态和对Audio Session管理，以便不影响APP的音频功能。2.音频资源竞争上，一定是电话优先。3. AVAudioSession同样可以监听外设音频状态，比如耳机拔入拔出。这里不做累述</p>
+<h3 id="5-avaudiosession总结">5. AVAudioSession总结
+</h3><p>AVAudioSession的作用就是管理音频这一唯一硬件资源的分配，通过调优合适的AVAudioSession来适配我们的APP对于音频的功能需求。切换音频场景时候，需要相应的切换AVAudioSession。</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">Ios</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2020/06/ios-js-regular/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常用正则表达式大全--如：数字，字符等</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/ios-dynamic-color/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS 深浅模式 颜色 和 图片</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2018/05/ios-iphone-device/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iPhone不同设备屏幕尺寸和分辨率</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/12/ios-spritekit-scenekit/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS SpriteKit/SceneKit/Metal浅析</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/05/ios-multilanguage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS多语言，支持app内部设置</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

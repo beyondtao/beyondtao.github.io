@@ -1,23 +1,106 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/categories/docker/</link>
-    <description>Recent content in docker on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 14:37:55 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>docker网络命令与基本查看命令</title>
-      <link>https://blog.qoabc.com/2019/07/docker/</link>
-      <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2019/07/docker/</guid>
-      <description>&lt;h2 id=&#34;docker网络命令&#34;&gt;docker网络命令&lt;/h2&gt;
-&lt;h4 id=&#34;查看网络命令帮助&#34;&gt;查看网络命令帮助&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;docker network help
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Docker on Scott Tao</title>
+        <link>https://blog.iostao.com/categories/docker/</link>
+        <description>Recent content in Docker on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 19 Jul 2019 14:37:55 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/categories/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>docker网络命令与基本查看命令</title>
+        <link>https://blog.iostao.com/2019/07/docker-net-shell/</link>
+        <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2019/07/docker-net-shell/</guid>
+        <description>&lt;h2 id=&#34;docker网络命令&#34;&gt;docker网络命令
+&lt;/h2&gt;&lt;h4 id=&#34;查看网络命令帮助&#34;&gt;查看网络命令帮助
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;docker network help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&amp;ndash;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;各种网络命令Command&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&amp;ndash;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;connect&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Connect a container to a network&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;将一个容器连接到一个网络&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;create&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Create a network&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;创建一个网络&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;disconnect&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Disconnect a container from a network&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从网络断开一个容器&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;inspect&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Display detailed information on one or more networks&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在一个或多个网络上显示详细信息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ls&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;List networks&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;网络列表&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;prune&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Remove all unused networks&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除所有未使用的网络&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;rm&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Remove one or more networks&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除一个或多个网络&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;docker查看命令&#34;&gt;docker查看命令
+&lt;/h2&gt;&lt;p&gt;###查看容器详细信息
+docker inspect [容器id]&lt;/p&gt;
+&lt;h3 id=&#34;查看容器端口信息&#34;&gt;查看容器端口信息
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;docker port [容器id]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;docker网络模式&#34;&gt;docker网络模式
+&lt;/h2&gt;&lt;p&gt;从1.7.0版本开始，Docker正式把网络跟存储这两个部分的功能实现都以插件化的形式剥离出来，允许用户通过指令来选择不同的后端实现。这也就是Docker希望构建围绕着容器的强大生态系统的一些积极尝试。剥离出来的独立网络项目叫做&lt;code&gt;libnetwork&lt;/code&gt;, libnetwork中的网络模型（Container Networking Model, CNM）十分简洁，可以让上层的大量应用容易最大程度上不去关心底层实现。&lt;/p&gt;
+&lt;h3 id=&#34;docker的常用的网络模式&#34;&gt;docker的常用的网络模式
+&lt;/h3&gt;&lt;p&gt;###bridge模式
+简单来说：就是穿马甲，打着宿主机的旗号，做自己的事情。Docker的&lt;b&gt;默认模式&lt;/b&gt;，它会在docker容器启动时候，自动配置好自己的网络信息，同一宿主机的所有容器都在一个网络下，彼此间可以通信。类似于我们vmware虚拟机的桥接模式。利用宿主机的网卡进行通信，因为涉及到网络转换，所以会造成资源消耗，网络效率会低。&lt;/p&gt;
+&lt;p&gt;端口映射&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;宿主机 公网ip:198.x.x.x   ---&amp;gt;  容器ip: 172.17.0.x
+
+docker network create --driver [网络类型][网络名称]
+#参数
+create 创建一个网络
+--driver 指定网络类型
+
+#命令演示
+docker network create --driver bridge bridge-test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;b&gt;host模式：&lt;/b&gt;简单来说，就是鸠占鹊巢，用着宿主机的东西，干自己的事情。容器使用宿主机的ip地址进行通信。特点：容器和宿主机共享网络&lt;/p&gt;
+&lt;p&gt;容器使用宿主机的ip地址进行对外提供服务，本身没有ip地址。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;container模式：&lt;/b&gt;新创建的容器间使用，使用已创建的容器网络，类似一个局域网。特点：容器和容器共享网络&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;none模式：&lt;/b&gt;这种模式最纯粹，不会帮你做任何网络配置，可以最大限度的定制化。不提供网络服务，容器启动后无网络链接。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;overlay模式：&lt;/b&gt;容器彼此不在同一个网络，而且能互相通信。&lt;/p&gt;
+&lt;h2 id=&#34;自定义网段与网关&#34;&gt;自定义网段与网关
+&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;#自定义网段与网关
+#查看关羽网段和网关的相关命令
+docker network create --help
+
+--gateway strings 			IPv4 or IPv6 Gateway for the master subnet 主子网的IPv4或IPv6网关
+--subnet strings				Subnet in CIDR format that represents a network segment 表示网络段的CIDR格式的子网
+#查看刚刚创建的网络信息
+docker network inspect bridge-test
+
+docker network create --driver bridge --gateway 172.99.0.1 --subnet 172.99.0.0/16 bridge-test&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

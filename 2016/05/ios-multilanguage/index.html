@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。\n所以今天闲来没事，写一写总结，供大家参考。\n">
+<meta name="keywords" content="LocalizedString, iOS"><title>iOS多语言，支持app内部设置</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2016/05/ios-multilanguage/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="iOS多语言，支持app内部设置">
+<meta property='og:description' content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。\n所以今天闲来没事，写一写总结，供大家参考。\n">
+<meta property='og:url' content='https://blog.iostao.com/2016/05/ios-multilanguage/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ios' /><meta property='article:published_time' content='2016-05-25T17:26:36&#43;00:00'/><meta property='article:modified_time' content='2016-05-25T17:26:36&#43;00:00'/>
+<meta name="twitter:title" content="iOS多语言，支持app内部设置">
+<meta name="twitter:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。\n所以今天闲来没事，写一写总结，供大家参考。\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ios/" >
+                Ios
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2016/05/ios-multilanguage/">iOS多语言，支持app内部设置</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 25, 2016</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><code>版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶</code>
+刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。</p>
+<p>所以今天闲来没事，写一写总结，供大家参考。</p>
+<p>当然做的时候，也会百度搜索，所以项目中可能会看到网上一些比较熟悉的东西。</p>
+<p>大家做这一步，相信项目工程是有的了吧（因为本人做独立开发，所以一般新功能几乎都是在项目中做的，很少有写demo，就不考虑demo的情况了）</p>
+<p>在项目文件的Supporting Files中的InfoPlist.strings中，右键(或command + N)&ndash;&gt;新建一个string文件。</p>
+<p>（如果没有这个文件，在xcode6中创建，好像没有看到，可以自己创建一个文件，名字可以随便取，后面会给一个方法，获取这个文件的。）
+如图1-1所以<img src="/2016/05/ios-multilanguage/multi-language-01.png"
+	width="718"
+	height="406"
+	srcset="/2016/05/ios-multilanguage/multi-language-01_hu5726623220645206883.png 480w, /2016/05/ios-multilanguage/multi-language-01_hu8476703576986133914.png 1024w"
+	loading="lazy"
+	
+		alt="图1-1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="424px"
+	
+></p>
+<p>创建完文件之后，点击项目—&gt;选择Project—&gt;选择Info—&gt;点击“+”号。（画线隐藏）
+<img src="/2016/05/ios-multilanguage/multi-language-02.png"
+	width="1101"
+	height="468"
+	srcset="/2016/05/ios-multilanguage/multi-language-02_hu15250861096468529299.png 480w, /2016/05/ios-multilanguage/multi-language-02_hu17081962382959230066.png 1024w"
+	loading="lazy"
+	
+		alt="图1-2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="235"
+		data-flex-basis="564px"
+	
+></p>
+<p>在右下方有个Language的选项，默认进来是只有English的，点击+号之后可以看到各种语言选项</p>
+<p><img src="/2016/05/ios-multilanguage/multi-language-03.png"
+	width="212"
+	height="201"
+	srcset="/2016/05/ios-multilanguage/multi-language-03_hu12411656954130242734.png 480w, /2016/05/ios-multilanguage/multi-language-03_hu5433977133202965385.png 1024w"
+	loading="lazy"
+	
+		alt="图1-3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="253px"
+	
+></p>
+<p>在这里选择Chinese(Simplified)。下面会出现一个选项，选择InfoPlist.string文件，那个是语言设置的。（如果是自定义的文件，就选择自定义的那个）</p>
+<p>//&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<p>到这里，基本配置就完成了。然后后面就是设置需要的字符，以及调用方法了</p>
+<p><img src="/2016/05/ios-multilanguage/multi-language-04.png"
+	width="319"
+	height="116"
+	srcset="/2016/05/ios-multilanguage/multi-language-04_hu16232824154485133015.png 480w, /2016/05/ios-multilanguage/multi-language-04_hu12324246766778663375.png 1024w"
+	loading="lazy"
+	
+		alt="图1-4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="275"
+		data-flex-basis="660px"
+	
+>
+<img src="/2016/05/ios-multilanguage/multi-language-05.png"
+	width="264"
+	height="113"
+	srcset="/2016/05/ios-multilanguage/multi-language-05_hu11086783311722949968.png 480w, /2016/05/ios-multilanguage/multi-language-05_hu14099599538857110012.png 1024w"
+	loading="lazy"
+	
+		alt="图1-5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="233"
+		data-flex-basis="560px"
+	
+></p>
+<p>在相应的string文件中，写入需要的字符。前面相当于key。后面是value。</p>
+<p>CFBundleDisplayName是app的名字，技术不够，暂时不知道如何手动切换语言，改变桌面的名字，这一步，只是根据系统语言来的。</p>
+<p>如果默认根据系统语言更改语言，那么调用的时候只需要NSLocalizedString(&lt;#key#&gt;, &lt;#comment#&gt;)用这一句就可以了。其他的不需要做处理。</p>
+<p>如果是想自定义的话，那么需要写一个类：</p>
+<p>//.h头文件：
+#import &lt;Foundation/Foundation.h&gt;</p>
+<p>@interface InternationalController : NSObject</p>
+<ul>
+<li>(NSBundle *)bundle;   //获取当前资源文件</li>
+<li>(void)initUserLanguage;   //初始化语言文件</li>
+<li>(NSString *)userLanguage; //获取应用当前语言</li>
+<li>(void)setUserLanguage:(NSString *)language;   //设置当前语言</li>
+</ul>
+<p>@end</p>
+<p>//.m类体文件</p>
+<p>//
+//  InternationalController.m
+//  mworkingHaier
+//
+//  Created by LaoTao on 14-10-20.
+//  Copyright (c) 2014年 CaiGaoBaDou. All rights reserved.
+//</p>
+<p>#import &ldquo;InternationalController.h&rdquo;
+#import &lt;UIKit/UIKit.h&gt;</p>
+<p>@implementation InternationalController</p>
+<p>//创建静态变量bundle，以及获取方法bundle（此处不要使用getBundle).
+static NSBundle *bundle = nil;</p>
+<ul>
+<li>(NSBundle *)bundle {
+return bundle;
+}</li>
+</ul>
+<p>//初始化方法:</p>
+<ul>
+<li>
+<p>(void)initUserLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *string = [def valueForKey:kLanguage];</p>
+<p>if (string.length == 0) {
+//获取系统当前语言版本（中文zh-Hans,英文en)
+NSArray *languages = [def objectForKey:@&ldquo;AppleLanguages&rdquo;];
+NSString *current =[languages objectAtIndex:0];
+string = current;
+[def setValue:current forKey:kLanguage];
+[def synchronize];  //持久化，不加的话不会保存
+}</p>
+<p>//获取文件路径
+NSString *path = [[NSBundle mainBundle] pathForResource:string ofType:@&ldquo;lproj&rdquo;];
+//    NSLog(@&quot;%@&quot;,path);
+bundle = [NSBundle bundleWithPath:path];    //生成bundle
+}</p>
+</li>
+</ul>
+<p>//获得当前语言的方法</p>
+<ul>
+<li>(NSString *)userLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *language = [def valueForKey:kLanguage];
+return language;
+}</li>
+</ul>
+<p>//设置语言</p>
+<ul>
+<li>
+<p>(void)setUserLanguage:(NSString *)language {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];</p>
+<p>//1.第一步改变bundle的值
+NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@&ldquo;lproj&rdquo;];
+bundle = [NSBundle bundleWithPath:path];</p>
+<p>//2.持久化
+[def setValue:language forKey:kLanguage];
+[def synchronize];
+}</p>
+</li>
+</ul>
+<p>@end</p>
+<p>把&quot;InternationalController.h&quot;这个在.pch文件中引用，这样全局就都可以调用了</p>
+<p>在AppDelegate.m的didFinishLaunchingWithOptions方法中，加一句：</p>
+<p>[InternationalController initUserLanguage]; //初始化应用语言</p>
+<p>然后设置个全局的宏变量，系统的是NSLocalizedString.这里就设置了LTlocalizedString（LT是老陶的首字母，beyond521t这个t同理，嘿嘿）</p>
+<p><img src="/2016/05/ios-multilanguage/multi-language-06.png"
+	width="831"
+	height="75"
+	srcset="/2016/05/ios-multilanguage/multi-language-06_hu15615061929216511312.png 480w, /2016/05/ios-multilanguage/multi-language-06_hu464466193721725384.png 1024w"
+	loading="lazy"
+	
+		alt="图1-6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1108"
+		data-flex-basis="2659px"
+	
+></p>
+<p>self.title = LTLocalizedString(@&ldquo;TitleName&rdquo;, nil);</p>
+<p>如此就可以使用了。切换语言，请看头文件，直接方法名 + 方法，以及语言就OK了。</p>
+<p>注：英文在iOS中为&quot;en&quot;,简体中文&quot;zh-Hans&quot;.</p>
+<p>切换语言后：处理方法是，再次跳转到根视图即可。<a class="link" href="http://blog.csdn.net/beyond521t/article/details/40537679"  target="_blank" rel="noopener"
+    >（更多处理方式，请看本人另一篇日志，根视图处理）</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">Ios</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2020/06/ios-js-regular/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常用正则表达式大全--如：数字，字符等</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/ios-dynamic-color/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS 深浅模式 颜色 和 图片</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2018/07/ios-avaudiosession/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS-AVAudio</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2018/05/ios-iphone-device/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iPhone不同设备屏幕尺寸和分辨率</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/12/ios-spritekit-scenekit/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS SpriteKit/SceneKit/Metal浅析</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

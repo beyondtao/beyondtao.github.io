@@ -1,34 +1,137 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>html on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/categories/html/</link>
-    <description>Recent content in html on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 11 Mar 2017 10:35:56 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HTML样式、链接、表格</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;html样式链接表格&#34;&gt;HTML样式、链接、表格&lt;/h2&gt;
-&lt;h3 id=&#34;一样式&#34;&gt;一、样式&lt;/h3&gt;
-&lt;h4 id=&#34;1标签&#34;&gt;1、标签&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;: 样式定义
+    <channel>
+        <title>Html on Scott Tao</title>
+        <link>https://blog.iostao.com/categories/html/</link>
+        <description>Recent content in Html on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 11 Mar 2017 10:35:56 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/categories/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>HTML样式、链接、表格</title>
+        <link>https://blog.iostao.com/2017/03/html-style-link-table/</link>
+        <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-style-link-table/</guid>
+        <description>&lt;h2 id=&#34;html样式链接表格&#34;&gt;HTML样式、链接、表格
+&lt;/h2&gt;&lt;h3 id=&#34;一样式&#34;&gt;一、样式
+&lt;/h3&gt;&lt;h4 id=&#34;1标签&#34;&gt;1、标签
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;: 样式定义
 &amp;lt;link&amp;gt;: 资源引用
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>JavaScript 基础教程</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Thu, 09 Mar 2017 15:07:25 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;41-javascript基础教程&#34;&gt;4.1 JavaScript基础教程&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2属性&#34;&gt;2、属性
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;`rel=&amp;quot;stylesheet&amp;quot;:外部样式表 (stylesheet只是其中之一)
+type=&amp;quot;text/css&amp;quot;:引入文档的类型
+margin-left: 边距`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;1、三种样式表插入方法&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;外部样式表:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href= &amp;quot;mystyle.css&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内部样式表:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;style type= &amp;quot;text/css&amp;quot;&amp;gt; body {background-color: red} p {margin-left: 20px} &amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内联样式表:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;p style= &amp;quot;color: red&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;二html-链接&#34;&gt;二、HTML 链接
+&lt;/h3&gt;&lt;h4 id=&#34;1链接数据&#34;&gt;1、链接数据
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;文本链接&lt;/li&gt;
+&lt;li&gt;图片链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2属性-1&#34;&gt;2、属性
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;href属性：指向另一个文档的链接&lt;/li&gt;
+&lt;li&gt;name属性：创建文档内的链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、img标签属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alt：替换文本属性&lt;/li&gt;
+&lt;li&gt;width：宽&lt;/li&gt;
+&lt;li&gt;height：高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三html-表格&#34;&gt;三、HTML 表格
+&lt;/h3&gt;&lt;h4 id=&#34;1&#34;&gt;1、
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;	定义表格
+&amp;lt;caption&amp;gt;	定义表格标题
+&amp;lt;th&amp;gt;		定义表格的表头
+&amp;lt;tr&amp;gt;		定义表格的行
+&amp;lt;td&amp;gt;		定义表格的单元
+&amp;lt;thead&amp;gt;	定义表格的页眉
+&amp;lt;tbody&amp;gt;	定义表格的主体
+&amp;lt;tfoot&amp;gt;	定义表格页脚
+&amp;lt;col&amp;gt;		定义表格的列属性
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;1、没有边框的表格&lt;/li&gt;
+&lt;li&gt;2、表格中的表头&lt;/li&gt;
+&lt;li&gt;3、空单元格&lt;/li&gt;
+&lt;li&gt;4、带有标题的表格&lt;/li&gt;
+&lt;li&gt;5、表格内的标签&lt;/li&gt;
+&lt;li&gt;6、单元格边距&lt;/li&gt;
+&lt;li&gt;7、单元格间距&lt;/li&gt;
+&lt;li&gt;8、表格内的背景颜色和图像&lt;/li&gt;
+&lt;li&gt;9、单元格内容排列&lt;/li&gt;
+&lt;li&gt;10、跨行和跨列单元格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;l04_html5列表块和布局&#34;&gt;L04_HTML5列表、块和布局
+&lt;/h2&gt;&lt;h3 id=&#34;html5列表的使用&#34;&gt;HTML5列表的使用
+&lt;/h3&gt;&lt;h4 id=&#34;1标签-1&#34;&gt;1、标签
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;	有序列表
+&amp;lt;ul&amp;gt;	无序列表
+&amp;lt;li&amp;gt;	列表项
+&amp;lt;dl&amp;gt;	列表
+&amp;lt;dt&amp;gt;	列表项
+&amp;lt;dd&amp;gt;	描述
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;1、无序列表&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用标签：&amp;lt;ul&amp;gt;、&amp;lt;li&amp;gt;
+属性：	disc、circle、square
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、有序列表&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用标签：&amp;lt;ol&amp;gt;、&amp;lt;li&amp;gt;
+属性：	A、a、l、i、start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、嵌套列表&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、自定义列表&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用标签：&amp;lt;dl&amp;gt;、&amp;lt;dt&amp;gt;、&amp;lt;dd&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;html块&#34;&gt;HTML块
+&lt;/h3&gt;&lt;p&gt;1、HTML块元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;快元素在显示时，通常会以新行开始
+如：&amp;lt;h1&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、HTML内联元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;内联元素通常不会以新行开始
+如：&amp;lt;b&amp;gt;、&amp;lt;a&amp;gt;、&amp;lt;img&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、HTML &lt;div&gt;元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;元素也被称为块元素，其主要是组合HTML元素的容器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、HTML &lt;span&gt;元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;元素是内联元素，可作为文本的容器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;html布局&#34;&gt;HTML布局
+&lt;/h3&gt;&lt;h4 id=&#34;1使用div元素布局&#34;&gt;1、使用&lt;div&gt;元素布局
+&lt;/h4&gt;&lt;h4 id=&#34;2使用table元素布局&#34;&gt;2、使用&lt;table&gt;元素布局
+&lt;/h4&gt;</description>
+        </item>
+        <item>
+        <title>JavaScript 基础教程</title>
+        <link>https://blog.iostao.com/2017/03/html-javascript-elements/</link>
+        <pubDate>Thu, 09 Mar 2017 15:07:25 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-javascript-elements/</guid>
+        <description>&lt;h2 id=&#34;41-javascript基础教程&#34;&gt;4.1 JavaScript基础教程
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
@@ -39,17 +142,335 @@
 &lt;li&gt;JavaScript注释&lt;/li&gt;
 &lt;li&gt;JavaScript变量&lt;/li&gt;
 &lt;li&gt;JavaScript数据类型&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>3.7 CSS动画--页面特效</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Tue, 07 Mar 2017 15:06:23 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;37-css动画--页面特效&#34;&gt;3.7 CSS动画&amp;ndash;页面特效&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;411-javascript介绍&#34;&gt;4.1.1 JavaScript介绍
+&lt;/h3&gt;&lt;h4 id=&#34;1javascript介绍&#34;&gt;1、JavaScript介绍
+&lt;/h4&gt;&lt;p&gt;1、JavaScript是互联网上最流行的脚本语言，这门语言可用于web和HTML，更可广泛用于服务器、pc端、移动端。&lt;/p&gt;
+&lt;p&gt;2、JavaScript脚本语言：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript是一种轻量级的编程语言&lt;/li&gt;
+&lt;li&gt;JavaScript是可插入HTML页面的编程代码&lt;/li&gt;
+&lt;li&gt;JavaScript插入HTML页面后，可由所有的浏览器执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2javascript实现&#34;&gt;2、JavaScript实现
+&lt;/h4&gt;&lt;p&gt;1、JavaScript用法：&lt;/p&gt;
+&lt;p&gt;HTML中的脚本必须位于&lt;script&gt;&lt;/script&gt;标签之间&lt;/p&gt;
+&lt;p&gt;脚本可被放置在HTML页面的&lt;body&gt;和&lt;head&gt;部分中&lt;/p&gt;
+&lt;p&gt;2、JavaScript标签：&lt;/p&gt;
+&lt;p&gt;在HTML中插入JavaScript，使用&lt;script&gt;标签&lt;/p&gt;
+&lt;p&gt;在&lt;script&gt;&lt;/script&gt;之间书写代码&lt;/p&gt;
+&lt;p&gt;3、JavaScript使用限制：&lt;/p&gt;
+&lt;p&gt;在HTML中，不限制脚本数量&lt;/p&gt;
+&lt;p&gt;通常会把脚本放置与&lt;head&gt;标签中，以不干扰页面内容&lt;/p&gt;
+&lt;h4 id=&#34;3javascript输出&#34;&gt;3、JavaScript输出
+&lt;/h4&gt;&lt;p&gt;1、JavaScript通常用来操作HTML&lt;/p&gt;
+&lt;p&gt;2、文档输出：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;document.write(&amp;quot;&amp;lt;p&amp;gt;this is my web page!&amp;lt;/p&amp;gt;&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;412-javascript语法和注释&#34;&gt;4.1.2 JavaScript语法和注释
+&lt;/h3&gt;&lt;p&gt;1、JavaScript语句：&lt;/p&gt;
+&lt;p&gt;JavaScript语句向浏览器发出的命令。语句的作用是告诉浏览器该做什么。&lt;/p&gt;
+&lt;p&gt;2、分号：&lt;/p&gt;
+&lt;p&gt;语句之间的分割是分号（;）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注意：分号是可选项，有时候是看不到分号隔开的。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、JavaScript代码：&lt;/p&gt;
+&lt;p&gt;按照编写顺序依次执行&lt;/p&gt;
+&lt;p&gt;4、标识符&lt;/p&gt;
+&lt;p&gt;JavaScript标志符必须以字母、下划线或美元符号开始&lt;/p&gt;
+&lt;p&gt;JavaScript关键字&lt;/p&gt;
+&lt;p&gt;5、JavaScript对大小写敏感&lt;/p&gt;
+&lt;p&gt;6、空格&lt;/p&gt;
+&lt;p&gt;7、代码换行&lt;/p&gt;
+&lt;p&gt;8、保留字&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;***&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;***&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;***&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;***&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;abstract&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;else&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;intanceof&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;super&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;boolean&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;enum&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;int&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;switch&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;break&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;export&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;interface&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;synchronized&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;byte&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;extends&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;let&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;this&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;case&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;false&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;long&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;throw&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;catch&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;final&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;native&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;throws&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;char&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;finally&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;new&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transient&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;class&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;float&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;null&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;true&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;const&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;for&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;package&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;try&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;continue&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;function&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;private&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;typeof&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;debugger&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;goto&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;protected&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;var&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;default&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;if&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;public&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;void&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;delete&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;implements&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;return&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;volatile&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;do&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;import&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;short&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;while&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;double&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;in&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;static&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;with&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;javascript注释&#34;&gt;JavaScript注释
+&lt;/h4&gt;&lt;p&gt;1、单行注释：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、多行注释：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/**/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;413-变量和数据类型&#34;&gt;4.1.3 变量和数据类型
+&lt;/h3&gt;&lt;p&gt;1、变量是用来储存信息的“容器”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例： var x = 10;
+	 var y = 10.1;
+	 var z = &amp;quot;Hello&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、数据类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字符串（String）&lt;/li&gt;
+&lt;li&gt;数字（Number）&lt;/li&gt;
+&lt;li&gt;布尔（Boolean）&lt;/li&gt;
+&lt;li&gt;数组（Array）&lt;/li&gt;
+&lt;li&gt;对象（Object）&lt;/li&gt;
+&lt;li&gt;空（null）&lt;/li&gt;
+&lt;li&gt;未定义&lt;/li&gt;
+&lt;li&gt;可以通过赋值为null的方式清除变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;42-javascript语法详解&#34;&gt;4.2 JavaScript语法详解
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;课程概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript运算符&lt;/li&gt;
+&lt;li&gt;JavaScript条件语句&lt;/li&gt;
+&lt;li&gt;JavaScript循环语句&lt;/li&gt;
+&lt;li&gt;JavaScript跳转语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;421-javascript运算符&#34;&gt;4.2.1 JavaScript运算符
+&lt;/h3&gt;&lt;p&gt;1、算数运算符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+、-、*、/、++、--
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、赋值运算符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=、+=、-=、*=、/=、%=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、字符串操作&lt;/p&gt;
+&lt;p&gt;4、比较运算符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;==、===、!=、!==、&amp;gt;、&amp;lt;、&amp;gt;=、&amp;lt;=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5、逻辑运算符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;&amp;amp;、||、!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;6、条件运算符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例: x&amp;lt; 10? &amp;quot;x比10小&amp;quot; : &amp;quot;x比10大&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;423-if-else&#34;&gt;4.2.3 if(){} else
+&lt;/h3&gt;&lt;h3 id=&#34;424-switch&#34;&gt;4.2.4 switch
+&lt;/h3&gt;&lt;h3 id=&#34;425-循环语句-for循环&#34;&gt;4.2.5 循环语句 for循环
+&lt;/h3&gt;&lt;h3 id=&#34;426-循环语句-while循环&#34;&gt;4.2.6 循环语句 while循环
+&lt;/h3&gt;&lt;h3 id=&#34;427-跳转语句&#34;&gt;4.2.7 跳转语句
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;break&lt;/li&gt;
+&lt;li&gt;continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;43-javascript函数&#34;&gt;4.3 JavaScript函数
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;课程概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;了解函数&lt;/li&gt;
+&lt;li&gt;定义函数&lt;/li&gt;
+&lt;li&gt;函数调用&lt;/li&gt;
+&lt;li&gt;带参数的函数&lt;/li&gt;
+&lt;li&gt;带返回值的函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;431-了解函数&#34;&gt;4.3.1 了解函数
+&lt;/h3&gt;&lt;p&gt;1、函数：&lt;/p&gt;
+&lt;p&gt;函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。&lt;/p&gt;
+&lt;h3 id=&#34;432-定义函数&#34;&gt;4.3.2 定义函数
+&lt;/h3&gt;&lt;p&gt;1、定义函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function 函数名() {
+	函数体； （代码块）
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、注意：&lt;/p&gt;
+&lt;p&gt;JavaScript对大小写十分敏感，所以这里的function必须小写。在函数调用时，也必须按照函数的相同名称来调用函数。&lt;/p&gt;
+&lt;h3 id=&#34;433-函数调用&#34;&gt;4.3.3 函数调用
+&lt;/h3&gt;&lt;p&gt;1、函数调用：&lt;/p&gt;
+&lt;p&gt;函数在定义好之后，不能自动执行，需要进行调用&lt;/p&gt;
+&lt;p&gt;2、调用方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;script&amp;gt;&lt;/code&gt;标签内调用&lt;/li&gt;
+&lt;li&gt;在HTML文件中调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;434-带参数的函数&#34;&gt;4.3.4 带参数的函数
+&lt;/h3&gt;&lt;p&gt;1、函数参数：&lt;/p&gt;
+&lt;p&gt;在函数的调用中，也可以传递值，这些值被称为参数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例： demo(arg1, arg2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、参数的个数可以为任意多，每个参数通过“ , ”隔开&lt;/p&gt;
+&lt;p&gt;3、注意：&lt;/p&gt;
+&lt;p&gt;参数在传递时，其顺序必须一致&lt;/p&gt;
+&lt;p&gt;4、参数意义：&lt;/p&gt;
+&lt;p&gt;通过传递参数的个数以及参数的类型不同完成不同的功能&lt;/p&gt;
+&lt;h3 id=&#34;435-带返回值的函数&#34;&gt;4.3.5 带返回值的函数
+&lt;/h3&gt;&lt;p&gt;1、返回值：&lt;/p&gt;
+&lt;p&gt;有时，我们需要将函数的值返回给调用它的地方&lt;/p&gt;
+&lt;p&gt;通过return语句就可以实现&lt;/p&gt;
+&lt;p&gt;注意：在使用return语句时，函数停止执行，同时返回值&lt;/p&gt;
+&lt;h3 id=&#34;436-局部变量和全局变量&#34;&gt;4.3.6 局部变量和全局变量
+&lt;/h3&gt;&lt;h2 id=&#34;44-javascript异常处理和事件处理&#34;&gt;4.4 JavaScript异常处理和事件处理
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;课程概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;异常捕获&lt;/li&gt;
+&lt;li&gt;事件处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;441-异常捕获&#34;&gt;4.4.1 异常捕获
+&lt;/h3&gt;&lt;p&gt;1、异常：&lt;/p&gt;
+&lt;p&gt;当JavaScript引擎执行JavaScrpit代码时，发生了错误，导致程序停止运行&lt;/p&gt;
+&lt;p&gt;2、异常抛出：&lt;/p&gt;
+&lt;p&gt;当异常产生，并且将这个异常生成一个错误信息&lt;/p&gt;
+&lt;p&gt;3、异常捕获：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;try {
+	发生异常的代码块;
+}catch(err) {
+	错误信息处理；
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、Throw语句：&lt;/p&gt;
+&lt;p&gt;通过throw语句创建一个自定义错误&lt;/p&gt;
+&lt;h3 id=&#34;442-javascript事件&#34;&gt;4.4.2 JavaScript事件
+&lt;/h3&gt;&lt;p&gt;1、什么是事件；&lt;/p&gt;
+&lt;p&gt;事件是可以被JavaScript侦测到的行为&lt;/p&gt;
+&lt;p&gt;2、主要事件：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;事件&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onClick&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;单击事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onMouseOver&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;鼠标经过事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onMouseOut&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;鼠标移出事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onChange&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;文本内容改变事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onSelect&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;文本框选中事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onFocus&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;光标聚集事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onBlur&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;移开光标事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onLoad&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;网页加载事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;onUnload&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;关闭网页事件&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+        </item>
+        <item>
+        <title>3.7 CSS动画--页面特效</title>
+        <link>https://blog.iostao.com/2017/03/html-css-animation/</link>
+        <pubDate>Tue, 07 Mar 2017 15:06:23 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-css-animation/</guid>
+        <description>&lt;h2 id=&#34;37-css动画--页面特效&#34;&gt;3.7 CSS动画&amp;ndash;页面特效
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;课程概要&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
@@ -57,51 +478,559 @@
 &lt;li&gt;过渡&lt;/li&gt;
 &lt;li&gt;动画&lt;/li&gt;
 &lt;li&gt;多列&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>3.4 CSS定位 &#43; 3.5 &#43; 3.6</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Sun, 05 Mar 2017 15:13:57 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;34-css定位&#34;&gt;3.4 CSS定位&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12d3d转换&#34;&gt;1、“2D、3D转换”
+&lt;/h3&gt;&lt;p&gt;1、通过CSS3转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸&lt;/p&gt;
+&lt;p&gt;转换是使元素改变形状、尺寸和位置的一种效果&lt;/p&gt;
+&lt;p&gt;可以使用2D、3D来转换元素&lt;/p&gt;
+&lt;p&gt;2、2D转换方法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;translate()&lt;/li&gt;
+&lt;li&gt;rotate()&lt;/li&gt;
+&lt;li&gt;scale()&lt;/li&gt;
+&lt;li&gt;skew()&lt;/li&gt;
+&lt;li&gt;matrix()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、3D转换方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rotateX()&lt;/li&gt;
+&lt;li&gt;rotateY()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2过渡&#34;&gt;2、过渡
+&lt;/h3&gt;&lt;p&gt;1、通过使用CSS3，可以给元素添加一些效果&lt;/p&gt;
+&lt;p&gt;2、CSS3过渡是元素从一种样式转换成另一种样式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动画效果的CSS&lt;/li&gt;
+&lt;li&gt;动画执行的时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、属性&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transition&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置四个过渡属性&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transition-property&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;过渡的名称&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transition-duration&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;过渡效果花费的时间&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transition-timing-function&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;过渡效果的时间曲线&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;transition-delay&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;过渡效果开始时间&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3动画&#34;&gt;3、动画
+&lt;/h3&gt;&lt;p&gt;1、通过CSS3，也可以进行创建动画&lt;/p&gt;
+&lt;p&gt;2、CSS3的动画需要遵循@keyframes规则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;规定动画的时长&lt;/li&gt;
+&lt;li&gt;规定动画的名称&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4多列&#34;&gt;4、多列
+&lt;/h3&gt;&lt;p&gt;1、在CSS3中，可以创建多列来对文本或者区域进行布局
+2、属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;column-count&lt;/li&gt;
+&lt;li&gt;column-gap&lt;/li&gt;
+&lt;li&gt;column-rule&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5html与css的实例效果&#34;&gt;5、HTML与CSS的实例效果
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>3.4 CSS定位 &#43; 3.5 &#43; 3.6</title>
+        <link>https://blog.iostao.com/2017/03/html-css-position/</link>
+        <pubDate>Sun, 05 Mar 2017 15:13:57 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-css-position/</guid>
+        <description>&lt;h2 id=&#34;34-css定位&#34;&gt;3.4 CSS定位
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;概要&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;CSS定位&lt;/li&gt;
 &lt;li&gt;CSS浮动&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>3.3 CSS盒子模型</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Sat, 04 Mar 2017 15:01:17 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;33-css盒子模型&#34;&gt;3.3 CSS盒子模型&lt;/h2&gt;
-&lt;h2 id=&#34;课程概要&#34;&gt;课程概要&lt;/h2&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;341-css定位&#34;&gt;3.4.1 CSS定位
+&lt;/h3&gt;&lt;h4 id=&#34;1css定位&#34;&gt;1、CSS定位
+&lt;/h4&gt;&lt;p&gt;改变元素在页面上的位置&lt;/p&gt;
+&lt;h4 id=&#34;2css定位机制&#34;&gt;2、CSS定位机制
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;普通流：元素按照其在HTML中的位置顺序决定排布的过程&lt;/li&gt;
+&lt;li&gt;浮动&lt;/li&gt;
+&lt;li&gt;绝对布局&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3css定位属性&#34;&gt;3、CSS定位属性：
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;position&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;把元素放在一个静态的、相对的、绝对的、或固定的位置中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;top&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素向上的偏移量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;left&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素向左的偏移量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;right&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素向右的偏移量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;bottom&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素向下的偏移量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;overflow&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素溢出其区域发生的事情&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;clip&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素显示的形状&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;vertical-align&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素垂直对齐方式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;z-index&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素的堆叠顺序&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1、CSS position属性：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;position属性&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;static&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;relative&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;absolute&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;fixed&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;342-css定位-浮动&#34;&gt;3.4.2 CSS定位-浮动
+&lt;/h3&gt;&lt;p&gt;1、浮动：&lt;/p&gt;
+&lt;p&gt;float属性可用的值：&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;left：元素向左浮动&lt;/li&gt;
+&lt;li&gt;right：元素向右浮动&lt;/li&gt;
+&lt;li&gt;none：元素不浮动&lt;/li&gt;
+&lt;li&gt;inherit：从父级继承浮动属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2、clear属性：&lt;/p&gt;
+&lt;p&gt;去掉浮动属性（包括继承来的属性）&lt;/p&gt;
+&lt;p&gt;clear属性值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;left、right：去掉元素向左、向右浮动&lt;/li&gt;
+&lt;li&gt;both：左右两侧均去掉浮动&lt;/li&gt;
+&lt;li&gt;inherit：从父级继承来clear的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;343-css定位-浮动的应用&#34;&gt;3.4.3 CSS定位-浮动的应用
+&lt;/h3&gt;&lt;h2 id=&#34;35-css选择器&#34;&gt;3.5 CSS选择器
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;元素选择器&lt;/li&gt;
+&lt;li&gt;选择器分组&lt;/li&gt;
+&lt;li&gt;类选择器详解&lt;/li&gt;
+&lt;li&gt;ID选择器详解&lt;/li&gt;
+&lt;li&gt;属性选择器详解&lt;/li&gt;
+&lt;li&gt;后代选择器&lt;/li&gt;
+&lt;li&gt;子元素选择器&lt;/li&gt;
+&lt;li&gt;相邻兄弟选择器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;元素选择器&#34;&gt;元素选择器
+&lt;/h3&gt;&lt;p&gt;1、最常见的选择器就是元素选择器，文档的元素就是最基本的选择器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： h1{]、a{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;选择器分组&#34;&gt;选择器分组
+&lt;/h3&gt;&lt;p&gt;1、例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;h1、h2{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、通配符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;类选择器&#34;&gt;类选择器
+&lt;/h3&gt;&lt;p&gt;1、类选择器允许以一种独立与文档元素的方式来指定样式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： .class {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、结合元素选择器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： a.class{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、多类选择器&lt;/p&gt;
+&lt;h3 id=&#34;id选择器&#34;&gt;ID选择器：
+&lt;/h3&gt;&lt;p&gt;ID选择器类似于类选择器，不过也有一些重要差别&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： #id{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、类选择器和ID选择器区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ID只能在文档中使用一次，而类可以多次使用&lt;/li&gt;
+&lt;li&gt;ID选择器不能结合使用&lt;/li&gt;
+&lt;li&gt;当使用js时候，需要用到id&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;属性选择器&#34;&gt;属性选择器
+&lt;/h3&gt;&lt;p&gt;1、简单属性选择&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： [title]{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、根据具体属性值选择&lt;/p&gt;
+&lt;p&gt;除了选择拥有某些的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： a[href=&amp;quot;http://blog.devtao.com&amp;quot;] {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、属性和属性值必须完全匹配
+4、根据部分属性值选择&lt;/p&gt;
+&lt;h3 id=&#34;后代选择器&#34;&gt;后代选择器
+&lt;/h3&gt;&lt;p&gt;1、后代选择器：&lt;/p&gt;
+&lt;p&gt;后代选择器可以选择作为某元素后代的元素&lt;/p&gt;
+&lt;h3 id=&#34;子元素选择器&#34;&gt;子元素选择器
+&lt;/h3&gt;&lt;p&gt;1、与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： h1&amp;gt;strong {};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;相邻兄弟选择器&#34;&gt;相邻兄弟选择器
+&lt;/h3&gt;&lt;p&gt;可选择紧接在另一个元素后的元素，且二者有相同父元素&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如： h1 + p {};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;361-css常用操作&#34;&gt;3.6.1 CSS常用操作
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;概要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;对齐操作&lt;/li&gt;
+&lt;li&gt;尺寸操作&lt;/li&gt;
+&lt;li&gt;分类操作&lt;/li&gt;
+&lt;li&gt;导航栏&lt;/li&gt;
+&lt;li&gt;图片操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;1对齐操作&#34;&gt;1、对齐操作
+&lt;/h4&gt;&lt;p&gt;1、使用margin属性进行水平对齐
+2、使用position属性进行左右对齐
+3、使用float属性进行左右对齐&lt;/p&gt;
+&lt;h3 id=&#34;362-分类&#34;&gt;3.6.2 分类
+&lt;/h3&gt;&lt;p&gt;1、尺寸操作&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;height&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;line-height&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置行高&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;max-height&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素最大高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;max-width&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素最大宽度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;min-width&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素最小宽度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;min-height&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素最小高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;width&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素宽度&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;2、分类操作&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;clear&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置一个元素的侧面是否允许其他的浮动元素&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cursor&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;规定当指向某元素之上时显示的指针类型&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;display&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置是否及如何显示元素&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;float&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;定义元素在哪个方向浮动&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;position&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;把元素放置到一个静态的、相对的、绝对的、固定的位置&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;visibility&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置元素是否可见或不可见&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;363-导航栏&#34;&gt;3.6.3 导航栏
+&lt;/h3&gt;&lt;p&gt;1、垂直导航栏&lt;/p&gt;
+&lt;p&gt;2、水平导航栏&lt;/p&gt;
+&lt;h3 id=&#34;364-图片操作&#34;&gt;3.6.4 图片操作
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>3.3 CSS盒子模型</title>
+        <link>https://blog.iostao.com/2017/03/html-css-box/</link>
+        <pubDate>Sat, 04 Mar 2017 15:01:17 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-css-box/</guid>
+        <description>&lt;h2 id=&#34;33-css盒子模型&#34;&gt;3.3 CSS盒子模型
+&lt;/h2&gt;&lt;h2 id=&#34;课程概要&#34;&gt;课程概要
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;CSS盒子模型概述&lt;/li&gt;
 &lt;li&gt;CSS内边距&lt;/li&gt;
 &lt;li&gt;CSS边框&lt;/li&gt;
 &lt;li&gt;CSS外边距&lt;/li&gt;
 &lt;li&gt;CSS外边距合并&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>3.2 CSS基础样式讲解</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Fri, 03 Mar 2017 15:13:57 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;32-css基础样式讲解&#34;&gt;3.2 CSS基础样式讲解&lt;/h2&gt;
-&lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;331-css盒子模型-概述&#34;&gt;3.3.1 CSS盒子模型-概述
+&lt;/h3&gt;&lt;p&gt;1、盒子模型的内容范围包括&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;margin（外边距）、border（边框）、padding（内边距）、content部分组成
+
+height、width
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;332-css盒子模型-内边距&#34;&gt;3.3.2 CSS盒子模型-内边距
+&lt;/h3&gt;&lt;p&gt;1、内边距&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;内边距在content外，边框外
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、内边距属性&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;padding&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置所有边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;padding-bottom&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置底边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;padding-left&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置左边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;padding-right&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置右边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;padding-top&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置上边距&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;333-css盒子模型-边框&#34;&gt;3.3.3 CSS盒子模型-边框
+&lt;/h3&gt;&lt;p&gt;1、CSS边框：&lt;/p&gt;
+&lt;p&gt;我们可以创建出效果出色的边框，并且可以应用于任何元素&lt;/p&gt;
+&lt;p&gt;2、边框的样式：&lt;/p&gt;
+&lt;p&gt;border-style: 定义了10个不同的非继承样式，包括none&lt;/p&gt;
+&lt;p&gt;3、边框的单边样式：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;style&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-top-style&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-left-style&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-right-style&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-bottom-style&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;4、边框的宽度：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;border-width
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5、边框单边的宽度：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;style&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-top-width&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-left-width&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-right-width&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-bottom-width&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;6、边框的颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;border-color
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;7、边框单边的颜色&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;style&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-top-color&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-left-color&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-right-color&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-bottom-color&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;8、CSS3边框&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;CSS3边框&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-radius&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;圆角边框&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;box-shadow&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;边框阴影&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;border-image&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;边框图片&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;box-shadow 背景阴影右移移动像素、下移移动像素、背景阴影透明度、颜色
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;334-css盒子模型-外边距&#34;&gt;3.3.4 CSS盒子模型-外边距
+&lt;/h3&gt;&lt;p&gt;1、外边距：&lt;/p&gt;
+&lt;p&gt;围绕在内容边框的区域就是外边距，外边距默认为透明区域&lt;/p&gt;
+&lt;p&gt;外边距接受任何长度单位、百分数值&lt;/p&gt;
+&lt;p&gt;2、外边距常用属性&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;margin&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置所有边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;margin-bottom&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置底边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;margin-left&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置左边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;margin-right&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置右边距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;margin-top&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置上边距&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;335-css盒子模型-外边距合并&#34;&gt;3.3.5 CSS盒子模型-外边距合并
+&lt;/h3&gt;&lt;p&gt;1、外边距合并：&lt;/p&gt;
+&lt;p&gt;外边距合并就是一个叠加的概念&lt;/p&gt;
+&lt;h3 id=&#34;336-css盒子模型-盒子模型应用&#34;&gt;3.3.6 CSS盒子模型-盒子模型应用
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.jekexueyuan.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;极客学院官网效果&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>3.2 CSS基础样式讲解</title>
+        <link>https://blog.iostao.com/2017/03/html-css-style/</link>
+        <pubDate>Fri, 03 Mar 2017 15:13:57 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-css-style/</guid>
+        <description>&lt;h2 id=&#34;32-css基础样式讲解&#34;&gt;3.2 CSS基础样式讲解
+&lt;/h2&gt;&lt;h3 id=&#34;概要&#34;&gt;概要
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;CSS介绍&lt;/li&gt;
 &lt;li&gt;CSS基础语法&lt;/li&gt;
 &lt;li&gt;CSS高级语法&lt;/li&gt;
@@ -109,19 +1038,73 @@
 &lt;li&gt;CSSid选择器&lt;/li&gt;
 &lt;li&gt;CSS类选择器&lt;/li&gt;
 &lt;li&gt;CSS属性选择器&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>3.1 CSS3基础</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Thu, 02 Mar 2017 14:08:54 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;31-css3基础&#34;&gt;3.1 CSS3基础&lt;/h2&gt;
-&lt;h3 id=&#34;一css入门基础&#34;&gt;一、CSS入门基础&lt;/h3&gt;
-&lt;h4 id=&#34;1背景&#34;&gt;1、背景&lt;/h4&gt;
-&lt;p&gt;CSS允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果&lt;/p&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;321-css基础-介绍及语法&#34;&gt;3.2.1 CSS基础-介绍及语法
+&lt;/h3&gt;&lt;p&gt;CSS概述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS指层叠样式表&lt;/li&gt;
+&lt;li&gt;CSS样式表极大地提高了工作效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;1css基础-介绍及语法&#34;&gt;1、CSS基础-介绍及语法
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;1、基础语法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;selector {
+	property: value
+}
+
+例： h1 {color:red; font-size:14px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;属性大于1个之后，属性之间用分号隔开&lt;/p&gt;
+&lt;p&gt;如果值大于1个单词，则需要加上引号：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p {font-family: &amp;quot;sans serif&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;2、CSS高级语法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1、选择器分组&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;h1, h2, h3, h4, h5, h6 {color:red};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、继承：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;body {
+	color:green;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;3css基础-派生选择器&#34;&gt;3、CSS基础-派生选择器
+&lt;/h4&gt;&lt;p&gt;1、派生选择器：&lt;/p&gt;
+&lt;p&gt;通过依据元素在其位置的上下文关系来定义样式&lt;/p&gt;
+&lt;h4 id=&#34;3css基础-id选择器&#34;&gt;3、CSS基础-id选择器
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1、id选择器：&lt;/p&gt;
+&lt;p&gt;id选择器可以为标有id的HTML元素制定特定的样式&lt;/p&gt;
+&lt;p&gt;id选择器以 &amp;ldquo;#&amp;rdquo; 来定义&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2、id选择器和派生选择器&lt;/p&gt;
+&lt;p&gt;目前比较常用的方式是id选择器常常用用建立派生选择器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4类选择器&#34;&gt;4、类选择器
+&lt;/h4&gt;&lt;p&gt;1、类选择器&lt;/p&gt;
+&lt;p&gt;类选择器以一个点显示&lt;/p&gt;
+&lt;p&gt;2、clas也可以用作派生选择器&lt;/p&gt;
+&lt;h4 id=&#34;5属性选择器&#34;&gt;5、属性选择器
+&lt;/h4&gt;&lt;p&gt;1、属性选择器：&lt;/p&gt;
+&lt;p&gt;对带有指定属性的HTML元素设置样式&lt;/p&gt;
+&lt;p&gt;2、属性和值选择器&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>3.1 CSS3基础</title>
+        <link>https://blog.iostao.com/2017/03/html-css-elements/</link>
+        <pubDate>Thu, 02 Mar 2017 14:08:54 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-css-elements/</guid>
+        <description>&lt;h2 id=&#34;31-css3基础&#34;&gt;3.1 CSS3基础
+&lt;/h2&gt;&lt;h3 id=&#34;一css入门基础&#34;&gt;一、CSS入门基础
+&lt;/h3&gt;&lt;h4 id=&#34;1背景&#34;&gt;1、背景
+&lt;/h4&gt;&lt;p&gt;CSS允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;属性 | 描述
 --------------------- | ----------------------------
 background-attachment | 背景图像是否固定或者随着页面的其余部分滚动
@@ -129,25 +1112,256 @@ background-color | 设置元素的背景颜色
 background-image | 设置图片的背景图片
 background-position | 设置背景图片的起始位置
 background-repeat | 设置背景图片是否及如何重复
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>HTML5框架、背景和实体-框架</title>
-      <link>https://blog.qoabc.com/2017/03/html/</link>
-      <pubDate>Wed, 01 Mar 2017 09:13:57 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2017/03/html/</guid>
-      <description>&lt;h2 id=&#34;html5框架背景和实体-框架&#34;&gt;HTML5框架、背景和实体-框架&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2文本&#34;&gt;2、文本
+&lt;/h4&gt;&lt;p&gt;CSS文本属性可定义文本外观&lt;/p&gt;
+&lt;p&gt;通过文本属性，可以改变文本的颜色、字符间距、对齐方式、装饰文本、对文本缩进&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;color&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;文本颜色&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;direction&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;文本方向&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;line-height&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;行高&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;letter-spacing&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;字符间距&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;text-align&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;对齐元素中的文本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;text-decoration&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向文本添加修饰&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;text-indent&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;缩进元素中文本的首行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;text-transform&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素中的字母&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;unicode-bidi&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置文本方向&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;white-space&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;元素中空白的处理方式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;word-spacing&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;字间距&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;css3文本效果&#34;&gt;CSS3文本效果
+&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;text-shadow: 向文本添加阴影&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;word-wrap:	规定文本的换行规则&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3字体&#34;&gt;3、字体
+&lt;/h4&gt;&lt;p&gt;CSS字体属性定义文本的字体系列、大小、加粗、风格和变形&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;font-family&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置字体系列&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;font-size&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置字体的尺寸&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;font-style&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置字体风格&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;font-variant&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;以小型大写字体或正常字体显示文本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;font-weight&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置字体的粗细&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;4链接&#34;&gt;4、链接
+&lt;/h4&gt;&lt;h5 id=&#34;1css链接的四种状态&#34;&gt;1、CSS链接的四种状态
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;a:link	普通的、未被访问的链接&lt;/li&gt;
+&lt;li&gt;a:visited 用户已访问的链接&lt;/li&gt;
+&lt;li&gt;a:hover	鼠标指针位于链接的上方&lt;/li&gt;
+&lt;li&gt;a:active	链接被点击的时刻&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;2常见的链接样式&#34;&gt;2、常见的链接样式：
+&lt;/h5&gt;&lt;p&gt;text-decoration属性大多用于去掉链接中的下划线&lt;/p&gt;
+&lt;h4 id=&#34;5列表&#34;&gt;5、列表
+&lt;/h4&gt;&lt;p&gt;CSS列表属性允许你放置、改变列表标志，或者将图像作为列表项标志&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;list-style&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;简写列表项&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;list-style-image&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;列表项图像&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;list-style-position&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;列表标志位置&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;list-style-type&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;列表类型&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;6表格&#34;&gt;6、表格
+&lt;/h4&gt;&lt;p&gt;1、CSS表格：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CSS表格属性可以帮助我们极大的改善表格的外观
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、表格边框
+3、折叠边框
+4、表格宽高
+5、表格文本对齐
+6、表格内边距
+7、表格颜色&lt;/p&gt;
+&lt;h4 id=&#34;7轮廓&#34;&gt;7、轮廓
+&lt;/h4&gt;&lt;p&gt;1、轮廓主要是用来突出元素的作用&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;属性&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;outline&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置轮廓属性&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;outline-color&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置轮廓的颜色&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;outline-style&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置轮廓的样式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;outline-width&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置轮廓的宽度&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+        </item>
+        <item>
+        <title>HTML5框架、背景和实体-框架</title>
+        <link>https://blog.iostao.com/2017/03/html-framework-bg/</link>
+        <pubDate>Wed, 01 Mar 2017 09:13:57 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2017/03/html-framework-bg/</guid>
+        <description>&lt;h2 id=&#34;html5框架背景和实体-框架&#34;&gt;HTML5框架、背景和实体-框架
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;HTML框架&lt;/li&gt;
 &lt;li&gt;背景、颜色&lt;/li&gt;
 &lt;li&gt;HTML实体&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;html框架&#34;&gt;HTML框架&lt;/h3&gt;
-&lt;p&gt;1、 框架标签（frame）&lt;/p&gt;
-&lt;p&gt;框架对于页面的设计有着很大的作用&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;h3 id=&#34;html框架&#34;&gt;HTML框架
+&lt;/h3&gt;&lt;p&gt;1、 框架标签（frame）&lt;/p&gt;
+&lt;p&gt;框架对于页面的设计有着很大的作用&lt;/p&gt;
+&lt;p&gt;2、框架集标签（&lt;frameset&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;框架集标签定义如何将窗口分割为框架&lt;/li&gt;
+&lt;li&gt;每一个frameset定义一系列行或列&lt;/li&gt;
+&lt;li&gt;rows/cols的值规定了每行或每列占据屏幕的面积&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、常用标签&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;noresiez: 固定框架大小
+cols: 列
+rows: 行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、内联框架&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;iframe （经常使用）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;xhtml介绍&#34;&gt;XHTML介绍
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;XHTML简介&lt;/li&gt;
+&lt;li&gt;XHTML元素&lt;/li&gt;
+&lt;li&gt;XHTML属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一什么是xhtml&#34;&gt;一、什么是XHTML?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;XHTML指的是可扩展超文本标记语言&lt;/li&gt;
+&lt;li&gt;XHTML与HTML4.01几乎是相同的&lt;/li&gt;
+&lt;li&gt;XHTML是更严格更纯净的HTML版本&lt;/li&gt;
+&lt;li&gt;XHTML是以XML应用的方式定义的THML&lt;/li&gt;
+&lt;li&gt;XHTML得到所有主流浏览器的支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2、为什么使用XHTML?&lt;/p&gt;
+&lt;p&gt;为了代码的完整性和良好性&lt;/p&gt;
+&lt;p&gt;3、文档声明&lt;/p&gt;
+&lt;p&gt;DTD:规定了使用通用标记语言的网页语法&lt;/p&gt;
+&lt;p&gt;4、三种XHTML文档类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;STRICT（严格类型）&lt;/li&gt;
+&lt;li&gt;TRANSITIONAL（过渡类型）&lt;/li&gt;
+&lt;li&gt;FRAMESET（框架类型）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;5、&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;XHTML 1.0 Strict:
+	&amp;lt;!DOCTYPE htmlPUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Strict//EN&amp;quot; 
+	&amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;该DTD包含所有HTML元素和属性，但不包括展示性的和弃用的元素（比如font）。不允许框架集（Framesets）。&lt;/p&gt;
+&lt;p&gt;1、XTML元素语法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;XHTML元素必须正确嵌套&lt;/li&gt;
+&lt;li&gt;XHTML元素必须始终关闭&lt;/li&gt;
+&lt;li&gt;XHTML元素必须小写&lt;/li&gt;
+&lt;li&gt;XHTML文档必须有一个根元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;二xhtml属性&#34;&gt;二、XHTML属性
+&lt;/h3&gt;&lt;p&gt;1、XHTML属性语法规则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;XHTML属性必须使用小写&lt;/li&gt;
+&lt;li&gt;XHTML属性值必须用引号包围&lt;/li&gt;
+&lt;li&gt;XHTML属性最小化也是禁止的&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,167 +1,1520 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ios on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/categories/ios/</link>
-    <description>Recent content in ios on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2020 08:06:44 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/ios/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>常用正则表达式大全--如：数字，字符等</title>
-      <link>https://blog.qoabc.com/2020/06/ios/</link>
-      <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2020/06/ios/</guid>
-      <description>&lt;h2 id=&#34;一校验数字的表达式&#34;&gt;一、校验数字的表达式&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;数字：^[0-9]*$
-n位的数字：^\d{n}$
-至少n位的数字：^\d{n,}$
-m-n位的数字：^\d{m,n}$
-零和非零开头的数字：^(0|[1-9][0-9]*)$
-非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
-带1-2位小数的正数或负数：^(\-)?\d+(\.\d{1,2})?$
-正数、负数、和小数：^(\-|\+)?\d+(\.\d+)?$
-有两位小数的正实数：^[0-9]+(.[0-9]{2})?$
-有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$
-非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$
-非零的负整数：^\-[1-9][]0-9&amp;quot;*$ 或 ^-[1-9]\d*$
-非负整数：^\d+$ 或 ^[1-9]\d*|0$
-非正整数：^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$
-非负浮点数：^\d+(\.\d+)?$ 或 ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$
-非正浮点数：^((-\d+(\.\d+)?)|(0+(\.0+)?))$ 或 ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$
-正浮点数：^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ 或 ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$
-负浮点数：^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ 或 ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$
-浮点数：^(-?\d+)(\.\d+)?$ 或 ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS 深浅模式 颜色 和 图片</title>
-      <link>https://blog.qoabc.com/2020/05/ios/</link>
-      <pubDate>Thu, 28 May 2020 20:26:58 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2020/05/ios/</guid>
-      <description>&lt;p&gt;从iOS 13系统开始，开启了App的深色模式的大门。因为AppStore审核指南提出：从2020年4月30日开始，所有提交至App Store的iPhone App都必须使用 iOS 13 SDK或更高版本来构建。以后的app都需要支持暗黑模式了。&lt;/p&gt;
-&lt;h2 id=&#34;一暗黑模式&#34;&gt;一、暗黑模式&lt;/h2&gt;
-&lt;h3 id=&#34;1-uiuserinterfacestyle页面模式的枚举&#34;&gt;1、 UIUserInterfaceStyle（页面模式的枚举）&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS-AVAudio</title>
-      <link>https://blog.qoabc.com/2018/07/ios/</link>
-      <pubDate>Fri, 27 Jul 2018 11:10:43 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2018/07/ios/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;&gt;转载自简书&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述&lt;/h3&gt;
-&lt;p&gt;苹果官方图
-&lt;img src=&#34;https://blog.qoabc.com/img/iOS-AVAudioSession/001.png&#34; alt=&#34;iOS-AVAudioSession-1&#34;&gt;
-可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iPhone不同设备屏幕尺寸和分辨率</title>
-      <link>https://blog.qoabc.com/2018/05/ios/</link>
-      <pubDate>Tue, 29 May 2018 15:17:30 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2018/05/ios/</guid>
-      <description>iPhone设备的屏幕尺寸有多种,屏幕的分辨率也有多种,如下表    设备 屏幕尺寸(英寸) 设计分辨率(点) 屏幕分辨率 说明     iPhone4/4s 3.5 320 * 480 640 * 960 Retain显示屏,326ppi   iPhone5/5s/5c/SE 4.0 320 * 568 640 * 1136 Retain显示屏,326.ppi   iPhone6/6s/7 4.7 375 * 667 750 * 1334 Retain HD显示屏,326.ppi   iPhone6P/6sP/7P/8P 5.5 414 * 736 1242 * 2208 Retain HD显示屏, 401ppi   iPhone X 5.8 375 * 812 1125 * 2436 Retain HD显示屏, 458ppi    </description>
-    </item>
-    
-    <item>
-      <title>iOS SpriteKit/SceneKit/Metal浅析</title>
-      <link>https://blog.qoabc.com/2016/12/ios/</link>
-      <pubDate>Sun, 18 Dec 2016 22:08:49 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/12/ios/</guid>
-      <description>&lt;p&gt;【SpriteKit】
-在iOS7中内置了新的SpriteKit框架，该框架主要用来开发2D游戏。是开发iOS和OS X 下的2D游戏引擎，可以使用OC或者Swift来进行开发。目前已经支持的内容包括：精灵、很酷的特效（例如视频、滤镜和遮罩），并且还集成了物理库等许多东西。首先指出在iOS中开发2D游戏SpriteKit并不是唯一的选择，我们先来看看SpriteKit的特点和优缺点：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS多语言，支持app内部设置</title>
-      <link>https://blog.qoabc.com/2016/05/ios/</link>
-      <pubDate>Wed, 25 May 2016 17:26:36 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/ios/</guid>
-      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶&lt;/code&gt;
+    <channel>
+        <title>Ios on Scott Tao</title>
+        <link>https://blog.iostao.com/categories/ios/</link>
+        <description>Recent content in Ios on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 21 Jun 2020 08:06:44 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/categories/ios/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>常用正则表达式大全--如：数字，字符等</title>
+        <link>https://blog.iostao.com/2020/06/ios-js-regular/</link>
+        <pubDate>Sun, 21 Jun 2020 08:06:44 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2020/06/ios-js-regular/</guid>
+        <description>&lt;h2 id=&#34;一校验数字的表达式&#34;&gt;一、校验数字的表达式
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;数字：^[0-9]*$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;n位的数字：^\d{n}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;至少n位的数字：^\d{n,}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m-n位的数字：^\d{m,n}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;零和非零开头的数字：^(0|[1-9][0-9]*)$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;带1-2位小数的正数或负数：^(\-)?\d+(\.\d{1,2})?$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;正数、负数、和小数：^(\-|\+)?\d+(\.\d+)?$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;有两位小数的正实数：^[0-9]+(.[0-9]{2})?$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非零的负整数：^\-[1-9][]0-9&amp;#34;*$ 或 ^-[1-9]\d*$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非负整数：^\d+$ 或 ^[1-9]\d*|0$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非正整数：^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非负浮点数：^\d+(\.\d+)?$ 或 ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;非正浮点数：^((-\d+(\.\d+)?)|(0+(\.0+)?))$ 或 ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;正浮点数：^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ 或 ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;负浮点数：^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ 或 ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;浮点数：^(-?\d+)(\.\d+)?$ 或 ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二校验字符的表达式&#34;&gt;二、校验字符的表达式
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;汉字：^[\u4e00-\u9fa5]{0,}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;英文和数字：^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;长度为3-20的所有字符：^.{3,20}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;由26个英文字母组成的字符串：^[A-Za-z]+$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;由26个大写英文字母组成的字符串：^[A-Z]+$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;由26个小写英文字母组成的字符串：^[a-z]+$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;由数字、26个英文字母或者下划线组成的字符串：^\w+$ 或 ^\w{3,20}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;可以输入含有^%&amp;amp;&amp;#39;,;=?$\&amp;#34;等字符：[^%&amp;amp;&amp;#39;,;=?$\x22]+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;禁止输入含有~的字符：[^~\x22]+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;三特殊需求表达式&#34;&gt;三、特殊需求表达式
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Email地址&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-+.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;域名：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;62&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;62&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+/.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InternetURL&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;或&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-./&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&amp;amp;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;手机号码：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;166&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;   &lt;span class=&#34;mf&#34;&gt;4.1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;如：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vmData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PHONE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;手机号格式不正确&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;电话号码&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXX-XXXXXXX&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXXX-XXXXXXXX&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXX-XXXXXXX&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXX-XXXXXXXX&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXXXXXX&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;和&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;XXXXXXXX)：^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$ &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;国内电话号码&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0511&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4405222&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;021&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;87888822&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;位身份证号码&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;数字、字母&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x结尾&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;帐号是否合法&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;字母开头，允许&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;字节，允许字母数字下划线&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;密码&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;以字母开头，长度在&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;之间，只能包含字母、数字和下划线&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;强密码&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;必须包含大小写字母和数字的组合，不能使用特殊字符，长度在&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;之间&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=.*&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=.*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=.*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;日期格式：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;一年的&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;个月&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;～&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;09&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;和&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;～&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;一个月的&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;31&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;天&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;～&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;09&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;和&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;～&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;31&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;31&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;钱的输入格式：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;有四种钱的表示形式我们可以接受&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;10000.00&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;和&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10,000.00&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;和没有&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;分&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;的&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10000&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;和&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10,000&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;2.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;这表示任意一个不以&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;开头的数字&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;但是&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;这也意味着一个字符&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;不通过&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;所以我们采用下面的形式：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;3.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;一个&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;或者一个不以&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;开头的数字&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;我们还可以允许开头有一个负号：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;这表示一个&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;或者一个可能为负的开头不为&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;的数字&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;让用户以&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;开头好了&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;把负号的也去掉&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;因为钱总不能是负的吧&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;下面我们要加的是说明可能的小数部分：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;5.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;必须说明的是&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;小数点后面至少应该有&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;位数&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;所以&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;10.&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是不通过的&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;但是&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;和&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10.2&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;是通过的：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;6.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;这样我们规定小数点后面必须有两位&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;如果你认为太苛刻了&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;可以这样：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;21&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;7.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;这样就允许用户只写一位小数&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;下面我们该考虑数字中的逗号了&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;我们可以这样：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}(,[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;    &lt;span class=&#34;mf&#34;&gt;8.1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;到&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;个数字&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;后面跟着任意个&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;逗号&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;个数字&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;逗号成为可选&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;而不是必须：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}(,[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;23&lt;/span&gt;    &lt;span class=&#34;err&#34;&gt;备注：这就是最终结果了&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;别忘了&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;+&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;可以用&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;替代如果你觉得空字符串也可以接受的话&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;奇怪&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;为什么?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;最后&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;别忘了在用函数时去掉去掉那个反斜杠&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;一般的错误都在这里&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xml文件&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Z0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;\\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;中文字符的正则表达式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;u4e00&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;u9fa5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;双字节字符：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;x00&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;xff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;包括汉字在内，可以用来计算字符串的长度&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;一个双字节字符长度计&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII字符计1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;27&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;空白行的正则表达式：&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;可以用来删除空白行&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;28&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HTML标记的正则表达式&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&amp;gt;.*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;\&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;|&amp;lt;.*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&amp;gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;29&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;首尾空白字符的正则表达式：&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*|&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*$&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;或&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;可以用来删除行首行尾的空白字符&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;包括空格、制表符、换页符等等&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，非常有用的表达式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;腾讯&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QQ号&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,}&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;腾讯&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QQ号从10000开始&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;31&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;中国邮政编码：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;中国邮政编码为&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;位数字&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IP地址&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;提取&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IP地址时有用&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;33&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IP地址&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;\\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;\\&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>iOS 深浅模式 颜色 和 图片</title>
+        <link>https://blog.iostao.com/2020/05/ios-dynamic-color/</link>
+        <pubDate>Thu, 28 May 2020 20:26:58 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2020/05/ios-dynamic-color/</guid>
+        <description>&lt;p&gt;从iOS 13系统开始，开启了App的深色模式的大门。因为AppStore审核指南提出：从2020年4月30日开始，所有提交至App Store的iPhone App都必须使用 iOS 13 SDK或更高版本来构建。以后的app都需要支持暗黑模式了。&lt;/p&gt;
+&lt;h2 id=&#34;一暗黑模式&#34;&gt;一、暗黑模式
+&lt;/h2&gt;&lt;h3 id=&#34;1-uiuserinterfacestyle页面模式的枚举&#34;&gt;1、 UIUserInterfaceStyle（页面模式的枚举）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;available&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iOS&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;12.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIUserInterfaceStyle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unspecified&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;light&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dark&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2暗黑模式监听&#34;&gt;2、暗黑模式监听：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;///&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;监听模式的变化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;override&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;traitCollectionDidChange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;previousTraitCollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UITraitCollection&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;traitCollectionDidChange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;previousTraitCollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;traitCollection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hasDifferentColorAppearance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;comparedTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;previousTraitCollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;模式发生变化会回调这里&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3获取当前模式&#34;&gt;3、获取当前模式
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if self.traitCollection.userInterfaceStyle == .dark {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     // Dark
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      print(&amp;#34;是dark模式、。。。&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; } else  if self.traitCollection.userInterfaceStyle == .light {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // Light
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    print(&amp;#34;是light模式、。。。&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; } else {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   //unspecified
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   print(&amp;#34;是unspecified模式、。。。&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二创建动态颜色&#34;&gt;二、创建动态颜色
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;extension&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;///&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;动态颜色&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;darkColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#available(iOS 13.0, *) {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UITraitCollection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;traitCollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UIColor&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;我这里只有两种颜色，所以&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;else就可以&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。如果需要，可以看下面的注释方法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;traitCollection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;userInterfaceStyle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dark&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;darkColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;switch&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;traitCollection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;userInterfaceStyle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;darkColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unspecified&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;如果有需求，这里可以设置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unknown&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lightColor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;三assetsxcassets-color-set-image-set&#34;&gt;三、Assets.xcassets Color set/ Image set
+&lt;/h2&gt;&lt;p&gt;1、 设置动态图片。选择右侧第四个标签栏。在下面选择 &lt;code&gt;Appearance&lt;/code&gt;，弹出的弹框里，可以根据需求选择 &lt;code&gt;Any, Dark&lt;/code&gt; 或 &lt;code&gt;Any, Light, Dary&lt;/code&gt; 模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01.png&#34;
+	width=&#34;2000&#34;
+	height=&#34;1056&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu16010545799213016869.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-01_hu2581417512450803492.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2、设置动态颜色，点击下方的加号，然后选择 Color Set。然后按照设置动态图片的方式，设置动态颜色即可
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02.png&#34;
+	width=&#34;758&#34;
+	height=&#34;1306&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu5802391114606347681.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-02_hu10193047713212110832.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;58&#34;
+		data-flex-basis=&#34;139px&#34;
+	
+&gt;
+&lt;img src=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03.png&#34;
+	width=&#34;2012&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu12124789810018016725.png 480w, https://blog.iostao.com/2020/05/ios-dynamic-color/dynamic-color-03_hu7599304076603217828.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;643px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、代码的使用
+这里只记录颜色，图片的方式还是不变的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//Color Set是ios &amp;gt;= 11才能使用的，如果app仍然支持 iOS 11以下的，需要判断。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//如果支持版本 &amp;gt;= 11，不需要判断
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if #available(iOS 11.0, *) {	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   self.view.backgroundColor = UIColor(named: &amp;#34;lgl_test&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;} else {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ///设置低于iOS11系统下展示的颜色
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    self.view.backgroundColor = UIColor.red
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>iOS-AVAudio</title>
+        <link>https://blog.iostao.com/2018/07/ios-avaudiosession/</link>
+        <pubDate>Fri, 27 Jul 2018 11:10:43 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2018/07/ios-avaudiosession/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/fb0e5fb71b3c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;转载自简书&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1auaudiosession-概述&#34;&gt;1、AUAudioSession 概述
+&lt;/h3&gt;&lt;p&gt;苹果官方图
+&lt;img src=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession.png&#34;
+	width=&#34;700&#34;
+	height=&#34;526&#34;
+	srcset=&#34;https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu7515317354796110356.png 480w, https://blog.iostao.com/2018/07/ios-avaudiosession/iOS-AVAudioSession_hu533427928384222519.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;iOS-AVAudioSession-1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;
+可以看到AVAudioSession就是用来管理多个APP对音频硬件设备（麦克风，扬声器）的资源使用。&lt;/p&gt;
+&lt;p&gt;举例一下AVAudioSession可以做这些事情&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置自己的APP是否和其他APP音频同时存在，还是中断其他APP声音&lt;/li&gt;
+&lt;li&gt;在手机调到静音模式下，自己的APP音频是否可以播放出声音&lt;/li&gt;
+&lt;li&gt;电话或者其他APP终端自己APP的音频的事件处理&lt;/li&gt;
+&lt;li&gt;指定音频输入和输出的设备（比如是听筒输出声音，还是扬声器输出声音）&lt;/li&gt;
+&lt;li&gt;是否支持录音，录音同时是否支持音频播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2avaudiosession-category&#34;&gt;2、AVAudioSession Category
+&lt;/h3&gt;&lt;p&gt;AVAudioSession的接口比较简单。APP启动的时候会自动帮激活AVAudioSession，当然我们可以手动激活，代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//导入头文件
+#import &amp;lt;AVFoundation/AVFoundation.h&amp;gt;
+
+//AVAudioSession是一个单例类
+AVAudioSession *session = [AVAudioSession sharedInstance];
+//AVAudioSessionCategorySoloAmbient是系统默认的category
+[session setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+//激活AVAudioSession
+[session setActive:YES error:nil];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以看到设置session这里有两个参数，category和options&lt;/p&gt;
+&lt;p&gt;Catogory iOS下目前有七种，每种Category都对应是否支持下面四种能力&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interrupts non-mixable apps audio: 是否打断不支持混音播放的APP&lt;/li&gt;
+&lt;li&gt;Silenced by the Silent switch: 是否会响应手机静音键开关&lt;/li&gt;
+&lt;li&gt;Supports audio input: 是否支持音频录入&lt;/li&gt;
+&lt;li&gt;Supports audio output: 是否支持音频播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面用图表来直观的看下每种category具体的能力集&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Category&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;是否允许音频播放/录音&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;是否打断其他不支持混音APP&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;是否会被静音键或锁屏键静音&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryAmbient&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;只支持播放&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryAudioProcessing&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;不支持播放，不支持录制&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryMultiRoute&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;支持播放，支持录制&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;支持播放，支持录制&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;默认YES，可以重写为NO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayback&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;只支持播放&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;默认YES,可以重写为NO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;只支持录制&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;否（锁屏下仍可录制）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategorySoloAmbient&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;只支持播放&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryAmbient，只支持音频播放。这个 Category，音频会被静音键和锁屏键静音。并且不会打断其他应用的音频播放。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategorySoloAmbient，这个是系统默认使用的 Category，只支持音频播放。音频会被静音键和锁屏键静音。和AVAudioSessionCategoryAmbient不同的是，这个会打断其他应用的音频播放&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryPlayback，只支持音频播放。你的音频不会被静音键和锁屏键静音。适用于音频是主要功能的APP，像网易云这些音乐app，锁屏后依然可以播放。&lt;/p&gt;
+&lt;p&gt;需要注意一下，选择支持在静音键切到静音状态以及锁屏键切到锁屏状态下仍然可以播放音频 Category 时，必须在应用中开启支持后台音频功能，详见 &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UIBackgroundModes&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryRecord，只支持音频录制。不支持播放。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryPlayAndRecord，支持音频播放和录制。音频的输入和输出不需要同步进行，也可以同步进行。需要音频通话类应用，可以使用这个 Category。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryAudioProcessing，只支持本地音频编解码处理。不支持播放和录制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionCategoryMultiRoute，支持音频播放和录制。允许多条音频流的同步输入和输出。（比如USB连接外部扬声器输出音频，蓝牙耳机同时播放另一路音频这种特殊需求）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们也可以通过AVAudioSession的属性来读取当前设备支持的Category
+```
+@property(readonly) NSArray&amp;lt;NSString *&amp;gt; *availableCategories;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样可以保证设备兼容性&lt;/p&gt;
+&lt;p&gt;设置Category的代码实例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+NSError *setCategoryError = nil;
+BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient 	error:&amp;amp;setCategoryError];
+if (!success) { 
+	//这里可以读取setCategoryError.localizedDescription查看错误原因
+}
+
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3avaudiosession-modeoptions&#34;&gt;3、AVAudioSession Mode&amp;amp;&amp;amp;Options
+&lt;/h3&gt;&lt;p&gt;刚刚介绍的Category定义了七种主场景，实际开发需求中有时候需要对Category进行微调整，我们发现这个接口还有两个参数Mode和Options。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+/* set session category and mode with options */
+- (BOOL)setCategory:(NSString *)category 
+  mode:(NSString *)mode 
+  options:(AVAudioSessionCategoryOptions)options 
+  error:(NSError **)outError 
+  API_AVAILABLE(ios(10.0), watchos(3.0), tvos(10.0));
+   
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;avaudiosession-mode&#34;&gt;AVAudioSession Mode
+&lt;/h4&gt;&lt;p&gt;我们通过读取下面这条属性获取当前设备支持的Mode&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@property(readonly) NSArray&amp;lt;NSString *&amp;gt; *availableModes;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;iOS下有其中mode 来定制我们的Category行为：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;模式&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;兼容的Category&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;场景&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeDefault&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;All&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;默认模式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeVoiceChat&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;VoIP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeGameChat&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;游戏录制，GKVoiceChat自动设置&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeVideoRecording&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;录制视频&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeMoviePlayback&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayback&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;视频播放&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeMeasurement&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayback&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;最小系统&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionModeVideoChat&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;视频通话&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;下面逐一介绍下每个Mode&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeDefault，默认模式,与所有的 Category 兼容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeVoiceChat，适用于VoIP 类型的应用。只能是 AVAudioSessionCategoryPlayAndRecord Category下。在这个模式系统会自动配置AVAudioSessionCategoryOptionAllowBluetooth 这个选项。系统会自动选择最佳的内置麦克风组合支持语音聊天。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeVideoChat，用于视频聊天类型应用，只能是 AVAudioSessionCategoryPlayAndRecord Category下。适在这个模式系统会自动配置 AVAudioSessionCategoryOptionAllowBluetooth 和 AVAudioSessionCategoryOptionDefaultToSpeaker 选项。系统会自动选择最佳的内置麦克风组合支持视频聊天。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeGameChat，适用于游戏类应用。使用 GKVoiceChat 对象的应用会自动设置这个模式和 AVAudioSessionCategoryPlayAndRecord Category。实际参数和AVAudioSessionModeVideoChat一致&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeVideoRecording，适用于使用摄像头采集视频的应用。只能是 AVAudioSessionCategoryPlayAndRecord 和 AVAudioSessionCategoryRecord 这两个 Category下。这个模式搭配 AVCaptureSession API 结合来用可以更好地控制音视频的输入输出路径。(例如，设置 automaticallyConfiguresApplicationAudioSession 属性，系统会自动选择最佳输出路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeMeasurement，最小化系统。只用于 AVAudioSessionCategoryPlayAndRecord、AVAudioSessionCategoryRecord、AVAudioSessionCategoryPlayback 这几种 Category。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVAudioSessionModeMoviePlayback，适用于播放视频的应用。只用于 AVAudioSessionCategoryPlayback 这个Category。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;avaudiosession-options&#34;&gt;AVAudioSession Options
+&lt;/h4&gt;&lt;p&gt;我们还可以使用options去微调Category行为，如下表&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Option&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Option功能说明&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;兼容的 Category&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryOptionMixWithOthers&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;支持和其他APP音频 mix&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryOptionDuckOthers&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;系统智能调低其他APP音频音量&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord AVAudioSessionCategoryPlayback AVAudioSessionCategoryMultiRoute&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryOptionAllowBluetooth&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;支持蓝牙音频输入&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryRecord AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryOptionDefaultToSpeaker&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置默认输出音频到扬声器&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AVAudioSessionCategoryPlayAndRecord&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;调优我们的category&#34;&gt;调优我们的Category
+&lt;/h4&gt;&lt;p&gt;通过Category和合适的Mode和Options的搭配我们可以调优出我们的效果，下面举两个应用场景:&lt;/p&gt;
+&lt;p&gt;用过高德地图的都知道，在后台播放QQ音乐的时候，如果导航语音出来，QQ音乐不会停止，而是被智能压低和混音，等导航语音播报完后，QQ音乐正常播放，这里我们需要后台播放音乐，所以Category使用AVAudioSessionCategoryPlayback，需要混音和智能压低其他APP音量，所以Options选用 AVAudioSessionCategoryOptionMixWithOthers和AVAudioSessionCategoryOptionDuckOthers&lt;/p&gt;
+&lt;p&gt;代码示例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; BOOL isSuccess = [[AVAudioSession sharedInstance] setCategory:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; AVAudioSessionCategoryPlayback withOptions:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionDuckOthers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  error:&amp;amp;setCategoryError];
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;又或者我希望AVAudioSessionCategoryPlayAndRecord这个Category默认的音频由扬声器播放，那么可以调用这个接口去调整Category&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- (BOOL)setCategory:(NSString *)category 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	withOptions:(AVAudioSessionCategoryOptions)options 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	error:(NSError **)outError
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过选择合适和Category，mode和options，就可以调优音频的输入输出，来满足日常开发需求（需要注意的是Category，mode，option是搭配使用的，而不是简单组合，也就是说某种Category支持某些mode和option，从上面的表中也可以看出这一点）&lt;/p&gt;
+&lt;h3 id=&#34;4-音频中断处理&#34;&gt;4. 音频中断处理
+&lt;/h3&gt;&lt;p&gt;其他APP或者电话会中断我们的APP音频，所以相应的我们要做出处理。
+我们可以通过监听AVAudioSessionInterruptionNotification这个key获取音频中断事件&lt;/p&gt;
+&lt;p&gt;回调回来Userinfo有键值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AVAudioSessionInterruptionTypeKey：
+AVAudioSessionInterruptionTypeBegan:  表示中断开始
+AVAudioSessionInterruptionTypeEnded:  表示中断结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;中断开始：我们需要做的是保存好播放状态，上下文，更新用户界面等
+中断结束：我们要做的是恢复好状态和上下文，更新用户界面，根据需求准备好之后选择是否激活我们session。&lt;/p&gt;
+&lt;p&gt;选择不同的音频播放技术，处理中断方式也有差别，具体如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;System Sound Services：使用 System Sound Services 播发音频，系统会自动处理，不受APP控制，当中断发生时，音频播放会静音，当中断结束后，音频播放会恢复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AV Foundation framework：AVAudioPlayer 类和 AVAudioRecorder 类提供了中断开始和结束的 Delegate 回调方法来处理中断。中断发生，系统会自动停止播放，需要做的是记录播放时间等状态，更新用户界面，等中断结束后，再次调用播放方法，系统会自动激活session。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Audio Queue Services, I/O audio unit：使用aduio unit这些技术需要处理中断，需要做的是记录播放或者录制的位置，中断结束后自己恢复audio session。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OpenAL：使用 OpenAL 播放时，同样需要自己监听中断。管理 OpenAL上下文，用户中断结束后恢复audio session。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要注意的是：1. 有中断开始事件，不一定对应有中断结束事件，所以需要在用户进入前台，点击UI操作的时候，需要保存好播放状态和对Audio Session管理，以便不影响APP的音频功能。2.音频资源竞争上，一定是电话优先。3. AVAudioSession同样可以监听外设音频状态，比如耳机拔入拔出。这里不做累述&lt;/p&gt;
+&lt;h3 id=&#34;5-avaudiosession总结&#34;&gt;5. AVAudioSession总结
+&lt;/h3&gt;&lt;p&gt;AVAudioSession的作用就是管理音频这一唯一硬件资源的分配，通过调优合适的AVAudioSession来适配我们的APP对于音频的功能需求。切换音频场景时候，需要相应的切换AVAudioSession。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>iPhone不同设备屏幕尺寸和分辨率</title>
+        <link>https://blog.iostao.com/2018/05/ios-iphone-device/</link>
+        <pubDate>Tue, 29 May 2018 15:17:30 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2018/05/ios-iphone-device/</guid>
+        <description>&lt;h3 id=&#34;iphone设备的屏幕尺寸有多种屏幕的分辨率也有多种如下表&#34;&gt;iPhone设备的屏幕尺寸有多种,屏幕的分辨率也有多种,如下表
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;设备&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;屏幕尺寸(英寸)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;设计分辨率(点)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;屏幕分辨率&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;iPhone4/4s&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3.5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;320 * 480&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;640 * 960&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Retain显示屏,326ppi&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;iPhone5/5s/5c/SE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4.0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;320 * 568&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;640 * 1136&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Retain显示屏,326.ppi&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;iPhone6/6s/7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4.7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;375 * 667&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;750 * 1334&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Retain HD显示屏,326.ppi&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;iPhone6P/6sP/7P/8P&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5.5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;414 * 736&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1242 * 2208&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Retain HD显示屏, 401ppi&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;iPhone X&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5.8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;375 * 812&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1125 * 2436&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Retain HD显示屏, 458ppi&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>iOS SpriteKit/SceneKit/Metal浅析</title>
+        <link>https://blog.iostao.com/2016/12/ios-spritekit-scenekit/</link>
+        <pubDate>Sun, 18 Dec 2016 22:08:49 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/12/ios-spritekit-scenekit/</guid>
+        <description>&lt;p&gt;【SpriteKit】
+在iOS7中内置了新的SpriteKit框架，该框架主要用来开发2D游戏。是开发iOS和OS X 下的2D游戏引擎，可以使用OC或者Swift来进行开发。目前已经支持的内容包括：精灵、很酷的特效（例如视频、滤镜和遮罩），并且还集成了物理库等许多东西。首先指出在iOS中开发2D游戏SpriteKit并不是唯一的选择，我们先来看看SpriteKit的特点和优缺点：&lt;/p&gt;
+&lt;p&gt;1.特点：
+（1）提供了游戏引擎必备的图形渲染和动画API，可以通过这些API让精灵动起来；
+（2）使用传统的渲染和动画，允许在渲染每一帧之前处理该帧；
+（3）提供了声音播放；
+（4）提供的物理引擎；
+（5）与Xcode集成，可以更容易的创建基于Sprite Kit的游戏工程，调试也很方便；
+（6）可以使用Swift语言；&lt;/p&gt;
+&lt;p&gt;2.优点：
+（1）它是内置到iOS中的，因此并不需要下载额外的库或者其他的外部依赖，并且它是由苹果开发的，所以对他的支持和更新我们可以放心；
+（2）它内置的工具支持纹理和粒子；
+（3）它可以让你做一些其他框架难以做到的事情，例如把视频当做精灵一样处理，或者使用很酷的图形效果和遮罩。
+3.缺点：
+（1）如果使用了SpriteKit，那么你将被iOS生态圈绑架，导致很难把游戏移植到Android等其他平台；
+（2）SpriteKit现在还处于初始阶段，提供的内容还不够丰富，例如Cocos2D，暂不支持自定义的OpenGL代码；&lt;/p&gt;
+&lt;p&gt;【SceneKit】
+SceneKit(SK)是WWDC12推出的OS X平台的cocos 3D渲染引擎框架。支持粒子效果，物理模拟，脚本事件，多程渲染，支持iOS平台。SceneKit整合了Core Image，Core Animation之类的图形框架，现在还整合进了SpriteKit。
+SceneKit是基于OpenGL构建的。&lt;/p&gt;
+&lt;p&gt;【Metal】
+在iOS8中，苹果发布了一个新的接口叫做Metal，它是一个支持GPU加速的3D绘图API。Metal和OpenGL ES类似，也是一个底层API，负责和3D绘图硬件交互。可惜的是，Metal不是跨平台的。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>iOS多语言，支持app内部设置</title>
+        <link>https://blog.iostao.com/2016/05/ios-multilanguage/</link>
+        <pubDate>Wed, 25 May 2016 17:26:36 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/ios-multilanguage/</guid>
+        <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。 -- 老陶&lt;/code&gt;
 刚工作的时候做了多语言，发现网上方法很多都是关于跟随系统语言设置的，而系统内部设置的确比较少。&lt;/p&gt;
-&lt;p&gt;所以今天闲来没事，写一写总结，供大家参考。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>6 月 1 日起所有提交的 app 都需要支持 IPv6 网络</title>
-      <link>https://blog.qoabc.com/2016/05/ios/</link>
-      <pubDate>Sun, 22 May 2016 11:58:16 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/ios/</guid>
-      <description>&lt;p&gt;根据苹果开发者网站的声明，大部分现有应用程序已经通过NSURLSession和CFNetwork APIs兼容该协议。依然使用IPv4 APIs的或者硬件编码IP地址的开发者将需要手工调整应用代码来适应苹果的最新策略。&lt;/p&gt;
-&lt;h4 id=&#34;ipv6比ipv4更有效&#34;&gt;IPv6比IPv4更有效：&lt;/h4&gt;
+&lt;p&gt;所以今天闲来没事，写一写总结，供大家参考。&lt;/p&gt;
+&lt;p&gt;当然做的时候，也会百度搜索，所以项目中可能会看到网上一些比较熟悉的东西。&lt;/p&gt;
+&lt;p&gt;大家做这一步，相信项目工程是有的了吧（因为本人做独立开发，所以一般新功能几乎都是在项目中做的，很少有写demo，就不考虑demo的情况了）&lt;/p&gt;
+&lt;p&gt;在项目文件的Supporting Files中的InfoPlist.strings中，右键(或command + N)&amp;ndash;&amp;gt;新建一个string文件。&lt;/p&gt;
+&lt;p&gt;（如果没有这个文件，在xcode6中创建，好像没有看到，可以自己创建一个文件，名字可以随便取，后面会给一个方法，获取这个文件的。）
+如图1-1所以&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01.png&#34;
+	width=&#34;718&#34;
+	height=&#34;406&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu5726623220645206883.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-01_hu8476703576986133914.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建完文件之后，点击项目—&amp;gt;选择Project—&amp;gt;选择Info—&amp;gt;点击“+”号。（画线隐藏）
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02.png&#34;
+	width=&#34;1101&#34;
+	height=&#34;468&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu15250861096468529299.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-02_hu17081962382959230066.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在右下方有个Language的选项，默认进来是只有English的，点击+号之后可以看到各种语言选项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03.png&#34;
+	width=&#34;212&#34;
+	height=&#34;201&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu12411656954130242734.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-03_hu5433977133202965385.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在这里选择Chinese(Simplified)。下面会出现一个选项，选择InfoPlist.string文件，那个是语言设置的。（如果是自定义的文件，就选择自定义的那个）&lt;/p&gt;
+&lt;p&gt;//&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;到这里，基本配置就完成了。然后后面就是设置需要的字符，以及调用方法了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04.png&#34;
+	width=&#34;319&#34;
+	height=&#34;116&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu16232824154485133015.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-04_hu12324246766778663375.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;660px&#34;
+	
+&gt;
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05.png&#34;
+	width=&#34;264&#34;
+	height=&#34;113&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu11086783311722949968.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-05_hu14099599538857110012.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在相应的string文件中，写入需要的字符。前面相当于key。后面是value。&lt;/p&gt;
+&lt;p&gt;CFBundleDisplayName是app的名字，技术不够，暂时不知道如何手动切换语言，改变桌面的名字，这一步，只是根据系统语言来的。&lt;/p&gt;
+&lt;p&gt;如果默认根据系统语言更改语言，那么调用的时候只需要NSLocalizedString(&amp;lt;#key#&amp;gt;, &amp;lt;#comment#&amp;gt;)用这一句就可以了。其他的不需要做处理。&lt;/p&gt;
+&lt;p&gt;如果是想自定义的话，那么需要写一个类：&lt;/p&gt;
+&lt;p&gt;//.h头文件：
+#import &amp;lt;Foundation/Foundation.h&amp;gt;&lt;/p&gt;
+&lt;p&gt;@interface InternationalController : NSObject&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;(NSBundle *)bundle;   //获取当前资源文件&lt;/li&gt;
+&lt;li&gt;(void)initUserLanguage;   //初始化语言文件&lt;/li&gt;
+&lt;li&gt;(NSString *)userLanguage; //获取应用当前语言&lt;/li&gt;
+&lt;li&gt;(void)setUserLanguage:(NSString *)language;   //设置当前语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;@end&lt;/p&gt;
+&lt;p&gt;//.m类体文件&lt;/p&gt;
+&lt;p&gt;//
+//  InternationalController.m
+//  mworkingHaier
+//
+//  Created by LaoTao on 14-10-20.
+//  Copyright (c) 2014年 CaiGaoBaDou. All rights reserved.
+//&lt;/p&gt;
+&lt;p&gt;#import &amp;ldquo;InternationalController.h&amp;rdquo;
+#import &amp;lt;UIKit/UIKit.h&amp;gt;&lt;/p&gt;
+&lt;p&gt;@implementation InternationalController&lt;/p&gt;
+&lt;p&gt;//创建静态变量bundle，以及获取方法bundle（此处不要使用getBundle).
+static NSBundle *bundle = nil;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(NSBundle *)bundle {
+return bundle;
+}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;//初始化方法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(void)initUserLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *string = [def valueForKey:kLanguage];&lt;/p&gt;
+&lt;p&gt;if (string.length == 0) {
+//获取系统当前语言版本（中文zh-Hans,英文en)
+NSArray *languages = [def objectForKey:@&amp;ldquo;AppleLanguages&amp;rdquo;];
+NSString *current =[languages objectAtIndex:0];
+string = current;
+[def setValue:current forKey:kLanguage];
+[def synchronize];  //持久化，不加的话不会保存
+}&lt;/p&gt;
+&lt;p&gt;//获取文件路径
+NSString *path = [[NSBundle mainBundle] pathForResource:string ofType:@&amp;ldquo;lproj&amp;rdquo;];
+//    NSLog(@&amp;quot;%@&amp;quot;,path);
+bundle = [NSBundle bundleWithPath:path];    //生成bundle
+}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;//获得当前语言的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(NSString *)userLanguage {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+NSString *language = [def valueForKey:kLanguage];
+return language;
+}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;//设置语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(void)setUserLanguage:(NSString *)language {
+NSUserDefaults *def = [NSUserDefaults standardUserDefaults];&lt;/p&gt;
+&lt;p&gt;//1.第一步改变bundle的值
+NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@&amp;ldquo;lproj&amp;rdquo;];
+bundle = [NSBundle bundleWithPath:path];&lt;/p&gt;
+&lt;p&gt;//2.持久化
+[def setValue:language forKey:kLanguage];
+[def synchronize];
+}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;@end&lt;/p&gt;
+&lt;p&gt;把&amp;quot;InternationalController.h&amp;quot;这个在.pch文件中引用，这样全局就都可以调用了&lt;/p&gt;
+&lt;p&gt;在AppDelegate.m的didFinishLaunchingWithOptions方法中，加一句：&lt;/p&gt;
+&lt;p&gt;[InternationalController initUserLanguage]; //初始化应用语言&lt;/p&gt;
+&lt;p&gt;然后设置个全局的宏变量，系统的是NSLocalizedString.这里就设置了LTlocalizedString（LT是老陶的首字母，beyond521t这个t同理，嘿嘿）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06.png&#34;
+	width=&#34;831&#34;
+	height=&#34;75&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu15615061929216511312.png 480w, https://blog.iostao.com/2016/05/ios-multilanguage/multi-language-06_hu464466193721725384.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1-6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1108&#34;
+		data-flex-basis=&#34;2659px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;self.title = LTLocalizedString(@&amp;ldquo;TitleName&amp;rdquo;, nil);&lt;/p&gt;
+&lt;p&gt;如此就可以使用了。切换语言，请看头文件，直接方法名 + 方法，以及语言就OK了。&lt;/p&gt;
+&lt;p&gt;注：英文在iOS中为&amp;quot;en&amp;quot;,简体中文&amp;quot;zh-Hans&amp;quot;.&lt;/p&gt;
+&lt;p&gt;切换语言后：处理方法是，再次跳转到根视图即可。&lt;a class=&#34;link&#34; href=&#34;http://blog.csdn.net/beyond521t/article/details/40537679&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;（更多处理方式，请看本人另一篇日志，根视图处理）&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>6 月 1 日起所有提交的 app 都需要支持 IPv6 网络</title>
+        <link>https://blog.iostao.com/2016/05/ios-requireipv6/</link>
+        <pubDate>Sun, 22 May 2016 11:58:16 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/ios-requireipv6/</guid>
+        <description>&lt;p&gt;根据苹果开发者网站的声明，大部分现有应用程序已经通过NSURLSession和CFNetwork APIs兼容该协议。依然使用IPv4 APIs的或者硬件编码IP地址的开发者将需要手工调整应用代码来适应苹果的最新策略。&lt;/p&gt;
+&lt;h4 id=&#34;ipv6比ipv4更有效&#34;&gt;IPv6比IPv4更有效：
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;避免了网络地址转换的需要(NAT: Network Address Translation)&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>FMDatabaseQueue lead to a deadlock</title>
-      <link>https://blog.qoabc.com/2016/05/ios/</link>
-      <pubDate>Mon, 16 May 2016 16:26:01 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/ios/</guid>
-      <description>&lt;h4 id=&#34;问题&#34;&gt;问题&lt;/h4&gt;
-&lt;p&gt;Assertion failed: (currentSyncQueue != self &amp;amp;&amp;amp; &amp;ldquo;inDatabase: was called reentrantly on the same queue,which would lead to a deadlock&amp;rdquo;),function -[FMDatabaseQueue inDatabase:],file /Users/LaoTao/Documents/CIM/cim-ios/HealthGuard/Class/Lib/Tools/LocalDB/FMDB/FMDatabaseQueue.m, line 153.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>苹果:所有应用必须支持IPv6-only网络</title>
-      <link>https://blog.qoabc.com/2016/05/ios/</link>
-      <pubDate>Thu, 05 May 2016 13:50:19 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/ios/</guid>
-      <description>&lt;p&gt;自今年6月1日开始，所有提交至苹果App Store的应用申请必须要兼容面向硬件识别和网络路由的最新互联网协议&amp;ndash;IPv6-only标准。在去年的全球开发者大会上苹果就率先宣布iOS9会向IPv6-only网络服务过渡。(Supporting IPv6 DNS64/NAT64 Networks)&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS-BLE蓝牙开发(二) -- 多设备</title>
-      <link>https://blog.qoabc.com/2016/04/ios/</link>
-      <pubDate>Sat, 30 Apr 2016 16:51:37 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/ios/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.qoabc.com/file/iOS-BLEDevelopMultiDevice/BleDemo.zip&#34;&gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;多设备其实和单设备并没有什么太大的变化。至少初级写的时候，只是代码量多了一些。但是后面各种状态还有代码的优化工作挺多。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS-BLE蓝牙开发</title>
-      <link>https://blog.qoabc.com/2016/04/ios/</link>
-      <pubDate>Thu, 28 Apr 2016 16:41:43 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/ios/</guid>
-      <description>&lt;h4 id=&#34;ios开发蓝牙入门&#34;&gt;iOS开发蓝牙入门&lt;/h4&gt;
+&lt;/ul&gt;
 &lt;ul&gt;
+&lt;li&gt;通过使用简单的Headers，通过网络提供更快的路由
+&lt;ul&gt;
+&lt;li&gt;防止网络碎片&lt;/li&gt;
+&lt;li&gt;Avoids broadcasting for neighbor address resolution （避免广播 &amp;hellip;.，请自行翻译好了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;dns64nat64-过渡工作流程&#34;&gt;DNS64/NAT64 过渡工作流程
+&lt;/h4&gt;&lt;p&gt;为了帮助减缓IPv4地址耗尽，NAT在许多IPv4网络实现。虽然这个解决方案暂时工作，它证明了昂贵和脆弱。今天，随着越来越多的客户使用IPv6，供应商现在必须同时支持IPv4和IPv6。这是一个代价高昂的努力。
+图&lt;code&gt;1-1&lt;/code&gt;蜂窝网络提供独立的IPv4和IPv6连接
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu14165595446409490868.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-1_hu8178422079683520665.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IPv4和IPv6连接&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;理想的情况下，供应商要降为IPv4网络支持。然而，这样做可以防止客户端访问IPv4的服务器，这是互联网的一个重要部分。为了解决这个问题，最主要的网络供应商实施 DNS64/NAT64 过渡工作。这是一个纯IPv6网络，继续提供访问IPv4内容通过翻译。
+图&lt;code&gt;1-2&lt;/code&gt;蜂窝网络的部署与 DNS64 和 NAT64 的IPv6网络
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2.png&#34;
+	width=&#34;937&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu17935680927815367998.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-2_hu14249982903671885913.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DNS64 和 NAT64 的IPv6网络&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在这种类型的工作流中，客户端发送DNS查询到DNS64服务器，它要求从DNS服务器获取 IPv6 地址。当一个IPv6地址被发现，它会立即传回到客户端。然而，当没有找到IPv6地址时，DNS64服务器请求一个IPv4地址代替。然后DNS64服务器通过为IPv4添加地址前缀合成一个IPv6地址，并传递回客户端。在这方面，客户端总是收到一个IPv6-ready地址（In this regard, the client always receives an IPv6-ready address.最后一句原文 By 老陶2016-05-22 12:29:56）。&lt;/p&gt;
+&lt;p&gt;图&lt;code&gt;1-3&lt;/code&gt;处理IPv4向IPv6的转换过程
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3.png&#34;
+	width=&#34;1308&#34;
+	height=&#34;882&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu7185881398787215200.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-3_hu5238098536541329760.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IPv4向IPv6的转换过程&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当客户端像服务器发送一个请求，任何IPv6数据包&lt;/p&gt;
+&lt;p&gt;When the client sends a request to a server, any IPv6 packets destined for synthesized addresses are automatically routed by the network through a NAT64 gateway. The gateway performs the IPv6-to-IPv4 address and protocol translation for the request. It also performs the IPv4 to IPv6 translation for the response from the server. See Figure 1-4.&lt;/p&gt;
+&lt;p&gt;图&lt;code&gt;1-4&lt;/code&gt; DNS64/NAT64过渡方案工作流程
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4.png&#34;
+	width=&#34;1287&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu10015729948620258623.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-4_hu13837624366809164448.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DNS64/NAT64过渡方案工作流程&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;411px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;ipv6-和-app-store-的要求&#34;&gt;IPv6 和 App Store 的要求
+&lt;/h4&gt;&lt;p&gt;IPv6 DNS64/NAT64的网络兼容性处理将成为 App Store 的一个提交要求，所以应用程序兼容性不可少的。好消息是大部分软件都兼容IPv6.对于这些应用，定期回归测试你的应用程序仍然是有必要的。不兼容IPv6的应用在操作DNS64/NAT64网络时可能会遇到问题。幸运的是，解决这些问题通常很简单，就像是本章节所讨论的。&lt;/p&gt;
+&lt;h4 id=&#34;支持ipv6的常见问题&#34;&gt;支持IPv6的常见问题
+&lt;/h4&gt;&lt;p&gt;几种阻止一个应用支持IPv6的情况。下面的章节描述如何解决这些问题。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;协议中包含IP地址的文字。&lt;/li&gt;
+&lt;li&gt;在配置文件中包含IP地址。&lt;/li&gt;
+&lt;li&gt;网络检测。&lt;/li&gt;
+&lt;li&gt;使用地级别的网络API.&lt;/li&gt;
+&lt;li&gt;Using small address family storage containers.（请自行翻译 add By 老陶 2016-05-22 15:15:36）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此部分原文：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;		Several situations can prevent an app from supporting IPv6. The sections that follow describe how to resolve these problems.
+	
+	IP address literals embedded in protocols. Many communications protocols, such as Session Initiation Protocol (SIP), File Transfer Protocol (FTP), WebSockets, and Peer-to-Peer Protocol (P2PP), include IP address literals in protocol messages. For example, the FTP parameter commands DATA PORT and PASSIVE exchange information that includes IP address literals. Similarly, IP address literals may appear in the values of SIP header fields, such as To, From, Contact, Record-Route, and Via. See Use High-Level Networking Frameworks and Don’t Use IP Address Literals.
+	IP address literals embedded in configuration files. Configuration files often include IP address literals. See Don’t Use IP Address Literals.
+	Network preflighting. Many apps attempt to proactively check for an Internet connection or an active Wi-Fi connection by passing IP address literals to network reachability APIs. See Connect Without Preflight.
+	Using low-level networking APIs. Some apps work directly with sockets and other raw network APIs such as gethostbyname, gethostbyname2, and inet_aton. These APIs are prone to misuse or they only support IPv4—for example, resolving hostnames for the AF_INET address family, rather than the AF_UNSPEC address family. See Use High-Level Networking Frameworks.
+	Using small address family storage containers. Some apps and networking libraries use address storage containers—such as uint32_t, in_addr, and sockaddr_in—that are 32 bits or smaller. See Use Appropriately Sized Storage Containers.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;确保ipv6-dns64nat64兼容性&#34;&gt;确保IPv6 DNS64/NAT64兼容性
+&lt;/h2&gt;&lt;p&gt;遵循以下的知道以确保IPv6 DNS64/NAT64在你的应用程序的兼容性。&lt;/p&gt;
+&lt;h4 id=&#34;使用高级的网络框架&#34;&gt;使用高级的网络框架
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;应用需要可以建立在`高级网络框架` 或 `低级POSIX socket API网络框架`。在大多数情况下，高层次框架是足够的。它们有能力，易于使用，相比低级API拥有更少的缺陷。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;图 &lt;code&gt;1-5&lt;/code&gt; 网络框架和API图
+&lt;img src=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5.png&#34;
+	width=&#34;1242&#34;
+	height=&#34;711&#34;
+	srcset=&#34;https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu1780319019810074547.png 480w, https://blog.iostao.com/2016/05/ios-requireipv6/require-ipv6-5_hu13227260278074769796.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;网络框架和API图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;WebKit.&lt;/b&gt; This framework provides a set of classes for displaying web content in windows, and implements browser features such as following links, managing a back-forward list, and managing a history of pages recently visited. WebKit simplifies the complicated process of loading webpages—that is, asynchronously requesting web content from an HTTP server where the response may arrive incrementally, in random order, or partially due to network errors. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/Cocoa/Reference/WebKit/ObjC_classic/index.html#//apple_ref/doc/uid/TP30000745&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebKit Framework Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Cocoa URL loading system.&lt;/b&gt; This system is the easiest way to send and receive data over the network without providing an explicit IP address. Data is sent and received using one of several classes—such as &lt;code&gt;NSURLSession&lt;/code&gt;, &lt;code&gt;NSURLRequest&lt;/code&gt;, and &lt;code&gt;NSURLConnection&lt;/code&gt;—that work with &lt;code&gt;NSURL&lt;/code&gt; objects. &lt;code&gt;NSURL&lt;/code&gt; objects let your app manipulate URLs and the resources they reference. Create an NSURL object by calling the &lt;code&gt;initWithString&lt;/code&gt;: method and passing it a URL specifier. Call the &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html#//apple_ref/occ/instm/NSURL/checkResourceIsReachableAndReturnError:&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;checkResourceIsReachableAndReturnError&lt;/a&gt;: method of the &lt;code&gt;NSURL&lt;/code&gt; class to check the reachability of a host. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html#//apple_ref/doc/uid/10000165i&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;URL Session Programming Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;CFNetwork.&lt;/b&gt; This Core Services framework provides a library of abstractions for network protocols, which makes it easy to perform a variety of network tasks such as working with BSD sockets, resolving DNS hosts, and working with HTTP/HTTPS. To target a host without an explicit IP address, call the &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/CoreFoundation/Reference/CFHostRef/index.html#//apple_ref/c/func/CFHostCreateWithName&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CFHostCreateWithName&lt;/a&gt; method. To open a pair of TCP sockets to the host, call the &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/CoreFoundation/Reference/CFStreamConstants/index.html#//apple_ref/c/func/CFStreamCreatePairWithSocketToCFHost&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CFStreamCreatePairWithSocketToCFHost&lt;/a&gt; method. For more information, see [CFNetwork Concepts](CFNetwork Concepts) in &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/Networking/Conceptual/CFNetwork/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001132&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CFNetwork Programming Guide&lt;/a&gt;.
+If you do require the low-level socket APIs, follow the guidelines in RFC4038: Application Aspects of IPv6 Transition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        <item>
+        <title>FMDatabaseQueue lead to a deadlock</title>
+        <link>https://blog.iostao.com/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</link>
+        <pubDate>Mon, 16 May 2016 16:26:01 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</guid>
+        <description>&lt;h4 id=&#34;问题&#34;&gt;问题
+&lt;/h4&gt;&lt;p&gt;Assertion failed: (currentSyncQueue != self &amp;amp;&amp;amp; &amp;ldquo;inDatabase: was called reentrantly on the same queue,which would lead to a deadlock&amp;rdquo;),function -[FMDatabaseQueue inDatabase:],file /Users/LaoTao/Documents/CIM/cim-ios/HealthGuard/Class/Lib/Tools/LocalDB/FMDB/FMDatabaseQueue.m, line 153.&lt;/p&gt;
+&lt;p&gt;今天运行app，发现在“assert(currentSyncQueue != self &amp;amp;&amp;amp; &amp;ldquo;inDatabase: was called reentrantly on the same queue, which would lead to a deadlock&amp;rdquo;);”这句crash掉了。
+然后就去先看一下大意：&lt;/p&gt;
+&lt;p&gt;断言失败(Assertion 单元测试的时候会经常碰到)，inDatabase 在相同的queue队列中被重复调用，引发死锁。&lt;/p&gt;
+&lt;h4 id=&#34;原因&#34;&gt;原因
+&lt;/h4&gt;&lt;p&gt;在使用时，如果在queue里面的block执行过程中，又调用了 indatabase方法，则会检查 是不是同一个queue，如果是同一个queue会死锁；原因很简单：&lt;/p&gt;
+&lt;p&gt;队列里面 放了一个block，该block又在 本队列 后面放了一个 block；&lt;/p&gt;
+&lt;p&gt;从而：前一个block 里面 调用了 后一个block，必须等后一个block执行完成了，&lt;/p&gt;
+&lt;p&gt;前一个block才会 出队列；&lt;/p&gt;
+&lt;p&gt;而后一个block想要执行，则又必须先等 前一个block出队列；&lt;/p&gt;
+&lt;p&gt;因此 死锁！！！！&lt;/p&gt;
+&lt;h4 id=&#34;解决方法&#34;&gt;解决方法
+&lt;/h4&gt;&lt;p&gt;在indatabase的block中，不要再调用indatabase方法。这个细心一下，多数时候很容易发现。&lt;/p&gt;
+&lt;p&gt;可是有时候因代码封装等问题，大家可能很难发现问题所在。那么就来个暴力断点吧。在每一个使用indatabase的地方都 NSLog(或者print)一下一个编号。 然后crash的时候，看一下最后是哪两个相互发生的影响造成的死锁。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>苹果:所有应用必须支持IPv6-only网络</title>
+        <link>https://blog.iostao.com/2016/05/ios-require-allappipv6-only/</link>
+        <pubDate>Thu, 05 May 2016 13:50:19 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/ios-require-allappipv6-only/</guid>
+        <description>&lt;p&gt;自今年6月1日开始，所有提交至苹果App Store的应用申请必须要兼容面向硬件识别和网络路由的最新互联网协议&amp;ndash;IPv6-only标准。在去年的全球开发者大会上苹果就率先宣布iOS9会向IPv6-only网络服务过渡。(Supporting IPv6 DNS64/NAT64 Networks)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/library/mac/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/UnderstandingandPreparingfortheIPv6Transition/UnderstandingandPreparingfortheIPv6Transition.html#//apple_ref/doc/uid/TP40010220-CH213-SW1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apple 在这里给出了适配 IPv6 的指南&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据苹果开发者网站的声明，大部分现有应用程序已经通过NSURLSession和CFNetwork APIs兼容该协议。依然使用IPv4 APIs的或者硬件编码IP地址的开发者将需要手工调整应用代码来适应苹果的最新策略。&lt;/p&gt;
+&lt;p&gt;随着IPv4地址用完，转移到地址更丰富的IPv6协议正在变得越来越重要。对于苹果来说，切换至IPv6能够带来更广泛的行业接受协议，尤其是那些负责销售iPhone和iPad的网络运营商们。此外伴随物联网的迅速普及，能够加速智能手机的迅猛发展。&lt;/p&gt;
+&lt;p&gt;其实早在2012年6月的IPv6日，世界范围内就开始全面启动IPv6。在中国，移动、联通和电信大范围开展现网IPv6试点。随着IPv6研究工作和实际部署的不断开展，网络迟早会进入纯IPv6（IPv6-only）的时代。目前很多的资源还在IPv4环境中，因此IPv6和IPv4网络之间的互通尤为重要。&lt;/p&gt;
+&lt;p&gt;苹果这么急着进入IPv6-only网络领域，估计是想改变一下如今的环境，更好的支持下一代的苹果产品和系统。
+在此之前，苹果曾在WWDC2015就率先宣布iOS9会向IPv6-only网络服务过渡，随着IPv4地址用完，转移到地址更丰富的IPv6协议也是大势所趋。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>iOS-BLE蓝牙开发(二) -- 多设备</title>
+        <link>https://blog.iostao.com/2016/04/ios-bledevelopmultidevice/</link>
+        <pubDate>Sat, 30 Apr 2016 16:51:37 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/ios-bledevelopmultidevice/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;BleDemo.zip&#34; &gt;点击下载代码&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;多设备其实和单设备并没有什么太大的变化。至少初级写的时候，只是代码量多了一些。但是后面各种状态还有代码的优化工作挺多。&lt;/p&gt;
+&lt;p&gt;@interface CentralManager ()&amp;lt;CBCentralManagerDelegate, CBPeripheralDelegate,CentralManagerDelegate&amp;gt;
+{
+/** 这里只做多设备简单介绍。如果设备很多，或者设备不固定，可以考虑使用数组等进行优化 */
+CBPeripheral *_devicePeripheral;    //硬件设备 (设备1)
+CBPeripheral *_wristbandPeripheral; //手环设备 (设备2)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    CBCharacteristic *_deviceCharacteristic;    //硬件设备服务特征 （用来发送指令）
+    CBCharacteristic *_wristbandCharacteristic; //手环设备服务特征 (发送指令，用来和手环进行数据交换，读取手环数据等)
+    
+    //蓝牙管理类，这就是蓝牙Boss呀，没有他，你就别想做蓝牙
+    CBCentralManager *_manager;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里添加了两个 CBPeripheral *成员变量。 每一个 CBPeripheral对应一个硬件设备，如果硬件过多，建议使用数组进行优化。 如果只是两个设备倒还不会有影响。另外建议使用swift，做起来会更快速一些。&lt;/p&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; 发现蓝牙设备&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary&amp;lt;NSString *,id&amp;gt; *)advertisementData RSSI:(NSNumber *)RSSI {
+    
+    if (!peripheral.name) {
+        return;
+    }
+        //连接设备可以根据需求，写到两个方法里面，可以根据点击操作分别连接不同的设备。 我这里是直接进行了同时连接
+    //里面的字符串是硬件设备的名称。 也可以根据 广播等内容进行判断连接
+    //连接硬件设备
+    if ([peripheral.name rangeOfString:@&amp;quot;Device&amp;quot;].location != NSNotFound) {
+        [_manager connectPeripheral:peripheral options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+    }
+    
+    //连接手环设备
+    if ([peripheral.name rangeOfString:@&amp;quot;wristband&amp;quot;].location != NSNotFound) {
+        [_manager connectPeripheral:peripheral options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; 连接成功&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    NSLog(@&amp;quot;连接成功:%@&amp;quot;, peripheral.name);
+    if (_devicePeripheral == peripheral) {
+        _deviceBleState = BleManagerStateConnect;
+        _devicePeripheral = peripheral;
+    }else if (_wristbandPeripheral == peripheral) {
+        _wristbandBleState = BleManagerStateConnect;
+        _wristbandPeripheral = peripheral;
+    }
+    
+    for (id listener in _listener) {
+        if ([listener respondsToSelector:@selector(didConnectDevicePeripheral:)]) {
+            [listener didConnectDevicePeripheral:peripheral];
+        }
+    }
+    /*
+     1、连接成功
+     2、发现服务
+     3、发现特征值
+     4、特征值 是用来 和蓝牙设备做交互使用的。如设置设备时间，或者读取设备数据。设置通知等
+     */
+    
+    //因为在后面我们要从外设蓝牙那边再获取一些信息，并与之通讯，这些过程会有一些事件可能要处理，所以要给这个外设设置代理
+    peripheral.delegate = self;
+    //找到该设备上的指定服务 调用完该方法后会调用代理CBPeripheralDelegate（现在开始调用另一个代理的方法了）
+//    [peripheral discoverServices:@[[CBUUID UUIDWithString:UUID_DEVICE_SERVER_0]]];
+//    [peripheral discoverServices:@[[CBUUID UUIDWithString:@&amp;quot;7480&amp;quot;]]];
+    [peripheral discoverServices:nil];  //发现服务
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; CBPeripheralDelegate
+#pragma mark - &amp;raquo; 发现服务&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    if (error == nil) {
+        NSLog(@&amp;quot;发现服务&amp;quot;);
+        
+        for (CBService *service in peripheral.services) {
+            NSLog(@&amp;quot;服务:%@&amp;quot;, service);
+            //发现服务，然后去查找该服务的特征值 ,然后请转到下面的那个代理方法
+            [peripheral discoverCharacteristics:nil forService:service];
+//            if ([service.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_0]]) {
+//                //查询服务所带的特征值
+//                //                [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@&amp;quot;FFE0&amp;quot;]] forService:service];
+//                [peripheral discoverCharacteristics:nil forService:service];
+//            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; 发现特征值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+NSLog(@&amp;quot;&amp;mdash;&amp;ndash;发现特征值&amp;quot;);
+//在这里给 蓝牙设备写数据， 或者将 peripheral 和 characteristic 拿出去，可以在其他地方，发送命令
+if (error == nil) {
+for (CBCharacteristic *characteristic in service.characteristics) {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      NSLog(@&amp;quot;发现特征值:%@&amp;quot;, characteristic);
+      //这里只写了 devicePeripheral 的特征值。 手环的 方法同理，代码几乎一样
+      if (_devicePeripheral == peripheral) {
+
+          [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+
+          //以下宏定义的UUID 请根据自己当前的硬件设备做调整。 不同的设备会有不同的定义。
+          //另外，读写的，也会的也会不同。 可以使用 第三方蓝牙工具，进行设备上的服务和特征值查看一下。
+          //或者是直接参阅 贵公司的蓝牙设备 协议文档
+          if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_1]]) {
+              //如果是指定的特征值，设置NotifyValue
+              [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+
+          }else if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_2]]) {
+              _deviceCharacteristic = characteristic;
+
+              for (id listener in _listener) {
+                  if ([listener respondsToSelector:@selector(didDiscoverDevicePeripheral:service:)]) {
+                      [listener didDiscoverDevicePeripheral:peripheral service:service];
+                  }
+              }
+          }
+      }else if (_wristbandPeripheral == peripheral) {
+
+      }
+
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}
+}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; 如果一个特征的值被更新，然后周边代理接收&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#pragma mark - &amp;raquo; 读数据&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//这里是接收到蓝牙数据。 但是蓝牙数据都是一堆 16进制数据，需要根据协议去解析
+//数据协议，请参阅协议文档，如果没有，就去找吧。
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSLog(@&amp;quot;接收到数据:%@,%@&amp;quot;, peripheral.name, characteristic.value);
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSLog(@&amp;quot;did write value For Characteristic&amp;quot;);
+    NSLog(@&amp;quot;%@&amp;quot;, characteristic.value);
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error {
+    NSLog(@&amp;quot;did Write Value For Descriptor&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>iOS-BLE蓝牙开发</title>
+        <link>https://blog.iostao.com/2016/04/ios-bledevelop/</link>
+        <pubDate>Thu, 28 Apr 2016 16:41:43 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/ios-bledevelop/</guid>
+        <description>&lt;h4 id=&#34;ios开发蓝牙入门&#34;&gt;iOS开发蓝牙入门
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;简单来说，iOS蓝牙就是有一个中心角色（可以理解为管理蓝牙的一个对象 CBCentralManager）&lt;/li&gt;
 &lt;li&gt;就像是创建UITableView一样，需要先初始化 中心角色(CBCentralManager)&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>VR时代之旅</title>
-      <link>https://blog.qoabc.com/2016/04/ios/</link>
-      <pubDate>Mon, 18 Apr 2016 21:00:33 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/ios/</guid>
-      <description>&lt;p&gt;今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。
-然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget</title>
-      <link>https://blog.qoabc.com/2016/04/ios/</link>
-      <pubDate>Mon, 11 Apr 2016 14:34:31 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/ios/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;@interface NSObject (NSDelayedPerforming)  
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;既然存在了蓝牙管理对象，那么想要连接蓝牙，一般都是先去搜索设备。所以下一步，搜索设备（暂时不要看代码，先把思路理清楚。下面是代码，会按照这个思路再走一遍）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索到一个设备 - didDiscoverPeripheral&lt;/p&gt;
+&lt;p&gt;你就会在delegate方法中，得到这个设备。然后判断，如果这个设置是你需要的，那么就进行连接。如果没有特别情况，这里最好是停止设备搜索，因为你已经找到它了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接自然会有两个结果，所以对应两个代理方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;连接成功	didConnectPeripheral&lt;/li&gt;
+&lt;li&gt;连接失败	didFailToConnectPeripheral&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接成功
+在这里去搜索服务，服务里会有特征值。特征值，是用来和蓝牙设备，做读写命令交互用的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发现服务 - didDiscoverServices
+发现到服务，然后去查找这个服务中的特征值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发现特征值 - didDiscoverCharacteristicsForService
+这里去设置读写数据。或者是把特征值，做一个成员变量接收，这样就可以，选择什么时刻发送命令了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取到蓝牙设备发送过来的数据 - didUpdateValueForCharacteristic
+蓝牙数据一般为一堆16进制数据，然后自己根据协议去解析就好了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;总结中心模式的用法&#34;&gt;总结中心模式的用法
+&lt;/h4&gt;&lt;!-- ###### [点击下载代码](2016/04/28/iOS-BLE蓝牙开发-二-多设备/BleDemo.zip) --&gt;
+&lt;h6 id=&#34;引入corebluetoothframework&#34;&gt;引入CoreBluetooth.framework
+&lt;/h6&gt;&lt;h6 id=&#34;引入蓝牙协议如&#34;&gt;引入蓝牙协议，如
+&lt;/h6&gt;&lt;pre&gt;&lt;code&gt;@protocol CBCentralManagerDelegate;
+@protocol CBPeripheralDelegate;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6 id=&#34;创建-cbcentralmanager&#34;&gt;创建 CBCentralManager
+&lt;/h6&gt;&lt;pre&gt;&lt;code&gt;//定义一个中心角色对象
+@property (strong, nonatomic) CBCentralManager *centralManager;
+
+//建立中心角色
+_centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+
+//搜索蓝牙设备
+[_centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+
+//发现蓝牙设备 - 代理方法
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary&amp;lt;NSString *,id&amp;gt; *)advertisementData RSSI:(NSNumber *)RSSI {
+	//这里peripheral 就是搜索到的蓝牙设备对象了。
+	//advertisementData 是广播消息。
+	//RSSI 信号强度
+	//这里名字 我随便写的。可以根据需求，来作判断。比如利用广播判断
+	if ([peripheral.name isEqualToString:@&amp;quot;小米手环&amp;quot;]) {
+		//连接设备 ， 这里会有 连接成功， 和 连接失败两个代理方法
+		[_manager connectPeripheral:peripheral options:@{CBCentralManagerScanOptionAllowDuplicatesKey:[NSNumber numberWithBool:NO]}];
+
+	}
+}
+
+#pragma mark - &amp;gt;&amp;gt; 连接成功
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+	[_centralManager stopScan]; //停止扫描
+	//因为在后面我们要从外设蓝牙那边再获取一些信息，并与之通讯，这些过程会有一些事件可能要处理，所以要给这个外设设置代理
+peripheral.delegate = self;
+//找到该设备上的指定服务 调用完该方法后会调用代理CBPeripheralDelegate（现在开始调用另一个代理的方法了）
+//    [peripheral discoverServices:@[[CBUUID UUIDWithString:@&amp;quot;7480&amp;quot;]]];
+	//这个是发现所有服务， 上面的是发现指定服务
+    [peripheral discoverServices:nil];
+}
+
+#pragma mark - &amp;gt;&amp;gt; CBPeripheralDelegate
+#pragma mark - &amp;gt;&amp;gt; 发现服务
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+	if (error == nil) {
+    NSLog(@&amp;quot;发现服务&amp;quot;);
+    for (CBService *service in peripheral.services) {
+        NSLog(@&amp;quot;服务:%@&amp;quot;, service);
+        //设备 发现所有特征
+        [peripheral discoverCharacteristics:nil forService:service];
+        //下面代码，是用来查找特定服务的 特征，如果能确定只用哪个服务的，就可以用下面的方法
+//if ([service.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_0]]) {
+//查询服务所带的特征值
+//[peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@&amp;quot;FFE0&amp;quot;]] forService:service];
+//[peripheral discoverCharacteristics:nil forService:service];
+//            }
+        }
+}
+
+#pragma mark - &amp;gt;&amp;gt; 发现特征值
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+	if (error == nil) {
+        for (CBCharacteristic *characteristic in service.characteristics) {
+            
+            NSLog(@&amp;quot;发现特征值:%@&amp;quot;, characteristic);
+                //这个FFE1是我随便写的。需要根据你们自己的硬件给的来填写.
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@&amp;quot;FFE1&amp;quot;]]) {
+                //我的这个特征是用来读取数据的。这里设置通知
+                    [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+                    
+                }else if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:UUID_DEVICE_SERVER_2]]) {
+	                //给蓝牙设备发送数据， 写数据
+					[peripheral writeValue:(NSData *) forCharacteristic:characteristic type:CBCharacteristicWriteWithoutResponse];
+                }
+            
+        }
+	}
+
+}&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>VR时代之旅</title>
+        <link>https://blog.iostao.com/2016/04/ios-vr-journeyoftime/</link>
+        <pubDate>Mon, 18 Apr 2016 21:00:33 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/ios-vr-journeyoftime/</guid>
+        <description>&lt;p&gt;今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。
+然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。&lt;/p&gt;
+&lt;h4 id=&#34;vr-设备分析&#34;&gt;VR 设备分析
+&lt;/h4&gt;&lt;p&gt;让我们先来看看现在的 VR 设备。&lt;/p&gt;
+&lt;p&gt;目前主要的 VR 设备有 Oculus , Sumsang Gear VR ， HTC Vive ， Microsoft HoloLens ， Sony PlayStation VR ，国内的 VR 设备则太多，销量较高的有 蚁视 和 暴风魔镜 等等。&lt;/p&gt;
+&lt;h5 id=&#34;oculus&#34;&gt;Oculus
+&lt;/h5&gt;&lt;p&gt;代表产品： Oculus Rift&lt;/p&gt;
+&lt;p&gt;简单介绍： 万众瞩目的 Oculus Rift 已经预售了。简单地说，Oculus Rift 是一个带有部分输入设备的虚拟现实显示器。这些输入设备包括一个遥控器，一个红外传感器，还有 Touch 控制器。Rift 的所有计算是在一台 PC 上进行的，在 Oculus Ready PCs 可以看到 Rift 要求的 PC 配置。由于显卡的性能问题，Rift 目前并不支持 Mac，只能下载到基于 Windows 的 Runtime。
+SDK支持： Oculus Rift 支持 Unity 5 、Unity 4 和 Unreal 。3月1日，Oculus 发布了 MobileSDK 1.0.0.1 升级，这个 SDK 提供了对 Oculus Remote Monitor 的支持，同时也让我们可以在 Mac OSX 上基于 MobileSDK 进行开发。&lt;/p&gt;
+&lt;h5 id=&#34;samsung&#34;&gt;Samsung
+&lt;/h5&gt;&lt;p&gt;代表产品： Gear VR&lt;/p&gt;
+&lt;p&gt;简单介绍： Gear VR 是 Samsung 和 Oculus 共同开发的。它目前使用 Samsung 的 Galaxy S7/S7 edge, Note5, S6, 和 S6 edge 来代替头显中原来的显示器。Gear VR 还内置传感器用于和三星手机配对，并内置了触摸板用于操作。和 Oculus Rift 使用 PC 来进行计算不同，Gear VR 把计算放在了 Samsung 手机上。
+SDK支持： Oculus 的 MobileSDK 最开始就是为 Gear VR 提供的。&lt;/p&gt;
+&lt;h5 id=&#34;htc&#34;&gt;HTC
+&lt;/h5&gt;&lt;p&gt;代表产品： Vive
+简单介绍： Vive 也已经预售了。它是目前呼声最高的消费级 VR 设备了。Base stations 设计，电子围栏，多功能操纵手柄，StreamVR，良好的体验都让它成为目前最好的 VR 设备。在 VIVE OPTIMIZED PCs 可以看到推荐的 PC 配置，和 Oculus 类似，但不要求 8G 内存
+。
+SDK支持： Steam VR 、Unity 和 Unreal 。&lt;/p&gt;
+&lt;p&gt;Microsoft
+代表产品：HoloLens
+简单介绍： M$ 的确是不差钱，一上来就搞出来一个 MR(Mixed Reality) 设备，还让 HeloLens 上了国际空间站 。简单的说，HoloLens 就是一台微型 Windows 10 一体机啊！和竞争对手们完全不是一个打法好么？不在一个纬度好么！硬件我就不说了，直接看 Hardware 好了，简直惊悚。&lt;/p&gt;
+&lt;p&gt;SDK支持： 为 HoloLens 开发应用，其实就是为 Windows 10 开发 App ，目前官方页面并没有公布太多的开发信息。但你也知道，IDE 一定是宇宙最强的 Visual Studio，语言一定是 C# 。&lt;/p&gt;
+&lt;p&gt;Sony
+代表产品： PlayStation VR
+简单介绍： Sony 大法虽然好，但 PSVR 和上面几家比起来会出来的比较晚，又从 2016 上半年跳票到下半年。它是和 PS4 共同使用的，目前我没有找到它的 SDK。但 Unity 提到了对 PlayStation VR 的支持。&lt;/p&gt;
+&lt;p&gt;暴风魔镜
+代表产品： 魔镜4
+简单介绍： 暴风魔镜是目前在国内大肆宣传的一款产品。暂时还没有哪一款产品的宣传力度超过它。当然，它也是我唯一买过（主要是买得起）的产品。和 Google Cardboard 类似，它是一款把手机塞进去就能体验廉价 VR 的产品。具体的体验效果，取决于手机的高（tu）端（hao）程度。
+SDK支持：暴风魔镜提供了 Android/iOS/Unity/Unreal 的 SDK 。&lt;/p&gt;
+&lt;p&gt;VR 引擎分析
+从上面的设备分析可以看出，目前对 VR 支持最好的 3D 引擎就是 Unity 和 Unreal 了。它们两位可以说是 VR 的标配引擎。借用一句广告词： 2U ，你值得拥有！
+除了 2U 哥俩外，下面还有一些在 VR/AR 界十分活跃的引擎和软件：&lt;/p&gt;
+&lt;p&gt;OSVR&lt;/p&gt;
+&lt;p&gt;Open Source Virtual Reality 是一个全面开源的软件平台，支持多种设备和引擎，Blender/MonoGame/StreamVR/Unity/Unreal/CryEngine/WebVR 都在支持之列。在国内，OSVR 已经和 360 公司展开了合作。OSVR是全球的开源虚拟现实平台，由Razer(雷蛇)——全球高性能游戏硬件、软件与系统品牌，以及Sensics——全球专业级虚拟现实头戴式显示器品牌联合创立。该软件平台致力于为所有虚拟现实技术树立开放标准，使得各款支持OSVR的虚拟设备与支持OSVR的软件能够顺利交互、接合。&lt;/p&gt;
+&lt;p&gt;OSVR软件&lt;/p&gt;
+&lt;p&gt;介绍了这套引擎的架构方式。OSVR能够提供简单而标准化的方式，助你探索、配置和操作数以百计的设备，包括VR眼镜、定位追踪、深度摄像头、眼动议、游戏控制器等等。&lt;/p&gt;
+&lt;p&gt;VRPN&lt;/p&gt;
+&lt;p&gt;Virtual Reality Peripheral Network 是学术圈搞起来的一套基于网络传输界面的开源 VR 库。允许大家共同建设，把自家的设备加进去。这个库支持非常多的设备，甚至直接包含了设备驱动 Supported hardware devices 。VRPN 已经在 PC/Win32, PC/Cygwin, PC/Linux, and Mac/OSX (32- and 64-bits on all), ARM Linux systems 和 Android 上测试过。&lt;/p&gt;
+&lt;p&gt;MiddleVR&lt;/p&gt;
+&lt;p&gt;MiddleVR 目前提供 Unity 插件 ，当然你也可以直接使用它的 SDK，它也支持目前大多数主流的 HMD (Head-mounted display）设备。虽然是由一家公司在维护，但目前是免费使用的。&lt;/p&gt;
+&lt;h5 id=&#34;vrpn&#34;&gt;VRPN
+&lt;/h5&gt;&lt;p&gt;Virtual Reality Peripheral Network 是学术圈搞起来的一套基于网络传输界面的开源 VR 库。允许大家共同建设，把自家的设备加进去。这个库支持非常多的设备，甚至直接包含了设备驱动 Supported hardware devices 。VRPN 已经在 PC/Win32, PC/Cygwin, PC/Linux, and Mac/OSX (32- and 64-bits on all), ARM Linux systems 和 Android 上测试过。
+MiddleVR
+MiddleVR 目前提供 Unity 插件 ，当然你也可以直接使用它的 SDK，它也支持目前大多数主流的 HMD (Head-mounted display）设备。虽然是由一家公司在维护，但目前是免费使用的。&lt;/p&gt;
+&lt;h4 id=&#34;vr-语言&#34;&gt;VR 语言
+&lt;/h4&gt;&lt;p&gt;说起 VR 语言，其实还不如说是 3D 引擎的语言。VR 没有 3D 引擎支持是无法进行开发的。让我们看看上面提到的 3D 引擎和 SDK 主要使用什么语言。
+首当其冲的是 C/C++ ，这是毋庸置疑的。大多数 3D 引擎都使用 C++ 开发，Oculus 提供的 SDK 也是使用 C++ 进行开发的。 Gear VR 是在安卓设备上运行，需要使用 Android NDK 基于 C++ 进行开发。Unreal 引擎同样使用 C++ 进行开发。MiddleVR 提供了基于 C++ 的 SDK。
+其次是 C# 。 Unity 把 C# 当作脚本语言使用。在 VRPN 中可以使用 .NET bindings for VRPN 作为开发语言。不出意外的话， HoloLens 也一定使用的是 C# 。
+再次就是 Javascript 。它也是 Unity 的一种脚本语言（即使选择的人并不多）。但 WebVR 和 Javascript 程序员的基数（基友数？）一定会让 Javascript 继续在使用人数上占优（我真的不是黑啊）。即使不考虑 WebVR ， three.js ， Babylonjs 这类已经非常成熟的 HTML5 3D 引擎也足够证明 Javascript 在 3D 上的强大生命力。
+VR 平台
+从目前的状态看， Oculus 仅支持 Windows 和 Android（通过 Gear VR） 。MiddleVR 仅支持 Windows 平台。其他的几个引擎例如 OSVR/VRPN 都是多平台支持的，Unity 和 Unreal 当然也是多平台支持。Playstation VR 无疑是 PS 独占。HoloLens 则无疑是 Windows 独占。
+只有 WebVR ，不挑平台陪你玩。
+结语
+VR/AR/MR 仍然在如火如荼的发展。以上的技术1~2年后或许会有翻天覆地的变化，领跑者说不定就成了追赶者，黑马也可能随时出现。但总的来说，VR在目前这个阶段的发展，最重要的仍是内容。内容的产出依然离不开程序员，离不开3D引擎和编程语言。作为程序员，只要我们苦练内功，紧跟技术发展的脚步，就不必担心被时代所遗弃。若是不小心搭上了VR时代的快车，或许更容易一飞冲天。
+而当下，我们需要一往无前。&lt;/p&gt;
+&lt;p&gt;以下个人收集，未入门人员，我也不懂。
+c#  unity3d 5.x版本  难度较低 未来主流
+c++  ue为代表   难度大 人员很难组齐&lt;/p&gt;
+&lt;p&gt;你可以想象苹果发布App Store的时候，会有人说它会击垮出租车吗？Uber用了很多年才出现，我觉得VR也将如此，目前我们已经推出了游戏，而且这些游戏体验非常好，五年后可能有人做出完全革命性的东西来填补空白，我们不知道这将是什么样的游戏。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>IOS 关于取消延迟执行函数的种种。performSelector与cancelPreviousPerformRequestsWithTarget</title>
+        <link>https://blog.iostao.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</link>
+        <pubDate>Mon, 11 Apr 2016 14:34:31 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</guid>
+        <description>&lt;pre&gt;&lt;code&gt;@interface NSObject (NSDelayedPerforming)  
   
 - (void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay inModes:(NSArray *)modes;  
 - (void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay;  
@@ -169,60 +1522,271 @@ m-n位的数字：^\d{m,n}$
 + (void)cancelPreviousPerformRequestsWithTarget:(id)aTarget;  
   
 @end  
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS通过dSYM文件分析crash</title>
-      <link>https://blog.qoabc.com/2016/04/ios/</link>
-      <pubDate>Fri, 01 Apr 2016 17:20:34 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/ios/</guid>
-      <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
-&lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>苹果手机发展史</title>
-      <link>https://blog.qoabc.com/2016/03/ios/</link>
-      <pubDate>Thu, 24 Mar 2016 20:50:34 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/03/ios/</guid>
-      <description>&lt;hr&gt;
-&lt;h2 id=&#34;tags-iphone&#34;&gt;title: 苹果手机发展史
-date: 2016-03-24 20:50:34
-tags: iPhone&lt;/h2&gt;
-&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>iOS上Sqlite多线程问题</title>
-      <link>https://blog.qoabc.com/2016/03/ios/</link>
-      <pubDate>Fri, 11 Mar 2016 11:56:53 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/03/ios/</guid>
-      <description>&lt;p&gt;1.单线程：禁用所有的mutex锁，并发使用时会出错。当SQLite编译时加了SQLITE_THREADSAFE=0参数，或者在初始化SQLite前调用sqlite3_config(SQLITE_CONFIG_SINGLETHREAD)时启用。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>字面量声明方式 Objective-C Literal Value</title>
-      <link>https://blog.qoabc.com/2016/02/ios/</link>
-      <pubDate>Wed, 17 Feb 2016 15:59:01 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/02/ios/</guid>
-      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;
-最近才注意到NSArray,NSDictionary,NSNumber有一种字面量方式声明。瞬间感觉写代码又省了好多事情。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>DB Error 1 unrecognized token</title>
-      <link>https://blog.qoabc.com/2016/02/ios/</link>
-      <pubDate>Wed, 17 Feb 2016 14:52:50 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/02/ios/</guid>
-      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最近看到大家对cancelPreviousPerformRequestsWithTarget不能取消带参数的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(void)performSelector:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay;
+情况，写了一点点代码调试了一下，发现如果是带参数，那取消时的参数也要一致，否则不能取消成功。
+开始延迟执行：&lt;/p&gt;
+&lt;p&gt;[self performSelector:@selector(didRuninCurrModel:) withObject:[NSNumber numberWithBool:YES] afterDelay:3.0f];&lt;/p&gt;
+&lt;p&gt;[self performSelector:@selector(didRuninCurrModelNoArgument) withObject:nil afterDelay:3.0f];&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;假如在三秒内执行以下取消方法，则结果分别为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:YES]];//可以取消成功。  
+  
+[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:NO]];//不能取消成功。参数不匹配  
+  
+[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:nil];//不能取消成功。参数不匹配  
+  
+[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModelNoArgument) object:nil];//可以成功取消  
+  
+[NSObject cancelPreviousPerformRequestsWithTarget:self];//可以成功取消全部。  
+[[self class] cancelPreviousPerformRequestsWithTarget:self];//可以成功取消全部。      &lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>iOS通过dSYM文件分析crash</title>
+        <link>https://blog.iostao.com/2016/04/ios-dsymanalysecrash/</link>
+        <pubDate>Fri, 01 Apr 2016 17:20:34 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/ios-dsymanalysecrash/</guid>
+        <description>&lt;p&gt;1.导出crash log&lt;/p&gt;
+&lt;p&gt;通过Xcode的Organizer查看某台iphone设备的DeviceLog，选择需要的crash log，导出XXX.crash文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1.png&#34;
+	width=&#34;600&#34;
+	height=&#34;450&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu4863932601678223093.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashLog1_hu16769412829026272455.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;crash Log&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.找到对应的app文件&lt;/p&gt;
+&lt;p&gt;找到当前iphone设备上安装的ipa文件，右键解压后得到Payload文件夹，你需要的app文件就在其中了。&lt;/p&gt;
+&lt;p&gt;3.找到对应build版本的dSYM文件&lt;/p&gt;
+&lt;p&gt;路径: /用户/用户名(修改为自己电脑的用户名)/资源库/Developer/Xcode/Archives/&lt;/p&gt;
+&lt;p&gt;dSYM文件是iOS编译后保存16进制函数地址映射信息的文件，每次应用程序build后，都会生成对应的xxx.app, xxx.app.dSYM文件。&lt;/p&gt;
+&lt;p&gt;4.确定dSYM、app以及crash文件的关系&lt;/p&gt;
+&lt;p&gt;每一个xx.app, xxx.app.dSYM文件都拥有相应的uuid，crash文件也有uuid,只有三者uuid一至才表明之三者可以解析出正确的日志文件。
+查看xx.app文件的uuid的方法，在terminal中输入命令：&lt;/p&gt;
+&lt;p&gt;dwarfdump &amp;ndash;uuid xxx.app/xxx (xxx工程名)&lt;/p&gt;
+&lt;p&gt;查看xx.app.dSYM文件的uuid的方法，在terminal中输入命令：&lt;/p&gt;
+&lt;p&gt;dwarfdump &amp;ndash;uuid xxx.app.dSYM (xxx工程名)&lt;/p&gt;
+&lt;p&gt;而.crash的uuid位于，crash日志中的Binary Images:中的第一行尖括号内。如：&lt;/p&gt;
+&lt;p&gt;armv7 &amp;lt;8bdeaf1a0b233ac199728c2a0ebb4165&amp;gt;
+将对应的xxx.app.dSYM文件以及xxx.app文件以及xxx.crash文件拷贝到同一文件夹中，如：~/Desktop/DebugLog。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse.png&#34;
+	width=&#34;600&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu6686758819002864646.png 480w, https://blog.iostao.com/2016/04/ios-dsymanalysecrash/dsym-crashAnalyse_hu12933551020329719899.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;crash Analyse&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;92&#34;
+		data-flex-basis=&#34;220px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;5.通过symbolicatecrash分析crash文件&lt;/p&gt;
+&lt;p&gt;Xcode有自带的symbolicatecrash工具,可以通过dSYM文件将crash文件中的16进制地址转换成可读的函数地址。symbolicatecrash工具位于:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKit.framework/Versions/A/Resources/symbolicatecrash(Xcode 4.5)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash(Xcode 5.0)
+该文件是隐藏文件，可以通过如下命令查找并拷贝到系统目录下，并建立快捷方式。&lt;/p&gt;
+&lt;p&gt;1)打开终端，进入到symbolicatecrash工具所在的文件夹目录&lt;/p&gt;
+&lt;p&gt;cd /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/&lt;/p&gt;
+&lt;p&gt;2)查找确认是否存在symbolicatecrash&lt;/p&gt;
+&lt;p&gt;ls -al | grep symbolicatecrash&lt;/p&gt;
+&lt;p&gt;3)将symbolicatecrash工具拷贝到/usr/bin目录下&lt;/p&gt;
+&lt;p&gt;sudo cp symbolicatecrash /usr/bin/symbolicatecrash&lt;/p&gt;
+&lt;p&gt;4)设置DEVELOPER_DIR系统变量&lt;/p&gt;
+&lt;p&gt;cd ~/&lt;/p&gt;
+&lt;p&gt;vi .bash_profile&lt;/p&gt;
+&lt;p&gt;并输入如下内容
+export DEVELOPER_DIR=&amp;quot;/Applications/Xcode.app/Contents/Developer&amp;quot;&lt;/p&gt;
+&lt;p&gt;保存并退出&lt;/p&gt;
+&lt;p&gt;source .bash_profile&lt;/p&gt;
+&lt;p&gt;5)重启终端，确认是否已正确设置DEVELOPER_DIR系统变量&lt;/p&gt;
+&lt;p&gt;echo $DEVELOPER_DIR&lt;/p&gt;
+&lt;p&gt;查看输出结果是否为/Applications/Xcode.app/Contents/Developer&lt;/p&gt;
+&lt;p&gt;6)查看PATH系统变量是否存在如下路径/usr/bin&lt;/p&gt;
+&lt;p&gt;echo $PATH&lt;/p&gt;
+&lt;p&gt;7)如果PATH不存在如下路径/usr/bin，可在~/.bash_profile中添加如下代码&lt;/p&gt;
+&lt;p&gt;export PATH=&amp;quot;/usr/bin:$PATH&amp;quot;&lt;/p&gt;
+&lt;p&gt;保存并退出&lt;/p&gt;
+&lt;p&gt;source .bash_profile&lt;/p&gt;
+&lt;p&gt;8)上述准备工作完成后，进入dSYM和crash文件对应的文件夹目录，如&lt;/p&gt;
+&lt;p&gt;cd ~/Desktop/DebugLog&lt;/p&gt;
+&lt;p&gt;9)执行如下命令，即可正确解析crash文件&lt;/p&gt;
+&lt;p&gt;symbolicatecrash xxx.crash xxx.app.dSYM &amp;gt; test.txt&lt;/p&gt;
+&lt;p&gt;注意：symbolicatecrash的参数顺序，否则会报类似如下错误&lt;/p&gt;
+&lt;p&gt;Use of uninitialized value $data in substitution (s///) at /usr/bin/symbolicatecrash line 678.&lt;/p&gt;
+&lt;p&gt;Use of uninitialized value $data in substitution (s///) at /usr/bin/symbolicatecrash line 681.&lt;/p&gt;
+&lt;p&gt;Use of uninitialized value $data in substitution (s///) at /usr/bin/symbolicatecrash line 685.&lt;/p&gt;
+&lt;p&gt;Use of uninitialized value in pattern match (m//) at /usr/bin/symbolicatecrash line 404.&lt;/p&gt;
+&lt;p&gt;Use of uninitialized value in scalar assignment at /usr/bin/symbolicatecrash line 418.&lt;/p&gt;
+&lt;p&gt;No crash report version in XXX.app.dSYM/ at /usr/bin/symbolicatecrash line 954.&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>苹果手机发展史</title>
+        <link>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</link>
+        <pubDate>Thu, 24 Mar 2016 20:50:34 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</guid>
+        <description>&lt;p&gt;至2016年iPhone出生已有9年之久，给我们手机市场带来了巨大的改变，近年来iPhone在产品方面有哪些改变呢？本期专题带你回顾iPhone – iPhone6s。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple.jpg&#34;
+	width=&#34;730&#34;
+	height=&#34;5269&#34;
+	srcset=&#34;https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu8855533631825796789.jpg 480w, https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/developmentHistoryOfApple_hu9841588477085317717.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;苹果手机发展史&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;13&#34;
+		data-flex-basis=&#34;33px&#34;
+	
+&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>iOS上Sqlite多线程问题</title>
+        <link>https://blog.iostao.com/2016/03/ios-sqlitemultithreading/</link>
+        <pubDate>Fri, 11 Mar 2016 11:56:53 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/03/ios-sqlitemultithreading/</guid>
+        <description>&lt;p&gt;1.单线程：禁用所有的mutex锁，并发使用时会出错。当SQLite编译时加了SQLITE_THREADSAFE=0参数，或者在初始化SQLite前调用sqlite3_config(SQLITE_CONFIG_SINGLETHREAD)时启用。&lt;/p&gt;
+&lt;p&gt;2.多线程：只要一个数据库连接不被多个线程同时使用就是安全的。源码中是启用bCoreMutex，禁用bFullMutex。实际上就是禁用数据库连接和prepared statement（准备好的语句）上的锁，因此不能在多个线程中并发使用同一个数据库连接或prepared statement。当SQLite编译时加了SQLITE_THREADSAFE=2参数时默认启用。若SQLITE_THREADSAFE不为0，可以在初始化SQLite前，调用sqlite3_config(SQLITE_CONFIG_MULTITHREAD)启用；或者在创建数据库连接时，设置SQLITE_OPEN_NOMUTEX flag。&lt;/p&gt;
+&lt;p&gt;3.串行：启用所有的锁，包括bCoreMutex和bFullMutex。因为数据库连接和prepared statement都已加锁，所以多线程使用这些对象时没法并发，也就变成串行了。当SQLite编译时加了SQLITE_THREADSAFE=1参数时默认启用。若SQLITE_THREADSAFE不为0，可以在初始化SQLite前，调用sqlite3_config(SQLITE_CONFIG_SERIALIZED)启用；或者在创建数据库连接时，设置SQLITE_OPEN_FULLMUTEX flag。&lt;/p&gt;
+&lt;p&gt;　在iOS上，默认使用的是第2种方式编译的，也就是只有一个线程能够打开数据库操作，其他线程要操作数据库必须等数据库关闭后才能打开操作。多线程时：每个线程独立打开数据库，操作数据库，操作完后关闭数据库。打开和关闭都比较费时间，而且要手动控制打开关闭锁，在每个线程操作不频率时可用该方法。&lt;/p&gt;
+&lt;p&gt;　　如果多个线程频繁操作数据库，使用以上方法很容易造成系统崩溃，解决方案：开启第3种串行模式，使用一个类（单例方式）操作数据库。
+　　&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-(BOOL)open
+{
+sqlite3_shutdown();
+NSLog(@&amp;quot;sqlite3 lib version: %s&amp;quot;, sqlite3_libversion());
+int err=sqlite3_config(SQLITE_CONFIG_SERIALIZED);
+if (err == SQLITE_OK) {
+   NSLog(@&amp;quot;Can now use sqlite on multiple threads, using the 		same connection&amp;quot;);
+} else {
+   NSLog(@&amp;quot;setting sqlite thread safe mode to serialized 		failed!!! return code: %d&amp;quot;, err);
+}
+err = sqlite3_open([VersionDBPath UTF8String], &amp;amp;hSqlite3DB);
+if(err != SQLITE_OK) {
+   NSLog(@&amp;quot;datebase open error: %d&amp;quot;, err);
+   return NO;
+}
+return YES;
+}&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>字面量声明方式 Objective-C Literal Value</title>
+        <link>https://blog.iostao.com/2016/02/ios-objective-c-literal-value/</link>
+        <pubDate>Wed, 17 Feb 2016 15:59:01 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/02/ios-objective-c-literal-value/</guid>
+        <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;
+最近才注意到NSArray,NSDictionary,NSNumber有一种字面量方式声明。瞬间感觉写代码又省了好多事情。&lt;/p&gt;
+&lt;p&gt;只是百度了一下，从Xcode4.4就已经存在这种方式了，但是自己居然一直在使用Previously那些方法。&lt;/p&gt;
+&lt;p&gt;于是现在在这里做一次整理，方便自己记忆（其实是当初说要写博客，但是好久没写了，来补个数量尴尬)&lt;/p&gt;
+&lt;p&gt;借鉴:http://cocoaheads.tumblr.com/post/17757846453/objective-c-literals-for-nsdictionary-nsarray&lt;/p&gt;
+&lt;p&gt;也看了一下官方文档，但是上面那个链接给的非常详细。大家如果有愿意看的话，看上面那个地址就可以了，以下，只是为了自己学习。&lt;/p&gt;
+&lt;p&gt;Objective-C literals: one can now create literals for NSArray, NSDictionary, and NSNumber (just like one can create literals for NSString)&lt;/p&gt;
+&lt;p&gt;String Value&lt;/p&gt;
+&lt;p&gt;string_value ::= &amp;ldquo;text&amp;rdquo; | &amp;rsquo;text&#39;&lt;/p&gt;
+&lt;p&gt;NSArray:&lt;/p&gt;
+&lt;p&gt;Previously:&lt;/p&gt;
+&lt;p&gt;array = [[NSArray alloc] initWithObjects: a, b, c,  nil ];&lt;/p&gt;
+&lt;p&gt;array = [NSArray arrayWithObjects: a, b, c, nil ];&lt;/p&gt;
+&lt;p&gt;Now:
+array = @[ a, b, c ];&lt;/p&gt;
+&lt;p&gt;NSDictionary:&lt;/p&gt;
+&lt;p&gt;Previously:&lt;/p&gt;
+&lt;p&gt;NSDictionary *dict;&lt;/p&gt;
+&lt;p&gt;dict = [[NSDictionary alloc] initWithObjectsAndKeys:@[ o1, o2, o3 ],@[ k1, k2, k3 ], nil ];&lt;/p&gt;
+&lt;p&gt;dict = [NSDictionary dictionaryWithObjects:@[ o1, o2, o3] forKeys:@[ k1, k2, k3]];&lt;/p&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;p&gt;dict = @{ k1 : o1, k2 : o2, k3 : o3 };&lt;/p&gt;
+&lt;p&gt;NSNumber:&lt;/p&gt;
+&lt;p&gt;Previously:&lt;/p&gt;
+&lt;p&gt;NSNumber * number;&lt;/p&gt;
+&lt;p&gt;number = [NSNumber numberWithInt:12345];&lt;/p&gt;
+&lt;p&gt;//同理，这种初始化还有Char,Long,Float,Double,Bool等类型，不再一一列举&lt;/p&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;p&gt;NSNumber *number;&lt;/p&gt;
+&lt;p&gt;number = @&amp;lsquo;X&amp;rsquo;;&lt;/p&gt;
+&lt;p&gt;number = @12345;&lt;/p&gt;
+&lt;p&gt;number = @12345ul;&lt;/p&gt;
+&lt;p&gt;number = @12345ll;&lt;/p&gt;
+&lt;p&gt;number = @123.45f;&lt;/p&gt;
+&lt;p&gt;number = @123.45;&lt;/p&gt;
+&lt;p&gt;number = @YES;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>DB Error 1 unrecognized token</title>
+        <link>https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/</link>
+        <pubDate>Wed, 17 Feb 2016 14:52:50 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/</guid>
+        <description>&lt;h3 id=&#34;sqlite-error&#34;&gt;Sqlite Error
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;做iOS开发，今天写数据库，遇到了这个错误。我的数据库w中有个字段也是token。刚开始以为是这个字段出了什么问题，不过后来排查，发现跟这个字段完全没有关系。这个就是sqlite3里的。（特此记录一下）&lt;/p&gt;
+&lt;p&gt;错误日志截图
+&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001.jpeg&#34;
+	width=&#34;752&#34;
+	height=&#34;132&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu367212094257837473.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0001_hu17665080294630210476.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;screen&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;569&#34;
+		data-flex-basis=&#34;1367px&#34;
+	
+&gt;
+NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = %@ and dev_id = %@&amp;quot;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002.jpeg&#34;
+	width=&#34;1284&#34;
+	height=&#34;80&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu11537133010396254923.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0002_hu10310660902891431303.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;screen&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1605&#34;
+		data-flex-basis=&#34;3852px&#34;
+	
+&gt;
+原代码是这样写的。解决方法是在 uid , dev_id 的两个参数 上 加上 单引号(这两个是字符类型变量)。&lt;/p&gt;
+&lt;p&gt;NSString *sql_select = [NSString stringWithFormat:@&amp;ldquo;select * from %@ where uid = &amp;lsquo;%@&amp;rsquo; and dev_id = &amp;lsquo;%@&amp;rsquo; &amp;ldquo;,TBNAME_User_Dev, uid, device.nameOrAddress];&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003.jpeg&#34;
+	width=&#34;1234&#34;
+	height=&#34;70&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16691831805174020123.jpeg 480w, https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/db-error-0003_hu16184650911899788302.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;screen&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1762&#34;
+		data-flex-basis=&#34;4230px&#34;
+	
+&gt;
+倘若使用这种方法写，就不需要加 引号了。这种使用 ? 问号的，就没有碰到这种问题。&lt;/p&gt;
+&lt;p&gt;NSString  *str = [NSString  stringWithFormat:@&amp;ldquo;insert into %@(uid, dev_id, created_at, status) values (?, ?, ?, ?)&amp;quot;,TBNAME_User_Dev];&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

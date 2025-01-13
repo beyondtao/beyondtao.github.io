@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Demo-05 Download.zip Give users the option to customize their widgets by adding a custom Intent definition to your project. (Developer Documentation)\n">
+<meta name="keywords" content="Swift5, SwiftUI"><title>iOS Widget 05 - Making a Dynamic Configurable Widget</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2022/11/swiftui-widget-05/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="iOS Widget 05 - Making a Dynamic Configurable Widget">
+<meta property='og:description' content="Demo-05 Download.zip Give users the option to customize their widgets by adding a custom Intent definition to your project. (Developer Documentation)\n">
+<meta property='og:url' content='https://blog.iostao.com/2022/11/swiftui-widget-05/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='swiftui' /><meta property='article:published_time' content='2022-11-08T11:57:53&#43;08:00'/><meta property='article:modified_time' content='2022-11-08T11:57:53&#43;08:00'/>
+<meta name="twitter:title" content="iOS Widget 05 - Making a Dynamic Configurable Widget">
+<meta name="twitter:description" content="Demo-05 Download.zip Give users the option to customize their widgets by adding a custom Intent definition to your project. (Developer Documentation)\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#expect">Expect</a></li>
+    <li><a href="#add-new-type">add New Type</a></li>
+    <li><a href="#add-target-intents-extension">add Target: Intents Extension</a></li>
+    <li><a href="#target-membership">Target Membership</a></li>
+    <li><a href="#implementation">Implementation</a></li>
+    <li><a href="#result">Result</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/swiftui/" >
+                Swiftui
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2022/11/swiftui-widget-05/">iOS Widget 05 - Making a Dynamic Configurable Widget</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 08, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><a class="link" href="WidgetApp-05.zip" >Demo-05 Download.zip</a> Give users the option to customize their widgets by adding a custom Intent definition to your project. (<a class="link" href="https://developer.apple.com/documentation/widgetkit/making-a-configurable-widget"  target="_blank" rel="noopener"
+    >Developer Documentation</a>)</p>
+<p>If possible, please see the Article &ldquo;iOS Widget 02&rdquo; first.</p>
+<h2 id="expect">Expect
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Widget</th>
+          <th style="text-align: left">Widget</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><img src="/2022/11/swiftui-widget-05/widget-05-11.png"
+	width="453"
+	height="956"
+	srcset="/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, /2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="47"
+		data-flex-basis="113px"
+	
+></td>
+          <td style="text-align: left"><img src="/2022/11/swiftui-widget-05/widget-05-12.png"
+	width="453"
+	height="956"
+	srcset="/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, /2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="47"
+		data-flex-basis="113px"
+	
+></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="add-new-type">add New Type
+</h2><p><img src="/2022/11/swiftui-widget-05/widget-05-01.png"
+	width="2670"
+	height="1304"
+	srcset="/2022/11/swiftui-widget-05/widget-05-01_hu12267219320917822253.png 480w, /2022/11/swiftui-widget-05/widget-05-01_hu204195342998837619.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="204"
+		data-flex-basis="491px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-02-1.png"
+	width="2548"
+	height="1476"
+	srcset="/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, /2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="414px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-02-2.png"
+	width="3074"
+	height="1390"
+	srcset="/2022/11/swiftui-widget-05/widget-05-02-2_hu12253057896908739198.png 480w, /2022/11/swiftui-widget-05/widget-05-02-2_hu6382320756736574014.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="221"
+		data-flex-basis="530px"
+	
+></p>
+<p>If you don&rsquo;t need use the Siri, please don&rsquo;t select the CheckBox.</p>
+<h2 id="add-target-intents-extension">add Target: Intents Extension
+</h2><p><img src="/2022/11/swiftui-widget-05/widget-05-03.png"
+	width="1336"
+	height="1366"
+	srcset="/2022/11/swiftui-widget-05/widget-05-03_hu4169659782916713668.png 480w, /2022/11/swiftui-widget-05/widget-05-03_hu9294091087290234938.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="97"
+		data-flex-basis="234px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-04.png"
+	width="1460"
+	height="1040"
+	srcset="/2022/11/swiftui-widget-05/widget-05-04_hu17888000876360112070.png 480w, /2022/11/swiftui-widget-05/widget-05-04_hu2970314915088420116.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="336px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-05.png"
+	width="1460"
+	height="1040"
+	srcset="/2022/11/swiftui-widget-05/widget-05-05_hu1098025901170152389.png 480w, /2022/11/swiftui-widget-05/widget-05-05_hu12875354299226957477.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="140"
+		data-flex-basis="336px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-06.png"
+	width="2384"
+	height="896"
+	srcset="/2022/11/swiftui-widget-05/widget-05-06_hu8227435645123101094.png 480w, /2022/11/swiftui-widget-05/widget-05-06_hu6040476996371024464.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="266"
+		data-flex-basis="638px"
+	
+></p>
+<h2 id="target-membership">Target Membership
+</h2><p>We need add the Target Membership for the files.</p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-07.png"
+	width="3080"
+	height="1370"
+	srcset="/2022/11/swiftui-widget-05/widget-05-07_hu14074864834509914588.png 480w, /2022/11/swiftui-widget-05/widget-05-07_hu2611890169856190321.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="224"
+		data-flex-basis="539px"
+	
+></p>
+<p><img src="/2022/11/swiftui-widget-05/widget-05-08.png"
+	width="3078"
+	height="1198"
+	srcset="/2022/11/swiftui-widget-05/widget-05-08_hu14924608401056385618.png 480w, /2022/11/swiftui-widget-05/widget-05-08_hu1802070759059768865.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="256"
+		data-flex-basis="616px"
+	
+></p>
+<h2 id="implementation">Implementation
+</h2><p><img src="/2022/11/swiftui-widget-05/widget-05-02-1.png"
+	width="2548"
+	height="1476"
+	srcset="/2022/11/swiftui-widget-05/widget-05-02-1_hu10512667152568958048.png 480w, /2022/11/swiftui-widget-05/widget-05-02-1_hu9072914711794183429.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="414px"
+	
+></p>
+<p>Please remember the name of the Intents (the Number - &ldquo;2&rdquo;), in my Project the first Intent&rsquo;s name is &ldquo;Configuration&rdquo;</p>
+<p>and the Parameter &ldquo;exchange&rdquo; (the Number - &ldquo;4&rdquo;)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">import</span> <span class="n">Intents</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="n">IntentHandler</span><span class="p">:</span> <span class="n">INExtension</span><span class="p">,</span> <span class="n">ConfigurationIntentHandling</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">override</span> <span class="k">func</span> <span class="n">handler</span><span class="p">(</span><span class="k">for</span> <span class="n">intent</span><span class="p">:</span> <span class="n">INIntent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">This</span> <span class="n">is</span> <span class="n">the</span> <span class="n">default</span> <span class="n">implementation</span><span class="o">.</span>  <span class="n">If</span> <span class="n">you</span> <span class="n">want</span> <span class="n">different</span> <span class="n">objects</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">different</span> <span class="n">intents</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">you</span> <span class="n">can</span> <span class="n">override</span> <span class="n">this</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">the</span> <span class="n">handler</span> <span class="n">you</span> <span class="n">want</span> <span class="k">for</span> <span class="n">that</span> <span class="n">particular</span> <span class="n">intent</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="n">provide</span> <span class="p">[</span><span class="n">Parameter</span><span class="p">]</span> <span class="n">OptionsCollection</span>    <span class="o">//</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Intentdefinition</span>
+</span></span><span class="line"><span class="cl">    <span class="k">func</span> <span class="n">provideExchangeOptionsCollection</span><span class="p">(</span><span class="k">for</span> <span class="n">intent</span><span class="p">:</span> <span class="n">ConfigurationIntent</span><span class="p">,</span> <span class="n">with</span> <span class="n">completion</span><span class="p">:</span> <span class="err">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">INObjectCollection</span><span class="o">&lt;</span><span class="n">CustomExchange</span><span class="o">&gt;</span><span class="err">?</span><span class="p">,</span> <span class="n">Error</span><span class="err">?</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">collection</span> <span class="n">with</span> <span class="n">the</span> <span class="n">array</span> <span class="n">of</span> <span class="n">characters</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">collection</span> <span class="o">=</span> <span class="n">INObjectCollection</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="n">IntentHandler</span><span class="o">.</span><span class="n">exchanges</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">Call</span> <span class="n">the</span> <span class="n">completion</span> <span class="n">handler</span><span class="p">,</span> <span class="n">passing</span> <span class="n">the</span> <span class="n">collection</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">completion</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="n">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="k">static</span> <span class="k">var</span> <span class="n">exchanges</span><span class="p">:</span> <span class="p">[</span><span class="n">CustomExchange</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;CNY&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;人民币&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;USD&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;美元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;GBP&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;英镑&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;EUR&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;欧元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;CAD&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;加拿大元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;HKD&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;港元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;MOP&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;澳门元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;THB&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;泰铢&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CustomExchange</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s2">&#34;SGD&#34;</span><span class="p">,</span> <span class="n">display</span><span class="p">:</span> <span class="s2">&#34;新加坡元&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="result">Result
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Widget</th>
+          <th style="text-align: left">Widget</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><img src="/2022/11/swiftui-widget-05/widget-05-11.png"
+	width="453"
+	height="956"
+	srcset="/2022/11/swiftui-widget-05/widget-05-11_hu6635619547988607368.png 480w, /2022/11/swiftui-widget-05/widget-05-11_hu16201793444445597355.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="47"
+		data-flex-basis="113px"
+	
+></td>
+          <td style="text-align: left"><img src="/2022/11/swiftui-widget-05/widget-05-12.png"
+	width="453"
+	height="956"
+	srcset="/2022/11/swiftui-widget-05/widget-05-12_hu10528985898510886884.png 480w, /2022/11/swiftui-widget-05/widget-05-12_hu13182382421532254883.png 1024w"
+	loading="lazy"
+	
+		alt="img"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="47"
+		data-flex-basis="113px"
+	
+></td>
+      </tr>
+  </tbody>
+</table></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/swiftui/">Swiftui</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2024/09/swiftui_statemanagement/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">State Management in SwiftUI: @State, @Binding, and @ObservedObject</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2024/09/swiftui_observableobject/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ObservableObject and EnvironmentObject in View of SwiftUI</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2022/11/swiftui-widget-06/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS Widget 06 - Making a Dynamic Configurable Widget for tow Intent</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2022/10/swiftui-navigation-slipback/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SwiftUI NavigationBar Hidden, Slipe Back Problem</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2022/10/swiftui-layout-stack/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SwiftUI Layout - VStack / HStack / ZStack</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,109 +1,933 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>git on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/categories/git/</link>
-    <description>Recent content in git on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 23 Jan 2021 18:49:03 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Git Commitizen 规范化commit工具</title>
-      <link>https://blog.qoabc.com/2021/01/git/</link>
-      <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2021/01/git/</guid>
-      <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;需要提前安装node。&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1-安装-commitizen-node-模块&#34;&gt;1. 安装 commitizen node 模块&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g commitizen
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git提交的正确姿势：Commit message 和 Change log 编写指南</title>
-      <link>https://blog.qoabc.com/2020/12/git/</link>
-      <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2020/12/git/</guid>
-      <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;
+    <channel>
+        <title>Git on Scott Tao</title>
+        <link>https://blog.iostao.com/categories/git/</link>
+        <description>Recent content in Git on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 23 Jan 2021 18:49:03 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git Commitizen 规范化commit工具</title>
+        <link>https://blog.iostao.com/2021/01/git-commitizen/</link>
+        <pubDate>Sat, 23 Jan 2021 18:49:03 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2021/01/git-commitizen/</guid>
+        <description>&lt;h2 id=&#34;一安装-commitizen-工具&#34;&gt;一、安装 Commitizen 工具
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;需要提前安装node。&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1-安装-commitizen-node-模块&#34;&gt;1. 安装 commitizen node 模块
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;npm install -g commitizen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2-初始化-commitizen-的适配器-cz-customizable&#34;&gt;2. 初始化 commitizen 的适配器 cz-customizable
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;npm install -g cz-customizable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;3-安装生成log日志的模块&#34;&gt;3. 安装生成log日志的模块
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;npm install -g conventional-changelog-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;报错可以重新执行命令尝试一下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! code ECONNRESET
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network aborted
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network This is a problem related to network connectivity.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network In most cases you are behind a proxy or have bad network settings.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network If you are behind a proxy, please make sure that the
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! network &amp;#39;proxy&amp;#39; config is set properly.  See: &amp;#39;npm help config&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR! A complete log of this run can be found in:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ERR!     /Users/tao/.npm/_logs/2021-01-23T10_12_59_442Z-debug.log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二使用&#34;&gt;二、使用
+&lt;/h2&gt;&lt;h4 id=&#34;1-生成-packagejson&#34;&gt;1. 生成 package.json
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;# cd 到项目目录，执行命令
+$ npm init
+#然后根据提示填写相关的项目信息
+#完成后会生成package.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2-在-packagejson中添加脚本&#34;&gt;2. 在 package.json中添加脚本
+&lt;/h4&gt;&lt;p&gt;在 scripts中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ &amp;quot;changelog&amp;quot;: &amp;quot;conventional-changelog -p angular -i CHANGELOG.md -s 0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#不会覆盖以前的 Change log，只会在 CHANGELOG.md 的头部加上自从上次发布以来的变动
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	$ conventional-changelog -p angular -i CHANGELOG.md -s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	# 生成所有发布的 Change log，会覆盖以前的 Change log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	$ conventional-changelog -p angular -i CHANGELOG.md -w -r -s 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;scripts&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;test&amp;#34;: &amp;#34;echo \&amp;#34;Error: no test specified\&amp;#34; &amp;amp;&amp;amp; exit 1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;changelog&amp;#34;: &amp;#34;conventional-changelog -p angular -i CHANGELOG.md -s 0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这个脚本可以在通过在终端输入 &lt;code&gt;npm run changelog&lt;/code&gt; 生成 CHANGELOG.md 日志文档。&lt;/p&gt;
+&lt;h4 id=&#34;2-加载node_modules依赖组件-cz&#34;&gt;2. 加载node_modules依赖组件 (cz)
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;$ commitizen init cz-conventional-changelog —save —save-exact
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行完以后，项目中就可以一律使用 git cz 代替 git commit来提交代码。&lt;/p&gt;
+&lt;p&gt;同时会显示type选项来自动生成符合格式的 commit message。&lt;/p&gt;
+&lt;h2 id=&#34;三代码提交&#34;&gt;三、代码提交
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;git add .&lt;/li&gt;
+&lt;li&gt;git cz	//使用 git cz 代替之前的 git commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;代码提交流程&#34;&gt;代码提交流程
+&lt;/h2&gt;&lt;p&gt;1.Select the type of change that you&amp;rsquo;re committing 选择改动类型&lt;/p&gt;
+&lt;p&gt;2.What is the scope of this change (e.g. component or file name)? 填写改动范围&lt;/p&gt;
+&lt;p&gt;3.Write a short, imperative tense description of the change: 写一个精简的描述&lt;/p&gt;
+&lt;p&gt;4.Provide a longer description of the change: (press enter to skip) 对于改动写一段长描述&lt;/p&gt;
+&lt;p&gt;5.Are there any breaking changes? (y/n) 是破坏性修改吗？默认n&lt;/p&gt;
+&lt;p&gt;6.Does this change affect any openreve issues? (y/n) 改动修复了哪个问题？默认n&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;类型说明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;feat:     A new feature&lt;/li&gt;
+&lt;li&gt;fix:      A bug fix&lt;/li&gt;
+&lt;li&gt;docs:     Documentation only changes&lt;/li&gt;
+&lt;li&gt;style:    Changes that do not affect the meaning of the code (white-space, formatting, missing semi-
+colons, etc)&lt;/li&gt;
+&lt;li&gt;refactor: A code change that neither fixes a bug nor adds a feature&lt;/li&gt;
+&lt;li&gt;perf:     A code change that improves performance&lt;/li&gt;
+&lt;li&gt;test:     Adding missing tests or correcting existing tests&lt;/li&gt;
+&lt;li&gt;build:    Changes that affect the build system or external dependencies (example scopes: gulp, brocc
+oli, npm)&lt;/li&gt;
+&lt;li&gt;ci:       Changes to our CI configuration files and scripts (example scopes: Travis, Circle, Browser Stack, SauceLabs)&lt;/li&gt;
+&lt;li&gt;chore:    Other changes that don&amp;rsquo;t modify src or test files&lt;/li&gt;
+&lt;li&gt;revert:   Reverts a previous commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四jira&#34;&gt;四、Jira
+&lt;/h2&gt;&lt;p&gt;设置gitlab Network配置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01.png&#34;
+	width=&#34;1912&#34;
+	height=&#34;1246&#34;
+	srcset=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01_hu16431760920881588827.png 480w, https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-01_hu4628764144753241524.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入要配置的项目，点击设置。（这里和上面那个设置不同，这里是设置项目里的配置）&lt;/p&gt;
+&lt;p&gt;往下滑动一点儿，有个保存。保存。保存。不要忘记保存。&lt;/p&gt;
+&lt;p&gt;配置 Jira&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02.png&#34;
+	width=&#34;2220&#34;
+	height=&#34;1342&#34;
+	srcset=&#34;https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02_hu14453019383020938118.png 480w, https://blog.iostao.com/2021/01/git-commitizen/git-commitizen-02_hu13141317528663576988.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;397px&#34;
+	
+&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Git提交的正确姿势：Commit message 和 Change log 编写指南</title>
+        <link>https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/</link>
+        <pubDate>Thu, 31 Dec 2020 11:46:29 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/</guid>
+        <description>&lt;p&gt;这篇文章是很早以前转载的，这两天做了重新接触的时候，发现了自己碰到的一些问题，然后做了一下修改。&lt;/p&gt;
 &lt;p&gt;本文前三部分都是介绍。从第四部分开始是如何安装和使用。&lt;/p&gt;
-&lt;h2 id=&#34;一介绍&#34;&gt;一、介绍&lt;/h2&gt;
-&lt;p&gt;Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git Warning push.default is unset</title>
-      <link>https://blog.qoabc.com/2016/08/git/</link>
-      <pubDate>Thu, 04 Aug 2016 22:01:33 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/08/git/</guid>
-      <description>&lt;p&gt;git push代码的时候，可能会遇到下面的提示：&lt;/p&gt;
+&lt;h2 id=&#34;一介绍&#34;&gt;一、介绍
+&lt;/h2&gt;&lt;p&gt;Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git commit -m &amp;quot;hello world&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面代码的-m参数，就是用来指定 commit mesage 的。&lt;/p&gt;
+&lt;p&gt;如果一行不够，可以只执行git commit，就会跳出文本编译器，让你写多行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;基本上，你写什么都行，可参考如下文章：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.commitlogsfromlastnight.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.commitlogsfromlastnight.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://whatthecommit.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://whatthecommit.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是，一般来说，commit message 应该清晰明了，说明本次提交的目的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1.png&#34;
+	width=&#34;640&#34;
+	height=&#34;620&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu16694157757376896755.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-1_hu9373581400888139603.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angular规范&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;247px&#34;
+	
+&gt;
+目前，社区有多种 Commit message 的写法规范(&lt;a class=&#34;link&#34; href=&#34;http://whatthecommit.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://whatthecommit.com&lt;/a&gt;)。本文介绍Angular 规范（见上图），这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。&lt;/p&gt;
+&lt;h2 id=&#34;二commit-message-的作用&#34;&gt;二、Commit message 的作用
+&lt;/h2&gt;&lt;p&gt;格式化的Commit message，有几个好处。&lt;/p&gt;
+&lt;h4 id=&#34;21-提供更多的历史信息方便快速浏览&#34;&gt;2.1 提供更多的历史信息，方便快速浏览。
+&lt;/h4&gt;&lt;p&gt;比如，下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git log &amp;lt;last tag&amp;gt; HEAD --pretty=format:%s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu41701463238653970.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-2_hu12166196077594003694.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;历史信息&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;22-可以过滤某些commit比如文档改动便于快速查找信息&#34;&gt;2.2 可以过滤某些commit（比如文档改动），便于快速查找信息。
+&lt;/h4&gt;&lt;p&gt;比如，下面的命令仅仅显示本次发布新增加的功能。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git log &amp;lt;last release&amp;gt; HEAD --grep feature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu5940266995568098312.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-1-3_hu910274283722590940.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;新增加的功能&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;23-可以直接从commit生成change-log&#34;&gt;2.3 可以直接从commit生成Change log。
+&lt;/h4&gt;&lt;p&gt;Change Log 是发布新版本时，用来说明与上一个版本差异的文档，详见后文。&lt;/p&gt;
+&lt;h2 id=&#34;三commit-message-的格式&#34;&gt;三、Commit message 的格式
+&lt;/h2&gt;&lt;p&gt;每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;type&amp;gt;(&amp;lt;scope&amp;gt;): &amp;lt;subject&amp;gt;
+// 空一行
+&amp;lt;body&amp;gt;
+// 空一行
+&amp;lt;footer&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，Header 是必需的，Body 和 Footer 可以省略。&lt;/p&gt;
+&lt;p&gt;不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。&lt;/p&gt;
+&lt;h4 id=&#34;31-header&#34;&gt;3.1 Header
+&lt;/h4&gt;&lt;p&gt;Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+（1）type
+type用于说明 commit 的类别，只允许使用下面7个标识。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;feat：新功能（feature）
+fix：修补bug
+docs：文档（documentation）
+style： 格式（不影响代码运行的变动）
+refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+test：增加测试
+chore：构建过程或辅助工具的变动
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。&lt;/p&gt;
+&lt;p&gt;（2）scope
+scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。&lt;/p&gt;
+&lt;p&gt;（3）subject
+subject是 commit 目的的简短描述，不超过50个字符。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 以动词开头，使用第一人称现在时，比如change，而不是changed或changes
+ 第一个字母小写
+ 结尾不加句号（.）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;32-body&#34;&gt;3.2 Body
+&lt;/h4&gt;&lt;p&gt;Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;More detailed explanatory text, if necessary.  Wrap it to about 72 characters or so.
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+- Use a hanging indent
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;有两个注意点。
+（1）使用第一人称现在时，比如使用change而不是changed或changes。
+（2）应该说明代码变动的动机，以及与以前行为的对比。&lt;/p&gt;
+&lt;h4 id=&#34;33-footer&#34;&gt;3.3 Footer
+&lt;/h4&gt;&lt;p&gt;Footer 部分只用于两种情况。&lt;/p&gt;
+&lt;h5 id=&#34;311-不兼容变动&#34;&gt;3.1.1 不兼容变动
+&lt;/h5&gt;&lt;p&gt;如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;BREAKING CHANGE: isolate scope bindings definition has changed.
+    To migrate the code follow the example below:
+    Before:
+    scope: {
+      myAttr: &#39;attribute&#39;,
+    }
+    After:
+    scope: {
+      myAttr: &#39;@&#39;,
+    }
+    The removed `inject` wasn&#39;t generaly useful for directives so there should be no code using it.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;312-关闭-issue&#34;&gt;3.1.2 关闭 Issue
+&lt;/h5&gt;&lt;p&gt;如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Closes #234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;也可以一次关闭多个 issue 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Closes #123, #245, #992
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;34-revert&#34;&gt;3.4 Revert
+&lt;/h4&gt;&lt;p&gt;还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;revert: feat(pencil): add &#39;graphiteWidth&#39; option
+This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Body部分的格式是固定的，必须写成This reverts commit &lt;hash&gt;，其中的hash是被撤销 commit 的 SHA 标识符。&lt;/p&gt;
+&lt;p&gt;如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。&lt;/p&gt;
+&lt;h2 id=&#34;四commitizen-安装&#34;&gt;四、Commitizen 安装
+&lt;/h2&gt;&lt;h4 id=&#34;41-安装-commitizen-node-模块&#34;&gt;4.1 安装 commitizen node 模块
+&lt;/h4&gt;&lt;p&gt;Commitizen是一个撰写合格 Commit message 的工具。
+安装命令如下。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install -g commitizen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;42-初始化-commitizen-的适配器-cz-customizable&#34;&gt;4.2 初始化 commitizen 的适配器 cz-customizable
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;$ npm install -g cz-customizable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;43-安装生成log日志的模块&#34;&gt;4.3 安装生成log日志的模块
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;$ npm install -g conventional-changelog-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;44-初始化&#34;&gt;4.4 初始化
+&lt;/h4&gt;&lt;p&gt;cd 到项目目录，执行命令以下命令，然后根据提示填写相关的项目信息&lt;/p&gt;
+&lt;p&gt;完成后会在项目目录下生成package.json&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;45-commitizen-init&#34;&gt;4.5 commitizen init
+&lt;/h4&gt;&lt;p&gt;在项目目录里，运行下面的命令，使其支持Angular的 Commit Message 格式。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ commitizen init cz-conventional-changelog-cli —save —save-exact
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1.png&#34;
+	width=&#34;980&#34;
+	height=&#34;778&#34;
+	srcset=&#34;https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu28241422013612041.png 480w, https://blog.iostao.com/2020/12/gitcommit-message-and-change-log/gitchange-log-4-1_hu8558429244903999678.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Commit message&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git add .
+LaoTao@taobotongdeMacBook-Pro:~/Documents/CIM/cim-ios$ git cz
+cz-cli@2.5.0, cz-conventional-changelog@1.1.5
+
+
+Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+
+? Select the type of change that you&#39;re committing: (Use arrow keys)
+❯ feat:     A new feature 
+  fix:      A bug fix 
+  docs:     Documentation only changes 
+  style:    Changes that do not affect the meaning of the code
+            (white-space, formatting, missing semi-colons, etc) 
+  refactor: A code change that neither fixes a bug or adds a feature 
+  perf:     A code change that improves performance 
+(Move up and down to reveal more choices)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;五validate-commit-msg&#34;&gt;五、validate-commit-msg
+&lt;/h2&gt;&lt;p&gt;validate-commit-msg 用于检查 Node 项目的 Commit message 是否符合格式。&lt;/p&gt;
+&lt;p&gt;它的安装是手动的。首先，拷贝下面这个&lt;a class=&#34;link&#34; href=&#34;https://github.com/kentcdodds/validate-commit-msg/blob/master/index.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JS&lt;/a&gt;文件，放入你的代码库。文件名可以取为validate-commit-msg.js。&lt;/p&gt;
+&lt;p&gt;接着，把这个脚本加入 Git 的 hook。下面是在package.json里面使用 ghooks，把这个脚本加为commit-msg时运行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;config&amp;quot;: {
+    &amp;quot;ghooks&amp;quot;: {
+      &amp;quot;commit-msg&amp;quot;: &amp;quot;./validate-commit-msg.js&amp;quot;
+    }
+ }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后，每次git commit的时候，这个脚本就会自动检查 Commit message 是否合格。如果不合格，就会报错。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git add -A 
+$ git commit -m &amp;quot;edit markdown&amp;quot; 
+INVALID COMMIT MSG: does not match &amp;quot;&amp;lt;type&amp;gt;(&amp;lt;scope&amp;gt;): &amp;lt;subject&amp;gt;&amp;quot; ! was: edit markdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;六生成-change-log&#34;&gt;六、生成 Change log
+&lt;/h2&gt;&lt;h4 id=&#34;61-生成-change-log日志&#34;&gt;6.1 生成 change log日志
+&lt;/h4&gt;&lt;p&gt;如果你的所有 Commit 都符合 Angular 格式，那么发布新版本时， Change log 就可以用脚本自动生成。&lt;/p&gt;
+&lt;p&gt;例1：&lt;a class=&#34;link&#34; href=&#34;https://github.com/karma-runner/karma/blob/master/CHANGELOG.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/karma-runner/karma/blob/master/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;例2：&lt;a class=&#34;link&#34; href=&#34;https://github.com/btford/grunt-conventional-changelog/blob/master/CHANGELOG.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/btford/grunt-conventional-changelog/blob/master/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;生成的文档包括以下三个部分。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;New features
+Bug fixes
+Breaking changes.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每个部分都会罗列相关的 commit ，并且有指向这些 commit 的链接。当然，生成的文档允许手动修改，所以发布前，你还可以添加其他内容。&lt;/p&gt;
+&lt;p&gt;conventional-changelog 就是生成 Change log 的工具，运行下面的命令即可。&lt;/p&gt;
+&lt;p&gt;（这个工具我们上面的步骤有安装，这里只是再提示一下，已经安装的，执行第三步即可）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install -g conventional-changelog-cli
+$ cd my-project
+$ conventional-changelog -p angular -i CHANGELOG.md -s 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面命令不会覆盖以前的 Change log，只会在CHANGELOG.md的头部加上自从上次发布以来的变动。&lt;/p&gt;
+&lt;p&gt;如果你想生成所有发布的 Change log，要改为运行下面的命令。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ conventional-changelog -p angular -i CHANGELOG.md -w -r -s 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;有的文章里面，命令没有 -s ，每次执行只是在终端打印所有的日志，并没有在本地生成文件。这里需要注意一下。&lt;/p&gt;
+&lt;h4 id=&#34;62-配置changelog生成命令&#34;&gt;6.2 配置changelog生成命令
+&lt;/h4&gt;&lt;p&gt;为了方便使用，可以将生成命令其写入&lt;code&gt;package.json&lt;/code&gt;的&lt;code&gt;scripts&lt;/code&gt;字段。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	$ &amp;#34;changelog&amp;#34;: &amp;#34;conventional-changelog -p angular -i CHANGELOG.md -s 0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;scripts&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;test&amp;#34;: &amp;#34;echo \&amp;#34;Error: no test specified\&amp;#34; &amp;amp;&amp;amp; exit 1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#34;changelog&amp;#34;: &amp;#34;conventional-changelog -p angular -i CHANGELOG.md -s 0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;七关于日志生成的问题&#34;&gt;七、关于日志生成的问题
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    我自己碰到的问题，增量生成日志文件，发现每一次都会把所有的日志打印出来了。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;研究了好久才发现，每一个版本需要设置一个tag才可以。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    比如我master分支切出来一个 1.0.0 的分支，修改完合并到 master分支上。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这个时候我需要 git tag v1.0.0 (这个tag名字不能和 分支 1.0.0 相同，不然生成日志的时候会提示错误，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;或者是tag名字相同，然后把1.0.0分支删除）。 等我2.0.0 合并的时候，生成log日志，就可以看到日志
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;文件中，会显示出不同版本的不同提交信息日志了。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Git Warning push.default is unset</title>
+        <link>https://blog.iostao.com/2016/08/git-warning-default/</link>
+        <pubDate>Thu, 04 Aug 2016 22:01:33 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/08/git-warning-default/</guid>
+        <description>&lt;p&gt;git push代码的时候，可能会遇到下面的提示：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ git push
 
 warning: push.default is unset; its implicit value is changing in Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. 
 To squelch this message and maintain the current behavior after the default changes, use:  
 
 git config --global push.default matching
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To squelch this message and adopt the new behavior now, use:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global push.default simple
+
+When push.default is set to &#39;matching&#39;, 	
+git will push local branches to the remote branches 
+that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative &#39;simple&#39; behavior, 	
+which only pushes the current branch to the corresponding remote branch 
+that &#39;git pull&#39; uses to update the current branch.
+
+See &#39;git help config&#39; and search for &#39;push.default&#39; for further information.
+(the &#39;simple&#39; mode was introduced in Git 1.7.11. 
+Use the similar mode &#39;current&#39; instead of &#39;simple&#39; 
+if you sometimes use older versions of Git)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;事实上这并不会影响你push的结果，最终push还会成功，因为这只是一个”warning“。会在后面看到push成功的结果。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.10 KiB | 0 bytes/s, done.
+Total 10 (delta 9), reused 0 (delta 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你可以按照他说的那样运行：
+$ git config &amp;ndash;global push.default matching&lt;/p&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git config --global push.default simple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;命令，以后再push就不会有警告了。&lt;/p&gt;
+&lt;p&gt;下面说一下 &lt;code&gt;push.default matching&lt;/code&gt; 和 &lt;code&gt;push.default simple&lt;/code&gt; 的区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;push.default设置maching的意思是：git push 会把你本地所有分支push到名称相对应的远程主机上。这意味着可能你会在不经意间push一些你原本没打算push的分支。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;push.default设置成simple的意思是：git push仅仅把当前所在分支push到从当初git pull pull下来的那个对应分支上，另外，这个过程也会同时检查各个分支的名称是否相对应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        <item>
+        <title>管理多个SSH Key</title>
+        <link>https://blog.iostao.com/2016/07/git-sshkey-multi/</link>
+        <pubDate>Mon, 18 Jul 2016 15:43:04 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/07/git-sshkey-multi/</guid>
+        <description>&lt;p&gt;如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
+例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。&lt;/p&gt;
+&lt;p&gt;$ ls ~/.ssh/
+config     &lt;br&gt;
+github_rsa  &lt;br&gt;
+github_rsa.pub&lt;br&gt;
+personalid  &lt;br&gt;
+personalid.pub&lt;/p&gt;
+&lt;p&gt;以上是我的密钥列表，那么我的github如何使用多个密钥呢。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要编辑一下配置文件~/.ssh/config：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果没有这个文件，可以创建一个(切换到 ~/.ssh	目录下)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ touch config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编辑 config文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Host github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   		Hostname github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    User            username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    	IdentityFile    ~/.ssh/github_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Host bitbucket.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    Hostname bitbucket.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    User username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    IdentityFile ~/.ssh/personalid
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;只是用一个公钥&#34;&gt;只是用一个公钥
+&lt;/h4&gt;&lt;p&gt;也可以几个账号都上传同一个公钥，配置的时候，使用同一个公钥文件就可以了。为了安全性考虑，不建议这么做&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	 Hostname github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 User            username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    	IdentityFile    ~/.ssh/github_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host bitbucket.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 Hostname bitbucket.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 User username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 IdentityFile ~/.ssh/github_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解释此配置文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Host: &amp;quot;github.com&amp;quot;是一个『别名』，可以随意命名，也可以直接写github
+
+Hostname:	仓储地址：例如git@github.com，这里要的就是 github.com
+
+IdentityFile: 所使用的公钥文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配置完毕，用下面的命令测试一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ssh -T git@bitbucket.com
+logged in as beyond521t.
+
+You can use git or hg to connect to Bitbucket. Shell access is disabled.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以使用如下命令，进行debug查看：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ssh -vv git@bitbucket.com
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>管理多个SSH Key</title>
-      <link>https://blog.qoabc.com/2016/07/git/</link>
-      <pubDate>Mon, 18 Jul 2016 15:43:04 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/07/git/</guid>
-      <description>&lt;p&gt;如果你在一台机器使用两个github账号，或者是使用github的同时，还有bitbucket等代码管理仓库。
-例如github，默认情况下，这个秘钥是在你账户的.ssh目录生成id_rsa文件，对应一个id_rsa.pub公钥文件，但是，我可能会有两个github帐号，一个个人，一个办公用（或者是多个仓库管理），这时，我就需要生成多个密钥。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>生成SSH Key</title>
-      <link>https://blog.qoabc.com/2016/07/git/</link>
-      <pubDate>Sun, 17 Jul 2016 13:42:55 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/07/git/</guid>
-      <description>&lt;p&gt;本文主要介绍如何使用终端，生成ssh key。
-SSH只是一种协议，用于计算机之间的加密登录，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>ssh exchange identification</title>
-      <link>https://blog.qoabc.com/2016/07/git/</link>
-      <pubDate>Mon, 11 Jul 2016 11:43:06 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/07/git/</guid>
-      <description>&lt;p&gt;执行 git pull 的时候，提示(When I do the &amp;ldquo;git pull&amp;rdquo;)&lt;/p&gt;
+        </item>
+        <item>
+        <title>生成SSH Key</title>
+        <link>https://blog.iostao.com/2016/07/git-sshkey/</link>
+        <pubDate>Sun, 17 Jul 2016 13:42:55 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/07/git-sshkey/</guid>
+        <description>&lt;p&gt;本文主要介绍如何使用终端，生成ssh key。
+SSH只是一种协议，用于计算机之间的加密登录，存在多种实现，既有商业实现，也有开源实现。本文针对的实现是OpenSSH，它是自由软件，应用非常广泛。&lt;/p&gt;
+&lt;h5 id=&#34;生成ssh-key&#34;&gt;生成SSH KEY：
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;	$ ssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot; , 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;然后会要求你输入公钥的名字&#34;&gt;然后会要求你输入公钥的名字：
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;	Enter file in which to save the key (/Users/LaoTao/.ssh/id_rsa): ssh_rsa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;接下来要求输入密码以及确认密码&#34;&gt;接下来要求输入密码，以及确认密码：
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;	Enter passphrase (empty for no passphrase): 
+	Enter same passphrase again: 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;以下是整个终端命令流程&#34;&gt;以下是整个终端命令流程：
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;	$ ssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot;
+	Generating public/private rsa key pair.
+	Enter file in which to save the key (/Users/LaoTao/.ssh/id_rsa): ssh_rsa
+	Enter passphrase (empty for no passphrase): 
+	Enter same passphrase again: 
+	Your identification has been saved in ssh_rsa.
+	Your public key has been saved in ssh_rsa.pub.
+	The key fingerprint is:
+	SHA256:m4+0RNpNoAgjjpmtIrQhmwvQHsGnOIoikVkJ/tVqHXM your_email@example.com
+	The key&#39;s randomart image is:
+	+---[RSA 2048]----+
+	|.                |
+	|.o .  .          |
+	|..B .. +.E       |
+	|o@.*..o.+.       |
+	|%+=..o..S .      |
+	|*Bo..  + =       |
+	|%..   . * .      |
+	|*.     o +       |
+	|.       o .      |
+	+----[SHA256]-----+				
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;可以使用cat命令查看公钥&#34;&gt;可以使用cat命令查看公钥：
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;	$ cat ~/.ssh/ssh_rsa.pub 
+	ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuX2Zbre+4kPLkolvWXXtmvehFoO/LYVe+/EDA3j4NLX+6GZYXqAG6IEDAKzDKUzaUoxfuWZFk8ZyHhjfViD3FC90Yh9xuIXGYua4xyy6/7CC/HK2mS3Ha0SGW/QKMJ+QrLyeCpUeNiGDbH12DvUJpgp1vwTIIi0Pkykz6SP2mWkgpAKsBYExg+PkY2aLzopw2GpW0JApqQ9Jz/yMZQ5T7yh/k7iYZNWQ/ch9UxmM58gEQjw1qHiC7QZU9JvJsbh+qusNcIjcKLjMrwhw6q21jeGtn+7It4hKo9YL76OR/QRi1OWUJzqOaTY4ssUBEU15f3OGxVT03emJ556hFyVLn your_email@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;拷贝命令&#34;&gt;拷贝命令：
+&lt;/h5&gt;&lt;p&gt;Windows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;clip &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Mac:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pbcopy &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GNU/Linux (requires xclip):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xclip -sel clip &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后将复制的ssh_rsa.pub 公钥粘贴到git服务器的SSH配置中。例如github:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001.png&#34;
+	width=&#34;2256&#34;
+	height=&#34;370&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001_hu16214005922475629005.png 480w, https://blog.iostao.com/2016/07/git-sshkey/git-sshkey-001_hu3546954095509113906.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;github-ssh配置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;609&#34;
+		data-flex-basis=&#34;1463px&#34;
+	
+&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>ssh exchange identification</title>
+        <link>https://blog.iostao.com/2016/07/git-ssh-exchange-identification/</link>
+        <pubDate>Mon, 11 Jul 2016 11:43:06 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/07/git-ssh-exchange-identification/</guid>
+        <description>&lt;p&gt;执行 git pull 的时候，提示(When I do the &amp;ldquo;git pull&amp;rdquo;)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ssh_exchange_identification: read: Connection reset by peer
 fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;经过各种研究，发现了一个比较坑的问题（至少目前我遇到的就是），问题就是服务端有问题，具体是什么，不清楚，因为我不负责这块内容。只说一下，临时解决吧，因为需要，所以不能够等待服务端解决之后再去提交。
+(I found this is because the)&lt;/p&gt;
+&lt;p&gt;这种问题是因为使用SSH提交导致的，但是发现使用HTTPS这种提交没有问题。git clone代码的时候，大家肯定会看到，给了两个选项，一个是SSH的地址， 一个是HTTPS的地址。&lt;/p&gt;
+&lt;p&gt;//输入命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+//输出 SSH的origin配置
+origin	git@git.******.com:ict/project.git (fetch)
+origin	git@git.******.com:ict/project.git (push)
+
+//添加一个HTTPs origin 
+//这里使用的是 HTTPS地址
+git remote add origin2 https://git.******.com/ict/project.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;//输入命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+//输出 origin配置
+origin	git@git.******.com:ict/project.git (fetch)
+origin	git@git.******.com:ict/project.git (push)
+origin2	https://git.******.com/ict/project.git (fetch)
+origin2	https://git.******.com/ict/project.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;//然后进行一下操作实时
+//这里使用HTTPS 的话，使用 配置的 origin2 进行配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git pull origin2 develop
+//发现执行成功
+remote: Counting objects: 22, done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 22 (delta 12), reused 0 (delta 0)
+Unpacking objects: 100% (22/22), done.
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>如何配置Bitbucket的ssh</title>
-      <link>https://blog.qoabc.com/2016/02/git/</link>
-      <pubDate>Sun, 21 Feb 2016 12:43:34 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/02/git/</guid>
-      <description>&lt;p&gt;在bitbucket上使用https协议，经常会在提交代码的时候出错，让人很着急上火，但是用ssh就要方便很多。&lt;/p&gt;
-&lt;p&gt;下面介绍一下设置ssh的方法：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git命令</title>
-      <link>https://blog.qoabc.com/2016/02/git/</link>
-      <pubDate>Tue, 16 Feb 2016 11:49:03 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/02/git/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; Profile&lt;/p&gt;
-&lt;h4 id=&#34;1远程仓库相关命令&#34;&gt;1)远程仓库相关命令&lt;/h4&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        <item>
+        <title>如何配置Bitbucket的ssh</title>
+        <link>https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/</link>
+        <pubDate>Sun, 21 Feb 2016 12:43:34 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/</guid>
+        <description>&lt;p&gt;在bitbucket上使用https协议，经常会在提交代码的时候出错，让人很着急上火，但是用ssh就要方便很多。&lt;/p&gt;
+&lt;p&gt;下面介绍一下设置ssh的方法：&lt;/p&gt;
+&lt;p&gt;1.在终端中运行ssh-keygen。&lt;/p&gt;
+&lt;p&gt;2.然后一路enter，直接到结束。不要理会中间的输入。&lt;/p&gt;
+&lt;p&gt;3 打开用户目录下.ssh/id_rsa.pub文件，复制其内容。(服务器操作，可以用vi打开，进行复制)
+&lt;img src=&#34;https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01.png&#34;
+	width=&#34;800&#34;
+	height=&#34;169&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01_hu3088135679581427821.png 480w, https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/01_hu5529632840695879315.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;命令截图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;473&#34;
+		data-flex-basis=&#34;1136px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4.Bitbucket上点右上角的小头像，然后选择Manage account.&lt;/p&gt;
+&lt;p&gt;5.左边目录选择SSH Keys， 然后选择add key。将刚才复制的内容粘贴进去，保存。&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;回到工程页面，将使用的协议选择为SSH。&lt;/p&gt;
+&lt;p&gt;现在就可以使用SSH了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        <item>
+        <title>Git命令</title>
+        <link>https://blog.iostao.com/2016/02/git-command/</link>
+        <pubDate>Tue, 16 Feb 2016 11:49:03 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/02/git-command/</guid>
+        <description>&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
+# Git
+&lt;!--![Mou icon](http://h.picphotos.baidu.com/album/s%3D550%3Bq%3D90%3Bc%3Dxiangce%2C100%2C100/sign=53df6017ecf81a4c2232eccce7111164/8644ebf81a4c510f861530796759252dd52aa584.jpg?referer=5318d6feccef7609651cadaf039a&amp;x=.jpg)--&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; Profile&lt;/p&gt;
+&lt;h4 id=&#34;1远程仓库相关命令&#34;&gt;1)远程仓库相关命令
+&lt;/h4&gt;&lt;p&gt;检出仓库：$ git clone git://github.com/jquery/jquery.git&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;查看远程仓库：$ git remote -v
+
+获取远程分支信息到本地：$ git fetch 
+(查看远程分支显示不全时，执行这个命令)
+
+添加远程仓库：$ git remote add [name] [url]
+
+删除远程仓库：$ git remote rm [name]
+
+拉取远程仓库：$ git pull [remoteName] [localBranchName]
+
+推送远程仓库：$ git push [remoteName] [localBranchName]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;2分支branch操作相关命令&#34;&gt;2)分支(branch)操作相关命令
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;查看本地分支：$ git branch
+
+查看远程分支：$ git branch -r
+
+创建本地分支：$ git branch [name] ----注意新分支创建后不会自动切换为当前分支
+
+切换分支：$ git checkout [name]
+
+创建新分支并立即切换到新分支：$ git checkout -b [name]
+
+迁出远程分支	$ git checkout -b dev origin/dev 
+
+删除分支：$ git branch -d [name] 
+
+ -d 选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项
+
+合并分支：$ git merge [name] ----将名称为[name]的分支与当前分支合并
+
+创建远程分支(本地分支push到远程)：$ git push origin [name]
+
+删除远程分支：$ git push origin --delete [name]
+			$ git push origin :[name]
+
+列出分支图
+git config --global alias.lg &amp;quot;log --graph --all --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit --date=relative&amp;quot;
+
+git lg (设置了别名后，就可以使用别名进行查看)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;3版本tag操作相关命令&#34;&gt;3）版本(tag)操作相关命令
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;查看版本：$ git tag
+
+创建版本：$ git tag [name]
+
+删除版本：$ git tag -d [name]
+
+查看远程版本：$ git tag -r
+
+创建远程版本(本地版本push到远程)：$ git push origin [name]
+
+删除远程版本：$ git push origin :refs/tags/[name]
+
+拉取tag版本：git checkout -b branch_name tag_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;4-子模块submodule相关操作命令&#34;&gt;4) 子模块(submodule)相关操作命令
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;添加子模块：$ git submodule add [url] [path]
+
+初始化子模块：$ git submodule init  ----只在首次检出仓库时运行一次就行
+
+更新子模块：$ git submodule update ----每次更新或切换分支后都需要运行一下
+
+删除子模块：$ git rm --cached [path]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5忽略一些文件文件夹不提交&#34;&gt;5）忽略一些文件、文件夹不提交
+&lt;/h4&gt;&lt;p&gt;在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如
+target,
+bin,
+*.db,&lt;/p&gt;
+&lt;h2 id=&#34;代码提交&#34;&gt;代码提交
+&lt;/h2&gt;&lt;p&gt;命令操作详情:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、查看修改文件
+	git status
+2、暂存修改的文件
+	git add .
+3、提交已暂存的文件
+	git commit
+4、拉取远程修改内容
+	git pull -p
+	如果有冲突，这里修改，修改之后，从1步骤重新开始
+5、提交代码到远程分支
+	git push
+	
+	如果没有创建远程分支， 则使用如下命令
+	git push origin 分支名
+	
+	//如果是从远程分支拉取的，但是没有建立关系，使用以下命令
+	git branch --set-upstream my_branch origin/my_branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;以下内容比较多，不容易理解&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;代码提交一般有五个步骤：&lt;/p&gt;
+&lt;p&gt;1.查看目前代码的修改状态&lt;/p&gt;
+&lt;p&gt;2.查看代码修改内容&lt;/p&gt;
+&lt;p&gt;3.暂存需要提交的文件&lt;/p&gt;
+&lt;p&gt;4.提交已暂存的文件&lt;/p&gt;
+&lt;p&gt;5.同步到服务器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global push.default matching
+
+git config --global push.default simple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;建立关系&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git branch --set-upstream my_branch origin/my_branch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;1-查看目前代码的修改状态&#34;&gt;1. 查看目前代码的修改状态
+&lt;/h3&gt;&lt;p&gt;提交代码之前，首先应该检查目前所做的修改，运行git status命令&lt;/p&gt;
+&lt;p&gt;a) 已暂存 （changes to be committed）&lt;/p&gt;
+&lt;p&gt;new file //表示新建文件&lt;/p&gt;
+&lt;p&gt;modified //表示修改文件&lt;/p&gt;
+&lt;p&gt;deleted //表示删除文件&lt;/p&gt;
+&lt;p&gt;b) 已修改 （changed but not updated）&lt;/p&gt;
+&lt;p&gt;modified //表示修改文件&lt;/p&gt;
+&lt;p&gt;deleted //表示删除文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;另外，git 给出了可能需要的操作命令，git add/rm, gitcheckout --
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;c) 未跟踪 （untracked files）&lt;/p&gt;
+&lt;h3 id=&#34;2-查看代码修改的内容&#34;&gt;2. 查看代码修改的内容
+&lt;/h3&gt;&lt;p&gt;git diff  &lt;file&gt;&lt;/p&gt;
+&lt;p&gt;比较某文件与最近提交节点的差异。&lt;/p&gt;
+&lt;p&gt;注意：如果该文件已暂存，那么应该使用git diff –cached&lt;file&gt;&lt;/p&gt;
+&lt;p&gt;git diff &lt;hashcode&gt; &lt;hashcode&gt;  &lt;file&gt;&lt;/p&gt;
+&lt;p&gt;比较某文件在提交节点a，节点b的差异。&lt;/p&gt;
+&lt;p&gt;技巧：如果省略后面一个hashcode，则默认表示与上一提交节点比较。（也可以利用^运算符）&lt;/p&gt;
+&lt;h3 id=&#34;3-暂存需要提交的文件&#34;&gt;3. 暂存需要提交的文件
+&lt;/h3&gt;&lt;p&gt;如果是新建的文件&lt;/p&gt;
+&lt;p&gt;则git add  &lt;file&gt;&lt;/p&gt;
+&lt;p&gt;如果是修改的文件&lt;/p&gt;
+&lt;p&gt;则git add  &lt;file&gt;&lt;/p&gt;
+&lt;p&gt;如果是删除的文件&lt;/p&gt;
+&lt;p&gt;则 git rm  &lt;file&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-提交已暂存的文件&#34;&gt;4. 提交已暂存的文件
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;git commit
+
+注意注释填写规范。
+
+git commit --amend
+
+修改最近一次提交。有时候如果提交注释书写有误或者漏提文件，可以使用此命令。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5-同步到服务器&#34;&gt;5. 同步到服务器
+&lt;/h3&gt;&lt;p&gt;同步到服务器前先需要将服务器代码同步到本地&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;命令： git pull
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果执行失败，就按照提示还原有冲突的文件，然后再次尝试同步。
+命令：git checkout &amp;ndash; &amp;lt;有冲突的文件路径&amp;gt;&lt;/p&gt;
+&lt;p&gt;同步到服务器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;命令： git push origin  &amp;lt;本地分支名&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;远程如果暂时没有分支（即初始，没有master分支），同步本地master分支到远程&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果执行失败，一般是没有将服务器代码同步到本地导致的，先执行上面的git pull命令。&lt;/p&gt;
+&lt;h3 id=&#34;新仓库处理&#34;&gt;新仓库处理
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$ touch README.md
+$ git init
+$ git add README.md
+$ git commit -m &amp;quot;first commit&amp;quot;
+$ git remote add origin https://github.com/****.git
+$ git -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;未整理&#34;&gt;未整理
+&lt;/h2&gt;&lt;p&gt;git remote prune origin&lt;/p&gt;
+&lt;p&gt;git pull&lt;/p&gt;
+&lt;p&gt;git branch -a&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git tag&lt;/li&gt;
+&lt;li&gt;git clone &lt;a class=&#34;link&#34; href=&#34;https://xxx.xx.xx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://xxx.xx.xx&lt;/a&gt; &amp;ndash;depth 1&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

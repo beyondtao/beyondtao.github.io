@@ -1,152 +1,1219 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>swift on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/tags/swift/</link>
-    <description>Recent content in swift on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 30 Oct 2016 15:45:13 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Swift3中dispatch_once废弃的解决办法</title>
-      <link>https://blog.qoabc.com/2016/10/swift/</link>
-      <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/10/swift/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blog.qoabc.com/img/swift3-GCD-dispatch-async/001.png&#34; alt=&#34;图示&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>swift 使用 delegate 内存泄露问题</title>
-      <link>https://blog.qoabc.com/2016/07/swift/</link>
-      <pubDate>Mon, 11 Jul 2016 15:39:46 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/07/swift/</guid>
-      <description>&lt;p&gt;帐号退出登录，切换rootViewController的时候，发现内存没有释放，于是对代码进行了一遍检查。发现了在定义 protocol的时候，有两种方式。&lt;/p&gt;
-&lt;h4 id=&#34;区别&#34;&gt;区别&lt;/h4&gt;
-&lt;p&gt;一个是使用 @objc定义， 一个不使用@objc。&lt;/p&gt;
-&lt;p&gt;使用 @objc 方法可以定义 optional。否则，不可以。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>LTPickerView.swift</title>
-      <link>https://blog.qoabc.com/2016/07/swift/</link>
-      <pubDate>Fri, 08 Jul 2016 23:08:08 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/07/swift/</guid>
-      <description>&lt;h1 id=&#34;ltpickerview---swift&#34;&gt;LTPickerView - Swift&lt;/h1&gt;
-&lt;h3 id=&#34;连接地址&#34;&gt;连接地址&lt;/h3&gt;
+    <channel>
+        <title>Swift on Scott Tao</title>
+        <link>https://blog.iostao.com/tags/swift/</link>
+        <description>Recent content in Swift on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 23 Dec 2023 20:36:12 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/tags/swift/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Swift Dates and Times</title>
+        <link>https://blog.iostao.com/2023/12/swift_datetime/</link>
+        <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
+        
+        <guid>https://blog.iostao.com/2023/12/swift_datetime/</guid>
+        <description>&lt;h2 id=&#34;swift-datetime&#34;&gt;Swift Datetime
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@jpmtech/swiftui-format-dates-and-times-the-easy-way-fc896b25003b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;From Jpmtech&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I need to develop a calendar module, so I have collected some information online for reference.&lt;/p&gt;
+&lt;h2 id=&#34;preview&#34;&gt;Preview
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01.jpg&#34;
+	width=&#34;654&#34;
+	height=&#34;1328&#34;
+	srcset=&#34;https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01_hu13363103413544704647.jpg 480w, https://blog.iostao.com/2023/12/swift_datetime/swift_datetime_01_hu8030627644824689900.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Demo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;49&#34;
+		data-flex-basis=&#34;118px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code:
+&lt;/h2&gt;&lt;p&gt;&lt;B&gt;Demo Time: 2023/12/23 21:57:54&lt;/B&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VStack {  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Dec 23, 2023
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now, format: .dateTime.month().day().year())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Dec 23, 2023 -&amp;gt; (short: Dec)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .abbreviated, time: .omitted))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: December 23, 2023 (long: December)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .long, time: .omitted))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Saturday, December 23, 2023 -&amp;gt; long: December, with the weekday
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .complete, time: .omitted))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: 2023/12/23 (show as the number)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .numeric, time: .omitted))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: AD(Anno Domini ...0...2023)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(.dateTime.era()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Q4 (spring, summer, autumn, winter)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(.dateTime.quarter()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Weekday: Sat
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Weekday: &amp;#34; + Date.now.formatted(.dateTime.weekday()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Two Digits year: 23 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Two Digits year: &amp;#34; + Date.now.formatted(.dateTime.year(.twoDigits)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Digits year: 2023
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Digits year: &amp;#34; + Date.now.formatted(.dateTime.year()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // Demo Time: 2023/12/23 21:57:54
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Month: 12 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Month: &amp;#34; + Date.now.formatted(.dateTime.month(.twoDigits)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Month: Dec
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Month: &amp;#34; + Date.now.formatted(.dateTime.month(.abbreviated)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Two Digits day: 23
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Two Digits day: &amp;#34; + Date.now.formatted(.dateTime.day(.twoDigits)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Oclock: 21
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Oclock: &amp;#34; + Date.now.formatted(.dateTime.hour(.twoDigits(amPM: .wide))))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Minutes: 57
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Minutes: &amp;#34; + Date.now.formatted(.dateTime.minute()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: Seconds: 54
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Seconds: &amp;#34; + Date.now.formatted(.dateTime.second()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: 21:57:54 GMT+1 (hour:min:sec GMT+1, Germany)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .omitted, time: .complete))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: 21:57:54 (hour:min:sec)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .omitted, time: .standard))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: 21:57
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(Date.now.formatted(date: .omitted, time: .shortened))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // how many days from the first day of this year
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: The day from first: 357
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;The day from first: &amp;#34; + Date.now.formatted(.dateTime.dayOfYear()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // how many weeks from the first day of this year
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: The week fromo first day: 51
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;The week fromo first day: &amp;#34; + Date.now.formatted(.dateTime.week()))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // the first letter of the month
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // J: January, February: F,..., December: D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // print: First letter of the Month: D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;First letter of the Month: &amp;#34; + Date.now.formatted(.dateTime.month(.narrow)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Swift static func == (lhs: XXX, rhs: XXX) -&gt; Bool</title>
+        <link>https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/</link>
+        <pubDate>Sun, 17 Dec 2023 00:00:46 +0100</pubDate>
+        
+        <guid>https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/</guid>
+        <description>&lt;h2 id=&#34;swift-static-func--lhs-xxx-rhs-xxx---bool&#34;&gt;Swift static func == (lhs: XXX, rhs: XXX) -&amp;gt; Bool
+&lt;/h2&gt;&lt;!-- ![用图说话](/img/aps/ost-tcp-ip.png) --&gt;
+&lt;p&gt;It&amp;rsquo;s been a long time since I last wrote code. While I was programming, I encountered something I don&amp;rsquo;t understand. Why is the symbol &amp;lsquo;==&amp;rsquo; used in function names?&amp;quot;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After studying, I realized that &amp;ldquo;==&amp;rdquo; is simply the equality operator in programming, used to compare two values to see if they are equal. LOL!&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code:
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Equatable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Symbol&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;used&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;function&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Here&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;have&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;two&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;conditions&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;both&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;same&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;they&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;same&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;person&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;example&#34;&gt;Example:
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;let p1 = Person(name: &amp;#34;David&amp;#34;, age: 18)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;let p2 = Person(name: &amp;#34;David&amp;#34;, age: 18)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if p1 == p2 {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    print(&amp;#34;It&amp;#39;s the same person&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;comparable-same-as-&#34;&gt;Comparable same as ==
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;protocol&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Comparable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Equatable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;extension&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Comparable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inlinable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inlinable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inlinable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lhs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rhs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Swift3中dispatch_once废弃的解决办法</title>
+        <link>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</link>
+        <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01.png&#34;
+	width=&#34;1526&#34;
+	height=&#34;240&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3501255111169184025.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-01_hu3251674048650655950.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;635&#34;
+		data-flex-basis=&#34;1526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;内存和活动管理选项( memory and activity management options)是今年苹果在OS发布的新技术(包括 OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0).这个包括用.initiallyInactive在非活动的状态启动一个队列,或者为你的线程设置一个自动释放属性(.autoreleaseInherit, .autoreleaseNever, .autoreleaseWorkItem)&lt;/p&gt;
+&lt;p&gt;swift 3中对C层级的GCD的API进行了彻头彻尾的改变。本文将从实际使用场景来了解一下新的api使用。&lt;/p&gt;
+&lt;p&gt;dispatch_async
+一个常见的场景就是在一个全局队列进行一些操作后切换到主线程配置UI。现在是这么写：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DispatchQueue.global().async {
+    // code
+    DispatchQueue.main.async {
+        // 主线程中
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;global()是一个有着默认参数的静态函数：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class DispatchQueue : DispatchObject {
+    public  class var main: DispatchQueue 
+    public class func global(qos: DispatchQoS.QoSClass = default) -&amp;gt; DispatchQueue
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;sync&lt;/p&gt;
+&lt;p&gt;如果想同步执行操作，和async类似，调用sync就可以了：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DispatchQueue.global().sync {    
+    // 同步执行
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;优先级：DispatchQoS
+我们知道，GCD 的默认队列优先级有四个：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DISPATCH_QUEUE_PRIORITY_HIGH
+DISPATCH_QUEUE_PRIORITY_DEFAULT
+DISPATCH_QUEUE_PRIORITY_LOW
+DISPATCH_QUEUE_PRIORITY_BACKGROUND
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;现在则改为了QoSClass枚举&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public enum QoSClass {
+
+    case background
+
+    case utility
+
+    case `default`
+
+    case userInitiated
+
+    case userInteractive
+
+    case unspecified
+
+    public init?(rawValue: qos_class_t)
+
+    public var rawValue: qos_class_t { get }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这些命名比原先的更加友好，能更好表达这个操作的意图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu4140799552534284773.png 480w, https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/swift3-GCD-dispatch-async-02_hu17590588213227408113.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;584px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;和原有的对应关系是：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/beyond521t/LTPickerView-Swift&#34;&gt;GitHub LTPickerView-Swift&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>判断中、英文、数字、符号</title>
-      <link>https://blog.qoabc.com/2016/06/swift/</link>
-      <pubDate>Wed, 22 Jun 2016 15:01:36 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/06/swift/</guid>
-      <description>&lt;p&gt;swift 判断String里面包含的中、英文、数字、符号。并附汉字Unicode字符编码表。
-&lt;a href=&#34;https://blog.qoabc.com/2016/06/22/iOS-UnicodeScalars/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8.pdf&#34;&gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>inout 关键字位置的变化</title>
-      <link>https://blog.qoabc.com/2016/05/swift/</link>
-      <pubDate>Sat, 14 May 2016 21:36:37 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
-      <description>&lt;p&gt;inout 关键字可以用于将参数修饰为可修改，并且将修改会回传。这次 Swift 3 中对这个关键字也做了一些修改，咱们一起来聊聊吧。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</title>
-      <link>https://blog.qoabc.com/2016/05/swift/</link>
-      <pubDate>Mon, 09 May 2016 21:24:10 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
-      <description>&lt;p&gt;转自:&lt;a href=&#34;http://swiftcafe.io/2016/05/07/swift3-objc/&#34;&gt;swiftcafe&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Swift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>swift打包失败，swiftc failed with exit code 1</title>
-      <link>https://blog.qoabc.com/2016/05/swift/</link>
-      <pubDate>Mon, 09 May 2016 10:58:13 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/05/swift/</guid>
-      <description>&lt;p&gt;Xcode7.3我更新到了Xcode7.3.1版本，然后在编译运行的时候就经常提示错误：&lt;/p&gt;
+&lt;li&gt;DISPATCH_QUEUE_PRIORITY_HIGH:         .userInitiated&lt;/li&gt;
+&lt;li&gt;DISPATCH_QUEUE_PRIORITY_DEFAULT:      .default&lt;/li&gt;
+&lt;li&gt;DISPATCH_QUEUE_PRIORITY_LOW:          .utility&lt;/li&gt;
+&lt;li&gt;DISPATCH_QUEUE_PRIORITY_BACKGROUND:   .background&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建队列
+DispatchQueue的默认初始化方法创建的就是一个同步队列，如果要创建并发的队列，在attributes中声明concurrent。&lt;/p&gt;
+&lt;p&gt;// 同步队列&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let serialQueue = DispatchQueue(label: &amp;quot;queuename&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;// 并发队列&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let concurrentQueue = DispatchQueue(label: &amp;quot;queuename&amp;quot;, attributes: .concurrent)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;推迟时间后执行&lt;/p&gt;
+&lt;p&gt;原先的dispatch_time_t现在由DispatchTime对象表示。可以用静态方法now获得当前时间，然后再通过加上一个DispatchTimeInterval枚举来获得一个需要延迟的时间。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let delay = DispatchTime.now() + DispatchTimeInterval.seconds(60)DispatchQueue.main.asyncAfter(deadline: delay) { 
+    // 延迟执行}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里也可以直接加上一个秒数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let three = DispatchTime.now() + 3.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因为DispatchTime中自定义了+号。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public func +(time: DispatchTime, seconds: Double) -&amp;gt; DispatchTime
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;DispatchGroup&lt;/p&gt;
+&lt;p&gt;如果想在dispatch_queue中所有的任务执行完成后再做某种操作可以使用DispatchGroup。原先的dispatch_group_t由现在的DispatchGroup对象代替。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let group = DispatchGroup()
+
+let queueBook = DispatchQueue(label: &amp;quot;book&amp;quot;)
+queueBook.async(group: group) {
+	// 下载图书
+}
+
+let queueVideo = DispatchQueue(label: &amp;quot;video&amp;quot;)
+queueVideo.async(group: group) {
+    // 下载视频
+}
+
+group.notify(queue: DispatchQueue.main) { 
+    // 下载完成
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;DispatchGroup会在组里的操作都完成后执行notify。&lt;/p&gt;
+&lt;p&gt;如果有多个并发队列在一个组里，我们想在这些操作执行完了再继续，调用wait&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;group.wait()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;DispatchWorkItem&lt;/p&gt;
+&lt;p&gt;使用DispatchWorkItem代替原来的dispatch_block_t。
+在DispatchQueue执行操作除了直接传了一个() -&amp;gt; Void类型的闭包外，还可以传入一个DispatchWorkItem。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public func sync(execute workItem: DispatchWorkItem)
+
+public func async(execute workItem: DispatchWorkItem)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;DispatchWorkItem的初始化方法可以配置Qos和DispatchWorkItemFlags，但是这两个参数都有默认参数，所以也可以只传入一个闭包。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public init(qos: DispatchQoS = default, flags: DispatchWorkItemFlags = default, block: @escaping @convention(block) () -&amp;gt; ())
+
+let workItem = DispatchWorkItem { 
+    // TODO:
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;DispatchWorkItemFlags枚举中assignCurrentContext表示QoS根据创建时的context决定。&lt;/p&gt;
+&lt;p&gt;值得一提的是DispatchWorkItem也有wait方法，使用方式和group一样。调用会等待这个workItem执行完。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let myQueue = DispatchQueue(label: &amp;quot;my.queue&amp;quot;, attributes: .concurrent)
+let workItem = DispatchWorkItem {
+    sleep(1)
+    print(&amp;quot;done&amp;quot;)
+}
+myQueue.async(execute: workItem)
+print(&amp;quot;before waiting&amp;quot;)
+workItem.wait()
+print(&amp;quot;after waiting&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;barrier&lt;/p&gt;
+&lt;p&gt;假设我们有一个并发的队列用来读写一个数据对象。如果这个队列里的操作是读的，那么可以多个同时进行。如果有写的操作，则必须保证在执行写入操作时，不会有读取操作在执行，必须等待写入完成后才能读取，否则就可能会出现读到的数据不对。在之前我们用dipatch_barrier实现。
+现在属性放在了DispatchWorkItemFlags里。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let wirte = DispatchWorkItem(flags: .barrier) { 
+    // write data}let dataQueue = DispatchQueue(label: &amp;quot;data&amp;quot;, attributes: .concurrent)
+dataQueue.async(execute: wirte)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;信号量&lt;/p&gt;
+&lt;p&gt;为了线程安全的统计数量，我们会使用信号量作计数。原来的dispatch_semaphore_t现在用DispatchSemaphore对象表示。
+初始化方法只有一个，传入一个Int类型的数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let semaphore = DispatchSemaphore(value: 5)
+
+// 信号量减一
+semaphore.wait()
+
+//信号量加一
+semaphore.signal()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;dispatch_once&lt;/code&gt;在swift 3中已经被废弃了。&lt;/p&gt;
+&lt;p&gt;简单的建议就是一些初始化场景就用懒加载吧。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Examples of dispatch_once replacements with global or static constants and variables. 
+// In all three, the initialiser is called only once. 
+
+// Static properties (useful for singletons).
+class Object {
+    static let sharedInstance = Object()
+}
+
+// Global constant.
+let constant = Object()
+
+// Global variable.
+var variable: Object = {
+    let variable = Object()
+    variable.doSomething()
+    return variable
+}()&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>swift 使用 delegate 内存泄露问题</title>
+        <link>https://blog.iostao.com/2016/07/swift-delegate-memory-leak/</link>
+        <pubDate>Mon, 11 Jul 2016 15:39:46 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/07/swift-delegate-memory-leak/</guid>
+        <description>&lt;p&gt;帐号退出登录，切换rootViewController的时候，发现内存没有释放，于是对代码进行了一遍检查。发现了在定义 protocol的时候，有两种方式。&lt;/p&gt;
+&lt;h4 id=&#34;区别&#34;&gt;区别
+&lt;/h4&gt;&lt;p&gt;一个是使用 @objc定义， 一个不使用@objc。&lt;/p&gt;
+&lt;p&gt;使用 @objc 方法可以定义 optional。否则，不可以。&lt;/p&gt;
+&lt;h4 id=&#34;使用-objc-定义接口&#34;&gt;使用 @objc 定义接口
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;@objc protocol delegateAction : NSObjectProtocol {
+    /** 代理方法 */
+    optional func delegateMethod()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里的写法会造成内存泄露&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class LTViewModel: NSObject {
+	/** 代理 */
+    var delegate: delegateAction?
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;正确的写法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class LTViewModel: NSObject {
+	//这里需要添加 weak 修饰
+	/** 代理 */
+    weak var delegate: delegateAction?
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;直接使用-protocol-定义接口&#34;&gt;直接使用 protocol 定义接口
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;protocol delegateAction : NSObjectProtocol {
+    /** 代理方法 */
+    optional func delegateMethod()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;正确的写法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//这里不能够使用 weak 修饰，即使使用了，Xcode也会报错。
+class LTViewModel: NSObject {
+	/** 代理 */
+    var delegate: delegateAction?
+}&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>LTPickerView.swift</title>
+        <link>https://blog.iostao.com/2016/07/swift-ltpickerview/</link>
+        <pubDate>Fri, 08 Jul 2016 23:08:08 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/07/swift-ltpickerview/</guid>
+        <description>&lt;h1 id=&#34;ltpickerview---swift&#34;&gt;LTPickerView - Swift
+&lt;/h1&gt;&lt;h3 id=&#34;连接地址&#34;&gt;连接地址
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/beyond521t/LTPickerView-Swift&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub LTPickerView-Swift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关于&#34;&gt;关于
+&lt;/h3&gt;&lt;p&gt;VERSION &lt;code&gt;1.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Swift &lt;code&gt;2.2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;TIME &lt;code&gt;2016-07-09 11:41:07&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Create By &lt;code&gt;老陶&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;效果图&#34;&gt;效果图
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;一维数组&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;二维数组&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;时间选择器&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu5397645105074715145.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-01_hu10558250761869055425.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一维数组&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu11579386298292832752.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-02_hu3774851530981175382.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多维数组&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03.png&#34;
+	width=&#34;320&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu9258861284580425372.png 480w, https://blog.iostao.com/2016/07/swift-ltpickerview/LTPickerView-03_hu13579471794801822993.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;时间选择器&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;要求&#34;&gt;要求
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;因为使用了元组等返回结果，所以不允许在Objective-C中混编使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用&#34;&gt;使用
+&lt;/h3&gt;&lt;h5 id=&#34;返回数据类型&#34;&gt;返回数据类型
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;resultValue 是一个元组类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  /** 返回数据的结果类型 */
+  typealias pickerResultType = (first: AnyObject, second: AnyObject, third: AnyObject, fourth: AnyObject, fifth: AnyObject)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;uipickerview&#34;&gt;UIPickerView
+&lt;/h5&gt;&lt;p&gt;一、一维数组&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let array = [&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;]
+let pickerView = LTPickerView.pickerView(array, title: &amp;quot;一维数组&amp;quot;)
+pickerView.setSelectedRow(2)	//选中某一行
+pickerView.show()				//显示界面
+//点击 确定/取消 的回调方法
+pickerView.resultClosure({ (pickerView, resultValue) in
+            print(&amp;quot;\(resultValue)&amp;quot;)
+        }) { (pickerView) in
+            
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;二、多维数组&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let array = [[&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;], [&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;], [&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;], [&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;]]
+let pickerView = LTPickerView.pickerView(array, title: &amp;quot;多维数组&amp;quot;)
+//选中行数，这里必须使用(0, 0, 0, 0, 0) 这种元组格式，5个元素
+pickerView.setSelectedRows((0, 1, 2, 3, 0))
+pickerView.show()
+//点击 确定/取消 的回调方法
+pickerView.resultClosure({ (pickerView, resultValue) in
+       
+    }) { (pickerView) in
+        
+}    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;uidatepicker&#34;&gt;UIDatePicker
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;let pickerView = LTPickerView.datePickerView(NSDate(), datePickerMode: UIDatePickerMode.Date, title: &amp;quot;时间选择器&amp;quot;)
+pickerView.show()
+pickerView.resultClosure({ (pickerView, resultValue) in
+		//resultValue.first 是输出的`String`类型
+		//resultValue.second 是输出的`NSDate`类型
+       print(&amp;quot;\(resultValue.first), \(resultValue.second)&amp;quot;)
+   }) { (pickerView) in
+       
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;版本更新&#34;&gt;版本更新
+&lt;/h3&gt;&lt;p&gt;####V1.0.0&lt;/p&gt;
+&lt;p&gt;2016-07-09 11:41:40&lt;/p&gt;
+&lt;p&gt;First Version&lt;/p&gt;
+&lt;p&gt;####V1.0.1
+2016-07-09 11:41:45&lt;/p&gt;
+&lt;p&gt;增加时间选择器，默认选中时间功能
+修复已知bug&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>判断中、英文、数字、符号</title>
+        <link>https://blog.iostao.com/2016/06/swift-unicodescalars/</link>
+        <pubDate>Wed, 22 Jun 2016 15:01:36 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/06/swift-unicodescalars/</guid>
+        <description>&lt;p&gt;swift 判断String里面包含的中、英文、数字、符号。并附汉字Unicode字符编码表。
+&lt;a class=&#34;link&#34; href=&#34;unicode.pdf&#34; &gt;Unicode字符编码表&amp;ndash;下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;let text = &amp;ldquo;文字内容text123😄&amp;rdquo;
+for commitChar in text.unicodeScalars
+{
+//字符串只有一个字符，这个循环只会执行1次
+print(Int(commitChar.value))&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    if ((commitChar.value&amp;gt;=0x4e00)&amp;amp;&amp;amp;(commitChar.value&amp;lt;=0x9FA5)) {
+        //字符为中文
+        print(&amp;quot;字符为中文&amp;quot;)
+    } else if((commitChar.value&amp;gt;64)&amp;amp;&amp;amp;(commitChar.value&amp;lt;91)){
+        print(&amp;quot;字符为大写英文字母&amp;quot;)
+    }else if((commitChar.value&amp;gt;96)&amp;amp;&amp;amp;(commitChar.value&amp;lt;123)){
+        print(&amp;quot;字符为小写英文字母&amp;quot;)
+    }else if((commitChar.value&amp;gt;47)&amp;amp;&amp;amp;(commitChar.value&amp;lt;58)){
+        print(&amp;quot;字符为数字&amp;quot;)
+    }else{
+        print(&amp;quot;其他字符&amp;quot;)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>inout 关键字位置的变化</title>
+        <link>https://blog.iostao.com/2016/05/swift-inout-keyordschangeposition/</link>
+        <pubDate>Sat, 14 May 2016 21:36:37 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/swift-inout-keyordschangeposition/</guid>
+        <description>&lt;p&gt;inout 关键字可以用于将参数修饰为可修改，并且将修改会回传。这次 Swift 3 中对这个关键字也做了一些修改，咱们一起来聊聊吧。&lt;/p&gt;
+&lt;p&gt;在 Swift 中，如果我们希望一个函数可以修改它的参数变量的值，我们可以使用 inout 关键词。这个相当于编程语言概念中所谓的传址调用。 具体代码中就是这样的例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func foo(inout x:  Int) {
+
+    x = 2
+
+}
+
+var x = 5
+foo(&amp;amp;x)
+print(x) // 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在这个例子中， foo 函数的参数 x, 使用了 inout 修饰，这样我们在后面的调用中，将变量 x 传递给这个函数后，这个变量中的值也会被这个函数内部改变。 这个就是 inout 的基本作用了。&lt;/p&gt;
+&lt;p&gt;在 Swift 3.0 中，有一个 &lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/swift-evolution/blob/master/proposals/0031-adjusting-inout-declarations.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SE-0031&lt;/a&gt; 的提案，就是改变 inout 这个关键词的位置的。&lt;/p&gt;
+&lt;p&gt;当前的语法中，inout 的位置是在参数标签的位置上，也就是这个例子中的：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func foo(inout x:  Int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;inout 关键字位于参数标签 x 的前面。 而 Swift 3.0 以后，这个关键词的位置就会在参数类型前面了：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func foo(x: inout Int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个提案中也解释了这样做的好处。首先这样做之后参数标签就不和修饰关键字发生混淆，比如避免了这样的情况：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func foo(inOut x:  Int)
+func foo(inout x:  Int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第一行的 inout 的大小写错误，所以它不是关键字。但这时编译器不会报错，因为 inOut 这时候作为了外部参数标签(Swift 的参数标签分为外部标签和内部标签，这个例子中外部标签是 inOut，所以我们在外部调用这个函数的时候就是这个语法 foo(inOut:),而函数内部还是用内部标签 x 来引用这个参数)。&lt;/p&gt;
+&lt;p&gt;除了避免混淆之外，inout 的位置移动后还有一点需要大家注意的。按照提案中的意思，就是以前版本的遗留代码中的 inout，很可能会变成参数标签，也就是这样：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func foo(inout x:  Int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;比如之前我们的 foo 函数这样定义，但 Swift 3.0 之后， 这里的 inout 并不是关键字，而变成这个参数的外部标签了。所以这一点还是很值得注意的。&lt;/p&gt;
+&lt;p&gt;最后提案中还说了一句，这样修改后能够更好的和 Rust 语言的模式相匹配。并且说在后续的版本中会更多的引入到 Swift 语言中。&lt;/p&gt;
+&lt;p&gt;总体来说呢，这个改动不算大，但多多少少会对我们已有的代码造成一些影响。 inout 这个关键字大家应该多少都会用到过。所以在 Swift 3.0 更新后，也需要注意下这个问题~&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Swift 3.0 预告：将 Objc 库转换成更符合 Swift 语法风格的形式</title>
+        <link>https://blog.iostao.com/2016/05/swift3-0advanceobjctransformtoswift/</link>
+        <pubDate>Mon, 09 May 2016 21:24:10 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/swift3-0advanceobjctransformtoswift/</guid>
+        <description>&lt;p&gt;转自:&lt;a class=&#34;link&#34; href=&#34;http://swiftcafe.io/2016/05/07/swift3-objc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;swiftcafe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Swift 3.0 更新越来越临近，这次更新会给我们带来很多实用的内容，比如对 Objc 库的迁移，会更符合 Swift 的语法风格。用过之前版本的 Swift，我们会发现很多 Objc 库的方法名称其实还是以 Objc 的风格来命名，而这次 Swift 3.0 的更新会专门处理这个问题。&lt;/p&gt;
+&lt;p&gt;原因&lt;/p&gt;
+&lt;p&gt;这个源于一个编号为 SE-0005 的提案，并且已经审核通过。这个方案的提出，源于这样一个痛点。 Swift 应用于 iOS App 开发，就免不了会依赖于原生的 Cocoa Touch 库。而由于历史原因，大家也都知道， iOS 原生库大多时基于 Objc 来实现的。所以他们的编码规范也都遵循着 Objc 的规范，诸如函数，方法的命名规则这些，都有自己的一套标准。&lt;/p&gt;
+&lt;p&gt;而 Swift 3.0 也发布了自己的 API 设计规范，同时 Objc 也有自己的设计规范，这样一来我们使用 Swift 开发 iOS App 的时候，其实总是在游走于两套规范的 API 之间，对开发者的体验嘛，就不是很好了。&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;p&gt;咱们用一个实际的例子来说明这个问题。 比如 NSString 有这样一个方法：&lt;/p&gt;
+&lt;p&gt;1
+2
+let content = listItemView.text.stringByTrimmingCharactersInSet(
+NSCharacterSet.whitespaceAndNewlineCharacterSet())
+stringByTrimmingCharactersInSet 会剪掉字符串头尾中的某些字符。从这个方法名中，明显的可以看出它是以 Objc 规范来命名的。&lt;/p&gt;
+&lt;p&gt;如果以 Swift 的编码规范，这个方法其实应该这样命名：&lt;/p&gt;
+&lt;p&gt;1
+let content = listItemView.text.trimming(.whitespaceAndNewlines)
+从这里可以看出，objc 的命名方式，很多会把函数的返回值类型，以及参数类型都包含在函数名里面。比如我们上面的 stringByTrimmingCharactersInSet 方法。但这和 Swift 命名规则就不同了。而且随着 Swift 规范的清晰，这个问题就越来越凸显出来了。&lt;/p&gt;
+&lt;p&gt;所以 Swift 3.0 才会将这个问题提上日程，并在这个版本中准备解决这个问题。&lt;/p&gt;
+&lt;p&gt;规则&lt;/p&gt;
+&lt;p&gt;解决这个问题，肯定不能手动的替换。因为系统库的方法实在太多了，所以就需要总结出一系列替换规则。根据这些规则将相应的标识替换完成。&lt;/p&gt;
+&lt;p&gt;那么 Swift 具体是怎么做的呢， 咱们来了解一下。&lt;/p&gt;
+&lt;p&gt;扩大 swift_name 编译属性的应用范围 - 这个涉及到 Swift 底层的概念，当我们将 Objc 的 API 导入到 Swift 的时候，我们是可以指定一个编译属性 swift_name 的。而这个编译属性，可以将 Objc 中的标识名称在 Swift 中以不同的名字表现出来。但在之前的版本中，这个编译属性只能对枚举项和工厂方法有效，这次将会扩大它的范围。&lt;/p&gt;
+&lt;p&gt;去除多余的类型名称 - Objc 的编码规范中，会建议在方法名称中将参数名和类型也表示出来，而这个在 Swift 中就是多余的，我们前面那个例子也演示了。这个也是着重处理的点。&lt;/p&gt;
+&lt;p&gt;添加默认参数 - 对于 Objc 需要默认参数的地方，会在 Swift 中添加上默认参数，比如一些选项参数：&lt;/p&gt;
+&lt;p&gt;1
+NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
+这个 option 参数就会提供默认参数。&lt;/p&gt;
+&lt;p&gt;添加第一个参数的参数标签 - 为方法的第一个参数添加合适的参数标签。&lt;/p&gt;
+&lt;p&gt;在布尔属性前面加上 is - 在最新的 Swift 规范中，需要在布尔属性前面加上 is, 而 Objc 规范恰巧不建议使用 is，所以在 Swift 3 中会将 Objc 迁移过来的布尔属性，按照 Swift 规范来进行修改。可以参考 Swift 规范中关于布尔属性的部分内容。&lt;/p&gt;
+&lt;p&gt;值类型变成小写 - 会将 Objc 的属性值以小写开头， 比如 URLHandler 会变为 urlHandler。&lt;/p&gt;
+&lt;p&gt;下面是一个官方文档中给出的转换的例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class UIBezierPath : NSObject, NSCopying, NSCoding {
+  convenience init(ovalInRect: CGRect)
+  func moveToPoint(_: CGPoint)
+  func addLineToPoint(_: CGPoint)
+  func addCurveToPoint(_: CGPoint, controlPoint1: CGPoint, controlPoint2: CGPoint)
+  func addQuadCurveToPoint(_: CGPoint, controlPoint: CGPoint)
+  func appendPath(_: UIBezierPath)
+  func bezierPathByReversingPath() -&amp;gt; UIBezierPath
+  func applyTransform(_: CGAffineTransform)
+  var empty: Bool { get }
+  func containsPoint(_: CGPoint) -&amp;gt; Bool
+  func fillWithBlendMode(_: CGBlendMode, alpha: CGFloat)
+  func strokeWithBlendMode(_: CGBlendMode, alpha: CGFloat)
+  func copyWithZone(_: NSZone) -&amp;gt; AnyObject
+  func encodeWithCoder(_: NSCoder)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;转换后：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class UIBezierPath : NSObject, NSCopying, NSCoding {
+  convenience init(ovalIn rect: CGRect)
+  func move(to point: CGPoint)
+  func addLine(to point: CGPoint)
+  func addCurve(to endPoint: CGPoint, controlPoint1 controlPoint1: CGPoint, controlPoint2 controlPoint2: CGPoint)
+  func addQuadCurve(to endPoint: CGPoint, controlPoint controlPoint: CGPoint)
+  func append(_ bezierPath: UIBezierPath)
+  func reversing() -&amp;gt; UIBezierPath
+  func apply(_ transform: CGAffineTransform)
+  var isEmpty: Bool { get }
+  func contains(_ point: CGPoint) -&amp;gt; Bool
+  func fill(_ blendMode: CGBlendMode, alpha alpha: CGFloat)
+  func stroke(_ blendMode: CGBlendMode, alpha alpha: CGFloat)
+  func copy(with zone: NSZone = nil) -&amp;gt; AnyObject
+  func encode(with aCoder: NSCoder)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;是不是感觉方法名清晰很多呢。&lt;/p&gt;
+&lt;p&gt;总结&lt;/p&gt;
+&lt;p&gt;以上就是 Swift 3 对 Objc 依赖库中的优化了，这次优化后，我们以后在用 Swift 来开发 iOS App 的时候，就不会再混合两种代码风格啦。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>swift打包失败，swiftc failed with exit code 1</title>
+        <link>https://blog.iostao.com/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</link>
+        <pubDate>Mon, 09 May 2016 10:58:13 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</guid>
+        <description>&lt;p&gt;Xcode7.3我更新到了Xcode7.3.1版本，然后在编译运行的时候就经常提示错误：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Command /Applications/Xcode.app/Contents/Developer/Toolchains/
 XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>swift3.0变化（swift2.2工程中发现）</title>
-      <link>https://blog.qoabc.com/2016/04/swift/</link>
-      <pubDate>Thu, 28 Apr 2016 15:20:01 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
-      <description>&lt;h5 id=&#34;initstartend-is-deprecated-it-will-be-removed-in-swift-3-use-the--operator&#34;&gt;&amp;lsquo;init(start:end:)&amp;rsquo; is deprecated: it will be removed in Swift 3. Use the &amp;lsquo;..&amp;lt;&amp;rsquo; operator&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;var continousDigitsRange:Range&amp;lt;Int&amp;gt; = Range&amp;lt;Int&amp;gt;(start: 0, end: 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不过当我再次编译的时候，就会执行正常。偶尔会提示这个问题，刚开始以为是Xcode7.3.1版本的问题。然而在今天准备打包的时候，却一直被这个提示卡在了这里。无奈只能去想办法去解决这个问题了。 刚开始网上查找资料，有的说是有的文件不存在，经过排查，确实发现了，有红色的文件。 删除之后，却还是不成功。最后通过修改配置，暂时解决了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Target &amp;gt; Build Settings &amp;gt; Swift Compiler &amp;gt; Optimization Level.
+I had to change my &amp;quot;Optimization Level&amp;quot; to None[-0none]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虽然这里通过了编译，但不知道有没有更好的办法。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>swift3.0变化（swift2.2工程中发现）</title>
+        <link>https://blog.iostao.com/2016/04/swift3-0newinfofoundin2-2/</link>
+        <pubDate>Thu, 28 Apr 2016 15:20:01 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/swift3-0newinfofoundin2-2/</guid>
+        <description>&lt;h5 id=&#34;initstartend-is-deprecated-it-will-be-removed-in-swift-3-use-the--operator&#34;&gt;&amp;lsquo;init(start:end:)&amp;rsquo; is deprecated: it will be removed in Swift 3. Use the &amp;lsquo;..&amp;lt;&amp;rsquo; operator
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;var continousDigitsRange:Range&amp;lt;Int&amp;gt; = Range&amp;lt;Int&amp;gt;(start: 0, end: 0)
 
 Since update to Xcode 7.3 (Swift 2.2) I got the following hint:
 
 &#39;init(start:end:)&#39; is deprecated: it will be removed in Swift 3. Use the &#39;..&amp;lt;&#39; operator.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;新方法：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UIImage 拉伸图片 resizableImageWithCapInsets</title>
-      <link>https://blog.qoabc.com/2016/04/swift/</link>
-      <pubDate>Wed, 27 Apr 2016 10:53:54 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;let insets = UIEdgeInsetsMake(30, 0, 10, 0)
+&lt;p&gt;新方法：&lt;/p&gt;
+&lt;p&gt;let string = &amp;ldquo;Who A U&amp;rdquo;
+string.substringWithRange(Range(string.startIndex.advancedBy(0) ..&amp;lt; string.startIndex.advancedBy(2)))&lt;/p&gt;
+&lt;h5 id=&#34;i-i--&#34;&gt;i++ i&amp;ndash;
+&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;苹果认为 i++ 和 ++i在代码中容易产生理解错误。所以取消了 自增、自减。
+改为 i += 1, 或 i -= 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;for-var-i--0-i--4-i&#34;&gt;for var i = 0; i &amp;lt; 4; i++
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;for index in 0&amp;hellip;3&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for index in 0 ..&amp;lt; 4&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  //定义数组
+  var array = [String]()	
+  或者 
+  let array = [&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;, &amp;quot;d&amp;quot;]
+
+  for str in array {
+  	print(&amp;quot;\(str)&amp;quot;)
+  }
+
+  //如果是一个对象数组。比如一个Model -- Person.swift
+  var array = [Person]()
+  或者
+  let array = [person1, person2, person3]
+  for person in array {
+  	print(&amp;quot;\(person.name)&amp;quot;)
+  }&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        <item>
+        <title>UIImage 拉伸图片 resizableImageWithCapInsets</title>
+        <link>https://blog.iostao.com/2016/04/uiimage-resizableimagewithcapinsets/</link>
+        <pubDate>Wed, 27 Apr 2016 10:53:54 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/uiimage-resizableimagewithcapinsets/</guid>
+        <description>&lt;pre&gt;&lt;code&gt;let insets = UIEdgeInsetsMake(30, 0, 10, 0)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;//top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat
-其中Insets这个参数的格式是 (top, left, bottom, right)，从上、左、下、右分别在图片上画了一道线，这样就给一个图片加了一个框。&lt;/p&gt;</description>
-    </item>
+其中Insets这个参数的格式是 (top, left, bottom, right)，从上、左、下、右分别在图片上画了一道线，这样就给一个图片加了一个框。&lt;/p&gt;
+&lt;p&gt;只有在框里面的部分才会被拉伸，而框外面的部分则不会改变。
+4个参数是上边界，左边界，下边界，右边界距离，也可以为负值。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let image = UIImage(named: &amp;quot;icon.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;//iOS5之前，端盖(end cap)概念，用来指定图片中的哪一部分不用拉伸。上下左右不需要被拉伸的边缘就称为端盖。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//iOS5 + 方法
+bodyImage.image = image?.resizableImageWithCapInsets(insets)
+
+//iOS6 + 方法
+    bodyImage.image = image?.resizableImageWithCapInsets(insets, resizingMode: UIImageResizingMode.Stretch)
     
-    <item>
-      <title>Swift字符串常用操作总结</title>
-      <link>https://blog.qoabc.com/2016/04/swift/</link>
-      <pubDate>Thu, 07 Apr 2016 13:19:17 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
-      <description>&lt;p&gt;版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>String还是NSString</title>
-      <link>https://blog.qoabc.com/2016/04/swift/</link>
-      <pubDate>Thu, 07 Apr 2016 13:03:18 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/04/swift/</guid>
-      <description>&lt;p&gt;既然像 String 这样的 Swift 的类型和 Foundation 的对应的类是可以无缝转换的，那么我们在使用和选择的时候，有没有什么需要特别注意的呢？&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Swift2.2的新特性</title>
-      <link>https://blog.qoabc.com/2016/03/swift/</link>
-      <pubDate>Wed, 23 Mar 2016 22:25:21 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/03/swift/</guid>
-      <description>&lt;p&gt;Swift 2.2 随着 iOS 9.3 一同闪亮登场，相较于 Swift 2.1， 2.2 版本做出了许多调整，从其调整方向上我们也能一窥 Swift 3.0 的影子，以下内容主要来自于苹果 Swift 官方 Blog ，接下来就让我们进入正题，一睹 Swift 2.2 的庐山真面目：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UITesting中文错误问题</title>
-      <link>https://blog.qoabc.com/2016/02/swift/</link>
-      <pubDate>Fri, 19 Feb 2016 11:35:23 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/02/swift/</guid>
-      <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错&lt;/h2&gt;
-&lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+   resizingMode 用来指定拉伸模式:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;UIImageResizingMode.Stretch 拉伸模式，通过拉伸UIEdgeInsets指定的矩形区域来填充图片&lt;/li&gt;
+&lt;li&gt;UIImageResizingMode.Tile 平铺模式，通过重复显示UIEdgeInsets指定的矩形区域来填充图片&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        <item>
+        <title>Swift字符串常用操作总结</title>
+        <link>https://blog.iostao.com/2016/04/swift-stringoperation/</link>
+        <pubDate>Thu, 07 Apr 2016 13:19:17 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/swift-stringoperation/</guid>
+        <description>&lt;p&gt;版本2：增加了Swift 2.0的语法，与Swift 1.2的语法相比，主要是：advance方法变成了advancedBy方法（但不是简单替换）；没有了count方法，count(str)需要变成str.characters.count等。&lt;/p&gt;
+&lt;p&gt;字符串的定义&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;hello, mandarava.&amp;quot; //字符串变量
+let str2=&amp;quot;hello, mandarava.&amp;quot; //字符串常量
+let str3=&amp;quot;&amp;quot; //空字符串
+let str4=String() //空字符串
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符的定义&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var char1:Character=&amp;quot;m&amp;quot; //字符变量
+let char2:Character=&amp;quot;m&amp;quot; //字符常量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串的连接&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str1=&amp;quot;hello, &amp;quot;
+let str2=&amp;quot;mandarava.&amp;quot;
+let str3=str1+str2 //=连接str1、str2
+//str3=&amp;quot;hello, mandarava.&amp;quot;
+//----------------------------------------
+let str4=&amp;quot;\(str1)\(str2)&amp;quot; //=连接str1、str2
+//str4=&amp;quot;hello, mandarava.&amp;quot;
+//----------------------------------------
+let strArray=[&amp;quot;apple&amp;quot;, &amp;quot;orange&amp;quot;, &amp;quot;cherry&amp;quot;]
+let joinStr=&amp;quot;,&amp;quot;.join(strArray)
+//joinStr=&amp;quot;apple,orange,cherry&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串与字符的连接&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let char1:Character=&amp;quot;o&amp;quot;
+var str1=&amp;quot;hell&amp;quot;
+let str2=str1+String(char1)
+//str2=&amp;quot;hello&amp;quot;
+//----------------------------------------
+let str3=&amp;quot;\(str1)\(char1)&amp;quot;
+//str3=&amp;quot;hello&amp;quot;
+//----------------------------------------
+str1.append(char1)
+//str1=&amp;quot;hello&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串与其它类型值的连接&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let xx=10
+let yy=10.8
+let str1=&amp;quot;\(xx)+\(yy)=?&amp;quot;
+//str1=&amp;quot;10+10.8=?&amp;quot;
+//----------------------------------------
+let str2=String(format: &amp;quot;%i+%.1f=?&amp;quot;, xx, yy)
+//str2=&amp;quot;10+10.8=?&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串枚举字符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//Swift 1.2
+let str=&amp;quot;mandarava&amp;quot;
+for ch in str{
+ println(ch)
+}
+//-----------------------
+//Swift 2.0
+let str=&amp;quot;mandarava&amp;quot;
+for ch in str.characters{
+ print(ch)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;获取字符串中指定索引处的字符&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str=&amp;quot;Mandarava&amp;quot;
+let chr=str[advance(str.startIndex,2)] //Swift 1.2 //chr:Character=&amp;quot;n&amp;quot;
+let chr=str[str.startIndex.advancedBy(2)] //Swift 2.0 //chr:Character=&amp;quot;n&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;计算字符串长度length&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str=&amp;quot;@Tao&amp;quot;
+let len1=count(str) //swift 1.2 //=4 
+let len2=str.characters.count //swift 2.0 //=4 
+let blen=str.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) //=10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串比较&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str1=&amp;quot;hello,&amp;quot;
+let str2=&amp;quot;mandarava.&amp;quot;
+let str3=&amp;quot;hello,mandarava.&amp;quot;
+let comp1 = str1==str2 //false
+let comp2 = str1+str2 == str3 //true
+let comp3 = str1 &amp;lt; str2 //true
+let comp4 = str1 != str2 //true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;是否包含子串contains&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str1=&amp;quot;hello,mandarava.&amp;quot;
+let str2=&amp;quot;mandarava&amp;quot;
+let range=str1.rangeOfString(str2)
+if range != nil{
+ //包含
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查找子串indexof&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str=&amp;quot;hi,Mandarava.&amp;quot;
+let range=str.rangeOfString(&amp;quot;Mandarava&amp;quot;, options: NSStringCompareOptions.allZeros) //Swift 1.2
+let range=str.rangeOfString(&amp;quot;Mandarava&amp;quot;, options: NSStringCompareOptions()) //Swift 2.0
+let startIndex=range?.startIndex //=3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;首字母大写capitalized&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;mandarava is a flower.&amp;quot;
+str1.capitalizedString
+//str1=&amp;quot;Mandarava Is A Flower.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;转换为大写字母uppercase&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;hello, mandarava.&amp;quot;
+str1=str1.uppercaseString
+//str1=&amp;quot;HELLO, MANDARAVA.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;转换为小写字母lowercase&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;HELLO, MANDARAVA.&amp;quot;
+str1=str1.lowercaseString
+//str1=&amp;quot;hello, mandarava.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;截取字符串substring&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str1=&amp;quot;hello,mandarava.&amp;quot;
+let str2=str1.substringFromIndex(advance(str1.startIndex, 6)) //Swift 1.2
+let str2=str1.substringFromIndex(str1.startIndex.advancedBy(6)) //Swift 2.0
+//str2=&amp;quot;mandarava.&amp;quot;
+//----------------------------------------
+let str3=str1.substringToIndex(advance(str1.startIndex, 5)) //Swift 1.2
+let str3=str1.substringToIndex(str1.startIndex.advancedBy(5)) //Swift 2.0
+//str3=&amp;quot;hello&amp;quot;
+//----------------------------------------
+let range=Range&amp;lt;String.Index&amp;gt;(start: advance(str1.startIndex, 6), end: advance(str1.endIndex, -1)) //Swift 1.2
+let range=Range&amp;lt;String.Index&amp;gt;(start: str1.startIndex.advancedBy(6), end: str1.endIndex.advancedBy(-1)) //Swift 2.0
+let str4=str1.substringWithRange(range)
+//str4=&amp;quot;mandarava&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串修剪trim&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let str1=&amp;quot; mandarava.\n &amp;quot;
+let str2=str1.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+//str2=&amp;quot;mandarava.&amp;quot;
+//----------------------------------------
+let str3=str1.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+//str3=&amp;quot;mandarava.\n&amp;quot;
+//----------------------------------------
+let charset=NSCharacterSet(charactersInString:&amp;quot; \n&amp;quot;)
+let str4=str1.stringByTrimmingCharactersInSet(charset)
+//str4=&amp;quot;mandarava.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串的分解子串split&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;boy, girl, man, woman&amp;quot;
+let str1Array=str1.componentsSeparatedByString(&amp;quot;,&amp;quot;)
+//str1Array=[&amp;quot;boy&amp;quot;, &amp;quot; girl&amp;quot;, &amp;quot; man&amp;quot;, &amp;quot; woman&amp;quot;]
+var str2=&amp;quot;boy,girl,man 10 20 30&amp;quot;
+let charset=NSCharacterSet(charactersInString:&amp;quot;, &amp;quot;)
+let str2Array=str2.componentsSeparatedByCharactersInSet(charset)
+//str2Array=[&amp;quot;boy&amp;quot;, &amp;quot;girl&amp;quot;, &amp;quot;man&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;20&amp;quot;, &amp;quot;30&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字符串替换replace&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var str1=&amp;quot;My name is Mandarava.&amp;quot;
+let subRange=Range(start: str1.startIndex, end: advance(str1.startIndex, 2)) //Swift 1.2
+let subRange=Range(start: str1.startIndex, end: str1.startIndex.advancedBy(2)) //Swift 2.0
+str1.replaceRange(subRange, with: &amp;quot;Your&amp;quot;)
+//str1=&amp;quot;Your name is Mandarava.&amp;quot;
+var str2=&amp;quot;hello, Mandarava.&amp;quot;
+str2=str2.stringByReplacingOccurrencesOfString(&amp;quot;Mandarava&amp;quot;, withString: &amp;quot;Tao&amp;quot;)
+//str2=&amp;quot;hello, Tao.&amp;quot;
+str2=str2.stringByReplacingOccurrencesOfString(&amp;quot;Tao&amp;quot;, withString: &amp;quot;Mandarava&amp;quot;, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
+//str2=&amp;quot;hello, Mandarava.&amp;quot;
+string转换为Int/Long/Float/Double/Bool等
+var str1=&amp;quot;100&amp;quot;
+var i=str1.toInt()! //Swift 1.2 //=100 
+var i=(str1 as NSString).integerValue //Swift 2.0 //=100
+var i=(str1 as NSString).intValue //=100
+var l=(str1 as NSString).longLongValue //=100
+var str2=&amp;quot;10.8&amp;quot;
+var f=(str2 as NSString).floatValue //=10.8
+var d=(str2 as NSString).doubleValue //=10.8
+var str3=&amp;quot;true&amp;quot;
+var b=(str3 as NSString).boolValue //=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;原文链接：http://www.jianshu.com/p/52e7580166ff&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>String还是NSString</title>
+        <link>https://blog.iostao.com/2016/04/swift-stringornsstring/</link>
+        <pubDate>Thu, 07 Apr 2016 13:03:18 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/04/swift-stringornsstring/</guid>
+        <description>&lt;p&gt;既然像 String 这样的 Swift 的类型和 Foundation 的对应的类是可以无缝转换的，那么我们在使用和选择的时候，有没有什么需要特别注意的呢？&lt;/p&gt;
+&lt;p&gt;简单来说，没有特别需要注意的，但是尽可能的话还是使用原生的 String 类型。&lt;/p&gt;
+&lt;p&gt;原因有三。&lt;/p&gt;
+&lt;p&gt;首先虽然 String 和 NSString 有着良好的互相转换的特性，但是现在 Cocoa 所有的 API 都接受和返回 String 类型。我们没有必要也不必给自己凭空添加麻烦去把框架中返回的字符串做一遍转换，既然 Cocoa 鼓励使用 String，并且为我们提供了足够的操作 String 的方法，那为什么不直接使用呢？&lt;/p&gt;
+&lt;p&gt;其次，因为在 Swift 中 String 是 struct，相比起 NSObject 的 NSString 类来说，更切合字符串的 &amp;ldquo;不变&amp;rdquo; 这一特性。通过配合常量赋值 (let) ，这种不变性在多线程编程时就非常重要了，它从原理上将程序员从内存访问和操作顺序的担忧中解放出来。另外，在不触及 NSString 特有操作和动态特性的时候，使用 String 的方法，在性能上也会有所提升。&lt;/p&gt;
+&lt;p&gt;最后，因为 String 里的 String.CharacterView 实现了像 CollectionType 这样的接口，因此有些 Swift 的语法特性只有 String 才能使用，而 NSString 是没有的。一个典型就是 for&amp;hellip;in 的枚举，我们可以写：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let levels = &amp;quot;ABCDE&amp;quot;
+for i in levels.characters {
+    print(i)
+}
+
+// 输出：
+// ABCDE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而如果转换为 NSString 的话，是无法使用 characters 并且进行枚举的。&lt;/p&gt;
+&lt;p&gt;不过也有例外的情况。有一些 NSString 的方法在 String 中并没有实现，一个很有用的就是在 iOS 8 中新加的 containsString。我们想使用这个 API 来简单地确定某个字符串包括一个子字符串时，只能先将其转为 NSString：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (levels as NSString).containsString(&amp;quot;BC&amp;quot;) {
+    print(&amp;quot;包含字符串&amp;quot;)
+}
+
+// 输出：
+// 包含字符串
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Swift 的 String 没有 containsString 是一件很奇怪的事情，理论上应该不存在实现的难度，希望只是 Apple 一时忘了这个新加的 API 吧。当然你也可以自行用扩展的方式在自己的代码库为 String 添加这个方法。当然，还有一些其他的像 length 和 characterAtIndex: 这样的 API 也没有 String 的版本，这主要是因为 String 和 NSString 在处理编码上的差异导致的。
+使用 String 唯一一个比较麻烦的地方在于它和 Range 的配合。在 NSString 中，我们在匹配字符串的时候通常使用 NSRange 来表征结果或者作为输入。而在使用 String 的对应的 API 时，NSRange 也会被映射成它在 Swift 中且对应 String 的特殊版本：Range&amp;lt;String.Index&amp;gt;。这有时候会让人非常讨厌：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let levels = &amp;quot;ABCDE&amp;quot;
+
+let indexPositionOne = levels.startIndex.successor()
+let swiftRange = indexPositionOne ..&amp;lt; indexPositionOne.advancedBy(4)
+levels.stringByReplacingCharactersInRange(swiftRange, withString: &amp;quot;AAAA&amp;quot;)
+// 输出：
+// AAAAA
+
+var str = &amp;quot;1234567890&amp;quot;
+let subRange = Range(start: str.endIndex.advancedBy(-5), end: str.endIndex.advancedBy(-1))	
+
+str.replaceRange(subRange, with: &amp;quot;Your&amp;quot;)
+print(&amp;quot;\(str)&amp;quot;)
+//输出:
+//12345Your0
+//如果这里的-1改为
+//0.  输出为12345Your
+//-1. 输出为12345Your0
+//-2. 输出为12345Your90
+//-3. 输出为12345Your890
+//-4. 输出为12345Your7890
+//-5. 输出为12345Your67890
+//-6. Crash 自己找一下规律吧
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一般来说，我们可能更愿意和基于 Int 的 NSRange 一起工作，而不喜欢使用麻烦的 Range&amp;lt;String.Index&amp;gt;。这种情况下，将 String 转为 NSString 也许是个不错的选择（既然选择了swift，个人建议还是多去研究swift）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let nsRange = NSMakeRange(1, 4)
+(levels as NSString).stringByReplacingCharactersInRange(
+    nsRange, withString: &amp;quot;AAAA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>UITesting中文错误问题</title>
+        <link>https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/</link>
+        <pubDate>Fri, 19 Feb 2016 11:35:23 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/</guid>
+        <description>&lt;p&gt;&lt;code&gt;版权声明：本文为博主原创文章，未经博主允许不得转载。&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;uitesting中文出错&#34;&gt;UITesting中文出错
+&lt;/h2&gt;&lt;p&gt;今天使用UITesting， 遇到中文内容，就会报错，经过各种尝试，目前找到了一个解决方法，但是仍然还是比较麻烦，对于这种内容，各种途径查找，尚未找到更优的解决方法。以下是问题和解决方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1.png&#34;
+	width=&#34;800&#34;
+	height=&#34;251&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu17549318300410279224.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-1_hu18444501173245848156.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如图，所有中文的内容，在脚本内都显示为 unicode编码形式。无奈，采取了转义字符，如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2.png&#34;
+	width=&#34;800&#34;
+	height=&#34;319&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu3402662950340839847.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-2_hu12235706775932267245.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;250&#34;
+		data-flex-basis=&#34;601px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;至少双引号内的已经是字符串类型了。然后运行一下脚本，发现不通过。所以尝试一下手动进行文字输入，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3.png&#34;
+	width=&#34;800&#34;
+	height=&#34;462&#34;
+	srcset=&#34;https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu5044469407873601359.png 480w, https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/UITesting-ChineseWordsError-3_hu18227729975650634068.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;执行脚本，发现成功。&lt;/p&gt;
+&lt;p&gt;唯一遗憾的是，并没有找到更好的解决办法，也没有大牛那种专研的技术和坚韧去继续寻找完美的解决方案。&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

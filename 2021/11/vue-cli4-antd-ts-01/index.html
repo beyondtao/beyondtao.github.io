@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 vue3 vue-cli@4.5 ts antd ">
+<meta name="keywords" content="vue"><title>vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="vue3/vue-cli@4.5 + ts + andt 创建项目">
+<meta property='og:description' content="介绍 vue3 vue-cli@4.5 ts antd ">
+<meta property='og:url' content='https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vue' /><meta property='article:published_time' content='2021-11-28T16:42:36&#43;00:00'/><meta property='article:modified_time' content='2021-11-28T16:42:36&#43;00:00'/>
+<meta name="twitter:title" content="vue3/vue-cli@4.5 + ts + andt 创建项目">
+<meta name="twitter:description" content="介绍 vue3 vue-cli@4.5 ts antd ">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#介绍">介绍</a></li>
+    <li><a href="#一安装">一、安装</a>
+      <ol>
+        <li><a href="#11-vue-cli4">1.1 vue-cli@4</a></li>
+        <li><a href="#12-项目中的命令">1.2 项目中的命令</a>
+          <ol>
+            <li><a href="#121-安装-antd">1.2.1 安装 antd</a></li>
+            <li><a href="#122-引入-ts">1.2.2 引入 ts</a></li>
+            <li><a href="#123-安装axios">1.2.3 安装axios</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#二创建配置">二、创建配置</a>
+      <ol>
+        <li><a href="#21-执行创建命令">2.1 执行创建命令</a></li>
+        <li><a href="#21-pick-a-preset">2.1 pick a preset</a></li>
+        <li><a href="#22-check-the-features">2.2 check the features</a></li>
+        <li><a href="#23-选择vue版本">2.3 选择vue版本</a></li>
+        <li><a href="#24-细节配置">2.4 细节配置</a></li>
+        <li><a href="#25-use-class-style-component-syntax-yes">2.5 Use class-style component syntax? Yes</a></li>
+        <li><a href="#26-use-babel-alongside-typescript-required-for-modern-mode-auto-detected-polyfills-transpiling-jsx-yes">2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes</a></li>
+        <li><a href="#27-use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production-yes">2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes</a></li>
+        <li><a href="#28-pick-a-css-pre-processor-postcss-autoprefixer-and-css-modules-are-supported-by-default-sassscss-with-dart-sass">2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)</a></li>
+        <li><a href="#29-pick-a-linter--formatter-config-选择eslint代码验证规则我们选择eslint--standard-config-标准配置">2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置）</a></li>
+        <li><a href="#210--pick-additional-lint-features-选择什么时候进行代码规则检测我们选择保存时进行检查">2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）</a></li>
+        <li><a href="#211-pick-a-unit-testing-solution-unit-testing-单元测试我们选择jest-">2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）</a></li>
+        <li><a href="#212-where-do-you-prefer-placing-config-for-babel-eslint-etc-in-dedicated-config-files-您希望babel-eslint-配置的存放位置我们选择在专用的配置文件中">2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)</a></li>
+        <li><a href="#save-this-as-a-preset-for-future-projectsyn-是否保存配置-">Save this as a preset for future projects?(y/N) （是否保存配置 ）</a></li>
+        <li><a href="#213-创建完成">2.13 创建完成</a></li>
+        <li><a href="#214-运行项目">2.14 运行项目</a></li>
+      </ol>
+    </li>
+    <li><a href="#三">三、</a></li>
+    <li><a href="#把axios-配置成-vue插件">把Axios 配置成 Vue插件</a></li>
+    <li><a href="#第一次封装">第一次封装</a>
+      <ol>
+        <li><a href="#axiospluginjs">AxiosPlugin.js</a></li>
+        <li><a href="#mainjs">main.js</a></li>
+      </ol>
+    </li>
+    <li><a href="#完整封装">完整封装</a>
+      <ol>
+        <li><a href="#axiospluginjs-1">AxiosPlugin.js</a></li>
+        <li><a href="#调用">调用</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/vue/" >
+                Vue
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2021/11/vue-cli4-antd-ts-01/">vue3/vue-cli@4.5 &#43; ts &#43; andt 创建项目</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 28, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="介绍">介绍
+</h2><ul>
+<li>vue3</li>
+<li><a class="link" href="mailto:vue-cli@4.5" >vue-cli@4.5</a></li>
+<li>ts</li>
+<li>antd</li>
+</ul>
+<h2 id="一安装">一、安装
+</h2><h3 id="11-vue-cli4">1.1 vue-cli@4
+</h3><p>我这里使用的是vue-cli@4.5版本。 创建项目 <code>main.js</code>中会有部分不一样
+1、首先卸载旧版本 （如果事先安装了 vue-cli 1.x 或者 vue-cli 2.x，要先卸载掉）</p>
+<pre><code>$ npm uninstall vue-cli -g
+</code></pre>
+<p>2、安装Vue-cli</p>
+<pre><code>$ npm install -g @vue/cli
+# 查看版本
+$ vue --version
+@vue/cli 4.5.15
+</code></pre>
+<h3 id="12-项目中的命令">1.2 项目中的命令
+</h3><p>这块为了方便以后查找，所以放到了上面。</p>
+<h4 id="121-安装-antd">1.2.1 安装 antd
+</h4><p>可以去 antd 官网查看如何安装 antd，文档中，右上角有版本选择。我这里选择的<code>3.0</code>， 如果你选择的是<code>1.7</code>版本，可能会没有后面的 @next。</p>
+<pre><code>$ npm install ant-design-vue@next --save
+</code></pre>
+<h4 id="122-引入-ts">1.2.2 引入 ts
+</h4><pre><code>$ npm install --save-dev typescript
+$ npm install --save-dev @vue/cli-plugin-typescript
+</code></pre>
+<h4 id="123-安装axios">1.2.3 安装axios
+</h4><pre><code>$ npm install --save axios
+$ npm install --save es6-promise
+</code></pre>
+<p><b>官方文档：</b></p>
+<pre><code>axios 依赖原生的 ES6 Promise 实现而被支持.
+如果你的环境不支持 ES6 Promise，你可以使用 polyfill.
+</code></pre>
+<p>虽然 Axios 的文档说了支持 IE8，但文档最下面又说，前提是你的环境（浏览器）支持 promise，如果你不用关心浏览器兼容，那就不用安装 es6-promise。</p>
+<h2 id="二创建配置">二、创建配置
+</h2><h3 id="21-执行创建命令">2.1 执行创建命令
+</h3><pre><code># vue会自动创建一个 项目名的文件夹，然后生成文件到这个文件夹中
+$ vue create 项目名 
+</code></pre>
+<h3 id="21-pick-a-preset">2.1 pick a preset
+</h3><p>选择 <a>Manually select features</a> 手动配置</p>
+<p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01.png"
+	width="1292"
+	height="254"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu13092197562690266530.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-01_hu8503343499909818391.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="508"
+		data-flex-basis="1220px"
+	
+></p>
+<h3 id="22-check-the-features">2.2 check the features
+</h3><p>按照图中选项配置，点击<code>空格</code>选择选项。 Unit Testing 测试单元可以不选择</p>
+<p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02.png"
+	width="1294"
+	height="354"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu9488727460876838499.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-02_hu17456669236675357118.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="365"
+		data-flex-basis="877px"
+	
+></p>
+<h3 id="23-选择vue版本">2.3 选择vue版本
+</h3><p>注意:如果老版本 没有更新 不会出来 vue 2 和 3 这个选项的。这个时候可以回到第一步，卸载重新安装vue。（这里选择3.x）</p>
+<p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03.png"
+	width="1292"
+	height="270"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu15533065406649613524.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-03_hu3705380082832056808.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="478"
+		data-flex-basis="1148px"
+	
+></p>
+<p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04.png"
+	width="1294"
+	height="480"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu1481097904666668527.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-04_hu708166772119506285.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="269"
+		data-flex-basis="647px"
+	
+></p>
+<h3 id="24-细节配置">2.4 细节配置
+</h3><p>后面的步骤选项如果有经验的话可以直接按照上图配置。后面可以看到我填写的每一个选项。</p>
+<p>如果不明白可以跟着下面一步一步来。</p>
+<h3 id="25-use-class-style-component-syntax-yes">2.5 Use class-style component syntax? Yes
+</h3><p>是否使用Class风格装饰器？</p>
+<p>选择Yes，即原本是：home = new Vue()创建vue实例，使用装饰器后：class home extends Vue{}</p>
+<h3 id="26-use-babel-alongside-typescript-required-for-modern-mode-auto-detected-polyfills-transpiling-jsx-yes">2.6 Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+</h3><p>使用Babel与TypeScript一起用于自动检测的填充?</p>
+<h3 id="27-use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production-yes">2.7 Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+</h3><p>路由使用历史模式?</p>
+<p>选择Yes，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。</p>
+<h3 id="28-pick-a-css-pre-processor-postcss-autoprefixer-and-css-modules-are-supported-by-default-sassscss-with-dart-sass">2.8 Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+</h3><p>使用什么css预编译器？</p>
+<p>Sass 和 Less 都使用的是标准的 CSS 语法，因此如果可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。</p>
+<p>Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名</p>
+<ul>
+<li>node-sass是自动编译实时的</li>
+<li>dart-sass需要保存后才会生效</li>
+</ul>
+<h3 id="29-pick-a-linter--formatter-config-选择eslint代码验证规则我们选择eslint--standard-config-标准配置">2.9 Pick a linter / formatter config: 选择Eslint代码验证规则（我们选择ESLint + Standard config 标准配置）
+</h3><h3 id="210--pick-additional-lint-features-选择什么时候进行代码规则检测我们选择保存时进行检查">2.10  Pick additional lint features: 选择什么时候进行代码规则检测（我们选择保存时进行检查）
+</h3><p>❯◉ Lint on save // 保存时检测</p>
+<h3 id="211-pick-a-unit-testing-solution-unit-testing-单元测试我们选择jest-">2.11 Pick a unit testing solution: Unit Testing 单元测试（我们选择Jest ）
+</h3><h3 id="212-where-do-you-prefer-placing-config-for-babel-eslint-etc-in-dedicated-config-files-您希望babel-eslint-配置的存放位置我们选择在专用的配置文件中">2.12 Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files (您希望Babel, ESLint 配置的存放位置，我们选择在专用的配置文件中)
+</h3><p>❯◉ In dedicated config files //在专用的配置文件中</p>
+<p>◯In package.json //在package.json</p>
+<h3 id="save-this-as-a-preset-for-future-projectsyn-是否保存配置-">Save this as a preset for future projects?(y/N) （是否保存配置 ）
+</h3><p>可以选择Y ，如果选择保存，保存后下次构建项目的时候就可以直用这次的配置构建项目</p>
+<h3 id="213-创建完成">2.13 创建完成
+</h3><p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10.png"
+	width="1296"
+	height="384"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu8547612030278357154.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-10_hu353394525764171207.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="337"
+		data-flex-basis="810px"
+	
+></p>
+<h3 id="214-运行项目">2.14 运行项目
+</h3><pre><code>$ cd 项目目录
+$ npm run serve
+</code></pre>
+<p><img src="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11.png"
+	width="1778"
+	height="342"
+	srcset="/2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu15695576423891411833.png 480w, /2021/11/vue-cli4-antd-ts-01/vue-cli4-antd-ts-11_hu2514028105230788139.png 1024w"
+	loading="lazy"
+	
+		alt="图片"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="519"
+		data-flex-basis="1247px"
+	
+></p>
+<h2 id="三">三、
+</h2><h2 id="把axios-配置成-vue插件">把Axios 配置成 Vue插件
+</h2><!--more-->
+<p>把 <code>Axios</code> 封装成 <code>Vue</code> 插件，可以直接在 <code>Vue</code> 组件里使用 <code>this.xxx</code> 的方式来调用。Axios本身并没有封装，所以这里我们自己来把它封装成 <code>Vue</code> 组件。</p>
+<h2 id="第一次封装">第一次封装
+</h2><p>这里是将 Axios 封装成组件，后面会上全部代码，包含拦截器功能，验证token失效，跳转页面。</p>
+<h3 id="axiospluginjs">AxiosPlugin.js
+</h3><pre><code>require('es6-promise').polyfill()   //引入一次就行
+import axios from 'axios'
+
+// 创建 axios 实例
+// 这里 export 的原因是方便组件外使用 axios
+export const Axios = axios.create({
+    	//baseURL: process.env.BASE_API, // node环境的不同，对应不同的baseURL
+		// baseURL: 'http://localhost:8181',	
+		withCredentials: true, //允许携带cookie
+		timeout: 1000 * 30,
+})
+</code></pre>
+<p>如果使用跨域功能，这里不需要写 baseURL，我这里使用了跨域，所以这里注释掉了。</p>
+<p>比如我跨域的时候使用的是 <code>/proxy</code>。 那么我<code>url</code> 只需要写 <code>/proxy/login</code>这种方式即可。</p>
+<p>运行时，会自动替换 <code>/proxy</code> 为设置的接口域名。</p>
+<pre><code>proxy: {/*处理跨域，本地代理转发*/
+        '/proxy': {
+            target: 'http://localhost:8080',  // 接口域名
+            secure: false,  // 如果是https接口，需要配置这个参数
+            changeOrigin: true,  //是否跨域
+            pathRewrite: {
+                '^/proxy': ''
+            }
+  },
+</code></pre>
+<h3 id="mainjs">main.js
+</h3><p>在 <code>main.js</code>中引入并 <code>use</code>，from 这里有个 <code>.</code> ，本地，不加好像会去仓库查找。</p>
+<pre><code>import Vue from 'vue'
+import AxiosPlugin from './plugins/AxiosPlugin'
+Vue.use(AxiosPlugin)
+</code></pre>
+<p>使用:</p>
+<pre><code>//参数
+let params = {
+	'account' : 'admin',
+	'password' : 'admin'
+ 	}
+ 	//网络请求
+ 	that.$http.post('/proxy/login', params).then(res =&gt; {
+ 		console.log(res)
+ 	}).catch(error =&gt; {
+ 	})
+</code></pre>
+<p>当然也可以通过 <code>import</code> 引用。不过封装成了组件，直接使用上面的方式就可以了</p>
+<pre><code>// POST
+import { Axios } from 'xxx/xxx/AxiosPlugin'
+Axios.post(url, params)
+</code></pre>
+<h2 id="完整封装">完整封装
+</h2><p>关于里面的 url 配置，请看上面的第一次封装介绍。</p>
+<h3 id="axiospluginjs-1">AxiosPlugin.js
+</h3><pre><code>require('es6-promise').polyfill()   //引入一次就行
+import axios from 'axios'
+
+// 创建 axios 实例
+// 这里 export 的原因是方便组件外使用 axios
+export const Axios = axios.create({
+		// baseURL: 'http://localhost:8181',
+		withCredentials: true, //允许携带cookie
+		timeout: 1000 * 30,	//超时时间， 毫秒级， 1000 * 多少秒就可以了
+})
+
+// 将 Axios 实例添加到 Vue 的原型对象上
+export default {
+		install(Vue) {
+    		Object.defineProperty(Vue.prototype, '$http', { value: Axios})
+		}
+}
+
+//POST 传参序列化，根据需求来。不一定用的到序列化 --&gt; 在发送前做的操作
+Axios.interceptors.request.use(config =&gt; {
+		console.log('发送请求前的操作')
+		// 设置以 form 表单的形式提交参数，如果以 JSON 的形式提交表单，可忽略
+		//我这里使用的json数据，所以注释掉了
+		// if(config.method  === 'post'){
+	// JSON 转换为 FormData
+		//     const formData = new FormData()
+		//     Object.keys(config.data).forEach(key =&gt; formData.append(key, config.data[key]))
+		//     config.data = formData
+		// }
+
+		//这里用来做验证的。
+		//我这里是 uid 和 token放在了header里面请求验证。
+		if (localStorage.getItem('token')) {
+    		config.headers['uid'] = localStorage.getItem('uid')
+	      	config.headers['token'] = localStorage.getItem('token')
+		}
+	return config
+}, error =&gt; {
+		alert(&quot;错误的传参&quot;, 'fail')
+		return Promise.reject(error)
+})
+
+// 返回状态判断 （添加响应拦截器）
+Axios.interceptors.response.use(res =&gt; {
+		//对响应数据做些判断，如果返回的状态码代表token失效
+		//跳转到 `/` 登录页。 其他的异常状态码，也可以在这里添加提示
+		if (res.data.code == 4001) {
+    	location.href = '/'
+	}else if (res.data.code != 0) {
+    	alert(res.error_msg)
+    	return Promise.reject(res)
+	}
+		//这里直接返回的是 res.data，就是服务端返回来的数据内容。
+		//可以根据自己的需求，决定返回的是 res.data，还是 res
+		return res.data
+}, error =&gt; {
+		console.log('封装的异常: ', error)
+		if(error.response.status === 401) {
+    		// 401 说明 token 验证失败
+    		// 可以直接跳转到登录页面，重新登录获取 token
+    		location.href = '/login'
+		} else if (error.response.status === 500) {
+    		// 服务器错误
+   	 	// do something
+    	return Promise.reject(error.response.data)
+		}
+		// 返回 response 里的错误信息
+		return Promise.reject(error.response.data)
+})
+</code></pre>
+<h3 id="调用">调用
+</h3><p>XX.vue</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">export</span> <span class="n">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;defaultName&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">data</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  	<span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="n">methods</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  	<span class="n">handleRequest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  		<span class="o">//</span><span class="err">参数</span>
+</span></span><span class="line"><span class="cl">		<span class="n">let</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="s1">&#39;account&#39;</span> <span class="p">:</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="s1">&#39;password&#39;</span> <span class="p">:</span> <span class="s1">&#39;admin&#39;</span>
+</span></span><span class="line"><span class="cl">     		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">     		<span class="o">//</span><span class="err">网络请求</span>
+</span></span><span class="line"><span class="cl">     		<span class="n">that</span><span class="o">.$</span><span class="n">http</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/proxy/login&#39;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     			<span class="o">//</span><span class="err">我上面封装的返回的是</span> <span class="n">res</span><span class="o">.</span><span class="n">data</span>
+</span></span><span class="line"><span class="cl">     			<span class="o">//</span><span class="err">所以这里获取到的</span><span class="n">res其实是</span> <span class="n">res</span><span class="o">.</span><span class="n">data</span><span class="err">。使用的时候，直接获取数据就可以了</span>
+</span></span><span class="line"><span class="cl">     			<span class="o">//</span><span class="err">比如</span> <span class="err">获取</span> <span class="n">code</span><span class="err">，</span> <span class="n">res</span><span class="o">.</span><span class="n">code</span> <span class="err">即可</span>
+</span></span><span class="line"><span class="cl">     			<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     		<span class="p">})</span><span class="o">.</span><span class="n">catch</span><span class="p">(</span><span class="n">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     		<span class="p">})</span>
+</span></span><span class="line"><span class="cl">  	<span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vue/">Vue</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2020/06/vue-quill-editor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue基于vue-quill-editor富文本编辑器的使用</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/vue-dialog-center/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使elementUI的dialog上下左右居中</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/vue-cli4-axios/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vue/cli4 axios网路请求封装 以及 登录token失效跳转页面</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/vue-cli4-start-04/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vue-cli@4 入门（四）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/vue-cli4-start-03/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vue-cli@4 入门（三）</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

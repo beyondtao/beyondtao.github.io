@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。 然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。\n">
+<meta name="keywords" content="VR"><title>VR时代之旅</title>
+
+<link rel='canonical' href='https://blog.iostao.com/2016/04/ios-vr-journeyoftime/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="VR时代之旅">
+<meta property='og:description' content="今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。 然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。\n">
+<meta property='og:url' content='https://blog.iostao.com/2016/04/ios-vr-journeyoftime/'>
+<meta property='og:site_name' content='Scott Tao'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ios' /><meta property='article:published_time' content='2016-04-18T21:00:33&#43;00:00'/><meta property='article:modified_time' content='2016-04-18T21:00:33&#43;00:00'/>
+<meta name="twitter:title" content="VR时代之旅">
+<meta name="twitter:description" content="今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。 然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu6452860752114553384.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Scott Tao</a></h1>
+            <h2 class="site-description">Senior iOS Developer
+
+Specializing in iOS app development since 2013. Objective-C, Swift, Swift-UI, Java, Golang, Vue-JS, Docker, Git. 🌏：Bochum, Germany.
+</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/scott-tao-ios/'
+                        target="_blank"
+                        title="Linkin"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/2022/03/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/1/01/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/de' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-de"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制字母D -->
+  <path d="M8 10 C8 9 9 8 10 8 H12 C13 8 14 9 14 10 V12 C14 13 13 14 12 14 H10 C9 14 8 13 8 12 Z" />
+  <!-- 绘制字母E -->
+  <path d="M16 10 H18 V8 H16 C15 8 14 9 14 10 V14 C14 15 15 16 16 16 H18 V14 H16" />
+</svg>
+                
+                <span>German</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-me"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- 绘制圆形 -->
+  <circle cx="12" cy="13" r="9" />
+  <!-- 绘制头发的尖角 -->
+  <path d="M12 2 L14 4 L10 4 Z" />
+  <!-- 绘制左眼 -->
+  <ellipse cx="9" cy="13" rx="1" ry="2" />
+  <!-- 绘制右眼 -->
+  <ellipse cx="15" cy="13" rx="1" ry="2" />
+</svg>
+                
+                <span>Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                    <?xml version="1.0" standalone="no"?>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  class="icon icon-tabler icon-tabler-about"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+	<path stroke="none" d="M0 0h24v24H0z"/>
+	<!-- <circle cx="515" cy="512" r="450" style="stroke: #000066; fill: #FF0000;" /> -->
+	<!-- <circle cx="515" cy="512" r="450"/> -->
+	<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="8" r="1" />
+  	<line x1="12" y1="12" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#vr-设备分析">VR 设备分析</a></li>
+            <li><a href="#vr-语言">VR 语言</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ios/" >
+                Ios
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2016/04/ios-vr-journeyoftime/">VR时代之旅</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 18, 2016</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>今天看了淘宝的BUY+ 败家视频之后，感受颇深。身为开发者，我们该如何更新自己的技能，才能在这个圈内立足？时代在召唤，所以本人开始打算逐步深入VR的队伍当中。
+然而开始，我们应该学习什么编程语言 或3D引擎（3D Engine），才能适应时代的发展。</p>
+<h4 id="vr-设备分析">VR 设备分析
+</h4><p>让我们先来看看现在的 VR 设备。</p>
+<p>目前主要的 VR 设备有 Oculus , Sumsang Gear VR ， HTC Vive ， Microsoft HoloLens ， Sony PlayStation VR ，国内的 VR 设备则太多，销量较高的有 蚁视 和 暴风魔镜 等等。</p>
+<h5 id="oculus">Oculus
+</h5><p>代表产品： Oculus Rift</p>
+<p>简单介绍： 万众瞩目的 Oculus Rift 已经预售了。简单地说，Oculus Rift 是一个带有部分输入设备的虚拟现实显示器。这些输入设备包括一个遥控器，一个红外传感器，还有 Touch 控制器。Rift 的所有计算是在一台 PC 上进行的，在 Oculus Ready PCs 可以看到 Rift 要求的 PC 配置。由于显卡的性能问题，Rift 目前并不支持 Mac，只能下载到基于 Windows 的 Runtime。
+SDK支持： Oculus Rift 支持 Unity 5 、Unity 4 和 Unreal 。3月1日，Oculus 发布了 MobileSDK 1.0.0.1 升级，这个 SDK 提供了对 Oculus Remote Monitor 的支持，同时也让我们可以在 Mac OSX 上基于 MobileSDK 进行开发。</p>
+<h5 id="samsung">Samsung
+</h5><p>代表产品： Gear VR</p>
+<p>简单介绍： Gear VR 是 Samsung 和 Oculus 共同开发的。它目前使用 Samsung 的 Galaxy S7/S7 edge, Note5, S6, 和 S6 edge 来代替头显中原来的显示器。Gear VR 还内置传感器用于和三星手机配对，并内置了触摸板用于操作。和 Oculus Rift 使用 PC 来进行计算不同，Gear VR 把计算放在了 Samsung 手机上。
+SDK支持： Oculus 的 MobileSDK 最开始就是为 Gear VR 提供的。</p>
+<h5 id="htc">HTC
+</h5><p>代表产品： Vive
+简单介绍： Vive 也已经预售了。它是目前呼声最高的消费级 VR 设备了。Base stations 设计，电子围栏，多功能操纵手柄，StreamVR，良好的体验都让它成为目前最好的 VR 设备。在 VIVE OPTIMIZED PCs 可以看到推荐的 PC 配置，和 Oculus 类似，但不要求 8G 内存
+。
+SDK支持： Steam VR 、Unity 和 Unreal 。</p>
+<p>Microsoft
+代表产品：HoloLens
+简单介绍： M$ 的确是不差钱，一上来就搞出来一个 MR(Mixed Reality) 设备，还让 HeloLens 上了国际空间站 。简单的说，HoloLens 就是一台微型 Windows 10 一体机啊！和竞争对手们完全不是一个打法好么？不在一个纬度好么！硬件我就不说了，直接看 Hardware 好了，简直惊悚。</p>
+<p>SDK支持： 为 HoloLens 开发应用，其实就是为 Windows 10 开发 App ，目前官方页面并没有公布太多的开发信息。但你也知道，IDE 一定是宇宙最强的 Visual Studio，语言一定是 C# 。</p>
+<p>Sony
+代表产品： PlayStation VR
+简单介绍： Sony 大法虽然好，但 PSVR 和上面几家比起来会出来的比较晚，又从 2016 上半年跳票到下半年。它是和 PS4 共同使用的，目前我没有找到它的 SDK。但 Unity 提到了对 PlayStation VR 的支持。</p>
+<p>暴风魔镜
+代表产品： 魔镜4
+简单介绍： 暴风魔镜是目前在国内大肆宣传的一款产品。暂时还没有哪一款产品的宣传力度超过它。当然，它也是我唯一买过（主要是买得起）的产品。和 Google Cardboard 类似，它是一款把手机塞进去就能体验廉价 VR 的产品。具体的体验效果，取决于手机的高（tu）端（hao）程度。
+SDK支持：暴风魔镜提供了 Android/iOS/Unity/Unreal 的 SDK 。</p>
+<p>VR 引擎分析
+从上面的设备分析可以看出，目前对 VR 支持最好的 3D 引擎就是 Unity 和 Unreal 了。它们两位可以说是 VR 的标配引擎。借用一句广告词： 2U ，你值得拥有！
+除了 2U 哥俩外，下面还有一些在 VR/AR 界十分活跃的引擎和软件：</p>
+<p>OSVR</p>
+<p>Open Source Virtual Reality 是一个全面开源的软件平台，支持多种设备和引擎，Blender/MonoGame/StreamVR/Unity/Unreal/CryEngine/WebVR 都在支持之列。在国内，OSVR 已经和 360 公司展开了合作。OSVR是全球的开源虚拟现实平台，由Razer(雷蛇)——全球高性能游戏硬件、软件与系统品牌，以及Sensics——全球专业级虚拟现实头戴式显示器品牌联合创立。该软件平台致力于为所有虚拟现实技术树立开放标准，使得各款支持OSVR的虚拟设备与支持OSVR的软件能够顺利交互、接合。</p>
+<p>OSVR软件</p>
+<p>介绍了这套引擎的架构方式。OSVR能够提供简单而标准化的方式，助你探索、配置和操作数以百计的设备，包括VR眼镜、定位追踪、深度摄像头、眼动议、游戏控制器等等。</p>
+<p>VRPN</p>
+<p>Virtual Reality Peripheral Network 是学术圈搞起来的一套基于网络传输界面的开源 VR 库。允许大家共同建设，把自家的设备加进去。这个库支持非常多的设备，甚至直接包含了设备驱动 Supported hardware devices 。VRPN 已经在 PC/Win32, PC/Cygwin, PC/Linux, and Mac/OSX (32- and 64-bits on all), ARM Linux systems 和 Android 上测试过。</p>
+<p>MiddleVR</p>
+<p>MiddleVR 目前提供 Unity 插件 ，当然你也可以直接使用它的 SDK，它也支持目前大多数主流的 HMD (Head-mounted display）设备。虽然是由一家公司在维护，但目前是免费使用的。</p>
+<h5 id="vrpn">VRPN
+</h5><p>Virtual Reality Peripheral Network 是学术圈搞起来的一套基于网络传输界面的开源 VR 库。允许大家共同建设，把自家的设备加进去。这个库支持非常多的设备，甚至直接包含了设备驱动 Supported hardware devices 。VRPN 已经在 PC/Win32, PC/Cygwin, PC/Linux, and Mac/OSX (32- and 64-bits on all), ARM Linux systems 和 Android 上测试过。
+MiddleVR
+MiddleVR 目前提供 Unity 插件 ，当然你也可以直接使用它的 SDK，它也支持目前大多数主流的 HMD (Head-mounted display）设备。虽然是由一家公司在维护，但目前是免费使用的。</p>
+<h4 id="vr-语言">VR 语言
+</h4><p>说起 VR 语言，其实还不如说是 3D 引擎的语言。VR 没有 3D 引擎支持是无法进行开发的。让我们看看上面提到的 3D 引擎和 SDK 主要使用什么语言。
+首当其冲的是 C/C++ ，这是毋庸置疑的。大多数 3D 引擎都使用 C++ 开发，Oculus 提供的 SDK 也是使用 C++ 进行开发的。 Gear VR 是在安卓设备上运行，需要使用 Android NDK 基于 C++ 进行开发。Unreal 引擎同样使用 C++ 进行开发。MiddleVR 提供了基于 C++ 的 SDK。
+其次是 C# 。 Unity 把 C# 当作脚本语言使用。在 VRPN 中可以使用 .NET bindings for VRPN 作为开发语言。不出意外的话， HoloLens 也一定使用的是 C# 。
+再次就是 Javascript 。它也是 Unity 的一种脚本语言（即使选择的人并不多）。但 WebVR 和 Javascript 程序员的基数（基友数？）一定会让 Javascript 继续在使用人数上占优（我真的不是黑啊）。即使不考虑 WebVR ， three.js ， Babylonjs 这类已经非常成熟的 HTML5 3D 引擎也足够证明 Javascript 在 3D 上的强大生命力。
+VR 平台
+从目前的状态看， Oculus 仅支持 Windows 和 Android（通过 Gear VR） 。MiddleVR 仅支持 Windows 平台。其他的几个引擎例如 OSVR/VRPN 都是多平台支持的，Unity 和 Unreal 当然也是多平台支持。Playstation VR 无疑是 PS 独占。HoloLens 则无疑是 Windows 独占。
+只有 WebVR ，不挑平台陪你玩。
+结语
+VR/AR/MR 仍然在如火如荼的发展。以上的技术1~2年后或许会有翻天覆地的变化，领跑者说不定就成了追赶者，黑马也可能随时出现。但总的来说，VR在目前这个阶段的发展，最重要的仍是内容。内容的产出依然离不开程序员，离不开3D引擎和编程语言。作为程序员，只要我们苦练内功，紧跟技术发展的脚步，就不必担心被时代所遗弃。若是不小心搭上了VR时代的快车，或许更容易一飞冲天。
+而当下，我们需要一往无前。</p>
+<p>以下个人收集，未入门人员，我也不懂。
+c#  unity3d 5.x版本  难度较低 未来主流
+c++  ue为代表   难度大 人员很难组齐</p>
+<p>你可以想象苹果发布App Store的时候，会有人说它会击垮出租车吗？Uber用了很多年才出现，我觉得VR也将如此，目前我们已经推出了游戏，而且这些游戏体验非常好，五年后可能有人做出完全革命性的东西来填补空白，我们不知道这将是什么样的游戏。</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">Ios</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2020/06/ios-js-regular/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常用正则表达式大全--如：数字，字符等</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2020/05/ios-dynamic-color/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS 深浅模式 颜色 和 图片</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2018/07/ios-avaudiosession/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS-AVAudio</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2018/05/ios-iphone-device/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iPhone不同设备屏幕尺寸和分辨率</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/2016/12/ios-spritekit-scenekit/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS SpriteKit/SceneKit/Metal浅析</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-iostao-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Scott Tao
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

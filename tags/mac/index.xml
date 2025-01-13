@@ -1,59 +1,332 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>mac on Hugo tranquilpeak theme</title>
-    <link>https://blog.qoabc.com/tags/mac/</link>
-    <description>Recent content in mac on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 24 Jan 2021 14:43:16 +0000</lastBuildDate><atom:link href="https://blog.qoabc.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>brew 安装 node 及 npm用法</title>
-      <link>https://blog.qoabc.com/2021/01/mac/</link>
-      <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2021/01/mac/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/syosinnsya/article/details/80395121&#34;&gt;转载&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;使用brew-安装node&#34;&gt;使用brew 安装node&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>使用国内源安装 Homebrew</title>
-      <link>https://blog.qoabc.com/2021/01/mac/</link>
-      <pubDate>Sat, 23 Jan 2021 17:22:24 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2021/01/mac/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/cd7c7fabce9f&#34;&gt;转载来源&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;1删除旧的安装&#34;&gt;1、删除旧的安装&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rm -rf /usr/local/Homebrew
-sudo rm -f /usr/local/bin/brew
-sudo rm -rf /usr/local/var/homebrew
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;2创建新的安装目录&#34;&gt;2、创建新的安装目录&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>rvm升级Ruby</title>
-      <link>https://blog.qoabc.com/2016/08/mac/</link>
-      <pubDate>Mon, 01 Aug 2016 13:55:12 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/08/mac/</guid>
-      <description>&lt;p&gt;第一步：安装rvm
+    <channel>
+        <title>Mac on Scott Tao</title>
+        <link>https://blog.iostao.com/tags/mac/</link>
+        <description>Recent content in Mac on Scott Tao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 24 Jan 2021 14:43:16 +0000</lastBuildDate><atom:link href="https://blog.iostao.com/tags/mac/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>brew 安装 node 及 npm用法</title>
+        <link>https://blog.iostao.com/2021/01/mac-brew-install-node_npm/</link>
+        <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2021/01/mac-brew-install-node_npm/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/syosinnsya/article/details/80395121&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;转载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用brew-安装node&#34;&gt;使用brew 安装node
+&lt;/h4&gt;&lt;h4 id=&#34;首先先对-brew-进行检查&#34;&gt;首先先对 brew 进行检查
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;brew update
+brew doctor
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;创建目录并修改权限&#34;&gt;创建目录，并修改权限
+&lt;/h4&gt;&lt;p&gt;因为权限问题，我这里是手动创建的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /usr/local/Cellar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R $(whoami) /usr/local/Cellar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /usr/local/opt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R $(whoami) /usr/local/opt/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /usr/local/opt/icu4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R $(whoami) /usr/local/opt/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /usr/local/include
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R $(whoami) /usr/local/include/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /usr/local/share
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R $(whoami) /usr/local/share
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;然后进行安装&#34;&gt;然后进行安装
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;brew link node
+brew uninstall node
+brew install node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;我这里失败了啊&#34;&gt;我这里失败了啊
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dyld&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Library&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loaded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;icu4c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;libicui18n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;67.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dylib&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;Referenced&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;Reason&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;image&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;zsh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abort&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;force&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uninstall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;icu4c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;icu4c&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unlink&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;icu4c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;icu4c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;force&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 这里可能会提示设置 ~/.zshrc。 看底部 icu4c ~/.zshrc 这个模块&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;/usr/local/opt/icu4c/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果执行了上面那条命令，需要更新资源文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;icu4c-zshrc&#34;&gt;icu4c ~/.zshrc
+&lt;/h4&gt;&lt;p&gt;If you need to have icu4c first in your PATH run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;/usr/local/opt/icu4c/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;/usr/local/opt/icu4c/sbin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For compilers to find icu4c you may need to set:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LDFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-L/usr/local/opt/icu4c/lib&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CPPFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-I/usr/local/opt/icu4c/include&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;常用命令&#34;&gt;常用命令
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;npm install &amp;lt;module&amp;gt; //安装
+npm uninstall &amp;lt;module&amp;gt; //卸载
+npm search &amp;lt;module&amp;gt; //搜索
+npm update &amp;lt;module&amp;gt; //更新
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;npm&#34;&gt;npm
+&lt;/h4&gt;&lt;p&gt;npm 是node.js自带的功能。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>使用国内源安装 Homebrew</title>
+        <link>https://blog.iostao.com/2021/01/mac-brew-install-national/</link>
+        <pubDate>Sat, 23 Jan 2021 17:22:24 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2021/01/mac-brew-install-national/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/cd7c7fabce9f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;转载来源&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;1删除旧的安装&#34;&gt;1、删除旧的安装
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;brew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;2创建新的安装目录&#34;&gt;2、创建新的安装目录
+&lt;/h4&gt;&lt;p&gt;sudo mkdir /usr/local/Homebrew&lt;/p&gt;
+&lt;h4 id=&#34;3下载brew&#34;&gt;3、下载brew
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;地址可更换为清华源&lt;code&gt;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如提示没有git，可通过xcode-select &amp;ndash;install安装。&lt;/p&gt;
+&lt;h4 id=&#34;4创建执行文件链接&#34;&gt;4、创建执行文件链接
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/local/bin
+sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;5创建brew-core目录&#34;&gt;5、创建brew-core目录
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;6下载brew-core&#34;&gt;6、下载brew-core
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;地址可更换为清华源&lt;code&gt;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;7权限配置&#34;&gt;7、权限配置
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chown&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;whoami&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chown&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;whoami&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;8执行更新&#34;&gt;8、执行更新
+&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;brew update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提示Already up-to-date即为成功。如有问题可通过&lt;code&gt;brew doctor&lt;/code&gt;自检命令检查一下。&lt;/p&gt;
+&lt;p&gt;9、设置环境变量&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;地址可更换为httpsmirrorstunatsinghuaeducngithomebrewhomebrew-bottles&#34;&gt;地址可更换为&lt;code&gt;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-bottles&lt;/code&gt;。
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>rvm升级Ruby</title>
+        <link>https://blog.iostao.com/2016/08/mac-nvm-update-ruby/</link>
+        <pubDate>Mon, 01 Aug 2016 13:55:12 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/08/mac-nvm-update-ruby/</guid>
+        <description>&lt;p&gt;第一步：安装rvm
 RVM:Ruby Version Manager,Ruby版本管理器，包括Ruby的版本管理和Gem库管理(gemset)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ curl -L get.rvm.io | bash -s stable
 $ source ~/.rvm/scripts/rvm
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;等待终端加载完毕,后输入：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>charles 抓包</title>
-      <link>https://blog.qoabc.com/2016/06/mac/</link>
-      <pubDate>Mon, 13 Jun 2016 17:49:18 +0000</pubDate>
-      
-      <guid>https://blog.qoabc.com/2016/06/mac/</guid>
-      <description>&lt;h4 id=&#34;一下载&#34;&gt;一、下载&lt;/h4&gt;
-&lt;p&gt;可以到&lt;a href=&#34;http://www.charlesproxy.com/&#34;&gt;charles官网&lt;/a&gt;下载到最新版本。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;p&gt;等待终端加载完毕,后输入：&lt;/p&gt;
+&lt;p&gt;$ rvm -v&lt;/p&gt;
+&lt;p&gt;如果能显示版本好则安装成功了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rvm 1.27.0 (latest) by Wayne E. Seguin &amp;lt;wayneeseguin@gmail.com&amp;gt;, Michal Papis &amp;lt;mpapis@gmail.com&amp;gt; [https://rvm.io/]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;列出ruby可安装的版本信息&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ rvm list known
+
+ruby-]2.2[.4]
+[ruby-]2.3[.0]
+[ruby-]2.2-head
+ruby-head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装一个ruby版本&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ rvm install 2.3.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;列出ruby已安装的版本信息&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ rvm list
+
+rvm rubies
+
+=* ruby-2.3.0 [ x86_64 ]
+
+# =&amp;gt; - current
+# =* - current &amp;amp;&amp;amp; default
+#  * - default
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成之后ruby -v查看是否安装成功。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ruby -v
+ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin15]&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>charles 抓包</title>
+        <link>https://blog.iostao.com/2016/06/mac-charlesproxy/</link>
+        <pubDate>Mon, 13 Jun 2016 17:49:18 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/2016/06/mac-charlesproxy/</guid>
+        <description>&lt;h4 id=&#34;一下载&#34;&gt;一、下载
+&lt;/h4&gt;&lt;p&gt;可以到&lt;a class=&#34;link&#34; href=&#34;http://www.charlesproxy.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;charles官网&lt;/a&gt;下载到最新版本。&lt;/p&gt;
+&lt;h4 id=&#34;二破解&#34;&gt;二、破解
+&lt;/h4&gt;&lt;p&gt;顶部下载文件中，含有破解包。&lt;/p&gt;
+&lt;p&gt;打开应用程序，选择Charles,选择显示包内容：
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1.png&#34;
+	width=&#34;1671&#34;
+	height=&#34;1077&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1_hu10121814230045296573.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-1_hu884148347390407881.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Charles破解-1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;372px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后点击Contents-&amp;gt;Resources-&amp;gt;Java:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2.png&#34;
+	width=&#34;933&#34;
+	height=&#34;298&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2_hu7780401917192744894.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-1-2_hu6248564300017957217.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Charles破解-2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;313&#34;
+		data-flex-basis=&#34;751px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后将我们下载下来的charles.jar替换这里的charles.jar就可以了。然后打开Charles就可以了。&lt;/p&gt;
+&lt;h4 id=&#34;三抓包&#34;&gt;三、抓包
+&lt;/h4&gt;&lt;p&gt;第一、HTTP抓包
+1、打开Charles程序&lt;/p&gt;
+&lt;p&gt;2、查看Mac电脑的IP地址，系统偏好设置-&amp;gt;网络就可以查看到了，比如我的ip地址是：192.168.2.248
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1.png&#34;
+	width=&#34;1335&#34;
+	height=&#34;1125&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1_hu12015209577261751224.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-2-1_hu1397312013960218294.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Charles抓包&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、打开iOS设置，进入当前wifi连接(必须和Mac在一个局域网内)，设置HTTP代理『手动』，将服务器填为上一步中获得的IP，即192.168.2.248，端口填8888。&lt;/p&gt;
+&lt;p&gt;4、iOS设备打开你要抓包的app进行网络操作&lt;/p&gt;
+&lt;p&gt;5、Charles弹出确认框，点击Allow按钮即可&lt;/p&gt;
+&lt;p&gt;第二、HTTPS抓包&lt;/p&gt;
+&lt;p&gt;需要下载Charles证书:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;证书下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.charlesproxy.com/assets/legacy-ssl/charles.crt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;具体链接&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.charlesproxy.com/ssl.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Charles证书&lt;/a&gt;，解压后导入到iOS设备中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在HTTPS的接口上，右键，选择&lt;strong&gt;Enable SSL Proxying&lt;/strong&gt;就可以抓该HTTPS接口的数据了。
+&lt;img src=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1.png&#34;
+	width=&#34;860&#34;
+	height=&#34;1074&#34;
+	srcset=&#34;https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1_hu9733946389404113957.png 480w, https://blog.iostao.com/2016/06/mac-charlesproxy/charlesproxy-3-1_hu8935650243458835189.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;HTTPS抓包&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;192px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注意：当我们不抓包的时候，会将Charles关闭，这时候iOS如果还开着代理，是访问不到网络的，因为设置了代理(就是Charles)，这时候需要将iOS中的代理关闭，这个是抓包时经常犯的错。千万不要因为这种二逼问题，耽误了工作。&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
