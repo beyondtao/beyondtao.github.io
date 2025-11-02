@@ -2,11 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.iostao.com/test/hello-world/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.iostao.com/</loc>
-    <lastmod>2025-01-09T21:16:36+01:00</lastmod>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/categories/</loc>
-    <lastmod>2025-01-09T21:16:36+01:00</lastmod>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/post/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/swift/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/swift/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/2025/11/swift_note_operators/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/xcode/</loc>
+    <lastmod>2025-11-02T21:02:05+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/2025/11/swift_note_basics/</loc>
+    <lastmod>2025-11-02T10:42:05+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/de/</loc>
     <lastmod>2025-01-09T21:16:36+01:00</lastmod>
@@ -18,9 +42,6 @@
     <lastmod>2025-01-09T21:16:36+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/de/2025/neueherausforderungenimlebeninde/</loc>
-    <lastmod>2025-01-09T21:16:36+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/</loc>
     <lastmod>2025-01-09T21:16:36+01:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/de/2025/schlimmstes_erlebnis/</loc>
@@ -35,11 +56,44 @@
     <loc>https://blog.iostao.com/de/2024/ein-gesundes-und-diszipliniertes-leben/</loc>
     <lastmod>2024-12-28T08:03:01+01:00</lastmod>
   </url><url>
+    <loc>https://blog.iostao.com/test/image-gallery/</loc>
+    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/test/</loc>
+    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.iostao.com/about/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/me/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/css/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/html/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/markdown/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/test/markdown-syntax/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/syntax/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/themes/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/themes/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/test/shortcodes/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/test/math-typesetting/</loc>
+    <lastmod>2023-08-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/journey/202209-beijing/</loc>
     <lastmod>2022-09-10T00:00:00+00:00</lastmod>
@@ -71,6 +125,12 @@
     <loc>https://blog.iostao.com/2022/03/archives/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://blog.iostao.com/categories/example-category/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/example-tag/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.iostao.com/page/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -84,9 +144,6 @@
     <lastmod>2021-01-24T14:43:16+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/categories/mac/</loc>
-    <lastmod>2021-01-24T14:43:16+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/post/</loc>
     <lastmod>2021-01-24T14:43:16+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/git/</loc>
@@ -163,12 +220,6 @@
   </url><url>
     <loc>https://blog.iostao.com/2016/12/ios-spritekit-scenekit/</loc>
     <lastmod>2016-12-18T22:08:49+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/swift/</loc>
-    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/swift/</loc>
-    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</loc>
     <lastmod>2016-10-30T15:45:13+00:00</lastmod>
@@ -250,8 +301,6 @@
   </url><url>
     <loc>https://blog.iostao.com/2016/02/git-command/</loc>
     <lastmod>2016-02-16T11:49:03+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/example-category/</loc>
   </url><url>
     <loc>https://blog.iostao.com/1/01/links/</loc>
   </url><url>

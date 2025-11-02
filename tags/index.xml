@@ -6,12 +6,60 @@
         <description>Recent content in Tags on Scott Tao</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 09 Jan 2025 21:16:36 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 Nov 2025 21:02:05 +0100</lastBuildDate><atom:link href="https://blog.iostao.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Swift</title>
+        <link>https://blog.iostao.com/tags/swift/</link>
+        <pubDate>Sun, 02 Nov 2025 21:02:05 +0100</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/swift/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>DE</title>
         <link>https://blog.iostao.com/tags/de/</link>
         <pubDate>Thu, 09 Jan 2025 21:16:36 +0100</pubDate>
         
         <guid>https://blog.iostao.com/tags/de/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Css</title>
+        <link>https://blog.iostao.com/tags/css/</link>
+        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/css/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Html</title>
+        <link>https://blog.iostao.com/tags/html/</link>
+        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/html/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown</title>
+        <link>https://blog.iostao.com/tags/markdown/</link>
+        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/markdown/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Themes</title>
+        <link>https://blog.iostao.com/tags/themes/</link>
+        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/themes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Example Tag</title>
+        <link>https://blog.iostao.com/tags/example-tag/</link>
+        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.iostao.com/tags/example-tag/</guid>
         <description></description>
         </item>
         <item>
@@ -60,14 +108,6 @@
         <pubDate>Fri, 19 Jul 2019 14:37:55 +0000</pubDate>
         
         <guid>https://blog.iostao.com/tags/docker/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Swift</title>
-        <link>https://blog.iostao.com/tags/swift/</link>
-        <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/tags/swift/</guid>
         <description></description>
         </item>
         <item>
