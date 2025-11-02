@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.iostao.com/test/hello-world/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/</loc>
     <lastmod>2025-01-09T21:16:36+01:00</lastmod>
   </url><url>
@@ -38,128 +35,11 @@
     <loc>https://blog.iostao.com/de/2024/ein-gesundes-und-diszipliniertes-leben/</loc>
     <lastmod>2024-12-28T08:03:01+01:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/post/</loc>
-    <lastmod>2024-09-27T18:00:33+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2024/09/swiftui_statemanagement/</loc>
-    <lastmod>2024-09-27T18:00:33+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/swiftui/</loc>
-    <lastmod>2024-09-27T18:00:33+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/swiftui/</loc>
-    <lastmod>2024-09-27T18:00:33+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/xcode16/</loc>
-    <lastmod>2024-09-27T18:00:33+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/test/image-gallery/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/test/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2024/09/swiftui_observableobject/</loc>
-    <lastmod>2024-09-15T22:29:08+01:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/about/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/me/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2024/02/swiftui_localizable/</loc>
-    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/xcode15/</loc>
-    <lastmod>2024-02-18T14:05:02+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/swift/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/swift/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2023/12/swift_datetime/</loc>
-    <lastmod>2023-12-23T20:36:12+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2023/12/swiftui_change_theme/</loc>
-    <lastmod>2023-12-21T13:55:16+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2023/12/swift_static_funclhs_rhs/</loc>
-    <lastmod>2023-12-17T00:00:46+01:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/css/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/html/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/markdown/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/test/markdown-syntax/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/syntax/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/themes/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/themes/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/test/shortcodes/</loc>
-    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/test/math-typesetting/</loc>
-    <lastmod>2023-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/11/swiftui-widget-06/</loc>
-    <lastmod>2022-11-08T14:35:21+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/11/swiftui-widget-05/</loc>
-    <lastmod>2022-11-08T11:57:53+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-navigation-slipback/</loc>
-    <lastmod>2022-10-12T20:56:39+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-layout-stack/</loc>
-    <lastmod>2022-10-11T16:11:39+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-layout-lazygrid/</loc>
-    <lastmod>2022-10-11T11:09:01+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-collection-navigationstack/</loc>
-    <lastmod>2022-10-10T20:37:16+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-widget-04/</loc>
-    <lastmod>2022-10-07T18:00:18+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-widget-03/</loc>
-    <lastmod>2022-10-07T17:16:25+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-widget-02/</loc>
-    <lastmod>2022-10-07T16:35:19+21:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/10/swiftui-widget-01/</loc>
-    <lastmod>2022-10-07T16:30:19+21:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/09/swiftui-progress-circle/</loc>
-    <lastmod>2022-09-30T20:55:19+21:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/09/swiftui-animation-scale-image/</loc>
-    <lastmod>2022-09-23T18:54:07+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/09/swiftui-string-localization-notwork/</loc>
-    <lastmod>2022-09-20T19:56:35+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/09/swiftui-use-tabview/</loc>
-    <lastmod>2022-09-18T17:58:16+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2022/09/swiftui-appicon-changes/</loc>
-    <lastmod>2022-09-10T23:03:17+08:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/journey/202209-beijing/</loc>
     <lastmod>2022-09-10T00:00:00+00:00</lastmod>
@@ -191,23 +71,8 @@
     <loc>https://blog.iostao.com/2022/03/archives/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/categories/example-category/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/example-tag/</loc>
-    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/page/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/vue/</loc>
-    <lastmod>2021-11-28T16:42:36+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/vue/</loc>
-    <lastmod>2021-11-28T16:42:36+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2021/11/vue-cli4-antd-ts-01/</loc>
-    <lastmod>2021-11-28T16:42:36+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/journey/202111-beijing/</loc>
     <lastmod>2021-11-04T00:00:00+00:00</lastmod>
@@ -219,6 +84,9 @@
     <lastmod>2021-01-24T14:43:16+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/categories/mac/</loc>
+    <lastmod>2021-01-24T14:43:16+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/post/</loc>
     <lastmod>2021-01-24T14:43:16+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/git/</loc>
@@ -245,17 +113,8 @@
     <loc>https://blog.iostao.com/2020/06/ios-js-regular/</loc>
     <lastmod>2020-06-21T08:06:44+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2020/06/vue-quill-editor/</loc>
-    <lastmod>2020-06-03T20:04:45+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-dialog-center/</loc>
-    <lastmod>2020-05-31T19:47:51+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2020/05/ios-dynamic-color/</loc>
     <lastmod>2020-05-28T20:26:58+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-cli4-axios/</loc>
-    <lastmod>2020-05-22T16:42:36+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/golang/</loc>
     <lastmod>2020-05-18T11:51:10+00:00</lastmod>
@@ -265,18 +124,6 @@
   </url><url>
     <loc>https://blog.iostao.com/2020/05/go-mysql-recursion/</loc>
     <lastmod>2020-05-18T11:51:10+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-cli4-start-04/</loc>
-    <lastmod>2020-05-14T19:54:40+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-cli4-start-03/</loc>
-    <lastmod>2020-05-14T18:25:48+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-cli4-start-02/</loc>
-    <lastmod>2020-05-12T08:14:30+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2020/05/vue-cli4-start-01/</loc>
-    <lastmod>2020-05-11T16:36:59+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2020/03/go-os-operation/</loc>
     <lastmod>2020-03-22T19:23:51+00:00</lastmod>
@@ -305,9 +152,6 @@
     <loc>https://blog.iostao.com/2019/07/docker-net-shell/</loc>
     <lastmod>2019-07-19T14:37:55+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2019/06/linux-brctl-shell/</loc>
-    <lastmod>2019-06-22T10:54:12+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2019/04/linux-shell-ssh/</loc>
     <lastmod>2019-04-05T11:55:55+00:00</lastmod>
   </url><url>
@@ -317,68 +161,26 @@
     <loc>https://blog.iostao.com/2018/07/ios-avaudiosession/</loc>
     <lastmod>2018-07-27T11:10:43+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2018/05/ios-iphone-device/</loc>
-    <lastmod>2018-05-29T15:17:30+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/html/</loc>
-    <lastmod>2017-03-11T10:35:56+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-style-link-table/</loc>
-    <lastmod>2017-03-11T10:35:56+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-javascript-elements/</loc>
-    <lastmod>2017-03-09T15:07:25+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-css-animation/</loc>
-    <lastmod>2017-03-07T15:06:23+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-css-position/</loc>
-    <lastmod>2017-03-05T15:13:57+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-css-box/</loc>
-    <lastmod>2017-03-04T15:01:17+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-css-style/</loc>
-    <lastmod>2017-03-03T15:13:57+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-css-elements/</loc>
-    <lastmod>2017-03-02T14:08:54+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2017/03/html-framework-bg/</loc>
-    <lastmod>2017-03-01T09:13:57+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/12/ios-spritekit-scenekit/</loc>
     <lastmod>2016-12-18T22:08:49+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/tags/swift/</loc>
+    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/swift/</loc>
+    <lastmod>2016-10-30T15:45:13+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/10/swift3-gcd-dispatch-async/</loc>
     <lastmod>2016-10-30T15:45:13+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/tags/deutsch/</loc>
-    <lastmod>2016-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/deutsch/</loc>
-    <lastmod>2016-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/10/deutsch-900-two/</loc>
-    <lastmod>2016-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/10/deutsch-900-one/</loc>
-    <lastmod>2016-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/08/git-warning-default/</loc>
     <lastmod>2016-08-04T22:01:33+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/08/mac-nvm-update-ruby/</loc>
-    <lastmod>2016-08-01T13:55:12+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/07/git-sshkey-multi/</loc>
     <lastmod>2016-07-18T15:43:04+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/07/git-sshkey/</loc>
     <lastmod>2016-07-17T13:42:55+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/07/swift-delegate-memory-leak/</loc>
-    <lastmod>2016-07-11T15:39:46+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/07/git-ssh-exchange-identification/</loc>
     <lastmod>2016-07-11T11:43:06+00:00</lastmod>
@@ -388,9 +190,6 @@
   </url><url>
     <loc>https://blog.iostao.com/2016/06/swift-unicodescalars/</loc>
     <lastmod>2016-06-22T15:01:36+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/06/mac-charlesproxy/</loc>
-    <lastmod>2016-06-13T17:49:18+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/tags/aps/</loc>
     <lastmod>2016-06-11T10:46:18+00:00</lastmod>
@@ -407,27 +206,6 @@
     <loc>https://blog.iostao.com/2016/05/ios-requireipv6/</loc>
     <lastmod>2016-05-22T11:58:16+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2016/05/ios-fmdatabasequeue-lead-to-a-deadlock/</loc>
-    <lastmod>2016-05-16T16:26:01+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/tags/hexo/</loc>
-    <lastmod>2016-05-15T12:01:11+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/categories/hexo/</loc>
-    <lastmod>2016-05-15T12:01:11+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/05/web-onlinegenerationsitemap/</loc>
-    <lastmod>2016-05-15T12:01:11+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/05/swift-inout-keyordschangeposition/</loc>
-    <lastmod>2016-05-14T21:36:37+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/05/swift3-0advanceobjctransformtoswift/</loc>
-    <lastmod>2016-05-09T21:24:10+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/05/swiftpackageerror-swiftc-failed-with-exit-code-1/</loc>
-    <lastmod>2016-05-09T10:58:13+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/05/ios-require-allappipv6-only/</loc>
     <lastmod>2016-05-05T13:50:19+00:00</lastmod>
   </url><url>
@@ -437,29 +215,8 @@
     <loc>https://blog.iostao.com/2016/04/ios-bledevelop/</loc>
     <lastmod>2016-04-28T16:41:43+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2016/04/swift3-0newinfofoundin2-2/</loc>
-    <lastmod>2016-04-28T15:20:01+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/04/uiimage-resizableimagewithcapinsets/</loc>
     <lastmod>2016-04-27T10:53:54+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/04/ios-vr-journeyoftime/</loc>
-    <lastmod>2016-04-18T21:00:33+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/04/ios-cancel-performselector-and-cancelpreviousperformrequestswithtarget/</loc>
-    <lastmod>2016-04-11T14:34:31+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/04/swift-stringoperation/</loc>
-    <lastmod>2016-04-07T13:19:17+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/04/swift-stringornsstring/</loc>
-    <lastmod>2016-04-07T13:03:18+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/04/ios-dsymanalysecrash/</loc>
-    <lastmod>2016-04-01T17:20:34+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.iostao.com/2016/03/ios-developmenthistoryofapple/</loc>
-    <lastmod>2016-03-24T20:50:34+00:00</lastmod>
   </url><url>
     <loc>https://blog.iostao.com/2016/03/aps-osi_tcp-ip/</loc>
     <lastmod>2016-03-23T07:17:48+00:00</lastmod>
@@ -488,17 +245,13 @@
     <loc>https://blog.iostao.com/2016/02/git-deploy-ssh-of-bitbucket/</loc>
     <lastmod>2016-02-21T12:43:34+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2016/02/swift-uitesting-chinesewordserror/</loc>
-    <lastmod>2016-02-19T11:35:23+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/02/ios-objective-c-literal-value/</loc>
     <lastmod>2016-02-17T15:59:01+00:00</lastmod>
   </url><url>
-    <loc>https://blog.iostao.com/2016/02/ios-db-error-1-unrecognized-token/</loc>
-    <lastmod>2016-02-17T14:52:50+00:00</lastmod>
-  </url><url>
     <loc>https://blog.iostao.com/2016/02/git-command/</loc>
     <lastmod>2016-02-16T11:49:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.iostao.com/categories/example-category/</loc>
   </url><url>
     <loc>https://blog.iostao.com/1/01/links/</loc>
   </url><url>

@@ -217,66 +217,6 @@ $ mysql -u root -p
     &gt;端口扫描&lt;/a&gt;，进行一下端口扫描，看看服务端口是否关闭，如果关闭状态，去控制台添加一下规则，将端口打开。&lt;/p&gt;</description>
         </item>
         <item>
-        <title>Linux brclt 命令</title>
-        <link>https://blog.iostao.com/2019/06/linux-brctl-shell/</link>
-        <pubDate>Sat, 22 Jun 2019 10:54:12 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/2019/06/linux-brctl-shell/</guid>
-        <description>&lt;h2 id=&#34;参数说明和示例&#34;&gt;参数说明和示例
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;参数&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;示例&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;addbr &amp;lt;bridge&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;创建网桥&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl addbr br10&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;delbr &amp;lt;bridge&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;删除网桥&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl delbr br10&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;addif &amp;lt;bridge&amp;gt; &amp;lt;device&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;将网卡接口接入网桥&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl addif br10 eth0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;show &amp;lt;bridge&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;查询网桥信息&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl show br10&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;stp &amp;lt;bridge&amp;gt; {on | off}&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;启用禁用STP&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl stp br10 off/on&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;showstp &amp;lt;bridge&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;查看网桥STP信息&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl showstp br10&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;setfd &amp;lt;bridge&amp;gt; &amp;lt;time&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;设置网桥延迟&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl setfd br10 10&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;showmacs &amp;lt;bridge&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;查看mac信息&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;brctl showmacs br10&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        <item>
         <title>Linux Shell ssh登录脚本</title>
         <link>https://blog.iostao.com/2019/04/linux-shell-ssh/</link>
         <pubDate>Fri, 05 Apr 2019 11:55:55 +0000</pubDate>

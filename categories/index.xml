@@ -15,62 +15,6 @@
         <description></description>
         </item>
         <item>
-        <title>Swiftui</title>
-        <link>https://blog.iostao.com/categories/swiftui/</link>
-        <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/swiftui/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Xcode16</title>
-        <link>https://blog.iostao.com/categories/xcode16/</link>
-        <pubDate>Fri, 27 Sep 2024 18:00:33 +0200</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/xcode16/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Swift</title>
-        <link>https://blog.iostao.com/categories/swift/</link>
-        <pubDate>Sat, 23 Dec 2023 20:36:12 +0100</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/swift/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Syntax</title>
-        <link>https://blog.iostao.com/categories/syntax/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>https://blog.iostao.com/categories/themes/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Example Category</title>
-        <link>https://blog.iostao.com/categories/example-category/</link>
-        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/example-category/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Vue</title>
-        <link>https://blog.iostao.com/categories/vue/</link>
-        <pubDate>Sun, 28 Nov 2021 16:42:36 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/vue/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Mac</title>
         <link>https://blog.iostao.com/categories/mac/</link>
         <pubDate>Sun, 24 Jan 2021 14:43:16 +0000</pubDate>
@@ -119,19 +63,11 @@
         <description></description>
         </item>
         <item>
-        <title>Html</title>
-        <link>https://blog.iostao.com/categories/html/</link>
-        <pubDate>Sat, 11 Mar 2017 10:35:56 +0000</pubDate>
+        <title>Swift</title>
+        <link>https://blog.iostao.com/categories/swift/</link>
+        <pubDate>Sun, 30 Oct 2016 15:45:13 +0000</pubDate>
         
-        <guid>https://blog.iostao.com/categories/html/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Deutsch</title>
-        <link>https://blog.iostao.com/categories/deutsch/</link>
-        <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.iostao.com/categories/deutsch/</guid>
+        <guid>https://blog.iostao.com/categories/swift/</guid>
         <description></description>
         </item>
         <item>
@@ -143,11 +79,11 @@
         <description></description>
         </item>
         <item>
-        <title>Hexo</title>
-        <link>https://blog.iostao.com/categories/hexo/</link>
-        <pubDate>Sun, 15 May 2016 12:01:11 +0000</pubDate>
+        <title>Example Category</title>
+        <link>https://blog.iostao.com/categories/example-category/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.iostao.com/categories/hexo/</guid>
+        <guid>https://blog.iostao.com/categories/example-category/</guid>
         <description></description>
         </item>
         
